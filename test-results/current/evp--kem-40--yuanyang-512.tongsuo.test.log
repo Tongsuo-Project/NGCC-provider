@@ -1,0 +1,8 @@
+STEP keygen
+STEP second-keygen
+STEP encapsulate-0
+STEP encapsulate-1
+STEP encapsulate-2
+SIZES pk=736 ct=656 ss=16
+PASS key-material-unchanged
+PASS kem-40-yuanyang-512

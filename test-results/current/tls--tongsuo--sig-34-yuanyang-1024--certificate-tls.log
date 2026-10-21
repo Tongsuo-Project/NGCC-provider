@@ -1,0 +1,6 @@
+STEP keygen
+STEP CSR
+STEP certificates
+PASS CERT sig-34-yuanyang-1024 oid=2.25.277676751559714217754782658486597373600 codecs=DER+PEM CSR=verified chain=verified
+PASS TLS1.3 sigalg=sig-34-yuanyang-1024 code=0xFE69 group=X25519 chain=verified hostname=verified
+PASS TLS1.3 sigalg=sig-34-yuanyang-1024 code=0xFE69 group=kem-01-aigis-enc1 chain=verified hostname=verified

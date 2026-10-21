@@ -1,0 +1,1 @@
+PASS TLS1.3 group=kem-22-mithril-256 wire_id=0xFE2C pk=1648 ct=1712 hrr=0 authenticated=1 exporter=match data=bidirectional

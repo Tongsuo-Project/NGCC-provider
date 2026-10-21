@@ -1,0 +1,1 @@
+PASS TLS1.3 group=kem-bw-kem-256 wire_id=0xFE98 pk=1568 ct=1440 hrr=1 authenticated=1 exporter=match data=bidirectional

@@ -1,0 +1,6 @@
+STEP keygen
+STEP CSR
+STEP certificates
+PASS CERT sig-09-dove-pkc-skc-256 oid=2.25.294639396384004645928329097351483737886 codecs=DER+PEM CSR=verified chain=verified
+PASS TLS1.3 sigalg=sig-09-dove-pkc-skc-256 code=0xFE1F group=X25519 chain=verified hostname=verified
+PASS TLS1.3 sigalg=sig-09-dove-pkc-skc-256 code=0xFE1F group=kem-01-aigis-enc1 chain=verified hostname=verified

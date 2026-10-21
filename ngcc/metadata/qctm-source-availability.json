@@ -1,0 +1,11 @@
+{
+  "id": "kem-32",
+  "checked_at": "2026-10-21T03:09:27.505171+00:00",
+  "team_announcement_url": "https://list.niccs.org.cn/archives/list/pkcforum@list.niccs.org.cn/message/S4LPBREM3EYTVIOGUDFFMHIM2UCD2VXG/",
+  "download_url": "https://www.niccs.org.cn/niccs/Proposal/Public-Key%20Cryptographic%20Algorithms/Round%201%20candidates/QCTM.zip",
+  "download_bytes": 87169850,
+  "download_sha256": "24a3986a4fbb852a677267a6443756328eae3642af770e767fe38f8291f294db",
+  "matches_integrated_archive": true,
+  "new_source_obtained": false,
+  "limitation": "网站 ARM 对原始包的测试通过，256 档密钥生成和解封装耗时也较大，与本次慢速现象一致，不能按不同完整测试时间比较单次性能。团队 2026-10-08 宣布更新参数和实现，但所查回复无源码附件/下载地址。2026-10-21 重新完整下载官方 ZIP，SHA-256 仍为 24a3986a4fbb852a677267a6443756328eae3642af770e767fe38f8291f294db，和本次接入的初始包相同。未取得公告对应的新版源码，不能声称已集成该公告版本。"
+}

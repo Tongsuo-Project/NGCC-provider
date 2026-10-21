@@ -1,0 +1,24 @@
+{
+  "started_at": "2026-10-21T17:56:35.127472+08:00",
+  "completed_at": "2026-10-21T18:17:17.144321+08:00",
+  "command": "make test FULL_TEST=1 JOBS=6 TEST_TIMEOUT=1800",
+  "module_sha256": "4b6f545b9f243a20ed9e3d4076cdf1edb09f6017c6c01e293e60081efe3540e9",
+  "evp_passed": 416,
+  "tls_certificate_passed": 606,
+  "skipped": 0,
+  "yellow_rows_changed": 57,
+  "tls_parameters_passed": 199,
+  "initial_make_exit_code": 2,
+  "initial_make_failure": "Sandbox denied localhost bind for CLI TLS interop; EVP, TLS/certificate and thread tests had passed.",
+  "resumed_checks": [
+    {
+      "command": "python3 cc_test/ngcc_cli.py --full",
+      "sandbox": "outside",
+      "exit_code": 0
+    },
+    {
+      "command": "python3 cc_test/ngcc_audit.py --require-tests",
+      "exit_code": 0
+    }
+  ]
+}

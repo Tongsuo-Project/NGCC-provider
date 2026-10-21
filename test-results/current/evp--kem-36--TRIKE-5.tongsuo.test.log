@@ -1,0 +1,8 @@
+STEP keygen
+STEP second-keygen
+STEP encapsulate-0
+STEP encapsulate-1
+STEP encapsulate-2
+SIZES pk=4156 ct=8296 ss=32
+PASS key-material-unchanged
+PASS kem-36-trike-5

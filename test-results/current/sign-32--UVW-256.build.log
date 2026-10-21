@@ -1,0 +1,106 @@
+# Public copy: project paths are relative; installation paths use placeholders.
+$ cc -O2 -fPIC -fcommon -fno-strict-aliasing -fwrapv -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int -Wno-unused-function -Wno-unused-variable -Wno-deprecated-declarations -I${OPENSSL_PREFIX}/include -I${GMP_ROOT}/include -std=gnu11 -DUSE_API_PKC -Isrc/UVW-256 -Ingcc/upstream/api -c ngcc/upstream/sign-32/src/UVW-256/SIG_AlgorithmInstance.c -o build/ngcc/sign-32/UVW-256/0.o
+$ cc -O2 -fPIC -fcommon -fno-strict-aliasing -fwrapv -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int -Wno-unused-function -Wno-unused-variable -Wno-deprecated-declarations -I${OPENSSL_PREFIX}/include -I${GMP_ROOT}/include -std=gnu11 -DUSE_API_PKC -Isrc/UVW-256 -Ingcc/upstream/api -c ngcc/upstream/sign-32/src/UVW-256/uvw.c -o build/ngcc/sign-32/UVW-256/1.o
+In file included from ngcc/upstream/sign-32/src/UVW-256/uvw.c:4:
+src/UVW-256/macros.h:60:23: error: invalid output constraint '=a' in asm
+            "rdtsc" : "=a"(lo), "=d"(hi)
+                      ^
+ngcc/upstream/sign-32/src/UVW-256/uvw.c:360:33: warning: use of GNU old-style field designator extension [-Wgnu-designator]
+            return (uvw_param){ lambda: 8, n: 20, k: 10, k1: 7, k2: 3, w: 18 };
+                                ^~~~~~~
+                                .lambda = 
+ngcc/upstream/sign-32/src/UVW-256/uvw.c:360:44: warning: use of GNU old-style field designator extension [-Wgnu-designator]
+            return (uvw_param){ lambda: 8, n: 20, k: 10, k1: 7, k2: 3, w: 18 };
+                                           ^~
+                                           .n = 
+ngcc/upstream/sign-32/src/UVW-256/uvw.c:360:51: warning: use of GNU old-style field designator extension [-Wgnu-designator]
+            return (uvw_param){ lambda: 8, n: 20, k: 10, k1: 7, k2: 3, w: 18 };
+                                                  ^~
+                                                  .k = 
+ngcc/upstream/sign-32/src/UVW-256/uvw.c:360:58: warning: use of GNU old-style field designator extension [-Wgnu-designator]
+            return (uvw_param){ lambda: 8, n: 20, k: 10, k1: 7, k2: 3, w: 18 };
+                                                         ^~~
+                                                         .k1 = 
+ngcc/upstream/sign-32/src/UVW-256/uvw.c:360:65: warning: use of GNU old-style field designator extension [-Wgnu-designator]
+            return (uvw_param){ lambda: 8, n: 20, k: 10, k1: 7, k2: 3, w: 18 };
+                                                                ^~~
+                                                                .k2 = 
+ngcc/upstream/sign-32/src/UVW-256/uvw.c:360:72: warning: use of GNU old-style field designator extension [-Wgnu-designator]
+            return (uvw_param){ lambda: 8, n: 20, k: 10, k1: 7, k2: 3, w: 18 };
+                                                                       ^~
+                                                                       .w = 
+ngcc/upstream/sign-32/src/UVW-256/uvw.c:362:33: warning: use of GNU old-style field designator extension [-Wgnu-designator]
+            return (uvw_param){ lambda: 128, n: 9700, k: 4850, k1: 3250, k2: 1600, w: 8633 };
+                                ^~~~~~~
+                                .lambda = 
+ngcc/upstream/sign-32/src/UVW-256/uvw.c:362:46: warning: use of GNU old-style field designator extension [-Wgnu-designator]
+            return (uvw_param){ lambda: 128, n: 9700, k: 4850, k1: 3250, k2: 1600, w: 8633 };
+                                             ^~
+                                             .n = 
+ngcc/upstream/sign-32/src/UVW-256/uvw.c:362:55: warning: use of GNU old-style field designator extension [-Wgnu-designator]
+            return (uvw_param){ lambda: 128, n: 9700, k: 4850, k1: 3250, k2: 1600, w: 8633 };
+                                                      ^~
+                                                      .k = 
+ngcc/upstream/sign-32/src/UVW-256/uvw.c:362:64: warning: use of GNU old-style field designator extension [-Wgnu-designator]
+            return (uvw_param){ lambda: 128, n: 9700, k: 4850, k1: 3250, k2: 1600, w: 8633 };
+                                                               ^~~
+                                                               .k1 = 
+ngcc/upstream/sign-32/src/UVW-256/uvw.c:362:74: warning: use of GNU old-style field designator extension [-Wgnu-designator]
+            return (uvw_param){ lambda: 128, n: 9700, k: 4850, k1: 3250, k2: 1600, w: 8633 };
+                                                                         ^~~
+                                                                         .k2 = 
+ngcc/upstream/sign-32/src/UVW-256/uvw.c:362:84: warning: use of GNU old-style field designator extension [-Wgnu-designator]
+            return (uvw_param){ lambda: 128, n: 9700, k: 4850, k1: 3250, k2: 1600, w: 8633 };
+                                                                                   ^~
+                                                                                   .w = 
+ngcc/upstream/sign-32/src/UVW-256/uvw.c:364:33: warning: use of GNU old-style field designator extension [-Wgnu-designator]
+            return (uvw_param){ lambda: 256, n: 19200, k: 9600, k1: 6433, k2: 3167, w: 17088 };
+                                ^~~~~~~
+                                .lambda = 
+ngcc/upstream/sign-32/src/UVW-256/uvw.c:364:46: warning: use of GNU old-style field designator extension [-Wgnu-designator]
+            return (uvw_param){ lambda: 256, n: 19200, k: 9600, k1: 6433, k2: 3167, w: 17088 };
+                                             ^~
+                                             .n = 
+ngcc/upstream/sign-32/src/UVW-256/uvw.c:364:56: warning: use of GNU old-style field designator extension [-Wgnu-designator]
+            return (uvw_param){ lambda: 256, n: 19200, k: 9600, k1: 6433, k2: 3167, w: 17088 };
+                                                       ^~
+                                                       .k = 
+ngcc/upstream/sign-32/src/UVW-256/uvw.c:364:65: warning: use of GNU old-style field designator extension [-Wgnu-designator]
+            return (uvw_param){ lambda: 256, n: 19200, k: 9600, k1: 6433, k2: 3167, w: 17088 };
+                                                                ^~~
+                                                                .k1 = 
+ngcc/upstream/sign-32/src/UVW-256/uvw.c:364:75: warning: use of GNU old-style field designator extension [-Wgnu-designator]
+            return (uvw_param){ lambda: 256, n: 19200, k: 9600, k1: 6433, k2: 3167, w: 17088 };
+                                                                          ^~~
+                                                                          .k2 = 
+ngcc/upstream/sign-32/src/UVW-256/uvw.c:364:85: warning: use of GNU old-style field designator extension [-Wgnu-designator]
+            return (uvw_param){ lambda: 256, n: 19200, k: 9600, k1: 6433, k2: 3167, w: 17088 };
+                                                                                    ^~
+                                                                                    .w = 
+ngcc/upstream/sign-32/src/UVW-256/uvw.c:366:33: warning: use of GNU old-style field designator extension [-Wgnu-designator]
+            return (uvw_param){ lambda: 512, n: 39000, k: 19500, k1: 13066, k2: 6434, w: 34710 };
+                                ^~~~~~~
+                                .lambda = 
+ngcc/upstream/sign-32/src/UVW-256/uvw.c:366:46: warning: use of GNU old-style field designator extension [-Wgnu-designator]
+            return (uvw_param){ lambda: 512, n: 39000, k: 19500, k1: 13066, k2: 6434, w: 34710 };
+                                             ^~
+                                             .n = 
+ngcc/upstream/sign-32/src/UVW-256/uvw.c:366:56: warning: use of GNU old-style field designator extension [-Wgnu-designator]
+            return (uvw_param){ lambda: 512, n: 39000, k: 19500, k1: 13066, k2: 6434, w: 34710 };
+                                                       ^~
+                                                       .k = 
+ngcc/upstream/sign-32/src/UVW-256/uvw.c:366:66: warning: use of GNU old-style field designator extension [-Wgnu-designator]
+            return (uvw_param){ lambda: 512, n: 39000, k: 19500, k1: 13066, k2: 6434, w: 34710 };
+                                                                 ^~~
+                                                                 .k1 = 
+ngcc/upstream/sign-32/src/UVW-256/uvw.c:366:77: warning: use of GNU old-style field designator extension [-Wgnu-designator]
+            return (uvw_param){ lambda: 512, n: 39000, k: 19500, k1: 13066, k2: 6434, w: 34710 };
+                                                                            ^~~
+                                                                            .k2 = 
+ngcc/upstream/sign-32/src/UVW-256/uvw.c:366:87: warning: use of GNU old-style field designator extension [-Wgnu-designator]
+            return (uvw_param){ lambda: 512, n: 39000, k: 19500, k1: 13066, k2: 6434, w: 34710 };
+                                                                                      ^~
+                                                                                      .w = 
+24 warnings and 1 error generated.
+
+NSM: command failed (1)

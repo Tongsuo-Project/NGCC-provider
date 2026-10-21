@@ -1,0 +1,59 @@
+{
+  "sha": "302eeeb566e8f653cc8ad2c7c675024e409b7c28",
+  "node_id": "C_kwDOUmu3ndoAKDMwMmVlZWI1NjZlOGY2NTNjYzhhZDJjN2M2NzUwMjRlNDA5YjdjMjg",
+  "commit": {
+    "author": {
+      "name": "Langge",
+      "date": "2026-10-10T02:02:10Z"
+    },
+    "committer": {
+      "name": "Langge",
+      "date": "2026-10-10T02:02:10Z"
+    },
+    "message": "移除 .DS_Store",
+    "tree": {
+      "sha": "73b06bb3c475d44a2ecaefb502e69bd54b7445b4",
+      "url": "https://api.github.com/repos/QinLangT/Sigurd/git/trees/73b06bb3c475d44a2ecaefb502e69bd54b7445b4"
+    },
+    "url": "https://api.github.com/repos/QinLangT/Sigurd/git/commits/302eeeb566e8f653cc8ad2c7c675024e409b7c28",
+    "comment_count": 0,
+    "verification": {
+      "verified": false,
+      "reason": "unsigned",
+      "signature": null,
+      "payload": null,
+      "verified_at": null
+    }
+  },
+  "url": "https://api.github.com/repos/QinLangT/Sigurd/commits/302eeeb566e8f653cc8ad2c7c675024e409b7c28",
+  "html_url": "https://github.com/QinLangT/Sigurd/commit/302eeeb566e8f653cc8ad2c7c675024e409b7c28",
+  "comments_url": "https://api.github.com/repos/QinLangT/Sigurd/commits/302eeeb566e8f653cc8ad2c7c675024e409b7c28/comments",
+  "author": null,
+  "committer": null,
+  "parents": [
+    {
+      "sha": "38b05c9fa8491970b9c328ff8abb3e8dbf2c46c6",
+      "url": "https://api.github.com/repos/QinLangT/Sigurd/commits/38b05c9fa8491970b9c328ff8abb3e8dbf2c46c6",
+      "html_url": "https://github.com/QinLangT/Sigurd/commit/38b05c9fa8491970b9c328ff8abb3e8dbf2c46c6"
+    }
+  ],
+  "stats": {
+    "total": 0,
+    "additions": 0,
+    "deletions": 0
+  },
+  "files": [
+    {
+      "sha": "1431ec1cb42facc21c46c3119533a08966e1b12e",
+      "filename": ".DS_Store",
+      "status": "removed",
+      "additions": 0,
+      "deletions": 0,
+      "changes": 0,
+      "blob_url": "https://github.com/QinLangT/Sigurd/blob/38b05c9fa8491970b9c328ff8abb3e8dbf2c46c6/.DS_Store",
+      "raw_url": "https://github.com/QinLangT/Sigurd/raw/38b05c9fa8491970b9c328ff8abb3e8dbf2c46c6/.DS_Store",
+      "contents_url": "https://api.github.com/repos/QinLangT/Sigurd/contents/.DS_Store?ref=38b05c9fa8491970b9c328ff8abb3e8dbf2c46c6"
+    }
+  ],
+  "publication_note": "Local-host email fields omitted from commit.author and commit.committer; commit hash, names, dates and source URLs are unchanged."
+}

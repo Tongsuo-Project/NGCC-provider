@@ -1,0 +1,1 @@
+PASS TLS1.3 group=kem-02-amoeba128 wire_id=0xFE02 pk=784 ct=1047 hrr=1 authenticated=1 exporter=match data=bidirectional

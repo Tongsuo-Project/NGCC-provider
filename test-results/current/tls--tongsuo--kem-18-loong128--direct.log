@@ -1,0 +1,1 @@
+PASS TLS1.3 group=kem-18-loong128 wire_id=0xFE1E pk=1472 ct=1512 hrr=0 authenticated=1 exporter=match data=bidirectional

@@ -1,0 +1,100 @@
+{
+  "sha": "4732e167cb219eeba9d8852a6a67840f28f3a28e",
+  "node_id": "C_kwDOVFuDtdoAKDQ3MzJlMTY3Y2IyMTllZWJhOWQ4ODUyYTZhNjc4NDBmMjhmM2EyOGU",
+  "commit": {
+    "author": {
+      "name": "whycreeper",
+      "email": "148073539+whycreeper@users.noreply.github.com",
+      "date": "2026-10-12T14:57:40Z"
+    },
+    "committer": {
+      "name": "GitHub",
+      "email": "noreply@github.com",
+      "date": "2026-10-12T14:57:40Z"
+    },
+    "message": "Add files via upload",
+    "tree": {
+      "sha": "02e369a30fc53ddf8be2a027f1de197b92aef495",
+      "url": "https://api.github.com/repos/GreatWall-Crypto/NGCC-GreatWall/git/trees/02e369a30fc53ddf8be2a027f1de197b92aef495"
+    },
+    "url": "https://api.github.com/repos/GreatWall-Crypto/NGCC-GreatWall/git/commits/4732e167cb219eeba9d8852a6a67840f28f3a28e",
+    "comment_count": 0,
+    "verification": {
+      "verified": true,
+      "reason": "valid",
+      "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJqzPVkCRC1aQ7uu5UhlAAASoAQAAz7Nl6uCQXJoYjyYSpXTvNR\nB6KwwnCPNxkvg5GmtEPj67iGrU1joOoaRXOimw6tMZijWeXyuDeKU2mBo8UXhftU\n8GK2lhEGBZz8YdMIlIVv6jpcq20JOGuXauTipfQDa59vdb73gq0W2mG/ERHu5Kno\nYEY2ihtPDhGV1BQZu/WP3KzEtIR1piacYk0o3rs15k7nRjikbY6A5PBsQi+XR/03\nIKJ0vhmPHciQVkzKPQs8HBTC/3tD+I6GqBVKcIDH3BhQkjjXVScNMogCuWfZJ0EF\n5DTajG7wRYPw7scPq9Ge9PBXJ0kF+M8cl3JaJtpzfFNgPU5EgVlUZLWHYkDHlge3\nP/t85bEZ2dtUXS84qrqJL0ACmMhBNC4lhRiSSGS8+ye9IkiVnru0qc/047wf3qzK\n1RpJifB+ykpU4DvAyGa/uPAFt7ISQBaaViw1ArUJGpEtYJChMqPpjCCEW+o0KsIS\nBq0nXYgrMDvIJ1oejnNlw2kX/FE8E3Xyc7trybzcJc4kUkxgQ7XSBSSItfx0F6Vr\ne778AJkRqa16B7IauhjvLbKQxZ9SeknP4g/rJKosStVkhS6pPB++dlH+SgWlB3Wl\nZ0youtpEdSqZCxkOmVnAEBvX2bMbH65H5vyoCe26s3rUime0fGeIGqQmaBbzFwMx\nJou0nKxfs7fsJccR5+IR\n=ZbdL\n-----END PGP SIGNATURE-----\n",
+      "payload": "tree 02e369a30fc53ddf8be2a027f1de197b92aef495\nparent d392ad46406c5791b8599397bcced32240fe1043\nauthor whycreeper <148073539+whycreeper@users.noreply.github.com> 1791817060 +0800\ncommitter GitHub <noreply@github.com> 1791817060 +0800\n\nAdd files via upload",
+      "verified_at": "2026-10-12T14:57:41Z"
+    }
+  },
+  "url": "https://api.github.com/repos/GreatWall-Crypto/NGCC-GreatWall/commits/4732e167cb219eeba9d8852a6a67840f28f3a28e",
+  "html_url": "https://github.com/GreatWall-Crypto/NGCC-GreatWall/commit/4732e167cb219eeba9d8852a6a67840f28f3a28e",
+  "comments_url": "https://api.github.com/repos/GreatWall-Crypto/NGCC-GreatWall/commits/4732e167cb219eeba9d8852a6a67840f28f3a28e/comments",
+  "author": {
+    "login": "whycreeper",
+    "id": 148073539,
+    "node_id": "U_kgDOCNNsQw",
+    "avatar_url": "https://avatars.githubusercontent.com/u/148073539?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/whycreeper",
+    "html_url": "https://github.com/whycreeper",
+    "followers_url": "https://api.github.com/users/whycreeper/followers",
+    "following_url": "https://api.github.com/users/whycreeper/following{/other_user}",
+    "gists_url": "https://api.github.com/users/whycreeper/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/whycreeper/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/whycreeper/subscriptions",
+    "organizations_url": "https://api.github.com/users/whycreeper/orgs",
+    "repos_url": "https://api.github.com/users/whycreeper/repos",
+    "events_url": "https://api.github.com/users/whycreeper/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/whycreeper/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "web-flow",
+    "id": 19864447,
+    "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+    "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/web-flow",
+    "html_url": "https://github.com/web-flow",
+    "followers_url": "https://api.github.com/users/web-flow/followers",
+    "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+    "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+    "organizations_url": "https://api.github.com/users/web-flow/orgs",
+    "repos_url": "https://api.github.com/users/web-flow/repos",
+    "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/web-flow/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "d392ad46406c5791b8599397bcced32240fe1043",
+      "url": "https://api.github.com/repos/GreatWall-Crypto/NGCC-GreatWall/commits/d392ad46406c5791b8599397bcced32240fe1043",
+      "html_url": "https://github.com/GreatWall-Crypto/NGCC-GreatWall/commit/d392ad46406c5791b8599397bcced32240fe1043"
+    }
+  ],
+  "stats": {
+    "total": 0,
+    "additions": 0,
+    "deletions": 0
+  },
+  "files": [
+    {
+      "sha": "5fdfd17a23316fd3f1c6b8dd3e7a3f673e232185",
+      "filename": "GreatWall_PQC_Signature_Scheme.pdf",
+      "status": "added",
+      "additions": 0,
+      "deletions": 0,
+      "changes": 0,
+      "blob_url": "https://github.com/GreatWall-Crypto/NGCC-GreatWall/blob/4732e167cb219eeba9d8852a6a67840f28f3a28e/GreatWall_PQC_Signature_Scheme.pdf",
+      "raw_url": "https://github.com/GreatWall-Crypto/NGCC-GreatWall/raw/4732e167cb219eeba9d8852a6a67840f28f3a28e/GreatWall_PQC_Signature_Scheme.pdf",
+      "contents_url": "https://api.github.com/repos/GreatWall-Crypto/NGCC-GreatWall/contents/GreatWall_PQC_Signature_Scheme.pdf?ref=4732e167cb219eeba9d8852a6a67840f28f3a28e"
+    }
+  ]
+}

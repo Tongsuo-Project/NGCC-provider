@@ -1,0 +1,1 @@
+PASS TLS1.3 group=kem-40-yuanyang-1024 wire_id=0xFE5B pk=1568 ct=1344 hrr=0 authenticated=1 exporter=match data=bidirectional

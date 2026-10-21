@@ -1,0 +1,457 @@
+{
+  "checked_date": "2026-10-21",
+  "index_url": "https://www.niccs.org.cn/niccs/Round1Additional/pc/list.html",
+  "index_sha256": "3921cfb119884a31e06674254b9c5e7ac9941df4a290fef83fbe962f2610c062",
+  "proposals": [
+    {
+      "id": "sign-01",
+      "title": "Aigis-Sig+",
+      "url": "https://www.niccs.org.cn/niccs/Round1Additional/pc/content/content_2101567126852161536.html",
+      "official_archive": "Aigis-Sig+.zip"
+    },
+    {
+      "id": "sign-02",
+      "title": "BIT: Bimodal Triangular distribution based lattice signatures",
+      "url": "https://www.niccs.org.cn/niccs/Round1Additional/pc/content/content_2101561076358926336.html",
+      "official_archive": "BiT.zip"
+    },
+    {
+      "id": "sign-03",
+      "title": "CEDRUS+C",
+      "url": "https://www.niccs.org.cn/niccs/Round1Additional/pc/content/content_2101561076497338368.html",
+      "official_archive": "cedrus+c.zip"
+    },
+    {
+      "id": "sign-04",
+      "title": "CEDRUSɑ",
+      "url": "https://www.niccs.org.cn/niccs/Round1Additional/pc/content/content_2101561076644139008.html",
+      "official_archive": "cedrus-α.zip"
+    },
+    {
+      "id": "sign-05",
+      "title": "Chinith",
+      "url": "https://www.niccs.org.cn/niccs/Round1Additional/pc/content/content_2101561076774162432.html",
+      "official_archive": "Chinith.zip"
+    },
+    {
+      "id": "sign-06",
+      "title": "COMPASS-SIG",
+      "url": "https://www.niccs.org.cn/niccs/Round1Additional/pc/content/content_2101561076912574464.html",
+      "official_archive": "COMPASS-SIG.zip"
+    },
+    {
+      "id": "sign-07",
+      "title": "CS",
+      "url": "https://www.niccs.org.cn/niccs/Round1Additional/pc/content/content_2101561077046792192.html",
+      "official_archive": "CS.zip"
+    },
+    {
+      "id": "sign-08",
+      "title": "DARTS",
+      "url": "https://www.niccs.org.cn/niccs/Round1Additional/pc/content/content_2101561077176815616.html",
+      "official_archive": "DARTS.zip"
+    },
+    {
+      "id": "sign-09",
+      "title": "DOVE",
+      "url": "https://www.niccs.org.cn/niccs/Round1Additional/pc/content/content_2101561077311033344.html",
+      "official_archive": "DOVE.zip"
+    },
+    {
+      "id": "sign-10",
+      "title": "Facto-DSA",
+      "url": "https://www.niccs.org.cn/niccs/Round1Additional/pc/content/content_2101561077457833984.html",
+      "official_archive": "Facto-DSA.zip"
+    },
+    {
+      "id": "sign-11",
+      "title": "FlexTree",
+      "url": "https://www.niccs.org.cn/niccs/Round1Additional/pc/content/content_2101561077587857408.html",
+      "official_archive": "Flextree.zip"
+    },
+    {
+      "id": "sign-12",
+      "title": "Galas Signature Scheme",
+      "url": "https://www.niccs.org.cn/niccs/Round1Additional/pc/content/content_2101561077713686528.html",
+      "official_archive": "Galas Signature.zip"
+    },
+    {
+      "id": "sign-13",
+      "title": "GreatWall Signature Algorithm",
+      "url": "https://www.niccs.org.cn/niccs/Round1Additional/pc/content/content_2101561077852098560.html",
+      "official_archive": "GreatWall.zip"
+    },
+    {
+      "id": "sign-14",
+      "title": "Lynxer",
+      "url": "https://www.niccs.org.cn/niccs/Round1Additional/pc/content/content_2101561077990510592.html",
+      "official_archive": "Lynxer.zip"
+    },
+    {
+      "id": "sign-15",
+      "title": "MORNING-ATLAS",
+      "url": "https://www.niccs.org.cn/niccs/Round1Additional/pc/content/content_2101561078120534016.html",
+      "official_archive": "MORNING-ATLAS.zip"
+    },
+    {
+      "id": "sign-16",
+      "title": "Octarine",
+      "url": "https://www.niccs.org.cn/niccs/Round1Additional/pc/content/content_2101561078258946048.html",
+      "official_archive": "Octarine.zip"
+    },
+    {
+      "id": "sign-17",
+      "title": "OPS Digital Signature Algorithm",
+      "url": "https://www.niccs.org.cn/niccs/Round1Additional/pc/content/content_2101561086848880640.html",
+      "official_archive": "OPS Digital Signature Algorithm.zip"
+    },
+    {
+      "id": "sign-18",
+      "title": "Origami",
+      "url": "https://www.niccs.org.cn/niccs/Round1Additional/pc/content/content_2101561086978904064.html",
+      "official_archive": "Origami.zip"
+    },
+    {
+      "id": "sign-19",
+      "title": "Phoenix",
+      "url": "https://www.niccs.org.cn/niccs/Round1Additional/pc/content/content_2101561087113121792.html",
+      "official_archive": "Phoenix.zip"
+    },
+    {
+      "id": "sign-20",
+      "title": "Qing Luan",
+      "url": "https://www.niccs.org.cn/niccs/Round1Additional/pc/content/content_2101561087243145216.html",
+      "official_archive": "QingLuan.zip"
+    },
+    {
+      "id": "sign-21",
+      "title": "ReSolveD-ɑ",
+      "url": "https://www.niccs.org.cn/niccs/Round1Additional/pc/content/content_2101561087368974336.html",
+      "official_archive": "ReSolveD-alpha.zip"
+    },
+    {
+      "id": "sign-22",
+      "title": "Rhyme",
+      "url": "https://www.niccs.org.cn/niccs/Round1Additional/pc/content/content_2101561095950520320.html",
+      "official_archive": "Rhyme.zip"
+    },
+    {
+      "id": "sign-23",
+      "title": "Shuttle",
+      "url": "https://www.niccs.org.cn/niccs/Round1Additional/pc/content/content_2101561096101515264.html",
+      "official_archive": "shuttle.zip"
+    },
+    {
+      "id": "sign-24",
+      "title": "Sigurd",
+      "url": "https://www.niccs.org.cn/niccs/Round1Additional/pc/content/content_2101561096235732992.html",
+      "official_archive": "Sigurd.zip"
+    },
+    {
+      "id": "sign-25",
+      "title": "SQIsign2D2",
+      "url": "https://www.niccs.org.cn/niccs/Round1Additional/pc/content/content_2101561096361562112.html",
+      "official_archive": "SQIsign2D2.zip"
+    },
+    {
+      "id": "sign-26",
+      "title": "SQIsign2D-push1/2",
+      "url": "https://www.niccs.org.cn/niccs/Round1Additional/pc/content/content_2101561096483196928.html",
+      "official_archive": "SQIsign2D-push12.zip"
+    },
+    {
+      "id": "sign-27",
+      "title": "SQIsignTriangle",
+      "url": "https://www.niccs.org.cn/niccs/Round1Additional/pc/content/content_2101561096613220352.html",
+      "official_archive": "SQIsignTriangle.zip"
+    },
+    {
+      "id": "sign-28",
+      "title": "SYDO",
+      "url": "https://www.niccs.org.cn/niccs/Round1Additional/pc/content/content_2101561105194766336.html",
+      "official_archive": "SYDO.zip"
+    },
+    {
+      "id": "sign-29",
+      "title": "Tins",
+      "url": "https://www.niccs.org.cn/niccs/Round1Additional/pc/content/content_2101868758013939712.html",
+      "official_archive": "Tins.zip"
+    },
+    {
+      "id": "sign-30",
+      "title": "TRINE",
+      "url": "https://www.niccs.org.cn/niccs/Round1Additional/pc/content/content_2101561105463201792.html",
+      "official_archive": "TRINE.zip"
+    },
+    {
+      "id": "sign-31",
+      "title": "TSUOV",
+      "url": "https://www.niccs.org.cn/niccs/Round1Additional/pc/content/content_2101561105597419520.html",
+      "official_archive": "TSUOV.zip"
+    },
+    {
+      "id": "sign-32",
+      "title": "UVW signature",
+      "url": "https://www.niccs.org.cn/niccs/Round1Additional/pc/content/content_2101561105735831552.html",
+      "official_archive": "UVW signature.zip"
+    },
+    {
+      "id": "sign-33",
+      "title": "VDOO: Vinegar-Diagonal-Oil-Oil",
+      "url": "https://www.niccs.org.cn/niccs/Round1Additional/pc/content/content_2101561114325766144.html",
+      "official_archive": "VDOO.zip"
+    },
+    {
+      "id": "sign-34",
+      "title": "YuanYang.DSA",
+      "url": "https://www.niccs.org.cn/niccs/Round1Additional/pc/content/content_2101561114459983872.html",
+      "official_archive": "YuanYang.DSA.zip"
+    },
+    {
+      "id": "kem-01",
+      "title": "Aigis-Enc+",
+      "url": "https://www.niccs.org.cn/niccs/Round1Additional/pc/content/content_2101560842975268864.html",
+      "official_archive": "Aigis-Enc+.zip"
+    },
+    {
+      "id": "kem-02",
+      "title": "Amoeba",
+      "url": "https://www.niccs.org.cn/niccs/Round1Additional/pc/content/content_2101560843117875200.html",
+      "official_archive": "Amoeba.zip"
+    },
+    {
+      "id": "kem-03",
+      "title": "BAG-Loong",
+      "url": "https://www.niccs.org.cn/niccs/Round1Additional/pc/content/content_2101560843247898624.html",
+      "official_archive": "BAG-Loong.zip"
+    },
+    {
+      "id": "kem-04",
+      "title": "BAG-Piglet",
+      "url": "https://www.niccs.org.cn/niccs/Round1Additional/pc/content/content_2101560843373727744.html",
+      "official_archive": "BAG-Piglet.zip"
+    },
+    {
+      "id": "kem-05",
+      "title": "BIKE-MLThre",
+      "url": "https://www.niccs.org.cn/niccs/Round1Additional/pc/content/content_2101560843495362560.html",
+      "official_archive": "BIKE_MLThre.zip"
+    },
+    {
+      "id": "kem-06",
+      "title": "BRA",
+      "url": "https://www.niccs.org.cn/niccs/Round1Additional/pc/content/content_2101560843625385984.html",
+      "official_archive": "BRA.zip"
+    },
+    {
+      "id": "kem-07",
+      "title": "BRQC",
+      "url": "https://www.niccs.org.cn/niccs/Round1Additional/pc/content/content_2101560843751215104.html",
+      "official_archive": "BRQC.zip"
+    },
+    {
+      "id": "kem-08",
+      "title": "BW-KEM",
+      "url": "https://www.niccs.org.cn/niccs/Round1Additional/pc/content/content_2101560843877044224.html",
+      "official_archive": "BW-KEM.zip"
+    },
+    {
+      "id": "kem-09",
+      "title": "CheetahKEM",
+      "url": "https://www.niccs.org.cn/niccs/Round1Additional/pc/content/content_2101560844002873344.html",
+      "official_archive": "CheetahKEM.zip"
+    },
+    {
+      "id": "kem-10",
+      "title": "C-Multi-UR-AG",
+      "url": "https://www.niccs.org.cn/niccs/Round1Additional/pc/content/content_2101560844149673984.html",
+      "official_archive": "C-Multi-UR-AG.zip"
+    },
+    {
+      "id": "kem-11",
+      "title": "COMPASS-KEM",
+      "url": "https://www.niccs.org.cn/niccs/Round1Additional/pc/content/content_2101560844283891712.html",
+      "official_archive": "COMPASS-KEM.zip"
+    },
+    {
+      "id": "kem-12",
+      "title": "CTL Algorithm",
+      "url": "https://www.niccs.org.cn/niccs/Round1Additional/pc/content/content_2101560844426498048.html",
+      "official_archive": "CTL.zip"
+    },
+    {
+      "id": "kem-13",
+      "title": "DKEM (Ding Key Encapsulation)",
+      "url": "https://www.niccs.org.cn/niccs/Round1Additional/pc/content/content_2101560844552327168.html",
+      "official_archive": "DKEM.zip"
+    },
+    {
+      "id": "kem-14",
+      "title": "DTRU",
+      "url": "https://www.niccs.org.cn/niccs/Round1Additional/pc/content/content_2101560844682350592.html",
+      "official_archive": "DTRU.zip"
+    },
+    {
+      "id": "kem-15",
+      "title": "FLIT",
+      "url": "https://www.niccs.org.cn/niccs/Round1Additional/pc/content/content_2101560844812374016.html",
+      "official_archive": "FLIT.zip"
+    },
+    {
+      "id": "kem-16",
+      "title": "HARE",
+      "url": "https://www.niccs.org.cn/niccs/Round1Additional/pc/content/content_2101560844942397440.html",
+      "official_archive": "HARE.zip"
+    },
+    {
+      "id": "kem-17",
+      "title": "Hybrid Equivalent Punctured and Quasi-Cyclic",
+      "url": "https://www.niccs.org.cn/niccs/Round1Additional/pc/content/content_2101560853532332032.html",
+      "official_archive": "HEP-QC.zip"
+    },
+    {
+      "id": "kem-18",
+      "title": "LoongKEM",
+      "url": "https://www.niccs.org.cn/niccs/Round1Additional/pc/content/content_2101560853666549760.html",
+      "official_archive": "LoongKEM.zip"
+    },
+    {
+      "id": "kem-19",
+      "title": "Lore",
+      "url": "https://www.niccs.org.cn/niccs/Round1Additional/pc/content/content_2101560853788184576.html",
+      "official_archive": "Lore.zip"
+    },
+    {
+      "id": "kem-20",
+      "title": "MAMBA-Frost",
+      "url": "https://www.niccs.org.cn/niccs/Round1Additional/pc/content/content_2101560853918208000.html",
+      "official_archive": "MAMBA-Frost.zip"
+    },
+    {
+      "id": "kem-21",
+      "title": "MAMBA-Viper",
+      "url": "https://www.niccs.org.cn/niccs/Round1Additional/pc/content/content_2101560854052425728.html",
+      "official_archive": "MAMBA-Viper.zip"
+    },
+    {
+      "id": "kem-22",
+      "title": "Mithril",
+      "url": "https://www.niccs.org.cn/niccs/Round1Additional/pc/content/content_2101560862650748928.html",
+      "official_archive": "Mithril.zip"
+    },
+    {
+      "id": "kem-23",
+      "title": "Mito",
+      "url": "https://www.niccs.org.cn/niccs/Round1Additional/pc/content/content_2101560862776578048.html",
+      "official_archive": "Mito.zip"
+    },
+    {
+      "id": "kem-24",
+      "title": "MORNING-Scabbard",
+      "url": "https://www.niccs.org.cn/niccs/Round1Additional/pc/content/content_2101560862906601472.html",
+      "official_archive": "MORNING-Scabbard.zip"
+    },
+    {
+      "id": "kem-25",
+      "title": "NEV",
+      "url": "https://www.niccs.org.cn/niccs/Round1Additional/pc/content/content_2101560863040819200.html",
+      "official_archive": "NEV.zip"
+    },
+    {
+      "id": "kem-26",
+      "title": "NSS-HQC",
+      "url": "https://www.niccs.org.cn/niccs/Round1Additional/pc/content/content_2101560863191814144.html",
+      "official_archive": "NSS-HQC.zip"
+    },
+    {
+      "id": "kem-27",
+      "title": "NTRE Key Encapsulation Mechanism",
+      "url": "https://www.niccs.org.cn/niccs/Round1Additional/pc/content/content_2101560863326031872.html",
+      "official_archive": "NTRE.zip"
+    },
+    {
+      "id": "kem-28",
+      "title": "OAEP-NTRU",
+      "url": "https://www.niccs.org.cn/niccs/Round1Additional/pc/content/content_2101560871911772160.html",
+      "official_archive": "OAEP-NTRU.zip"
+    },
+    {
+      "id": "kem-29",
+      "title": "Polar-KEM",
+      "url": "https://www.niccs.org.cn/niccs/Round1Additional/pc/content/content_2101560872041795584.html",
+      "official_archive": "Polar-KEM.zip"
+    },
+    {
+      "id": "kem-30",
+      "title": "PolarLAC",
+      "url": "https://www.niccs.org.cn/niccs/Round1Additional/pc/content/content_2101560872180207616.html",
+      "official_archive": "PolarLAC.zip"
+    },
+    {
+      "id": "kem-31",
+      "title": "QIMEN-PIKE",
+      "url": "https://www.niccs.org.cn/niccs/Round1Additional/pc/content/content_2101560872306036736.html",
+      "official_archive": "QIMEN-PIKE.zip"
+    },
+    {
+      "id": "kem-32",
+      "title": "Quasi-Cyclic Twisted McEliece Key Encapsulation Mechanism",
+      "url": "https://www.niccs.org.cn/niccs/Round1Additional/pc/content/content_2101560872431865856.html",
+      "official_archive": "QCTM.zip"
+    },
+    {
+      "id": "kem-33",
+      "title": "QUBE",
+      "url": "https://www.niccs.org.cn/niccs/Round1Additional/pc/content/content_2101560881000828928.html",
+      "official_archive": "QUBE.zip"
+    },
+    {
+      "id": "kem-34",
+      "title": "Rudraksh2",
+      "url": "https://www.niccs.org.cn/niccs/Round1Additional/pc/content/content_2101560881139240960.html",
+      "official_archive": "Rudraksh2.zip"
+    },
+    {
+      "id": "kem-35",
+      "title": "Scloud+",
+      "url": "https://www.niccs.org.cn/niccs/Round1Additional/pc/content/content_2101560881269264384.html",
+      "official_archive": "Scloud+.zip"
+    },
+    {
+      "id": "kem-36",
+      "title": "TRIKE",
+      "url": "https://www.niccs.org.cn/niccs/Round1Additional/pc/content/content_2101560881424453632.html",
+      "official_archive": "TRIKE.zip"
+    },
+    {
+      "id": "kem-37",
+      "title": "TriQ-KEM",
+      "url": "https://www.niccs.org.cn/niccs/Round1Additional/pc/content/content_2101560881558671360.html",
+      "official_archive": "TriQ-KEM.zip"
+    },
+    {
+      "id": "kem-38",
+      "title": "UVW Key Encapsulation Mechanism",
+      "url": "https://www.niccs.org.cn/niccs/Round1Additional/pc/content/content_2101560881697083392.html",
+      "official_archive": "UVW-KEM.zip"
+    },
+    {
+      "id": "kem-39",
+      "title": "Weaver",
+      "url": "https://www.niccs.org.cn/niccs/Round1Additional/pc/content/content_2101560890312183808.html",
+      "official_archive": "Weaver.zip"
+    },
+    {
+      "id": "kem-40",
+      "title": "YuanYang.KEM",
+      "url": "https://www.niccs.org.cn/niccs/Round1Additional/pc/content/content_2101560890442207232.html",
+      "official_archive": "YuanYang.KEM.zip"
+    },
+    {
+      "id": "kem-41",
+      "title": "ZEN",
+      "url": "https://www.niccs.org.cn/niccs/Round1Additional/pc/content/content_2101560890563842048.html",
+      "official_archive": "ZEN.zip"
+    }
+  ]
+}

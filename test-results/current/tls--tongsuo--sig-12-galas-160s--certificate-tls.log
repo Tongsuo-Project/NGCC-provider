@@ -1,0 +1,6 @@
+STEP keygen
+STEP CSR
+STEP certificates
+PASS CERT sig-12-galas-160s oid=2.25.187231999369161731169322794989053353317 codecs=DER+PEM CSR=verified chain=verified
+PASS TLS1.3 sigalg=sig-12-galas-160s code=0xFE27 group=X25519 chain=verified hostname=verified
+PASS TLS1.3 sigalg=sig-12-galas-160s code=0xFE27 group=kem-01-aigis-enc1 chain=verified hostname=verified

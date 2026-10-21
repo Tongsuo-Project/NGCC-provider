@@ -1,0 +1,7 @@
+STEP keygen
+STEP second-keygen
+STEP sign-0
+STEP sign-1
+SIZES pk=32 sig=11864 capacity=11864
+PASS key-material-unchanged
+PASS sig-05-sm4th-d3-128f-tight

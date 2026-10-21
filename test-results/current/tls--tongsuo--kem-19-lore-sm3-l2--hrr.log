@@ -1,0 +1,1 @@
+PASS TLS1.3 group=kem-19-lore-sm3-l2 wire_id=0xFE21 pk=1186 ct=1282 hrr=1 authenticated=1 exporter=match data=bidirectional

@@ -1,0 +1,1 @@
+PASS TLS1.3 group=kem-20-mamba-frost-cc-128 wire_id=0xFE25 pk=5152 ct=5192 hrr=1 authenticated=1 exporter=match data=bidirectional

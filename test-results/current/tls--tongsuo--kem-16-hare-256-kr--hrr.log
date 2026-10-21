@@ -1,0 +1,1 @@
+PASS TLS1.3 group=kem-16-hare-256-kr wire_id=0xFE1A pk=6580 ct=11790 hrr=1 authenticated=1 exporter=match data=bidirectional

@@ -1,0 +1,7 @@
+STEP keygen
+STEP second-keygen
+STEP sign-0
+STEP sign-1
+SIZES pk=212 sig=73796 capacity=137412
+PASS key-material-unchanged
+PASS sig-24-sigurd-256

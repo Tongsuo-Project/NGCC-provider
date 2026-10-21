@@ -1,0 +1,1 @@
+PASS TLS1.3 group=kem-23-mito-1-256 wire_id=0xFE2E pk=8522 ct=12714 hrr=1 authenticated=1 exporter=match data=bidirectional

@@ -1,0 +1,7 @@
+STEP keygen
+STEP second-keygen
+STEP sign-0
+STEP sign-1
+SIZES pk=64 sig=24594 capacity=24618
+PASS key-material-unchanged
+PASS sig-19-phoenix-sm3-256s

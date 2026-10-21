@@ -1,0 +1,6 @@
+STEP keygen
+STEP CSR
+STEP certificates
+PASS CERT sig-21-resolved-alpha-160s oid=2.25.326419810111174513726909370456245204755 codecs=DER+PEM CSR=verified chain=verified
+PASS TLS1.3 sigalg=sig-21-resolved-alpha-160s code=0xFE43 group=X25519 chain=verified hostname=verified
+PASS TLS1.3 sigalg=sig-21-resolved-alpha-160s code=0xFE43 group=kem-01-aigis-enc1 chain=verified hostname=verified

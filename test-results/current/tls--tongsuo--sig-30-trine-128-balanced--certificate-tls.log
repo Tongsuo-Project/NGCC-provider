@@ -1,0 +1,6 @@
+STEP keygen
+STEP CSR
+STEP certificates
+PASS CERT sig-30-trine-128-balanced oid=2.25.124665369256119472993340275973592981614 codecs=DER+PEM CSR=verified chain=verified
+PASS TLS1.3 sigalg=sig-30-trine-128-balanced code=0xFE61 group=X25519 chain=verified hostname=verified
+PASS TLS1.3 sigalg=sig-30-trine-128-balanced code=0xFE61 group=kem-01-aigis-enc1 chain=verified hostname=verified

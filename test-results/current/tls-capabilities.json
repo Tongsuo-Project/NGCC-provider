@@ -1,0 +1,30 @@
+[
+  {
+    "host": "tongsuo",
+    "kind": "kem",
+    "count": 94,
+    "module_sha256": "4b6f545b9f243a20ed9e3d4076cdf1edb09f6017c6c01e293e60081efe3540e9",
+    "log": "test-results/current/capabilities-tongsuo-kem.log"
+  },
+  {
+    "host": "tongsuo",
+    "kind": "sig",
+    "count": 105,
+    "module_sha256": "4b6f545b9f243a20ed9e3d4076cdf1edb09f6017c6c01e293e60081efe3540e9",
+    "log": "test-results/current/capabilities-tongsuo-sig.log"
+  },
+  {
+    "host": "openssl",
+    "kind": "kem",
+    "count": 94,
+    "module_sha256": "4b6f545b9f243a20ed9e3d4076cdf1edb09f6017c6c01e293e60081efe3540e9",
+    "log": "test-results/current/capabilities-openssl-kem.log"
+  },
+  {
+    "host": "openssl",
+    "kind": "sig",
+    "count": 105,
+    "module_sha256": "4b6f545b9f243a20ed9e3d4076cdf1edb09f6017c6c01e293e60081efe3540e9",
+    "log": "test-results/current/capabilities-openssl-sig.log"
+  }
+]

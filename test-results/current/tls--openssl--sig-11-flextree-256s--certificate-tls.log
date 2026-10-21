@@ -1,0 +1,6 @@
+STEP keygen
+STEP CSR
+STEP certificates
+PASS CERT sig-11-flextree-256s oid=2.25.131547220524247557721036374907285372254 codecs=DER+PEM CSR=verified chain=verified
+PASS TLS1.3 sigalg=sig-11-flextree-256s code=0xFE25 group=X25519 chain=verified hostname=verified
+PASS TLS1.3 sigalg=sig-11-flextree-256s code=0xFE25 group=kem-01-aigis-enc1 chain=verified hostname=verified

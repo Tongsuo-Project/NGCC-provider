@@ -1,0 +1,6 @@
+STEP keygen
+STEP CSR
+STEP certificates
+PASS CERT sig-02-bit-128 oid=2.25.265586595139632617540047892408484548877 codecs=DER+PEM CSR=verified chain=verified
+PASS TLS1.3 sigalg=sig-02-bit-128 code=0xFE02 group=X25519 chain=verified hostname=verified
+PASS TLS1.3 sigalg=sig-02-bit-128 code=0xFE02 group=kem-01-aigis-enc1 chain=verified hostname=verified

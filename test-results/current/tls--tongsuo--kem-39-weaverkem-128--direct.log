@@ -1,0 +1,1 @@
+PASS TLS1.3 group=kem-39-weaverkem-128 wire_id=0xFE59 pk=752 ct=816 hrr=0 authenticated=1 exporter=match data=bidirectional

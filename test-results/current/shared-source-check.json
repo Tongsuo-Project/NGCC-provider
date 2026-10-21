@@ -1,0 +1,155 @@
+{
+  "archive_sha256": "f798dc3ca5593a1468e88a699f8dd158da2f67b97cb93cee0cbe0fcb483b1037",
+  "verified_files": [
+    {
+      "path": "ngcc/upstream/sign-02/Implementations/common/SIG_AlgorithmInstance_128.h",
+      "sha256": "1bc0295aa24481a3bae510d2e8cd1b752390c5b7899975dcb24681145f271dc7",
+      "archive_member": "BiT-release-20261012/common/SIG_AlgorithmInstance_128.h"
+    },
+    {
+      "path": "ngcc/upstream/sign-02/Implementations/common/SIG_AlgorithmInstance_256.h",
+      "sha256": "93b430e347b6c7c0b278f74224668cecfcf530d51c27dfaa6ab1d466e37a2eab",
+      "archive_member": "BiT-release-20261012/common/SIG_AlgorithmInstance_256.h"
+    },
+    {
+      "path": "ngcc/upstream/sign-02/Implementations/common/bernoulli.inc",
+      "sha256": "10e1b1c59912b09f165779627ae4163e3a6c032652a2b8999cfc6faffbb7aa4f",
+      "archive_member": "BiT-release-20261012/common/bernoulli.inc"
+    },
+    {
+      "path": "ngcc/upstream/sign-02/Implementations/common/ct_audit.h",
+      "sha256": "630be3690ddbe21b10c1ab3620101867c7cdb227ff58d19e411b270c7984286f",
+      "archive_member": "BiT-release-20261012/common/ct_audit.h"
+    },
+    {
+      "path": "ngcc/upstream/sign-02/Implementations/common/endian.h",
+      "sha256": "02e19b6cd878778f390333935e5b0626ae6d3a62f87174eaffd785f26f529487",
+      "archive_member": "BiT-release-20261012/common/endian.h"
+    },
+    {
+      "path": "ngcc/upstream/sign-02/Implementations/common/packing.h",
+      "sha256": "b96a54b0a0eed87805dcb462fc84655caa535c01fb2fddc58d29846716f4c32f",
+      "archive_member": "BiT-release-20261012/common/packing.h"
+    },
+    {
+      "path": "ngcc/upstream/sign-02/Implementations/common/packing_checks.h",
+      "sha256": "dbe8028ac4ba90cd1e84c9a02c6051fe93cc1834a1698bdbf46d26455f5499a2",
+      "archive_member": "BiT-release-20261012/common/packing_checks.h"
+    },
+    {
+      "path": "ngcc/upstream/sign-02/Implementations/common/packing_public.h",
+      "sha256": "4d310df22fda71b516f109754f125696403df2c67132d0e42b29877873f3195a",
+      "archive_member": "BiT-release-20261012/common/packing_public.h"
+    },
+    {
+      "path": "ngcc/upstream/sign-02/Implementations/common/packing_w1.h",
+      "sha256": "991a18f934213aad0ba09eb2ffe529005c7c03558c052826a1a5b48b4e6d96aa",
+      "archive_member": "BiT-release-20261012/common/packing_w1.h"
+    },
+    {
+      "path": "ngcc/upstream/sign-02/Implementations/common/params_128.h",
+      "sha256": "a3ff62446d8ea0526a7fa7ca2fa612bdb419da20b3613b57c1a2e295e6dbdb07",
+      "archive_member": "BiT-release-20261012/common/params_128.h"
+    },
+    {
+      "path": "ngcc/upstream/sign-02/Implementations/common/params_256.h",
+      "sha256": "5e7376169d4297cdda1b99b0c6d2084591a47db5f02e888380d56f3be0f67655",
+      "archive_member": "BiT-release-20261012/common/params_256.h"
+    },
+    {
+      "path": "ngcc/upstream/sign-02/Implementations/common/polyvec_ref.inc",
+      "sha256": "ed16759488585627294f87070c215258a175cc865f26fc6eb8353c2fd2853c43",
+      "archive_member": "BiT-release-20261012/common/polyvec_ref.inc"
+    },
+    {
+      "path": "ngcc/upstream/sign-02/Implementations/common/rans_decode.h",
+      "sha256": "a0c5f392f06b8cfe712c42f7c23da28ccdd31a5e62ea8d257a1f08c6b0520fcd",
+      "archive_member": "BiT-release-20261012/common/rans_decode.h"
+    },
+    {
+      "path": "ngcc/upstream/sign-02/Implementations/common/rans_model_128.h",
+      "sha256": "64295f21d81c2765c7e631091f1e1e7bbfed20319c07ebea29dd556dad2c4e75",
+      "archive_member": "BiT-release-20261012/common/rans_model_128.h"
+    },
+    {
+      "path": "ngcc/upstream/sign-02/Implementations/common/rans_model_256.h",
+      "sha256": "2dbcd244524873fed7b1a14d583e453d4cc5bcc4541c9385d71a50999d1263f6",
+      "archive_member": "BiT-release-20261012/common/rans_model_256.h"
+    },
+    {
+      "path": "ngcc/upstream/sign-02/Implementations/common/reduce_128.h",
+      "sha256": "567c4f29047aad4da0ae888153440bc0a41c9b13ee366c484d58b4e912d23f8e",
+      "archive_member": "BiT-release-20261012/common/reduce_128.h"
+    },
+    {
+      "path": "ngcc/upstream/sign-02/Implementations/common/reduce_256.h",
+      "sha256": "77eb77324b64576aa927ea628c971032ffa51549672be1eff4ea214bbf19d8e1",
+      "archive_member": "BiT-release-20261012/common/reduce_256.h"
+    },
+    {
+      "path": "ngcc/upstream/sign-02/Implementations/common/sample.h",
+      "sha256": "0f7b1f83a3ca00317da9d7a6a753389797518f9eb9acfa7f7f9a813cb7b60656",
+      "archive_member": "BiT-release-20261012/common/sample.h"
+    },
+    {
+      "path": "ngcc/upstream/sign-02/Implementations/common/sample.inc",
+      "sha256": "3eb37f4b67c4513d0c0f6c11b8a3a735e5ab4689b9128742717a9b760c38096b",
+      "archive_member": "BiT-release-20261012/common/sample.inc"
+    },
+    {
+      "path": "ngcc/upstream/sign-02/Implementations/common/sign.h",
+      "sha256": "acb9fa0f23edefe10ee2d9f935b3381dda379b81cc186bb063b1cab6eaa9c29f",
+      "archive_member": "BiT-release-20261012/common/sign.h"
+    },
+    {
+      "path": "ngcc/upstream/sign-02/Implementations/common/sign.inc",
+      "sha256": "40bcec513fdfb3a7ae65a40c0860853aaae16741cfccca6240c3fb0e30ffef4d",
+      "archive_member": "BiT-release-20261012/common/sign.inc"
+    },
+    {
+      "path": "ngcc/upstream/sign-02/Implementations/common/signature_api.inc",
+      "sha256": "53e55d525285edb04e9b550bc1b1f9a12d75d6466dc5b49b4226082871c85838",
+      "archive_member": "BiT-release-20261012/common/signature_api.inc"
+    },
+    {
+      "path": "ngcc/upstream/sign-02/Implementations/common/signature_codec_128.inc",
+      "sha256": "1c1539731d99561e737dca897c12ca4c1e47508b034ca1268f0f68643d89c8b2",
+      "archive_member": "BiT-release-20261012/common/signature_codec_128.inc"
+    },
+    {
+      "path": "ngcc/upstream/sign-02/Implementations/common/signature_codec_256.inc",
+      "sha256": "cf2d3a82bb4c7ad5d4f253171a5482cacd243e95dd70c48e147ef0c6df2cbb4a",
+      "archive_member": "BiT-release-20261012/common/signature_codec_256.inc"
+    },
+    {
+      "path": "ngcc/upstream/sign-02/Implementations/common/small_sample.h",
+      "sha256": "d93f81d2e1c9d0373148421b3408af95757b98f8870df81699b63ff2881595bf",
+      "archive_member": "BiT-release-20261012/common/small_sample.h"
+    },
+    {
+      "path": "ngcc/upstream/sign-02/Implementations/common/spectral.h",
+      "sha256": "01e46fae9b17d179cd2ec9bb95b910fc1577302051d86cb5871886dd99b22ed1",
+      "archive_member": "BiT-release-20261012/common/spectral.h"
+    },
+    {
+      "path": "ngcc/upstream/sign-02/Implementations/common/spectral.inc",
+      "sha256": "45dd2e39adb6ee8b198a64f9c6d7b0cd637887d464c0e001b321eeec13377459",
+      "archive_member": "BiT-release-20261012/common/spectral.inc"
+    },
+    {
+      "path": "ngcc/upstream/sign-02/Implementations/common/spectral_roots.h",
+      "sha256": "0066d4419387c6646482690ab41d8a92771483bd71b3f5e9ef0b026859ab3b93",
+      "archive_member": "BiT-release-20261012/common/spectral_roots.h"
+    },
+    {
+      "path": "ngcc/upstream/sign-02/Implementations/common/symmetric.h",
+      "sha256": "68dfe59799a53f7cd0491359baff24d31abf1b5311861e824ef9e5cbc5405738",
+      "archive_member": "BiT-release-20261012/common/symmetric.h"
+    },
+    {
+      "path": "ngcc/upstream/sign-02/Implementations/common/symmetric.inc",
+      "sha256": "45983ac4452e854321f978c3f618fc7645a24da636ccc0b7f352a5e791c74216",
+      "archive_member": "BiT-release-20261012/common/symmetric.inc"
+    }
+  ]
+}

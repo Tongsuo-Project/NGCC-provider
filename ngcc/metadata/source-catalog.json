@@ -1,0 +1,1436 @@
+[
+  {
+    "id": "kem-01",
+    "name": "Aigis-Enc+",
+    "source_checked_date": "2026-10-20",
+    "source_url": "https://list.niccs.org.cn/archives/list/pkcforum@list.niccs.org.cn/message/GGSOU5DK46JKEP27W2B3KRRAJWCW7CLZ/attachment/4/Aigis-Enc.zip",
+    "source_kind": "latest-author-revision",
+    "withdrawn": false,
+    "parameters": [
+      "Aigis-enc1",
+      "Aigis-enc2"
+    ],
+    "archives": [
+      {
+        "path": "ngcc_provider/ngcc/metadata/kem-01-revision.zip",
+        "sha256": "c8c633aa1ae8d5848668f242b3b123e62a1a680d48ce58c85fb0bfcea0928271"
+      }
+    ]
+  },
+  {
+    "id": "kem-02",
+    "name": "Amoeba",
+    "source_checked_date": "2026-10-20",
+    "source_url": "https://www.niccs.org.cn/niccs/Proposal/Public-Key%20Cryptographic%20Algorithms/Round%201%20candidates/Amoeba.zip",
+    "source_kind": "official-round-1-package",
+    "withdrawn": false,
+    "parameters": [
+      "Amoeba128",
+      "Amoeba192",
+      "Amoeba256"
+    ],
+    "archives": [
+      {
+        "path": "aux_note_20260919/iccs_pkgs/Amoeba.zip",
+        "sha256": "719c438a30cccd72c9d83da4b5150fee0c55351f2c13e7a66fd61bf653ca5c24"
+      }
+    ]
+  },
+  {
+    "id": "kem-03",
+    "name": "BAG-Loong",
+    "source_checked_date": "2026-10-20",
+    "source_url": "https://www.niccs.org.cn/niccs/Proposal/Public-Key%20Cryptographic%20Algorithms/Round%201%20candidates/BAG-Loong.zip",
+    "source_kind": "official-round-1-package",
+    "withdrawn": false,
+    "parameters": [
+      "BAG-Loong-128",
+      "BAG-Loong-256"
+    ],
+    "archives": [
+      {
+        "path": "aux_note_20260919/iccs_pkgs/BAG-Loong.zip",
+        "sha256": "2795fd57d3d00791652256362b4a21982116d3aad1fb63633dac923e0e76e05b"
+      }
+    ]
+  },
+  {
+    "id": "kem-04",
+    "name": "BAG-Piglet",
+    "source_checked_date": "2026-10-20",
+    "source_url": "https://www.niccs.org.cn/niccs/Proposal/Public-Key%20Cryptographic%20Algorithms/Round%201%20candidates/BAG-Piglet.zip",
+    "source_kind": "official-round-1-package",
+    "withdrawn": false,
+    "parameters": [
+      "bag_piglet_128",
+      "bag_piglet_256"
+    ],
+    "archives": [
+      {
+        "path": "aux_note_20260919/iccs_pkgs/BAG-Piglet.zip",
+        "sha256": "31afe1f2f4e97ad77929d7855c7d9011d69755049d155c09be9339bc99b1d405"
+      }
+    ]
+  },
+  {
+    "id": "kem-05",
+    "name": "BIKE_MLThre",
+    "source_checked_date": "2026-10-20",
+    "source_url": "https://www.niccs.org.cn/niccs/Proposal/Public-Key%20Cryptographic%20Algorithms/Round%201%20candidates/BIKE_MLThre.zip",
+    "source_kind": "official-round-1-package",
+    "withdrawn": false,
+    "parameters": [
+      "BIKE_v2_128",
+      "BIKE_v2_256"
+    ],
+    "archives": [
+      {
+        "path": "aux_note_20260919/iccs_pkgs/BIKE_MLThre.zip",
+        "sha256": "3a5d97532003786374b68b39779cff4e4938f593fef9596f171652c6ff593917"
+      }
+    ]
+  },
+  {
+    "id": "kem-06",
+    "name": "BRA",
+    "source_checked_date": "2026-10-20",
+    "source_url": "https://www.niccs.org.cn/niccs/Proposal/Public-Key%20Cryptographic%20Algorithms/Round%201%20candidates/BRA.zip",
+    "source_kind": "official-round-1-package",
+    "withdrawn": false,
+    "parameters": [
+      "BRA-128",
+      "BRA-256"
+    ],
+    "archives": [
+      {
+        "path": "aux_note_20260919/iccs_pkgs/BRA.zip",
+        "sha256": "612a3fe69c7a28fae7ca87a226d29e67a9cffb6ce9e4cbe54ac9de37f7650d7a"
+      }
+    ]
+  },
+  {
+    "id": "kem-07",
+    "name": "BRQC",
+    "source_checked_date": "2026-10-20",
+    "source_url": "https://www.niccs.org.cn/niccs/Proposal/Public-Key%20Cryptographic%20Algorithms/Round%201%20candidates/BRQC.zip",
+    "source_kind": "official-round-1-package",
+    "withdrawn": false,
+    "parameters": [
+      "BRQC-128",
+      "BRQC-256"
+    ],
+    "archives": [
+      {
+        "path": "aux_note_20260919/iccs_pkgs/BRQC.zip",
+        "sha256": "2c76bdd4e4df7829bf22fa4949a3c744b9af692425f6f2e5fae5317d41e366ae"
+      }
+    ]
+  },
+  {
+    "id": "kem-08",
+    "name": "BW-KEM",
+    "source_checked_date": "2026-10-20",
+    "source_url": "https://www.niccs.org.cn/niccs/Proposal/Public-Key%20Cryptographic%20Algorithms/Round%201%20candidates/BW-KEM.zip",
+    "source_kind": "official-round-1-package",
+    "withdrawn": false,
+    "parameters": [
+      "BW_KEM_C128",
+      "BW_KEM_C256"
+    ],
+    "archives": [
+      {
+        "path": "aux_note_20260919/iccs_pkgs/BW-KEM.zip",
+        "sha256": "a1f8a079df7d55576209f45fcf00afd700fc60c0b18d758d572585ccea594ae3"
+      }
+    ]
+  },
+  {
+    "id": "kem-09",
+    "name": "CheetahKEM",
+    "source_checked_date": "2026-10-20",
+    "source_url": "https://www.niccs.org.cn/niccs/Proposal/Public-Key%20Cryptographic%20Algorithms/Round%201%20candidates/CheetahKEM.zip",
+    "source_kind": "official-round-1-package",
+    "withdrawn": false,
+    "parameters": [
+      "Cheetah128",
+      "Cheetah256"
+    ],
+    "archives": [
+      {
+        "path": "aux_note_20260919/iccs_pkgs/CheetahKEM.zip",
+        "sha256": "fc321e46bac9c387535e2053bed560eac3d3cd88ba9bebc154f5bf68dd47dcd1"
+      }
+    ]
+  },
+  {
+    "id": "kem-10",
+    "name": "C-Multi-UR-AG",
+    "source_checked_date": "2026-10-20",
+    "source_url": "https://www.niccs.org.cn/niccs/Proposal/Public-Key%20Cryptographic%20Algorithms/Round%201%20candidates/C-Multi-UR-AG.zip",
+    "source_kind": "official-round-1-package",
+    "withdrawn": false,
+    "parameters": [
+      "CMultiURAG-128",
+      "CMultiURAG-256"
+    ],
+    "archives": [
+      {
+        "path": "aux_note_20260919/iccs_pkgs/C-Multi-UR-AG.zip",
+        "sha256": "c41e372a55e1dd4aa0e30c6b53d9d7b4f9cd1d7ae431763535e1e61097445e2c"
+      }
+    ]
+  },
+  {
+    "id": "kem-11",
+    "name": "COMPASS-KEM",
+    "source_checked_date": "2026-10-20",
+    "source_url": "https://www.niccs.org.cn/niccs/Proposal/Public-Key%20Cryptographic%20Algorithms/Round%201%20candidates/COMPASS-KEM.zip",
+    "source_kind": "official-round-1-package",
+    "withdrawn": false,
+    "parameters": [
+      "COMPASS-KEM-128",
+      "COMPASS-KEM-256"
+    ],
+    "archives": [
+      {
+        "path": "aux_note_20260919/iccs_pkgs/COMPASS-KEM.zip",
+        "sha256": "8fc838488ac0849d4c6afd161f8b9742c7a8b9a330bc3b79df70ced7e2d1d5e2"
+      }
+    ]
+  },
+  {
+    "id": "kem-12",
+    "name": "CTL",
+    "source_checked_date": "2026-10-20",
+    "source_url": "https://www.niccs.org.cn/niccs/Proposal/Public-Key%20Cryptographic%20Algorithms/Round%201%20candidates/CTL.zip",
+    "source_kind": "official-round-1-package",
+    "withdrawn": false,
+    "parameters": [
+      "CTL-257-512",
+      "CTL-769-1024"
+    ],
+    "archives": [
+      {
+        "path": "aux_note_20260919/iccs_pkgs/CTL.zip",
+        "sha256": "512caaf5fa04ea5ab51fb5eeee9e81f8c7c7c430b60727130067634bfb674d01"
+      }
+    ]
+  },
+  {
+    "id": "kem-13",
+    "name": "DKEM",
+    "source_checked_date": "2026-10-20",
+    "source_url": "https://github.com/dkemdkex/dkem-dkex/commit/5900418088dfa73b624dec1a2d4aaca751230b12",
+    "source_kind": "latest-author-revision",
+    "withdrawn": false,
+    "parameters": [
+      "DKEM-128",
+      "DKEM-256"
+    ],
+    "archives": [
+      {
+        "path": "ngcc_provider/ngcc/metadata/kem-13-revision.zip",
+        "sha256": "76791cc687f52c791bbdf775069dc9c0ec12cfbde37671d0918303cbb24a63ea"
+      }
+    ],
+    "commit": "5900418088dfa73b624dec1a2d4aaca751230b12"
+  },
+  {
+    "id": "kem-14",
+    "name": "DTRU",
+    "source_checked_date": "2026-10-20",
+    "source_url": "https://www.niccs.org.cn/niccs/Proposal/Public-Key%20Cryptographic%20Algorithms/Round%201%20candidates/DTRU.zip",
+    "source_kind": "official-round-1-package",
+    "withdrawn": false,
+    "parameters": [
+      "DTRU-648",
+      "DTRU-768",
+      "DTRU-1024",
+      "DTRU-Light",
+      "DTRU-Prime",
+      "DTRU-648-PACK_PK",
+      "DTRU-768-PACK_PK",
+      "DTRU-1024-PACK_PK"
+    ],
+    "archives": [
+      {
+        "path": "aux_note_20260919/iccs_pkgs/DTRU.zip",
+        "sha256": "ed443d6a9e2e6c50e4956e9b30ce078ae0598a8846962d04b9894cac0816527b"
+      }
+    ]
+  },
+  {
+    "id": "kem-15",
+    "name": "FLIT",
+    "source_checked_date": "2026-10-20",
+    "source_url": "https://github.com/MathEternal/FLIT-NGCC/tree/c416982d41b70283ed4823319c2a4d8d23e6f055",
+    "source_kind": "latest-author-revision",
+    "withdrawn": false,
+    "parameters": [
+      "FLIT128_REF",
+      "FLIT256_REF"
+    ],
+    "archives": [
+      {
+        "path": "aux_note_kems/_build/security_sources_20261020/flit-author-current-c416982d.zip",
+        "sha256": "96f72dcc2d83db9b2fe915f9a0e531a260a6a3b896e601f274a13252ddf01c0a"
+      }
+    ]
+  },
+  {
+    "id": "kem-16",
+    "name": "HARE",
+    "source_checked_date": "2026-10-20",
+    "source_url": "https://pqc-hare.info/downloads/hare-implementations-v1.5.zip",
+    "source_kind": "latest-author-revision",
+    "withdrawn": false,
+    "parameters": [
+      "HARE-128-kr",
+      "HARE-256-kr"
+    ],
+    "archives": [
+      {
+        "path": "ngcc_provider/ngcc/metadata/kem-16-revision.zip",
+        "sha256": "46d780bdfcd32cafc67b97659b3f2a7f40c124c4d8f2d35bdd0d0f46ca573206"
+      }
+    ]
+  },
+  {
+    "id": "kem-17",
+    "name": "HEP-QC",
+    "source_checked_date": "2026-10-20",
+    "source_url": "https://www.niccs.org.cn/niccs/Proposal/Public-Key%20Cryptographic%20Algorithms/Round%201%20candidates/HEP-QC.zip",
+    "source_kind": "official-round-1-package",
+    "withdrawn": false,
+    "parameters": [
+      "hep-qc-1",
+      "hep-qc-3",
+      "hep-qc-5"
+    ],
+    "archives": [
+      {
+        "path": "aux_note_20260919/iccs_pkgs/HEP-QC.zip",
+        "sha256": "3780991127f49b6397b4182d32b35ab7a6359bf825a707e90df0f809beeb3790"
+      }
+    ]
+  },
+  {
+    "id": "kem-18",
+    "name": "LoongKEM",
+    "source_checked_date": "2026-10-20",
+    "source_url": "https://www.niccs.org.cn/niccs/Proposal/Public-Key%20Cryptographic%20Algorithms/Round%201%20candidates/LoongKEM.zip",
+    "source_kind": "official-round-1-package",
+    "withdrawn": false,
+    "parameters": [
+      "Loong128",
+      "Loong256"
+    ],
+    "archives": [
+      {
+        "path": "aux_note_20260919/iccs_pkgs/LoongKEM.zip",
+        "sha256": "a6e5070647a40e7de1bf6e5b085dc1d6423c003a409864fdb303d87f881cec0b"
+      }
+    ]
+  },
+  {
+    "id": "kem-19",
+    "name": "Lore",
+    "source_checked_date": "2026-10-20",
+    "source_url": "https://list.niccs.org.cn/archives/list/pkcforum@list.niccs.org.cn/message/W6XIOQDXGIUZPVKR3MZW4HZCDJEVYRMR/attachment/4/Lore-Reference-Implementations-20260927.zip",
+    "source_kind": "latest-author-revision",
+    "withdrawn": false,
+    "parameters": [
+      "Lore-SM3-L1",
+      "Lore-SM3-L2"
+    ],
+    "archives": [
+      {
+        "path": "aux_note_kems/_build/security_sources_20261020/lore-revision-current-b81b265a.zip",
+        "sha256": "b81b265a58dc5d73417905bb50126bf28faa7e86103de19521fb5ab42404aec6"
+      }
+    ]
+  },
+  {
+    "id": "kem-20",
+    "name": "MAMBA-Frost",
+    "source_checked_date": "2026-10-20",
+    "source_url": "https://www.niccs.org.cn/niccs/Proposal/Public-Key%20Cryptographic%20Algorithms/Round%201%20candidates/MAMBA-Frost.zip",
+    "source_kind": "official-round-1-package",
+    "withdrawn": false,
+    "parameters": [
+      "MAMBA-Frost-128",
+      "MAMBA-Frost-192",
+      "MAMBA-Frost-256",
+      "MAMBA-Frost-CC-128",
+      "MAMBA-Frost-CC-192",
+      "MAMBA-Frost-CC-256"
+    ],
+    "archives": [
+      {
+        "path": "aux_note_20260919/iccs_pkgs/MAMBA-Frost.zip",
+        "sha256": "ae363dbefd69d64e99987b64105d60bfa376d97c8b58b055665761559c44c78b"
+      }
+    ]
+  },
+  {
+    "id": "kem-21",
+    "name": "MAMBA-Viper",
+    "source_checked_date": "2026-10-20",
+    "source_url": "https://www.niccs.org.cn/niccs/Proposal/Public-Key%20Cryptographic%20Algorithms/Round%201%20candidates/MAMBA-Viper.zip",
+    "source_kind": "official-round-1-package",
+    "withdrawn": false,
+    "parameters": [
+      "MAMBA-Viper-128",
+      "MAMBA-Viper-192",
+      "MAMBA-Viper-256"
+    ],
+    "archives": [
+      {
+        "path": "aux_note_20260919/iccs_pkgs/MAMBA-Viper.zip",
+        "sha256": "cdf52bb77066664f74eb44872d5ab1785c22df194e50c603120432a169c61f4c"
+      }
+    ]
+  },
+  {
+    "id": "kem-22",
+    "name": "Mithril",
+    "source_checked_date": "2026-10-20",
+    "source_url": "https://www.pq-arcane.org/dist/downloads/Mithril-source-codes.zip",
+    "source_kind": "latest-author-revision",
+    "withdrawn": false,
+    "parameters": [
+      "Mithril-128",
+      "Mithril-256"
+    ],
+    "archives": [
+      {
+        "path": "aux_note_kems/_build/security_sources_20261020/mithril-author-current-5e076053.zip",
+        "sha256": "5e0760538bb4e0d3f9bdcb271f8c3b407f3d465696785e7f6fbcc1ee35f97fcb"
+      }
+    ]
+  },
+  {
+    "id": "kem-23",
+    "name": "Mito",
+    "source_checked_date": "2026-10-20",
+    "source_url": "https://www.niccs.org.cn/niccs/Proposal/Public-Key%20Cryptographic%20Algorithms/Round%201%20candidates/Mito.zip",
+    "source_kind": "official-round-1-package",
+    "withdrawn": false,
+    "parameters": [
+      "Mito-1-128",
+      "Mito-1-256",
+      "Mito-1-E-128",
+      "Mito-1-E-256",
+      "Mito-2-E-128",
+      "Mito-2-E-256"
+    ],
+    "archives": [
+      {
+        "path": "aux_note_20260919/iccs_pkgs/Mito.zip",
+        "sha256": "ee11788a3e8bf8653d18ade6580c47a331b91e7eac3e31a5a6750a4b4cfb827b"
+      }
+    ]
+  },
+  {
+    "id": "kem-24",
+    "name": "MORNING-Scabbard",
+    "source_checked_date": "2026-10-20",
+    "source_url": "https://www.niccs.org.cn/niccs/Proposal/Public-Key%20Cryptographic%20Algorithms/Round%201%20candidates/MORNING-Scabbard.zip",
+    "source_kind": "official-round-1-package",
+    "withdrawn": false,
+    "parameters": [
+      "scabbard128",
+      "scabbard256"
+    ],
+    "archives": [
+      {
+        "path": "aux_note_20260919/iccs_pkgs/MORNING-Scabbard.zip",
+        "sha256": "fdb6749116bddbb8a86074b9ab6f5f55d37540b92e3964906dede0b09c7faf4b"
+      }
+    ]
+  },
+  {
+    "id": "kem-25",
+    "name": "NEV",
+    "source_checked_date": "2026-10-20",
+    "source_url": "https://list.niccs.org.cn/archives/list/pkcforum@list.niccs.org.cn/message/UZPNPPDYL5APZLO573LFHXX2ZLPVLZDE/attachment/4/NEV_Implementations.zip",
+    "source_kind": "latest-author-revision",
+    "withdrawn": false,
+    "parameters": [
+      "NEV_512_769_C_ICCS",
+      "NEV_1024_769_C_ICCS",
+      "NEV_512_1409_ICCS",
+      "NEV_1024_1409_ICCS",
+      "NEV_512_3329_ICCS",
+      "NEV_1024_3329_ICCS",
+      "NEV_512_769_ICCS",
+      "NEV_1024_769_ICCS"
+    ],
+    "archives": [
+      {
+        "path": "aux_note_kems/_build/security_sources_20261020/nev-revision-current-48e6bc5a.zip",
+        "sha256": "48e6bc5a3b814dc901ac8176c21b6d2460d36380c8f82f06e68134e40b83ebb9"
+      }
+    ]
+  },
+  {
+    "id": "kem-26",
+    "name": "NSS-HQC",
+    "source_checked_date": "2026-10-20",
+    "source_url": "https://www.niccs.org.cn/niccs/Proposal/Public-Key%20Cryptographic%20Algorithms/Round%201%20candidates/NSS-HQC.zip",
+    "source_kind": "official-round-1-package",
+    "withdrawn": false,
+    "parameters": [
+      "HQC-128",
+      "HQC-256"
+    ],
+    "archives": [
+      {
+        "path": "aux_note_20260919/iccs_pkgs/NSS-HQC.zip",
+        "sha256": "033994e27bf0dc824078593a98eb51465f979b1bca0932cabb29be6626447638"
+      }
+    ]
+  },
+  {
+    "id": "kem-27",
+    "name": "NTRE",
+    "source_checked_date": "2026-10-20",
+    "source_url": "https://www.niccs.org.cn/niccs/Proposal/Public-Key%20Cryptographic%20Algorithms/Round%201%20candidates/NTRE.zip",
+    "source_kind": "official-round-1-package",
+    "withdrawn": false,
+    "parameters": [
+      "NTRE-128",
+      "NTRE-256"
+    ],
+    "archives": [
+      {
+        "path": "aux_note_20260919/iccs_pkgs/NTRE.zip",
+        "sha256": "9c0bad4c4846998df1214ba562e1c3b8aece6b69f08234a9bb0d89e3a5a4ea9a"
+      }
+    ]
+  },
+  {
+    "id": "kem-28",
+    "name": "OAEP-NTRU",
+    "source_checked_date": "2026-10-20",
+    "source_url": "https://github.com/oaep-ntru/oaepntru/tree/f846d6ebda76af62278f408a6ebff36f1dfc207b",
+    "source_kind": "latest-author-revision",
+    "withdrawn": false,
+    "parameters": [
+      "OAEP-NTRU-648",
+      "OAEP-NTRU-1296"
+    ],
+    "archives": [
+      {
+        "path": "aux_note_kems/_build/security_sources_20261020/oaepntru-current-f846d6eb.zip",
+        "sha256": "114d6b8697667da95c6fc71ff7d5db28b2debe7ea0a5865f5ffdb83a5d05b43e"
+      }
+    ]
+  },
+  {
+    "id": "kem-29",
+    "name": "Polar-KEM",
+    "source_checked_date": "2026-10-20",
+    "source_url": "https://www.niccs.org.cn/niccs/Proposal/Public-Key%20Cryptographic%20Algorithms/Round%201%20candidates/Polar-KEM.zip",
+    "source_kind": "official-round-1-package",
+    "withdrawn": false,
+    "parameters": [
+      "PolarKEM-128",
+      "PolarKEM-256"
+    ],
+    "archives": [
+      {
+        "path": "aux_note_20260919/iccs_pkgs/Polar-KEM.zip",
+        "sha256": "3ae9d4f1a717fb473e76447014d585cd5d14fe38728f02b1a044cc6a2d03e16d"
+      }
+    ]
+  },
+  {
+    "id": "kem-30",
+    "name": "PolarLAC",
+    "source_checked_date": "2026-10-20",
+    "source_url": "https://www.niccs.org.cn/niccs/Proposal/Public-Key%20Cryptographic%20Algorithms/Round%201%20candidates/PolarLAC.zip",
+    "source_kind": "official-round-1-package",
+    "withdrawn": false,
+    "parameters": [
+      "POLARLAC-128",
+      "POLARLAC-256",
+      "POLARLAC-Light"
+    ],
+    "archives": [
+      {
+        "path": "aux_note_20260919/iccs_pkgs/PolarLAC.zip",
+        "sha256": "906be26ce8d27de335b691ff8490b2344b46d7519d88c799cba0242324e4882c"
+      }
+    ]
+  },
+  {
+    "id": "kem-31",
+    "name": "QIMEN-PIKE",
+    "source_checked_date": "2026-10-20",
+    "source_url": "https://www.niccs.org.cn/niccs/Proposal/Public-Key%20Cryptographic%20Algorithms/Round%201%20candidates/QIMEN-PIKE.zip",
+    "source_kind": "official-round-1-package",
+    "withdrawn": false,
+    "parameters": [
+      "NGCC-1",
+      "NGCC-2"
+    ],
+    "archives": [
+      {
+        "path": "aux_note_20260919/iccs_pkgs/QIMEN-PIKE.zip",
+        "sha256": "eff17fd345bbb44cbaeb822bece3c0b82b8d00f49278e72a89c83e2551c1752a"
+      }
+    ]
+  },
+  {
+    "id": "kem-32",
+    "name": "QCTM",
+    "source_checked_date": "2026-10-21",
+    "source_url": "https://www.niccs.org.cn/niccs/Proposal/Public-Key%20Cryptographic%20Algorithms/Round%201%20candidates/QCTM.zip",
+    "source_kind": "official-round-1-package",
+    "withdrawn": false,
+    "parameters": [
+      "QCTM128",
+      "QCTM256"
+    ],
+    "archives": [
+      {
+        "path": "aux_note_20260919/iccs_pkgs/QCTM.zip",
+        "sha256": "24a3986a4fbb852a677267a6443756328eae3642af770e767fe38f8291f294db"
+      }
+    ],
+    "version_limitation": "2026-10-08 团队宣布修订；未找到可下载新版源码，2026-10-21 官方包完整下载哈希仍与初始包一致。当前集成的是可获取官方包，不能当作公告修订版。",
+    "version_evidence": "ngcc/metadata/qctm-source-availability.json"
+  },
+  {
+    "id": "kem-33",
+    "name": "QUBE",
+    "source_checked_date": "2026-10-20",
+    "source_url": "https://www.niccs.org.cn/niccs/Proposal/Public-Key%20Cryptographic%20Algorithms/Round%201%20candidates/QUBE.zip",
+    "source_kind": "official-round-1-package",
+    "withdrawn": false,
+    "parameters": [
+      "qube-128",
+      "qube-192",
+      "qube-256"
+    ],
+    "archives": [
+      {
+        "path": "aux_note_20260919/iccs_pkgs/QUBE.zip",
+        "sha256": "f5eedd8a4bf786cd5a56a21f2c7ad5cf3307939a1bf0aeca5041920067880396"
+      }
+    ]
+  },
+  {
+    "id": "kem-34",
+    "name": "Rudraksh2",
+    "source_checked_date": "2026-10-20",
+    "source_url": "https://www.niccs.org.cn/niccs/Proposal/Public-Key%20Cryptographic%20Algorithms/Round%201%20candidates/Rudraksh2.zip",
+    "source_kind": "official-round-1-package",
+    "withdrawn": false,
+    "parameters": [
+      "lwekem128",
+      "lwekem256"
+    ],
+    "archives": [
+      {
+        "path": "aux_note_20260919/iccs_pkgs/Rudraksh2.zip",
+        "sha256": "569d526cf7abe38393f69a4513686fa86a0c3b3033cc225b84cc107b20b17b98"
+      }
+    ]
+  },
+  {
+    "id": "kem-35",
+    "name": "Scloud+",
+    "source_checked_date": "2026-10-20",
+    "source_url": "https://www.niccs.org.cn/niccs/Proposal/Public-Key%20Cryptographic%20Algorithms/Round%201%20candidates/Scloud%2B.zip",
+    "source_kind": "official-round-1-package",
+    "withdrawn": false,
+    "parameters": [
+      "Scloudplus-128-AES-packed10",
+      "Scloudplus-128-SM3-packed10",
+      "Scloudplus-192-AES-packed10",
+      "Scloudplus-192-SM3-packed10",
+      "Scloudplus-256-AES-packed10",
+      "Scloudplus-256-SM3-packed10"
+    ],
+    "archives": [
+      {
+        "path": "aux_note_20260919/iccs_pkgs/Scloud+.zip",
+        "sha256": "050aad7293ec90fafd9070e82877eedc81caf0aaaca932c995619a3f35429876"
+      }
+    ]
+  },
+  {
+    "id": "kem-36",
+    "name": "TRIKE",
+    "source_checked_date": "2026-10-20",
+    "source_url": "https://pqc-trike.info/downloads/trike-implementations-iccs-v1.6.zip",
+    "source_kind": "latest-author-revision",
+    "withdrawn": false,
+    "parameters": [
+      "TRIKE-1",
+      "TRIKE-5"
+    ],
+    "archives": [
+      {
+        "path": "aux_note_kems/_build/security_sources_20261020/trike-implementations-iccs-v1.6.zip",
+        "sha256": "18145a3ce255dd5052e53cd6df6796cae91db4e851e857cf7b0defa07eb43420"
+      }
+    ]
+  },
+  {
+    "id": "kem-37",
+    "name": "TriQ-KEM",
+    "source_checked_date": "2026-10-20",
+    "source_url": "https://www.niccs.org.cn/niccs/Proposal/Public-Key%20Cryptographic%20Algorithms/Round%201%20candidates/TriQ-KEM.zip",
+    "source_kind": "official-round-1-package",
+    "withdrawn": false,
+    "parameters": [
+      "TriQ-KEM-128",
+      "TriQ-KEM-256"
+    ],
+    "archives": [
+      {
+        "path": "aux_note_20260919/iccs_pkgs/TriQ-KEM.zip",
+        "sha256": "1e4b96e7a849c95b4a6511c5739be9e0b4adf19b00195c2c0ce14f66be316876"
+      }
+    ]
+  },
+  {
+    "id": "kem-38",
+    "name": "UVW-KEM",
+    "source_checked_date": "2026-10-20",
+    "source_url": "https://www.niccs.org.cn/niccs/Proposal/Public-Key%20Cryptographic%20Algorithms/Round%201%20candidates/UVW-KEM.zip",
+    "source_kind": "official-round-1-package",
+    "withdrawn": false,
+    "parameters": [
+      "UVW-KEM-128",
+      "UVW-KEM-256"
+    ],
+    "archives": [
+      {
+        "path": "aux_note_20260919/iccs_pkgs/UVW-KEM.zip",
+        "sha256": "f9a1b135ea16aca0c974861732e03cd3164f1288f33ff150ff66c98326b75bcb"
+      }
+    ]
+  },
+  {
+    "id": "kem-39",
+    "name": "Weaver",
+    "source_checked_date": "2026-10-20",
+    "source_url": "https://github.com/Akutamatsu/weaverkem/tree/09369c28185641d6d7ad044252b536d977d9a4ae",
+    "source_kind": "latest-author-revision",
+    "withdrawn": false,
+    "parameters": [
+      "WeaverKEM-128",
+      "WeaverKEM-256"
+    ],
+    "archives": [
+      {
+        "path": "aux_note_kems/_build/security_sources_20261020/weaver-current-09369c28.zip",
+        "sha256": "5409ec043d48549cd86773a0b02b84c9e6eb74b435e833605acce104b04404f1"
+      }
+    ]
+  },
+  {
+    "id": "kem-40",
+    "name": "YuanYang.KEM",
+    "source_checked_date": "2026-10-20",
+    "source_url": "https://www.niccs.org.cn/niccs/Proposal/Public-Key%20Cryptographic%20Algorithms/Round%201%20candidates/YuanYang.KEM.zip",
+    "source_kind": "official-round-1-package",
+    "withdrawn": false,
+    "parameters": [
+      "yuanyang-512",
+      "yuanyang-1024"
+    ],
+    "archives": [
+      {
+        "path": "aux_note_20260919/iccs_pkgs/YuanYang.KEM.zip",
+        "sha256": "fe1bf3d78272bb79048e7d456819160324c6140206798cb77a22c2babcfdcf4a"
+      }
+    ]
+  },
+  {
+    "id": "kem-41",
+    "name": "ZEN",
+    "source_checked_date": "2026-10-20",
+    "source_url": "https://www.niccs.org.cn/niccs/Proposal/Public-Key%20Cryptographic%20Algorithms/Round%201%20candidates/ZEN.zip",
+    "source_kind": "official-round-1-package",
+    "withdrawn": false,
+    "parameters": [
+      "ZEN_128",
+      "ZEN_256"
+    ],
+    "archives": [
+      {
+        "path": "aux_note_20260919/iccs_pkgs/ZEN.zip",
+        "sha256": "69eba070320fc6cb365fb6d43d2b74460487732aeb7e607fac2d6c1b3a64a80e"
+      }
+    ]
+  },
+  {
+    "id": "sign-01",
+    "name": "Aigis-Sig+",
+    "source_checked_date": "2026-10-20",
+    "source_url": "https://list.niccs.org.cn/archives/list/pkcforum@list.niccs.org.cn/message/2BWLA2SMHII22YXJM6EWHVGE26WKG2PG/attachment/4/Aigis-sig_Implementations_v1.0.1.zip",
+    "source_kind": "latest-author-revision",
+    "withdrawn": false,
+    "parameters": [
+      "Aigis-sig1",
+      "Aigis-sig2"
+    ],
+    "archives": [
+      {
+        "path": "ngcc_provider/ngcc/metadata/sign-01-revision.zip",
+        "sha256": "0b135bc02513b453d048d38b7ff0587e25f423e5a7cf8fbc6800d5465a7b401f"
+      }
+    ]
+  },
+  {
+    "id": "sign-02",
+    "name": "BiT",
+    "source_checked_date": "2026-10-20",
+    "source_url": "https://light-lattice.org/bit/implementations/20261012/BiT-20261012.zip",
+    "source_kind": "latest-author-revision",
+    "withdrawn": false,
+    "parameters": [
+      "BiT-128",
+      "BiT-256"
+    ],
+    "archives": [
+      {
+        "path": "ngcc_provider/ngcc/metadata/sign-02-revision.zip",
+        "sha256": "f798dc3ca5593a1468e88a699f8dd158da2f67b97cb93cee0cbe0fcb483b1037"
+      }
+    ]
+  },
+  {
+    "id": "sign-03",
+    "name": "cedrus+c",
+    "source_checked_date": "2026-10-20",
+    "source_url": "https://github.com/zhong-h/CEDRUSPLUSC-SM3/commit/81e737ebee3985c19ea052a6f958d536fd6d44ca",
+    "source_kind": "latest-author-revision",
+    "withdrawn": false,
+    "parameters": [
+      "CEDRUSC-160f",
+      "CEDRUSC-160s",
+      "CEDRUSC-256f",
+      "CEDRUSC-256s"
+    ],
+    "archives": [
+      {
+        "path": "ngcc_provider/ngcc/metadata/sign-03-revision.zip",
+        "sha256": "5ddc4cd733d22ac6623e4f1af905f261a49d0819d14daba7174327e4001cd193"
+      }
+    ],
+    "commit": "81e737ebee3985c19ea052a6f958d536fd6d44ca"
+  },
+  {
+    "id": "sign-04",
+    "name": "cedrus-α",
+    "source_checked_date": "2026-10-20",
+    "source_url": "https://www.niccs.org.cn/niccs/Proposal/Public-Key%20Cryptographic%20Algorithms/Round%201%20candidates/cedrus-%CE%B1.zip",
+    "source_kind": "official-round-1-package",
+    "withdrawn": false,
+    "parameters": [
+      "CEDRUSALPHA-160f",
+      "CEDRUSALPHA-160s",
+      "CEDRUSALPHA-256f",
+      "CEDRUSALPHA-256s"
+    ],
+    "archives": [
+      {
+        "path": "aux_note_20260919/iccs_pkgs/cedrus-α.zip",
+        "sha256": "b90559ca94bda0130420f91fa52eeb242063a57188c766037c1b234ec3af563b"
+      }
+    ]
+  },
+  {
+    "id": "sign-05",
+    "name": "Chinith",
+    "source_checked_date": "2026-10-20",
+    "source_url": "https://www.niccs.org.cn/niccs/Proposal/Public-Key%20Cryptographic%20Algorithms/Round%201%20candidates/Chinith.zip",
+    "source_kind": "official-round-1-package",
+    "withdrawn": false,
+    "parameters": [
+      "sm4th_d3_128f_loose",
+      "sm4th_d3_128s_loose",
+      "sm4th_d3_128f_tight",
+      "sm4th_d3_128s_tight",
+      "sm4th_em_d2_128f_loose",
+      "sm4th_em_d2_128s_loose",
+      "sm4th_em_d2_128f_tight",
+      "sm4th_em_d2_128s_tight",
+      "ublockith_d3_256f",
+      "ublockith_d3_256s",
+      "ublockith_em_d3_256f",
+      "ublockith_em_d3_256s"
+    ],
+    "archives": [
+      {
+        "path": "aux_note_20260919/iccs_pkgs/Chinith.zip",
+        "sha256": "4d31ba3fe8718f59901b7efdf01b4179912ef8e04f58b4b6dbba84186f002283"
+      }
+    ]
+  },
+  {
+    "id": "sign-06",
+    "name": "COMPASS-SIG",
+    "source_checked_date": "2026-10-20",
+    "source_url": "https://www.niccs.org.cn/niccs/Proposal/Public-Key%20Cryptographic%20Algorithms/Round%201%20candidates/COMPASS-SIG.zip",
+    "source_kind": "official-round-1-package",
+    "withdrawn": false,
+    "parameters": [
+      "COMPASS-SIG-128",
+      "COMPASS-SIG-256"
+    ],
+    "archives": [
+      {
+        "path": "aux_note_20260919/iccs_pkgs/COMPASS-SIG.zip",
+        "sha256": "ce88066506fe9b58c300b3ca51462c7a8350484d88ad5b8a9c9f17b5152ca820"
+      }
+    ]
+  },
+  {
+    "id": "sign-07",
+    "name": "CS",
+    "source_checked_date": "2026-10-20",
+    "source_url": "https://www.niccs.org.cn/niccs/Proposal/Public-Key%20Cryptographic%20Algorithms/Round%201%20candidates/CS.zip",
+    "source_kind": "official-round-1-package",
+    "withdrawn": false,
+    "parameters": [
+      "CS-128",
+      "CS-256"
+    ],
+    "archives": [
+      {
+        "path": "aux_note_20260919/iccs_pkgs/CS.zip",
+        "sha256": "c790d31cd4a288990f3d692381ed721a06641938a02dfc2e0435b7d323475cef"
+      }
+    ]
+  },
+  {
+    "id": "sign-08",
+    "name": "DARTS",
+    "source_checked_date": "2026-10-20",
+    "source_url": "https://www.niccs.org.cn/niccs/Proposal/Public-Key%20Cryptographic%20Algorithms/Round%201%20candidates/DARTS.zip",
+    "source_kind": "official-round-1-package",
+    "withdrawn": false,
+    "parameters": [
+      "DARTS128",
+      "DARTS256"
+    ],
+    "archives": [
+      {
+        "path": "aux_note_20260919/iccs_pkgs/DARTS.zip",
+        "sha256": "1846cfe63f0cef83e2e0ca21f5dcadce3c4b16da33713957be6d156e2a9e6e95"
+      }
+    ]
+  },
+  {
+    "id": "sign-09",
+    "name": "DOVE",
+    "source_checked_date": "2026-10-20",
+    "source_url": "https://www.niccs.org.cn/niccs/Proposal/Public-Key%20Cryptographic%20Algorithms/Round%201%20candidates/DOVE.zip",
+    "source_kind": "official-round-1-package",
+    "withdrawn": false,
+    "parameters": [
+      "dove_classic_128",
+      "dove_classic_256",
+      "dove_pkc_skc_128",
+      "dove_pkc_skc_256"
+    ],
+    "archives": [
+      {
+        "path": "aux_note_20260919/iccs_pkgs/DOVE.zip",
+        "sha256": "19169e545f6a6fd90b844b0deb72db81b5eb73c136873d1dae113c2c39d1c6e0"
+      }
+    ]
+  },
+  {
+    "id": "sign-10",
+    "name": "Facto-DSA",
+    "source_checked_date": "2026-10-20",
+    "source_url": "https://www.niccs.org.cn/niccs/Proposal/Public-Key%20Cryptographic%20Algorithms/Round%201%20candidates/Facto-DSA.zip",
+    "source_kind": "official-round-1-package",
+    "withdrawn": false,
+    "parameters": [
+      "Facto-DSA-128",
+      "Facto-DSA-256"
+    ],
+    "archives": [
+      {
+        "path": "aux_note_20260919/iccs_pkgs/Facto-DSA.zip",
+        "sha256": "b3de38fcc2d92ce83290d17cb250dde61f95d3326a49ada36fad3c578f2fc509"
+      }
+    ]
+  },
+  {
+    "id": "sign-11",
+    "name": "Flextree",
+    "source_checked_date": "2026-10-20",
+    "source_url": "https://www.niccs.org.cn/niccs/Proposal/Public-Key%20Cryptographic%20Algorithms/Round%201%20candidates/Flextree.zip",
+    "source_kind": "official-round-1-package",
+    "withdrawn": false,
+    "parameters": [
+      "Flextree-160s",
+      "Flextree-160f",
+      "Flextree-256s",
+      "Flextree-256f"
+    ],
+    "archives": [
+      {
+        "path": "aux_note_20260919/iccs_pkgs/Flextree.zip",
+        "sha256": "f31d434ac297ef6a8c454bf9d219f125290749de157df3eb90d29ae3b8a0270a"
+      }
+    ]
+  },
+  {
+    "id": "sign-12",
+    "name": "Galas Signature",
+    "source_checked_date": "2026-10-20",
+    "source_url": "https://www.niccs.org.cn/niccs/Proposal/Public-Key%20Cryptographic%20Algorithms/Round%201%20candidates/Galas%20Signature.zip",
+    "source_kind": "official-round-1-package",
+    "withdrawn": false,
+    "parameters": [
+      "Galas-160S",
+      "Galas-160F",
+      "Galas-256S",
+      "Galas-256F"
+    ],
+    "archives": [
+      {
+        "path": "aux_note_20260919/iccs_pkgs/Galas Signature.zip",
+        "sha256": "98d57af868fa10d74b2c0656e565aa14a42ff902646d6fc440ffb7355b75342c"
+      }
+    ]
+  },
+  {
+    "id": "sign-13",
+    "name": "GreatWall",
+    "source_checked_date": "2026-10-20",
+    "source_url": "https://github.com/GreatWall-Crypto/NGCC-GreatWall/commit/4732e167cb219eeba9d8852a6a67840f28f3a28e",
+    "source_kind": "latest-author-revision",
+    "withdrawn": false,
+    "parameters": [
+      "GreatWall128f",
+      "GreatWall128s",
+      "GreatWall160f",
+      "GreatWall160s",
+      "GreatWall192f",
+      "GreatWall192s",
+      "GreatWall256f",
+      "GreatWall256s"
+    ],
+    "archives": [
+      {
+        "path": "ngcc_provider/ngcc/metadata/sign-13-revision.zip",
+        "sha256": "8449d5600b2ca8326839428239420cc55d1bd98787dc5ef9540c376fd483ce70"
+      }
+    ],
+    "commit": "4732e167cb219eeba9d8852a6a67840f28f3a28e"
+  },
+  {
+    "id": "sign-14",
+    "name": "Lynxer",
+    "source_checked_date": "2026-10-20",
+    "source_url": "https://www.niccs.org.cn/niccs/Proposal/Public-Key%20Cryptographic%20Algorithms/Round%201%20candidates/Lynxer.zip",
+    "source_kind": "official-round-1-package",
+    "withdrawn": false,
+    "parameters": [
+      "Lynxer-160f",
+      "Lynxer-160s",
+      "Lynxer-256f",
+      "Lynxer-256s"
+    ],
+    "archives": [
+      {
+        "path": "aux_note_20260919/iccs_pkgs/Lynxer.zip",
+        "sha256": "34d863f7df8979c4a5e27fcfe657ed54e81905115c0afc8ef749f50af432f928"
+      }
+    ]
+  },
+  {
+    "id": "sign-15",
+    "name": "MORNING-ATLAS",
+    "source_checked_date": "2026-10-20",
+    "source_url": "https://www.niccs.org.cn/niccs/Proposal/Public-Key%20Cryptographic%20Algorithms/Round%201%20candidates/MORNING-ATLAS.zip",
+    "source_kind": "official-round-1-package",
+    "withdrawn": false,
+    "parameters": [
+      "lwrdsa128",
+      "lwrdsa192",
+      "lwrdsa256"
+    ],
+    "archives": [
+      {
+        "path": "aux_note_20260919/iccs_pkgs/MORNING-ATLAS.zip",
+        "sha256": "c796b106a7d43b2b3d6110ec2be426aa321cc7336f39a2cc027b2d6e8b4cc8c1"
+      }
+    ]
+  },
+  {
+    "id": "sign-16",
+    "name": "Octarine",
+    "source_checked_date": "2026-10-20",
+    "source_url": "https://www.pq-arcane.org/dist/downloads/Octarine-source-codes.zip",
+    "source_kind": "latest-author-revision",
+    "withdrawn": false,
+    "parameters": [
+      "Octarine-128",
+      "Octarine-256"
+    ],
+    "archives": [
+      {
+        "path": "ngcc_provider/ngcc/metadata/sign-16-revision.zip",
+        "sha256": "f95e3764feb0b688aedbf2a983a7a5d8bc38e3a2dffa90da9471f928041c0d42"
+      }
+    ]
+  },
+  {
+    "id": "sign-17",
+    "name": "OPS Digital Signature Algorithm",
+    "source_checked_date": "2026-10-20",
+    "source_url": "https://www.niccs.org.cn/niccs/Proposal/Public-Key%20Cryptographic%20Algorithms/Round%201%20candidates/OPS%20Digital%20Signature%20Algorithm.zip",
+    "source_kind": "official-round-1-package",
+    "withdrawn": false,
+    "parameters": [
+      "OPSsig-128",
+      "OPSsig-256"
+    ],
+    "archives": [
+      {
+        "path": "aux_note_20260919/iccs_pkgs/OPS Digital Signature Algorithm.zip",
+        "sha256": "02322c6792259231ab8eb3cc094be32be02a1b9b6b1d7c86b0029c37b0f04d09"
+      }
+    ]
+  },
+  {
+    "id": "sign-18",
+    "name": "Origami",
+    "source_checked_date": "2026-10-20",
+    "source_url": "https://www.niccs.org.cn/niccs/Proposal/Public-Key%20Cryptographic%20Algorithms/Round%201%20candidates/Origami.zip",
+    "source_kind": "official-round-1-package",
+    "withdrawn": false,
+    "parameters": [
+      "Origami-128",
+      "Origami-256"
+    ],
+    "archives": [
+      {
+        "path": "aux_note_20260919/iccs_pkgs/Origami.zip",
+        "sha256": "e34f18832e968681dd0c51ce0d4b29d80e01ad29daa83dfb805718b76fdffa80"
+      }
+    ]
+  },
+  {
+    "id": "sign-19",
+    "name": "Phoenix",
+    "source_checked_date": "2026-10-20",
+    "source_url": "https://www.niccs.org.cn/niccs/Proposal/Public-Key%20Cryptographic%20Algorithms/Round%201%20candidates/Phoenix.zip",
+    "source_kind": "official-round-1-package",
+    "withdrawn": false,
+    "parameters": [
+      "Phoenix-SM3-128f",
+      "Phoenix-SM3-128s",
+      "Phoenix-SM3-192f",
+      "Phoenix-SM3-192s",
+      "Phoenix-SM3-256f",
+      "Phoenix-SM3-256s"
+    ],
+    "archives": [
+      {
+        "path": "aux_note_20260919/iccs_pkgs/Phoenix.zip",
+        "sha256": "ec801791976a10baffa852c479afd12362af3b5fb6420104254fb48814d99918"
+      }
+    ]
+  },
+  {
+    "id": "sign-20",
+    "name": "QingLuan",
+    "source_checked_date": "2026-10-20",
+    "source_url": "https://www.niccs.org.cn/niccs/Proposal/Public-Key%20Cryptographic%20Algorithms/Round%201%20candidates/QingLuan.zip",
+    "source_kind": "official-round-1-package",
+    "withdrawn": false,
+    "parameters": [
+      "QingLuan-128",
+      "QingLuan-256"
+    ],
+    "archives": [
+      {
+        "path": "aux_note_20260919/iccs_pkgs/QingLuan.zip",
+        "sha256": "2eb8f3ed205eb7c7e8b3108a997b59643d1aa5579035b8093b4ddbe051a48007"
+      }
+    ]
+  },
+  {
+    "id": "sign-21",
+    "name": "ReSolveD-alpha",
+    "source_checked_date": "2026-10-20",
+    "source_url": "https://www.niccs.org.cn/niccs/Proposal/Public-Key%20Cryptographic%20Algorithms/Round%201%20candidates/ReSolveD-alpha.zip",
+    "source_kind": "official-round-1-package",
+    "withdrawn": false,
+    "parameters": [
+      "ReSolveD-alpha-160f",
+      "ReSolveD-alpha-160s",
+      "ReSolveD-alpha-256f",
+      "ReSolveD-alpha-256s"
+    ],
+    "archives": [
+      {
+        "path": "aux_note_20260919/iccs_pkgs/ReSolveD-alpha.zip",
+        "sha256": "499821538d7f79464cc1ee1468254b0e49f750794a591ffe038938c4cfa11914"
+      }
+    ]
+  },
+  {
+    "id": "sign-22",
+    "name": "Rhyme",
+    "source_checked_date": "2026-10-20",
+    "source_url": "https://www.niccs.org.cn/niccs/Proposal/Public-Key%20Cryptographic%20Algorithms/Round%201%20candidates/Rhyme.zip",
+    "source_kind": "official-round-1-package",
+    "withdrawn": false,
+    "parameters": [
+      "Rhyme-SM3-128",
+      "Rhyme-SM3-256"
+    ],
+    "archives": [
+      {
+        "path": "aux_note_20260919/iccs_pkgs/Rhyme.zip",
+        "sha256": "7b509d21c6674bc23751b8743cb7c2a4a07ee295fafe04e2fa95c0613160bdfd"
+      }
+    ]
+  },
+  {
+    "id": "sign-23",
+    "name": "shuttle",
+    "source_checked_date": "2026-10-20",
+    "source_url": "https://github.com/pq-spin/Shuttle_Implementation/commit/5169f625ff582f6f05db2c0f11de25453b89db4e",
+    "source_kind": "latest-author-revision",
+    "withdrawn": false,
+    "parameters": [
+      "SHUTTLE-128",
+      "SHUTTLE-256"
+    ],
+    "archives": [
+      {
+        "path": "ngcc_provider/ngcc/metadata/sign-23-revision.zip",
+        "sha256": "1730bed9684712dae7149bc7576beffc498356d003ef21ee993265054c45a542"
+      }
+    ],
+    "commit": "5169f625ff582f6f05db2c0f11de25453b89db4e"
+  },
+  {
+    "id": "sign-24",
+    "name": "Sigurd",
+    "source_checked_date": "2026-10-20",
+    "source_url": "https://github.com/QinLangT/Sigurd/commit/302eeeb566e8f653cc8ad2c7c675024e409b7c28",
+    "source_kind": "latest-author-revision",
+    "withdrawn": false,
+    "parameters": [
+      "Sigurd-128",
+      "Sigurd-256"
+    ],
+    "archives": [
+      {
+        "path": "ngcc_provider/ngcc/metadata/sign-24-revision.zip",
+        "sha256": "0cd3fa6df722c4864432888da8f547b67a4ee62609ae82d5d423306f7368ab84"
+      }
+    ],
+    "commit": "302eeeb566e8f653cc8ad2c7c675024e409b7c28"
+  },
+  {
+    "id": "sign-25",
+    "name": "SQIsign2D2",
+    "source_checked_date": "2026-10-20",
+    "source_url": "https://www.niccs.org.cn/niccs/Proposal/Public-Key%20Cryptographic%20Algorithms/Round%201%20candidates/SQIsign2D2.zip",
+    "source_kind": "official-round-1-package",
+    "withdrawn": false,
+    "parameters": [
+      "SQISign2Dsquare-Level1-eff_uncompressed",
+      "SQISign2Dsquare-Level1-eff_compressed",
+      "SQISign2Dsquare-Level1-sec_uncompressed",
+      "SQISign2Dsquare-Level1-sec_compressed",
+      "SQISign2Dsquare-Level2-eff_uncompressed",
+      "SQISign2Dsquare-Level2-eff_compressed",
+      "SQISign2Dsquare-Level2-sec_uncompressed",
+      "SQISign2Dsquare-Level2-sec_compressed",
+      "SQISign2Dsquare-Level3-eff_uncompressed",
+      "SQISign2Dsquare-Level3-eff_compressed",
+      "SQISign2Dsquare-Level3-sec_uncompressed",
+      "SQISign2Dsquare-Level3-sec_compressed"
+    ],
+    "archives": [
+      {
+        "path": "aux_note_20260919/iccs_pkgs/SQIsign2D2.zip",
+        "sha256": "cf635de5eebbdeb7b2212e84f349da4ca878889e0a4a59b463d0c8cdfdb8eeab"
+      }
+    ]
+  },
+  {
+    "id": "sign-26",
+    "name": "SQIsign2D-push12",
+    "source_checked_date": "2026-10-20",
+    "source_url": "https://www.niccs.org.cn/niccs/Proposal/Public-Key%20Cryptographic%20Algorithms/Round%201%20candidates/SQIsign2D-push12.zip",
+    "source_kind": "official-round-1-package",
+    "withdrawn": false,
+    "parameters": [
+      "SQIsign2D-lvl1",
+      "SQIsign2D-lvl2",
+      "SQIsign2D-lvl3"
+    ],
+    "archives": [
+      {
+        "path": "aux_note_20260919/iccs_pkgs/SQIsign2D-push12.zip",
+        "sha256": "98b7e4ffddfe31b5fb0f448345b49228c8d8a7c87078688ba1656b28631448c5"
+      }
+    ]
+  },
+  {
+    "id": "sign-27",
+    "name": "SQIsignTriangle",
+    "source_checked_date": "2026-10-20",
+    "source_url": "https://www.niccs.org.cn/niccs/Proposal/Public-Key%20Cryptographic%20Algorithms/Round%201%20candidates/SQIsignTriangle.zip",
+    "source_kind": "official-round-1-package",
+    "withdrawn": false,
+    "parameters": [
+      "SQIsignTriangle_lvl1",
+      "SQIsignTriangle_lvl2",
+      "SQIsignTriangle_lvl5"
+    ],
+    "archives": [
+      {
+        "path": "aux_note_20260919/iccs_pkgs/SQIsignTriangle.zip",
+        "sha256": "f4afa484e450e2adf4b5f9c867fb199d0d0e22d66a3eafbc8c4738744fb62c58"
+      }
+    ]
+  },
+  {
+    "id": "sign-28",
+    "name": "SYDO",
+    "source_checked_date": "2026-10-20",
+    "source_url": "https://www.niccs.org.cn/niccs/Proposal/Public-Key%20Cryptographic%20Algorithms/Round%201%20candidates/SYDO.zip",
+    "source_kind": "official-round-1-package",
+    "withdrawn": false,
+    "parameters": [
+      "sydo_160f",
+      "sydo_160s",
+      "sydo_256f",
+      "sydo_256s"
+    ],
+    "archives": [
+      {
+        "path": "aux_note_20260919/iccs_pkgs/SYDO.zip",
+        "sha256": "c4ae5b27a188612cd286a786179ce5461e6aca0b8599ba13b8d77b210a940adb"
+      }
+    ]
+  },
+  {
+    "id": "sign-29",
+    "name": "Tins",
+    "source_checked_date": "2026-10-20",
+    "source_url": "https://www.niccs.org.cn/niccs/Proposal/Public-Key%20Cryptographic%20Algorithms/Round%201%20candidates/Tins.zip",
+    "source_kind": "official-round-1-package",
+    "withdrawn": true,
+    "parameters": [],
+    "archives": [
+      {
+        "path": "aux_note_20260919/iccs_pkgs/Tins.zip",
+        "sha256": null
+      }
+    ]
+  },
+  {
+    "id": "sign-30",
+    "name": "TRINE",
+    "source_checked_date": "2026-10-20",
+    "source_url": "https://www.niccs.org.cn/niccs/Proposal/Public-Key%20Cryptographic%20Algorithms/Round%201%20candidates/TRINE.zip",
+    "source_kind": "official-round-1-package",
+    "withdrawn": false,
+    "parameters": [
+      "TRINE-128-Balanced",
+      "TRINE-256-Balanced",
+      "TRINE-128-ShortSig",
+      "TRINE-256-ShortSig"
+    ],
+    "archives": [
+      {
+        "path": "aux_note_20260919/iccs_pkgs/TRINE.zip",
+        "sha256": "4b22f54b07509833b08d32402ffe06d7566e4c87622f9931079e791c80f4765d"
+      }
+    ]
+  },
+  {
+    "id": "sign-31",
+    "name": "TSUOV",
+    "source_checked_date": "2026-10-20",
+    "source_url": "https://www.niccs.org.cn/niccs/Proposal/Public-Key%20Cryptographic%20Algorithms/Round%201%20candidates/TSUOV.zip",
+    "source_kind": "official-round-1-package",
+    "withdrawn": false,
+    "parameters": [
+      "TSUOV_128",
+      "TSUOV_256"
+    ],
+    "archives": [
+      {
+        "path": "aux_note_20260919/iccs_pkgs/TSUOV.zip",
+        "sha256": "7ab1effc5fe911c6ab9483ca44a9d9f6d6d911b03eee9f2873b384d97f9aee1d"
+      }
+    ]
+  },
+  {
+    "id": "sign-32",
+    "name": "UVW signature",
+    "source_checked_date": "2026-10-20",
+    "source_url": "https://www.niccs.org.cn/niccs/Proposal/Public-Key%20Cryptographic%20Algorithms/Round%201%20candidates/UVW%20signature.zip",
+    "source_kind": "official-round-1-package",
+    "withdrawn": false,
+    "parameters": [
+      "UVW-128",
+      "UVW-256"
+    ],
+    "archives": [
+      {
+        "path": "aux_note_20260919/iccs_pkgs/UVW signature.zip",
+        "sha256": "bbfa8dad5ee57083578b50b9937e773e6158f72646e825da3d3265cc00cb1294"
+      }
+    ]
+  },
+  {
+    "id": "sign-33",
+    "name": "VDOO",
+    "source_checked_date": "2026-10-20",
+    "source_url": "https://www.niccs.org.cn/niccs/Proposal/Public-Key%20Cryptographic%20Algorithms/Round%201%20candidates/VDOO.zip",
+    "source_kind": "official-round-1-package",
+    "withdrawn": false,
+    "parameters": [
+      "vdoo_128",
+      "vdoo_256"
+    ],
+    "archives": [
+      {
+        "path": "aux_note_20260919/iccs_pkgs/VDOO.zip",
+        "sha256": "4b7bb0f15388b395b9308ae480f25622105a734f0ab4a6bd16398438c4b9752a"
+      }
+    ]
+  },
+  {
+    "id": "sign-34",
+    "name": "YuanYang.DSA",
+    "source_checked_date": "2026-10-20",
+    "source_url": "https://www.niccs.org.cn/niccs/Proposal/Public-Key%20Cryptographic%20Algorithms/Round%201%20candidates/YuanYang.DSA.zip",
+    "source_kind": "official-round-1-package",
+    "withdrawn": false,
+    "parameters": [
+      "yuanyang-512",
+      "yuanyang-1024"
+    ],
+    "archives": [
+      {
+        "path": "aux_note_20260919/iccs_pkgs/YuanYang.DSA.zip",
+        "sha256": "1eb45f24ad8f7ff25db923479c6500f273aee8b2470d76339030fed8d96b5b31"
+      }
+    ]
+  }
+]

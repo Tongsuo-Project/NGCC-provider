@@ -1,0 +1,7 @@
+STEP keygen
+STEP second-keygen
+STEP sign-0
+STEP sign-1
+SIZES pk=64 sig=24144 capacity=24144
+PASS key-material-unchanged
+PASS sig-05-ublockith-d3-256s

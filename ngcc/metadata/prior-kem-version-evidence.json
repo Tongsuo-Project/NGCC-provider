@@ -1,0 +1,1997 @@
+{
+  "zen_latest_revision_review.json": {
+    "access_date": "2026-10-20",
+    "scheme": "kem-41 ZEN",
+    "official_url": "https://www.niccs.org.cn/niccs/Proposal/Public-Key%20Cryptographic%20Algorithms/Round%201%20candidates/ZEN.zip",
+    "official_zip_sha256": "69eba070320fc6cb365fb6d43d2b74460487732aeb7e607fac2d6c1b3a64a80e",
+    "matching_durable_archive": "aux_note_20260919/iccs_pkgs/ZEN.zip",
+    "reference_files_checked": 72,
+    "current_archive_matches_original": true,
+    "forum_thread": "36OAZIFVEG3DLVR3ZU3TWYDA6KXOKN3T",
+    "forum_reply_ids": [
+      "LHS3HBDIJHUIDAKS5Q7H3FXGDY7CLNHZ",
+      "7XCR7SE5QOJMFTS5WCNTKX7FA7M7P3TC",
+      "7AZUGDUDXVOCOZWBZOKZY7VTONGO7KNH",
+      "5NWIBJAG6GXLFAXULECPIB2XQVKMXOKQ",
+      "MOEPTRAA6WD7MWBI5A35KVRU43HSJDSU",
+      "K3EIP27ZI7OKG5AIITVRVEEODB4MLG3R"
+    ],
+    "forum_pagination_complete": true,
+    "formal_record": "kem-41-1 Medium/design/Proof gap unchanged",
+    "independent_static_analysis": {
+      "SEED_LEN_BYTES": 64,
+      "dataflow": [
+        "pke_keygen_derand -> poly_generate_gf(f/g, same seed, increasing public nonce)",
+        "zen_pseudoXOF appends nonce after 64-byte seed",
+        "pseudoXOF computes SM3(seed || nonce || public counter)",
+        "all calls share the first-block 256-bit SM3 CV",
+        "enumerate CV; continue all hash streams; regenerate sampling/retries/inverses/key; verify public key"
+      ],
+      "candidate_state_bound": "2^256, plus per-candidate reconstruction cost",
+      "recoverable_target": "PKE decryption secret; independent rejection secret z not included",
+      "not_a_new_formal_finding": true
+    },
+    "admission": {
+      "128": "conditional validation candidate",
+      "256": "conditional validation candidate",
+      "512": "withheld for SM3 state bound"
+    },
+    "scope": "original SM3 reference implementation, target actual GNU GCC -O2",
+    "proposal_code_modified": false,
+    "provider_modified": false,
+    "GNU_GCC_or_KEM_or_attack_tests_run": false,
+    "source_files": {
+      "params.h": "e680af512982eadd355c358a233e5378419246290cfe0951f515a1f367bd1654",
+      "pke.c": "f15097cc78892bcc684f788587d0696a4e1db4deab2c71130a0feba2be24bba8",
+      "poly.c": "1d452a9561a0d5be104e752f6bec3275f95db2db75a81bc7ba764310bfbcf476",
+      "symmetric.c": "87c186661436fe7b5451e5477d85228f98e525808c8df8861465ea70865a7acb",
+      "auxfunc.c": "27446371eccf14383e5a333dfed6333ed9a2232580d0a52c1c681bc2074a8368"
+    }
+  },
+  "cheetah_latest_revision_review.json": {
+    "checked_utc": "2026-10-20T04:49:41.419690+00:00",
+    "thread_url": "https://list.niccs.org.cn/archives/list/pkcforum@list.niccs.org.cn/thread/3OMMI24JGKESHSRUVA5NJANKRHTQY7RM/",
+    "reply_dates": [
+      "Sept. 22, 2026, 1:23 a.m.",
+      "Sept. 24, 2026, 11:07 a.m."
+    ],
+    "more_pending": false,
+    "revision_attachments": [],
+    "official_package_url": "https://www.niccs.org.cn/niccs/Proposal/Public-Key%20Cryptographic%20Algorithms/Round%201%20candidates/CheetahKEM.zip",
+    "official_sha256": "fc321e46bac9c387535e2053bed560eac3d3cd88ba9bebc154f5bf68dd47dcd1",
+    "unchanged_from_original": true,
+    "reference_sources": [
+      {
+        "grade": "128",
+        "file": "Implementations/Reference_Implementation/Cheetah128/KEM_Cheetah.c",
+        "sha256": "1f75a39ebe4000aef5abe3d1ee150fa9aeb043f609a45a1189f36a47a65e1ca3"
+      },
+      {
+        "grade": "256",
+        "file": "Implementations/Reference_Implementation/Cheetah256/KEM_Cheetah.c",
+        "sha256": "1f75a39ebe4000aef5abe3d1ee150fa9aeb043f609a45a1189f36a47a65e1ca3"
+      },
+      {
+        "grade": "384",
+        "file": "Implementations/Reference_Implementation/Cheetah384/KEM_Cheetah.c",
+        "sha256": "d3fca349c7cde82595a0d270470a054bc426ec39aa0cf36824a954a2b0bc3e19"
+      },
+      {
+        "grade": "512",
+        "file": "Implementations/Reference_Implementation/Cheetah512/KEM_Cheetah.c",
+        "sha256": "447d475725a4ce463ec77121cc78f7246a5c31006e53a87744d0fe990f62bc6b"
+      }
+    ],
+    "finding_status": {
+      "kem-09-1": "Critical / Confirmed, all four reference grades; partial selection mask remains",
+      "kem-09-4": "Critical / Confirmed, all four reference grades; rejection hashes re-encryption rather than received ciphertext"
+    },
+    "provider_decision": "Temporarily do not integrate 128/256/384/512; reference + GCC -O2 does not fix source defects. Reassess released revisions covering both causes.",
+    "validation": "Live official package/reply check and static source inspection; no local exploit run."
+  },
+  "compass_latest_revision_review.json": {
+    "checked_utc": "2026-10-20T04:53:19.465656+00:00",
+    "official_package_url": "https://www.niccs.org.cn/niccs/Proposal/Public-Key%20Cryptographic%20Algorithms/Round%201%20candidates/COMPASS-KEM.zip",
+    "official_sha256": "8fc838488ac0849d4c6afd161f8b9742c7a8b9a330bc3b79df70ced7e2d1d5e2",
+    "unchanged_from_original": true,
+    "thread_url": "https://list.niccs.org.cn/archives/list/pkcforum@list.niccs.org.cn/thread/3ZXFAPIPIO3CVJHCQJ5AQ44UNTBIY4OP/",
+    "reply_dates": [
+      "Oct. 2, 2026, 3:19 p.m."
+    ],
+    "more_pending": false,
+    "revision_attachments": [],
+    "report_unchanged": true,
+    "parameter_review": [
+      {
+        "grade": "128",
+        "source_sha256": {
+          "params.h": "8d786ff61005ce681226823d3e4902f8aa0bd24707018cebe357aecff55bffc4",
+          "kem.c": "8a0acc7c7b74a4dc7d1b7c259c2734308cf2f1b9a54d1b28960fbf6f04d0759d",
+          "indcpa.c": "16115c4f068830cf4ab7ba1c5480f3e06c0a25177db8adbcaea2314a65543458",
+          "verify.c": "a1adc6e10118fec89574973181ad1bd1bae508b0177873118f1fbbe9f82bd47a",
+          "symmetric-shake.c": "0d841a64b4f1274bb85d64af97b789637fe0f9de474736405ee153fe79d35ba1",
+          "KEM_AlgorithmInstance.c": "63f5f13031da5ac6529278c5c1a65096eaaf482a83e9f6f8f5fac3f717cec574",
+          "Makefile": "ed0d0f55b1535a8face61a5ee4cab8c3d9e48e89c48d75c91424865510359dcc"
+        },
+        "SYMBYTES": 32,
+        "SSBYTES": 32,
+        "build_security_level": "128",
+        "full_ciphertext_verify": true,
+        "boolean_verify": true,
+        "rejection_binds_received_ct": true,
+        "wrapper_ignores_input_lengths": true,
+        "external_DRNG": true
+      },
+      {
+        "grade": "256",
+        "source_sha256": {
+          "params.h": "8d786ff61005ce681226823d3e4902f8aa0bd24707018cebe357aecff55bffc4",
+          "kem.c": "8a0acc7c7b74a4dc7d1b7c259c2734308cf2f1b9a54d1b28960fbf6f04d0759d",
+          "indcpa.c": "16115c4f068830cf4ab7ba1c5480f3e06c0a25177db8adbcaea2314a65543458",
+          "verify.c": "a1adc6e10118fec89574973181ad1bd1bae508b0177873118f1fbbe9f82bd47a",
+          "symmetric-shake.c": "0d841a64b4f1274bb85d64af97b789637fe0f9de474736405ee153fe79d35ba1",
+          "KEM_AlgorithmInstance.c": "63f5f13031da5ac6529278c5c1a65096eaaf482a83e9f6f8f5fac3f717cec574",
+          "Makefile": "9363102ead5c290f67e775100dc56f79561ca498e474388ea62d8b1ebb29e813"
+        },
+        "SYMBYTES": 32,
+        "SSBYTES": 32,
+        "build_security_level": "256",
+        "full_ciphertext_verify": true,
+        "boolean_verify": true,
+        "rejection_binds_received_ct": true,
+        "wrapper_ignores_input_lengths": true,
+        "external_DRNG": true
+      },
+      {
+        "grade": "384",
+        "source_sha256": {
+          "params.h": "8d786ff61005ce681226823d3e4902f8aa0bd24707018cebe357aecff55bffc4",
+          "kem.c": "8a0acc7c7b74a4dc7d1b7c259c2734308cf2f1b9a54d1b28960fbf6f04d0759d",
+          "indcpa.c": "16115c4f068830cf4ab7ba1c5480f3e06c0a25177db8adbcaea2314a65543458",
+          "verify.c": "a1adc6e10118fec89574973181ad1bd1bae508b0177873118f1fbbe9f82bd47a",
+          "symmetric-shake.c": "0d841a64b4f1274bb85d64af97b789637fe0f9de474736405ee153fe79d35ba1",
+          "KEM_AlgorithmInstance.c": "63f5f13031da5ac6529278c5c1a65096eaaf482a83e9f6f8f5fac3f717cec574",
+          "Makefile": "afec2132bec4e182394b322d205ac8598441954f1b1343468bd74761f7723fa1"
+        },
+        "SYMBYTES": 32,
+        "SSBYTES": 32,
+        "build_security_level": "384",
+        "full_ciphertext_verify": true,
+        "boolean_verify": true,
+        "rejection_binds_received_ct": true,
+        "wrapper_ignores_input_lengths": true,
+        "external_DRNG": true
+      },
+      {
+        "grade": "512",
+        "source_sha256": {
+          "params.h": "8d786ff61005ce681226823d3e4902f8aa0bd24707018cebe357aecff55bffc4",
+          "kem.c": "8a0acc7c7b74a4dc7d1b7c259c2734308cf2f1b9a54d1b28960fbf6f04d0759d",
+          "indcpa.c": "16115c4f068830cf4ab7ba1c5480f3e06c0a25177db8adbcaea2314a65543458",
+          "verify.c": "a1adc6e10118fec89574973181ad1bd1bae508b0177873118f1fbbe9f82bd47a",
+          "symmetric-shake.c": "0d841a64b4f1274bb85d64af97b789637fe0f9de474736405ee153fe79d35ba1",
+          "KEM_AlgorithmInstance.c": "63f5f13031da5ac6529278c5c1a65096eaaf482a83e9f6f8f5fac3f717cec574",
+          "Makefile": "c90be398f4ea9574530408ebbfa6403579b2c18124b840dac665cb0f32354c3c"
+        },
+        "SYMBYTES": 32,
+        "SSBYTES": 32,
+        "build_security_level": "512",
+        "full_ciphertext_verify": true,
+        "boolean_verify": true,
+        "rejection_binds_received_ct": true,
+        "wrapper_ignores_input_lengths": true,
+        "external_DRNG": true
+      }
+    ],
+    "decision": {
+      "128/256": "Eligible for integration verification under no-known-confirmed-unresolved-Critical/High criterion; Medium proof gap remains. Freeze source/backend/SECURITY_LEVEL; wrapper length/null checks and DRNG seeding/error handling required; target GNU GCC -O2 KAT/rejection/memory/assembly validation pending.",
+      "384/512": "Do not integrate; kem-11-1 remains: 256-bit seed and delivered key below claimed targets."
+    },
+    "additional_DFR_lead": {
+      "source": "https://sa-ngcc.org/c/compass-kem",
+      "retrieval": "Direct fetch returned HTTP 404; search index has approximately three-week-old primary-source content. Not a live snapshot.",
+      "classification_in_index": "Security proof gap; no completed key recovery costed.",
+      "treatment": "Follow up as unverified auxiliary lead; not promoted to a new ngcc Critical/High finding."
+    },
+    "validation_limits": "Live primary pages/official zip plus static checks only; no GNU GCC compile, KAT or exploit run. Host gcc is Apple Clang.",
+    "provider_code_modified": false
+  },
+  "dtru_latest_revision_review.json": {
+    "date": "2026-10-20",
+    "archive_sha256": "ed443d6a9e2e6c50e4956e9b30ce078ae0598a8846962d04b9894cac0816527b",
+    "official_archive_matches_original": true,
+    "thread": "7OIHLWTGECH3FYCUM3BEBJDAHMMLZRZK",
+    "more_pending": false,
+    "author_claim": "2026-09-27: exact length checks on all implementations; claimed ASAN/KAT tests; revised code to be provided soon",
+    "latest_thread_reply": "2026-10-11: DFR explanation; no implementation patch/link/attachment",
+    "current_result": "Public official reference package still affected by kem-14-1. No verifiable author repair package found in inspected sources; do not label fixed based on declaration alone. GCC -O2 does not repair source logic.",
+    "reference_sources": {
+      "Implementations and Test_Vectors/Implementations/Reference_Implementation/DTRU-1024/KEM_AlgorithmInstance.c": {
+        "sha256": "7a592019a6cc2baed70829ecaf0d6091483ef2bf7a56b52d0f68b701f00aa46e",
+        "length_check_before_pke_dec": false,
+        "copy_uses_caller_length": true,
+        "offset_uses_caller_length": true,
+        "returns_fail": true
+      },
+      "Implementations and Test_Vectors/Implementations/Reference_Implementation/DTRU-1536/KEM_AlgorithmInstance.c": {
+        "sha256": "5ec6c8e8840de7292aac3f5fcf04cdb4b9fcb284f526f6d20266fa5ce7be10b4",
+        "length_check_before_pke_dec": false,
+        "copy_uses_caller_length": true,
+        "offset_uses_caller_length": true,
+        "returns_fail": true
+      },
+      "Implementations and Test_Vectors/Implementations/Reference_Implementation/DTRU-2048/KEM_AlgorithmInstance.c": {
+        "sha256": "5ec6c8e8840de7292aac3f5fcf04cdb4b9fcb284f526f6d20266fa5ce7be10b4",
+        "length_check_before_pke_dec": false,
+        "copy_uses_caller_length": true,
+        "offset_uses_caller_length": true,
+        "returns_fail": true
+      },
+      "Implementations and Test_Vectors/Implementations/Reference_Implementation/DTRU-648/KEM_AlgorithmInstance.c": {
+        "sha256": "7a592019a6cc2baed70829ecaf0d6091483ef2bf7a56b52d0f68b701f00aa46e",
+        "length_check_before_pke_dec": false,
+        "copy_uses_caller_length": true,
+        "offset_uses_caller_length": true,
+        "returns_fail": true
+      },
+      "Implementations and Test_Vectors/Implementations/Reference_Implementation/DTRU-768/KEM_AlgorithmInstance.c": {
+        "sha256": "7a592019a6cc2baed70829ecaf0d6091483ef2bf7a56b52d0f68b701f00aa46e",
+        "length_check_before_pke_dec": false,
+        "copy_uses_caller_length": true,
+        "offset_uses_caller_length": true,
+        "returns_fail": true
+      },
+      "Implementations and Test_Vectors/Implementations/Reference_Implementation/DTRU-Light/KEM_AlgorithmInstance.c": {
+        "sha256": "7a592019a6cc2baed70829ecaf0d6091483ef2bf7a56b52d0f68b701f00aa46e",
+        "length_check_before_pke_dec": false,
+        "copy_uses_caller_length": true,
+        "offset_uses_caller_length": true,
+        "returns_fail": true
+      },
+      "Implementations and Test_Vectors/Implementations/Reference_Implementation/DTRU-Prime/KEM_AlgorithmInstance.c": {
+        "sha256": "98d119fae71212a633c681cf8aaf4956e6cd414eb6eddcb56fbba5682866b260",
+        "length_check_before_pke_dec": false,
+        "copy_uses_caller_length": true,
+        "offset_uses_caller_length": true,
+        "returns_fail": true
+      }
+    },
+    "tests_run": [],
+    "pdf_modified": true,
+    "provider_modified": false,
+    "document_section": "4.2",
+    "source_preservation_constraint": "User explicitly requires original proposal code unchanged; current task is documentation/judgment only.",
+    "integration_decision": "Candidate pending verification of exact-length guards on every Provider reachable path; no formal performance admission before validation. No existing adapter verified. Original High unchanged; no blanket parameter admission."
+  },
+  "rudraksh2_latest_revision_review.json": {
+    "date": "2026-10-20",
+    "official_archive_sha256": "569d526cf7abe38393f69a4513686fa86a0c3b3033cc225b84cc107b20b17b98",
+    "official_matches_original": true,
+    "thread": "A35C2JZDLERYJNKGAUECZ73T5Y64LCPT",
+    "thread_more_pending": false,
+    "report_message": "3QHUJGWZDN7ZFSG7R46HHEWG67MKGYYB",
+    "reproduction_commit": "6ada021f822f5afbe26298169189af98f2dbb335",
+    "review_scope": "SM3 reference I series; GNU GCC -O2 target, static only",
+    "decisions": {
+      "128": "blue; conditional validation",
+      "256": "blue; conditional validation",
+      "512": "red; withhold due to 256-bit common SM3 chaining-state bound"
+    },
+    "not_a_new_formal_finding": true,
+    "formal_metadata_unchanged": true,
+    "512_limit": "noiseseed64 || component_index || XOF_counter; entire s,e depend on CV256 after seed block; at most 2^256 state candidates plus per-candidate public-key verification cost. PKE decryption secret, not necessarily rejection z. No exhaustive search performed.",
+    "tests_run": [],
+    "provider_modified": false,
+    "files": {
+      "Implementations/Reference_Implementation/lwekem512/params.h": "dca104c247ea7016b2558e4817a0b51ee4fec449bc6e985aa18374a0023e43a0",
+      "Implementations/Reference_Implementation/lwekem512/indcpa.c": "d4ae78df6f4e3ee50f0c6ca2ddd68eb6ad1c7a47100639f657f0893e06a7cd98",
+      "Implementations/Reference_Implementation/lwekem512/auxfunc.c": "fd2ef5fec7f1f947b5cf452c4613680aaa6c9a47eb83cf8b494749287b4e05fa",
+      "Implementations/Reference_Implementation/lwekem512/symmetric.h": "788a9229913453802ce8c5dee44618b65dde0cc0b398d442c7a6fb88cc4d3b7d",
+      "Implementations/Reference_Implementation/lwekem512/KEM_lwekem512.c": "36f674a1fab20422ce9d6581b7a36d7ee7b39c0dd334d77d2a96f9cb1c6760cb"
+    }
+  },
+  "ctl_latest_revision_review.json": {
+    "date": "2026-10-20",
+    "official_url": "https://www.niccs.org.cn/niccs/Proposal/Public-Key%20Cryptographic%20Algorithms/Round%201%20candidates/CTL.zip",
+    "archive_sha256": "512caaf5fa04ea5ab51fb5eeee9e81f8c7c7c430b60727130067634bfb674d01",
+    "matches_original_archive": true,
+    "thread": "XYXBZWLCJXTUZTNUFJCPYLEST5CC56AI",
+    "thread_more_pending": false,
+    "latest_author_response": "2026-09-23; H47RU2HKEEAZQOJNKMUFWNEJEHHSLPQQ; plans only, no code or attachment",
+    "scope": "SM3 reference and target actual GNU GCC -O2; static review only",
+    "decisions": {
+      "128": "blue; conditional validation, CTL-257-512",
+      "256": "blue; conditional validation, CTL-769-1024 per ICCS classification",
+      "512": "red; no verified repair of kem-12-1/2; CTL-3329-2048"
+    },
+    "512_findings": {
+      "kem-12-1": "ctl.h seed[32], api.c rng_seed[32], inner.h prng_context.key[32] and prng_init pseudoXOF256; no complete entropy path repair",
+      "kem-12-2": "KEM adapter 48B returned SS and seed; LVLBYTES48/c2[48], message search <=2^384 plus per-trial work, no enumeration run"
+    },
+    "SM3_path": "api.c HASH/EXPAND and inner.h prng use SM3/pseudoXOF, despite legacy BLAKE2/SHAKE names/comments; sha3.c object is not evidence of Keccak execution",
+    "integration_conditions": [
+      "exact pk/sk/ct lengths and decoder consumed-length equality; reject trailing data",
+      "RNG init and error handling; void helper malloc/aux errors need propagation",
+      "GNU GCC -O2 actual command; GMP quadmath deps; pure C reference",
+      "KAT, long honest roundtrips, invalid lengths/nulls, implicit rejection, memory safety",
+      "transitive NTRU arithmetic/private key reconstruction, q769 reencryption failure branches, source+assembly+controlled timing CT checks",
+      "separate implementation directory names from ICCS grades; README contains old192/256 labels",
+      "current known two Critical formal items are512 only; conditional validation is not performance approval"
+    ],
+    "tests_run": [],
+    "provider_modified": false,
+    "files": {
+      "128": {
+        "Implementations and Test_Vectors/KEM-CTL-x86-Reference_Implementation/crypto_kem/Implementations/CTL-257-512/KEM_AlgorithmInstance.c": "cc6e5833fc5f614ac6324778e85be397c6407768aca9f195e11b79f4cf0a9b4a",
+        "Implementations and Test_Vectors/KEM-CTL-x86-Reference_Implementation/crypto_kem/Implementations/CTL-257-512/api.c": "3e4c8e347cef4db4c56a7bf8dc60a076eda2452dfc0f04fd66ecbeebfb3120d2",
+        "Implementations and Test_Vectors/KEM-CTL-x86-Reference_Implementation/crypto_kem/Implementations/CTL-257-512/ctl.h": "7f48f4bce099170520c0c1dcb7d052e3226a0cecbddffbecaf99e91510e1c07f",
+        "Implementations and Test_Vectors/KEM-CTL-x86-Reference_Implementation/crypto_kem/Implementations/CTL-257-512/inner.h": "cf2e44c579a884d315e32e0dcac34761b8dba82bb185e569230189f197204c49",
+        "Implementations and Test_Vectors/KEM-CTL-x86-Reference_Implementation/crypto_kem/Implementations/CTL-257-512/Makefile": "4b9ec5ae8395245415124f06da0da9d8343f2d457982638272fe1c6cdab1ef31",
+        "Implementations and Test_Vectors/KEM-CTL-x86-Reference_Implementation/crypto_kem/Implementations/CTL-257-512/prng.c": "bb97ef684dbd601cf9de667b85302e064a342fd7e0f580abfd064e8f8ef53f67"
+      },
+      "256": {
+        "Implementations and Test_Vectors/KEM-CTL-x86-Reference_Implementation/crypto_kem/Implementations/CTL-769-1024/KEM_AlgorithmInstance.c": "b4dabd2820f51d539683effda2423ab98ded93d8335de6feca425671e37f6a91",
+        "Implementations and Test_Vectors/KEM-CTL-x86-Reference_Implementation/crypto_kem/Implementations/CTL-769-1024/api.c": "3e4c8e347cef4db4c56a7bf8dc60a076eda2452dfc0f04fd66ecbeebfb3120d2",
+        "Implementations and Test_Vectors/KEM-CTL-x86-Reference_Implementation/crypto_kem/Implementations/CTL-769-1024/ctl.h": "7f48f4bce099170520c0c1dcb7d052e3226a0cecbddffbecaf99e91510e1c07f",
+        "Implementations and Test_Vectors/KEM-CTL-x86-Reference_Implementation/crypto_kem/Implementations/CTL-769-1024/inner.h": "cf2e44c579a884d315e32e0dcac34761b8dba82bb185e569230189f197204c49",
+        "Implementations and Test_Vectors/KEM-CTL-x86-Reference_Implementation/crypto_kem/Implementations/CTL-769-1024/Makefile": "b54fd2e43f183be226396aa075e6b4cfa94f5ba1b059c83b1eaa5e36c7ccf18c",
+        "Implementations and Test_Vectors/KEM-CTL-x86-Reference_Implementation/crypto_kem/Implementations/CTL-769-1024/prng.c": "bb97ef684dbd601cf9de667b85302e064a342fd7e0f580abfd064e8f8ef53f67"
+      },
+      "512": {
+        "Implementations and Test_Vectors/KEM-CTL-x86-Reference_Implementation/crypto_kem/Implementations/CTL-3329-2048/KEM_AlgorithmInstance.c": "a01190f13d63b02fefdae5cd965042b3f45dc65cb17b3adf404f21c16011273b",
+        "Implementations and Test_Vectors/KEM-CTL-x86-Reference_Implementation/crypto_kem/Implementations/CTL-3329-2048/api.c": "3e4c8e347cef4db4c56a7bf8dc60a076eda2452dfc0f04fd66ecbeebfb3120d2",
+        "Implementations and Test_Vectors/KEM-CTL-x86-Reference_Implementation/crypto_kem/Implementations/CTL-3329-2048/ctl.h": "7f48f4bce099170520c0c1dcb7d052e3226a0cecbddffbecaf99e91510e1c07f",
+        "Implementations and Test_Vectors/KEM-CTL-x86-Reference_Implementation/crypto_kem/Implementations/CTL-3329-2048/inner.h": "cf2e44c579a884d315e32e0dcac34761b8dba82bb185e569230189f197204c49",
+        "Implementations and Test_Vectors/KEM-CTL-x86-Reference_Implementation/crypto_kem/Implementations/CTL-3329-2048/Makefile": "5f4f711bf4b981f44df56f6804e1c73dc1619290c9fd2592dad78da6c16e6ce3",
+        "Implementations and Test_Vectors/KEM-CTL-x86-Reference_Implementation/crypto_kem/Implementations/CTL-3329-2048/prng.c": "bb97ef684dbd601cf9de667b85302e064a342fd7e0f580abfd064e8f8ef53f67"
+      }
+    },
+    "pdf_modified": true,
+    "document_section": "4.1",
+    "integration_pdf_page": 36
+  },
+  "lore_latest_revision_review.json": {
+    "checked_utc": "2026-10-20T05:15:52.935040+00:00",
+    "revision_url": "https://list.niccs.org.cn/archives/list/pkcforum@list.niccs.org.cn/message/W6XIOQDXGIUZPVKR3MZW4HZCDJEVYRMR/attachment/4/Lore-Reference-Implementations-20260927.zip",
+    "revision_sha256": "b81b265a58dc5d73417905bb50126bf28faa7e86103de19521fb5ab42404aec6",
+    "saved_file": "lore-revision-current-b81b265a.zip",
+    "date_boundary": "Filename 20260927 and forum post 2026-09-28 identify origin, not verified publication time of every byte currently served. No prior attachment checksum comparison available.",
+    "official_package_sha256": "e33130fb45a3b1e220f8043739d1396a884c0043cb4336104e67e5404c7cc725",
+    "official_package_unchanged": true,
+    "github_latest_commit": "9321cf3597def00cb1f74d5e569cef1a6ca00d39",
+    "github_latest_commit_date": "2026-06-21T16:47:21Z",
+    "github_scope": "Older implementation: root and output SYMBYTES=32 and L4 n=768. Not the revised forum attachment.",
+    "thread_more_pending": false,
+    "reply_dates": [
+      "Sept. 23, 2026, 2:56 p.m.",
+      "Sept. 28, 2026, 6:23 a.m.",
+      "Sept. 28, 2026, 2:51 p.m.",
+      "Oct. 6, 2026, 3:16 p.m."
+    ],
+    "parameter_review": [
+      {
+        "backend": "Lore-SHAKE",
+        "grade": 128,
+        "level": 1,
+        "root_seed_bytes": 32,
+        "shared_secret_bytes": 32,
+        "vector_records": 10,
+        "full_root_input_consumed_by_expansion": true,
+        "secret_xof_rate_bytes": 136,
+        "secret_xof_capacity_bits": 512,
+        "classification": "No confirmed applicable unresolved Critical/High found; eligible for conditional verification"
+      },
+      {
+        "backend": "Lore-SHAKE",
+        "grade": 256,
+        "level": 2,
+        "root_seed_bytes": 32,
+        "shared_secret_bytes": 32,
+        "vector_records": 10,
+        "full_root_input_consumed_by_expansion": true,
+        "secret_xof_rate_bytes": 136,
+        "secret_xof_capacity_bits": 512,
+        "classification": "No confirmed applicable unresolved Critical/High found; eligible for conditional verification"
+      },
+      {
+        "backend": "Lore-SHAKE",
+        "grade": 384,
+        "level": 3,
+        "root_seed_bytes": 48,
+        "shared_secret_bytes": 48,
+        "vector_records": 10,
+        "full_root_input_consumed_by_expansion": true,
+        "secret_xof_rate_bytes": 104,
+        "secret_xof_capacity_bits": 768,
+        "classification": "L3/L4 concrete seed/output/capacity restrictions addressed in source; full KEM/target build validation pending"
+      },
+      {
+        "backend": "Lore-SHAKE",
+        "grade": 512,
+        "level": 4,
+        "root_seed_bytes": 64,
+        "shared_secret_bytes": 64,
+        "vector_records": 10,
+        "full_root_input_consumed_by_expansion": true,
+        "secret_xof_rate_bytes": 72,
+        "secret_xof_capacity_bits": 1024,
+        "classification": "L3/L4 concrete seed/output/capacity restrictions addressed in source; full KEM/target build validation pending"
+      },
+      {
+        "backend": "Lore-SM3",
+        "grade": 128,
+        "level": 1,
+        "root_seed_bytes": 32,
+        "shared_secret_bytes": 32,
+        "vector_records": 10,
+        "full_root_input_consumed_by_expansion": true
+      },
+      {
+        "backend": "Lore-SM3",
+        "grade": 256,
+        "level": 2,
+        "root_seed_bytes": 32,
+        "shared_secret_bytes": 32,
+        "vector_records": 10,
+        "full_root_input_consumed_by_expansion": true
+      },
+      {
+        "backend": "Lore-SM3",
+        "grade": 384,
+        "level": 3,
+        "root_seed_bytes": 48,
+        "shared_secret_bytes": 48,
+        "vector_records": 10,
+        "full_root_input_consumed_by_expansion": true,
+        "shared_SM3_first_block": {
+          "header_bytes": 20,
+          "seed_prefix_bytes": 44,
+          "chaining_state_bits": 256,
+          "unconsumed_seed_bytes": 4,
+          "enumeration_upper_bound_bits": 288
+        },
+        "classification": "Length roots addressed, but static first-block-state plus seed-tail enumeration ceiling remains below claimed grade; not a new ngcc finding ID and not an executed attack"
+      },
+      {
+        "backend": "Lore-SM3",
+        "grade": 512,
+        "level": 4,
+        "root_seed_bytes": 64,
+        "shared_secret_bytes": 64,
+        "vector_records": 10,
+        "full_root_input_consumed_by_expansion": true,
+        "shared_SM3_first_block": {
+          "header_bytes": 20,
+          "seed_prefix_bytes": 44,
+          "chaining_state_bits": 256,
+          "unconsumed_seed_bytes": 20,
+          "enumeration_upper_bound_bits": 416
+        },
+        "classification": "Length roots addressed, but static first-block-state plus seed-tail enumeration ceiling remains below claimed grade; not a new ngcc finding ID and not an executed attack"
+      }
+    ],
+    "revision_source_hashes": {
+      "Lore-Reference-Implementations-20260927/Lore-SHAKE/ref/indcpa.c": "3528c52275a03ebcbeee70be12c7ab25f78287135432e166f5e8cbc2ea03162c",
+      "Lore-Reference-Implementations-20260927/Lore-SHAKE/ref/KEM_AlgorithmInstance.c": "fa6066e125f19c9f6fd608f17ed113ccd385cb64d00cb7953e600afaafdd97fd",
+      "Lore-Reference-Implementations-20260927/Lore-SHAKE/ref/kem.c": "ac3bb03bf4ecf16b7c2443ca967ebcb12604dbca05d082bddb92c13f1a516d27",
+      "Lore-Reference-Implementations-20260927/Lore-SHAKE/ref/lore_hash.c": "0f4bbc64d3a7c82be048169b534a7a150706fe9f72137af4b4fbeacf6f5f3ee8",
+      "Lore-Reference-Implementations-20260927/Lore-SHAKE/ref/lore_xof.h": "01df779afe279522742c08ea3d0cc55980711f72958d68492d31a0dc3e907b19",
+      "Lore-Reference-Implementations-20260927/Lore-SHAKE/ref/params.h": "e1eddb6906916386bf9da7739350ea5c01ccc80289665e77923736bdd6c508df",
+      "Lore-Reference-Implementations-20260927/Lore-SHAKE/ref/sampler.c": "3509d287bc6c31c5e0f8afd0f442e05b3ac47f66ca85b6e1c6a51268d1a51c9a",
+      "Lore-Reference-Implementations-20260927/Lore-SM3/ref/indcpa.c": "3528c52275a03ebcbeee70be12c7ab25f78287135432e166f5e8cbc2ea03162c",
+      "Lore-Reference-Implementations-20260927/Lore-SM3/ref/KEM_AlgorithmInstance.c": "fa6066e125f19c9f6fd608f17ed113ccd385cb64d00cb7953e600afaafdd97fd",
+      "Lore-Reference-Implementations-20260927/Lore-SM3/ref/kem.c": "e9ca805224655fda3d31d044f21fd6bed58543bfcfef332516afcbb8c5e3257f",
+      "Lore-Reference-Implementations-20260927/Lore-SM3/ref/lore_sm3_wrapper.c": "5dc53350180a7af704c6edb67af7a7581f7ec2200c6a5b94a4dfcc77d308f8f1",
+      "Lore-Reference-Implementations-20260927/Lore-SM3/ref/params.h": "2d8dff0c253c6876886292cc8fc4d048ca18b1b4e7dfeda32c4f17223aa0581d",
+      "Lore-Reference-Implementations-20260927/Lore-SM3/ref/sampler.c": "150ff59df3fa2bbcb0a89384e5658c1f1997bbec317022c8d76de2f2c615ccac"
+    },
+    "remaining_scope": [
+      "Re-encryption overflow-bit packing branches; BCH/sampling constant-time behavior not certified",
+      "2026-10-06 forum questions about CRT-MLWR/IND-CPA proof, sparse-secret estimation, DFR need follow-up",
+      "SM3 auxiliary undefined shifts and placeholder-security limitations",
+      "Backend/format/vector incompatibility with archived original submission"
+    ],
+    "provider_decision": "SM3-only project scope: fixed revised Lore-SM3/ref 128/256 conditionally eligible for integration verification; SM3 384/512 temporarily not admitted due to remaining state-compression bounds. All Keccak-family grades (including SHAKE and extended Keccak) excluded from current integration and performance candidates by user requirement; source-repair analysis retained as evidence only.",
+    "validation": "Static source/data-flow and bundled vector-length checks; no target GNU GCC build, runtime KAT, timing test or exhaustive attack executed.",
+    "provider_modified": false,
+    "provider_backend_scope": "SM3 only, per user instruction on 2026-10-20"
+  },
+  "nev_latest_revision_review.json": {
+    "date": "2026-10-20",
+    "retrieved_utc": "2026-10-20T07:28:59.215481+00:00",
+    "scope": "SM3 reference only, target actual GNU GCC -O2; preserve author original code; static inspection, no algorithm or attack runtime tests",
+    "latest_confirmed_public_author_revision": "2026-10-01 forum attachment; latest reply, more_pending=false",
+    "revision_url": "https://list.niccs.org.cn/archives/list/pkcforum@list.niccs.org.cn/message/UZPNPPDYL5APZLO573LFHXX2ZLPVLZDE/attachment/4/NEV_Implementations.zip",
+    "revision_file": "nev-revision-current-48e6bc5a.zip",
+    "revision_sha256": "48e6bc5a3b814dc901ac8176c21b6d2460d36380c8f82f06e68134e40b83ebb9",
+    "official_round1_sha256": "8105c6241a322661411e870a3087338f48f4f5c477a540387b800c08955cc7fd",
+    "kem-25-1": {
+      "metadata": "Medium/design/Proof gap unchanged, frozen original compressed C1-c/C2-c/C3-c, not uncompressed C/R/D",
+      "source_fix": "All three compressed reference directories use independent z, full received CT compare, verify 0/1, cmov full mask, SM3 pseudoXOF(z||receivedCT), success return0 except helper allocation error; wrappers exact pk/sk/ct lengths and error zeroization. Compressed SK now holds two SEED_BYTES fields, not original one.",
+      "proof_boundary": "attachment contains code+README but no revised normative algorithm/specification or complete proof; source-level behavior fixed does not independently certify closure of formal proof gap"
+    },
+    "512_static_limit": "For compressed C3-c and uncompressed C3/R3/D3, SEED_BYTES64; keygen hashes random seed then samples g/f from same64-byte s plus nonces; pseudoXOF or incremental ICCS_KDF appends publiccounter to s||nonce. All SM3 calls share first64-byte input s -> CV256. <=2^256 candidate CV states suffice to generate sampling/rejection/NTT/inverse/publickey computation; per-state work additional. No need recover s; PKE decryption secret, not necessarily independent rejectionz. No new formal ID or full search run.",
+    "assessment": {
+      "128": "conditional validation candidate, R1 recommended; revisedC1-c and uncompressedC1/D1 assessed separately",
+      "256": "conditional validation candidate, R2 recommended; revisedC2-c and uncompressedC2/D2 assessed separately",
+      "512": "withhold all four SM3 series due to commonCV256"
+    },
+    "build_parameters": {
+      "compressedC1-c/C2-c": "PARAMS=1/2",
+      "R1/R2": "PARAMS=4/5",
+      "D1/D2": "PARAMS=7/8",
+      "uncompressedC1/C2": "PARAMS=10/11",
+      "backend": "USE_ICCS defined, USE_SHA3 undefined; SPEED defaultsSHA3; override-O3 -march=native withGNU-O2"
+    },
+    "residuals": [
+      "no included reference KAT request/response files; generated outputs not independent KAT comparison",
+      "revised specification/FO proof",
+      "ICCS DRNG undefined shift macro L_SHIFT unchanged; finite regression does not fix C UB",
+      "helper allocation failures and randombytes errors, initialization",
+      "full lower-level and per-instance target-build CT not certified by original representative R1 review"
+    ],
+    "existing_provider": "all3 alg.mk define USE_SHA3 and old cca.c has explicit rejection; existing source is not new SM3 candidate; unchanged",
+    "reference_files": {
+      "NEV-C1-c": {
+        "cca.c": "8dbb065bb002f1fd2ceb4e42f970086d0c3fb25f8fc4f242c12128bfa341fe2b",
+        "owpke.c": "dc4e984e5c42b5c3f62af21e4fe0a8fe78c1527f75edbe17240543ce02e602be",
+        "sample.c": "bcdd46b010899922ef25790af24133e776e81146491b0f71e412bdafd87baab6",
+        "params.h": "445606af363e422891680441f295d400b97c038e8d7cb93c1041b6dcc70d68fa",
+        "api.h": "a714da377a3f27f6b6897038daa6be899d22ca0949cfccef145f7de0bfb15c82",
+        "verify.c": "5b7d662e3fb40183359e9e70f6ef67534457e47863f93a33f98fdd60007fe0fc",
+        "symmetrics/hashkdf.c": "5acb3f9f70944bff890263ad2dc66b74338bac819d7145f22db4b7f480c81c3d",
+        "symmetrics/hashkdf.h": "ff8272619da64e31a6f9e5877558d6f3976b8a3c89378a5dde6f0f49c896622e",
+        "symmetrics/auxfunc.c": "9b99c0bb3807c9661938a8aca227132d80ec762f85ebd8f67ea91c6161302b82",
+        "kat_test/KEM_AlgorithmInstance.c": "18bb6a24f88875311f9d537fa61107c3d66ad79639c1776635b8289828e7d3b6",
+        "kat_test/drng.c": "0df0ac78c828bd43bf05724398fa530767d753aa7801a1d1fa5d621321ec797e",
+        "Makefile": "3491937079da586528cf0a9faad80e77d38f4ce42062e9320b2bd46058f0df3e"
+      },
+      "NEV-C2-c": {
+        "cca.c": "8dbb065bb002f1fd2ceb4e42f970086d0c3fb25f8fc4f242c12128bfa341fe2b",
+        "owpke.c": "dc4e984e5c42b5c3f62af21e4fe0a8fe78c1527f75edbe17240543ce02e602be",
+        "sample.c": "bcdd46b010899922ef25790af24133e776e81146491b0f71e412bdafd87baab6",
+        "params.h": "445606af363e422891680441f295d400b97c038e8d7cb93c1041b6dcc70d68fa",
+        "api.h": "a714da377a3f27f6b6897038daa6be899d22ca0949cfccef145f7de0bfb15c82",
+        "verify.c": "5b7d662e3fb40183359e9e70f6ef67534457e47863f93a33f98fdd60007fe0fc",
+        "symmetrics/hashkdf.c": "5acb3f9f70944bff890263ad2dc66b74338bac819d7145f22db4b7f480c81c3d",
+        "symmetrics/hashkdf.h": "ff8272619da64e31a6f9e5877558d6f3976b8a3c89378a5dde6f0f49c896622e",
+        "symmetrics/auxfunc.c": "9b99c0bb3807c9661938a8aca227132d80ec762f85ebd8f67ea91c6161302b82",
+        "kat_test/KEM_AlgorithmInstance.c": "18bb6a24f88875311f9d537fa61107c3d66ad79639c1776635b8289828e7d3b6",
+        "kat_test/drng.c": "0df0ac78c828bd43bf05724398fa530767d753aa7801a1d1fa5d621321ec797e",
+        "Makefile": "f8523948de5dd934f245c2289b007426fe2e3ca5f2c37734f52825e876975354"
+      },
+      "NEV-C3-c": {
+        "cca.c": "8dbb065bb002f1fd2ceb4e42f970086d0c3fb25f8fc4f242c12128bfa341fe2b",
+        "owpke.c": "dc4e984e5c42b5c3f62af21e4fe0a8fe78c1527f75edbe17240543ce02e602be",
+        "sample.c": "bcdd46b010899922ef25790af24133e776e81146491b0f71e412bdafd87baab6",
+        "params.h": "445606af363e422891680441f295d400b97c038e8d7cb93c1041b6dcc70d68fa",
+        "api.h": "a714da377a3f27f6b6897038daa6be899d22ca0949cfccef145f7de0bfb15c82",
+        "verify.c": "5b7d662e3fb40183359e9e70f6ef67534457e47863f93a33f98fdd60007fe0fc",
+        "symmetrics/hashkdf.c": "5acb3f9f70944bff890263ad2dc66b74338bac819d7145f22db4b7f480c81c3d",
+        "symmetrics/hashkdf.h": "ff8272619da64e31a6f9e5877558d6f3976b8a3c89378a5dde6f0f49c896622e",
+        "symmetrics/auxfunc.c": "9b99c0bb3807c9661938a8aca227132d80ec762f85ebd8f67ea91c6161302b82",
+        "kat_test/KEM_AlgorithmInstance.c": "18bb6a24f88875311f9d537fa61107c3d66ad79639c1776635b8289828e7d3b6",
+        "kat_test/drng.c": "0df0ac78c828bd43bf05724398fa530767d753aa7801a1d1fa5d621321ec797e",
+        "Makefile": "20e7ea60f1b5ddff7e29d3ea6893601f916e82702759d18386c93eea5ed61d54"
+      },
+      "NEV-C1": {
+        "cca.c": "8dbb065bb002f1fd2ceb4e42f970086d0c3fb25f8fc4f242c12128bfa341fe2b",
+        "owpke.c": "dc4e984e5c42b5c3f62af21e4fe0a8fe78c1527f75edbe17240543ce02e602be",
+        "sample.c": "bcdd46b010899922ef25790af24133e776e81146491b0f71e412bdafd87baab6",
+        "params.h": "445606af363e422891680441f295d400b97c038e8d7cb93c1041b6dcc70d68fa",
+        "api.h": "a714da377a3f27f6b6897038daa6be899d22ca0949cfccef145f7de0bfb15c82",
+        "verify.c": "5b7d662e3fb40183359e9e70f6ef67534457e47863f93a33f98fdd60007fe0fc",
+        "symmetrics/hashkdf.c": "5acb3f9f70944bff890263ad2dc66b74338bac819d7145f22db4b7f480c81c3d",
+        "symmetrics/hashkdf.h": "ff8272619da64e31a6f9e5877558d6f3976b8a3c89378a5dde6f0f49c896622e",
+        "symmetrics/auxfunc.c": "9b99c0bb3807c9661938a8aca227132d80ec762f85ebd8f67ea91c6161302b82",
+        "kat_test/KEM_AlgorithmInstance.c": "18bb6a24f88875311f9d537fa61107c3d66ad79639c1776635b8289828e7d3b6",
+        "kat_test/drng.c": "0df0ac78c828bd43bf05724398fa530767d753aa7801a1d1fa5d621321ec797e",
+        "Makefile": "80e0da4a6fb8b3390619ea84062c5139324a68e72c03d889b26797e7d5a4f606"
+      },
+      "NEV-C2": {
+        "cca.c": "8dbb065bb002f1fd2ceb4e42f970086d0c3fb25f8fc4f242c12128bfa341fe2b",
+        "owpke.c": "dc4e984e5c42b5c3f62af21e4fe0a8fe78c1527f75edbe17240543ce02e602be",
+        "sample.c": "bcdd46b010899922ef25790af24133e776e81146491b0f71e412bdafd87baab6",
+        "params.h": "445606af363e422891680441f295d400b97c038e8d7cb93c1041b6dcc70d68fa",
+        "api.h": "a714da377a3f27f6b6897038daa6be899d22ca0949cfccef145f7de0bfb15c82",
+        "verify.c": "5b7d662e3fb40183359e9e70f6ef67534457e47863f93a33f98fdd60007fe0fc",
+        "symmetrics/hashkdf.c": "5acb3f9f70944bff890263ad2dc66b74338bac819d7145f22db4b7f480c81c3d",
+        "symmetrics/hashkdf.h": "ff8272619da64e31a6f9e5877558d6f3976b8a3c89378a5dde6f0f49c896622e",
+        "symmetrics/auxfunc.c": "9b99c0bb3807c9661938a8aca227132d80ec762f85ebd8f67ea91c6161302b82",
+        "kat_test/KEM_AlgorithmInstance.c": "18bb6a24f88875311f9d537fa61107c3d66ad79639c1776635b8289828e7d3b6",
+        "kat_test/drng.c": "0df0ac78c828bd43bf05724398fa530767d753aa7801a1d1fa5d621321ec797e",
+        "Makefile": "403d6546ea47e3c9c830baacec4fa498fd293e5ca354227a1bfc4f73e3061f9b"
+      },
+      "NEV-C3": {
+        "cca.c": "8dbb065bb002f1fd2ceb4e42f970086d0c3fb25f8fc4f242c12128bfa341fe2b",
+        "owpke.c": "dc4e984e5c42b5c3f62af21e4fe0a8fe78c1527f75edbe17240543ce02e602be",
+        "sample.c": "bcdd46b010899922ef25790af24133e776e81146491b0f71e412bdafd87baab6",
+        "params.h": "445606af363e422891680441f295d400b97c038e8d7cb93c1041b6dcc70d68fa",
+        "api.h": "a714da377a3f27f6b6897038daa6be899d22ca0949cfccef145f7de0bfb15c82",
+        "verify.c": "5b7d662e3fb40183359e9e70f6ef67534457e47863f93a33f98fdd60007fe0fc",
+        "symmetrics/hashkdf.c": "5acb3f9f70944bff890263ad2dc66b74338bac819d7145f22db4b7f480c81c3d",
+        "symmetrics/hashkdf.h": "ff8272619da64e31a6f9e5877558d6f3976b8a3c89378a5dde6f0f49c896622e",
+        "symmetrics/auxfunc.c": "9b99c0bb3807c9661938a8aca227132d80ec762f85ebd8f67ea91c6161302b82",
+        "kat_test/KEM_AlgorithmInstance.c": "18bb6a24f88875311f9d537fa61107c3d66ad79639c1776635b8289828e7d3b6",
+        "kat_test/drng.c": "0df0ac78c828bd43bf05724398fa530767d753aa7801a1d1fa5d621321ec797e",
+        "Makefile": "dee38f53023d5837624835bca9788d2782a10ada2bbaca38da6cc563f08a5d3a"
+      },
+      "NEV-R1": {
+        "cca.c": "8dbb065bb002f1fd2ceb4e42f970086d0c3fb25f8fc4f242c12128bfa341fe2b",
+        "owpke.c": "dc4e984e5c42b5c3f62af21e4fe0a8fe78c1527f75edbe17240543ce02e602be",
+        "sample.c": "bcdd46b010899922ef25790af24133e776e81146491b0f71e412bdafd87baab6",
+        "params.h": "445606af363e422891680441f295d400b97c038e8d7cb93c1041b6dcc70d68fa",
+        "api.h": "a714da377a3f27f6b6897038daa6be899d22ca0949cfccef145f7de0bfb15c82",
+        "verify.c": "5b7d662e3fb40183359e9e70f6ef67534457e47863f93a33f98fdd60007fe0fc",
+        "symmetrics/hashkdf.c": "5acb3f9f70944bff890263ad2dc66b74338bac819d7145f22db4b7f480c81c3d",
+        "symmetrics/hashkdf.h": "ff8272619da64e31a6f9e5877558d6f3976b8a3c89378a5dde6f0f49c896622e",
+        "symmetrics/auxfunc.c": "9b99c0bb3807c9661938a8aca227132d80ec762f85ebd8f67ea91c6161302b82",
+        "kat_test/KEM_AlgorithmInstance.c": "18bb6a24f88875311f9d537fa61107c3d66ad79639c1776635b8289828e7d3b6",
+        "kat_test/drng.c": "0df0ac78c828bd43bf05724398fa530767d753aa7801a1d1fa5d621321ec797e",
+        "Makefile": "53e932e7711f3e3ed4e39b419b1e79a8a95a31322c2cd80fb6ec7ac4e4e6020c"
+      },
+      "NEV-R2": {
+        "cca.c": "8dbb065bb002f1fd2ceb4e42f970086d0c3fb25f8fc4f242c12128bfa341fe2b",
+        "owpke.c": "dc4e984e5c42b5c3f62af21e4fe0a8fe78c1527f75edbe17240543ce02e602be",
+        "sample.c": "bcdd46b010899922ef25790af24133e776e81146491b0f71e412bdafd87baab6",
+        "params.h": "445606af363e422891680441f295d400b97c038e8d7cb93c1041b6dcc70d68fa",
+        "api.h": "a714da377a3f27f6b6897038daa6be899d22ca0949cfccef145f7de0bfb15c82",
+        "verify.c": "5b7d662e3fb40183359e9e70f6ef67534457e47863f93a33f98fdd60007fe0fc",
+        "symmetrics/hashkdf.c": "5acb3f9f70944bff890263ad2dc66b74338bac819d7145f22db4b7f480c81c3d",
+        "symmetrics/hashkdf.h": "ff8272619da64e31a6f9e5877558d6f3976b8a3c89378a5dde6f0f49c896622e",
+        "symmetrics/auxfunc.c": "9b99c0bb3807c9661938a8aca227132d80ec762f85ebd8f67ea91c6161302b82",
+        "kat_test/KEM_AlgorithmInstance.c": "18bb6a24f88875311f9d537fa61107c3d66ad79639c1776635b8289828e7d3b6",
+        "kat_test/drng.c": "0df0ac78c828bd43bf05724398fa530767d753aa7801a1d1fa5d621321ec797e",
+        "Makefile": "40adaf594e7f39d6d03d9db10ff24a4559d4a08cd951ee35fae85b904a1db12c"
+      },
+      "NEV-R3": {
+        "cca.c": "8dbb065bb002f1fd2ceb4e42f970086d0c3fb25f8fc4f242c12128bfa341fe2b",
+        "owpke.c": "dc4e984e5c42b5c3f62af21e4fe0a8fe78c1527f75edbe17240543ce02e602be",
+        "sample.c": "bcdd46b010899922ef25790af24133e776e81146491b0f71e412bdafd87baab6",
+        "params.h": "445606af363e422891680441f295d400b97c038e8d7cb93c1041b6dcc70d68fa",
+        "api.h": "a714da377a3f27f6b6897038daa6be899d22ca0949cfccef145f7de0bfb15c82",
+        "verify.c": "5b7d662e3fb40183359e9e70f6ef67534457e47863f93a33f98fdd60007fe0fc",
+        "symmetrics/hashkdf.c": "5acb3f9f70944bff890263ad2dc66b74338bac819d7145f22db4b7f480c81c3d",
+        "symmetrics/hashkdf.h": "ff8272619da64e31a6f9e5877558d6f3976b8a3c89378a5dde6f0f49c896622e",
+        "symmetrics/auxfunc.c": "9b99c0bb3807c9661938a8aca227132d80ec762f85ebd8f67ea91c6161302b82",
+        "kat_test/KEM_AlgorithmInstance.c": "18bb6a24f88875311f9d537fa61107c3d66ad79639c1776635b8289828e7d3b6",
+        "kat_test/drng.c": "0df0ac78c828bd43bf05724398fa530767d753aa7801a1d1fa5d621321ec797e",
+        "Makefile": "943a89e6271dd54d78db2c7478e24a122e025a744883ec19c7dd76b51e1f8c75"
+      },
+      "NEV-D1": {
+        "cca.c": "8dbb065bb002f1fd2ceb4e42f970086d0c3fb25f8fc4f242c12128bfa341fe2b",
+        "owpke.c": "dc4e984e5c42b5c3f62af21e4fe0a8fe78c1527f75edbe17240543ce02e602be",
+        "sample.c": "bcdd46b010899922ef25790af24133e776e81146491b0f71e412bdafd87baab6",
+        "params.h": "445606af363e422891680441f295d400b97c038e8d7cb93c1041b6dcc70d68fa",
+        "api.h": "a714da377a3f27f6b6897038daa6be899d22ca0949cfccef145f7de0bfb15c82",
+        "verify.c": "5b7d662e3fb40183359e9e70f6ef67534457e47863f93a33f98fdd60007fe0fc",
+        "symmetrics/hashkdf.c": "5acb3f9f70944bff890263ad2dc66b74338bac819d7145f22db4b7f480c81c3d",
+        "symmetrics/hashkdf.h": "ff8272619da64e31a6f9e5877558d6f3976b8a3c89378a5dde6f0f49c896622e",
+        "symmetrics/auxfunc.c": "9b99c0bb3807c9661938a8aca227132d80ec762f85ebd8f67ea91c6161302b82",
+        "kat_test/KEM_AlgorithmInstance.c": "18bb6a24f88875311f9d537fa61107c3d66ad79639c1776635b8289828e7d3b6",
+        "kat_test/drng.c": "0df0ac78c828bd43bf05724398fa530767d753aa7801a1d1fa5d621321ec797e",
+        "Makefile": "41fba4e8e081a47b10da45324bc157607d232aa5e40b4ff4866e3c5aab8fa654"
+      },
+      "NEV-D2": {
+        "cca.c": "8dbb065bb002f1fd2ceb4e42f970086d0c3fb25f8fc4f242c12128bfa341fe2b",
+        "owpke.c": "dc4e984e5c42b5c3f62af21e4fe0a8fe78c1527f75edbe17240543ce02e602be",
+        "sample.c": "bcdd46b010899922ef25790af24133e776e81146491b0f71e412bdafd87baab6",
+        "params.h": "445606af363e422891680441f295d400b97c038e8d7cb93c1041b6dcc70d68fa",
+        "api.h": "a714da377a3f27f6b6897038daa6be899d22ca0949cfccef145f7de0bfb15c82",
+        "verify.c": "5b7d662e3fb40183359e9e70f6ef67534457e47863f93a33f98fdd60007fe0fc",
+        "symmetrics/hashkdf.c": "5acb3f9f70944bff890263ad2dc66b74338bac819d7145f22db4b7f480c81c3d",
+        "symmetrics/hashkdf.h": "ff8272619da64e31a6f9e5877558d6f3976b8a3c89378a5dde6f0f49c896622e",
+        "symmetrics/auxfunc.c": "9b99c0bb3807c9661938a8aca227132d80ec762f85ebd8f67ea91c6161302b82",
+        "kat_test/KEM_AlgorithmInstance.c": "18bb6a24f88875311f9d537fa61107c3d66ad79639c1776635b8289828e7d3b6",
+        "kat_test/drng.c": "0df0ac78c828bd43bf05724398fa530767d753aa7801a1d1fa5d621321ec797e",
+        "Makefile": "d544658681dfba151ec4938a67ea5e817f5f6deba99afd10df1fd814e3979524"
+      },
+      "NEV-D3": {
+        "cca.c": "8dbb065bb002f1fd2ceb4e42f970086d0c3fb25f8fc4f242c12128bfa341fe2b",
+        "owpke.c": "dc4e984e5c42b5c3f62af21e4fe0a8fe78c1527f75edbe17240543ce02e602be",
+        "sample.c": "bcdd46b010899922ef25790af24133e776e81146491b0f71e412bdafd87baab6",
+        "params.h": "445606af363e422891680441f295d400b97c038e8d7cb93c1041b6dcc70d68fa",
+        "api.h": "a714da377a3f27f6b6897038daa6be899d22ca0949cfccef145f7de0bfb15c82",
+        "verify.c": "5b7d662e3fb40183359e9e70f6ef67534457e47863f93a33f98fdd60007fe0fc",
+        "symmetrics/hashkdf.c": "5acb3f9f70944bff890263ad2dc66b74338bac819d7145f22db4b7f480c81c3d",
+        "symmetrics/hashkdf.h": "ff8272619da64e31a6f9e5877558d6f3976b8a3c89378a5dde6f0f49c896622e",
+        "symmetrics/auxfunc.c": "9b99c0bb3807c9661938a8aca227132d80ec762f85ebd8f67ea91c6161302b82",
+        "kat_test/KEM_AlgorithmInstance.c": "18bb6a24f88875311f9d537fa61107c3d66ad79639c1776635b8289828e7d3b6",
+        "kat_test/drng.c": "0df0ac78c828bd43bf05724398fa530767d753aa7801a1d1fa5d621321ec797e",
+        "Makefile": "0aa090791a276042c8715b6f0f4fb17b9581674ccd8cc43a53a226090779fb50"
+      }
+    },
+    "pdf_modified": true,
+    "provider_modified": false,
+    "proposal_code_modified": false,
+    "tests_run": []
+  },
+  "weaver_latest_revision_review.json": {
+    "date": "2026-10-20",
+    "latest_commit": "09369c28185641d6d7ad044252b536d977d9a4ae",
+    "commit_date": "2026-10-19",
+    "scope": "SM3 reference; GNU GCC -O2 target; static review only",
+    "fixes": {
+      "kem-39-1": "82654be854ad2b174760fb6dffd507bc2ec1319c pointer counter propagation verified in current reference trees",
+      "kem-39-2": "ca99d0feefd8314e479bf533cba224d798aa31c0 high BCH decode call verified for mode3",
+      "kem-39-3": "31689b8d09933841a7a50460e154dd81f85d693b loop changed to j<=t && j<=2*i+2 across 6 ref BCH files; also opt and ConstantTimeRef",
+      "kem-39-4/5": "09369c28 changes matrix parser and half modulus; full spec mapping not independently validated"
+    },
+    "decisions": {
+      "128": "conditional validation of revised SM3 reference, mode1",
+      "256": "conditional validation of revised SM3 reference, mode3, specifically BCH omission+loop regression needed",
+      "512": "withhold SM3: current64byte seed is first SM3 block, common256bit CV bounds keypair generation and PRF secret generation"
+    },
+    "build_notes": "Explicit WEAVER_MODE required; params.h default5 appears in all three reference directories; directory name alone does not select grade. WEAVER_USE_SHAKE must remain undefined for SM3.",
+    "unverified": "No runtime KAT, GNU GCC O2 build, timing, full DFR or attack tests run; full latest spec mapping and revised KAT remain to validate. Formal report metadata describes archived original.",
+    "archive_sha256": "5409ec043d48549cd86773a0b02b84c9e6eb74b435e833605acce104b04404f1",
+    "provider_modified": false,
+    "pdf_modified": true,
+    "document_section": "3.14",
+    "512_detailed_argument": "Keypair root d is64B. SM3 counter-XOF expands d to publicseed and noiseseed; all keypair generation depends only on CV256 after first block d. Enumerate CV, derive candidate keypair, compare pk, plus per-candidate derivation cost. PKE secret only, independent rejection z not claimed recovered. Static bound, no search run."
+  },
+  "oaepntru_latest_revision_review.json": {
+    "date": "2026-10-20",
+    "scope": "SM3 reference, actual GNU GCC -O2 target, preserve author source",
+    "latest_commit": "f846d6ebda76af62278f408a6ebff36f1dfc207b",
+    "latest_commit_date": "2026-10-09",
+    "fix_commit": "166e976b0f93e77738a35e09e31e2e70badb00d3",
+    "fix_commit_date": "2026-10-02",
+    "author_snapshot_sha256": "114d6b8697667da95c6fc71ff7d5db28b2debe7ea0a5865f5ffdb83a5d05b43e",
+    "snapshot_file": "oaepntru-current-f846d6eb.zip",
+    "kem-28-1_fix": "All3 refs check every decoded coefficient>=q, propagate poly_frombytes result into decapfail, only copySS on success else zero and return nonzero; latest spec physicalpages11/13 Algorithms12/14 return bottom forcoeff>=q. Static confirmation, not GNU GCC/KEM/attack regression.",
+    "512_static_bound": {
+      "derivation": "hash_h_prime pseudoXOF domain05||F(pk)||shortpoly(s)||shortpoly(t). n2592,SYMBYTES128 gives1425B=22*64+17. Each of6 SM3 calls appends publiccounter, sharesCV256 after1408B; enumerateCV256 plus tail17B <=2^392 candidates, compare public128B confirmationtag then derive64B sharedsecret; perguess SM3continuationcost additional; no PKEsecret recovery or oracle needed. Conservative bound; restricted trit-tail encodings could only reduce it.",
+      "grade_lengths": {
+        "128": {
+          "n": 648,
+          "public_hash_bytes": 32,
+          "message_bytes": 357,
+          "shared_full_prefix_bytes": 320,
+          "tail_bytes": 37,
+          "candidate_bits_conservative": 552
+        },
+        "256": {
+          "n": 1296,
+          "public_hash_bytes": 64,
+          "message_bytes": 713,
+          "shared_full_prefix_bytes": 704,
+          "tail_bytes": 9,
+          "candidate_bits_conservative": 328
+        },
+        "512": {
+          "n": 2592,
+          "public_hash_bytes": 128,
+          "message_bytes": 1425,
+          "shared_full_prefix_bytes": 1408,
+          "tail_bytes": 17,
+          "candidate_bits_conservative": 392
+        }
+      },
+      "classification": "independent local static analysis, not new formalCritical/High ID; original noncanonical fix retained",
+      "helper_validation": "six synthetic counterblocks match hashlib SM3 and knownabc vector; no KEM, full search, GNU GCC build or sidechannel test",
+      "helper_file": "oaepntru_sm3_prefix_check.py"
+    },
+    "assessment": {
+      "128": "new author reference648 conditional validation candidate",
+      "256": "new author reference1296 conditional validation candidate",
+      "512": "reference2592 withhold due to independent392bit candidate upperbound"
+    },
+    "build": "Makefile KAT recipe uses NISTFLAGS default-O3/-flto; overridingCFLAGS alone insufficient. ActualGNU GCC-O2 and SM3symmetric.c required.",
+    "remaining_gates": [
+      "full lengths/null/capacity before bottom-layer accesses; current API ignores some lengths",
+      "all nonzero return values are failures; output/length cleanup",
+      "KAT/long roundtrips/q and+q aliases/tag corruption/memory safety",
+      "DRNG/auxfunc undefined shifts and helper error propagation",
+      "whole-path targetassembly and controlled timing/access CT review"
+    ],
+    "reference_files": {
+      "648": {
+        "KEM_AlgorithmInstance.c": "37a54aa11e5ef584e56f0c98e62a53ed5b283a0d9ad4e8ff77d20a249adb7b60",
+        "poly.c": "e2e9bc9296a6ab2dbae7cdd730284b0c178b8900c884311180658b5bcac848c9",
+        "poly.h": "048a509f9d896cba776e8461713a8d85b4cd9e298fcc970098e7c0b097656d63",
+        "params.h": "08c5e8e704571b0caea565902cafad29eeb0749701f5713134c9899539ef596d",
+        "symmetric.c": "a66daf8c3df9ddc0539d9ceb180f9f1f238f4f49ba1e046cafc2d2c25e350bf2",
+        "auxfunc.c": "27446371eccf14383e5a333dfed6333ed9a2232580d0a52c1c681bc2074a8368",
+        "drng.c": "0df0ac78c828bd43bf05724398fa530767d753aa7801a1d1fa5d621321ec797e",
+        "Makefile": "b2be698b39be0f6dfb8e51864451aa60770ba3eaa31134787089d6f965887c0d"
+      },
+      "1296": {
+        "KEM_AlgorithmInstance.c": "c5fd4572140843d5df454eca4280b4ab075ee2ca956b5110d7c49bd376d704c4",
+        "poly.c": "be3dce199ac07f34412ebfbaaa82c5d5d30edc1e66e2448599be2deedc1a2362",
+        "poly.h": "0cd18a182d8b3b6a2c3af239fd92e1b12539549fffe6ecc91727ddb39b93587b",
+        "params.h": "506f116c548f8c4f19405bcf4e095901cd7f32fd1786ba8487b72a6bec53dc2f",
+        "symmetric.c": "5caf8b6198c0f8ce0c9b87e48648e25be12aaecfcb0be86b02f5844b7fbc69a2",
+        "auxfunc.c": "27446371eccf14383e5a333dfed6333ed9a2232580d0a52c1c681bc2074a8368",
+        "drng.c": "0df0ac78c828bd43bf05724398fa530767d753aa7801a1d1fa5d621321ec797e",
+        "Makefile": "7f7076f5554065ab5d0fa5f0eeb84d50ff24a6ed2bdf3e03959fbf999b810f7c"
+      },
+      "2592": {
+        "KEM_AlgorithmInstance.c": "84051e81675110265315f7fce96ce0eaa410aa7f2e0e171ee6ea66325e939878",
+        "poly.c": "28757003888e8fad7130b4efe9d86c74914de10bbd852d547521acc13f09d31b",
+        "poly.h": "0cd18a182d8b3b6a2c3af239fd92e1b12539549fffe6ecc91727ddb39b93587b",
+        "params.h": "a90b2a80ef6f4b213aeaa6df0d2d703ab598c731bee0ed73c0172352c3f64711",
+        "symmetric.c": "c4e28d4b40a3f7385607c00ecc9b8bc1c2225db82b66189b0428b96fc51db7eb",
+        "auxfunc.c": "27446371eccf14383e5a333dfed6333ed9a2232580d0a52c1c681bc2074a8368",
+        "drng.c": "0df0ac78c828bd43bf05724398fa530767d753aa7801a1d1fa5d621321ec797e",
+        "Makefile": "277b90f463e572179f9367fdd03e56ad244b3dfe997aa1dd338571db5d3a5c10"
+      }
+    },
+    "pdf_modified": true,
+    "provider_modified": false,
+    "proposal_code_modified": false,
+    "KEM_tests_run": [],
+    "helper_checks_run": [
+      {
+        "check": "passed; six synthetic counter-XOF blocks match hashlib SM3",
+        "message_bytes": 1425,
+        "shared_full_prefix_bytes": 1408,
+        "unknown_tail_bytes_conservative": 17,
+        "public_counter_bytes": 4,
+        "candidate_bits_conservative": 392,
+        "public_tag_bytes": 128,
+        "shared_key_bytes": 64,
+        "limits": "synthetic prefix-factorization check only; no KEM, full search, key recovery, GNU GCC build or side-channel testing"
+      }
+    ]
+  },
+  "mithril_latest_revision_review.json": {
+    "reviewed_utc": "2026-10-20T05:53:59.004925+00:00",
+    "official_archive_sha256": "9fed68e7923c6bc9ede072183f7d3983058f88deec5534e779ed2200ee4f7f9f",
+    "official_archive_unchanged": true,
+    "author_code_sha256": "5e0760538bb4e0d3f9bdcb271f8c3b407f3d465696785e7f6fbcc1ee35f97fcb",
+    "author_urls": [
+      "https://www.pq-arcane.org/dist/downloads/Mithril-source-codes.zip",
+      "https://soc.ucas.ac.cn/templates/stylelib/arcane/downloads/Mithril-source-codes.zip"
+    ],
+    "author_downloads_identical": true,
+    "author_spec": "v1.2 dated 2026-09-22; not evidence that every current code change was published that date",
+    "forum_replies": 1,
+    "forum_more_pending": false,
+    "latest_forum_reply": "2026-09-22 erratum, no attachment",
+    "issue15_closure": "closed after reporting as kem-22-1, not a code fix commit",
+    "formal_Critical_High_records": [],
+    "kem22_1": "original official code remains flawed; current author reference code fixes the offset in active decoder for all three grades; no independent target runtime verification yet",
+    "rows": [
+      {
+        "grade": 128,
+        "revision": "128 revised decoder",
+        "parameters": {
+          "n": 128,
+          "k": 5,
+          "q": 8192,
+          "p": 2048,
+          "t": 8
+        },
+        "corrected_offset": -126,
+        "actual_decoder_calls_poly_subp": true,
+        "dimensions_bytes": {
+          "pk": 944,
+          "sk": 1136,
+          "ct": 928,
+          "ss": 16
+        },
+        "secret_expansion": {
+          "seed_bytes": 64,
+          "fixed_header_bytes": 11,
+          "seed_prefix_in_first_SM3_block_bytes": 53,
+          "tail_seed_bytes": 11,
+          "SM3_state_bits": 256,
+          "state_plus_tail_candidate_bound_bits": 344,
+          "classification": "new static source inference; not a formal ngcc Critical/High ID, no search or attack run"
+        },
+        "provider_decision": "conditionally eligible for SM3 reference GNU GCC -O2 integration verification"
+      },
+      {
+        "grade": 256,
+        "revision": "256a",
+        "parameters": {
+          "n": 128,
+          "k": 9,
+          "q": 8192,
+          "p": 2048,
+          "t": 16
+        },
+        "corrected_offset": -62,
+        "actual_decoder_calls_poly_subp": true,
+        "dimensions_bytes": {
+          "pk": 1648,
+          "sk": 2000,
+          "ct": 1712,
+          "ss": 32
+        },
+        "secret_expansion": {
+          "seed_bytes": 64,
+          "fixed_header_bytes": 11,
+          "seed_prefix_in_first_SM3_block_bytes": 53,
+          "tail_seed_bytes": 11,
+          "SM3_state_bits": 256,
+          "state_plus_tail_candidate_bound_bits": 344,
+          "classification": "new static source inference; not a formal ngcc Critical/High ID, no search or attack run"
+        },
+        "provider_decision": "conditionally eligible for SM3 reference GNU GCC -O2 integration verification"
+      },
+      {
+        "grade": 512,
+        "revision": "512e experimental",
+        "parameters": {
+          "n": 128,
+          "k": 18,
+          "q": 16384,
+          "p": 4096,
+          "t": 64
+        },
+        "corrected_offset": -30,
+        "actual_decoder_calls_poly_subp": true,
+        "dimensions_bytes": {
+          "pk": 3520,
+          "sk": 4224,
+          "ct": 3840,
+          "ss": 64
+        },
+        "secret_expansion": {
+          "seed_bytes": 64,
+          "fixed_header_bytes": 11,
+          "seed_prefix_in_first_SM3_block_bytes": 53,
+          "tail_seed_bytes": 11,
+          "SM3_state_bits": 256,
+          "state_plus_tail_candidate_bound_bits": 344,
+          "classification": "new static source inference; not a formal ngcc Critical/High ID, no search or attack run"
+        },
+        "provider_decision": "temporarily not admitted: SM3 bound below claimed 512 and experimental new instance"
+      }
+    ],
+    "source_sha256": {
+      "Mithril-source-codes/Reference_Implementation/Mithril-128/pke.c": "0337e11ec9db273776d9d123d2900a1017cf650332885d75e70862c3c8486c7e",
+      "Mithril-source-codes/Reference_Implementation/Mithril-128/kem.c": "b8562f1c2f0af3f09e34d8303926090b0e5f40d78acf018c826d14defa0385a1",
+      "Mithril-source-codes/Reference_Implementation/Mithril-128/arith/packing.c": "745504ed5b8d2e95a2abd9792f4202b6a9bff01cca923d8446b78d2b3d0e2fa1",
+      "Mithril-source-codes/Reference_Implementation/Mithril-128/arith/uniform.c": "70b1529841b257b28a6d50b7ff9d1329798e6600848350335b3f94f1684a5b2d",
+      "Mithril-source-codes/Reference_Implementation/Mithril-128/hash_domain.h": "ac3a0d36336337006c78e2e9b2625fa19f768d929226c46aac393feddef42f95",
+      "Mithril-source-codes/Reference_Implementation/Mithril-128/parameters.h": "c5e19fea911187cb8fdf1bce5345accae014d753d81943d5fbbc80a519fb99de",
+      "Mithril-source-codes/Reference_Implementation/Mithril-128/Makefile": "fb6cd6042d8d6d3a48e9e0e9a3e20c617937c438044bbc33f58744a7d4d8914b",
+      "Mithril-source-codes/Reference_Implementation/Mithril-128/README.md": "49b8a40f6cbdd4f5d8ccf03546f3ef69edc601862f9127966f68c888fe2553db",
+      "Mithril-source-codes/Reference_Implementation/Mithril-128/utils/auxfunc.c": "9b99c0bb3807c9661938a8aca227132d80ec762f85ebd8f67ea91c6161302b82",
+      "Mithril-source-codes/Reference_Implementation/Mithril-128/utils/drng.c": "0df0ac78c828bd43bf05724398fa530767d753aa7801a1d1fa5d621321ec797e",
+      "Mithril-source-codes/Reference_Implementation/Mithril-256/pke.c": "96c941eef5d90b989b927bedf65bc4ae10d7e971090c798ecbb425b934b1e094",
+      "Mithril-source-codes/Reference_Implementation/Mithril-256/kem.c": "b8562f1c2f0af3f09e34d8303926090b0e5f40d78acf018c826d14defa0385a1",
+      "Mithril-source-codes/Reference_Implementation/Mithril-256/arith/packing.c": "aa816a560e2e1a4a27b9f4767511734054d059798fa9450e1c8e1b8e898bfabe",
+      "Mithril-source-codes/Reference_Implementation/Mithril-256/arith/uniform.c": "70b1529841b257b28a6d50b7ff9d1329798e6600848350335b3f94f1684a5b2d",
+      "Mithril-source-codes/Reference_Implementation/Mithril-256/hash_domain.h": "ac3a0d36336337006c78e2e9b2625fa19f768d929226c46aac393feddef42f95",
+      "Mithril-source-codes/Reference_Implementation/Mithril-256/parameters.h": "de5c1080ab38ed8038529820ec0c7ef974e894859d5b83f460a30b1733d91e56",
+      "Mithril-source-codes/Reference_Implementation/Mithril-256/Makefile": "5b640df016bbfaf42402679365ff2eb33c37cba4ca141fb55f0ee4a9d0d925a1",
+      "Mithril-source-codes/Reference_Implementation/Mithril-256/README.md": "defafd0dcc0bf89132f3248864e003235c7b8690645933778d228677f8fdd74e",
+      "Mithril-source-codes/Reference_Implementation/Mithril-256/utils/auxfunc.c": "9b99c0bb3807c9661938a8aca227132d80ec762f85ebd8f67ea91c6161302b82",
+      "Mithril-source-codes/Reference_Implementation/Mithril-256/utils/drng.c": "0df0ac78c828bd43bf05724398fa530767d753aa7801a1d1fa5d621321ec797e",
+      "Mithril-source-codes/Reference_Implementation/Mithril-512/pke.c": "96c941eef5d90b989b927bedf65bc4ae10d7e971090c798ecbb425b934b1e094",
+      "Mithril-source-codes/Reference_Implementation/Mithril-512/kem.c": "b8562f1c2f0af3f09e34d8303926090b0e5f40d78acf018c826d14defa0385a1",
+      "Mithril-source-codes/Reference_Implementation/Mithril-512/arith/packing.c": "0e832776c43d20fd833c6a4cd589e518fd23926d1af9d90e372110e638e74f2a",
+      "Mithril-source-codes/Reference_Implementation/Mithril-512/arith/uniform.c": "2b5d018691fe4384c5bb7949096ab739628f416f4a5dc1860a0280f4d4a1f342",
+      "Mithril-source-codes/Reference_Implementation/Mithril-512/hash_domain.h": "ac3a0d36336337006c78e2e9b2625fa19f768d929226c46aac393feddef42f95",
+      "Mithril-source-codes/Reference_Implementation/Mithril-512/parameters.h": "0abd19153288ed6bd52929d3bea98543b0f21415df07625e37d6093408686dd0",
+      "Mithril-source-codes/Reference_Implementation/Mithril-512/Makefile": "a80c51583ff5be4a4cd4cecef6d90692d95c32165c69281377ba2c491c2d7980",
+      "Mithril-source-codes/Reference_Implementation/Mithril-512/README.md": "ec6864e51d2c59cab909c6787c040a8ab0144f27a90e346a8f610e73f0ee5a06",
+      "Mithril-source-codes/Reference_Implementation/Mithril-512/utils/auxfunc.c": "9b99c0bb3807c9661938a8aca227132d80ec762f85ebd8f67ea91c6161302b82",
+      "Mithril-source-codes/Reference_Implementation/Mithril-512/utils/drng.c": "0df0ac78c828bd43bf05724398fa530767d753aa7801a1d1fa5d621321ec797e"
+    },
+    "expected_KAT_vectors_bundled": false,
+    "validation": "Static source comparison, actual decoder call-path tracing, byte framing/first-block alignment checks only. No GNU GCC build, runtime KAT, DFR, timing or attack executed.",
+    "remaining_checks": [
+      "Per-grade exact-hash SM3 reference GNU GCC -O2, explicit CFLAGS override and PERF=0",
+      "New parameter/format KAT baseline and arithmetic/roundtrip/DFR checks",
+      "DRNG seeding/errors, ignored return codes, lengths/nulls/memory, implicit rejection and emitted-code constant time",
+      "SM3 auxiliary construction and DRNG undefined shifts; high-grade state ceiling remains"
+    ],
+    "provider_modified": false,
+    "original_submission_excluded_grades": [
+      256,
+      512
+    ]
+  },
+  "viper_latest_revision_review.json": {
+    "reviewed_utc": "2026-10-20T05:39:27.739337+00:00",
+    "scope": "SM3 reference, target GNU GCC -O2; no native Keccak or optimized paths",
+    "official_archive_url": "https://www.niccs.org.cn/niccs/Proposal/Public-Key%20Cryptographic%20Algorithms/Round%201%20candidates/MAMBA-Viper.zip",
+    "official_archive_sha256": "cdf52bb77066664f74eb44872d5ab1785c22df194e50c603120432a169c61f4c",
+    "archive_unchanged_from_original": true,
+    "forum_thread": "GVM4FAYEOQ7SAF5BDM6SKPLOTA547A5X",
+    "forum_replies": 0,
+    "more_pending": false,
+    "public_revision_found": false,
+    "report_and_ct_match_morning_snapshot": true,
+    "reference_copy_comparison": "25 core/adapter/build files identical across canonical and nested mirrored reference trees",
+    "rows": [
+      {
+        "grade": 128,
+        "dimensions_bytes": {
+          "PK": 608,
+          "SK": 1424,
+          "SS": 16,
+          "CT": 736
+        },
+        "keygen_secret_seed_bytes": 32,
+        "encapsulation_secret_seed_consumed_bytes": 32,
+        "backend": "SM3 pseudoXOF through viper_api_hash.c shake128/256 wrappers",
+        "E8_codec": true,
+        "provider_decision": "conditional verification candidate"
+      },
+      {
+        "grade": 192,
+        "dimensions_bytes": {
+          "PK": 992,
+          "SK": 2200,
+          "SS": 24,
+          "CT": 1088
+        },
+        "keygen_secret_seed_bytes": 32,
+        "encapsulation_secret_seed_consumed_bytes": 32,
+        "backend": "SM3 pseudoXOF through viper_api_hash.c shake128/256 wrappers",
+        "E8_codec": true,
+        "provider_decision": "excluded by project ICCS grade policy; not an integration/performance candidate"
+      },
+      {
+        "grade": 256,
+        "dimensions_bytes": {
+          "PK": 1312,
+          "SK": 2912,
+          "SS": 32,
+          "CT": 1472
+        },
+        "keygen_secret_seed_bytes": 32,
+        "encapsulation_secret_seed_consumed_bytes": 32,
+        "backend": "SM3 pseudoXOF through viper_api_hash.c shake128/256 wrappers",
+        "E8_codec": true,
+        "provider_decision": "conditional verification candidate"
+      },
+      {
+        "grade": 384,
+        "dimensions_bytes": {
+          "PK": 2496,
+          "SK": 5488,
+          "SS": 48,
+          "CT": 2656
+        },
+        "keygen_secret_seed_bytes": 32,
+        "encapsulation_secret_seed_consumed_bytes": 32,
+        "backend": "SM3 pseudoXOF through viper_api_hash.c shake128/256 wrappers",
+        "E8_codec": true,
+        "provider_decision": "temporarily not admitted: kem-21-1 and kem-21-2 unresolved"
+      },
+      {
+        "grade": 512,
+        "dimensions_bytes": {
+          "PK": 3200,
+          "SK": 7040,
+          "SS": 64,
+          "CT": 3456
+        },
+        "keygen_secret_seed_bytes": 32,
+        "encapsulation_secret_seed_consumed_bytes": 32,
+        "backend": "SM3 pseudoXOF through viper_api_hash.c shake128/256 wrappers",
+        "E8_codec": true,
+        "provider_decision": "temporarily not admitted: kem-21-1 and kem-21-2 unresolved"
+      }
+    ],
+    "source_sha256": {
+      "Implementations/Reference_Implementation/MAMBA-Viper-128/kem.c": "ba2783ecc2d3f54c4db06e411db351e2558ae82fcc74af600e98dc8aace27fda",
+      "Implementations/Reference_Implementation/MAMBA-Viper-128/viper.c": "ad3ac14a28ffe7f05e1e5e11ad75585c3bead80c076a83fae6990f2c233b116b",
+      "Implementations/Reference_Implementation/MAMBA-Viper-128/viper_api_hash.c": "d4371a7c85d5b09cad17836f817920c4a179e676399a4e076ba83f70aa7b3b38",
+      "Implementations/Reference_Implementation/MAMBA-Viper-128/viper_api_rng.c": "f38fbb61f6ece1b1235e68e340e2ec22ae8861c42207a0c218fe0db640a2a2ca",
+      "Implementations/Reference_Implementation/MAMBA-Viper-128/viper_e8.c": "13d340b7648203e75be5b6404bb859443e89bab0837f33b34c25136263d36884",
+      "Implementations/Reference_Implementation/MAMBA-Viper-128/viper_params.h": "1b46f6f79acffc84602b5a1051e6cb527705a0cafadc4d911101be48cd1ff2a2",
+      "Implementations/Reference_Implementation/MAMBA-Viper-128/Makefile": "07234257ca0caf513600bd131ff6bc9f92a82708eda23509f47ab628b9bcfd6e",
+      "Implementations/Reference_Implementation/MAMBA-Viper-128/KEM_AlgorithmInstance.c": "4d9b6f145ee10a0df46b3b38c2d0a2b3aff15751fe7bbfa420301d7fb4a34e77",
+      "Implementations/Reference_Implementation/MAMBA-Viper-192/kem.c": "ba2783ecc2d3f54c4db06e411db351e2558ae82fcc74af600e98dc8aace27fda",
+      "Implementations/Reference_Implementation/MAMBA-Viper-192/viper.c": "ad3ac14a28ffe7f05e1e5e11ad75585c3bead80c076a83fae6990f2c233b116b",
+      "Implementations/Reference_Implementation/MAMBA-Viper-192/viper_api_hash.c": "d4371a7c85d5b09cad17836f817920c4a179e676399a4e076ba83f70aa7b3b38",
+      "Implementations/Reference_Implementation/MAMBA-Viper-192/viper_api_rng.c": "f38fbb61f6ece1b1235e68e340e2ec22ae8861c42207a0c218fe0db640a2a2ca",
+      "Implementations/Reference_Implementation/MAMBA-Viper-192/viper_e8.c": "13d340b7648203e75be5b6404bb859443e89bab0837f33b34c25136263d36884",
+      "Implementations/Reference_Implementation/MAMBA-Viper-192/viper_params.h": "1b46f6f79acffc84602b5a1051e6cb527705a0cafadc4d911101be48cd1ff2a2",
+      "Implementations/Reference_Implementation/MAMBA-Viper-192/Makefile": "677bcae2646d7ecdc1640a880f14dff165a5fa65a1e94c7c2a0641c5e4fbebf7",
+      "Implementations/Reference_Implementation/MAMBA-Viper-192/KEM_AlgorithmInstance.c": "e12fc342ac2814b2daae1eb6aba60b64e32545d6f4d5e0eb4d718a642ff01f80",
+      "Implementations/Reference_Implementation/MAMBA-Viper-256/kem.c": "ba2783ecc2d3f54c4db06e411db351e2558ae82fcc74af600e98dc8aace27fda",
+      "Implementations/Reference_Implementation/MAMBA-Viper-256/viper.c": "ad3ac14a28ffe7f05e1e5e11ad75585c3bead80c076a83fae6990f2c233b116b",
+      "Implementations/Reference_Implementation/MAMBA-Viper-256/viper_api_hash.c": "d4371a7c85d5b09cad17836f817920c4a179e676399a4e076ba83f70aa7b3b38",
+      "Implementations/Reference_Implementation/MAMBA-Viper-256/viper_api_rng.c": "f38fbb61f6ece1b1235e68e340e2ec22ae8861c42207a0c218fe0db640a2a2ca",
+      "Implementations/Reference_Implementation/MAMBA-Viper-256/viper_e8.c": "13d340b7648203e75be5b6404bb859443e89bab0837f33b34c25136263d36884",
+      "Implementations/Reference_Implementation/MAMBA-Viper-256/viper_params.h": "1b46f6f79acffc84602b5a1051e6cb527705a0cafadc4d911101be48cd1ff2a2",
+      "Implementations/Reference_Implementation/MAMBA-Viper-256/Makefile": "e3a58648545ebe371dfeb2545a50051aebc498851051493a50acc6ee211ccd4e",
+      "Implementations/Reference_Implementation/MAMBA-Viper-256/KEM_AlgorithmInstance.c": "abcbb658cfe02b78b4cf54e56f538dab60264c1d65c8310575602c65a6205df4",
+      "Implementations/Reference_Implementation/MAMBA-Viper-384/kem.c": "ba2783ecc2d3f54c4db06e411db351e2558ae82fcc74af600e98dc8aace27fda",
+      "Implementations/Reference_Implementation/MAMBA-Viper-384/viper.c": "ad3ac14a28ffe7f05e1e5e11ad75585c3bead80c076a83fae6990f2c233b116b",
+      "Implementations/Reference_Implementation/MAMBA-Viper-384/viper_api_hash.c": "d4371a7c85d5b09cad17836f817920c4a179e676399a4e076ba83f70aa7b3b38",
+      "Implementations/Reference_Implementation/MAMBA-Viper-384/viper_api_rng.c": "f38fbb61f6ece1b1235e68e340e2ec22ae8861c42207a0c218fe0db640a2a2ca",
+      "Implementations/Reference_Implementation/MAMBA-Viper-384/viper_e8.c": "13d340b7648203e75be5b6404bb859443e89bab0837f33b34c25136263d36884",
+      "Implementations/Reference_Implementation/MAMBA-Viper-384/viper_params.h": "1b46f6f79acffc84602b5a1051e6cb527705a0cafadc4d911101be48cd1ff2a2",
+      "Implementations/Reference_Implementation/MAMBA-Viper-384/Makefile": "00b1b4d70bcba4354469e629391e29a250ac689862b9395ec792ff3191cb1f4f",
+      "Implementations/Reference_Implementation/MAMBA-Viper-384/KEM_AlgorithmInstance.c": "780da839de188f2d12364209861fee92c698dcd708a68d1a51471cf0a992bc67",
+      "Implementations/Reference_Implementation/MAMBA-Viper-512/kem.c": "ba2783ecc2d3f54c4db06e411db351e2558ae82fcc74af600e98dc8aace27fda",
+      "Implementations/Reference_Implementation/MAMBA-Viper-512/viper.c": "ad3ac14a28ffe7f05e1e5e11ad75585c3bead80c076a83fae6990f2c233b116b",
+      "Implementations/Reference_Implementation/MAMBA-Viper-512/viper_api_hash.c": "d4371a7c85d5b09cad17836f817920c4a179e676399a4e076ba83f70aa7b3b38",
+      "Implementations/Reference_Implementation/MAMBA-Viper-512/viper_api_rng.c": "f38fbb61f6ece1b1235e68e340e2ec22ae8861c42207a0c218fe0db640a2a2ca",
+      "Implementations/Reference_Implementation/MAMBA-Viper-512/viper_e8.c": "13d340b7648203e75be5b6404bb859443e89bab0837f33b34c25136263d36884",
+      "Implementations/Reference_Implementation/MAMBA-Viper-512/viper_params.h": "1b46f6f79acffc84602b5a1051e6cb527705a0cafadc4d911101be48cd1ff2a2",
+      "Implementations/Reference_Implementation/MAMBA-Viper-512/Makefile": "1daaaea63ed9394e5ac0359650c508dfae41b228a86a329a7939bf84e1c82f0a",
+      "Implementations/Reference_Implementation/MAMBA-Viper-512/KEM_AlgorithmInstance.c": "d4c78c445ec2b113b048723852e9fa990699e2e1a5e056b9c87bfc0bb9b43228"
+    },
+    "remaining_scope": [
+      "Source-only E8 secret-dependent branches/loops and 128 CBD indexed lookup require emitted-code/trace audit; not established High",
+      "SM3 auxiliary/DRNG undefined shifts, ignored auxiliary return codes and allocation-failure domain-label fallback",
+      "Official pseudoXOF explicitly lacks security guarantee; concrete instantiation/entropy source need validation",
+      "Per-grade SM3 API KAT, RNG failures, implicit rejection, lengths/nulls, memory and GNU GCC -O2 constant-time checks pending"
+    ],
+    "validation": "Static source/data-flow and public evidence review only; no GNU GCC build, runtime KAT, timing or attack executed",
+    "provider_modified": false,
+    "provider_grade_scope": [
+      128,
+      256,
+      384,
+      512
+    ],
+    "excluded_grade_policy": "192 excluded from integration and performance testing by user: not an ICCS category used by this project"
+  },
+  "scabbard_latest_revision_review.json": {
+    "reviewed_utc": "2026-10-20T06:10:18.251510+00:00",
+    "scope": "SM3 reference, target GNU GCC -O2; native Keccak and optimized integration excluded",
+    "official_archive_sha256": "fdb6749116bddbb8a86074b9ab6f5f55d37540b92e3964906dede0b09c7faf4b",
+    "official_archive_unchanged": true,
+    "project_site": "https://sites.google.com/view/scabbard",
+    "project_linked_archive_sha256": "fdb6749116bddbb8a86074b9ab6f5f55d37540b92e3964906dede0b09c7faf4b",
+    "project_code_link_is_same_original_archive": true,
+    "project_other_download": "Google Drive scabbard.pdf, not a revised code archive",
+    "forum_thread": "4KFYAFY5ZWKVT2D47LSNZP2LKIHBGPV7",
+    "forum_replies": 1,
+    "last_forum_reply": "2026-10-06 independent issue report, no author fix or attachment",
+    "more_pending": false,
+    "known_formal_findings": {
+      "kem-24-1": "Medium, confirmed, reference 128/256 rounding mismatch; no demonstrated in-model IND-CCA or key recovery",
+      "kem-24-2": "Low, confirmed, reference/optimized 128/256/512 caller-length mismatch; no demonstrated secret disclosure or in-model key recovery"
+    },
+    "public_verifiable_fix_found": false,
+    "rows": [
+      {
+        "grade": 128,
+        "seed_and_shared_secret_bytes": 16,
+        "kem24_1": "unfixed: u truncates without h1",
+        "kem24_2": "unfixed: caller ct length used directly; sk length also used in pointer arithmetic without validation",
+        "secret_sampling": "pseudoXOF(seed || polynomial_index); inside pseudoXOF append output-block counter",
+        "provider_decision": "conditional controlled-verification candidate after length/null/RNG/memory/constant-time handling; keep rounding deviation explicit"
+      },
+      {
+        "grade": 256,
+        "seed_and_shared_secret_bytes": 32,
+        "kem24_1": "unfixed: u truncates without h1",
+        "kem24_2": "unfixed: caller ct length used directly; sk length also used in pointer arithmetic without validation",
+        "secret_sampling": "pseudoXOF(seed || polynomial_index); inside pseudoXOF append output-block counter",
+        "provider_decision": "conditional controlled-verification candidate after length/null/RNG/memory/constant-time handling; keep rounding deviation explicit"
+      },
+      {
+        "grade": 512,
+        "seed_and_shared_secret_bytes": 64,
+        "kem24_1": "not affected: u adds h1",
+        "kem24_2": "unfixed: caller ct length used directly; sk length also used in pointer arithmetic without validation",
+        "secret_sampling": "pseudoXOF(seed || polynomial_index); inside pseudoXOF append output-block counter",
+        "provider_decision": "temporarily do not admit as 512-bit SM3 candidate: static shared-CV search ceiling"
+      }
+    ],
+    "new_static_inference_512": {
+      "first_block": "entire secret seed[64], shared across every polynomial index and XOF output block",
+      "state_bits": 256,
+      "secret_tail_bytes": 0,
+      "candidate_trials_bound": "2^256, plus per-candidate expansion/CBD/public-key multiplication costs",
+      "verification": "Given public matrix seed and public key, regenerate candidate s and compare public product; correct state reconstructs long-term PKE decryption secret",
+      "scope": "Concrete SM3 instance. Not a new registered ngcc Critical/High, no exhaustive attack or candidate runtime executed."
+    },
+    "source_sha256": {
+      "Implementations/Reference_Implementation/scabbard128/indcpa.c": "da38a4509b30089498b5fde5f1b2a51c1f175b42de15f9143096e7c30b79569b",
+      "Implementations/Reference_Implementation/scabbard128/KEM_scabbard128.c": "a2d365b986ddc1b08545ed8bd23d6d179e820d020f8bd147538d2b2ff688eb50",
+      "Implementations/Reference_Implementation/scabbard128/polyvec.c": "4ffacb24dfb773118a76664acb2e0c4fdf03caf955f0c1635f9a151650af13d7",
+      "Implementations/Reference_Implementation/scabbard128/params.h": "1854f6a41620c29f9de64db6fcdee94d8a1829875302ffc807becfc88e2a85bb",
+      "Implementations/Reference_Implementation/scabbard128/auxfunc.c": "d8b3e4bd0df658cb547ee8b5b171fe7e0c6800d972773f8f0ec9b256ac3ab085",
+      "Implementations/Reference_Implementation/scabbard128/verify.c": "778eedff486da6a1df9f99a7420caff6939b8defe5562fcdc1d3c27ca09fc909",
+      "Implementations/Reference_Implementation/scabbard128/Makefile": "142a7049b0014f50246529dd718825c9206631f66480f8e97cfb7fc5b6ac8429",
+      "Implementations/Reference_Implementation/scabbard256/indcpa.c": "0ab327546f4c91b4ee9584060115b4451ecf58c7fbfb4653d527f8611b137366",
+      "Implementations/Reference_Implementation/scabbard256/KEM_scabbard256.c": "a70181c2a051ad18be83335a20e6fef50692b8c9e2c2de35fea16d7c746657f3",
+      "Implementations/Reference_Implementation/scabbard256/polyvec.c": "4ffacb24dfb773118a76664acb2e0c4fdf03caf955f0c1635f9a151650af13d7",
+      "Implementations/Reference_Implementation/scabbard256/params.h": "5dc70bc4c98d1e4c69d02db70ffce7cda01d1e4a0c7bdcfa8a04da37be2cd38b",
+      "Implementations/Reference_Implementation/scabbard256/auxfunc.c": "d8b3e4bd0df658cb547ee8b5b171fe7e0c6800d972773f8f0ec9b256ac3ab085",
+      "Implementations/Reference_Implementation/scabbard256/verify.c": "778eedff486da6a1df9f99a7420caff6939b8defe5562fcdc1d3c27ca09fc909",
+      "Implementations/Reference_Implementation/scabbard256/Makefile": "2dce22c32f8f9f15987fa3ba511a360b71df2039e9efc804786f5e3fae816617",
+      "Implementations/Reference_Implementation/scabbard512/indcpa.c": "cc1d1bf98130e5ac93d6d56a85cbc51c1fde2740797e7e5a72e3289fad39fa47",
+      "Implementations/Reference_Implementation/scabbard512/KEM_scabbard512.c": "3685ddbafb7bca130e21f2d998247c40b54e2b32854e15d7d3f61aba962ba4d4",
+      "Implementations/Reference_Implementation/scabbard512/polyvec.c": "4ffacb24dfb773118a76664acb2e0c4fdf03caf955f0c1635f9a151650af13d7",
+      "Implementations/Reference_Implementation/scabbard512/params.h": "566daa9f94a02202ddcbee391d80778ac9fc6442cfec55e7171c671df5a05006",
+      "Implementations/Reference_Implementation/scabbard512/auxfunc.c": "d8b3e4bd0df658cb547ee8b5b171fe7e0c6800d972773f8f0ec9b256ac3ab085",
+      "Implementations/Reference_Implementation/scabbard512/verify.c": "778eedff486da6a1df9f99a7420caff6939b8defe5562fcdc1d3c27ca09fc909",
+      "Implementations/Reference_Implementation/scabbard512/Makefile": "bed5945e258438f756a9c153b0751f897ea3ac8db58f6cfdecce6cdc76e18afd"
+    },
+    "runtime_checks": "No target GNU GCC build/KAT/timing/attack run. Static source/framing checks only.",
+    "provider_modified": false,
+    "pdf_modified_this_turn": true,
+    "integration_conclusion_section": "3.11"
+  },
+  "qctm_latest_revision_review.json": {
+    "access_date": "2026-10-20",
+    "scheme": "kem-32 QCTM",
+    "official_archive_url": "https://www.niccs.org.cn/niccs/Proposal/Public-Key%20Cryptographic%20Algorithms/Round%201%20candidates/QCTM.zip",
+    "current_archive_bytes": 87169850,
+    "current_archive_sha256": "24a3986a4fbb852a677267a6443756328eae3642af770e767fe38f8291f294db",
+    "current_archive_matches_original": true,
+    "QCTM128_reference_source_checks": {
+      "Makefile": {
+        "sha256": "cafff33781e9951b56e566bb9f2231246af33651ba425216d1096c06cb3d22c7",
+        "unchanged_from_original": true
+      },
+      "kem.c": {
+        "sha256": "5cfc7ab895c7ed7e8ad4f0bf36e352843366a70a257609ce6cc88c91992a0875",
+        "unchanged_from_original": true
+      },
+      "seeded_keygen.c": {
+        "sha256": "3a33649e7093fb2de7c5e2488a724adb64d5d94f7fbc7d45c0b5a87cb7793b38",
+        "unchanged_from_original": true
+      },
+      "keccak.c": {
+        "sha256": "0d12360dcbd733918cd1c8170c4d0fe2b3fbd0316b66c84901719a0100d7b6f5",
+        "unchanged_from_original": true
+      },
+      "KEM_AlgorithmInstance.c": {
+        "sha256": "d729f0e8fe9c0c611c3afa5bac55e2c45a9000f4e0ff4f12a6dcc52086106e93",
+        "unchanged_from_original": true
+      },
+      "scheme_api.h": {
+        "sha256": "0ac61846da721ada0f86dcae5bef754a2df7f764872654b7b663d3d5e7dc4794",
+        "unchanged_from_original": true
+      }
+    },
+    "QCTM128_current_length": 10070,
+    "kem_32_1_debug_last_error_and_TRACE_DEC_remain_in_official_package": true,
+    "author_response": "https://list.niccs.org.cn/archives/list/pkcforum@list.niccs.org.cn/message/S4LPBREM3EYTVIOGUDFFMHIM2UCD2VXG/",
+    "author_response_date": "2026-10-08",
+    "author_response_claims_fix_and_parameter_update_but_does_not_supply_source_attachment": true,
+    "forum_thread": "BKERBYXMUT27H3ZUTLBHCM7YJB5KVGZI",
+    "forum_reply_ids": [
+      "S4LPBREM3EYTVIOGUDFFMHIM2UCD2VXG",
+      "XGAGQXXF4DD735AOVZJY67QHJS2M6LBH"
+    ],
+    "forum_more_pending": false,
+    "forum_next_offset": null,
+    "forum_attachment_links": [],
+    "hash_dataflow": [
+      "QCTM128 kem.c:404 hash_session_key -> FIPS202_SHAKE256",
+      "QCTM128 seeded_keygen.c:898 deterministic expansion -> FIPS202_SHAKE256",
+      "QCTM128 keccak.c:10-12 FIPS202_SHAKE256 -> Keccak(1088,512,...,0x1F)",
+      "QCTM128 Makefile OBJECTS includes keccak.o; rng.o uses bundled AES256-CTR DRBG",
+      "SM3 DRNG in ICCS API template only seeds local generator via 48-byte bridge; it is not a SM3 replacement of protocol hash/XOF"
+    ],
+    "formal_scope_corrections": {
+      "kem-32-2": "Critical/Confirmed original128/256; nonblocking tracking only under project fresh independent KEM key per handshake with no cross-connection reuse",
+      "kem-32-3": "Critical/Confirmed only512, not256",
+      "kem-32-4": "Medium/Confirmed actual public structural quotient, not merely a missing proof; no full key recovery demonstrated",
+      "kem-32-5": "Critical/Lead256/512; not full demonstrated recovery; no128 below-target recovery established"
+    },
+    "constant_time_followup": "Source review traces secret-dependent validity/fallback branch; no compiled GNU GCC-O2 or timing certification",
+    "decision_under_current_user_scope": "128 may be a conditional security-evaluation candidate if hash-backend scope permits; current original reference implementation uses Keccak, so withhold under SM3-only plus preserve-original-code policy",
+    "proposal_code_modified": false,
+    "provider_modified": false,
+    "pdf_modified": false,
+    "GNU_GCC_KEM_KAT_TLS_attack_sidechannel_tests_run": false
+  },
+  "flit_latest_revision_review.json": {
+    "date": "2026-10-20",
+    "latest_author_commit": "c416982d41b70283ed4823319c2a4d8d23e6f055",
+    "commit_date": "2026-10-05",
+    "author_snapshot_sha256": "96f72dcc2d83db9b2fe915f9a0e531a260a6a3b896e601f274a13252ddf01c0a",
+    "scope": "SM3 reference, GNU GCC -O2 target; static review only; user requires proposal original code unchanged",
+    "formal_scopes": {
+      "kem-15-1": "original512 ref/AVX interoperability, missing mask root in AVX",
+      "kem-15-2": "five AVX2 trees only; primary ref not affected; author fix present",
+      "kem-15-3": "additional FIPS202 REF/OPT128/256 RNG; primary SM3 path not affected by that RNG mechanism"
+    },
+    "SM3_DRNG_issue27": "open,0comments; shared drng.c L_SHIFT by32 undefined at rotation0, current ref copies identical and unchanged; reporter demonstrated UBSan, no wrong output on tested platform; no new formal ID or confirmed entropy collapse",
+    "512_static_limit": "SEEDBYTES64; indcpa_keypair drawsseed64; poly_f/g_ternary_p -> poly_ternary_p -> prf macro -> pseudoXOF(seed64||nonce). SM3 counter-XOF consumes same first64B seed block, then public nonce/counter/padding, so entire candidate f,g,deterministic rejection/NTT/inversions and pk depend only on shared CV256. Enumerate <=2^256 CV states plus per-state sampling/inversion/pk comparison work. Recover PKE decryption secret, not necessarily full rejectionz; no full search run and no new formal Critical/High ID assigned. This does not lower128/256 classical targets by itself.",
+    "assessment": {
+      "128": "conditional validation candidate; do not claim issue-free; DRNG UB+KAT+targetCT+functional tests pending",
+      "256": "conditional validation candidate under same gates",
+      "512": "withhold SM3 due to current internal-state cap despite formal AVX/FIPS scope exclusions"
+    },
+    "files": {
+      "Implementations/Reference_Implementation/FLIT128/params.h": "9e9a3a1caed5aa60676361a9fbdb64475ad2b7e7afb3f83ed2ad2120dc77bf42",
+      "Implementations/Reference_Implementation/FLIT128/symmetric.h": "c75d04f2f0fee1e1963d35cc8658e128f90b1724b06e64d38875db1882f04df7",
+      "Implementations/Reference_Implementation/FLIT128/indcpa.c": "769fef7738fe39f17bd20feae179676bbea0868c850b09fc20e61a02e2a817e7",
+      "Implementations/Reference_Implementation/FLIT128/poly.c": "a1a25baea9274c82a9e3f9ba2b44642cd95545931cf5179f28ce9673c94f3e39",
+      "Implementations/Reference_Implementation/FLIT128/auxfunc.c": "27446371eccf14383e5a333dfed6333ed9a2232580d0a52c1c681bc2074a8368",
+      "Implementations/Reference_Implementation/FLIT128/drng.c": "0df0ac78c828bd43bf05724398fa530767d753aa7801a1d1fa5d621321ec797e",
+      "Implementations/Reference_Implementation/FLIT128/verify.c": "7aaaa1a577fc564b20119919cea7d81e99ebda2cafe0e76d5370e3aa55e4a34a",
+      "Implementations/Reference_Implementation/FLIT256/params.h": "9e9a3a1caed5aa60676361a9fbdb64475ad2b7e7afb3f83ed2ad2120dc77bf42",
+      "Implementations/Reference_Implementation/FLIT256/symmetric.h": "c75d04f2f0fee1e1963d35cc8658e128f90b1724b06e64d38875db1882f04df7",
+      "Implementations/Reference_Implementation/FLIT256/indcpa.c": "769fef7738fe39f17bd20feae179676bbea0868c850b09fc20e61a02e2a817e7",
+      "Implementations/Reference_Implementation/FLIT256/poly.c": "a1a25baea9274c82a9e3f9ba2b44642cd95545931cf5179f28ce9673c94f3e39",
+      "Implementations/Reference_Implementation/FLIT256/auxfunc.c": "27446371eccf14383e5a333dfed6333ed9a2232580d0a52c1c681bc2074a8368",
+      "Implementations/Reference_Implementation/FLIT256/drng.c": "0df0ac78c828bd43bf05724398fa530767d753aa7801a1d1fa5d621321ec797e",
+      "Implementations/Reference_Implementation/FLIT256/verify.c": "7aaaa1a577fc564b20119919cea7d81e99ebda2cafe0e76d5370e3aa55e4a34a",
+      "Implementations/Reference_Implementation/FLIT512/params.h": "9e9a3a1caed5aa60676361a9fbdb64475ad2b7e7afb3f83ed2ad2120dc77bf42",
+      "Implementations/Reference_Implementation/FLIT512/symmetric.h": "c75d04f2f0fee1e1963d35cc8658e128f90b1724b06e64d38875db1882f04df7",
+      "Implementations/Reference_Implementation/FLIT512/indcpa.c": "769fef7738fe39f17bd20feae179676bbea0868c850b09fc20e61a02e2a817e7",
+      "Implementations/Reference_Implementation/FLIT512/poly.c": "a1a25baea9274c82a9e3f9ba2b44642cd95545931cf5179f28ce9673c94f3e39",
+      "Implementations/Reference_Implementation/FLIT512/auxfunc.c": "27446371eccf14383e5a333dfed6333ed9a2232580d0a52c1c681bc2074a8368",
+      "Implementations/Reference_Implementation/FLIT512/drng.c": "0df0ac78c828bd43bf05724398fa530767d753aa7801a1d1fa5d621321ec797e",
+      "Implementations/Reference_Implementation/FLIT512/verify.c": "7aaaa1a577fc564b20119919cea7d81e99ebda2cafe0e76d5370e3aa55e4a34a"
+    },
+    "tests_run": [],
+    "pdf_modified": true,
+    "provider_modified": false,
+    "proposal_code_modified": false,
+    "pdf_section": "4.3 FLIT",
+    "author_snapshot_file": "flit-author-current-c416982d.zip",
+    "build_config_verified": {
+      "FLIT128_default_KEM_MODE": 128,
+      "FLIT256_default_KEM_MODE": 256,
+      "FLIT512_default_KEM_MODE": 512,
+      "Makefile_default_CFLAGS": "-O3 -march=native -fomit-frame-pointer -std=c11 -Wall -Wextra",
+      "target_requirement": "override CFLAGS at build, explicit KEM_MODE128/256, no original code modifications"
+    }
+  },
+  "loong_latest_revision_review.json": {
+    "checked_utc": "2026-10-20T05:08:24.400969+00:00",
+    "official_package_url": "https://www.niccs.org.cn/niccs/Proposal/Public-Key%20Cryptographic%20Algorithms/Round%201%20candidates/LoongKEM.zip",
+    "sha256": "a6e5070647a40e7de1bf6e5b085dc1d6423c003a409864fdb303d87f881cec0b",
+    "unchanged_from_original": true,
+    "forum_url": "https://list.niccs.org.cn/archives/list/pkcforum@list.niccs.org.cn/thread/G7IDTLL5NJ46PSNDO6ZVKFN5L4LPRS7N/",
+    "reply_dates": [
+      "Sept. 28, 2026, 2:33 a.m.",
+      "Sept. 29, 2026, 7:34 p.m."
+    ],
+    "more_pending": false,
+    "attachment_links": [
+      "/archives/list/pkcforum@list.niccs.org.cn/message/VBOUFRS2CDGNLPEAR4ZBKZM4U5YHBTZY/attachment/4/poc2.zip"
+    ],
+    "attachment_assessment": "poc2.zip is the attack proof of concept, not a repair package. No author repair reply found.",
+    "reference_review": [
+      {
+        "grade": "128",
+        "path": "Implementations/Reference_Implementation/Loong128/KEM_Loong.c",
+        "sha256": "7a3610ee965fe041caa72c39f96ac55045eaaef808a34ba80fbc9585835ac38a",
+        "unnormalized_mask_present": true
+      },
+      {
+        "grade": "256",
+        "path": "Implementations/Reference_Implementation/Loong256/KEM_Loong.c",
+        "sha256": "1e69e312f357422ccb5d13537b464a5129c935326b6e813832f613c5767fc5f7",
+        "unnormalized_mask_present": true
+      },
+      {
+        "grade": "384",
+        "path": "Implementations/Reference_Implementation/Loong384/KEM_Loong.c",
+        "sha256": "7a3610ee965fe041caa72c39f96ac55045eaaef808a34ba80fbc9585835ac38a",
+        "unnormalized_mask_present": true
+      },
+      {
+        "grade": "512",
+        "path": "Implementations/Reference_Implementation/Loong512/KEM_Loong.c",
+        "sha256": "7a3610ee965fe041caa72c39f96ac55045eaaef808a34ba80fbc9585835ac38a",
+        "unnormalized_mask_present": true
+      }
+    ],
+    "decision": "kem-18-1 Critical remains in all four current official reference grades. Temporarily do not integrate 128/256/384/512 into nsm_provider; GCC -O2 does not fix unnormalized selection mask. Other design/rejection issues require separate reassessment even if this mask is repaired.",
+    "validation": "Re-downloaded official archive and statically checked sources; no local attack runtime.",
+    "provider_modified": false
+  },
+  "dkem_latest_revision_review.json": {
+    "checked_utc": "2026-10-20T05:04:35.642936+00:00",
+    "author_repo": "https://github.com/dkemdkex/dkem-dkex",
+    "latest_commit": "5900418088dfa73b624dec1a2d4aaca751230b12",
+    "latest_commit_date": "2026-10-02T15:20:54Z",
+    "thread_more_pending": false,
+    "reference_files": {
+      "128/dkecca.c": "d9a4ca698bb28bd8fcb1ba3687cb32f8ff6a33c3e3957ffa7edb4ae62b88b4cc",
+      "128/KEM_AlgorithmInstance.c": "3520612f13ba39fa1824a811bd92a54c81fa2fafa3dcef6975c64c759ebcc2e4",
+      "256/dkecca.c": "d9a4ca698bb28bd8fcb1ba3687cb32f8ff6a33c3e3957ffa7edb4ae62b88b4cc",
+      "256/KEM_AlgorithmInstance.c": "3520612f13ba39fa1824a811bd92a54c81fa2fafa3dcef6975c64c759ebcc2e4",
+      "512/dkecca.c": "d9a4ca698bb28bd8fcb1ba3687cb32f8ff6a33c3e3957ffa7edb4ae62b88b4cc",
+      "512/KEM_AlgorithmInstance.c": "3520612f13ba39fa1824a811bd92a54c81fa2fafa3dcef6975c64c759ebcc2e4"
+    },
+    "ntt512_source_sha256": "631c9ea4cf4ff2d1254ddc6e0e2c0033fe239e78f0174df002c99442062b79c4",
+    "static_findings": {
+      "kem-13-1": "All three reference grades still derive rejection key from z || c2; Medium, no demonstrated honest-key IND-CCA/key-recovery break.",
+      "kem-13-2": "All three reference grades still KDF raw CPA secret; malicious-zero-vector public-key issue remains, Medium.",
+      "kem-13-3": "Reference 512 contains Barrett reductions after len=64 and len=8; published independent regression exists.",
+      "kem-13-4": "All three reference APIs check input pk/sk/ct lengths before reading; source confirms."
+    },
+    "integration_conclusion": "128/256/512 eligible as verification candidates under no known confirmed unresolved Critical/High gate, not a statement of absence of vulnerabilities. Pin repaired commit, DKE_FORCE_SCALAR, GNU GCC -O2, target regressions and constant-time/memory checks; 512 additionally NTT regression and long honest-roundtrip tests.",
+    "validation": "Static source and live author-commit/forum check; no local GNU GCC/runtime/constant-time certification.",
+    "provider_modified": false
+  },
+  "yuanyang_latest_revision_review.json": {
+    "date": "2026-10-20",
+    "official_snapshot_sha256": "fe1bf3d78272bb79048e7d456819160324c6140206798cb77a22c2babcfdcf4a",
+    "official_snapshot_file": "yuanyang-kem-official-current-fe1bf3d7.zip",
+    "scope": "SM3 reference and actual GNU GCC -O2 target; original proposal code preserved",
+    "latest_forum": "2 issue reports, 2026-09-22 error omission and2026-10-04 DFR, no author response/revision attachment, more_pending=false",
+    "source_finding": "all3 refs samplee inring_samp(s,e) but only multiplyh*s and add message term before compression; no laterread ofe; original Ring-LWE(h,h*s+e) reduction does not directly cover this distribution",
+    "user_admission_decision": "withhold128/256/512 altogether because implementation diverges from construction covered by claimed security argument; require verifiable author revision or sufficient new analysis of actual implementation before reassessment, rather than merely checking formalCritical/High absence",
+    "formal_boundary": "kem-40-1 stays Medium/implementation/Confirmed; no new full IND-CCA or private-key-recovery attack is claimed; no severity promotion; independentkem-40-5 still512-onlyCritical",
+    "colors": "all3 integration decisions red; scheme remainsgray and Chapter9 splitlowblue/highred per formalCritical scope, now explicitly stated not to be projectadmission list",
+    "other_findings": "40-2/3 allgrades,40-4 256/512,40-5 512 separatelytracked; fixingerroromission does not closeotherfindings",
+    "reassessment": "obtain verifiable authorcode+consistentnormativealgorithm/securityanalysis; newformatKAT/roundtrip/DFR/securityestimates/rejection/memory/actualGCC-O2 CT review; no localoriginalsourcepatch",
+    "reference_files": {
+      "128": {
+        "dimension": 512,
+        "path": "Implementations/Reference_Implementation/yuanyang-512/kem.c",
+        "sha256": "3b3257c8a2088f6df94001507b832422dcb516be78b879e9dfb3a00cc0a92c78",
+        "unused_error_confirmed_static": true
+      },
+      "256": {
+        "dimension": 1024,
+        "path": "Implementations/Reference_Implementation/yuanyang-1024/kem.c",
+        "sha256": "3b3257c8a2088f6df94001507b832422dcb516be78b879e9dfb3a00cc0a92c78",
+        "unused_error_confirmed_static": true
+      },
+      "512": {
+        "dimension": 2048,
+        "path": "Implementations/Reference_Implementation/yuanyang-2048/kem.c",
+        "sha256": "3b3257c8a2088f6df94001507b832422dcb516be78b879e9dfb3a00cc0a92c78",
+        "unused_error_confirmed_static": true
+      }
+    },
+    "pdf_modified": true,
+    "provider_modified": false,
+    "proposal_code_modified": false,
+    "algorithm_tests_run": false,
+    "attack_tests_run": false
+  },
+  "ntre_latest_revision_review.json": {
+    "date": "2026-10-20",
+    "scope": "SM3 reference, actual GNU GCC -O2 target, preserve original code",
+    "official_sha256": "9c0bad4c4846998df1214ba562e1c3b8aece6b69f08234a9bb0d89e3a5a4ea9a",
+    "official_archive": "ntre-official-current-9c0bad4c.zip",
+    "latest_author_response": "2026-09-28; thread XPRXBWG46LFNJ4SUOZOGZM44VNIUPO34; more_pending=false; no revision attachment",
+    "finding_scope": "kem-27-1 Critical/Confirmed stays NTRE-512; private f seed32 yields <=2^256 candidates, publickey checks f and rebuilds workingkey; independent g seed does not require jointspace enumeration. Lower128/256 classical targets not violated by this bound itself.",
+    "assessment": {
+      "128": "conditional validation candidate",
+      "256": "conditional validation candidate",
+      "512": "withhold; no fixed source package obtained"
+    },
+    "build": "per-grade Reference_Implementation/NTRE128/256; original Makefile already-O2; src/symmetric.c directly SM3 wrappers",
+    "residuals": [
+      "ICCS auxfunc.c and drng.c zero-rotation rightshift32 C undefined behavior",
+      "helper failures and DRNG initialization/error propagation",
+      "explicit rejection returns nonzero and zero key, not implicit-rejection API",
+      "only original256 representativeCT audit, no full targetbuild guarantee; noDIV in reviewed-O2 vs-Os is not fullCT certification"
+    ],
+    "reference_files": {
+      "128": {
+        "KEM_AlgorithmInstance.c": "98f8f84c53c48d478acb9462e17f515d7363e7f2137ea6ab1e39cecaeb6b813d",
+        "src/params.h": "ec53e99c5ccda0beec3eb0b8ff4f5bd8f1faed126295d9635b8fb0e7eb209f30",
+        "src/symmetric.c": "8cd20d5e189fb3bed8e4b909a9dbe23385169383c7681f173676aeb635da823f",
+        "drng.c": "0df0ac78c828bd43bf05724398fa530767d753aa7801a1d1fa5d621321ec797e",
+        "auxfunc.c": "27446371eccf14383e5a333dfed6333ed9a2232580d0a52c1c681bc2074a8368",
+        "Makefile": "7a34a40a71e2b2f6fb4f22073689d7158588a5b718b585975d6158aebd7b1520"
+      },
+      "256": {
+        "KEM_AlgorithmInstance.c": "98f8f84c53c48d478acb9462e17f515d7363e7f2137ea6ab1e39cecaeb6b813d",
+        "src/params.h": "3e67f493cff9660aa95005f547a23497d0b2f6f0a19022b22da9969837538ecf",
+        "src/symmetric.c": "8cd20d5e189fb3bed8e4b909a9dbe23385169383c7681f173676aeb635da823f",
+        "drng.c": "0df0ac78c828bd43bf05724398fa530767d753aa7801a1d1fa5d621321ec797e",
+        "auxfunc.c": "27446371eccf14383e5a333dfed6333ed9a2232580d0a52c1c681bc2074a8368",
+        "Makefile": "7a34a40a71e2b2f6fb4f22073689d7158588a5b718b585975d6158aebd7b1520"
+      },
+      "512": {
+        "KEM_AlgorithmInstance.c": "98f8f84c53c48d478acb9462e17f515d7363e7f2137ea6ab1e39cecaeb6b813d",
+        "src/params.h": "173d1c54f1a449950b068e70d5670b30f625ed309ad67f4ae2398ff3abd3dd2f",
+        "src/symmetric.c": "8cd20d5e189fb3bed8e4b909a9dbe23385169383c7681f173676aeb635da823f",
+        "drng.c": "0df0ac78c828bd43bf05724398fa530767d753aa7801a1d1fa5d621321ec797e",
+        "auxfunc.c": "27446371eccf14383e5a333dfed6333ed9a2232580d0a52c1c681bc2074a8368",
+        "Makefile": "7a34a40a71e2b2f6fb4f22073689d7158588a5b718b585975d6158aebd7b1520"
+      }
+    },
+    "pdf_modified": true,
+    "provider_modified": false,
+    "proposal_code_modified": false,
+    "KEM_tests_run": []
+  },
+  "amoeba_latest_revision_review.json": {
+    "checked_utc": "2026-10-20T04:30:11.873222+00:00",
+    "official_package_url": "https://www.niccs.org.cn/niccs/Proposal/Public-Key%20Cryptographic%20Algorithms/Round%201%20candidates/Amoeba.zip",
+    "official_package_sha256": "719c438a30cccd72c9d83da4b5150fee0c55351f2c13e7a66fd61bf653ca5c24",
+    "unchanged_from_local_original": true,
+    "live_thread_url": "https://list.niccs.org.cn/archives/list/pkcforum@list.niccs.org.cn/thread/OXTBKIPREWPX4YRV4BLRMLWND4R4DLTO/",
+    "reply_dates": [
+      "Sept. 22, 2026, 10:38 a.m.",
+      "Sept. 23, 2026, 12:23 p.m.",
+      "Sept. 26, 2026, 1:38 p.m.",
+      "Oct. 6, 2026, 8:47 a.m."
+    ],
+    "more_pending": false,
+    "reply_attachment_links": [],
+    "forum_index_pages_checked": 9,
+    "report_sha256": "0277eb78f2330950358a6f3ba4fa2cb8071f8dd37fe0cdbb62ba44502c74a32f",
+    "report_unchanged_from_morning_snapshot": true,
+    "source_review": [
+      {
+        "path": "Implementations/Optimized_Implementation/Amoeba-1152/src/backend/ccakem.c",
+        "sha256": "8e06b50c5ddad46f7bdccae30b241f3939c0db3f8a9dd83eaa0d812cb1d5e6eb",
+        "kem_02_1_step4_present": true,
+        "kem_02_6_early_return_present": true,
+        "kem_02_8_sm3_message_before_counter": true
+      },
+      {
+        "path": "Implementations/Optimized_Implementation/Amoeba-1728/src/backend/ccakem.c",
+        "sha256": "8e06b50c5ddad46f7bdccae30b241f3939c0db3f8a9dd83eaa0d812cb1d5e6eb",
+        "kem_02_1_step4_present": true,
+        "kem_02_6_early_return_present": true,
+        "kem_02_8_sm3_message_before_counter": true
+      },
+      {
+        "path": "Implementations/Optimized_Implementation/Amoeba-2304/src/backend/ccakem.c",
+        "sha256": "8e06b50c5ddad46f7bdccae30b241f3939c0db3f8a9dd83eaa0d812cb1d5e6eb",
+        "kem_02_1_step4_present": true,
+        "kem_02_6_early_return_present": true,
+        "kem_02_8_sm3_message_before_counter": true
+      },
+      {
+        "path": "Implementations/Optimized_Implementation/Amoeba-576/src/backend/ccakem.c",
+        "sha256": "8e06b50c5ddad46f7bdccae30b241f3939c0db3f8a9dd83eaa0d812cb1d5e6eb",
+        "kem_02_1_step4_present": true,
+        "kem_02_6_early_return_present": true,
+        "kem_02_8_sm3_message_before_counter": true
+      },
+      {
+        "path": "Implementations/Optimized_Implementation/Amoeba-864/src/backend/ccakem.c",
+        "sha256": "8e06b50c5ddad46f7bdccae30b241f3939c0db3f8a9dd83eaa0d812cb1d5e6eb",
+        "kem_02_1_step4_present": true,
+        "kem_02_6_early_return_present": true,
+        "kem_02_8_sm3_message_before_counter": true
+      },
+      {
+        "path": "Implementations/Reference_Implementation/Amoeba-1152/src/backend/ccakem.c",
+        "sha256": "8e06b50c5ddad46f7bdccae30b241f3939c0db3f8a9dd83eaa0d812cb1d5e6eb",
+        "kem_02_1_step4_present": true,
+        "kem_02_6_early_return_present": true,
+        "kem_02_8_sm3_message_before_counter": true
+      },
+      {
+        "path": "Implementations/Reference_Implementation/Amoeba-1728/src/backend/ccakem.c",
+        "sha256": "8e06b50c5ddad46f7bdccae30b241f3939c0db3f8a9dd83eaa0d812cb1d5e6eb",
+        "kem_02_1_step4_present": true,
+        "kem_02_6_early_return_present": true,
+        "kem_02_8_sm3_message_before_counter": true
+      },
+      {
+        "path": "Implementations/Reference_Implementation/Amoeba-2304/src/backend/ccakem.c",
+        "sha256": "8e06b50c5ddad46f7bdccae30b241f3939c0db3f8a9dd83eaa0d812cb1d5e6eb",
+        "kem_02_1_step4_present": true,
+        "kem_02_6_early_return_present": true,
+        "kem_02_8_sm3_message_before_counter": true
+      },
+      {
+        "path": "Implementations/Reference_Implementation/Amoeba-576/src/backend/ccakem.c",
+        "sha256": "8e06b50c5ddad46f7bdccae30b241f3939c0db3f8a9dd83eaa0d812cb1d5e6eb",
+        "kem_02_1_step4_present": true,
+        "kem_02_6_early_return_present": true,
+        "kem_02_8_sm3_message_before_counter": true
+      },
+      {
+        "path": "Implementations/Reference_Implementation/Amoeba-864/src/backend/ccakem.c",
+        "sha256": "8e06b50c5ddad46f7bdccae30b241f3939c0db3f8a9dd83eaa0d812cb1d5e6eb",
+        "kem_02_1_step4_present": true,
+        "kem_02_6_early_return_present": true,
+        "kem_02_8_sm3_message_before_counter": true
+      }
+    ],
+    "validation_scope": "Static source review of current official download; no local exploitation/runtime regression executed. No author revision located."
+  },
+  "hepqc_latest_revision_review.json": {
+    "access_date": "2026-10-20",
+    "scheme": "kem-17 HEP-QC",
+    "section": "6.3",
+    "official_archive_url": "https://www.niccs.org.cn/niccs/Proposal/Public-Key%20Cryptographic%20Algorithms/Round%201%20candidates/HEP-QC.zip",
+    "original_sha256": "3780991127f49b6397b4182d32b35ab7a6359bf825a707e90df0f809beeb3790",
+    "http_headers": {
+      "content_length": 789966981,
+      "last_modified": "Sun, 20 Sep 2026 11:57:57 GMT",
+      "etag": "6aafca45-2f15f085"
+    },
+    "latest_download_complete": true,
+    "source_files": 73,
+    "source_file_hashes": {
+      "Implementations/CMakeLists.txt": "0aa162c68829cacc34d94aeb98acd2f4fb3603a98e79f8714894c2f42449906f",
+      "Implementations/Implementations/CMakeLists.txt": "8112f283584a1ebf3e69248a971f77d475cda26f1439241bd0af49c596ffc482",
+      "Implementations/Implementations/common/code.c": "30f641838b228fb4b83d0cce8d66599b98c6e05f6c2468b762663834f03bcc04",
+      "Implementations/Implementations/common/code.h": "122c4d16df45863ed681090e3cfdae886e9e52c9bd44e44a26a703bce5369f60",
+      "Implementations/Implementations/common/crypto_memset.c": "906d712f2e4b67f172c7cc5596c23d618c3004eb9173e1f4f94cc8bbf2b89c24",
+      "Implementations/Implementations/common/crypto_memset.h": "ecc0ea57b7fb8e7d3145f32a9c6d8508a07d55e9100edfcff829b2e23a082adf",
+      "Implementations/Implementations/common/data_structures.h": "3779b56700d37b708cda29e47ce545fbd0aebc7c77c106b66c8b960a950ade37",
+      "Implementations/Implementations/common/fft.c": "0c9b38595954cb53433ba63fcf2f112eb7f15774028cbd09648ba26bed004844",
+      "Implementations/Implementations/common/fft.h": "5306deb3af2bd5a26dc55a3aef3b9fa01a0359cdc91187ca21995ca0cc2ece45",
+      "Implementations/Implementations/common/gf.c": "1a754338d50cdd5f723e3067d593a3d969fa412e9e0b0df9cd2b97f51ca9d278",
+      "Implementations/Implementations/common/gf.h": "6aa83c0f1a9f9b7bdc5adf4b702b34162b49d36c28e127f15d5ba82e64534be4",
+      "Implementations/Implementations/common/gf2x.c": "9d8a1fc01bc5f144bed3e0cd06b3828b4386fc712be4cc2efc8749d64fb36771",
+      "Implementations/Implementations/common/gf2x.h": "f2fc216cd39fd7be2cedf2909badf463c62ac7066c7e453e9aaa81b9f74cccec",
+      "Implementations/Implementations/common/hep-qc-1/api.h": "f6accd12ff6834a7f6e59b2cc27c5c11eabf7aae39749dd41f8cddfef599c202",
+      "Implementations/Implementations/common/hep-qc-3/api.h": "bf2d17219aaa0f49377b81e3b02815c67197b02594fb53677b7ce09ca8f4c006",
+      "Implementations/Implementations/common/hep-qc-5/api.h": "274420a5642f8570855784059f6f76b45d6355617c984de898305ad9eb1bde22",
+      "Implementations/Implementations/common/hep-qc-7/api.h": "b29587f1ba62dfc8f924fb60592540127b130170d3279da54d5d280203da8ba6",
+      "Implementations/Implementations/common/parsing.c": "dbaef72a41abef200d3df9b3408d48de38d1c540386447c6f4d5af2b5f8da41a",
+      "Implementations/Implementations/common/parsing.h": "fcf7e7711657f748f79d16594a90ad09bfe7aeffe1dcf1cf14ca3ab13c3f52a5",
+      "Implementations/Implementations/common/reed_muller.c": "9c81e85b45c1e3d8a9e8288e9c25d538ca1574a740665c41c522b8ccbfafe1ad",
+      "Implementations/Implementations/common/reed_muller.h": "68e71fba1309bc6a1d6755374fbbc4e99e55140bb21e97ac9f0b2cd9d9ec2d20",
+      "Implementations/Implementations/common/reed_solomon.c": "9e01d64d7b91dd5f8a91a9a9ead64d24cfb9240c94929be9cdd2fcf232b4551c",
+      "Implementations/Implementations/common/symmetric.c": "5851dbc5e15ab4af74defb3db38abece818d6a7866c8e1018e906e43bc426d93",
+      "Implementations/Implementations/common/symmetric.h": "94732bb0ea1cb44c89f0696dfe6afe0236935e09d1801a803d641c3053ea64aa",
+      "Implementations/Implementations/common/vector.c": "2d37dfd6220d56b78f16768ddd4c70e88bd0c48cca2907fbdce2917708bd9793",
+      "Implementations/Implementations/common/vector.h": "d11adf2d59c05c99777faf71331de616acc5c3d12d4b06b5d809da38cb9bebf8",
+      "Implementations/Implementations/ref/hep-qc-1/parameters.h": "b67f18e4b637993ec0c6532bf3711fbf588623c752625dddd3884d3779cd8a5c",
+      "Implementations/Implementations/ref/hep-qc-1/reed_solomon.h": "d85dd33c70d4bc1f8f59ad048c8ed1124d42a7368eb4beda4dba6a42dec214fb",
+      "Implementations/Implementations/ref/hep-qc-3/parameters.h": "1e6ea383468f9b250fbd613d7bea4ba1b7b34e677e26c0bc84b8e0346ec9b471",
+      "Implementations/Implementations/ref/hep-qc-3/reed_solomon.h": "ff9cd46401f332be5b0ee4666d109307081b81252923e4f86c369ea40a307515",
+      "Implementations/Implementations/ref/hep-qc-5/parameters.h": "4cc3ed16cf6fc3b41900437811bf1ca21e348d8ea02377af07449a969911375a",
+      "Implementations/Implementations/ref/hep-qc-5/reed_solomon.h": "976f3255ce2b7d8c1bbf3f9d034f4a2cc0b20aa2a8ceae0c548439a035e32b2c",
+      "Implementations/Implementations/ref/hep-qc-7/parameters.h": "af96c3b03b4ddbae29cede0d12ed523653bf29929d89679ee005e4bbd6b05b10",
+      "Implementations/Implementations/ref/hep-qc-7/reed_solomon.h": "c9b4ba6300fff8a98567fc3bf20480f10c183d4b3b118df17579e0e6033ceea8",
+      "Implementations/Implementations/ref/KEM_HEP_QC.c": "68035b2baf5568f3ec2dd8e70188524b8bc9a93029086eb5c07fb0a94ed5b312",
+      "Implementations/Implementations/ref/KEM_HEP_QC.h": "098d2a8c95d0676b0fda5f7b378506d9f97e46d73f26c29dcb8cdd575b1649bf",
+      "Implementations/Implementations/ref/PKE_HEP_QC.c": "c8940a99c8577fdf6ffdf0ccba84e067137a4d1811922cb64e1f9c2e163e9670",
+      "Implementations/Implementations/ref/PKE_HEP_QC.h": "85b1c3214837607924256eb5a3c03c6b713594669dada9c434f897a3dc110dda",
+      "Implementations/Implementations/x86_64/hep-qc-1/parameters.h": "b67f18e4b637993ec0c6532bf3711fbf588623c752625dddd3884d3779cd8a5c",
+      "Implementations/Implementations/x86_64/hep-qc-1/reed_solomon.h": "d85dd33c70d4bc1f8f59ad048c8ed1124d42a7368eb4beda4dba6a42dec214fb",
+      "Implementations/Implementations/x86_64/hep-qc-3/parameters.h": "1e6ea383468f9b250fbd613d7bea4ba1b7b34e677e26c0bc84b8e0346ec9b471",
+      "Implementations/Implementations/x86_64/hep-qc-3/reed_solomon.h": "ff9cd46401f332be5b0ee4666d109307081b81252923e4f86c369ea40a307515",
+      "Implementations/Implementations/x86_64/hep-qc-5/parameters.h": "4cc3ed16cf6fc3b41900437811bf1ca21e348d8ea02377af07449a969911375a",
+      "Implementations/Implementations/x86_64/hep-qc-5/reed_solomon.h": "976f3255ce2b7d8c1bbf3f9d034f4a2cc0b20aa2a8ceae0c548439a035e32b2c",
+      "Implementations/Implementations/x86_64/hep-qc-7/parameters.h": "af96c3b03b4ddbae29cede0d12ed523653bf29929d89679ee005e4bbd6b05b10",
+      "Implementations/Implementations/x86_64/hep-qc-7/reed_solomon.h": "c9b4ba6300fff8a98567fc3bf20480f10c183d4b3b118df17579e0e6033ceea8",
+      "Implementations/Implementations/x86_64/KEM_HEP_QC.c": "68035b2baf5568f3ec2dd8e70188524b8bc9a93029086eb5c07fb0a94ed5b312",
+      "Implementations/Implementations/x86_64/KEM_HEP_QC.h": "098d2a8c95d0676b0fda5f7b378506d9f97e46d73f26c29dcb8cdd575b1649bf",
+      "Implementations/Implementations/x86_64/PKE_HEP_QC.c": "c8940a99c8577fdf6ffdf0ccba84e067137a4d1811922cb64e1f9c2e163e9670",
+      "Implementations/Implementations/x86_64/PKE_HEP_QC.h": "85b1c3214837607924256eb5a3c03c6b713594669dada9c434f897a3dc110dda",
+      "Implementations/Lib/auxfunc/auxfunc.c": "27446371eccf14383e5a333dfed6333ed9a2232580d0a52c1c681bc2074a8368",
+      "Implementations/Lib/auxfunc/auxfunc.h": "39986e91d9af503eafb568b0c18e50eb9ab5fceca140ddd26924343a09284e74",
+      "Implementations/Lib/CMakeLists.txt": "881a8ce86571815863f96ea4045deed420df31930b8fa343e33f3cee5f972466",
+      "Implementations/Lib/drng/drng.c": "96dd4ed74277134a4addf48d2503e31447d87c727adb62ef00675568e8d58e0a",
+      "Implementations/Lib/drng/drng.h": "ee42470e2cec786f4e6286bea6ace4189354155d84960080cfdcf67edad9ecb6",
+      "Implementations/Tests/api/CMakeLists.txt": "f09409a3f0c2e7d9e1821b516b26e1c2ece507e9c2feb72adf0981274fd57fc8",
+      "Implementations/Tests/api/tests_main.c": "05dda36fb9fa6f965b1dd504f0693806aa754c766d6ae840897b3076ca90ca04",
+      "Implementations/Tests/api/test_kem.c": "d5a1b2ca3edd446921fbdd61751a17e45d94bb70de64e74cb0fc3aff21959b22",
+      "Implementations/Tests/api/test_pke.c": "f56613b4ac6972b5377828d7c4813f8294c2ab7881ace16a8fdda67eebdb80f7",
+      "Implementations/Tests/bench/benchmark_kem.c": "98bc372bd5c0551775fb3965004c2bf208a3ead98748f4cce1e3012efa02c9a1",
+      "Implementations/Tests/bench/CMakeLists.txt": "e175828f230be9452448e149a14b4cdefbf53d14d34fccec751f5bd39d01986a",
+      "Implementations/Tests/CMakeLists.txt": "5938d87ff22044ef6a759e652e553c18219dc803dd44907aad32c82f82a74e15",
+      "Implementations/Tests/external/munit/munit.c": "81f6784dfb7b19b9c588129cd69eb1bffd09c34505aa8c359aa1f540834d995f",
+      "Implementations/Tests/external/munit/munit.h": "105772cdc2aad81a0c05e2e99f58ae9e56f649c66c027366227ea9b6cdc49fd0",
+      "Implementations/Tests/kats/CMakeLists.txt": "6757b088addb3d06f0de075c2c96aed85f4a7de78973db775f387f5439fec456",
+      "Implementations/Tests/kats/KAT_INTERMEDIATES_VALUES.c": "65eeebffc18030c295c99766b45d54a7c361d65a8adbe987f3c626e7de9cabe3",
+      "Implementations/Tests/kats/KAT_KEM.c": "737272eb695800c887ee1b97e6639797fd3126e3d97cdbeb6860301cacdb23ab",
+      "Implementations/Tests/munit_utils.h": "4eaf480a5eb18e192f7d2e3c149502512f3a23b7bf8148fdd17014be35adc83b",
+      "Implementations/Tests/unit/CMakeLists.txt": "4b016abdd811f06baf6afea05a1cb04592a30c4165058dc43fc6524a9e486905",
+      "Implementations/Tests/unit/tests_main.c": "b1b2520b0bc6f2bd51a959b0ae60df385c9ea46694822c56ab0cf7b00344f11d",
+      "Implementations/Tests/unit/test_gf.c": "f4bf7c8840afe2fc4679c68e9d2410d7c1d57efc3f2add72ca66f73e3bcc5902",
+      "Implementations/Tests/unit/test_reed_solomon.c": "a4d0d434c4e420be15e6d1fdb4f7dcc9a3907183cb71fa8d0a91ab291f0c55b6",
+      "Implementations/Tests/unit/test_vector.c": "5296d5632a2c3337829a1725929a866a3da945e9925408f6aeed98f06c84e720"
+    },
+    "production_prng_init_occurrences": [
+      {
+        "file": "Implementations/Implementations/common/symmetric.c",
+        "line": 23,
+        "source": "void prng_init(uint8_t *entropy_input, uint32_t enlen) {"
+      }
+    ],
+    "forum_thread": "2FLYI6DJUQ3YKJZXVGFFN4IQNPKXSHWU",
+    "forum_reply_ids": [
+      "XQ3A3A3IGNRQDLEQ6BD73ENALBGSDEO6"
+    ],
+    "forum_pagination_complete": true,
+    "forum_attachment_is_attack_PoC_not_revision": true,
+    "readme_spec_and_basicinfo_author_revision_URL_found": false,
+    "selected_reference_paths": [
+      "Implementations/Implementations/ref/KEM_HEP_QC.c",
+      "Implementations/Implementations/common/symmetric.c",
+      "Implementations/Lib/auxfunc/auxfunc.c"
+    ],
+    "source_dataflow": [
+      "kem_keygen -> prng_get_bytes(seed_kem)",
+      "prng_get_bytes -> global shake256_prng_ctx, initialized to zero by process startup",
+      "xof_get_bytes -> xof_proc -> ICCS pseudoXOF -> SM3",
+      "KEM wrapper declares outer drng_algorithm but has no actual consumption or internal init",
+      "kem_enc draws m and salt from same unseeded generator"
+    ],
+    "repeat_scope": "fresh processes have identical first keys; same process advances a deterministic public-initial-state stream, not necessarily identical on every call",
+    "decision": "withhold all submitted reference grades, including TLS128/256; no proposed-code patch",
+    "formal_records_unchanged": [
+      "kem-17-1 Critical/Confirmed",
+      "kem-17-2 Critical/Confirmed",
+      "kem-17-3 Critical/Confirmed",
+      "kem-17-4 High/Confirmed",
+      "kem-17-5 Medium/Confirmed"
+    ],
+    "algorithm_or_GNU_GCC_or_attack_tests_run": false,
+    "proposal_code_modified": false,
+    "provider_modified": false,
+    "current_archive_bytes": 789966981,
+    "current_archive_sha256": "3780991127f49b6397b4182d32b35ab7a6359bf825a707e90df0f809beeb3790",
+    "current_archive_identical_to_original": true,
+    "compared_source_and_build_files": 73,
+    "current_source_differences": [],
+    "current_report_url": "https://ngcc.dev/reports/kem-17.html",
+    "current_report_17_1_status": "Critical/Confirmed; reference, all four parameter sets; no revision noted",
+    "documentation_updated": [
+      "security_notes.py",
+      "security_layout.py",
+      "scheme_status.py",
+      "NGCC_KEM_NOTES_GUIDE.md"
+    ]
+  },
+  "bwkem_latest_revision_review.json": {
+    "checked_utc": "2026-10-20T04:37:58.164305+00:00",
+    "latest_author_response_date": "2026-09-27",
+    "author_response_url": "https://list.niccs.org.cn/archives/list/pkcforum@list.niccs.org.cn/message/SRZRQZCBXGYWB4IFIMUWO6EFETFPRRYP/",
+    "thread_more_pending": false,
+    "revision_attachments": [],
+    "official_package_sha256": "a1f8a079df7d55576209f45fcf00afd700fc60c0b18d758d572585ccea594ae3",
+    "official_package_unchanged": true,
+    "author_repository_scope": "Security estimator; no revised KEM implementation found",
+    "author_latest_commit": "e37ebfe8fff4cf91a0a6c21a482392ce4908f027",
+    "harness_bw_issues": [],
+    "parameter_review": [
+      {
+        "level": "128",
+        "files": {
+          "kem.c": {
+            "sha256": "ea2f3a07578a946c030189f35501f65e1a792a9f521d28f47c42292cbfa424cc",
+            "provider_identical": true
+          },
+          "poly.c": {
+            "sha256": "abb5b884d9991fece99f733bdbab0d12b38118afdae13605afc0423736c4caa7",
+            "provider_identical": true
+          },
+          "BWcoding.c": {
+            "sha256": "1bc2df105bbad7fb3d2b4d6b2dd2224f56ade931b6e763d344ef1b37f1a98d0c",
+            "provider_identical": true
+          },
+          "KEM_AlgorithmInstance.c": {
+            "sha256": "0e8410460ee7b2e402f57200e2d48db56040bd9366c1212d569a3f9944bc432e",
+            "provider_identical": true
+          },
+          "symmetric-iccs.c": {
+            "sha256": "c2d7c27abc3215e4ad9cda99a4c4af74916e5cd29405e392a14c2c5febfc9d26",
+            "provider_identical": true
+          },
+          "params.h": {
+            "sha256": "7010f41b2f462c4a62ace62bee2421ae4abd258542b116170c0953128cf9fe1d",
+            "provider_identical": true
+          }
+        },
+        "provider_normalizes_rejection": true,
+        "core_rejection_kdf_inputs": "z || received ciphertext; ID(pk) omitted",
+        "unresolved_published_Critical_High_found": false,
+        "other_observations": [
+          "kem-08-1 Low, GCC -O2 secret-dependent branch confirmed in published assembly review"
+        ]
+      },
+      {
+        "level": "256",
+        "files": {
+          "kem.c": {
+            "sha256": "4f21afddff7f7b985d46a898e1e6a90cbaefdb7a6a5a9450ccd640b49c7988aa",
+            "provider_identical": true
+          },
+          "poly.c": {
+            "sha256": "93631f78fa93c946e7742838ca9c4f25487d3f1df955cf91e1a45be52acac284",
+            "provider_identical": true
+          },
+          "BWcoding.c": {
+            "sha256": "5e7455202a9666957524d48ff69c82d5509cefe78f1151ceeb0b23d9a6c3d14e",
+            "provider_identical": true
+          },
+          "KEM_AlgorithmInstance.c": {
+            "sha256": "db92acbdaa6284a8d411d6d7ef3d1fa6fe11e95d6c43b5c8bc654396093b3761",
+            "provider_identical": true
+          },
+          "symmetric-iccs.c": {
+            "sha256": "79deae6263802461d179852a831a5f79ccb45b95e1cf862a35a2e28f4509b700",
+            "provider_identical": true
+          },
+          "params.h": {
+            "sha256": "ebab9e4ce701583ca9d815196417cd391aac4ee43229a5b7a3299916cee1d7d1",
+            "provider_identical": true
+          }
+        },
+        "provider_normalizes_rejection": true,
+        "core_rejection_kdf_inputs": "z || received ciphertext; ID(pk) omitted",
+        "unresolved_published_Critical_High_found": false,
+        "other_observations": []
+      },
+      {
+        "level": "512",
+        "files": {
+          "kem.c": {
+            "sha256": "2064dbb27000b52a7a1d3998e9001f376a7da77d6794d4fe65309fadfbd57ed4",
+            "provider_identical": true
+          },
+          "poly.c": {
+            "sha256": "401429ea5c2da8052c43279843b25c63995dda04b1215221c6ba7c46b7f10c2f",
+            "provider_identical": true
+          },
+          "BWcoding.c": {
+            "sha256": "5e7455202a9666957524d48ff69c82d5509cefe78f1151ceeb0b23d9a6c3d14e",
+            "provider_identical": true
+          },
+          "KEM_AlgorithmInstance.c": {
+            "sha256": "d105ef9deb5c6020708a50a2d7dcff3ce52b3d57696c4b930f4b32c758799ee8",
+            "provider_identical": true
+          },
+          "symmetric-iccs.c": {
+            "sha256": "1829a9f8ffa2c8bafb5557a167aeb350d384cae3bddb61ee43205d9a46f265b2",
+            "provider_identical": true
+          },
+          "params.h": {
+            "sha256": "e76357caa41d9462e8fa3a29fdc8406c3d629667593bf6daaf11c3752755c97f",
+            "provider_identical": true
+          }
+        },
+        "provider_normalizes_rejection": true,
+        "core_rejection_kdf_inputs": "z || received ciphertext; ID(pk) omitted",
+        "unresolved_published_Critical_High_found": false,
+        "other_observations": []
+      }
+    ],
+    "missing_reference_parameters": [
+      "384",
+      "128-s",
+      "256-s",
+      "384-s",
+      "512-s"
+    ],
+    "integration_assessment": "128/256/512 may remain verification/performance-test candidates under no-known-unresolved-Critical/High criterion, with Low branch and specification/proof gaps tracked. No released repaired author implementation was independently verified. 384 and -s cannot be admitted as verified reference implementations.",
+    "validation_limits": "Static source/archive comparison and live primary-source review. No GNU GCC build or constant-time certification: local gcc is Apple Clang 15. No exploit or runtime regression run in this review.",
+    "provider_source_modified": false
+  },
+  "polarlac_latest_revision_review.json": {
+    "reviewed_utc": "2026-10-20T06:21:02.068506+00:00",
+    "official_archive_sha256": "906be26ce8d27de335b691ff8490b2344b46d7519d88c799cba0242324e4882c",
+    "author_archive_sha256": "906be26ce8d27de335b691ff8490b2344b46d7519d88c799cba0242324e4882c",
+    "author_implementation_page": "https://light-lattice.org/polarlac/implementation.html",
+    "author_snapshot_date_label": "2026-09-20 initial submission",
+    "original_unchanged": true,
+    "forum_thread": "VWVCIBQ3M7NQOWU25P7SY3XK3PCAJT4X",
+    "reply_count": 6,
+    "next_page_offset": 6,
+    "next_page_reply_count": 0,
+    "more_pending_after_page2": false,
+    "last_reply": "2026-10-11 interoperability/NTT/sampling/serialization statement; not proof of timing/cache fix",
+    "public_verifiable_side_channel_fix_found": false,
+    "formal_kem30_1": {
+      "severity": "Critical",
+      "status": "Probable",
+      "scope": "side-channel",
+      "full_runtime_recovery_demonstrated": "PolarLAC-Light reference only; 512 coefficients, fresh ciphertext success; not independently repeated this turn"
+    },
+    "source_rows": [
+      {
+        "path": "Implementations/Optimized_Implementation/ARM/SHAKE/POLARLAC-128/pke.c",
+        "spectral_rejection_loop_still_present": true,
+        "reference": false
+      },
+      {
+        "path": "Implementations/Optimized_Implementation/ARM/SHAKE/POLARLAC-256/pke.c",
+        "spectral_rejection_loop_still_present": true,
+        "reference": false
+      },
+      {
+        "path": "Implementations/Optimized_Implementation/ARM/SHAKE/POLARLAC-512/pke.c",
+        "spectral_rejection_loop_still_present": true,
+        "reference": false
+      },
+      {
+        "path": "Implementations/Optimized_Implementation/ARM/SHAKE/POLARLAC-512-Star/pke.c",
+        "spectral_rejection_loop_still_present": true,
+        "reference": false
+      },
+      {
+        "path": "Implementations/Optimized_Implementation/ARM/SHAKE/POLARLAC-Light/pke.c",
+        "spectral_rejection_loop_still_present": true,
+        "reference": false
+      },
+      {
+        "path": "Implementations/Optimized_Implementation/ARM/SM3/POLARLAC-128/pke.c",
+        "spectral_rejection_loop_still_present": true,
+        "reference": false
+      },
+      {
+        "path": "Implementations/Optimized_Implementation/ARM/SM3/POLARLAC-256/pke.c",
+        "spectral_rejection_loop_still_present": true,
+        "reference": false
+      },
+      {
+        "path": "Implementations/Optimized_Implementation/ARM/SM3/POLARLAC-512/pke.c",
+        "spectral_rejection_loop_still_present": true,
+        "reference": false
+      },
+      {
+        "path": "Implementations/Optimized_Implementation/ARM/SM3/POLARLAC-512-Star/pke.c",
+        "spectral_rejection_loop_still_present": true,
+        "reference": false
+      },
+      {
+        "path": "Implementations/Optimized_Implementation/ARM/SM3/POLARLAC-Light/pke.c",
+        "spectral_rejection_loop_still_present": true,
+        "reference": false
+      },
+      {
+        "path": "Implementations/Optimized_Implementation/x86/POLARLAC-128/pke.c",
+        "spectral_rejection_loop_still_present": true,
+        "reference": false
+      },
+      {
+        "path": "Implementations/Optimized_Implementation/x86/POLARLAC-256/pke.c",
+        "spectral_rejection_loop_still_present": true,
+        "reference": false
+      },
+      {
+        "path": "Implementations/Optimized_Implementation/x86/POLARLAC-512/pke.c",
+        "spectral_rejection_loop_still_present": true,
+        "reference": false
+      },
+      {
+        "path": "Implementations/Optimized_Implementation/x86/POLARLAC-512-Star/pke.c",
+        "spectral_rejection_loop_still_present": true,
+        "reference": false
+      },
+      {
+        "path": "Implementations/Optimized_Implementation/x86/POLARLAC-Light/pke.c",
+        "spectral_rejection_loop_still_present": true,
+        "reference": false
+      },
+      {
+        "path": "Implementations/Reference_Implementation/x86/POLARLAC-128/pke.c",
+        "spectral_rejection_loop_still_present": true,
+        "reference": true
+      },
+      {
+        "path": "Implementations/Reference_Implementation/x86/POLARLAC-256/pke.c",
+        "spectral_rejection_loop_still_present": true,
+        "reference": true
+      },
+      {
+        "path": "Implementations/Reference_Implementation/x86/POLARLAC-512/pke.c",
+        "spectral_rejection_loop_still_present": true,
+        "reference": true
+      },
+      {
+        "path": "Implementations/Reference_Implementation/x86/POLARLAC-512-Star/pke.c",
+        "spectral_rejection_loop_still_present": true,
+        "reference": true
+      },
+      {
+        "path": "Implementations/Reference_Implementation/x86/POLARLAC-Light/pke.c",
+        "spectral_rejection_loop_still_present": true,
+        "reference": true
+      }
+    ],
+    "pke_sha256": {
+      "Implementations/Optimized_Implementation/ARM/SHAKE/POLARLAC-128/pke.c": "6d1defe7cd66e4a5c533813bf46329a130ca78ef637d2964cddf29d6d514f937",
+      "Implementations/Optimized_Implementation/ARM/SHAKE/POLARLAC-256/pke.c": "942924e21629de2ea8eadb7f861bcfb4336f848c507f2e00272f6b6b5ab5e446",
+      "Implementations/Optimized_Implementation/ARM/SHAKE/POLARLAC-512/pke.c": "942924e21629de2ea8eadb7f861bcfb4336f848c507f2e00272f6b6b5ab5e446",
+      "Implementations/Optimized_Implementation/ARM/SHAKE/POLARLAC-512-Star/pke.c": "5756d4c90fe3ea3e21982f20d4b837f123e2a96627eb3c575158cf99aec56a40",
+      "Implementations/Optimized_Implementation/ARM/SHAKE/POLARLAC-Light/pke.c": "a3298c7cadf19d7affdb8ea8c20f16ce0141ec47e92069dcb951b414c402ba19",
+      "Implementations/Optimized_Implementation/ARM/SM3/POLARLAC-128/pke.c": "6d1defe7cd66e4a5c533813bf46329a130ca78ef637d2964cddf29d6d514f937",
+      "Implementations/Optimized_Implementation/ARM/SM3/POLARLAC-256/pke.c": "942924e21629de2ea8eadb7f861bcfb4336f848c507f2e00272f6b6b5ab5e446",
+      "Implementations/Optimized_Implementation/ARM/SM3/POLARLAC-512/pke.c": "942924e21629de2ea8eadb7f861bcfb4336f848c507f2e00272f6b6b5ab5e446",
+      "Implementations/Optimized_Implementation/ARM/SM3/POLARLAC-512-Star/pke.c": "5756d4c90fe3ea3e21982f20d4b837f123e2a96627eb3c575158cf99aec56a40",
+      "Implementations/Optimized_Implementation/ARM/SM3/POLARLAC-Light/pke.c": "a3298c7cadf19d7affdb8ea8c20f16ce0141ec47e92069dcb951b414c402ba19",
+      "Implementations/Optimized_Implementation/x86/POLARLAC-128/pke.c": "a69a2205846f4234e9343f954d16defb8d71ac7832118fd635142ddb59a7d573",
+      "Implementations/Optimized_Implementation/x86/POLARLAC-256/pke.c": "2c01dac911d2d5615e163b197a0464cd4bf8e87c34c0aebce3518fc08961f4c0",
+      "Implementations/Optimized_Implementation/x86/POLARLAC-512/pke.c": "dadd3c7a737b015a8cd641b04c1a2b7910939da1895430ac7d0655da6016f18d",
+      "Implementations/Optimized_Implementation/x86/POLARLAC-512-Star/pke.c": "e67f41fad4f47937bf3632f7884d2dd6664f39f74951ef522df686522b324afd",
+      "Implementations/Optimized_Implementation/x86/POLARLAC-Light/pke.c": "751adb642967d96eaa30d098b394845d194e61e48e94237fcccbfa3de02b1052",
+      "Implementations/Reference_Implementation/x86/POLARLAC-128/pke.c": "662a8ad8c3b178cf9b4ede935f772c27ceed44ac364551dfe512fec96bdae970",
+      "Implementations/Reference_Implementation/x86/POLARLAC-256/pke.c": "455769d8326954a7e00748deedd5100058e645c1b7bbc215c538d546929a7ac6",
+      "Implementations/Reference_Implementation/x86/POLARLAC-512/pke.c": "b4182576e31ea70fe3b6f13b9ae988c9971bbc3b760f520fe196c58a764feb40",
+      "Implementations/Reference_Implementation/x86/POLARLAC-512-Star/pke.c": "cf47127eb6ba50a0e465ed9b8983a6f59effb3e3fd72899203e39921b77f54f1",
+      "Implementations/Reference_Implementation/x86/POLARLAC-Light/pke.c": "74f102d68a23dba04d4a72fb9913550dbd059e4bfefc21eb0bbcfdabf04ca534"
+    },
+    "integration_status": "All variants Light/128/256/512/512-Star temporarily excluded from nsm_provider, including SM3 reference target GNU GCC -O2; do not enter performance set",
+    "classification_boundary": "Secret-dependent FO re-encryption work/addresses, not a demonstrated mathematical Module-LWE break",
+    "validation": "Repeated source downloads and static loop inspection only. No target GNU GCC build, runtime KAT or timing attack run.",
+    "provider_modified": false,
+    "pdf_section_updated": "3.12"
+  }
+}

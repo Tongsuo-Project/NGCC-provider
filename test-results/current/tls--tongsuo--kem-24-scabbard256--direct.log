@@ -1,0 +1,1 @@
+PASS TLS1.3 group=kem-24-scabbard256 wire_id=0xFE34 pk=1616 ct=1648 hrr=0 authenticated=1 exporter=match data=bidirectional

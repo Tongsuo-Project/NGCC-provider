@@ -1,0 +1,6 @@
+STEP keygen
+STEP CSR
+STEP certificates
+PASS CERT sig-27-sqisigntriangle-lvl5 oid=2.25.231531857406546402904608589617878735438 codecs=DER+PEM CSR=verified chain=verified
+PASS TLS1.3 sigalg=sig-27-sqisigntriangle-lvl5 code=0xFE5C group=X25519 chain=verified hostname=verified
+PASS TLS1.3 sigalg=sig-27-sqisigntriangle-lvl5 code=0xFE5C group=kem-01-aigis-enc1 chain=verified hostname=verified

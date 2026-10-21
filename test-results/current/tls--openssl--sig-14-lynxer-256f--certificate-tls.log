@@ -1,0 +1,6 @@
+STEP keygen
+STEP CSR
+STEP certificates
+PASS CERT sig-14-lynxer-256f oid=2.25.330740866247410830994048498997852427023 codecs=DER+PEM CSR=verified chain=verified
+PASS TLS1.3 sigalg=sig-14-lynxer-256f code=0xFE34 group=X25519 chain=verified hostname=verified
+PASS TLS1.3 sigalg=sig-14-lynxer-256f code=0xFE34 group=kem-01-aigis-enc1 chain=verified hostname=verified

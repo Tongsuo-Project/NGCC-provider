@@ -1,0 +1,22 @@
+[
+  {
+    "server": "tongsuo",
+    "client": "openssl",
+    "group": "kem-bw-kem-128",
+    "sig": "sig-01-aigis-sig1",
+    "status": "passed",
+    "module_sha256": "4b6f545b9f243a20ed9e3d4076cdf1edb09f6017c6c01e293e60081efe3540e9",
+    "client_log": "test-results/current/cli-example/tongsuo-server--openssl-client.client.log",
+    "server_log": "test-results/current/cli-example/tongsuo-server--openssl-client.server.log"
+  },
+  {
+    "server": "openssl",
+    "client": "tongsuo",
+    "group": "kem-bw-kem-128",
+    "sig": "sig-01-aigis-sig1",
+    "status": "passed",
+    "module_sha256": "4b6f545b9f243a20ed9e3d4076cdf1edb09f6017c6c01e293e60081efe3540e9",
+    "client_log": "test-results/current/cli-example/openssl-server--tongsuo-client.client.log",
+    "server_log": "test-results/current/cli-example/openssl-server--tongsuo-client.server.log"
+  }
+]

@@ -1,0 +1,6 @@
+STEP keygen
+STEP CSR
+STEP certificates
+PASS CERT sig-05-sm4th-em-d2-128f-tight oid=2.25.175148058671558393758979195211565500169 codecs=DER+PEM CSR=verified chain=verified
+PASS TLS1.3 sigalg=sig-05-sm4th-em-d2-128f-tight code=0xFE11 group=X25519 chain=verified hostname=verified
+PASS TLS1.3 sigalg=sig-05-sm4th-em-d2-128f-tight code=0xFE11 group=kem-01-aigis-enc1 chain=verified hostname=verified

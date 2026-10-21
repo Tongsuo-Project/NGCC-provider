@@ -1,0 +1,213 @@
+#!/usr/bin/env perl
+# Generate the native Makefile and algorithm configuration using Perl core modules.
+use strict;
+use warnings;
+use FindBin;
+use JSON::PP;
+use Cwd qw(abs_path);
+
+chdir $FindBin::Bin or die "Cannot enter source directory: $!\n";
+
+sub read_file {
+    my ($path) = @_;
+    open my $file, '<', $path or die "$path: $!\n";
+    local $/;
+    return <$file>;
+}
+
+sub write_file {
+    my ($path, $text) = @_;
+    return if -f $path && read_file($path) eq $text;
+    open my $file, '>', "$path.tmp" or die "$path.tmp: $!\n";
+    print {$file} $text or die "$path.tmp: $!\n";
+    close $file or die "$path.tmp: $!\n";
+    rename "$path.tmp", $path or die "$path: $!\n";
+}
+
+my %targets = (
+    'darwin64-arm64-cc'  => ['Darwin', 'arm64', '-arch arm64'],
+    'darwin64-x86_64-cc' => ['Darwin', 'x86_64', '-arch x86_64'],
+    'linux-aarch64'     => ['Linux', 'aarch64', ''],
+    'linux-x86_64'      => ['Linux', 'x86_64', '-m64'],
+);
+my $rows = decode_json(read_file('ngcc/metadata/registered.json'));
+my $groups = decode_json(read_file('ngcc/metadata/tls-groups.json'))->{groups};
+my $sigs = decode_json(read_file('ngcc/metadata/sig-oids.json'))->{sigs};
+my (%names, %canonical);
+for my $row (@$rows) {
+    my $name = $row->{provider_name};
+    $canonical{$name} = $row;
+    for my $alias (split /:/, $row->{names}) {
+        next if $alias =~ /^[0-9.]+$/; # OIDs are identifiers, not option names.
+        die "Ambiguous algorithm alias: $alias\n"
+            if exists $names{lc $alias} && $names{lc $alias} ne $name;
+        $names{lc $alias} = $name;
+    }
+}
+for my $row (@$groups, @$sigs) {
+    my $alias = $row->{group_name} // $row->{tls_name};
+    die "Ambiguous TLS alias: $alias\n"
+        if exists $names{lc $alias} && $names{lc $alias} ne $row->{provider_name};
+    $names{lc $alias} = $row->{provider_name};
+}
+
+my (%enable, %disable, %values);
+my $target;
+my @variables = qw(CC LD NM OBJCOPY NMEDIT AR RANLIB CFLAGS CPPFLAGS LDFLAGS
+                   OPENSSL_PREFIX GMP_ROOT GMP_STATIC GMP_SOURCE GMP_HOST);
+my %variables = map { $_ => 1 } @variables;
+for my $arg (@ARGV) {
+    if ($arg eq '--help' || $arg eq '-h') {
+        print <<'HELP';
+Usage: ./config [target] [enable-NAME ...] [no-NAME ...] [NAME=value ...]
+
+Without algorithm options, build all instances that do not require GMP.
+Supplying GMP_SOURCE, GMP_ROOT or GMP_STATIC includes GMP-dependent instances.
+With only no-NAME options, exclude those instances from this selection.
+With enable-NAME options, build only the union of the enabled instances.
+Names are existing EVP/TLS names and aliases (case insensitive).
+Enabling and disabling the same instance is an error, including via aliases.
+
+  --list             List supported targets
+  --list-algorithms  List EVP names and accepted aliases
+  --with-gmp-source=DIR
+                     Build a PIC static GMP from an unpacked source directory
+  --help             Show this help
+
+The target defaults to the current OS/architecture. For cross compilation,
+supply a matching CC/LD/NM/OBJCOPY and target OpenSSL/GMP paths explicitly.
+Tool and path variables may also be passed through the environment:
+  CC LD NM OBJCOPY NMEDIT AR RANLIB CFLAGS CPPFLAGS LDFLAGS
+  OPENSSL_PREFIX GMP_ROOT GMP_STATIC GMP_SOURCE GMP_HOST
+
+OPENSSL_PREFIX is the installation prefix of OpenSSL or Tongsuo.
+Defaults: macOS arm64 /opt/homebrew/opt/openssl@3,
+macOS x86_64 /usr/local/opt/openssl@3, Linux /usr.
+
+GMP_SOURCE is equivalent to --with-gmp-source. Do not combine it with
+GMP_ROOT or GMP_STATIC. Use GMP_ROOT or GMP_STATIC for an installed static GMP.
+Explicitly enabling a GMP-dependent instance requires one of these paths.
+GMP is only used by selected QIMEN-PIKE, SQISign2Dsquare, SQIsign2D and
+SQIsignTriangle instances (and the excluded CTL build candidate).
+GMP_HOST overrides the target triplet for cross compilation.
+
+Examples:
+  ./config
+  ./config --with-gmp-source=/path/to/gmp-6.3.0
+  ./config enable-kem-bw-kem-128 enable-sig-01-aigis-sig1
+  ./config no-kem-bw-kem-128 no-sig-01-aigis-sig1
+  ./config linux-aarch64 CC=aarch64-linux-gnu-gcc LD=aarch64-linux-gnu-ld
+HELP
+        exit 0;
+    } elsif ($arg eq '--list') {
+        print "$_\n" for sort keys %targets;
+        exit 0;
+    } elsif ($arg eq '--list-algorithms') {
+        for my $row (@$rows) {
+            my $name = $row->{provider_name};
+            my @aliases = sort grep { $names{$_} eq $name && $_ ne $name } keys %names;
+            print $name, (@aliases ? ' (aliases: '.join(', ', @aliases).')' : ''), "\n";
+        }
+        exit 0;
+    } elsif ($arg =~ /^--with-gmp-source=(.*)$/) {
+        $values{GMP_SOURCE} = $1;
+    } elsif ($arg =~ /^(enable|no)-(.+)$/) {
+        my ($action, $alias) = ($1, lc $2);
+        my $name = $names{$alias} // die "Unknown algorithm '$2'; use --list-algorithms\n";
+        if ($action eq 'enable') {
+            $enable{$name} = 1;
+        } else {
+            $disable{$name} = 1;
+        }
+    } elsif ($arg =~ /^([A-Z_]+)=(.*)$/ && $variables{$1}) {
+        $values{$1} = $2;
+    } elsif (exists $targets{$arg}) {
+        die "Only one target may be specified\n" if defined $target;
+        $target = $arg;
+    } else {
+        die "Unknown option or target '$arg'; use --help or --list\n";
+    }
+}
+for my $name (keys %enable) {
+    die "Conflicting enable/no options for $name\n" if $disable{$name};
+}
+if (!defined $target) {
+    chomp(my $os = `uname -s`);
+    chomp(my $arch = `uname -m`);
+    $target = $os eq 'Darwin' ? "darwin64-$arch-cc"
+            : $os eq 'Linux' ? 'linux-'.($arch eq 'arm64' ? 'aarch64' : $arch) : '';
+    die "Unsupported host $os/$arch; use --list and select a target\n"
+        unless exists $targets{$target};
+}
+my ($platform, $arch, $target_flags) = @{$targets{$target}};
+for my $var (@variables) {
+    $values{$var} //= $ENV{$var} if exists $ENV{$var};
+    next unless exists $values{$var};
+    die "Unsupported character in $var\n" if $values{$var} =~ /[\r\n\0\$#`;&|<>]/;
+    die "Empty value for $var\n" if $values{$var} eq '' && $var !~ /^(CFLAGS|CPPFLAGS|LDFLAGS)$/;
+    die "Whitespace in $var paths is not supported by the source recipes\n"
+        if $var =~ /(?:_ROOT|_PREFIX|GMP_STATIC|GMP_SOURCE)$/ && $values{$var} =~ /\s/;
+}
+$values{OPENSSL_PREFIX} //= $platform eq 'Darwin'
+    ? ($arch eq 'arm64' ? '/opt/homebrew' : '/usr/local').'/opt/openssl@3'
+    : '/usr';
+if (exists $values{GMP_SOURCE}) {
+    die "GMP_SOURCE cannot be combined with GMP_ROOT or GMP_STATIC\n"
+        if exists $values{GMP_ROOT} || exists $values{GMP_STATIC};
+    my $source = abs_path($values{GMP_SOURCE});
+    die "GMP_SOURCE must contain configure, gmp-h.in and mpz/\n"
+        unless defined $source && -x "$source/configure"
+            && -f "$source/gmp-h.in" && -d "$source/mpz";
+    die "GMP_SOURCE must be outside the provider build directory\n"
+        if $source eq "$FindBin::Bin/build" || index($source, "$FindBin::Bin/build/") == 0;
+    die "Unsupported character in GMP_SOURCE path\n" if $source =~ /[\s\$#`;&|<>"'\\()]/;
+    die "GMP_SOURCE is already configured; use a clean source directory\n"
+        if -e "$source/config.status";
+    $values{GMP_SOURCE} = $source;
+}
+die "Invalid GMP_HOST triplet\n"
+    if exists $values{GMP_HOST} && $values{GMP_HOST} !~ /^[A-Za-z0-9_.+-]+$/;
+
+my $with_gmp = grep { exists $values{$_} } qw(GMP_SOURCE GMP_ROOT GMP_STATIC);
+my %gmp = map { $_->{provider_name} => 1 }
+          grep { ($_->{LDLIBS} // '') =~ /(?:^|\s)-lgmp(?:\s|$)/ } @$rows;
+for my $name (sort keys %enable) {
+    die "$name requires GMP; specify --with-gmp-source=DIR or GMP_ROOT=DIR\n"
+        if $gmp{$name} && !$with_gmp;
+}
+my @enabled = grep { (!%enable || $enable{$_}) && !$disable{$_}
+                    && ($with_gmp || !$gmp{$_}) }
+              map { $_->{provider_name} } @$rows;
+die "No algorithms selected\n" unless @enabled;
+
+my %enabled = map { $_ => 1 } @enabled;
+my $header = "/* Generated by config. Do not edit. */\n"
+           . "#ifndef NGCC_CONFIG_H\n# define NGCC_CONFIG_H\n\n";
+my $os_macro = $platform eq 'Darwin' ? '__APPLE__' : '__linux__';
+my $arch_macro = $arch eq 'x86_64' ? '__x86_64__' : '__aarch64__';
+$header .= "# if !defined($os_macro) || !defined($arch_macro)\n"
+         . "#  error \"Compiler does not match configured target $target\"\n# endif\n\n";
+for my $row (@$rows) {
+    next if $enabled{$row->{provider_name}};
+    (my $macro = uc $row->{provider_name}) =~ s/[^A-Z0-9]/_/g;
+    $header .= "# define NGCC_NO_$macro\n";
+}
+$header .= "\n#endif\n";
+my $settings = "TARGET := $target\nPLATFORM := $platform\nARCH := $arch\n"
+             . "TARGET_FLAGS := $target_flags\n";
+for my $var (@variables) {
+    $settings .= "$var := $values{$var}\n" if exists $values{$var};
+}
+$settings .= 'ENABLED_ALGORITHMS := '.join(" \\\n    ", @enabled)."\n";
+my $makefile = read_file('Makefile.in');
+$makefile =~ s/^\@CONFIGURATION\@\n/$settings/m or die "Missing Makefile.in configuration marker\n";
+my $configuration = {
+    target => $target, platform => $platform, arch => $arch,
+    target_flags => $target_flags, variables => \%values, enabled => \@enabled,
+    options => [@ARGV],
+};
+write_file('src/ngcc_config.h', $header);
+write_file('configdata.json', JSON::PP->new->canonical->pretty->encode($configuration));
+write_file('Makefile', $makefile);
+printf "Configured ngcc_provider for %s: %d/%d instances\n", $target, scalar @enabled, scalar @$rows;
+print "Created Makefile, src/ngcc_config.h and configdata.json. Run make.\n";

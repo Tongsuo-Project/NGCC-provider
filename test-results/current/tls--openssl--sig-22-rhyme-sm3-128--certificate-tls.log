@@ -1,0 +1,6 @@
+STEP keygen
+STEP CSR
+STEP certificates
+PASS CERT sig-22-rhyme-sm3-128 oid=2.25.109229857078094989128835278499933770277 codecs=DER+PEM CSR=verified chain=verified
+PASS TLS1.3 sigalg=sig-22-rhyme-sm3-128 code=0xFE46 group=X25519 chain=verified hostname=verified
+PASS TLS1.3 sigalg=sig-22-rhyme-sm3-128 code=0xFE46 group=kem-01-aigis-enc1 chain=verified hostname=verified

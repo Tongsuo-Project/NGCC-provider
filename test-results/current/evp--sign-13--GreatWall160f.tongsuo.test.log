@@ -1,0 +1,7 @@
+STEP keygen
+STEP second-keygen
+STEP sign-0
+STEP sign-1
+SIZES pk=42 sig=5720 capacity=5720
+PASS key-material-unchanged
+PASS sig-13-greatwall160f

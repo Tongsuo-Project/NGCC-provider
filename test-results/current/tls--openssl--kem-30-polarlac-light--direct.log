@@ -1,0 +1,1 @@
+PASS TLS1.3 group=kem-30-polarlac-light wire_id=0xFE45 pk=530 ct=608 hrr=0 authenticated=1 exporter=match data=bidirectional

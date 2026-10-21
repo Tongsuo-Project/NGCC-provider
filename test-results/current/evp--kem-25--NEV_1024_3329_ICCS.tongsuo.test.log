@@ -1,0 +1,8 @@
+STEP keygen
+STEP second-keygen
+STEP encapsulate-0
+STEP encapsulate-1
+STEP encapsulate-2
+SIZES pk=1536 ct=1536 ss=32
+PASS key-material-unchanged
+PASS kem-25-nev-1024-3329-iccs

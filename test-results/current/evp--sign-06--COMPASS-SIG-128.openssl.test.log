@@ -1,0 +1,7 @@
+STEP keygen
+STEP second-keygen
+STEP sign-0
+STEP sign-1
+SIZES pk=1664 sig=2080 capacity=2080
+PASS key-material-unchanged
+PASS sig-06-compass-sig-128

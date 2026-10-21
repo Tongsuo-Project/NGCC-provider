@@ -1,0 +1,209 @@
+{
+  "sha": "5900418088dfa73b624dec1a2d4aaca751230b12",
+  "node_id": "C_kwDOUx4mH9oAKDU5MDA0MTgwODhkZmE3M2I2MjRkZWMxYTJkNGFhY2E3NTEyMzBiMTI",
+  "commit": {
+    "author": {
+      "name": "DKEM-DKEX Team",
+      "email": "295965802+dkemdkex@users.noreply.github.com",
+      "date": "2026-10-02T15:20:54Z"
+    },
+    "committer": {
+      "name": "DKEM-DKEX Team",
+      "email": "295965802+dkemdkex@users.noreply.github.com",
+      "date": "2026-10-02T15:21:16Z"
+    },
+    "message": "Fix int16 overflow in the AVX2 natural-order DKE-512 NTT paths\n\nThe submitted build scripts define DKE_NTT512_PACKED and use the packed\nAVX2 NTT, which reduces between layers and was not affected. Built without\nthat macro, parameters.h selects the natural-order intrinsic chain in\navx2/ntt_avx2.c, which had no reductions between layers and showed the same\nint16 overflow as the scalar code (about one failure in 2,000 KEM\noperations). The non-default DKE_NTT512_RB and DKE_NTT512_ASM forward\ntransforms had the same problem.\n\n- Intrinsic chain: Barrett-reduce all coefficients after the len = 64 and\n  len = 8 layers with AVX2 code that is bit-identical to the scalar\n  DKE_barrett_reduce ((mulhi(a, v) + 2^9) >> 10, then a - t * q).\n- DKE_NTT512_RB and DKE_NTT512_ASM: the forward NTT now uses the fixed\n  intrinsic chain (bit-identical output); the inverse NTT and basemul are\n  unchanged.\n- The packed path (DKE_NTT512_PACKED) and the 128/256 instances are\n  unchanged.\n\nVerification:\n- 700,000 forward transforms per configuration (random, extreme and\n  worst-case inputs) are bit-identical to the fixed scalar NTT;\n- DKEM-512: 0 failures in 20,000 runs per configuration (12 before) and in\n  1,000,000 runs in the intrinsic configuration; ADKEX-512 and DKEX-512:\n  0 failures in 20,000 handshakes per configuration;\n- Tests/ntt512_regression fails before and passes after the fix on the\n  optimized implementation built without DKE_NTT512_PACKED;\n- KAT files byte-identical to Test_Vectors in all configurations.",
+    "tree": {
+      "sha": "e7bb698705ec48c02ceacbe517815f6be3a8d6ac",
+      "url": "https://api.github.com/repos/dkemdkex/dkem-dkex/git/trees/e7bb698705ec48c02ceacbe517815f6be3a8d6ac"
+    },
+    "url": "https://api.github.com/repos/dkemdkex/dkem-dkex/git/commits/5900418088dfa73b624dec1a2d4aaca751230b12",
+    "comment_count": 0,
+    "verification": {
+      "verified": false,
+      "reason": "unsigned",
+      "signature": null,
+      "payload": null,
+      "verified_at": null
+    }
+  },
+  "url": "https://api.github.com/repos/dkemdkex/dkem-dkex/commits/5900418088dfa73b624dec1a2d4aaca751230b12",
+  "html_url": "https://github.com/dkemdkex/dkem-dkex/commit/5900418088dfa73b624dec1a2d4aaca751230b12",
+  "comments_url": "https://api.github.com/repos/dkemdkex/dkem-dkex/commits/5900418088dfa73b624dec1a2d4aaca751230b12/comments",
+  "author": {
+    "login": "dkemdkex",
+    "id": 295965802,
+    "node_id": "U_kgDOEaQUag",
+    "avatar_url": "https://avatars.githubusercontent.com/u/295965802?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/dkemdkex",
+    "html_url": "https://github.com/dkemdkex",
+    "followers_url": "https://api.github.com/users/dkemdkex/followers",
+    "following_url": "https://api.github.com/users/dkemdkex/following{/other_user}",
+    "gists_url": "https://api.github.com/users/dkemdkex/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/dkemdkex/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/dkemdkex/subscriptions",
+    "organizations_url": "https://api.github.com/users/dkemdkex/orgs",
+    "repos_url": "https://api.github.com/users/dkemdkex/repos",
+    "events_url": "https://api.github.com/users/dkemdkex/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/dkemdkex/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "dkemdkex",
+    "id": 295965802,
+    "node_id": "U_kgDOEaQUag",
+    "avatar_url": "https://avatars.githubusercontent.com/u/295965802?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/dkemdkex",
+    "html_url": "https://github.com/dkemdkex",
+    "followers_url": "https://api.github.com/users/dkemdkex/followers",
+    "following_url": "https://api.github.com/users/dkemdkex/following{/other_user}",
+    "gists_url": "https://api.github.com/users/dkemdkex/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/dkemdkex/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/dkemdkex/subscriptions",
+    "organizations_url": "https://api.github.com/users/dkemdkex/orgs",
+    "repos_url": "https://api.github.com/users/dkemdkex/repos",
+    "events_url": "https://api.github.com/users/dkemdkex/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/dkemdkex/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "c275a316472d1b0a6330385faedafc9aa44825b7",
+      "url": "https://api.github.com/repos/dkemdkex/dkem-dkex/commits/c275a316472d1b0a6330385faedafc9aa44825b7",
+      "html_url": "https://github.com/dkemdkex/dkem-dkex/commit/c275a316472d1b0a6330385faedafc9aa44825b7"
+    }
+  ],
+  "stats": {
+    "total": 384,
+    "additions": 256,
+    "deletions": 128
+  },
+  "files": [
+    {
+      "sha": "44ef4402ae2c9d3385e45cc5e4bff7d6afec519b",
+      "filename": "ADKEX/Implementations/Optimized_Implementation/ADKEX-128/avx2/ntt_avx2.c",
+      "status": "modified",
+      "additions": 28,
+      "deletions": 14,
+      "changes": 42,
+      "blob_url": "https://github.com/dkemdkex/dkem-dkex/blob/5900418088dfa73b624dec1a2d4aaca751230b12/ADKEX%2FImplementations%2FOptimized_Implementation%2FADKEX-128%2Favx2%2Fntt_avx2.c",
+      "raw_url": "https://github.com/dkemdkex/dkem-dkex/raw/5900418088dfa73b624dec1a2d4aaca751230b12/ADKEX%2FImplementations%2FOptimized_Implementation%2FADKEX-128%2Favx2%2Fntt_avx2.c",
+      "contents_url": "https://api.github.com/repos/dkemdkex/dkem-dkex/contents/ADKEX%2FImplementations%2FOptimized_Implementation%2FADKEX-128%2Favx2%2Fntt_avx2.c?ref=5900418088dfa73b624dec1a2d4aaca751230b12",
+      "patch": "@@ -133,6 +133,24 @@ static void dke_ntt512_rb(int16_t r[512]) {\n }\r\n #endif\r\n \r\n+#if DKE_N == 512 && defined(DKE_AVX2_NTT_INTRINSIC)\r\n+/* q = 7681 leaves only ~4.3q of int16 headroom in the forward NTT, so the natural-order\r\n+ * chain reduces all coefficients after the len = 64 and len = 8 layers. Bit-identical to\r\n+ * the scalar DKE_barrett_reduce: with v = round(2^26 / q), t = (v * a + 2^25) >> 26\r\n+ * equals (mulhi(a, v) + 2^9) >> 10, and the result is a - t * q. */\r\n+static void dke_ntt512_reduce_all(int16_t r[DKE_N]) {\r\n+    const __m256i v = _mm256_set1_epi16((int16_t)(((1 << 26) + DKE_Q / 2) / DKE_Q));\r\n+    const __m256i q = _mm256_set1_epi16(DKE_Q);\r\n+    const __m256i rnd = _mm256_set1_epi16(1 << 9);\r\n+    unsigned int i;\r\n+    for (i = 0; i < DKE_N; i += 16) {\r\n+        __m256i a = _mm256_load_si256((__m256i *)&r[i]);\r\n+        __m256i t = _mm256_srai_epi16(_mm256_add_epi16(_mm256_mulhi_epi16(a, v), rnd), 10);\r\n+        _mm256_store_si256((__m256i *)&r[i], _mm256_sub_epi16(a, _mm256_mullo_epi16(t, q)));\r\n+    }\r\n+}\r\n+#endif\r\n+\r\n void DKE_ntt(int16_t r[DKE_N]) {\r\n     unsigned int start, k;\r\n     unsigned int len, j;\r\n@@ -162,20 +180,10 @@ void DKE_ntt(int16_t r[DKE_N]) {\n         return;\r\n     }\r\n #endif\r\n-#if defined(DKE_NTT512_RB) && DKE_N == 512\r\n-    dke_ntt512_rb(r);\r\n-    return;\r\n-#endif\r\n-#if defined(DKE_NTT512_ASM) && DKE_N == 512\r\n-    /* Hand-scheduled GAS/MASM register-blocked forward NTT for n=512, q=7681.\r\n-     * Bit-identical to the generic intrinsic (verified 2000-poly fuzz, KAT==ref). */\r\n-    {\r\n-        extern void dke_ntt512_gas(int16_t *, const int16_t *, const int16_t *);\r\n-        extern const int16_t dke_qdata512[];\r\n-        dke_ntt512_gas(r, dke_qdata512, DKE_zetas);\r\n-        return;\r\n-    }\r\n-#endif\r\n+/* DKE_NTT512_RB and DKE_NTT512_ASM: the register-blocked forward transforms have no\r\n+ * reductions between layers and can overflow int16 at q = 7681, so these configurations use\r\n+ * the reduced intrinsic chain below for the forward NTT as well (its output is bit-identical;\r\n+ * the inverse NTT and basemul are unchanged). */\r\n #if defined(DKE_AVX2_NTT_INTRINSIC)\r\n     /* Natural-order intrinsic forward NTT (canonical, matches scalar). */\r\n     k = 1;\r\n@@ -190,6 +198,9 @@ void DKE_ntt(int16_t r[DKE_N]) {\n                 _mm256_store_si256((__m256i *)&r[j + len], b);\r\n             }\r\n         }\r\n+#if DKE_N == 512\r\n+        if (len == 64) dke_ntt512_reduce_all(r);\r\n+#endif\r\n     }\r\n     /* len=8 */\r\n     for (start = 0; start < DKE_N; start += 16) {\r\n@@ -203,6 +214,9 @@ void DKE_ntt(int16_t r[DKE_N]) {\n         v = _mm256_inserti128_si256(add, _mm256_castsi256_si128(sub), 1);\r\n         _mm256_store_si256((__m256i *)&r[start], v);\r\n     }\r\n+#if DKE_N == 512\r\n+    dke_ntt512_reduce_all(r);\r\n+#endif\r\n     /* len=4 */\r\n     for (start = 0; start < DKE_N; start += 16) {\r\n         int16_t za = DKE_zetas[k++];\r"
+    },
+    {
+      "sha": "44ef4402ae2c9d3385e45cc5e4bff7d6afec519b",
+      "filename": "ADKEX/Implementations/Optimized_Implementation/ADKEX-256/avx2/ntt_avx2.c",
+      "status": "modified",
+      "additions": 28,
+      "deletions": 14,
+      "changes": 42,
+      "blob_url": "https://github.com/dkemdkex/dkem-dkex/blob/5900418088dfa73b624dec1a2d4aaca751230b12/ADKEX%2FImplementations%2FOptimized_Implementation%2FADKEX-256%2Favx2%2Fntt_avx2.c",
+      "raw_url": "https://github.com/dkemdkex/dkem-dkex/raw/5900418088dfa73b624dec1a2d4aaca751230b12/ADKEX%2FImplementations%2FOptimized_Implementation%2FADKEX-256%2Favx2%2Fntt_avx2.c",
+      "contents_url": "https://api.github.com/repos/dkemdkex/dkem-dkex/contents/ADKEX%2FImplementations%2FOptimized_Implementation%2FADKEX-256%2Favx2%2Fntt_avx2.c?ref=5900418088dfa73b624dec1a2d4aaca751230b12",
+      "patch": "@@ -133,6 +133,24 @@ static void dke_ntt512_rb(int16_t r[512]) {\n }\r\n #endif\r\n \r\n+#if DKE_N == 512 && defined(DKE_AVX2_NTT_INTRINSIC)\r\n+/* q = 7681 leaves only ~4.3q of int16 headroom in the forward NTT, so the natural-order\r\n+ * chain reduces all coefficients after the len = 64 and len = 8 layers. Bit-identical to\r\n+ * the scalar DKE_barrett_reduce: with v = round(2^26 / q), t = (v * a + 2^25) >> 26\r\n+ * equals (mulhi(a, v) + 2^9) >> 10, and the result is a - t * q. */\r\n+static void dke_ntt512_reduce_all(int16_t r[DKE_N]) {\r\n+    const __m256i v = _mm256_set1_epi16((int16_t)(((1 << 26) + DKE_Q / 2) / DKE_Q));\r\n+    const __m256i q = _mm256_set1_epi16(DKE_Q);\r\n+    const __m256i rnd = _mm256_set1_epi16(1 << 9);\r\n+    unsigned int i;\r\n+    for (i = 0; i < DKE_N; i += 16) {\r\n+        __m256i a = _mm256_load_si256((__m256i *)&r[i]);\r\n+        __m256i t = _mm256_srai_epi16(_mm256_add_epi16(_mm256_mulhi_epi16(a, v), rnd), 10);\r\n+        _mm256_store_si256((__m256i *)&r[i], _mm256_sub_epi16(a, _mm256_mullo_epi16(t, q)));\r\n+    }\r\n+}\r\n+#endif\r\n+\r\n void DKE_ntt(int16_t r[DKE_N]) {\r\n     unsigned int start, k;\r\n     unsigned int len, j;\r\n@@ -162,20 +180,10 @@ void DKE_ntt(int16_t r[DKE_N]) {\n         return;\r\n     }\r\n #endif\r\n-#if defined(DKE_NTT512_RB) && DKE_N == 512\r\n-    dke_ntt512_rb(r);\r\n-    return;\r\n-#endif\r\n-#if defined(DKE_NTT512_ASM) && DKE_N == 512\r\n-    /* Hand-scheduled GAS/MASM register-blocked forward NTT for n=512, q=7681.\r\n-     * Bit-identical to the generic intrinsic (verified 2000-poly fuzz, KAT==ref). */\r\n-    {\r\n-        extern void dke_ntt512_gas(int16_t *, const int16_t *, const int16_t *);\r\n-        extern const int16_t dke_qdata512[];\r\n-        dke_ntt512_gas(r, dke_qdata512, DKE_zetas);\r\n-        return;\r\n-    }\r\n-#endif\r\n+/* DKE_NTT512_RB and DKE_NTT512_ASM: the register-blocked forward transforms have no\r\n+ * reductions between layers and can overflow int16 at q = 7681, so these configurations use\r\n+ * the reduced intrinsic chain below for the forward NTT as well (its output is bit-identical;\r\n+ * the inverse NTT and basemul are unchanged). */\r\n #if defined(DKE_AVX2_NTT_INTRINSIC)\r\n     /* Natural-order intrinsic forward NTT (canonical, matches scalar). */\r\n     k = 1;\r\n@@ -190,6 +198,9 @@ void DKE_ntt(int16_t r[DKE_N]) {\n                 _mm256_store_si256((__m256i *)&r[j + len], b);\r\n             }\r\n         }\r\n+#if DKE_N == 512\r\n+        if (len == 64) dke_ntt512_reduce_all(r);\r\n+#endif\r\n     }\r\n     /* len=8 */\r\n     for (start = 0; start < DKE_N; start += 16) {\r\n@@ -203,6 +214,9 @@ void DKE_ntt(int16_t r[DKE_N]) {\n         v = _mm256_inserti128_si256(add, _mm256_castsi256_si128(sub), 1);\r\n         _mm256_store_si256((__m256i *)&r[start], v);\r\n     }\r\n+#if DKE_N == 512\r\n+    dke_ntt512_reduce_all(r);\r\n+#endif\r\n     /* len=4 */\r\n     for (start = 0; start < DKE_N; start += 16) {\r\n         int16_t za = DKE_zetas[k++];\r"
+    },
+    {
+      "sha": "44ef4402ae2c9d3385e45cc5e4bff7d6afec519b",
+      "filename": "ADKEX/Implementations/Optimized_Implementation/ADKEX-512/avx2/ntt_avx2.c",
+      "status": "modified",
+      "additions": 28,
+      "deletions": 14,
+      "changes": 42,
+      "blob_url": "https://github.com/dkemdkex/dkem-dkex/blob/5900418088dfa73b624dec1a2d4aaca751230b12/ADKEX%2FImplementations%2FOptimized_Implementation%2FADKEX-512%2Favx2%2Fntt_avx2.c",
+      "raw_url": "https://github.com/dkemdkex/dkem-dkex/raw/5900418088dfa73b624dec1a2d4aaca751230b12/ADKEX%2FImplementations%2FOptimized_Implementation%2FADKEX-512%2Favx2%2Fntt_avx2.c",
+      "contents_url": "https://api.github.com/repos/dkemdkex/dkem-dkex/contents/ADKEX%2FImplementations%2FOptimized_Implementation%2FADKEX-512%2Favx2%2Fntt_avx2.c?ref=5900418088dfa73b624dec1a2d4aaca751230b12",
+      "patch": "@@ -133,6 +133,24 @@ static void dke_ntt512_rb(int16_t r[512]) {\n }\r\n #endif\r\n \r\n+#if DKE_N == 512 && defined(DKE_AVX2_NTT_INTRINSIC)\r\n+/* q = 7681 leaves only ~4.3q of int16 headroom in the forward NTT, so the natural-order\r\n+ * chain reduces all coefficients after the len = 64 and len = 8 layers. Bit-identical to\r\n+ * the scalar DKE_barrett_reduce: with v = round(2^26 / q), t = (v * a + 2^25) >> 26\r\n+ * equals (mulhi(a, v) + 2^9) >> 10, and the result is a - t * q. */\r\n+static void dke_ntt512_reduce_all(int16_t r[DKE_N]) {\r\n+    const __m256i v = _mm256_set1_epi16((int16_t)(((1 << 26) + DKE_Q / 2) / DKE_Q));\r\n+    const __m256i q = _mm256_set1_epi16(DKE_Q);\r\n+    const __m256i rnd = _mm256_set1_epi16(1 << 9);\r\n+    unsigned int i;\r\n+    for (i = 0; i < DKE_N; i += 16) {\r\n+        __m256i a = _mm256_load_si256((__m256i *)&r[i]);\r\n+        __m256i t = _mm256_srai_epi16(_mm256_add_epi16(_mm256_mulhi_epi16(a, v), rnd), 10);\r\n+        _mm256_store_si256((__m256i *)&r[i], _mm256_sub_epi16(a, _mm256_mullo_epi16(t, q)));\r\n+    }\r\n+}\r\n+#endif\r\n+\r\n void DKE_ntt(int16_t r[DKE_N]) {\r\n     unsigned int start, k;\r\n     unsigned int len, j;\r\n@@ -162,20 +180,10 @@ void DKE_ntt(int16_t r[DKE_N]) {\n         return;\r\n     }\r\n #endif\r\n-#if defined(DKE_NTT512_RB) && DKE_N == 512\r\n-    dke_ntt512_rb(r);\r\n-    return;\r\n-#endif\r\n-#if defined(DKE_NTT512_ASM) && DKE_N == 512\r\n-    /* Hand-scheduled GAS/MASM register-blocked forward NTT for n=512, q=7681.\r\n-     * Bit-identical to the generic intrinsic (verified 2000-poly fuzz, KAT==ref). */\r\n-    {\r\n-        extern void dke_ntt512_gas(int16_t *, const int16_t *, const int16_t *);\r\n-        extern const int16_t dke_qdata512[];\r\n-        dke_ntt512_gas(r, dke_qdata512, DKE_zetas);\r\n-        return;\r\n-    }\r\n-#endif\r\n+/* DKE_NTT512_RB and DKE_NTT512_ASM: the register-blocked forward transforms have no\r\n+ * reductions between layers and can overflow int16 at q = 7681, so these configurations use\r\n+ * the reduced intrinsic chain below for the forward NTT as well (its output is bit-identical;\r\n+ * the inverse NTT and basemul are unchanged). */\r\n #if defined(DKE_AVX2_NTT_INTRINSIC)\r\n     /* Natural-order intrinsic forward NTT (canonical, matches scalar). */\r\n     k = 1;\r\n@@ -190,6 +198,9 @@ void DKE_ntt(int16_t r[DKE_N]) {\n                 _mm256_store_si256((__m256i *)&r[j + len], b);\r\n             }\r\n         }\r\n+#if DKE_N == 512\r\n+        if (len == 64) dke_ntt512_reduce_all(r);\r\n+#endif\r\n     }\r\n     /* len=8 */\r\n     for (start = 0; start < DKE_N; start += 16) {\r\n@@ -203,6 +214,9 @@ void DKE_ntt(int16_t r[DKE_N]) {\n         v = _mm256_inserti128_si256(add, _mm256_castsi256_si128(sub), 1);\r\n         _mm256_store_si256((__m256i *)&r[start], v);\r\n     }\r\n+#if DKE_N == 512\r\n+    dke_ntt512_reduce_all(r);\r\n+#endif\r\n     /* len=4 */\r\n     for (start = 0; start < DKE_N; start += 16) {\r\n         int16_t za = DKE_zetas[k++];\r"
+    },
+    {
+      "sha": "8351e0eba10bd7b6641baafaad06f4b8a7cb2828",
+      "filename": "DKEM/Implementations/Optimized_Implementation/DKEM-128/avx2/ntt_avx2.c",
+      "status": "modified",
+      "additions": 28,
+      "deletions": 14,
+      "changes": 42,
+      "blob_url": "https://github.com/dkemdkex/dkem-dkex/blob/5900418088dfa73b624dec1a2d4aaca751230b12/DKEM%2FImplementations%2FOptimized_Implementation%2FDKEM-128%2Favx2%2Fntt_avx2.c",
+      "raw_url": "https://github.com/dkemdkex/dkem-dkex/raw/5900418088dfa73b624dec1a2d4aaca751230b12/DKEM%2FImplementations%2FOptimized_Implementation%2FDKEM-128%2Favx2%2Fntt_avx2.c",
+      "contents_url": "https://api.github.com/repos/dkemdkex/dkem-dkex/contents/DKEM%2FImplementations%2FOptimized_Implementation%2FDKEM-128%2Favx2%2Fntt_avx2.c?ref=5900418088dfa73b624dec1a2d4aaca751230b12",
+      "patch": "@@ -133,6 +133,24 @@ static void dke_ntt512_rb(int16_t r[512]) {\n }\r\n #endif\r\n \r\n+#if DKE_N == 512 && defined(DKE_AVX2_NTT_INTRINSIC)\r\n+/* q = 7681 leaves only ~4.3q of int16 headroom in the forward NTT, so the natural-order\r\n+ * chain reduces all coefficients after the len = 64 and len = 8 layers. Bit-identical to\r\n+ * the scalar DKE_barrett_reduce: with v = round(2^26 / q), t = (v * a + 2^25) >> 26\r\n+ * equals (mulhi(a, v) + 2^9) >> 10, and the result is a - t * q. */\r\n+static void dke_ntt512_reduce_all(int16_t r[DKE_N]) {\r\n+    const __m256i v = _mm256_set1_epi16((int16_t)(((1 << 26) + DKE_Q / 2) / DKE_Q));\r\n+    const __m256i q = _mm256_set1_epi16(DKE_Q);\r\n+    const __m256i rnd = _mm256_set1_epi16(1 << 9);\r\n+    unsigned int i;\r\n+    for (i = 0; i < DKE_N; i += 16) {\r\n+        __m256i a = _mm256_load_si256((__m256i *)&r[i]);\r\n+        __m256i t = _mm256_srai_epi16(_mm256_add_epi16(_mm256_mulhi_epi16(a, v), rnd), 10);\r\n+        _mm256_store_si256((__m256i *)&r[i], _mm256_sub_epi16(a, _mm256_mullo_epi16(t, q)));\r\n+    }\r\n+}\r\n+#endif\r\n+\r\n void DKE_ntt(int16_t r[DKE_N]) {\r\n     unsigned int start, k;\r\n     unsigned int len, j;\r\n@@ -162,20 +180,10 @@ void DKE_ntt(int16_t r[DKE_N]) {\n         return;\r\n     }\r\n #endif\r\n-#if defined(DKE_NTT512_RB) && DKE_N == 512\r\n-    dke_ntt512_rb(r);\r\n-    return;\r\n-#endif\r\n-#if defined(DKE_NTT512_ASM) && DKE_N == 512\r\n-    /* Hand-scheduled GAS/MASM register-blocked forward NTT for n=512, q=7681.\r\n-     * Bit-identical to the generic intrinsic (verified 2000-poly fuzz, KAT==ref). */\r\n-    {\r\n-        extern void dke_ntt512_gas(int16_t *, const int16_t *, const int16_t *);\r\n-        extern const int16_t dke_qdata512[];\r\n-        dke_ntt512_gas(r, dke_qdata512, DKE_zetas);\r\n-        return;\r\n-    }\r\n-#endif\r\n+/* DKE_NTT512_RB and DKE_NTT512_ASM: the register-blocked forward transforms have no\r\n+ * reductions between layers and can overflow int16 at q = 7681, so these configurations use\r\n+ * the reduced intrinsic chain below for the forward NTT as well (its output is bit-identical;\r\n+ * the inverse NTT and basemul are unchanged). */\r\n #if defined(DKE_AVX2_NTT_INTRINSIC)\r\n     /* Natural-order intrinsic forward NTT (canonical, matches scalar). */\r\n     k = 1;\r\n@@ -190,6 +198,9 @@ void DKE_ntt(int16_t r[DKE_N]) {\n                 _mm256_store_si256((__m256i *)&r[j + len], b);\r\n             }\r\n         }\r\n+#if DKE_N == 512\r\n+        if (len == 64) dke_ntt512_reduce_all(r);\r\n+#endif\r\n     }\r\n     /* len=8 */\r\n     for (start = 0; start < DKE_N; start += 16) {\r\n@@ -203,6 +214,9 @@ void DKE_ntt(int16_t r[DKE_N]) {\n         v = _mm256_inserti128_si256(add, _mm256_castsi256_si128(sub), 1);\r\n         _mm256_store_si256((__m256i *)&r[start], v);\r\n     }\r\n+#if DKE_N == 512\r\n+    dke_ntt512_reduce_all(r);\r\n+#endif\r\n     /* len=4 */\r\n     for (start = 0; start < DKE_N; start += 16) {\r\n         int16_t za = DKE_zetas[k++];\r"
+    },
+    {
+      "sha": "44ef4402ae2c9d3385e45cc5e4bff7d6afec519b",
+      "filename": "DKEM/Implementations/Optimized_Implementation/DKEM-256/avx2/ntt_avx2.c",
+      "status": "modified",
+      "additions": 28,
+      "deletions": 14,
+      "changes": 42,
+      "blob_url": "https://github.com/dkemdkex/dkem-dkex/blob/5900418088dfa73b624dec1a2d4aaca751230b12/DKEM%2FImplementations%2FOptimized_Implementation%2FDKEM-256%2Favx2%2Fntt_avx2.c",
+      "raw_url": "https://github.com/dkemdkex/dkem-dkex/raw/5900418088dfa73b624dec1a2d4aaca751230b12/DKEM%2FImplementations%2FOptimized_Implementation%2FDKEM-256%2Favx2%2Fntt_avx2.c",
+      "contents_url": "https://api.github.com/repos/dkemdkex/dkem-dkex/contents/DKEM%2FImplementations%2FOptimized_Implementation%2FDKEM-256%2Favx2%2Fntt_avx2.c?ref=5900418088dfa73b624dec1a2d4aaca751230b12",
+      "patch": "@@ -133,6 +133,24 @@ static void dke_ntt512_rb(int16_t r[512]) {\n }\r\n #endif\r\n \r\n+#if DKE_N == 512 && defined(DKE_AVX2_NTT_INTRINSIC)\r\n+/* q = 7681 leaves only ~4.3q of int16 headroom in the forward NTT, so the natural-order\r\n+ * chain reduces all coefficients after the len = 64 and len = 8 layers. Bit-identical to\r\n+ * the scalar DKE_barrett_reduce: with v = round(2^26 / q), t = (v * a + 2^25) >> 26\r\n+ * equals (mulhi(a, v) + 2^9) >> 10, and the result is a - t * q. */\r\n+static void dke_ntt512_reduce_all(int16_t r[DKE_N]) {\r\n+    const __m256i v = _mm256_set1_epi16((int16_t)(((1 << 26) + DKE_Q / 2) / DKE_Q));\r\n+    const __m256i q = _mm256_set1_epi16(DKE_Q);\r\n+    const __m256i rnd = _mm256_set1_epi16(1 << 9);\r\n+    unsigned int i;\r\n+    for (i = 0; i < DKE_N; i += 16) {\r\n+        __m256i a = _mm256_load_si256((__m256i *)&r[i]);\r\n+        __m256i t = _mm256_srai_epi16(_mm256_add_epi16(_mm256_mulhi_epi16(a, v), rnd), 10);\r\n+        _mm256_store_si256((__m256i *)&r[i], _mm256_sub_epi16(a, _mm256_mullo_epi16(t, q)));\r\n+    }\r\n+}\r\n+#endif\r\n+\r\n void DKE_ntt(int16_t r[DKE_N]) {\r\n     unsigned int start, k;\r\n     unsigned int len, j;\r\n@@ -162,20 +180,10 @@ void DKE_ntt(int16_t r[DKE_N]) {\n         return;\r\n     }\r\n #endif\r\n-#if defined(DKE_NTT512_RB) && DKE_N == 512\r\n-    dke_ntt512_rb(r);\r\n-    return;\r\n-#endif\r\n-#if defined(DKE_NTT512_ASM) && DKE_N == 512\r\n-    /* Hand-scheduled GAS/MASM register-blocked forward NTT for n=512, q=7681.\r\n-     * Bit-identical to the generic intrinsic (verified 2000-poly fuzz, KAT==ref). */\r\n-    {\r\n-        extern void dke_ntt512_gas(int16_t *, const int16_t *, const int16_t *);\r\n-        extern const int16_t dke_qdata512[];\r\n-        dke_ntt512_gas(r, dke_qdata512, DKE_zetas);\r\n-        return;\r\n-    }\r\n-#endif\r\n+/* DKE_NTT512_RB and DKE_NTT512_ASM: the register-blocked forward transforms have no\r\n+ * reductions between layers and can overflow int16 at q = 7681, so these configurations use\r\n+ * the reduced intrinsic chain below for the forward NTT as well (its output is bit-identical;\r\n+ * the inverse NTT and basemul are unchanged). */\r\n #if defined(DKE_AVX2_NTT_INTRINSIC)\r\n     /* Natural-order intrinsic forward NTT (canonical, matches scalar). */\r\n     k = 1;\r\n@@ -190,6 +198,9 @@ void DKE_ntt(int16_t r[DKE_N]) {\n                 _mm256_store_si256((__m256i *)&r[j + len], b);\r\n             }\r\n         }\r\n+#if DKE_N == 512\r\n+        if (len == 64) dke_ntt512_reduce_all(r);\r\n+#endif\r\n     }\r\n     /* len=8 */\r\n     for (start = 0; start < DKE_N; start += 16) {\r\n@@ -203,6 +214,9 @@ void DKE_ntt(int16_t r[DKE_N]) {\n         v = _mm256_inserti128_si256(add, _mm256_castsi256_si128(sub), 1);\r\n         _mm256_store_si256((__m256i *)&r[start], v);\r\n     }\r\n+#if DKE_N == 512\r\n+    dke_ntt512_reduce_all(r);\r\n+#endif\r\n     /* len=4 */\r\n     for (start = 0; start < DKE_N; start += 16) {\r\n         int16_t za = DKE_zetas[k++];\r"
+    },
+    {
+      "sha": "44ef4402ae2c9d3385e45cc5e4bff7d6afec519b",
+      "filename": "DKEM/Implementations/Optimized_Implementation/DKEM-512/avx2/ntt_avx2.c",
+      "status": "modified",
+      "additions": 28,
+      "deletions": 14,
+      "changes": 42,
+      "blob_url": "https://github.com/dkemdkex/dkem-dkex/blob/5900418088dfa73b624dec1a2d4aaca751230b12/DKEM%2FImplementations%2FOptimized_Implementation%2FDKEM-512%2Favx2%2Fntt_avx2.c",
+      "raw_url": "https://github.com/dkemdkex/dkem-dkex/raw/5900418088dfa73b624dec1a2d4aaca751230b12/DKEM%2FImplementations%2FOptimized_Implementation%2FDKEM-512%2Favx2%2Fntt_avx2.c",
+      "contents_url": "https://api.github.com/repos/dkemdkex/dkem-dkex/contents/DKEM%2FImplementations%2FOptimized_Implementation%2FDKEM-512%2Favx2%2Fntt_avx2.c?ref=5900418088dfa73b624dec1a2d4aaca751230b12",
+      "patch": "@@ -133,6 +133,24 @@ static void dke_ntt512_rb(int16_t r[512]) {\n }\r\n #endif\r\n \r\n+#if DKE_N == 512 && defined(DKE_AVX2_NTT_INTRINSIC)\r\n+/* q = 7681 leaves only ~4.3q of int16 headroom in the forward NTT, so the natural-order\r\n+ * chain reduces all coefficients after the len = 64 and len = 8 layers. Bit-identical to\r\n+ * the scalar DKE_barrett_reduce: with v = round(2^26 / q), t = (v * a + 2^25) >> 26\r\n+ * equals (mulhi(a, v) + 2^9) >> 10, and the result is a - t * q. */\r\n+static void dke_ntt512_reduce_all(int16_t r[DKE_N]) {\r\n+    const __m256i v = _mm256_set1_epi16((int16_t)(((1 << 26) + DKE_Q / 2) / DKE_Q));\r\n+    const __m256i q = _mm256_set1_epi16(DKE_Q);\r\n+    const __m256i rnd = _mm256_set1_epi16(1 << 9);\r\n+    unsigned int i;\r\n+    for (i = 0; i < DKE_N; i += 16) {\r\n+        __m256i a = _mm256_load_si256((__m256i *)&r[i]);\r\n+        __m256i t = _mm256_srai_epi16(_mm256_add_epi16(_mm256_mulhi_epi16(a, v), rnd), 10);\r\n+        _mm256_store_si256((__m256i *)&r[i], _mm256_sub_epi16(a, _mm256_mullo_epi16(t, q)));\r\n+    }\r\n+}\r\n+#endif\r\n+\r\n void DKE_ntt(int16_t r[DKE_N]) {\r\n     unsigned int start, k;\r\n     unsigned int len, j;\r\n@@ -162,20 +180,10 @@ void DKE_ntt(int16_t r[DKE_N]) {\n         return;\r\n     }\r\n #endif\r\n-#if defined(DKE_NTT512_RB) && DKE_N == 512\r\n-    dke_ntt512_rb(r);\r\n-    return;\r\n-#endif\r\n-#if defined(DKE_NTT512_ASM) && DKE_N == 512\r\n-    /* Hand-scheduled GAS/MASM register-blocked forward NTT for n=512, q=7681.\r\n-     * Bit-identical to the generic intrinsic (verified 2000-poly fuzz, KAT==ref). */\r\n-    {\r\n-        extern void dke_ntt512_gas(int16_t *, const int16_t *, const int16_t *);\r\n-        extern const int16_t dke_qdata512[];\r\n-        dke_ntt512_gas(r, dke_qdata512, DKE_zetas);\r\n-        return;\r\n-    }\r\n-#endif\r\n+/* DKE_NTT512_RB and DKE_NTT512_ASM: the register-blocked forward transforms have no\r\n+ * reductions between layers and can overflow int16 at q = 7681, so these configurations use\r\n+ * the reduced intrinsic chain below for the forward NTT as well (its output is bit-identical;\r\n+ * the inverse NTT and basemul are unchanged). */\r\n #if defined(DKE_AVX2_NTT_INTRINSIC)\r\n     /* Natural-order intrinsic forward NTT (canonical, matches scalar). */\r\n     k = 1;\r\n@@ -190,6 +198,9 @@ void DKE_ntt(int16_t r[DKE_N]) {\n                 _mm256_store_si256((__m256i *)&r[j + len], b);\r\n             }\r\n         }\r\n+#if DKE_N == 512\r\n+        if (len == 64) dke_ntt512_reduce_all(r);\r\n+#endif\r\n     }\r\n     /* len=8 */\r\n     for (start = 0; start < DKE_N; start += 16) {\r\n@@ -203,6 +214,9 @@ void DKE_ntt(int16_t r[DKE_N]) {\n         v = _mm256_inserti128_si256(add, _mm256_castsi256_si128(sub), 1);\r\n         _mm256_store_si256((__m256i *)&r[start], v);\r\n     }\r\n+#if DKE_N == 512\r\n+    dke_ntt512_reduce_all(r);\r\n+#endif\r\n     /* len=4 */\r\n     for (start = 0; start < DKE_N; start += 16) {\r\n         int16_t za = DKE_zetas[k++];\r"
+    },
+    {
+      "sha": "44ef4402ae2c9d3385e45cc5e4bff7d6afec519b",
+      "filename": "DKEX/Implementations/Optimized_Implementation/DKEX-128/avx2/ntt_avx2.c",
+      "status": "modified",
+      "additions": 28,
+      "deletions": 14,
+      "changes": 42,
+      "blob_url": "https://github.com/dkemdkex/dkem-dkex/blob/5900418088dfa73b624dec1a2d4aaca751230b12/DKEX%2FImplementations%2FOptimized_Implementation%2FDKEX-128%2Favx2%2Fntt_avx2.c",
+      "raw_url": "https://github.com/dkemdkex/dkem-dkex/raw/5900418088dfa73b624dec1a2d4aaca751230b12/DKEX%2FImplementations%2FOptimized_Implementation%2FDKEX-128%2Favx2%2Fntt_avx2.c",
+      "contents_url": "https://api.github.com/repos/dkemdkex/dkem-dkex/contents/DKEX%2FImplementations%2FOptimized_Implementation%2FDKEX-128%2Favx2%2Fntt_avx2.c?ref=5900418088dfa73b624dec1a2d4aaca751230b12",
+      "patch": "@@ -133,6 +133,24 @@ static void dke_ntt512_rb(int16_t r[512]) {\n }\r\n #endif\r\n \r\n+#if DKE_N == 512 && defined(DKE_AVX2_NTT_INTRINSIC)\r\n+/* q = 7681 leaves only ~4.3q of int16 headroom in the forward NTT, so the natural-order\r\n+ * chain reduces all coefficients after the len = 64 and len = 8 layers. Bit-identical to\r\n+ * the scalar DKE_barrett_reduce: with v = round(2^26 / q), t = (v * a + 2^25) >> 26\r\n+ * equals (mulhi(a, v) + 2^9) >> 10, and the result is a - t * q. */\r\n+static void dke_ntt512_reduce_all(int16_t r[DKE_N]) {\r\n+    const __m256i v = _mm256_set1_epi16((int16_t)(((1 << 26) + DKE_Q / 2) / DKE_Q));\r\n+    const __m256i q = _mm256_set1_epi16(DKE_Q);\r\n+    const __m256i rnd = _mm256_set1_epi16(1 << 9);\r\n+    unsigned int i;\r\n+    for (i = 0; i < DKE_N; i += 16) {\r\n+        __m256i a = _mm256_load_si256((__m256i *)&r[i]);\r\n+        __m256i t = _mm256_srai_epi16(_mm256_add_epi16(_mm256_mulhi_epi16(a, v), rnd), 10);\r\n+        _mm256_store_si256((__m256i *)&r[i], _mm256_sub_epi16(a, _mm256_mullo_epi16(t, q)));\r\n+    }\r\n+}\r\n+#endif\r\n+\r\n void DKE_ntt(int16_t r[DKE_N]) {\r\n     unsigned int start, k;\r\n     unsigned int len, j;\r\n@@ -162,20 +180,10 @@ void DKE_ntt(int16_t r[DKE_N]) {\n         return;\r\n     }\r\n #endif\r\n-#if defined(DKE_NTT512_RB) && DKE_N == 512\r\n-    dke_ntt512_rb(r);\r\n-    return;\r\n-#endif\r\n-#if defined(DKE_NTT512_ASM) && DKE_N == 512\r\n-    /* Hand-scheduled GAS/MASM register-blocked forward NTT for n=512, q=7681.\r\n-     * Bit-identical to the generic intrinsic (verified 2000-poly fuzz, KAT==ref). */\r\n-    {\r\n-        extern void dke_ntt512_gas(int16_t *, const int16_t *, const int16_t *);\r\n-        extern const int16_t dke_qdata512[];\r\n-        dke_ntt512_gas(r, dke_qdata512, DKE_zetas);\r\n-        return;\r\n-    }\r\n-#endif\r\n+/* DKE_NTT512_RB and DKE_NTT512_ASM: the register-blocked forward transforms have no\r\n+ * reductions between layers and can overflow int16 at q = 7681, so these configurations use\r\n+ * the reduced intrinsic chain below for the forward NTT as well (its output is bit-identical;\r\n+ * the inverse NTT and basemul are unchanged). */\r\n #if defined(DKE_AVX2_NTT_INTRINSIC)\r\n     /* Natural-order intrinsic forward NTT (canonical, matches scalar). */\r\n     k = 1;\r\n@@ -190,6 +198,9 @@ void DKE_ntt(int16_t r[DKE_N]) {\n                 _mm256_store_si256((__m256i *)&r[j + len], b);\r\n             }\r\n         }\r\n+#if DKE_N == 512\r\n+        if (len == 64) dke_ntt512_reduce_all(r);\r\n+#endif\r\n     }\r\n     /* len=8 */\r\n     for (start = 0; start < DKE_N; start += 16) {\r\n@@ -203,6 +214,9 @@ void DKE_ntt(int16_t r[DKE_N]) {\n         v = _mm256_inserti128_si256(add, _mm256_castsi256_si128(sub), 1);\r\n         _mm256_store_si256((__m256i *)&r[start], v);\r\n     }\r\n+#if DKE_N == 512\r\n+    dke_ntt512_reduce_all(r);\r\n+#endif\r\n     /* len=4 */\r\n     for (start = 0; start < DKE_N; start += 16) {\r\n         int16_t za = DKE_zetas[k++];\r"
+    },
+    {
+      "sha": "44ef4402ae2c9d3385e45cc5e4bff7d6afec519b",
+      "filename": "DKEX/Implementations/Optimized_Implementation/DKEX-256/avx2/ntt_avx2.c",
+      "status": "modified",
+      "additions": 28,
+      "deletions": 14,
+      "changes": 42,
+      "blob_url": "https://github.com/dkemdkex/dkem-dkex/blob/5900418088dfa73b624dec1a2d4aaca751230b12/DKEX%2FImplementations%2FOptimized_Implementation%2FDKEX-256%2Favx2%2Fntt_avx2.c",
+      "raw_url": "https://github.com/dkemdkex/dkem-dkex/raw/5900418088dfa73b624dec1a2d4aaca751230b12/DKEX%2FImplementations%2FOptimized_Implementation%2FDKEX-256%2Favx2%2Fntt_avx2.c",
+      "contents_url": "https://api.github.com/repos/dkemdkex/dkem-dkex/contents/DKEX%2FImplementations%2FOptimized_Implementation%2FDKEX-256%2Favx2%2Fntt_avx2.c?ref=5900418088dfa73b624dec1a2d4aaca751230b12",
+      "patch": "@@ -133,6 +133,24 @@ static void dke_ntt512_rb(int16_t r[512]) {\n }\r\n #endif\r\n \r\n+#if DKE_N == 512 && defined(DKE_AVX2_NTT_INTRINSIC)\r\n+/* q = 7681 leaves only ~4.3q of int16 headroom in the forward NTT, so the natural-order\r\n+ * chain reduces all coefficients after the len = 64 and len = 8 layers. Bit-identical to\r\n+ * the scalar DKE_barrett_reduce: with v = round(2^26 / q), t = (v * a + 2^25) >> 26\r\n+ * equals (mulhi(a, v) + 2^9) >> 10, and the result is a - t * q. */\r\n+static void dke_ntt512_reduce_all(int16_t r[DKE_N]) {\r\n+    const __m256i v = _mm256_set1_epi16((int16_t)(((1 << 26) + DKE_Q / 2) / DKE_Q));\r\n+    const __m256i q = _mm256_set1_epi16(DKE_Q);\r\n+    const __m256i rnd = _mm256_set1_epi16(1 << 9);\r\n+    unsigned int i;\r\n+    for (i = 0; i < DKE_N; i += 16) {\r\n+        __m256i a = _mm256_load_si256((__m256i *)&r[i]);\r\n+        __m256i t = _mm256_srai_epi16(_mm256_add_epi16(_mm256_mulhi_epi16(a, v), rnd), 10);\r\n+        _mm256_store_si256((__m256i *)&r[i], _mm256_sub_epi16(a, _mm256_mullo_epi16(t, q)));\r\n+    }\r\n+}\r\n+#endif\r\n+\r\n void DKE_ntt(int16_t r[DKE_N]) {\r\n     unsigned int start, k;\r\n     unsigned int len, j;\r\n@@ -162,20 +180,10 @@ void DKE_ntt(int16_t r[DKE_N]) {\n         return;\r\n     }\r\n #endif\r\n-#if defined(DKE_NTT512_RB) && DKE_N == 512\r\n-    dke_ntt512_rb(r);\r\n-    return;\r\n-#endif\r\n-#if defined(DKE_NTT512_ASM) && DKE_N == 512\r\n-    /* Hand-scheduled GAS/MASM register-blocked forward NTT for n=512, q=7681.\r\n-     * Bit-identical to the generic intrinsic (verified 2000-poly fuzz, KAT==ref). */\r\n-    {\r\n-        extern void dke_ntt512_gas(int16_t *, const int16_t *, const int16_t *);\r\n-        extern const int16_t dke_qdata512[];\r\n-        dke_ntt512_gas(r, dke_qdata512, DKE_zetas);\r\n-        return;\r\n-    }\r\n-#endif\r\n+/* DKE_NTT512_RB and DKE_NTT512_ASM: the register-blocked forward transforms have no\r\n+ * reductions between layers and can overflow int16 at q = 7681, so these configurations use\r\n+ * the reduced intrinsic chain below for the forward NTT as well (its output is bit-identical;\r\n+ * the inverse NTT and basemul are unchanged). */\r\n #if defined(DKE_AVX2_NTT_INTRINSIC)\r\n     /* Natural-order intrinsic forward NTT (canonical, matches scalar). */\r\n     k = 1;\r\n@@ -190,6 +198,9 @@ void DKE_ntt(int16_t r[DKE_N]) {\n                 _mm256_store_si256((__m256i *)&r[j + len], b);\r\n             }\r\n         }\r\n+#if DKE_N == 512\r\n+        if (len == 64) dke_ntt512_reduce_all(r);\r\n+#endif\r\n     }\r\n     /* len=8 */\r\n     for (start = 0; start < DKE_N; start += 16) {\r\n@@ -203,6 +214,9 @@ void DKE_ntt(int16_t r[DKE_N]) {\n         v = _mm256_inserti128_si256(add, _mm256_castsi256_si128(sub), 1);\r\n         _mm256_store_si256((__m256i *)&r[start], v);\r\n     }\r\n+#if DKE_N == 512\r\n+    dke_ntt512_reduce_all(r);\r\n+#endif\r\n     /* len=4 */\r\n     for (start = 0; start < DKE_N; start += 16) {\r\n         int16_t za = DKE_zetas[k++];\r"
+    },
+    {
+      "sha": "44ef4402ae2c9d3385e45cc5e4bff7d6afec519b",
+      "filename": "DKEX/Implementations/Optimized_Implementation/DKEX-512/avx2/ntt_avx2.c",
+      "status": "modified",
+      "additions": 28,
+      "deletions": 14,
+      "changes": 42,
+      "blob_url": "https://github.com/dkemdkex/dkem-dkex/blob/5900418088dfa73b624dec1a2d4aaca751230b12/DKEX%2FImplementations%2FOptimized_Implementation%2FDKEX-512%2Favx2%2Fntt_avx2.c",
+      "raw_url": "https://github.com/dkemdkex/dkem-dkex/raw/5900418088dfa73b624dec1a2d4aaca751230b12/DKEX%2FImplementations%2FOptimized_Implementation%2FDKEX-512%2Favx2%2Fntt_avx2.c",
+      "contents_url": "https://api.github.com/repos/dkemdkex/dkem-dkex/contents/DKEX%2FImplementations%2FOptimized_Implementation%2FDKEX-512%2Favx2%2Fntt_avx2.c?ref=5900418088dfa73b624dec1a2d4aaca751230b12",
+      "patch": "@@ -133,6 +133,24 @@ static void dke_ntt512_rb(int16_t r[512]) {\n }\r\n #endif\r\n \r\n+#if DKE_N == 512 && defined(DKE_AVX2_NTT_INTRINSIC)\r\n+/* q = 7681 leaves only ~4.3q of int16 headroom in the forward NTT, so the natural-order\r\n+ * chain reduces all coefficients after the len = 64 and len = 8 layers. Bit-identical to\r\n+ * the scalar DKE_barrett_reduce: with v = round(2^26 / q), t = (v * a + 2^25) >> 26\r\n+ * equals (mulhi(a, v) + 2^9) >> 10, and the result is a - t * q. */\r\n+static void dke_ntt512_reduce_all(int16_t r[DKE_N]) {\r\n+    const __m256i v = _mm256_set1_epi16((int16_t)(((1 << 26) + DKE_Q / 2) / DKE_Q));\r\n+    const __m256i q = _mm256_set1_epi16(DKE_Q);\r\n+    const __m256i rnd = _mm256_set1_epi16(1 << 9);\r\n+    unsigned int i;\r\n+    for (i = 0; i < DKE_N; i += 16) {\r\n+        __m256i a = _mm256_load_si256((__m256i *)&r[i]);\r\n+        __m256i t = _mm256_srai_epi16(_mm256_add_epi16(_mm256_mulhi_epi16(a, v), rnd), 10);\r\n+        _mm256_store_si256((__m256i *)&r[i], _mm256_sub_epi16(a, _mm256_mullo_epi16(t, q)));\r\n+    }\r\n+}\r\n+#endif\r\n+\r\n void DKE_ntt(int16_t r[DKE_N]) {\r\n     unsigned int start, k;\r\n     unsigned int len, j;\r\n@@ -162,20 +180,10 @@ void DKE_ntt(int16_t r[DKE_N]) {\n         return;\r\n     }\r\n #endif\r\n-#if defined(DKE_NTT512_RB) && DKE_N == 512\r\n-    dke_ntt512_rb(r);\r\n-    return;\r\n-#endif\r\n-#if defined(DKE_NTT512_ASM) && DKE_N == 512\r\n-    /* Hand-scheduled GAS/MASM register-blocked forward NTT for n=512, q=7681.\r\n-     * Bit-identical to the generic intrinsic (verified 2000-poly fuzz, KAT==ref). */\r\n-    {\r\n-        extern void dke_ntt512_gas(int16_t *, const int16_t *, const int16_t *);\r\n-        extern const int16_t dke_qdata512[];\r\n-        dke_ntt512_gas(r, dke_qdata512, DKE_zetas);\r\n-        return;\r\n-    }\r\n-#endif\r\n+/* DKE_NTT512_RB and DKE_NTT512_ASM: the register-blocked forward transforms have no\r\n+ * reductions between layers and can overflow int16 at q = 7681, so these configurations use\r\n+ * the reduced intrinsic chain below for the forward NTT as well (its output is bit-identical;\r\n+ * the inverse NTT and basemul are unchanged). */\r\n #if defined(DKE_AVX2_NTT_INTRINSIC)\r\n     /* Natural-order intrinsic forward NTT (canonical, matches scalar). */\r\n     k = 1;\r\n@@ -190,6 +198,9 @@ void DKE_ntt(int16_t r[DKE_N]) {\n                 _mm256_store_si256((__m256i *)&r[j + len], b);\r\n             }\r\n         }\r\n+#if DKE_N == 512\r\n+        if (len == 64) dke_ntt512_reduce_all(r);\r\n+#endif\r\n     }\r\n     /* len=8 */\r\n     for (start = 0; start < DKE_N; start += 16) {\r\n@@ -203,6 +214,9 @@ void DKE_ntt(int16_t r[DKE_N]) {\n         v = _mm256_inserti128_si256(add, _mm256_castsi256_si128(sub), 1);\r\n         _mm256_store_si256((__m256i *)&r[start], v);\r\n     }\r\n+#if DKE_N == 512\r\n+    dke_ntt512_reduce_all(r);\r\n+#endif\r\n     /* len=4 */\r\n     for (start = 0; start < DKE_N; start += 16) {\r\n         int16_t za = DKE_zetas[k++];\r"
+    },
+    {
+      "sha": "1e7529eea86923b1492b3c45b98f97fb3e2ac06a",
+      "filename": "Tests/ntt512_regression/README.md",
+      "status": "modified",
+      "additions": 4,
+      "deletions": 2,
+      "changes": 6,
+      "blob_url": "https://github.com/dkemdkex/dkem-dkex/blob/5900418088dfa73b624dec1a2d4aaca751230b12/Tests%2Fntt512_regression%2FREADME.md",
+      "raw_url": "https://github.com/dkemdkex/dkem-dkex/raw/5900418088dfa73b624dec1a2d4aaca751230b12/Tests%2Fntt512_regression%2FREADME.md",
+      "contents_url": "https://api.github.com/repos/dkemdkex/dkem-dkex/contents/Tests%2Fntt512_regression%2FREADME.md?ref=5900418088dfa73b624dec1a2d4aaca751230b12",
+      "patch": "@@ -23,5 +23,7 @@ It works for the reference, optimized (x86-64 AVX2) and AArch64 NEON implementat\n Cortex-M4 implementation is built for QEMU and is not covered by this script.\n \n The code before commit 8e3417a fails this test on the reference and NEON implementations.\n-The optimized (AVX2) implementation was not affected by the overflow and passes it both\n-before and after the fix.\n+The optimized (AVX2) implementation as built by its build.sh (with DKE_NTT512_PACKED) was not\n+affected and passes it both before and after that fix. Built without DKE_NTT512_PACKED, the\n+optimized implementation uses a natural-order AVX2 NTT that failed this test until the\n+follow-up AVX2 fix; it now passes in every configuration."
+    }
+  ]
+}

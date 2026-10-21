@@ -1,0 +1,1 @@
+PASS TLS1.3 group=kem-35-scloudplus-192-sm3-packed10 wire_id=0xFE50 pk=11456 ct=12645 hrr=0 authenticated=1 exporter=match data=bidirectional

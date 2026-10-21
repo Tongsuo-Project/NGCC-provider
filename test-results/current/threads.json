@@ -1,0 +1,26 @@
+[
+  {
+    "host": "tongsuo",
+    "module_sha256": "4b6f545b9f243a20ed9e3d4076cdf1edb09f6017c6c01e293e60081efe3540e9",
+    "kinds": [
+      "kem",
+      "sig"
+    ],
+    "exit_code": 0,
+    "log": "test-results/current/threads-tongsuo.log",
+    "lifecycle_exit_code": 0,
+    "lifecycle_log": "test-results/current/lifecycle-tongsuo.log"
+  },
+  {
+    "host": "openssl",
+    "module_sha256": "4b6f545b9f243a20ed9e3d4076cdf1edb09f6017c6c01e293e60081efe3540e9",
+    "kinds": [
+      "kem",
+      "sig"
+    ],
+    "exit_code": 0,
+    "log": "test-results/current/threads-openssl.log",
+    "lifecycle_exit_code": 0,
+    "lifecycle_log": "test-results/current/lifecycle-openssl.log"
+  }
+]

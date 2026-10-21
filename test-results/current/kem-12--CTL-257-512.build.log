@@ -1,0 +1,8 @@
+# Public copy: project paths are relative; installation paths use placeholders.
+$ cc -O2 -fPIC -fcommon -fno-strict-aliasing -fwrapv -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int -Wno-unused-function -Wno-unused-variable -Wno-deprecated-declarations -I${OPENSSL_PREFIX}/include -I${GMP_ROOT}/include -std=gnu11 -DNTRUGEN_PREFIX=ctlng -Isrc/CTL-257-512 -Ingcc/upstream/api -c ngcc/upstream/kem-12/src/CTL-257-512/ntru_solver.c -o build/ngcc/kem-12/CTL-257-512/18.o
+ngcc/upstream/kem-12/src/CTL-257-512/ntru_solver.c:9:10: fatal error: 'quadmath.h' file not found
+#include <quadmath.h>
+         ^~~~~~~~~~~~
+1 error generated.
+
+NSM: command failed (1)

@@ -1,0 +1,8 @@
+STEP keygen
+STEP second-keygen
+STEP encapsulate-0
+STEP encapsulate-1
+STEP encapsulate-2
+SIZES pk=3713 ct=5185 ss=32
+PASS key-material-unchanged
+PASS kem-26-hqc-128

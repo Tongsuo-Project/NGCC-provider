@@ -1,0 +1,20 @@
+HTTP/1.1 200 OK
+Date: Tue, 20 Oct 2026 11:23:30 GMT
+Content-Type: application/zip
+Content-Length: 41464713
+Connection: keep-alive
+Last-Modified: Sun, 20 Sep 2026 11:50:49 GMT
+ETag: "6aafc899-278b389"
+X-Frame-Options: ALLOW-FROM http://223.193.40.42:9003/
+X-Frame-Options: ALLOW-FROM https://www.niccs.org.cn
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Permitted-Cross-Domain-Policies: master-only
+Referrer-Policy: origin-when-cross-origin, strict-origin-when-cross-origin
+Strict-Transport-Security: max-age=63072000; includeSubdomains
+X-Download-Options: noopen
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+Accept-Ranges: bytes
+

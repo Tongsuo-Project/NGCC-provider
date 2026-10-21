@@ -1,0 +1,1 @@
+PASS TLS1.3 group=kem-nev-256 wire_id=0xFE9B pk=1229 ct=1024 hrr=1 authenticated=1 exporter=match data=bidirectional

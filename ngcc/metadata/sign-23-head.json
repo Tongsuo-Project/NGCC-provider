@@ -1,0 +1,100 @@
+{
+  "sha": "5169f625ff582f6f05db2c0f11de25453b89db4e",
+  "node_id": "C_kwDOU1RTItoAKDUxNjlmNjI1ZmY1ODJmNmYwNWRiMmMwZjExZGUyNTQ1M2I4OWRiNGU",
+  "commit": {
+    "author": {
+      "name": "Cursor Agent",
+      "email": "cursoragent@cursor.com",
+      "date": "2026-10-11T15:56:42Z"
+    },
+    "committer": {
+      "name": "pq-spin",
+      "email": "chenlong@iscas.ac.cn",
+      "date": "2026-10-11T15:57:35Z"
+    },
+    "message": "Update Shuttle_Specification.pdf (2026-10-11)\n\nReplace the root specification PDF with the October 11, 2026 Shuttle lattice-signature specification (Long Chen et al.).\n\nCo-authored-by: pq-spin <pq-spin@users.noreply.github.com>",
+    "tree": {
+      "sha": "ddb37ab55caae3f2ac9ece73940f51b1bc61ad45",
+      "url": "https://api.github.com/repos/pq-spin/Shuttle_Implementation/git/trees/ddb37ab55caae3f2ac9ece73940f51b1bc61ad45"
+    },
+    "url": "https://api.github.com/repos/pq-spin/Shuttle_Implementation/git/commits/5169f625ff582f6f05db2c0f11de25453b89db4e",
+    "comment_count": 0,
+    "verification": {
+      "verified": false,
+      "reason": "unsigned",
+      "signature": null,
+      "payload": null,
+      "verified_at": null
+    }
+  },
+  "url": "https://api.github.com/repos/pq-spin/Shuttle_Implementation/commits/5169f625ff582f6f05db2c0f11de25453b89db4e",
+  "html_url": "https://github.com/pq-spin/Shuttle_Implementation/commit/5169f625ff582f6f05db2c0f11de25453b89db4e",
+  "comments_url": "https://api.github.com/repos/pq-spin/Shuttle_Implementation/commits/5169f625ff582f6f05db2c0f11de25453b89db4e/comments",
+  "author": {
+    "login": "cursoragent",
+    "id": 199161495,
+    "node_id": "U_kgDOC972lw",
+    "avatar_url": "https://avatars.githubusercontent.com/u/199161495?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/cursoragent",
+    "html_url": "https://github.com/cursoragent",
+    "followers_url": "https://api.github.com/users/cursoragent/followers",
+    "following_url": "https://api.github.com/users/cursoragent/following{/other_user}",
+    "gists_url": "https://api.github.com/users/cursoragent/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/cursoragent/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/cursoragent/subscriptions",
+    "organizations_url": "https://api.github.com/users/cursoragent/orgs",
+    "repos_url": "https://api.github.com/users/cursoragent/repos",
+    "events_url": "https://api.github.com/users/cursoragent/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/cursoragent/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "pq-spin",
+    "id": 335481130,
+    "node_id": "U_kgDOE_8JKg",
+    "avatar_url": "https://avatars.githubusercontent.com/u/335481130?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/pq-spin",
+    "html_url": "https://github.com/pq-spin",
+    "followers_url": "https://api.github.com/users/pq-spin/followers",
+    "following_url": "https://api.github.com/users/pq-spin/following{/other_user}",
+    "gists_url": "https://api.github.com/users/pq-spin/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/pq-spin/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/pq-spin/subscriptions",
+    "organizations_url": "https://api.github.com/users/pq-spin/orgs",
+    "repos_url": "https://api.github.com/users/pq-spin/repos",
+    "events_url": "https://api.github.com/users/pq-spin/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/pq-spin/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "2ab35995798a6d7d4e94a3842639de4c1aa9de4e",
+      "url": "https://api.github.com/repos/pq-spin/Shuttle_Implementation/commits/2ab35995798a6d7d4e94a3842639de4c1aa9de4e",
+      "html_url": "https://github.com/pq-spin/Shuttle_Implementation/commit/2ab35995798a6d7d4e94a3842639de4c1aa9de4e"
+    }
+  ],
+  "stats": {
+    "total": 0,
+    "additions": 0,
+    "deletions": 0
+  },
+  "files": [
+    {
+      "sha": "f8576801f1b93623637cbf5b1170c033ee0ad484",
+      "filename": "Shuttle_Specification.pdf",
+      "status": "modified",
+      "additions": 0,
+      "deletions": 0,
+      "changes": 0,
+      "blob_url": "https://github.com/pq-spin/Shuttle_Implementation/blob/5169f625ff582f6f05db2c0f11de25453b89db4e/Shuttle_Specification.pdf",
+      "raw_url": "https://github.com/pq-spin/Shuttle_Implementation/raw/5169f625ff582f6f05db2c0f11de25453b89db4e/Shuttle_Specification.pdf",
+      "contents_url": "https://api.github.com/repos/pq-spin/Shuttle_Implementation/contents/Shuttle_Specification.pdf?ref=5169f625ff582f6f05db2c0f11de25453b89db4e"
+    }
+  ]
+}

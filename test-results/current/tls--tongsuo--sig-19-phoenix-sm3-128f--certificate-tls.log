@@ -1,0 +1,6 @@
+STEP keygen
+STEP CSR
+STEP certificates
+PASS CERT sig-19-phoenix-sm3-128f oid=2.25.16930044362764259970963942094090126607 codecs=DER+PEM CSR=verified chain=verified
+PASS TLS1.3 sigalg=sig-19-phoenix-sm3-128f code=0xFE3A group=X25519 chain=verified hostname=verified
+PASS TLS1.3 sigalg=sig-19-phoenix-sm3-128f code=0xFE3A group=kem-01-aigis-enc1 chain=verified hostname=verified

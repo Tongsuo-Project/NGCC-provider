@@ -1,0 +1,7 @@
+STEP keygen
+STEP second-keygen
+STEP sign-0
+STEP sign-1
+SIZES pk=3392 sig=5540 capacity=5540
+PASS key-material-unchanged
+PASS sig-17-opssig-256

@@ -1,0 +1,6 @@
+STEP keygen
+STEP CSR
+STEP certificates
+PASS CERT sig-33-vdoo-256 oid=2.25.324852982733619244006186175030903528255 codecs=DER+PEM CSR=verified chain=verified
+PASS TLS1.3 sigalg=sig-33-vdoo-256 code=0xFE68 group=X25519 chain=verified hostname=verified
+PASS TLS1.3 sigalg=sig-33-vdoo-256 code=0xFE68 group=kem-01-aigis-enc1 chain=verified hostname=verified

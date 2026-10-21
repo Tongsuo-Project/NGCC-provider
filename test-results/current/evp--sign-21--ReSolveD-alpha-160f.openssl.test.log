@@ -1,0 +1,7 @@
+STEP keygen
+STEP second-keygen
+STEP sign-0
+STEP sign-1
+SIZES pk=121 sig=6851 capacity=6851
+PASS key-material-unchanged
+PASS sig-21-resolved-alpha-160f

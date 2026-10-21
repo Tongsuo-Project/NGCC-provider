@@ -1,0 +1,6 @@
+STEP keygen
+STEP CSR
+STEP certificates
+PASS CERT sig-16-octarine-256 oid=2.25.3913619038634951524057174894780699555 codecs=DER+PEM CSR=verified chain=verified
+PASS TLS1.3 sigalg=sig-16-octarine-256 code=0xFE37 group=X25519 chain=verified hostname=verified
+PASS TLS1.3 sigalg=sig-16-octarine-256 code=0xFE37 group=kem-01-aigis-enc1 chain=verified hostname=verified
