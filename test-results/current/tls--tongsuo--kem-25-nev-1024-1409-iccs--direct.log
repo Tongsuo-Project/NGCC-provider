@@ -1,1 +1,0 @@
-PASS TLS1.3 group=kem-25-nev-1024-1409-iccs wire_id=0xFE35 pk=1344 ct=1344 hrr=0 authenticated=1 exporter=match data=bidirectional

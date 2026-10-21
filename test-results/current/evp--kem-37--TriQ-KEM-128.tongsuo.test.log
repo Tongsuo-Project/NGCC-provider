@@ -1,8 +1,0 @@
-STEP keygen
-STEP second-keygen
-STEP encapsulate-0
-STEP encapsulate-1
-STEP encapsulate-2
-SIZES pk=2054 ct=4086 ss=16
-PASS key-material-unchanged
-PASS kem-37-triq-kem-128

@@ -1,1 +1,0 @@
-PASS TLS1.3 group=kem-01-aigis-enc2 wire_id=0xFE01 pk=1312 ct=1664 hrr=0 authenticated=1 exporter=match data=bidirectional

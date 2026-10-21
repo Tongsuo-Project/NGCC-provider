@@ -1,6 +1,0 @@
-STEP keygen
-STEP CSR
-STEP certificates
-PASS CERT sig-31-tsuov-256 oid=2.25.242231992800664500024290659710553817516 codecs=DER+PEM CSR=verified chain=verified
-PASS TLS1.3 sigalg=sig-31-tsuov-256 code=0xFE66 group=X25519 chain=verified hostname=verified
-PASS TLS1.3 sigalg=sig-31-tsuov-256 code=0xFE66 group=kem-01-aigis-enc1 chain=verified hostname=verified

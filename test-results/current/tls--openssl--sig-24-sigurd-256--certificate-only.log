@@ -1,5 +1,0 @@
-STEP keygen
-STEP CSR
-STEP certificates
-PASS CERT sig-24-sigurd-256 oid=2.25.190443903206680249148395288835205230569 codecs=DER+PEM CSR=verified chain=verified
-PASS TLS-excluded sig-24-sigurd-256 sig-capacity-exceeds-65535

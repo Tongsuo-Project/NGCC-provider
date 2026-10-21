@@ -38,11 +38,11 @@ NGCC_SIG(sig_04_CEDRUSALPHA_256s, ngcc_ref_sig_04_CEDRUSALPHA_256s, "sig-04-cedr
 #ifndef NGCC_NO_SIG_05_SM4TH_D3_128F_LOOSE
 NGCC_SIG(sig_05_sm4th_d3_128f_loose, ngcc_ref_sig_05_sm4th_d3_128f_loose, "sig-05-sm4th-d3-128f-loose:2.25.104262561199751882480889362692536163298", "sig-05-sm4th-d3-128f-loose")
 #endif
-#ifndef NGCC_NO_SIG_05_SM4TH_D3_128F_TIGHT
-NGCC_SIG(sig_05_sm4th_d3_128f_tight, ngcc_ref_sig_05_sm4th_d3_128f_tight, "sig-05-sm4th-d3-128f-tight:2.25.125208512369641343924248593683345325564", "sig-05-sm4th-d3-128f-tight")
-#endif
 #ifndef NGCC_NO_SIG_05_SM4TH_D3_128S_LOOSE
 NGCC_SIG(sig_05_sm4th_d3_128s_loose, ngcc_ref_sig_05_sm4th_d3_128s_loose, "sig-05-sm4th-d3-128s-loose:2.25.259066689748369318575966139333157313532", "sig-05-sm4th-d3-128s-loose")
+#endif
+#ifndef NGCC_NO_SIG_05_SM4TH_D3_128F_TIGHT
+NGCC_SIG(sig_05_sm4th_d3_128f_tight, ngcc_ref_sig_05_sm4th_d3_128f_tight, "sig-05-sm4th-d3-128f-tight:2.25.125208512369641343924248593683345325564", "sig-05-sm4th-d3-128f-tight")
 #endif
 #ifndef NGCC_NO_SIG_05_SM4TH_D3_128S_TIGHT
 NGCC_SIG(sig_05_sm4th_d3_128s_tight, ngcc_ref_sig_05_sm4th_d3_128s_tight, "sig-05-sm4th-d3-128s-tight:2.25.260810949973255160887134896576462390248", "sig-05-sm4th-d3-128s-tight")
@@ -50,11 +50,11 @@ NGCC_SIG(sig_05_sm4th_d3_128s_tight, ngcc_ref_sig_05_sm4th_d3_128s_tight, "sig-0
 #ifndef NGCC_NO_SIG_05_SM4TH_EM_D2_128F_LOOSE
 NGCC_SIG(sig_05_sm4th_em_d2_128f_loose, ngcc_ref_sig_05_sm4th_em_d2_128f_loose, "sig-05-sm4th-em-d2-128f-loose:2.25.143543075534957070394906369836076475728", "sig-05-sm4th-em-d2-128f-loose")
 #endif
-#ifndef NGCC_NO_SIG_05_SM4TH_EM_D2_128F_TIGHT
-NGCC_SIG(sig_05_sm4th_em_d2_128f_tight, ngcc_ref_sig_05_sm4th_em_d2_128f_tight, "sig-05-sm4th-em-d2-128f-tight:2.25.175148058671558393758979195211565500169", "sig-05-sm4th-em-d2-128f-tight")
-#endif
 #ifndef NGCC_NO_SIG_05_SM4TH_EM_D2_128S_LOOSE
 NGCC_SIG(sig_05_sm4th_em_d2_128s_loose, ngcc_ref_sig_05_sm4th_em_d2_128s_loose, "sig-05-sm4th-em-d2-128s-loose:2.25.15238385607878626361803815787385125456", "sig-05-sm4th-em-d2-128s-loose")
+#endif
+#ifndef NGCC_NO_SIG_05_SM4TH_EM_D2_128F_TIGHT
+NGCC_SIG(sig_05_sm4th_em_d2_128f_tight, ngcc_ref_sig_05_sm4th_em_d2_128f_tight, "sig-05-sm4th-em-d2-128f-tight:2.25.175148058671558393758979195211565500169", "sig-05-sm4th-em-d2-128f-tight")
 #endif
 #ifndef NGCC_NO_SIG_05_SM4TH_EM_D2_128S_TIGHT
 NGCC_SIG(sig_05_sm4th_em_d2_128s_tight, ngcc_ref_sig_05_sm4th_em_d2_128s_tight, "sig-05-sm4th-em-d2-128s-tight:2.25.204151015234333246593458302948488374095", "sig-05-sm4th-em-d2-128s-tight")
@@ -76,6 +76,12 @@ NGCC_SIG(sig_06_COMPASS_SIG_128, ngcc_ref_sig_06_COMPASS_SIG_128, "sig-06-compas
 #endif
 #ifndef NGCC_NO_SIG_06_COMPASS_SIG_256
 NGCC_SIG(sig_06_COMPASS_SIG_256, ngcc_ref_sig_06_COMPASS_SIG_256, "sig-06-compass-sig-256:2.25.303781779454890761052114979002270946013", "sig-06-compass-sig-256")
+#endif
+#ifndef NGCC_NO_SIG_07_CS_128
+NGCC_SIG(sig_07_CS_128, ngcc_ref_sig_07_CS_128, "sig-07-cs-128:2.25.39652327655205509712973309171448842051", "sig-07-cs-128")
+#endif
+#ifndef NGCC_NO_SIG_07_CS_256
+NGCC_SIG(sig_07_CS_256, ngcc_ref_sig_07_CS_256, "sig-07-cs-256:2.25.298520593955832638127583391308043870306", "sig-07-cs-256")
 #endif
 #ifndef NGCC_NO_SIG_08_DARTS128
 NGCC_SIG(sig_08_DARTS128, ngcc_ref_sig_08_DARTS128, "sig-08-darts128:2.25.164775027472502173662641756824367924124", "sig-08-darts128")
@@ -101,29 +107,29 @@ NGCC_SIG(sig_10_Facto_DSA_128, ngcc_ref_sig_10_Facto_DSA_128, "sig-10-facto-dsa-
 #ifndef NGCC_NO_SIG_10_FACTO_DSA_256
 NGCC_SIG(sig_10_Facto_DSA_256, ngcc_ref_sig_10_Facto_DSA_256, "sig-10-facto-dsa-256:2.25.269578264652410672161763829908891911642", "sig-10-facto-dsa-256")
 #endif
-#ifndef NGCC_NO_SIG_11_FLEXTREE_160F
-NGCC_SIG(sig_11_Flextree_160f, ngcc_ref_sig_11_Flextree_160f, "sig-11-flextree-160f:2.25.232754158544806127122860953641338527712", "sig-11-flextree-160f")
-#endif
 #ifndef NGCC_NO_SIG_11_FLEXTREE_160S
 NGCC_SIG(sig_11_Flextree_160s, ngcc_ref_sig_11_Flextree_160s, "sig-11-flextree-160s:2.25.96945080565893364897050504270584405893", "sig-11-flextree-160s")
 #endif
-#ifndef NGCC_NO_SIG_11_FLEXTREE_256F
-NGCC_SIG(sig_11_Flextree_256f, ngcc_ref_sig_11_Flextree_256f, "sig-11-flextree-256f:2.25.338609402836424188769029111296769921765", "sig-11-flextree-256f")
+#ifndef NGCC_NO_SIG_11_FLEXTREE_160F
+NGCC_SIG(sig_11_Flextree_160f, ngcc_ref_sig_11_Flextree_160f, "sig-11-flextree-160f:2.25.232754158544806127122860953641338527712", "sig-11-flextree-160f")
 #endif
 #ifndef NGCC_NO_SIG_11_FLEXTREE_256S
 NGCC_SIG(sig_11_Flextree_256s, ngcc_ref_sig_11_Flextree_256s, "sig-11-flextree-256s:2.25.131547220524247557721036374907285372254", "sig-11-flextree-256s")
 #endif
-#ifndef NGCC_NO_SIG_12_GALAS_160F
-NGCC_SIG(sig_12_Galas_160F, ngcc_ref_sig_12_Galas_160F, "sig-12-galas-160f:2.25.95034519668275965519551584347064879705", "sig-12-galas-160f")
+#ifndef NGCC_NO_SIG_11_FLEXTREE_256F
+NGCC_SIG(sig_11_Flextree_256f, ngcc_ref_sig_11_Flextree_256f, "sig-11-flextree-256f:2.25.338609402836424188769029111296769921765", "sig-11-flextree-256f")
 #endif
 #ifndef NGCC_NO_SIG_12_GALAS_160S
 NGCC_SIG(sig_12_Galas_160S, ngcc_ref_sig_12_Galas_160S, "sig-12-galas-160s:2.25.187231999369161731169322794989053353317", "sig-12-galas-160s")
 #endif
-#ifndef NGCC_NO_SIG_12_GALAS_256F
-NGCC_SIG(sig_12_Galas_256F, ngcc_ref_sig_12_Galas_256F, "sig-12-galas-256f:2.25.243563429485615094962215491500687925075", "sig-12-galas-256f")
+#ifndef NGCC_NO_SIG_12_GALAS_160F
+NGCC_SIG(sig_12_Galas_160F, ngcc_ref_sig_12_Galas_160F, "sig-12-galas-160f:2.25.95034519668275965519551584347064879705", "sig-12-galas-160f")
 #endif
 #ifndef NGCC_NO_SIG_12_GALAS_256S
 NGCC_SIG(sig_12_Galas_256S, ngcc_ref_sig_12_Galas_256S, "sig-12-galas-256s:2.25.103762106958509074136753077335305536429", "sig-12-galas-256s")
+#endif
+#ifndef NGCC_NO_SIG_12_GALAS_256F
+NGCC_SIG(sig_12_Galas_256F, ngcc_ref_sig_12_Galas_256F, "sig-12-galas-256f:2.25.243563429485615094962215491500687925075", "sig-12-galas-256f")
 #endif
 #ifndef NGCC_NO_SIG_13_GREATWALL128F
 NGCC_SIG(sig_13_GreatWall128f, ngcc_ref_sig_13_GreatWall128f, "sig-13-greatwall128f:2.25.280530395507704687975335145868708789374", "sig-13-greatwall128f")
@@ -227,41 +233,41 @@ NGCC_SIG(sig_24_Sigurd_128, ngcc_ref_sig_24_Sigurd_128, "sig-24-sigurd-128:2.25.
 #ifndef NGCC_NO_SIG_24_SIGURD_256
 NGCC_SIG(sig_24_Sigurd_256, ngcc_ref_sig_24_Sigurd_256, "sig-24-sigurd-256:2.25.190443903206680249148395288835205230569", "sig-24-sigurd-256")
 #endif
-#ifndef NGCC_NO_SIG_SQISIGN2DSQ_L1_EFF_COMPRESSED
-NGCC_SIG(sig_25_SQISign2Dsquare_Level1_eff_compressed, ngcc_ref_sig_25_SQISign2Dsquare_Level1_eff_compressed, "sig-sqisign2dsq-l1-eff-compressed:2.25.266632590180312493127017898277537699592", "sig-sqisign2dsq-l1-eff-compressed")
+#ifndef NGCC_NO_SIG_25_SQISIGN2DSQ_L1_EFF_UNCOMPRESSED
+NGCC_SIG(sig_25_SQISign2Dsquare_Level1_eff_uncompressed, ngcc_ref_sig_25_SQISign2Dsquare_Level1_eff_uncompressed, "sig-25-sqisign2dsq-l1-eff-uncompressed:2.25.211193841391841298397857030122158267583", "sig-25-sqisign2dsq-l1-eff-uncompressed")
 #endif
-#ifndef NGCC_NO_SIG_SQISIGN2DSQ_L1_EFF_UNCOMPRESSED
-NGCC_SIG(sig_25_SQISign2Dsquare_Level1_eff_uncompressed, ngcc_ref_sig_25_SQISign2Dsquare_Level1_eff_uncompressed, "sig-sqisign2dsq-l1-eff-uncompressed:2.25.211193841391841298397857030122158267583", "sig-sqisign2dsq-l1-eff-uncompressed")
+#ifndef NGCC_NO_SIG_25_SQISIGN2DSQ_L1_EFF_COMPRESSED
+NGCC_SIG(sig_25_SQISign2Dsquare_Level1_eff_compressed, ngcc_ref_sig_25_SQISign2Dsquare_Level1_eff_compressed, "sig-25-sqisign2dsq-l1-eff-compressed:2.25.266632590180312493127017898277537699592", "sig-25-sqisign2dsq-l1-eff-compressed")
 #endif
-#ifndef NGCC_NO_SIG_SQISIGN2DSQ_L1_SEC_COMPRESSED
-NGCC_SIG(sig_25_SQISign2Dsquare_Level1_sec_compressed, ngcc_ref_sig_25_SQISign2Dsquare_Level1_sec_compressed, "sig-sqisign2dsq-l1-sec-compressed:2.25.28340059367126997518313021936529862343", "sig-sqisign2dsq-l1-sec-compressed")
+#ifndef NGCC_NO_SIG_25_SQISIGN2DSQ_L1_SEC_UNCOMPRESSED
+NGCC_SIG(sig_25_SQISign2Dsquare_Level1_sec_uncompressed, ngcc_ref_sig_25_SQISign2Dsquare_Level1_sec_uncompressed, "sig-25-sqisign2dsq-l1-sec-uncompressed:2.25.316149803182440500017009390007222283797", "sig-25-sqisign2dsq-l1-sec-uncompressed")
 #endif
-#ifndef NGCC_NO_SIG_SQISIGN2DSQ_L1_SEC_UNCOMPRESSED
-NGCC_SIG(sig_25_SQISign2Dsquare_Level1_sec_uncompressed, ngcc_ref_sig_25_SQISign2Dsquare_Level1_sec_uncompressed, "sig-sqisign2dsq-l1-sec-uncompressed:2.25.316149803182440500017009390007222283797", "sig-sqisign2dsq-l1-sec-uncompressed")
+#ifndef NGCC_NO_SIG_25_SQISIGN2DSQ_L1_SEC_COMPRESSED
+NGCC_SIG(sig_25_SQISign2Dsquare_Level1_sec_compressed, ngcc_ref_sig_25_SQISign2Dsquare_Level1_sec_compressed, "sig-25-sqisign2dsq-l1-sec-compressed:2.25.28340059367126997518313021936529862343", "sig-25-sqisign2dsq-l1-sec-compressed")
 #endif
-#ifndef NGCC_NO_SIG_SQISIGN2DSQ_L2_EFF_COMPRESSED
-NGCC_SIG(sig_25_SQISign2Dsquare_Level2_eff_compressed, ngcc_ref_sig_25_SQISign2Dsquare_Level2_eff_compressed, "sig-sqisign2dsq-l2-eff-compressed:2.25.321911164274016503629587935152176399470", "sig-sqisign2dsq-l2-eff-compressed")
+#ifndef NGCC_NO_SIG_25_SQISIGN2DSQ_L2_EFF_UNCOMPRESSED
+NGCC_SIG(sig_25_SQISign2Dsquare_Level2_eff_uncompressed, ngcc_ref_sig_25_SQISign2Dsquare_Level2_eff_uncompressed, "sig-25-sqisign2dsq-l2-eff-uncompressed:2.25.134604141759139171981707453975224089301", "sig-25-sqisign2dsq-l2-eff-uncompressed")
 #endif
-#ifndef NGCC_NO_SIG_SQISIGN2DSQ_L2_EFF_UNCOMPRESSED
-NGCC_SIG(sig_25_SQISign2Dsquare_Level2_eff_uncompressed, ngcc_ref_sig_25_SQISign2Dsquare_Level2_eff_uncompressed, "sig-sqisign2dsq-l2-eff-uncompressed:2.25.134604141759139171981707453975224089301", "sig-sqisign2dsq-l2-eff-uncompressed")
+#ifndef NGCC_NO_SIG_25_SQISIGN2DSQ_L2_EFF_COMPRESSED
+NGCC_SIG(sig_25_SQISign2Dsquare_Level2_eff_compressed, ngcc_ref_sig_25_SQISign2Dsquare_Level2_eff_compressed, "sig-25-sqisign2dsq-l2-eff-compressed:2.25.321911164274016503629587935152176399470", "sig-25-sqisign2dsq-l2-eff-compressed")
 #endif
-#ifndef NGCC_NO_SIG_SQISIGN2DSQ_L2_SEC_COMPRESSED
-NGCC_SIG(sig_25_SQISign2Dsquare_Level2_sec_compressed, ngcc_ref_sig_25_SQISign2Dsquare_Level2_sec_compressed, "sig-sqisign2dsq-l2-sec-compressed:2.25.56872306392771580028154238036616637848", "sig-sqisign2dsq-l2-sec-compressed")
+#ifndef NGCC_NO_SIG_25_SQISIGN2DSQ_L2_SEC_UNCOMPRESSED
+NGCC_SIG(sig_25_SQISign2Dsquare_Level2_sec_uncompressed, ngcc_ref_sig_25_SQISign2Dsquare_Level2_sec_uncompressed, "sig-25-sqisign2dsq-l2-sec-uncompressed:2.25.222605080872701227733285463773475446386", "sig-25-sqisign2dsq-l2-sec-uncompressed")
 #endif
-#ifndef NGCC_NO_SIG_SQISIGN2DSQ_L2_SEC_UNCOMPRESSED
-NGCC_SIG(sig_25_SQISign2Dsquare_Level2_sec_uncompressed, ngcc_ref_sig_25_SQISign2Dsquare_Level2_sec_uncompressed, "sig-sqisign2dsq-l2-sec-uncompressed:2.25.222605080872701227733285463773475446386", "sig-sqisign2dsq-l2-sec-uncompressed")
+#ifndef NGCC_NO_SIG_25_SQISIGN2DSQ_L2_SEC_COMPRESSED
+NGCC_SIG(sig_25_SQISign2Dsquare_Level2_sec_compressed, ngcc_ref_sig_25_SQISign2Dsquare_Level2_sec_compressed, "sig-25-sqisign2dsq-l2-sec-compressed:2.25.56872306392771580028154238036616637848", "sig-25-sqisign2dsq-l2-sec-compressed")
 #endif
-#ifndef NGCC_NO_SIG_SQISIGN2DSQ_L3_EFF_COMPRESSED
-NGCC_SIG(sig_25_SQISign2Dsquare_Level3_eff_compressed, ngcc_ref_sig_25_SQISign2Dsquare_Level3_eff_compressed, "sig-sqisign2dsq-l3-eff-compressed:2.25.315334796940472102098901712276590393241", "sig-sqisign2dsq-l3-eff-compressed")
+#ifndef NGCC_NO_SIG_25_SQISIGN2DSQ_L3_EFF_UNCOMPRESSED
+NGCC_SIG(sig_25_SQISign2Dsquare_Level3_eff_uncompressed, ngcc_ref_sig_25_SQISign2Dsquare_Level3_eff_uncompressed, "sig-25-sqisign2dsq-l3-eff-uncompressed:2.25.277247538862144809869190238782840792500", "sig-25-sqisign2dsq-l3-eff-uncompressed")
 #endif
-#ifndef NGCC_NO_SIG_SQISIGN2DSQ_L3_EFF_UNCOMPRESSED
-NGCC_SIG(sig_25_SQISign2Dsquare_Level3_eff_uncompressed, ngcc_ref_sig_25_SQISign2Dsquare_Level3_eff_uncompressed, "sig-sqisign2dsq-l3-eff-uncompressed:2.25.277247538862144809869190238782840792500", "sig-sqisign2dsq-l3-eff-uncompressed")
+#ifndef NGCC_NO_SIG_25_SQISIGN2DSQ_L3_EFF_COMPRESSED
+NGCC_SIG(sig_25_SQISign2Dsquare_Level3_eff_compressed, ngcc_ref_sig_25_SQISign2Dsquare_Level3_eff_compressed, "sig-25-sqisign2dsq-l3-eff-compressed:2.25.315334796940472102098901712276590393241", "sig-25-sqisign2dsq-l3-eff-compressed")
 #endif
-#ifndef NGCC_NO_SIG_SQISIGN2DSQ_L3_SEC_COMPRESSED
-NGCC_SIG(sig_25_SQISign2Dsquare_Level3_sec_compressed, ngcc_ref_sig_25_SQISign2Dsquare_Level3_sec_compressed, "sig-sqisign2dsq-l3-sec-compressed:2.25.50541568305263141786378840439530755604", "sig-sqisign2dsq-l3-sec-compressed")
+#ifndef NGCC_NO_SIG_25_SQISIGN2DSQ_L3_SEC_UNCOMPRESSED
+NGCC_SIG(sig_25_SQISign2Dsquare_Level3_sec_uncompressed, ngcc_ref_sig_25_SQISign2Dsquare_Level3_sec_uncompressed, "sig-25-sqisign2dsq-l3-sec-uncompressed:2.25.175745462281789059704941265922586217699", "sig-25-sqisign2dsq-l3-sec-uncompressed")
 #endif
-#ifndef NGCC_NO_SIG_SQISIGN2DSQ_L3_SEC_UNCOMPRESSED
-NGCC_SIG(sig_25_SQISign2Dsquare_Level3_sec_uncompressed, ngcc_ref_sig_25_SQISign2Dsquare_Level3_sec_uncompressed, "sig-sqisign2dsq-l3-sec-uncompressed:2.25.175745462281789059704941265922586217699", "sig-sqisign2dsq-l3-sec-uncompressed")
+#ifndef NGCC_NO_SIG_25_SQISIGN2DSQ_L3_SEC_COMPRESSED
+NGCC_SIG(sig_25_SQISign2Dsquare_Level3_sec_compressed, ngcc_ref_sig_25_SQISign2Dsquare_Level3_sec_compressed, "sig-25-sqisign2dsq-l3-sec-compressed:2.25.50541568305263141786378840439530755604", "sig-25-sqisign2dsq-l3-sec-compressed")
 #endif
 #ifndef NGCC_NO_SIG_26_SQISIGN2D_LVL1
 NGCC_SIG(sig_26_SQIsign2D_lvl1, ngcc_ref_sig_26_SQIsign2D_lvl1, "sig-26-sqisign2d-lvl1:2.25.60800359870511575129033677354940912966", "sig-26-sqisign2d-lvl1")
@@ -293,11 +299,11 @@ NGCC_SIG(sig_28_sydo_256s, ngcc_ref_sig_28_sydo_256s, "sig-28-sydo-256s:2.25.262
 #ifndef NGCC_NO_SIG_30_TRINE_128_BALANCED
 NGCC_SIG(sig_30_TRINE_128_Balanced, ngcc_ref_sig_30_TRINE_128_Balanced, "sig-30-trine-128-balanced:2.25.124665369256119472993340275973592981614", "sig-30-trine-128-balanced")
 #endif
-#ifndef NGCC_NO_SIG_30_TRINE_128_SHORTSIG
-NGCC_SIG(sig_30_TRINE_128_ShortSig, ngcc_ref_sig_30_TRINE_128_ShortSig, "sig-30-trine-128-shortsig:2.25.143893978300860989438400999744564192642", "sig-30-trine-128-shortsig")
-#endif
 #ifndef NGCC_NO_SIG_30_TRINE_256_BALANCED
 NGCC_SIG(sig_30_TRINE_256_Balanced, ngcc_ref_sig_30_TRINE_256_Balanced, "sig-30-trine-256-balanced:2.25.258130480626492235190468475062977850186", "sig-30-trine-256-balanced")
+#endif
+#ifndef NGCC_NO_SIG_30_TRINE_128_SHORTSIG
+NGCC_SIG(sig_30_TRINE_128_ShortSig, ngcc_ref_sig_30_TRINE_128_ShortSig, "sig-30-trine-128-shortsig:2.25.143893978300860989438400999744564192642", "sig-30-trine-128-shortsig")
 #endif
 #ifndef NGCC_NO_SIG_30_TRINE_256_SHORTSIG
 NGCC_SIG(sig_30_TRINE_256_ShortSig, ngcc_ref_sig_30_TRINE_256_ShortSig, "sig-30-trine-256-shortsig:2.25.242251417257383140633620543263230158776", "sig-30-trine-256-shortsig")
@@ -308,15 +314,21 @@ NGCC_SIG(sig_31_TSUOV_128, ngcc_ref_sig_31_TSUOV_128, "sig-31-tsuov-128:2.25.219
 #ifndef NGCC_NO_SIG_31_TSUOV_256
 NGCC_SIG(sig_31_TSUOV_256, ngcc_ref_sig_31_TSUOV_256, "sig-31-tsuov-256:2.25.242231992800664500024290659710553817516", "sig-31-tsuov-256")
 #endif
+#ifndef NGCC_NO_SIG_32_UVW_128
+NGCC_SIG(sig_32_UVW_128, ngcc_ref_sig_32_UVW_128, "sig-32-uvw-128:2.25.66353262858702122102226203185048397379", "sig-32-uvw-128")
+#endif
+#ifndef NGCC_NO_SIG_32_UVW_256
+NGCC_SIG(sig_32_UVW_256, ngcc_ref_sig_32_UVW_256, "sig-32-uvw-256:2.25.261991866072246046119087764159637562634", "sig-32-uvw-256")
+#endif
 #ifndef NGCC_NO_SIG_33_VDOO_128
 NGCC_SIG(sig_33_vdoo_128, ngcc_ref_sig_33_vdoo_128, "sig-33-vdoo-128:2.25.169087863009515254415878478936812692683", "sig-33-vdoo-128")
 #endif
 #ifndef NGCC_NO_SIG_33_VDOO_256
 NGCC_SIG(sig_33_vdoo_256, ngcc_ref_sig_33_vdoo_256, "sig-33-vdoo-256:2.25.324852982733619244006186175030903528255", "sig-33-vdoo-256")
 #endif
-#ifndef NGCC_NO_SIG_34_YUANYANG_1024
-NGCC_SIG(sig_34_yuanyang_1024, ngcc_ref_sig_34_yuanyang_1024, "sig-34-yuanyang-1024:2.25.277676751559714217754782658486597373600", "sig-34-yuanyang-1024")
-#endif
 #ifndef NGCC_NO_SIG_34_YUANYANG_512
 NGCC_SIG(sig_34_yuanyang_512, ngcc_ref_sig_34_yuanyang_512, "sig-34-yuanyang-512:2.25.29040417373213444450297075111615450870", "sig-34-yuanyang-512")
+#endif
+#ifndef NGCC_NO_SIG_34_YUANYANG_1024
+NGCC_SIG(sig_34_yuanyang_1024, ngcc_ref_sig_34_yuanyang_1024, "sig-34-yuanyang-1024:2.25.277676751559714217754782658486597373600", "sig-34-yuanyang-1024")
 #endif

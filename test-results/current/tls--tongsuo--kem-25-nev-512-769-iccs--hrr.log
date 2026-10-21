@@ -1,1 +1,0 @@
-PASS TLS1.3 group=kem-25-nev-512-769-iccs wire_id=0xFE3A pk=615 ct=615 hrr=1 authenticated=1 exporter=match data=bidirectional

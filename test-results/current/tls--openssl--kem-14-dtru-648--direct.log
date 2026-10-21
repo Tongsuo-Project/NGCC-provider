@@ -1,1 +1,0 @@
-PASS TLS1.3 group=kem-14-dtru-648 wire_id=0xFE11 pk=972 ct=729 hrr=0 authenticated=1 exporter=match data=bidirectional

@@ -37,7 +37,7 @@ DEFS := -DPARAMS=2 -DUSE_ICCS
 INSTANCE_CFLAGS := 
 SHIMDEFS := -DNGCC_INSTANCE_HEADER='"kat_test/KEM_AlgorithmInstance.h"'
 NOAUX := 
-$(eval $(call ngcc_instance,kem-25,NEV_1024_769_C_ICCS,kem,256,kem-nev-256,ngcc_ref_kem_25_NEV_1024_769_C_ICCS))
+$(eval $(call ngcc_instance,kem-25,NEV_1024_769_C_ICCS,kem,256,kem-25-nev-256,ngcc_ref_kem_25_NEV_1024_769_C_ICCS))
 
 # NEV / NEV_1024_769_ICCS (256-bit)
 ALGORITHM := NEV
@@ -89,7 +89,7 @@ DEFS := -DPARAMS=1 -DUSE_ICCS
 INSTANCE_CFLAGS := 
 SHIMDEFS := -DNGCC_INSTANCE_HEADER='"kat_test/KEM_AlgorithmInstance.h"'
 NOAUX := 
-$(eval $(call ngcc_instance,kem-25,NEV_512_769_C_ICCS,kem,128,kem-nev-128,ngcc_ref_kem_25_NEV_512_769_C_ICCS))
+$(eval $(call ngcc_instance,kem-25,NEV_512_769_C_ICCS,kem,128,kem-25-nev-128,ngcc_ref_kem_25_NEV_512_769_C_ICCS))
 
 # NEV / NEV_512_769_ICCS (128-bit)
 ALGORITHM := NEV

@@ -1,1 +1,0 @@
-PASS TLS1.3 group=kem-05-bike-v2-128 wire_id=0xFE07 pk=1541 ct=1573 hrr=1 authenticated=1 exporter=match data=bidirectional

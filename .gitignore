@@ -1,6 +1,7 @@
 # Public repository files. Everything else remains local.
 /*
 !/.gitignore
+!/.gitmodules
 !/config
 !/Makefile.in
 !/README.md
@@ -18,9 +19,11 @@ __pycache__/
 *.pyc
 .DS_Store
 
-# Frozen author sources and metadata used by the build, tests and public docs.
+# Provider ABI glue and metadata. Author sources live in the NGCC-candidates submodule.
 /ngcc/*
-!/ngcc/upstream/
+!/ngcc/api/
+!/ngcc/api/**
+!/ngcc/candidates
 !/ngcc/metadata/
 /ngcc/metadata/**
 !/ngcc/metadata/**/
@@ -103,9 +106,11 @@ __pycache__/
 !/ngcc/metadata/sources.sha256
 !/ngcc/metadata/tls-groups.json
 
-# Public result snapshot. Local runs, keys and historical logs stay local.
+# Public JSON summaries. Local runs, logs, keys and historical artifacts stay local.
 /test-results/*
 !/test-results/current/
+/test-results/current/**
+!/test-results/current/*.json
 
 # Private credentials and workstation settings, including inside public folders.
 *.pem

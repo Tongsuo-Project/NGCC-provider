@@ -53,10 +53,17 @@ include make/gmp.mk
         print-provider-sources print-instances print-ref-sources distclean FORCE
 all: ngcc.so
 
-# Verify author bytes before publishing the module. This also works offline.
+# Verify Implementation author bytes in the NGCC-candidates submodule.
+# sources.sha256 lists Implementation paths only; extra Specs/ files in the
+# submodule are not attested and are ignored by this check.
+# Do not fail at Makefile parse time: configure tests copy this file without
+# the submodule present. Check here instead, where ngcc.so already depends.
 verify-sources:
+	@test -d ngcc/candidates/kem-01 || { \
+	    printf '%s\n' 'NGCC-candidates submodule is missing. Run: git submodule update --init'; \
+	    exit 1; }
 	@mkdir -p build
-	@cd ngcc/upstream && $(SHA256) -c ../metadata/sources.sha256 \
+	@cd ngcc/candidates && $(SHA256) -c ../metadata/sources.sha256 \
 	    > ../../build/source-check.log 2>&1 || { \
 	    cat ../../build/source-check.log; exit 1; }
 	@printf '%s\n' 'Author source checksums: OK'

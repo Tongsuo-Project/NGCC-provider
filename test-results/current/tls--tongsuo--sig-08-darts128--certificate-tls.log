@@ -1,6 +1,0 @@
-STEP keygen
-STEP CSR
-STEP certificates
-PASS CERT sig-08-darts128 oid=2.25.164775027472502173662641756824367924124 codecs=DER+PEM CSR=verified chain=verified
-PASS TLS1.3 sigalg=sig-08-darts128 code=0xFE1A group=X25519 chain=verified hostname=verified
-PASS TLS1.3 sigalg=sig-08-darts128 code=0xFE1A group=kem-01-aigis-enc1 chain=verified hostname=verified

@@ -18,7 +18,7 @@ def main():
     results=[]
     digest=hashlib.sha256((ROOT/'ngcc.so').read_bytes()).hexdigest()
     enabled=configured_names()-(set() if args.full else slow_parameters().keys())
-    kinds=[kind for kind,name in [('kem','kem-bw-kem-128'),('sig','sig-01-aigis-sig1')]
+    kinds=[kind for kind,name in [('kem','kem-08-bw-kem-128'),('sig','sig-01-aigis-sig1')]
            if name in enabled]
     for host,prefix in test_hosts().items():
         env=host_environment(prefix)

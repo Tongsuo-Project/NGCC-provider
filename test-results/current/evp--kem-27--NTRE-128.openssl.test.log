@@ -1,8 +1,0 @@
-STEP keygen
-STEP second-keygen
-STEP encapsulate-0
-STEP encapsulate-1
-STEP encapsulate-2
-SIZES pk=972 ct=972 ss=64
-PASS key-material-unchanged
-PASS kem-27-ntre-128

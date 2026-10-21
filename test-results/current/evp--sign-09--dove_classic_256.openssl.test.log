@@ -1,7 +1,0 @@
-STEP keygen
-STEP second-keygen
-STEP sign-0
-STEP sign-1
-SIZES pk=2050352 sig=296 capacity=296
-PASS key-material-unchanged
-PASS sig-09-dove-classic-256

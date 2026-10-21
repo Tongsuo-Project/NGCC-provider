@@ -14,7 +14,7 @@ from ngcc_test_policy import (configured_names, slow_parameters, test_hosts,
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT/'test-results/cli-example'
 ALGORITHM = 'sig-01-aigis-sig1'
-GROUP = 'kem-bw-kem-128'
+GROUP = 'kem-08-bw-kem-128'
 
 
 def main():
@@ -26,7 +26,7 @@ def main():
     module_hash = hashlib.sha256((ROOT/'ngcc.so').read_bytes()).hexdigest()
     prefixes = test_hosts()
     pairs = [(host, host) for host in prefixes]
-    required = {ALGORITHM, 'kem-bw-kem-128'}
+    required = {ALGORITHM, 'kem-08-bw-kem-128'}
     if not required <= configured_names() or (not args.full and required & slow_parameters().keys()):
         results = [{'server': server, 'client': client, 'module_sha256': module_hash,
                     'status': 'skipped', 'reason': 'test-parameters-not-enabled-or-slow'}

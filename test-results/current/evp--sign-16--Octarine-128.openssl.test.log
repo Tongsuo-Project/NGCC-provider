@@ -1,7 +1,0 @@
-STEP keygen
-STEP second-keygen
-STEP sign-0
-STEP sign-1
-SIZES pk=1344 sig=2564 capacity=2564
-PASS key-material-unchanged
-PASS sig-16-octarine-128

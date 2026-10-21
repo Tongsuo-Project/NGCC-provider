@@ -1,1 +1,0 @@
-PASS TLS1.3 group=kem-28-oaep-ntru-1296 wire_id=0xFE3F pk=2430 ct=2494 hrr=1 authenticated=1 exporter=match data=bidirectional

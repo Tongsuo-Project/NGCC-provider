@@ -1,1 +1,0 @@
-PASS TLS1.3 group=kem-zen-128 wire_id=0xFE94 pk=615 ct=512 hrr=1 authenticated=1 exporter=match data=bidirectional

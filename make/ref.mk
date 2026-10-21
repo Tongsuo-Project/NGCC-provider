@@ -16,6 +16,9 @@ $(1): $(2) make/ref.mk $(_recipe) build/config
 	    $$(INSTANCE_INCLUDES) $$(SOURCE_FLAGS) -MMD -MP -c $$< -o $$@
 endef
 
+NGCC_CANDIDATES ?= ngcc/candidates
+NGCC_API ?= ngcc/api
+
 # Arguments: proposal ID, parameter label, kem/sig, strength, EVP name, getter.
 # SRCDIR/SRCS/INC/DEFS/CFLAGS/SHIMDEFS/NOAUX are set by each frozen recipe.
 define ngcc_instance
@@ -24,7 +27,7 @@ endef
 
 define ngcc_instance_rules
 $(eval _recipe := $(lastword $(MAKEFILE_LIST)))
-$(eval _scheme := ngcc/upstream/$(1))
+$(eval _scheme := $(NGCC_CANDIDATES)/$(1))
 $(eval _source := $(_scheme)/src/$(2))
 $(eval _out := build/ngcc/$(1)/$(2))
 $(eval _objects := $(foreach s,$(SRCS),$(_out)/$(subst /,_,$(s)).o))
@@ -33,10 +36,10 @@ $(if $(filter arm64 aarch64,$(ARCH)),$(eval _flags := $(subst -DTARGET_AMD64,-DT
 $(if $(and $(filter arm64 aarch64,$(ARCH)),$(filter kem-01 kem-17 sign-15 sign-34,$(1))),$(eval _flags += -D__IMMINTRIN_H -include stddef.h))
 $(if $(and $(filter Darwin,$(PLATFORM)),$(filter kem-02,$(1))),$(eval _flags += -I$(DARWIN_SDK)/usr/include/malloc -O3))
 $(foreach s,$(SRCS),$(eval $(call ref_source,$(_out)/$(subst /,_,$(s)).o,$(_source)/$(s))))
-$(if $(filter drng.c %/drng.c,$(SRCS)),,$(eval _objects += $(_out)/api_drng.o)$(eval $(call ref_source,$(_out)/api_drng.o,ngcc/upstream/api/drng.c)))
-$(if $(or $(filter auxfunc.c %/auxfunc.c,$(SRCS)),$(filter 1,$(NOAUX))),,$(eval _objects += $(_out)/api_auxfunc.o)$(eval $(call ref_source,$(_out)/api_auxfunc.o,ngcc/upstream/api/auxfunc.c)))
+$(if $(filter drng.c %/drng.c,$(SRCS)),,$(eval _objects += $(_out)/api_drng.o)$(eval $(call ref_source,$(_out)/api_drng.o,$(NGCC_API)/drng.c)))
+$(if $(or $(filter auxfunc.c %/auxfunc.c,$(SRCS)),$(filter 1,$(NOAUX))),,$(eval _objects += $(_out)/api_auxfunc.o)$(eval $(call ref_source,$(_out)/api_auxfunc.o,$(NGCC_API)/auxfunc.c)))
 $(eval _objects += $(_out)/shim.o $(_out)/ref.o)
-$(eval $(call ref_source,$(_out)/shim.o,ngcc/upstream/api/link_shim.c))
+$(eval $(call ref_source,$(_out)/shim.o,$(NGCC_API)/link_shim.c))
 $(eval $(call ref_source,$(_out)/ref.o,src/ngcc_$(if $(filter kem,$(3)),kem,sig)_ref.c))
 
 REF_INSTANCES += $(1)/$(2)
@@ -45,7 +48,7 @@ REF_AUTHOR_SOURCES += $(addprefix $(_source)/,$(SRCS))
 REF_DEPFILES += $(_objects:.o=.d)
 $(if $(filter kem-12 kem-31 sign-25 sign-26 sign-27,$(1)),$(eval GMP_OBJECTS += $(_objects)))
 $(_objects): INSTANCE_FLAGS := $(_flags)
-$(_objects): INSTANCE_INCLUDES := -I$(_source) -Ingcc/upstream/api $(addprefix -I$(_scheme)/,$(patsubst -I%,%,$(INC)))
+$(_objects): INSTANCE_INCLUDES := -I$(_source) -I$(NGCC_API) $(addprefix -I$(_scheme)/,$(patsubst -I%,%,$(INC)))
 $(_out)/shim.o: SOURCE_FLAGS := $(SHIMDEFS) -DNGCC_BUILD_$(if $(filter kem,$(3)),KEM,SIG) \
     '-DNGCC_ID="$(1)"' '-DNGCC_ALG="$(ALGORITHM)"' \
     '-DNGCC_SRCDIR="$(SRCDIR)"' '-DNGCC_VARIANT="Reference_Implementation"'

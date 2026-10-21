@@ -1,8 +1,0 @@
-STEP keygen
-STEP second-keygen
-WARNING deterministic-public-key: author implementation ignores or resets supplied DRNG state
-STEP sign-0
-STEP sign-1
-SIZES pk=64 sig=12114 capacity=12114
-PASS key-material-unchanged
-PASS sig-12-galas-256s

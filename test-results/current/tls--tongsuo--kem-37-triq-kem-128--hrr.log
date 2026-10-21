@@ -1,1 +1,0 @@
-PASS TLS1.3 group=kem-37-triq-kem-128 wire_id=0xFE55 pk=2054 ct=4086 hrr=1 authenticated=1 exporter=match data=bidirectional

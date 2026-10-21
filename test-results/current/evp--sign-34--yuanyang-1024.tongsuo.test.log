@@ -1,7 +1,0 @@
-STEP keygen
-STEP second-keygen
-STEP sign-0
-STEP sign-1
-SIZES pk=1570 sig=1150 capacity=1150
-PASS key-material-unchanged
-PASS sig-34-yuanyang-1024

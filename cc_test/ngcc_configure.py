@@ -27,8 +27,15 @@ def main():
         all_names = {row['provider_name'] for row in rows}
         gmp_names = {row['provider_name'] for row in rows if '-lgmp' in row['LDLIBS'].split()}
         default_names = all_names - gmp_names
-        assert len(gmp_names) == 19 and len(default_names) == 189
-        kem, sig = 'kem-bw-kem-128', 'sig-01-aigis-sig1'
+        assert len(gmp_names) == 19 and len(default_names) == 201
+        x86_linux_names = {
+            'kem-04-bag-piglet-128', 'kem-04-bag-piglet-256',
+            'kem-06-bra-128', 'kem-06-bra-256',
+            'kem-07-brqc-128', 'kem-07-brqc-256',
+            'kem-10-cmultiurag-128', 'kem-10-cmultiurag-256',
+            'sig-32-uvw-128', 'sig-32-uvw-256',
+        }
+        kem, sig = 'kem-08-bw-kem-128', 'sig-01-aigis-sig1'
 
         def configure(options, expected=None, fail=False, environment=None):
             paths = [root/p for p in ('Makefile', 'src/ngcc_config.h', 'configdata.json')]
@@ -56,51 +63,62 @@ def main():
             checks.append({'options': options, 'environment': environment or {},
                            'expected_failure': fail, 'passed': True})
 
-        configure([], default_names)
-        configure(['OPENSSL_PREFIX=/custom/openssl'], default_names)
+        x86_default = x86_linux_names - gmp_names
+        native_linux_x86 = (platform.system() == 'Linux'
+                            and platform.machine() in ('x86_64', 'amd64'))
+        native_default = default_names if native_linux_x86 else default_names - x86_default
+        native_all = all_names if native_linux_x86 else all_names - x86_linux_names
+        configure([], native_default)
+        configure(['linux-x86_64'], default_names)
+        configure(['darwin64-arm64-cc'], default_names - x86_default)
+        configure(['linux-aarch64'], default_names - x86_default)
+        configure(['OPENSSL_PREFIX=/custom/openssl'], native_default)
         data = json.loads((root/'configdata.json').read_text())
         assert data['variables']['OPENSSL_PREFIX'] == '/custom/openssl'
-        configure([], default_names, environment={'OPENSSL_PREFIX': '/custom/tongsuo'})
+        configure([], native_default, environment={'OPENSSL_PREFIX': '/custom/tongsuo'})
         data = json.loads((root/'configdata.json').read_text())
         assert data['variables']['OPENSSL_PREFIX'] == '/custom/tongsuo'
-        configure(['OPENSSL_PREFIX=/custom/openssl'], default_names,
+        configure(['OPENSSL_PREFIX=/custom/openssl'], native_default,
                   environment={'OPENSSL_PREFIX': '/custom/tongsuo'})
         data = json.loads((root/'configdata.json').read_text())
         assert data['variables']['OPENSSL_PREFIX'] == '/custom/openssl'
         for option in ('OPENSSL_PREFIX=', 'OPENSSL_PREFIX=/path with spaces',
                        'TONGSUO_ROOT=/old/path', 'OPENSSL_ROOT=/old/path'):
             configure([option], fail=True)
-        configure(['GMP_ROOT=/installed'], all_names)
-        configure(['GMP_STATIC=/installed/lib/libgmp.a'], all_names)
-        configure([], all_names, environment={'GMP_ROOT': '/installed'})
-        configure([], default_names)
+        configure(['GMP_ROOT=/installed'], native_all)
+        configure(['linux-x86_64', 'GMP_ROOT=/installed'], all_names)
+        configure(['darwin64-arm64-cc', 'GMP_ROOT=/installed'], all_names - x86_linux_names)
+        configure(['GMP_STATIC=/installed/lib/libgmp.a'], native_all)
+        configure([], native_all, environment={'GMP_ROOT': '/installed'})
+        configure([], native_default)
         for option in ('--help', '--list', '--list-algorithms'):
             files = [root/p for p in ('Makefile', 'src/ngcc_config.h', 'configdata.json')]
             before = [p.read_bytes() for p in files]
             configure([option])
             assert before == [p.read_bytes() for p in files]
-        configure(['no-'+kem], default_names-{kem})
-        configure(['no-kem-bw-kem-128', 'no-'+sig], default_names-{kem, sig})
-        configure(['GMP_ROOT=/installed', 'no-'+kem], all_names-{kem})
-        configure(['GMP_ROOT=/installed', *['no-'+name for name in sorted(gmp_names)]], default_names)
-        for name in ('kem-31-ngcc-1', 'sig-sqisign2dsq-l1-eff-compressed',
+        configure(['no-'+kem], native_default-{kem})
+        configure(['no-kem-08-bw-kem-128', 'no-'+sig], native_default-{kem, sig})
+        configure(['GMP_ROOT=/installed', 'no-'+kem], native_all-{kem})
+        configure(['GMP_ROOT=/installed', *['no-'+name for name in sorted(gmp_names)]], native_default)
+        for name in ('kem-31-ngcc-1', 'sig-25-sqisign2dsq-l1-eff-compressed',
                      'sig-26-sqisign2d-lvl1', 'sig-27-sqisigntriangle-lvl1'):
             configure(['enable-'+name], fail=True)
         configure(['enable-'+kem, 'enable-'+sig], {kem, sig})
-        configure(['enable-KEM-BW-KEM-128', 'enable-'+kem], {kem})
+        configure(['enable-KEM-08-BW-KEM-128', 'enable-'+kem], {kem})
         configure(['enable-'+sig, 'no-'+kem], {sig})
-        for alias in ('sig-sqisign2dsq-l1-eff-compressed',):
+        for alias in ('sig-25-sqisign2dsq-l1-eff-compressed',):
             sigs = json.loads((root/'ngcc/metadata/sig-oids.json').read_text())['sigs']
             row = next(r for r in sigs if r['tls_name'] == alias)
             configure(['GMP_ROOT=/installed', 'enable-'+alias], {row['provider_name']})
         configure(['enable-chinith-ublockith-d3-256f'], {'sig-05-ublockith-d3-256f'})
         for name in sorted(all_names):
-            if name.startswith(('sig-sqisign2dsq-', 'kem-bw-kem-', 'kem-nev-',
-                                'kem-rudraksh2-', 'kem-zen-')):
+            if name.startswith(('sig-25-sqisign2dsq-', 'kem-08-bw-kem-',
+                                'kem-25-nev-128', 'kem-25-nev-256',
+                                'kem-34-rudraksh2-', 'kem-41-zen-')):
                 options = ['GMP_ROOT=/installed'] if name in gmp_names else []
                 configure(options+['enable-'+name], {name})
-                configure(['no-'+name], default_names-{name})
-        for options in (['enable-'+kem, 'no-kem-bw-kem-128'], ['enable-unknown'],
+                configure(['no-'+name], native_default-{name})
+        for options in (['enable-'+kem, 'no-kem-08-bw-kem-128'], ['enable-unknown'],
                         ['enable-chinith-ublockith-d3-256f', 'no-sig-05-ublockith-d3-256f'],
                         ['enable-kem-08-bw-kem-c128'],
                         ['enable-sig-25-sqisign2dsquare-level1-eff-compressed'],

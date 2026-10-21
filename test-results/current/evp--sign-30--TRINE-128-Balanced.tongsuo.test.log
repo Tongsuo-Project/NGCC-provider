@@ -1,7 +1,0 @@
-STEP keygen
-STEP second-keygen
-STEP sign-0
-STEP sign-1
-SIZES pk=16004 sig=3156 capacity=3156
-PASS key-material-unchanged
-PASS sig-30-trine-128-balanced

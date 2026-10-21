@@ -1,7 +1,0 @@
-STEP keygen
-STEP second-keygen
-STEP sign-0
-STEP sign-1
-SIZES pk=48 sig=13146 capacity=13332
-PASS key-material-unchanged
-PASS sig-19-phoenix-sm3-192s

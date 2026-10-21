@@ -1,6 +1,0 @@
-STEP keygen
-STEP CSR
-STEP certificates
-PASS CERT sig-13-greatwall192f oid=2.25.265332825541868323914770981689073148099 codecs=DER+PEM CSR=verified chain=verified
-PASS TLS1.3 sigalg=sig-13-greatwall192f code=0xFE2E group=X25519 chain=verified hostname=verified
-PASS TLS1.3 sigalg=sig-13-greatwall192f code=0xFE2E group=kem-01-aigis-enc1 chain=verified hostname=verified

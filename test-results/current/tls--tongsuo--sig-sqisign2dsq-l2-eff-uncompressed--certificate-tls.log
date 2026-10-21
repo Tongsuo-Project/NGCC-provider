@@ -1,6 +1,0 @@
-STEP keygen
-STEP CSR
-STEP certificates
-PASS CERT sig-sqisign2dsq-l2-eff-uncompressed oid=2.25.134604141759139171981707453975224089301 codecs=DER+PEM CSR=verified chain=verified
-PASS TLS1.3 sigalg=sig-sqisign2dsq-l2-eff-uncompressed code=0xFE51 group=X25519 chain=verified hostname=verified
-PASS TLS1.3 sigalg=sig-sqisign2dsq-l2-eff-uncompressed code=0xFE51 group=kem-01-aigis-enc1 chain=verified hostname=verified

@@ -1,3 +1,0 @@
-set(HDX_DIR ${CMAKE_CURRENT_SOURCE_DIR}/hdx)
-
-include(${SELECT_PIKE_VARIANT})

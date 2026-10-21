@@ -1,1 +1,0 @@
-PASS TLS1.3 group=kem-03-bag-loong-256 wire_id=0xFE06 pk=6597 ct=8400 hrr=0 authenticated=1 exporter=match data=bidirectional

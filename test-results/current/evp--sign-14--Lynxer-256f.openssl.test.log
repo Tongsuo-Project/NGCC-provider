@@ -1,7 +1,0 @@
-STEP keygen
-STEP second-keygen
-STEP sign-0
-STEP sign-1
-SIZES pk=64 sig=15097 capacity=15097
-PASS key-material-unchanged
-PASS sig-14-lynxer-256f

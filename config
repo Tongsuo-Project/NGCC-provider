@@ -87,15 +87,15 @@ macOS x86_64 /usr/local/opt/openssl@3, Linux /usr.
 GMP_SOURCE is equivalent to --with-gmp-source. Do not combine it with
 GMP_ROOT or GMP_STATIC. Use GMP_ROOT or GMP_STATIC for an installed static GMP.
 Explicitly enabling a GMP-dependent instance requires one of these paths.
-GMP is only used by selected QIMEN-PIKE, SQISign2Dsquare, SQIsign2D and
-SQIsignTriangle instances (and the excluded CTL build candidate).
+GMP is only used by selected QIMEN-PIKE, SQISign2Dsquare, SQIsign2D,
+SQIsignTriangle and CTL instances.
 GMP_HOST overrides the target triplet for cross compilation.
 
 Examples:
   ./config
   ./config --with-gmp-source=/path/to/gmp-6.3.0
-  ./config enable-kem-bw-kem-128 enable-sig-01-aigis-sig1
-  ./config no-kem-bw-kem-128 no-sig-01-aigis-sig1
+  ./config enable-kem-08-bw-kem-128 enable-sig-01-aigis-sig1
+  ./config no-kem-08-bw-kem-128 no-sig-01-aigis-sig1
   ./config linux-aarch64 CC=aarch64-linux-gnu-gcc LD=aarch64-linux-gnu-ld
 HELP
         exit 0;
@@ -178,6 +178,18 @@ for my $name (sort keys %enable) {
 my @enabled = grep { (!%enable || $enable{$_}) && !$disable{$_}
                     && ($with_gmp || !$gmp{$_}) }
               map { $_->{provider_name} } @$rows;
+# x86 headers or rdtsc: default-on only for linux-x86_64.
+# Explicit enable-NAME still selects them on other targets.
+my %x86_linux = map { $_ => 1 } qw(
+    kem-04-bag-piglet-128 kem-04-bag-piglet-256
+    kem-06-bra-128 kem-06-bra-256
+    kem-07-brqc-128 kem-07-brqc-256
+    kem-10-cmultiurag-128 kem-10-cmultiurag-256
+    sig-32-uvw-128 sig-32-uvw-256
+);
+if ($target ne 'linux-x86_64') {
+    @enabled = grep { $enable{$_} || !$x86_linux{$_} } @enabled;
+}
 die "No algorithms selected\n" unless @enabled;
 
 my %enabled = map { $_ => 1 } @enabled;
@@ -209,5 +221,5 @@ my $configuration = {
 write_file('src/ngcc_config.h', $header);
 write_file('configdata.json', JSON::PP->new->canonical->pretty->encode($configuration));
 write_file('Makefile', $makefile);
-printf "Configured ngcc_provider for %s: %d/%d instances\n", $target, scalar @enabled, scalar @$rows;
+printf "Configured NGCC-provider for %s: %d/%d instances\n", $target, scalar @enabled, scalar @$rows;
 print "Created Makefile, src/ngcc_config.h and configdata.json. Run make.\n";

@@ -1,6 +1,0 @@
-STEP keygen
-STEP CSR
-STEP certificates
-PASS CERT sig-10-facto-dsa-256 oid=2.25.269578264652410672161763829908891911642 codecs=DER+PEM CSR=verified chain=verified
-PASS TLS1.3 sigalg=sig-10-facto-dsa-256 code=0xFE21 group=X25519 chain=verified hostname=verified
-PASS TLS1.3 sigalg=sig-10-facto-dsa-256 code=0xFE21 group=kem-01-aigis-enc1 chain=verified hostname=verified

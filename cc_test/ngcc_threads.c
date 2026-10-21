@@ -12,7 +12,7 @@ static void *worker(void *arg)
     const char *kind = strcmp(test_kind, "both") == 0
                        ? ((uintptr_t)arg < 4 ? "kem" : "sig") : test_kind;
     const char *name = strcmp(kind, "kem") == 0
-                       ? "kem-bw-kem-128" : "sig-01-aigis-sig1";
+                       ? "kem-08-bw-kem-128" : "sig-01-aigis-sig1";
     char *argv[]={(char*)"ngcc_threads",(char*)module_dir,(char*)kind,(char*)name};
     for(int i=0;i<4;i++) if(ngcc_evp_check(4,argv)) return (void*)1;
     return NULL;

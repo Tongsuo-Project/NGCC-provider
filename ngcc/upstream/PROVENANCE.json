@@ -1,5 +1,0 @@
-{
-  "repository": "https://github.com/ngcc-dev/ngcc-harness",
-  "commit": "6a13c278a0cf7a6b4bcee9bc2494932898486c70",
-  "purpose": "Reference build recipes and uniform ABI; algorithm sources extracted from submitter archives, latest author revisions take precedence."
-}

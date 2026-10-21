@@ -9,7 +9,7 @@ DEFS :=
 INSTANCE_CFLAGS := 
 SHIMDEFS := 
 NOAUX := 
-$(eval $(call ngcc_instance,kem-41,ZEN_128,kem,128,kem-zen-128,ngcc_ref_kem_41_ZEN_128))
+$(eval $(call ngcc_instance,kem-41,ZEN_128,kem,128,kem-41-zen-128,ngcc_ref_kem_41_ZEN_128))
 
 # ZEN / ZEN_256 (256-bit)
 ALGORITHM := ZEN
@@ -20,5 +20,5 @@ DEFS :=
 INSTANCE_CFLAGS := 
 SHIMDEFS := 
 NOAUX := 
-$(eval $(call ngcc_instance,kem-41,ZEN_256,kem,256,kem-zen-256,ngcc_ref_kem_41_ZEN_256))
+$(eval $(call ngcc_instance,kem-41,ZEN_256,kem,256,kem-41-zen-256,ngcc_ref_kem_41_ZEN_256))
 

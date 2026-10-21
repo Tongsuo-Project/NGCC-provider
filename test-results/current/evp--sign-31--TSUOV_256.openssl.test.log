@@ -1,7 +1,0 @@
-STEP keygen
-STEP second-keygen
-STEP sign-0
-STEP sign-1
-SIZES pk=2170 sig=2412 capacity=2412
-PASS key-material-unchanged
-PASS sig-31-tsuov-256

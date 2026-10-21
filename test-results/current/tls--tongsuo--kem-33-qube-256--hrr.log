@@ -1,1 +1,0 @@
-PASS TLS1.3 group=kem-33-qube-256 wire_id=0xFE4C pk=10446 ct=10423 hrr=1 authenticated=1 exporter=match data=bidirectional

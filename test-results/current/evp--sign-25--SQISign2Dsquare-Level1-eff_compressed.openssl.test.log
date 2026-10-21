@@ -1,7 +1,0 @@
-STEP keygen
-STEP second-keygen
-STEP sign-0
-STEP sign-1
-SIZES pk=65 sig=168 capacity=168
-PASS key-material-unchanged
-PASS sig-sqisign2dsq-l1-eff-compressed

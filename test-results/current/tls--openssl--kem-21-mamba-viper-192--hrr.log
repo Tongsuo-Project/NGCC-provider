@@ -1,1 +1,0 @@
-PASS TLS1.3 group=kem-21-mamba-viper-192 wire_id=0xFE29 pk=992 ct=1088 hrr=1 authenticated=1 exporter=match data=bidirectional
