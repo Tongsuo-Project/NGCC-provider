@@ -20,23 +20,47 @@ NGCC_KEM(kem_03_BAG_Loong_128, ngcc_ref_kem_03_BAG_Loong_128, "kem-03-bag-loong-
 #ifndef NGCC_NO_KEM_03_BAG_LOONG_256
 NGCC_KEM(kem_03_BAG_Loong_256, ngcc_ref_kem_03_BAG_Loong_256, "kem-03-bag-loong-256", "kem-03-bag-loong-256")
 #endif
+#ifndef NGCC_NO_KEM_04_BAG_PIGLET_128
+NGCC_KEM(kem_04_bag_piglet_128, ngcc_ref_kem_04_bag_piglet_128, "kem-04-bag-piglet-128", "kem-04-bag-piglet-128")
+#endif
+#ifndef NGCC_NO_KEM_04_BAG_PIGLET_256
+NGCC_KEM(kem_04_bag_piglet_256, ngcc_ref_kem_04_bag_piglet_256, "kem-04-bag-piglet-256", "kem-04-bag-piglet-256")
+#endif
 #ifndef NGCC_NO_KEM_05_BIKE_V2_128
 NGCC_KEM(kem_05_BIKE_v2_128, ngcc_ref_kem_05_BIKE_v2_128, "kem-05-bike-v2-128", "kem-05-bike-v2-128")
 #endif
 #ifndef NGCC_NO_KEM_05_BIKE_V2_256
 NGCC_KEM(kem_05_BIKE_v2_256, ngcc_ref_kem_05_BIKE_v2_256, "kem-05-bike-v2-256", "kem-05-bike-v2-256")
 #endif
-#ifndef NGCC_NO_KEM_BW_KEM_128
-NGCC_KEM(kem_08_BW_KEM_C128, ngcc_ref_kem_08_BW_KEM_C128, "kem-bw-kem-128", "kem-bw-kem-128")
+#ifndef NGCC_NO_KEM_06_BRA_128
+NGCC_KEM(kem_06_BRA_128, ngcc_ref_kem_06_BRA_128, "kem-06-bra-128", "kem-06-bra-128")
 #endif
-#ifndef NGCC_NO_KEM_BW_KEM_256
-NGCC_KEM(kem_08_BW_KEM_C256, ngcc_ref_kem_08_BW_KEM_C256, "kem-bw-kem-256", "kem-bw-kem-256")
+#ifndef NGCC_NO_KEM_06_BRA_256
+NGCC_KEM(kem_06_BRA_256, ngcc_ref_kem_06_BRA_256, "kem-06-bra-256", "kem-06-bra-256")
+#endif
+#ifndef NGCC_NO_KEM_07_BRQC_128
+NGCC_KEM(kem_07_BRQC_128, ngcc_ref_kem_07_BRQC_128, "kem-07-brqc-128", "kem-07-brqc-128")
+#endif
+#ifndef NGCC_NO_KEM_07_BRQC_256
+NGCC_KEM(kem_07_BRQC_256, ngcc_ref_kem_07_BRQC_256, "kem-07-brqc-256", "kem-07-brqc-256")
+#endif
+#ifndef NGCC_NO_KEM_08_BW_KEM_128
+NGCC_KEM(kem_08_BW_KEM_C128, ngcc_ref_kem_08_BW_KEM_C128, "kem-08-bw-kem-128", "kem-08-bw-kem-128")
+#endif
+#ifndef NGCC_NO_KEM_08_BW_KEM_256
+NGCC_KEM(kem_08_BW_KEM_C256, ngcc_ref_kem_08_BW_KEM_C256, "kem-08-bw-kem-256", "kem-08-bw-kem-256")
 #endif
 #ifndef NGCC_NO_KEM_09_CHEETAH128
 NGCC_KEM(kem_09_Cheetah128, ngcc_ref_kem_09_Cheetah128, "kem-09-cheetah128", "kem-09-cheetah128")
 #endif
 #ifndef NGCC_NO_KEM_09_CHEETAH256
 NGCC_KEM(kem_09_Cheetah256, ngcc_ref_kem_09_Cheetah256, "kem-09-cheetah256", "kem-09-cheetah256")
+#endif
+#ifndef NGCC_NO_KEM_10_CMULTIURAG_128
+NGCC_KEM(kem_10_CMultiURAG_128, ngcc_ref_kem_10_CMultiURAG_128, "kem-10-cmultiurag-128", "kem-10-cmultiurag-128")
+#endif
+#ifndef NGCC_NO_KEM_10_CMULTIURAG_256
+NGCC_KEM(kem_10_CMultiURAG_256, ngcc_ref_kem_10_CMultiURAG_256, "kem-10-cmultiurag-256", "kem-10-cmultiurag-256")
 #endif
 #ifndef NGCC_NO_KEM_11_COMPASS_KEM_128
 NGCC_KEM(kem_11_COMPASS_KEM_128, ngcc_ref_kem_11_COMPASS_KEM_128, "kem-11-compass-kem-128", "kem-11-compass-kem-128")
@@ -50,29 +74,29 @@ NGCC_KEM(kem_13_DKEM_128, ngcc_ref_kem_13_DKEM_128, "kem-13-dkem-128", "kem-13-d
 #ifndef NGCC_NO_KEM_13_DKEM_256
 NGCC_KEM(kem_13_DKEM_256, ngcc_ref_kem_13_DKEM_256, "kem-13-dkem-256", "kem-13-dkem-256")
 #endif
-#ifndef NGCC_NO_KEM_14_DTRU_1024
-NGCC_KEM(kem_14_DTRU_1024, ngcc_ref_kem_14_DTRU_1024, "kem-14-dtru-1024", "kem-14-dtru-1024")
-#endif
-#ifndef NGCC_NO_KEM_14_DTRU_1024_PACK_PK
-NGCC_KEM(kem_14_DTRU_1024_PACK_PK, ngcc_ref_kem_14_DTRU_1024_PACK_PK, "kem-14-dtru-1024-pack-pk", "kem-14-dtru-1024-pack-pk")
-#endif
 #ifndef NGCC_NO_KEM_14_DTRU_648
 NGCC_KEM(kem_14_DTRU_648, ngcc_ref_kem_14_DTRU_648, "kem-14-dtru-648", "kem-14-dtru-648")
-#endif
-#ifndef NGCC_NO_KEM_14_DTRU_648_PACK_PK
-NGCC_KEM(kem_14_DTRU_648_PACK_PK, ngcc_ref_kem_14_DTRU_648_PACK_PK, "kem-14-dtru-648-pack-pk", "kem-14-dtru-648-pack-pk")
 #endif
 #ifndef NGCC_NO_KEM_14_DTRU_768
 NGCC_KEM(kem_14_DTRU_768, ngcc_ref_kem_14_DTRU_768, "kem-14-dtru-768", "kem-14-dtru-768")
 #endif
-#ifndef NGCC_NO_KEM_14_DTRU_768_PACK_PK
-NGCC_KEM(kem_14_DTRU_768_PACK_PK, ngcc_ref_kem_14_DTRU_768_PACK_PK, "kem-14-dtru-768-pack-pk", "kem-14-dtru-768-pack-pk")
+#ifndef NGCC_NO_KEM_14_DTRU_1024
+NGCC_KEM(kem_14_DTRU_1024, ngcc_ref_kem_14_DTRU_1024, "kem-14-dtru-1024", "kem-14-dtru-1024")
 #endif
 #ifndef NGCC_NO_KEM_14_DTRU_LIGHT
 NGCC_KEM(kem_14_DTRU_Light, ngcc_ref_kem_14_DTRU_Light, "kem-14-dtru-light", "kem-14-dtru-light")
 #endif
 #ifndef NGCC_NO_KEM_14_DTRU_PRIME
 NGCC_KEM(kem_14_DTRU_Prime, ngcc_ref_kem_14_DTRU_Prime, "kem-14-dtru-prime", "kem-14-dtru-prime")
+#endif
+#ifndef NGCC_NO_KEM_14_DTRU_648_PACK_PK
+NGCC_KEM(kem_14_DTRU_648_PACK_PK, ngcc_ref_kem_14_DTRU_648_PACK_PK, "kem-14-dtru-648-pack-pk", "kem-14-dtru-648-pack-pk")
+#endif
+#ifndef NGCC_NO_KEM_14_DTRU_768_PACK_PK
+NGCC_KEM(kem_14_DTRU_768_PACK_PK, ngcc_ref_kem_14_DTRU_768_PACK_PK, "kem-14-dtru-768-pack-pk", "kem-14-dtru-768-pack-pk")
+#endif
+#ifndef NGCC_NO_KEM_14_DTRU_1024_PACK_PK
+NGCC_KEM(kem_14_DTRU_1024_PACK_PK, ngcc_ref_kem_14_DTRU_1024_PACK_PK, "kem-14-dtru-1024-pack-pk", "kem-14-dtru-1024-pack-pk")
 #endif
 #ifndef NGCC_NO_KEM_15_FLIT128_REF
 NGCC_KEM(kem_15_FLIT128_REF, ngcc_ref_kem_15_FLIT128_REF, "kem-15-flit128-ref", "kem-15-flit128-ref")
@@ -164,29 +188,29 @@ NGCC_KEM(kem_24_scabbard128, ngcc_ref_kem_24_scabbard128, "kem-24-scabbard128", 
 #ifndef NGCC_NO_KEM_24_SCABBARD256
 NGCC_KEM(kem_24_scabbard256, ngcc_ref_kem_24_scabbard256, "kem-24-scabbard256", "kem-24-scabbard256")
 #endif
-#ifndef NGCC_NO_KEM_25_NEV_1024_1409_ICCS
-NGCC_KEM(kem_25_NEV_1024_1409_ICCS, ngcc_ref_kem_25_NEV_1024_1409_ICCS, "kem-25-nev-1024-1409-iccs", "kem-25-nev-1024-1409-iccs")
+#ifndef NGCC_NO_KEM_25_NEV_128
+NGCC_KEM(kem_25_NEV_512_769_C_ICCS, ngcc_ref_kem_25_NEV_512_769_C_ICCS, "kem-25-nev-128", "kem-25-nev-128")
 #endif
-#ifndef NGCC_NO_KEM_25_NEV_1024_3329_ICCS
-NGCC_KEM(kem_25_NEV_1024_3329_ICCS, ngcc_ref_kem_25_NEV_1024_3329_ICCS, "kem-25-nev-1024-3329-iccs", "kem-25-nev-1024-3329-iccs")
-#endif
-#ifndef NGCC_NO_KEM_NEV_256
-NGCC_KEM(kem_25_NEV_1024_769_C_ICCS, ngcc_ref_kem_25_NEV_1024_769_C_ICCS, "kem-nev-256", "kem-nev-256")
-#endif
-#ifndef NGCC_NO_KEM_25_NEV_1024_769_ICCS
-NGCC_KEM(kem_25_NEV_1024_769_ICCS, ngcc_ref_kem_25_NEV_1024_769_ICCS, "kem-25-nev-1024-769-iccs", "kem-25-nev-1024-769-iccs")
+#ifndef NGCC_NO_KEM_25_NEV_256
+NGCC_KEM(kem_25_NEV_1024_769_C_ICCS, ngcc_ref_kem_25_NEV_1024_769_C_ICCS, "kem-25-nev-256", "kem-25-nev-256")
 #endif
 #ifndef NGCC_NO_KEM_25_NEV_512_1409_ICCS
 NGCC_KEM(kem_25_NEV_512_1409_ICCS, ngcc_ref_kem_25_NEV_512_1409_ICCS, "kem-25-nev-512-1409-iccs", "kem-25-nev-512-1409-iccs")
 #endif
+#ifndef NGCC_NO_KEM_25_NEV_1024_1409_ICCS
+NGCC_KEM(kem_25_NEV_1024_1409_ICCS, ngcc_ref_kem_25_NEV_1024_1409_ICCS, "kem-25-nev-1024-1409-iccs", "kem-25-nev-1024-1409-iccs")
+#endif
 #ifndef NGCC_NO_KEM_25_NEV_512_3329_ICCS
 NGCC_KEM(kem_25_NEV_512_3329_ICCS, ngcc_ref_kem_25_NEV_512_3329_ICCS, "kem-25-nev-512-3329-iccs", "kem-25-nev-512-3329-iccs")
 #endif
-#ifndef NGCC_NO_KEM_NEV_128
-NGCC_KEM(kem_25_NEV_512_769_C_ICCS, ngcc_ref_kem_25_NEV_512_769_C_ICCS, "kem-nev-128", "kem-nev-128")
+#ifndef NGCC_NO_KEM_25_NEV_1024_3329_ICCS
+NGCC_KEM(kem_25_NEV_1024_3329_ICCS, ngcc_ref_kem_25_NEV_1024_3329_ICCS, "kem-25-nev-1024-3329-iccs", "kem-25-nev-1024-3329-iccs")
 #endif
 #ifndef NGCC_NO_KEM_25_NEV_512_769_ICCS
 NGCC_KEM(kem_25_NEV_512_769_ICCS, ngcc_ref_kem_25_NEV_512_769_ICCS, "kem-25-nev-512-769-iccs", "kem-25-nev-512-769-iccs")
+#endif
+#ifndef NGCC_NO_KEM_25_NEV_1024_769_ICCS
+NGCC_KEM(kem_25_NEV_1024_769_ICCS, ngcc_ref_kem_25_NEV_1024_769_ICCS, "kem-25-nev-1024-769-iccs", "kem-25-nev-1024-769-iccs")
 #endif
 #ifndef NGCC_NO_KEM_26_HQC_128
 NGCC_KEM(kem_26_HQC_128, ngcc_ref_kem_26_HQC_128, "kem-26-hqc-128", "kem-26-hqc-128")
@@ -200,11 +224,11 @@ NGCC_KEM(kem_27_NTRE_128, ngcc_ref_kem_27_NTRE_128, "kem-27-ntre-128", "kem-27-n
 #ifndef NGCC_NO_KEM_27_NTRE_256
 NGCC_KEM(kem_27_NTRE_256, ngcc_ref_kem_27_NTRE_256, "kem-27-ntre-256", "kem-27-ntre-256")
 #endif
-#ifndef NGCC_NO_KEM_28_OAEP_NTRU_1296
-NGCC_KEM(kem_28_OAEP_NTRU_1296, ngcc_ref_kem_28_OAEP_NTRU_1296, "kem-28-oaep-ntru-1296", "kem-28-oaep-ntru-1296")
-#endif
 #ifndef NGCC_NO_KEM_28_OAEP_NTRU_648
 NGCC_KEM(kem_28_OAEP_NTRU_648, ngcc_ref_kem_28_OAEP_NTRU_648, "kem-28-oaep-ntru-648", "kem-28-oaep-ntru-648")
+#endif
+#ifndef NGCC_NO_KEM_28_OAEP_NTRU_1296
+NGCC_KEM(kem_28_OAEP_NTRU_1296, ngcc_ref_kem_28_OAEP_NTRU_1296, "kem-28-oaep-ntru-1296", "kem-28-oaep-ntru-1296")
 #endif
 #ifndef NGCC_NO_KEM_29_POLARKEM_128
 NGCC_KEM(kem_29_PolarKEM_128, ngcc_ref_kem_29_PolarKEM_128, "kem-29-polarkem-128", "kem-29-polarkem-128")
@@ -242,11 +266,11 @@ NGCC_KEM(kem_33_qube_192, ngcc_ref_kem_33_qube_192, "kem-33-qube-192", "kem-33-q
 #ifndef NGCC_NO_KEM_33_QUBE_256
 NGCC_KEM(kem_33_qube_256, ngcc_ref_kem_33_qube_256, "kem-33-qube-256", "kem-33-qube-256")
 #endif
-#ifndef NGCC_NO_KEM_RUDRAKSH2_128
-NGCC_KEM(kem_34_lwekem128, ngcc_ref_kem_34_lwekem128, "kem-rudraksh2-128", "kem-rudraksh2-128")
+#ifndef NGCC_NO_KEM_34_RUDRAKSH2_128
+NGCC_KEM(kem_34_lwekem128, ngcc_ref_kem_34_lwekem128, "kem-34-rudraksh2-128", "kem-34-rudraksh2-128")
 #endif
-#ifndef NGCC_NO_KEM_RUDRAKSH2_256
-NGCC_KEM(kem_34_lwekem256, ngcc_ref_kem_34_lwekem256, "kem-rudraksh2-256", "kem-rudraksh2-256")
+#ifndef NGCC_NO_KEM_34_RUDRAKSH2_256
+NGCC_KEM(kem_34_lwekem256, ngcc_ref_kem_34_lwekem256, "kem-34-rudraksh2-256", "kem-34-rudraksh2-256")
 #endif
 #ifndef NGCC_NO_KEM_35_SCLOUDPLUS_128_AES_PACKED10
 NGCC_KEM(kem_35_Scloudplus_128_AES_packed10, ngcc_ref_kem_35_Scloudplus_128_AES_packed10, "kem-35-scloudplus-128-aes-packed10", "kem-35-scloudplus-128-aes-packed10")
@@ -290,15 +314,15 @@ NGCC_KEM(kem_39_WeaverKEM_128, ngcc_ref_kem_39_WeaverKEM_128, "kem-39-weaverkem-
 #ifndef NGCC_NO_KEM_39_WEAVERKEM_256
 NGCC_KEM(kem_39_WeaverKEM_256, ngcc_ref_kem_39_WeaverKEM_256, "kem-39-weaverkem-256", "kem-39-weaverkem-256")
 #endif
-#ifndef NGCC_NO_KEM_40_YUANYANG_1024
-NGCC_KEM(kem_40_yuanyang_1024, ngcc_ref_kem_40_yuanyang_1024, "kem-40-yuanyang-1024", "kem-40-yuanyang-1024")
-#endif
 #ifndef NGCC_NO_KEM_40_YUANYANG_512
 NGCC_KEM(kem_40_yuanyang_512, ngcc_ref_kem_40_yuanyang_512, "kem-40-yuanyang-512", "kem-40-yuanyang-512")
 #endif
-#ifndef NGCC_NO_KEM_ZEN_128
-NGCC_KEM(kem_41_ZEN_128, ngcc_ref_kem_41_ZEN_128, "kem-zen-128", "kem-zen-128")
+#ifndef NGCC_NO_KEM_40_YUANYANG_1024
+NGCC_KEM(kem_40_yuanyang_1024, ngcc_ref_kem_40_yuanyang_1024, "kem-40-yuanyang-1024", "kem-40-yuanyang-1024")
 #endif
-#ifndef NGCC_NO_KEM_ZEN_256
-NGCC_KEM(kem_41_ZEN_256, ngcc_ref_kem_41_ZEN_256, "kem-zen-256", "kem-zen-256")
+#ifndef NGCC_NO_KEM_41_ZEN_128
+NGCC_KEM(kem_41_ZEN_128, ngcc_ref_kem_41_ZEN_128, "kem-41-zen-128", "kem-41-zen-128")
+#endif
+#ifndef NGCC_NO_KEM_41_ZEN_256
+NGCC_KEM(kem_41_ZEN_256, ngcc_ref_kem_41_ZEN_256, "kem-41-zen-256", "kem-41-zen-256")
 #endif

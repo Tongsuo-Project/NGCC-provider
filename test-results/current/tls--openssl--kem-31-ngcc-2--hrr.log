@@ -1,1 +1,0 @@
-PASS TLS1.3 group=kem-31-ngcc-2 wire_id=0xFE47 pk=592 ct=882 hrr=1 authenticated=1 exporter=match data=bidirectional

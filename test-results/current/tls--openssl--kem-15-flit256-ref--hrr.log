@@ -1,1 +1,0 @@
-PASS TLS1.3 group=kem-15-flit256-ref wire_id=0xFE18 pk=1229 ct=1024 hrr=1 authenticated=1 exporter=match data=bidirectional

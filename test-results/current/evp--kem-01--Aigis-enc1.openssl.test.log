@@ -1,8 +1,0 @@
-STEP keygen
-STEP second-keygen
-STEP encapsulate-0
-STEP encapsulate-1
-STEP encapsulate-2
-SIZES pk=656 ct=896 ss=16
-PASS key-material-unchanged
-PASS kem-01-aigis-enc1

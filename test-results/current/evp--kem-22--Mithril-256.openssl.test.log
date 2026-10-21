@@ -1,8 +1,0 @@
-STEP keygen
-STEP second-keygen
-STEP encapsulate-0
-STEP encapsulate-1
-STEP encapsulate-2
-SIZES pk=1648 ct=1712 ss=32
-PASS key-material-unchanged
-PASS kem-22-mithril-256

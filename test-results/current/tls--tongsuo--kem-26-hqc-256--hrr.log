@@ -1,1 +1,0 @@
-PASS TLS1.3 group=kem-26-hqc-256 wire_id=0xFE3C pk=6844 ct=9084 hrr=1 authenticated=1 exporter=match data=bidirectional

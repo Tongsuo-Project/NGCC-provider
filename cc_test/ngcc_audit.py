@@ -27,7 +27,7 @@ def main():
     expected=set(policy['included'])
     assert len(expected)==len(rows)==len({r['provider_name'] for r in rows})
     for row in rows:
-        assert re.fullmatch(row['type']+r'-[a-z0-9]+(?:-[a-z0-9]+)*',row['provider_name'])
+        assert re.fullmatch(row['type']+r'-\d{2}-[a-z0-9]+(?:-[a-z0-9]+)*',row['provider_name'])
         assert row['names'].split(':')[0]==row['provider_name']
         assert len(row['names'].split(':'))==len(set(row['names'].split(':')))
         assert row['symbol'].startswith('ngcc_ref_'+row['type']+'_')
@@ -55,15 +55,15 @@ def main():
         assert r['security_bits'] in (128,160,192,256) and r['id']!='sign-29'
         assert 'SHAKE' not in r['label'].upper()
         assert not re.search(r'-m(?:avx|sse)|-march=native',r['CFLAGS']+' '+r['CXXFLAGS'])
-        folder=ROOT/'ngcc/upstream'/r['id']
+        folder=ROOT/'ngcc/candidates'/r['id']
         for name in shlex.split(r['SRCS']):
             p=(folder/'src'/r['label']/name).resolve()
-            rel=str(p.relative_to(ROOT/'ngcc/upstream'))
+            rel=str(p.relative_to(ROOT/'ngcc/candidates'))
             assert rel in attested,rel+' is not attested author source'
             assert not re.search(r'(?i)(optimized_implementation|additional_implementation|/avx\d*/)',rel),rel
             compiled_sources.add(rel)
     make_sources=subprocess.check_output(['make','-s','print-ref-sources'],cwd=ROOT,text=True).splitlines()
-    assert {str((ROOT/p).resolve().relative_to(ROOT/'ngcc/upstream')) for p in make_sources}==compiled_sources
+    assert {str((ROOT/p).resolve().relative_to(ROOT/'ngcc/candidates')) for p in make_sources}==compiled_sources
     groups=json.loads((meta/'tls-groups.json').read_text())['groups']
     sigs=json.loads((meta/'sig-oids.json').read_text())['sigs']
     total_sigs=len(sigs)
@@ -92,7 +92,7 @@ def main():
     assert all(g['tls_name']==g['provider_name'] for g in sigs)
     assert all(len(g['tls_name'])<40 for g in sigs)
     assert all(g['enabled']==(g['public_key_bytes']<=65529 and g['ciphertext_bytes']<=65521) for g in groups)
-    assert all(g['tls_enabled']==(g['sig_capacity']<=65535) for g in sigs)
+    assert all(g['tls_enabled']==(g['sig_capacity']<=65535 and g['public_key_bytes']<=16777215) for g in sigs)
     assert not (ROOT/'src/ngcc_ngcc_provider.c').exists()
     assert not (ROOT/'src/ngcc_algorithms.inc').exists()
     assert not list((ROOT/'build/ngcc').glob('*/*/bridge.c'))
@@ -174,7 +174,7 @@ def main():
         assert passed|skipped==wanted,('Missing test results',wanted-passed-skipped)
         assert len(tests)==len(wanted) and all(t['status']=='passed' or allowed_skip(t) for t in tests)
         threads=json.loads((ROOT/'test-results/threads.json').read_text())
-        samples={'kem':'kem-bw-kem-128','sig':'sig-01-aigis-sig1'}
+        samples={'kem':'kem-08-bw-kem-128','sig':'sig-01-aigis-sig1'}
         tested_kinds=[kind for kind,name in samples.items() if name in enabled and name not in slow]
         assert {t['host'] for t in threads if t['module_sha256']==digest}==set(versions)
         if tested_kinds:

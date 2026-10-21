@@ -1,1 +1,0 @@
-PASS TLS1.3 group=kem-28-oaep-ntru-648 wire_id=0xFE40 pk=1053 ct=1085 hrr=0 authenticated=1 exporter=match data=bidirectional

@@ -1,6 +1,0 @@
-STEP keygen
-STEP CSR
-STEP certificates
-PASS CERT sig-24-sigurd-128 oid=2.25.45144071437472681357875146951547614396 codecs=DER+PEM CSR=verified chain=verified
-PASS TLS1.3 sigalg=sig-24-sigurd-128 code=0xFE4A group=X25519 chain=verified hostname=verified
-PASS TLS1.3 sigalg=sig-24-sigurd-128 code=0xFE4A group=kem-01-aigis-enc1 chain=verified hostname=verified

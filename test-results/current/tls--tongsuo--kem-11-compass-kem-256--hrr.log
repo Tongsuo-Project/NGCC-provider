@@ -1,1 +1,0 @@
-PASS TLS1.3 group=kem-11-compass-kem-256 wire_id=0xFE0C pk=1312 ct=1472 hrr=1 authenticated=1 exporter=match data=bidirectional

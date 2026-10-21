@@ -1,7 +1,0 @@
-STEP keygen
-PASS legacy-PKCS8 sign-verify; malformed-private-key-length rejected
-STEP CSR
-STEP certificates
-PASS CERT sig-01-aigis-sig1 oid=2.25.47988325052588874334723035146394065753 codecs=DER+PEM CSR=verified chain=verified
-PASS TLS1.3 sigalg=sig-01-aigis-sig1 code=0xFE00 group=X25519 chain=verified hostname=verified
-PASS TLS1.3 sigalg=sig-01-aigis-sig1 code=0xFE00 group=kem-01-aigis-enc1 chain=verified hostname=verified

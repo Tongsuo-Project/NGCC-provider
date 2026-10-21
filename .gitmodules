@@ -1,0 +1,3 @@
+[submodule "NGCC-candidates"]
+	path = ngcc/candidates
+	url = https://github.com/Tongsuo-Project/NGCC-candidates.git

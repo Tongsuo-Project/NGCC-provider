@@ -1,0 +1,10 @@
+{
+  "author_sources": "https://github.com/Tongsuo-Project/NGCC-candidates",
+  "submodule_path": "ngcc/candidates",
+  "submodule_commit": "017db0899b4a0b1e40d06bf5fd874bf53d5ef279",
+  "abi_glue": "ngcc/api",
+  "prior_harness_snapshot": {
+    "repository": "https://github.com/ngcc-dev/ngcc-harness",
+    "commit": "6a13c278a0cf7a6b4bcee9bc2494932898486c70"
+  }
+}

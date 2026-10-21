@@ -1,1 +1,0 @@
-PASS TLS1.3 group=kem-36-trike-1 wire_id=0xFE53 pk=1212 ct=2408 hrr=1 authenticated=1 exporter=match data=bidirectional

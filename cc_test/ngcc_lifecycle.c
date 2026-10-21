@@ -293,8 +293,8 @@ int main(int argc, char **argv)
     kems = OSSL_PROVIDER_query_operation(provider, OSSL_OP_KEM, &no_cache);
     sigs = OSSL_PROVIDER_query_operation(provider, OSSL_OP_SIGNATURE, &no_cache);
     if (strcmp(kind, "sig") != 0)
-        CHECK(lifecycle(provctx, algorithm(keys, "kem-bw-kem-128"),
-                        algorithm(kems, "kem-bw-kem-128"), 1), "KEM lifecycle");
+        CHECK(lifecycle(provctx, algorithm(keys, "kem-08-bw-kem-128"),
+                        algorithm(kems, "kem-08-bw-kem-128"), 1), "KEM lifecycle");
     if (strcmp(kind, "kem") != 0)
         CHECK(lifecycle(provctx, algorithm(keys, "sig-01-aigis-sig1"),
                         algorithm(sigs, "sig-01-aigis-sig1"), 0), "sig lifecycle");

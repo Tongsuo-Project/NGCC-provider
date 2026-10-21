@@ -1,1 +1,0 @@
-include(${SELECT_PIKE_VARIANT})

@@ -1,6 +1,0 @@
-STEP keygen
-STEP CSR
-STEP certificates
-PASS CERT sig-30-trine-256-shortsig oid=2.25.242251417257383140633620543263230158776 codecs=DER+PEM CSR=verified chain=verified
-PASS TLS1.3 sigalg=sig-30-trine-256-shortsig code=0xFE64 group=X25519 chain=verified hostname=verified
-PASS TLS1.3 sigalg=sig-30-trine-256-shortsig code=0xFE64 group=kem-01-aigis-enc1 chain=verified hostname=verified

@@ -1,6 +1,0 @@
-STEP keygen
-STEP CSR
-STEP certificates
-PASS CERT sig-03-cedrusc-160f oid=2.25.98363055422423011881481500595339179664 codecs=DER+PEM CSR=verified chain=verified
-PASS TLS1.3 sigalg=sig-03-cedrusc-160f code=0xFE04 group=X25519 chain=verified hostname=verified
-PASS TLS1.3 sigalg=sig-03-cedrusc-160f code=0xFE04 group=kem-01-aigis-enc1 chain=verified hostname=verified

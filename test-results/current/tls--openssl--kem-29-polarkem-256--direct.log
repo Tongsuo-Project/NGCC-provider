@@ -1,1 +1,0 @@
-PASS TLS1.3 group=kem-29-polarkem-256 wire_id=0xFE42 pk=2048 ct=1280 hrr=0 authenticated=1 exporter=match data=bidirectional

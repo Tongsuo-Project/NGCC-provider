@@ -48,7 +48,7 @@
     "SRCS": "api/KEM_AlgorithmInstance.c backend/ccakem.c backend/cpapke.c backend/hamming.c backend/ntt_2s3t.c backend/poly.c backend/randombytes.c backend/zetas.c symmetric/auxfunc.c symmetric/drng.c",
     "INC": "-Isrc/Amoeba128/symmetric -Isrc/Amoeba128/backend -Isrc/Amoeba128/api",
     "DEFS": "-DSECURITY_LEVEL=128",
-    "CFLAGS": "",
+    "CFLAGS": "-O3",
     "CXXFLAGS": "",
     "SHIMDEFS": "-DNGCC_INSTANCE_HEADER='\"api/KEM_AlgorithmInstance.h\"' -DNGCC_NO_DRNG",
     "LDLIBS": "",
@@ -68,7 +68,7 @@
     "SRCS": "api/KEM_AlgorithmInstance.c backend/ccakem.c backend/cpapke.c backend/hamming.c backend/ntt_2s3t.c backend/poly.c backend/randombytes.c backend/zetas.c symmetric/auxfunc.c symmetric/drng.c",
     "INC": "-Isrc/Amoeba192/symmetric -Isrc/Amoeba192/backend -Isrc/Amoeba192/api",
     "DEFS": "-DSECURITY_LEVEL=192",
-    "CFLAGS": "",
+    "CFLAGS": "-O3",
     "CXXFLAGS": "",
     "SHIMDEFS": "-DNGCC_INSTANCE_HEADER='\"api/KEM_AlgorithmInstance.h\"' -DNGCC_NO_DRNG",
     "LDLIBS": "",
@@ -88,7 +88,7 @@
     "SRCS": "api/KEM_AlgorithmInstance.c backend/ccakem.c backend/cpapke.c backend/hamming.c backend/ntt_2s3t.c backend/poly.c backend/randombytes.c backend/zetas.c symmetric/auxfunc.c symmetric/drng.c",
     "INC": "-Isrc/Amoeba256/symmetric -Isrc/Amoeba256/backend -Isrc/Amoeba256/api",
     "DEFS": "-DSECURITY_LEVEL=256",
-    "CFLAGS": "",
+    "CFLAGS": "-O3",
     "CXXFLAGS": "",
     "SHIMDEFS": "-DNGCC_INSTANCE_HEADER='\"api/KEM_AlgorithmInstance.h\"' -DNGCC_NO_DRNG",
     "LDLIBS": "",
@@ -316,7 +316,7 @@
     "NODRNG": "",
     "KATNAME": "",
     "KATDIR": "",
-    "provider_name": "kem-bw-kem-128",
+    "provider_name": "kem-08-bw-kem-128",
     "security_bits": 128
   },
   {
@@ -336,7 +336,7 @@
     "NODRNG": "",
     "KATNAME": "",
     "KATDIR": "",
-    "provider_name": "kem-bw-kem-256",
+    "provider_name": "kem-08-bw-kem-256",
     "security_bits": 256
   },
   {
@@ -1316,7 +1316,7 @@
     "NODRNG": "",
     "KATNAME": "",
     "KATDIR": "",
-    "provider_name": "kem-nev-128",
+    "provider_name": "kem-25-nev-128",
     "security_bits": 128
   },
   {
@@ -1336,7 +1336,7 @@
     "NODRNG": "",
     "KATNAME": "",
     "KATDIR": "",
-    "provider_name": "kem-nev-256",
+    "provider_name": "kem-25-nev-256",
     "security_bits": 256
   },
   {
@@ -1836,7 +1836,7 @@
     "NODRNG": "",
     "KATNAME": "",
     "KATDIR": "",
-    "provider_name": "kem-rudraksh2-128",
+    "provider_name": "kem-34-rudraksh2-128",
     "security_bits": 128
   },
   {
@@ -1856,7 +1856,7 @@
     "NODRNG": "",
     "KATNAME": "",
     "KATDIR": "",
-    "provider_name": "kem-rudraksh2-256",
+    "provider_name": "kem-34-rudraksh2-256",
     "security_bits": 256
   },
   {
@@ -2196,7 +2196,7 @@
     "NODRNG": "",
     "KATNAME": "",
     "KATDIR": "",
-    "provider_name": "kem-zen-128",
+    "provider_name": "kem-41-zen-128",
     "security_bits": 128
   },
   {
@@ -2216,7 +2216,7 @@
     "NODRNG": "",
     "KATNAME": "",
     "KATDIR": "",
-    "provider_name": "kem-zen-256",
+    "provider_name": "kem-41-zen-256",
     "security_bits": 256
   },
   {
@@ -2748,9 +2748,9 @@
     "SRCS": "SIG_AlgorithmInstance.c auxfunc.c bits-hints.c conversion.c cs.c drng.c encodings.c ntt.c sampling.c",
     "INC": "",
     "DEFS": "",
-    "CFLAGS": "-fcommon -w",
+    "CFLAGS": "-fcommon -w -Imake/compat/sign-07",
     "CXXFLAGS": "",
-    "SHIMDEFS": "-DNGCC_INSTANCE_HEADER='\"API_PKC/Implementations/Reference_Implementation/AlgorithmInstance/SIG_AlgorithmInstance.h\"' -DNGCC_INSTANCE='\"CS_128\"' -DNGCC_NO_DRNG",
+    "SHIMDEFS": "-DNGCC_INSTANCE_HEADER_NONE -DNGCC_INSTANCE='\"CS_128\"' -DNGCC_NO_DRNG",
     "LDLIBS": "",
     "NOAUX": "",
     "NODRNG": "",
@@ -2768,9 +2768,9 @@
     "SRCS": "SIG_AlgorithmInstance.c auxfunc.c bits-hints.c conversion.c cs.c drng.c encodings.c ntt.c sampling.c",
     "INC": "",
     "DEFS": "",
-    "CFLAGS": "-fcommon -w",
+    "CFLAGS": "-fcommon -w -Imake/compat/sign-07",
     "CXXFLAGS": "",
-    "SHIMDEFS": "-DNGCC_INSTANCE_HEADER='\"API_PKC/Implementations/Reference_Implementation/AlgorithmInstance/SIG_AlgorithmInstance.h\"' -DNGCC_INSTANCE='\"CS_256\"' -DNGCC_NO_DRNG",
+    "SHIMDEFS": "-DNGCC_INSTANCE_HEADER_NONE -DNGCC_INSTANCE='\"CS_256\"' -DNGCC_NO_DRNG",
     "LDLIBS": "",
     "NOAUX": "",
     "NODRNG": "",
@@ -3896,7 +3896,7 @@
     "NODRNG": "",
     "KATNAME": "",
     "KATDIR": "",
-    "provider_name": "sig-sqisign2dsq-l1-eff-uncompressed",
+    "provider_name": "sig-25-sqisign2dsq-l1-eff-uncompressed",
     "security_bits": 128
   },
   {
@@ -3916,7 +3916,7 @@
     "NODRNG": "",
     "KATNAME": "",
     "KATDIR": "",
-    "provider_name": "sig-sqisign2dsq-l1-eff-compressed",
+    "provider_name": "sig-25-sqisign2dsq-l1-eff-compressed",
     "security_bits": 128
   },
   {
@@ -3936,7 +3936,7 @@
     "NODRNG": "",
     "KATNAME": "",
     "KATDIR": "",
-    "provider_name": "sig-sqisign2dsq-l1-sec-uncompressed",
+    "provider_name": "sig-25-sqisign2dsq-l1-sec-uncompressed",
     "security_bits": 128
   },
   {
@@ -3956,7 +3956,7 @@
     "NODRNG": "",
     "KATNAME": "",
     "KATDIR": "",
-    "provider_name": "sig-sqisign2dsq-l1-sec-compressed",
+    "provider_name": "sig-25-sqisign2dsq-l1-sec-compressed",
     "security_bits": 128
   },
   {
@@ -3976,7 +3976,7 @@
     "NODRNG": "",
     "KATNAME": "",
     "KATDIR": "",
-    "provider_name": "sig-sqisign2dsq-l2-eff-uncompressed",
+    "provider_name": "sig-25-sqisign2dsq-l2-eff-uncompressed",
     "security_bits": 160
   },
   {
@@ -3996,7 +3996,7 @@
     "NODRNG": "",
     "KATNAME": "",
     "KATDIR": "",
-    "provider_name": "sig-sqisign2dsq-l2-eff-compressed",
+    "provider_name": "sig-25-sqisign2dsq-l2-eff-compressed",
     "security_bits": 160
   },
   {
@@ -4016,7 +4016,7 @@
     "NODRNG": "",
     "KATNAME": "",
     "KATDIR": "",
-    "provider_name": "sig-sqisign2dsq-l2-sec-uncompressed",
+    "provider_name": "sig-25-sqisign2dsq-l2-sec-uncompressed",
     "security_bits": 160
   },
   {
@@ -4036,7 +4036,7 @@
     "NODRNG": "",
     "KATNAME": "",
     "KATDIR": "",
-    "provider_name": "sig-sqisign2dsq-l2-sec-compressed",
+    "provider_name": "sig-25-sqisign2dsq-l2-sec-compressed",
     "security_bits": 160
   },
   {
@@ -4056,7 +4056,7 @@
     "NODRNG": "",
     "KATNAME": "",
     "KATDIR": "",
-    "provider_name": "sig-sqisign2dsq-l3-eff-uncompressed",
+    "provider_name": "sig-25-sqisign2dsq-l3-eff-uncompressed",
     "security_bits": 256
   },
   {
@@ -4076,7 +4076,7 @@
     "NODRNG": "",
     "KATNAME": "",
     "KATDIR": "",
-    "provider_name": "sig-sqisign2dsq-l3-eff-compressed",
+    "provider_name": "sig-25-sqisign2dsq-l3-eff-compressed",
     "security_bits": 256
   },
   {
@@ -4096,7 +4096,7 @@
     "NODRNG": "",
     "KATNAME": "",
     "KATDIR": "",
-    "provider_name": "sig-sqisign2dsq-l3-sec-uncompressed",
+    "provider_name": "sig-25-sqisign2dsq-l3-sec-uncompressed",
     "security_bits": 256
   },
   {
@@ -4116,7 +4116,7 @@
     "NODRNG": "",
     "KATNAME": "",
     "KATDIR": "",
-    "provider_name": "sig-sqisign2dsq-l3-sec-compressed",
+    "provider_name": "sig-25-sqisign2dsq-l3-sec-compressed",
     "security_bits": 256
   },
   {

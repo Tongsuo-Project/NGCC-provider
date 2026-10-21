@@ -20,23 +20,47 @@ NGCC_TLS_GROUP_ENTRY("kem-03-bag-loong-128", "kem-03-bag-loong-128", 0xFE05, 128
 #ifndef NGCC_NO_KEM_03_BAG_LOONG_256
 NGCC_TLS_GROUP_ENTRY("kem-03-bag-loong-256", "kem-03-bag-loong-256", 0xFE06, 256)
 #endif
+#ifndef NGCC_NO_KEM_04_BAG_PIGLET_128
+NGCC_TLS_GROUP_ENTRY("kem-04-bag-piglet-128", "kem-04-bag-piglet-128", 0xFE5D, 128)
+#endif
+#ifndef NGCC_NO_KEM_04_BAG_PIGLET_256
+NGCC_TLS_GROUP_ENTRY("kem-04-bag-piglet-256", "kem-04-bag-piglet-256", 0xFE5E, 256)
+#endif
 #ifndef NGCC_NO_KEM_05_BIKE_V2_128
 NGCC_TLS_GROUP_ENTRY("kem-05-bike-v2-128", "kem-05-bike-v2-128", 0xFE07, 128)
 #endif
 #ifndef NGCC_NO_KEM_05_BIKE_V2_256
 NGCC_TLS_GROUP_ENTRY("kem-05-bike-v2-256", "kem-05-bike-v2-256", 0xFE08, 256)
 #endif
-#ifndef NGCC_NO_KEM_BW_KEM_128
-NGCC_TLS_GROUP_ENTRY("kem-bw-kem-128", "kem-bw-kem-128", 0xFE97, 128)
+#ifndef NGCC_NO_KEM_06_BRA_128
+NGCC_TLS_GROUP_ENTRY("kem-06-bra-128", "kem-06-bra-128", 0xFE5F, 128)
 #endif
-#ifndef NGCC_NO_KEM_BW_KEM_256
-NGCC_TLS_GROUP_ENTRY("kem-bw-kem-256", "kem-bw-kem-256", 0xFE98, 256)
+#ifndef NGCC_NO_KEM_06_BRA_256
+NGCC_TLS_GROUP_ENTRY("kem-06-bra-256", "kem-06-bra-256", 0xFE60, 256)
+#endif
+#ifndef NGCC_NO_KEM_07_BRQC_128
+NGCC_TLS_GROUP_ENTRY("kem-07-brqc-128", "kem-07-brqc-128", 0xFE61, 128)
+#endif
+#ifndef NGCC_NO_KEM_07_BRQC_256
+NGCC_TLS_GROUP_ENTRY("kem-07-brqc-256", "kem-07-brqc-256", 0xFE62, 256)
+#endif
+#ifndef NGCC_NO_KEM_08_BW_KEM_128
+NGCC_TLS_GROUP_ENTRY("kem-08-bw-kem-128", "kem-08-bw-kem-128", 0xFE97, 128)
+#endif
+#ifndef NGCC_NO_KEM_08_BW_KEM_256
+NGCC_TLS_GROUP_ENTRY("kem-08-bw-kem-256", "kem-08-bw-kem-256", 0xFE98, 256)
 #endif
 #ifndef NGCC_NO_KEM_09_CHEETAH128
 NGCC_TLS_GROUP_ENTRY("kem-09-cheetah128", "kem-09-cheetah128", 0xFE09, 128)
 #endif
 #ifndef NGCC_NO_KEM_09_CHEETAH256
 NGCC_TLS_GROUP_ENTRY("kem-09-cheetah256", "kem-09-cheetah256", 0xFE0A, 256)
+#endif
+#ifndef NGCC_NO_KEM_10_CMULTIURAG_128
+NGCC_TLS_GROUP_ENTRY("kem-10-cmultiurag-128", "kem-10-cmultiurag-128", 0xFE63, 128)
+#endif
+#ifndef NGCC_NO_KEM_10_CMULTIURAG_256
+NGCC_TLS_GROUP_ENTRY("kem-10-cmultiurag-256", "kem-10-cmultiurag-256", 0xFE64, 256)
 #endif
 #ifndef NGCC_NO_KEM_11_COMPASS_KEM_128
 NGCC_TLS_GROUP_ENTRY("kem-11-compass-kem-128", "kem-11-compass-kem-128", 0xFE0B, 128)
@@ -50,29 +74,29 @@ NGCC_TLS_GROUP_ENTRY("kem-13-dkem-128", "kem-13-dkem-128", 0xFE0D, 128)
 #ifndef NGCC_NO_KEM_13_DKEM_256
 NGCC_TLS_GROUP_ENTRY("kem-13-dkem-256", "kem-13-dkem-256", 0xFE0E, 256)
 #endif
-#ifndef NGCC_NO_KEM_14_DTRU_1024
-NGCC_TLS_GROUP_ENTRY("kem-14-dtru-1024", "kem-14-dtru-1024", 0xFE0F, 256)
-#endif
-#ifndef NGCC_NO_KEM_14_DTRU_1024_PACK_PK
-NGCC_TLS_GROUP_ENTRY("kem-14-dtru-1024-pack-pk", "kem-14-dtru-1024-pack-pk", 0xFE10, 256)
-#endif
 #ifndef NGCC_NO_KEM_14_DTRU_648
 NGCC_TLS_GROUP_ENTRY("kem-14-dtru-648", "kem-14-dtru-648", 0xFE11, 128)
-#endif
-#ifndef NGCC_NO_KEM_14_DTRU_648_PACK_PK
-NGCC_TLS_GROUP_ENTRY("kem-14-dtru-648-pack-pk", "kem-14-dtru-648-pack-pk", 0xFE12, 128)
 #endif
 #ifndef NGCC_NO_KEM_14_DTRU_768
 NGCC_TLS_GROUP_ENTRY("kem-14-dtru-768", "kem-14-dtru-768", 0xFE13, 192)
 #endif
-#ifndef NGCC_NO_KEM_14_DTRU_768_PACK_PK
-NGCC_TLS_GROUP_ENTRY("kem-14-dtru-768-pack-pk", "kem-14-dtru-768-pack-pk", 0xFE14, 192)
+#ifndef NGCC_NO_KEM_14_DTRU_1024
+NGCC_TLS_GROUP_ENTRY("kem-14-dtru-1024", "kem-14-dtru-1024", 0xFE0F, 256)
 #endif
 #ifndef NGCC_NO_KEM_14_DTRU_LIGHT
 NGCC_TLS_GROUP_ENTRY("kem-14-dtru-light", "kem-14-dtru-light", 0xFE15, 128)
 #endif
 #ifndef NGCC_NO_KEM_14_DTRU_PRIME
 NGCC_TLS_GROUP_ENTRY("kem-14-dtru-prime", "kem-14-dtru-prime", 0xFE16, 128)
+#endif
+#ifndef NGCC_NO_KEM_14_DTRU_648_PACK_PK
+NGCC_TLS_GROUP_ENTRY("kem-14-dtru-648-pack-pk", "kem-14-dtru-648-pack-pk", 0xFE12, 128)
+#endif
+#ifndef NGCC_NO_KEM_14_DTRU_768_PACK_PK
+NGCC_TLS_GROUP_ENTRY("kem-14-dtru-768-pack-pk", "kem-14-dtru-768-pack-pk", 0xFE14, 192)
+#endif
+#ifndef NGCC_NO_KEM_14_DTRU_1024_PACK_PK
+NGCC_TLS_GROUP_ENTRY("kem-14-dtru-1024-pack-pk", "kem-14-dtru-1024-pack-pk", 0xFE10, 256)
 #endif
 #ifndef NGCC_NO_KEM_15_FLIT128_REF
 NGCC_TLS_GROUP_ENTRY("kem-15-flit128-ref", "kem-15-flit128-ref", 0xFE17, 128)
@@ -155,29 +179,29 @@ NGCC_TLS_GROUP_ENTRY("kem-24-scabbard128", "kem-24-scabbard128", 0xFE33, 128)
 #ifndef NGCC_NO_KEM_24_SCABBARD256
 NGCC_TLS_GROUP_ENTRY("kem-24-scabbard256", "kem-24-scabbard256", 0xFE34, 256)
 #endif
-#ifndef NGCC_NO_KEM_25_NEV_1024_1409_ICCS
-NGCC_TLS_GROUP_ENTRY("kem-25-nev-1024-1409-iccs", "kem-25-nev-1024-1409-iccs", 0xFE35, 256)
+#ifndef NGCC_NO_KEM_25_NEV_128
+NGCC_TLS_GROUP_ENTRY("kem-25-nev-128", "kem-25-nev-128", 0xFE9A, 128)
 #endif
-#ifndef NGCC_NO_KEM_25_NEV_1024_3329_ICCS
-NGCC_TLS_GROUP_ENTRY("kem-25-nev-1024-3329-iccs", "kem-25-nev-1024-3329-iccs", 0xFE36, 256)
-#endif
-#ifndef NGCC_NO_KEM_NEV_256
-NGCC_TLS_GROUP_ENTRY("kem-nev-256", "kem-nev-256", 0xFE9B, 256)
-#endif
-#ifndef NGCC_NO_KEM_25_NEV_1024_769_ICCS
-NGCC_TLS_GROUP_ENTRY("kem-25-nev-1024-769-iccs", "kem-25-nev-1024-769-iccs", 0xFE37, 256)
+#ifndef NGCC_NO_KEM_25_NEV_256
+NGCC_TLS_GROUP_ENTRY("kem-25-nev-256", "kem-25-nev-256", 0xFE9B, 256)
 #endif
 #ifndef NGCC_NO_KEM_25_NEV_512_1409_ICCS
 NGCC_TLS_GROUP_ENTRY("kem-25-nev-512-1409-iccs", "kem-25-nev-512-1409-iccs", 0xFE38, 128)
 #endif
+#ifndef NGCC_NO_KEM_25_NEV_1024_1409_ICCS
+NGCC_TLS_GROUP_ENTRY("kem-25-nev-1024-1409-iccs", "kem-25-nev-1024-1409-iccs", 0xFE35, 256)
+#endif
 #ifndef NGCC_NO_KEM_25_NEV_512_3329_ICCS
 NGCC_TLS_GROUP_ENTRY("kem-25-nev-512-3329-iccs", "kem-25-nev-512-3329-iccs", 0xFE39, 128)
 #endif
-#ifndef NGCC_NO_KEM_NEV_128
-NGCC_TLS_GROUP_ENTRY("kem-nev-128", "kem-nev-128", 0xFE9A, 128)
+#ifndef NGCC_NO_KEM_25_NEV_1024_3329_ICCS
+NGCC_TLS_GROUP_ENTRY("kem-25-nev-1024-3329-iccs", "kem-25-nev-1024-3329-iccs", 0xFE36, 256)
 #endif
 #ifndef NGCC_NO_KEM_25_NEV_512_769_ICCS
 NGCC_TLS_GROUP_ENTRY("kem-25-nev-512-769-iccs", "kem-25-nev-512-769-iccs", 0xFE3A, 128)
+#endif
+#ifndef NGCC_NO_KEM_25_NEV_1024_769_ICCS
+NGCC_TLS_GROUP_ENTRY("kem-25-nev-1024-769-iccs", "kem-25-nev-1024-769-iccs", 0xFE37, 256)
 #endif
 #ifndef NGCC_NO_KEM_26_HQC_128
 NGCC_TLS_GROUP_ENTRY("kem-26-hqc-128", "kem-26-hqc-128", 0xFE3B, 128)
@@ -191,11 +215,11 @@ NGCC_TLS_GROUP_ENTRY("kem-27-ntre-128", "kem-27-ntre-128", 0xFE3D, 128)
 #ifndef NGCC_NO_KEM_27_NTRE_256
 NGCC_TLS_GROUP_ENTRY("kem-27-ntre-256", "kem-27-ntre-256", 0xFE3E, 256)
 #endif
-#ifndef NGCC_NO_KEM_28_OAEP_NTRU_1296
-NGCC_TLS_GROUP_ENTRY("kem-28-oaep-ntru-1296", "kem-28-oaep-ntru-1296", 0xFE3F, 256)
-#endif
 #ifndef NGCC_NO_KEM_28_OAEP_NTRU_648
 NGCC_TLS_GROUP_ENTRY("kem-28-oaep-ntru-648", "kem-28-oaep-ntru-648", 0xFE40, 128)
+#endif
+#ifndef NGCC_NO_KEM_28_OAEP_NTRU_1296
+NGCC_TLS_GROUP_ENTRY("kem-28-oaep-ntru-1296", "kem-28-oaep-ntru-1296", 0xFE3F, 256)
 #endif
 #ifndef NGCC_NO_KEM_29_POLARKEM_128
 NGCC_TLS_GROUP_ENTRY("kem-29-polarkem-128", "kem-29-polarkem-128", 0xFE41, 128)
@@ -227,11 +251,11 @@ NGCC_TLS_GROUP_ENTRY("kem-33-qube-192", "kem-33-qube-192", 0xFE4B, 192)
 #ifndef NGCC_NO_KEM_33_QUBE_256
 NGCC_TLS_GROUP_ENTRY("kem-33-qube-256", "kem-33-qube-256", 0xFE4C, 256)
 #endif
-#ifndef NGCC_NO_KEM_RUDRAKSH2_128
-NGCC_TLS_GROUP_ENTRY("kem-rudraksh2-128", "kem-rudraksh2-128", 0xFE8C, 128)
+#ifndef NGCC_NO_KEM_34_RUDRAKSH2_128
+NGCC_TLS_GROUP_ENTRY("kem-34-rudraksh2-128", "kem-34-rudraksh2-128", 0xFE8C, 128)
 #endif
-#ifndef NGCC_NO_KEM_RUDRAKSH2_256
-NGCC_TLS_GROUP_ENTRY("kem-rudraksh2-256", "kem-rudraksh2-256", 0xFE8D, 256)
+#ifndef NGCC_NO_KEM_34_RUDRAKSH2_256
+NGCC_TLS_GROUP_ENTRY("kem-34-rudraksh2-256", "kem-34-rudraksh2-256", 0xFE8D, 256)
 #endif
 #ifndef NGCC_NO_KEM_35_SCLOUDPLUS_128_AES_PACKED10
 NGCC_TLS_GROUP_ENTRY("kem-35-scloudplus-128-aes-packed10", "kem-35-scloudplus-128-aes-packed10", 0xFE4D, 128)
@@ -269,15 +293,15 @@ NGCC_TLS_GROUP_ENTRY("kem-39-weaverkem-128", "kem-39-weaverkem-128", 0xFE59, 128
 #ifndef NGCC_NO_KEM_39_WEAVERKEM_256
 NGCC_TLS_GROUP_ENTRY("kem-39-weaverkem-256", "kem-39-weaverkem-256", 0xFE5A, 256)
 #endif
-#ifndef NGCC_NO_KEM_40_YUANYANG_1024
-NGCC_TLS_GROUP_ENTRY("kem-40-yuanyang-1024", "kem-40-yuanyang-1024", 0xFE5B, 256)
-#endif
 #ifndef NGCC_NO_KEM_40_YUANYANG_512
 NGCC_TLS_GROUP_ENTRY("kem-40-yuanyang-512", "kem-40-yuanyang-512", 0xFE5C, 128)
 #endif
-#ifndef NGCC_NO_KEM_ZEN_128
-NGCC_TLS_GROUP_ENTRY("kem-zen-128", "kem-zen-128", 0xFE94, 128)
+#ifndef NGCC_NO_KEM_40_YUANYANG_1024
+NGCC_TLS_GROUP_ENTRY("kem-40-yuanyang-1024", "kem-40-yuanyang-1024", 0xFE5B, 256)
 #endif
-#ifndef NGCC_NO_KEM_ZEN_256
-NGCC_TLS_GROUP_ENTRY("kem-zen-256", "kem-zen-256", 0xFE95, 256)
+#ifndef NGCC_NO_KEM_41_ZEN_128
+NGCC_TLS_GROUP_ENTRY("kem-41-zen-128", "kem-41-zen-128", 0xFE94, 128)
+#endif
+#ifndef NGCC_NO_KEM_41_ZEN_256
+NGCC_TLS_GROUP_ENTRY("kem-41-zen-256", "kem-41-zen-256", 0xFE95, 256)
 #endif

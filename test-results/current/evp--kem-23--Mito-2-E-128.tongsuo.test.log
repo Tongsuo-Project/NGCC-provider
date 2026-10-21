@@ -1,8 +1,0 @@
-STEP keygen
-STEP second-keygen
-STEP encapsulate-0
-STEP encapsulate-1
-STEP encapsulate-2
-SIZES pk=5192 ct=6440 ss=64
-PASS key-material-unchanged
-PASS kem-23-mito-2-e-128

@@ -1,1 +1,0 @@
-PASS TLS1.3 group=kem-27-ntre-128 wire_id=0xFE3D pk=972 ct=972 hrr=1 authenticated=1 exporter=match data=bidirectional

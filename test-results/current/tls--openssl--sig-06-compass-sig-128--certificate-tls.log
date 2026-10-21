@@ -1,6 +1,0 @@
-STEP keygen
-STEP CSR
-STEP certificates
-PASS CERT sig-06-compass-sig-128 oid=2.25.31886105231932604079792078601735967452 codecs=DER+PEM CSR=verified chain=verified
-PASS TLS1.3 sigalg=sig-06-compass-sig-128 code=0xFE18 group=X25519 chain=verified hostname=verified
-PASS TLS1.3 sigalg=sig-06-compass-sig-128 code=0xFE18 group=kem-01-aigis-enc1 chain=verified hostname=verified

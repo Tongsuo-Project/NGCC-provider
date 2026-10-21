@@ -1,7 +1,0 @@
-STEP keygen
-STEP second-keygen
-STEP sign-0
-STEP sign-1
-SIZES pk=32 sig=6238 capacity=6258
-PASS key-material-unchanged
-PASS sig-19-phoenix-sm3-128s

@@ -1,6 +1,0 @@
-STEP keygen
-STEP CSR
-STEP certificates
-PASS CERT sig-23-shuttle-256 oid=2.25.75189982879762102773666375878171837857 codecs=DER+PEM CSR=verified chain=verified
-PASS TLS1.3 sigalg=sig-23-shuttle-256 code=0xFE49 group=X25519 chain=verified hostname=verified
-PASS TLS1.3 sigalg=sig-23-shuttle-256 code=0xFE49 group=kem-01-aigis-enc1 chain=verified hostname=verified

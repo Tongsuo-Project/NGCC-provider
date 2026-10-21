@@ -1,8 +1,0 @@
-STEP keygen
-STEP second-keygen
-STEP encapsulate-0
-STEP encapsulate-1
-STEP encapsulate-2
-SIZES pk=832 ct=864 ss=16
-PASS key-material-unchanged
-PASS kem-09-cheetah128
