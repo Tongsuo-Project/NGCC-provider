@@ -1,0 +1,6 @@
+/* Compatibility header for author code using the C++17 <cstdalign> header.
+ * libc++ removed it in C++20; the C header supplies its original macros. */
+#ifndef NGCC_COMPAT_CSTDALIGN
+#define NGCC_COMPAT_CSTDALIGN
+#include <stdalign.h>
+#endif

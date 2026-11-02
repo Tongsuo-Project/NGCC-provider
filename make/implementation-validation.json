@@ -1,0 +1,3463 @@
+{
+  "date": "2026-11-02",
+  "scope": "Pinned author backends for the existing 220 registrations; compilation and runtime evidence are separate.",
+  "catalog_sha256": "ef92fe8eb413c8426a1fc5fd84cd2c3d58ce9c8033adb045f519e43c0db72b38",
+  "reference_manifest_sha256": "ebff88b991407f7c29e692f68d0c5de76cedccd1d8e8b79d9625f53367e3c757",
+  "optimized_manifest_sha256": "3d40d8fb091ab30695a1d0e0e5d7b6c2e9a7a604e6d8e1a3d9cfde484f8493d2",
+  "author_files_imported": 11761,
+  "pinned_archives_used": 66,
+  "catalog_capacity": {
+    "linux-x86_64": {
+      "parameters": 189,
+      "proposals": 60
+    },
+    "darwin64-x86_64-cc": {
+      "parameters": 127,
+      "proposals": 41
+    },
+    "linux-aarch64": {
+      "parameters": 58,
+      "proposals": 22
+    },
+    "darwin64-arm64-cc": {
+      "parameters": 51,
+      "proposals": 19
+    }
+  },
+  "toolchains": {
+    "native_arm64": "Apple Clang 15, macOS arm64, Homebrew OpenSSL 3 and GMP",
+    "native_x86_64": "Apple Clang 15 / LLVM 19 C++23, macOS Rosetta, locally built x86-64 Tongsuo",
+    "linux_cross": "Zig 0.14.1, Apple Clang ELF assembler for AArch64, GNU binutils 2.47; no Linux execution"
+  },
+  "runtime_interoperability": {
+    "darwin64-arm64-cc": {
+      "passed": 51,
+      "results": [
+        {
+          "name": "kem-01-aigis-enc1",
+          "status": "passed",
+          "report": "test-results/optimized-arm-interop.json",
+          "ref_object_sha256": "7f1660d5c3e16ddba901a8975c4d6ddf26263f4f747154663c0e17715c132536",
+          "optimized-aarch64_object_sha256": "6b9cddbfe95f9190ad52814bcf145200c77a82b0cd21fbd05c68829168637331"
+        },
+        {
+          "name": "kem-01-aigis-enc2",
+          "status": "passed",
+          "report": "test-results/optimized-arm-interop.json",
+          "ref_object_sha256": "c87714726d644760458c33ba7001cddf3b7a4ad2d7fc23c62e1f1aaafb4a5032",
+          "optimized-aarch64_object_sha256": "cb91806afb81f49fcd9fd1f01bf076b21dccd13eef61dbed1a9f9646401a07fa"
+        },
+        {
+          "name": "kem-02-amoeba128",
+          "status": "passed",
+          "report": "test-results/optimized-arm-interop.json",
+          "ref_object_sha256": "680c412a47d326cbfca64bd8cef145a5423970a1b821b5943d69d23f8763e957",
+          "optimized-aarch64_object_sha256": "ae4f587b721b1ea4543143ec0b8e1ad3bce72bcf6ee0f415150068a6101ebdaa"
+        },
+        {
+          "name": "kem-02-amoeba192",
+          "status": "passed",
+          "report": "test-results/optimized-arm-interop.json",
+          "ref_object_sha256": "a26a82482baff7c127fa5b9e4b8f85d9cb9a933bf63b2c328da2f3cf85a6288e",
+          "optimized-aarch64_object_sha256": "5bdbc22fd6cdf758caa5898c74d0e40f75d7c11be84211a57b735aedd2d7973b"
+        },
+        {
+          "name": "kem-02-amoeba256",
+          "status": "passed",
+          "report": "test-results/optimized-arm-interop.json",
+          "ref_object_sha256": "d94ddaf846c4e50c7cd8aec5b91815264d5063e40ec51076f09e66fccfa493cc",
+          "optimized-aarch64_object_sha256": "1d59f161de1fd04579ebe98bb8306236f95052a8bfda47dc1f5a954d034f0255"
+        },
+        {
+          "name": "kem-09-cheetah128",
+          "status": "passed",
+          "report": "test-results/optimized-arm-interop.json",
+          "ref_object_sha256": "22ef72e0907c6fbe604fc34a19849f975d351f2e83fd8136f839eb2abbf1c178",
+          "optimized-aarch64_object_sha256": "ecf09262c41bb740c5415740c14ef41ff19f048b384f387a7c64b120f390f79c"
+        },
+        {
+          "name": "kem-09-cheetah256",
+          "status": "passed",
+          "report": "test-results/optimized-arm-interop.json",
+          "ref_object_sha256": "cb05a696563933aa3f584faeb2a1093fae7e5ec609216f91ea29c977349b5383",
+          "optimized-aarch64_object_sha256": "b3a97daf0ccb91f0b56cabc76188d19e67188b315b89ac10b69b981ff4df089e"
+        },
+        {
+          "name": "kem-13-dkem-128",
+          "status": "passed",
+          "report": "test-results/optimized-dkem-native-interop.json",
+          "ref_object_sha256": "5a57d454b8dc6b646f140740feae59a688f3ef475f8594313aa90c4acb69c29c",
+          "optimized-aarch64_object_sha256": "efb45b6068ec40051e725c0ace409690783ea18f8ab14e966e2356141916967c"
+        },
+        {
+          "name": "kem-13-dkem-256",
+          "status": "passed",
+          "report": "test-results/optimized-dkem-native-interop.json",
+          "ref_object_sha256": "1e19a366b63e6cb1739c7d7fe1b3c5296504d92e28cfbff88957aa6e73170900",
+          "optimized-aarch64_object_sha256": "bcdd10cf0273c6006317ef60f258139ac3ac1a42725f7a0a75e41324b1ff03d0"
+        },
+        {
+          "name": "kem-18-loong128",
+          "status": "passed",
+          "report": "test-results/optimized-arm-interop.json",
+          "ref_object_sha256": "0ba0b4e90625f5f76487ea0765848fa7229336c3ea4d0720fb4a104ec4219159",
+          "optimized-aarch64_object_sha256": "95701a5d6f5bbbea5efdcc0bcd53301527338e9b8b4038092e6a82321e4d66a7"
+        },
+        {
+          "name": "kem-18-loong256",
+          "status": "passed",
+          "report": "test-results/optimized-arm-interop.json",
+          "ref_object_sha256": "cf902f99c0f0972f3ea2fe8255e3cc73344221ab59d95f3b4113a8764be2a072",
+          "optimized-aarch64_object_sha256": "a529e7dd51a3bbfbe4c70c1d7bb5abd8bef5ec22fca0f3636bd5e7dfb474b21b"
+        },
+        {
+          "name": "kem-23-mito-1-128",
+          "status": "passed",
+          "report": "test-results/optimized-arm-interop.json",
+          "ref_object_sha256": "a63e2bcc7b6648cf7971bab54f491f8758fe3b9931f14ade5fe567e0e20e2801",
+          "optimized-aarch64_object_sha256": "4472efba05378fcbc2d15c90c97569d23f223d531c35ee6215c478fbd75b8f1d"
+        },
+        {
+          "name": "kem-23-mito-1-256",
+          "status": "passed",
+          "report": "test-results/optimized-arm-interop.json",
+          "ref_object_sha256": "34056722a4d18d2595128720ae3ffade7fc2517d1d85e940182143ade44fe376",
+          "optimized-aarch64_object_sha256": "a70533c1e5b0e178ba3bc22b5e77f5b932827f296574a68ab6e9952c1fe0d404"
+        },
+        {
+          "name": "kem-23-mito-1-e-128",
+          "status": "passed",
+          "report": "test-results/optimized-arm-interop.json",
+          "ref_object_sha256": "85bd15c027767c1a31d18236ac22bfce83bf015b1652e938cedbd8378809f380",
+          "optimized-aarch64_object_sha256": "019c4f52bffae0d84b0c7298344d34697cd885029c8c3a9c81060f6da5dbcb50"
+        },
+        {
+          "name": "kem-23-mito-1-e-256",
+          "status": "passed",
+          "report": "test-results/optimized-arm-interop.json",
+          "ref_object_sha256": "d6ac217b7c1ce511b83bb2639e9e01dae0dd81dde98e5fe8fdca5ca45deed490",
+          "optimized-aarch64_object_sha256": "6dbbe67a989ba53e8c638156cc780ac03733fdf2afae2f6889bf8c23c7911f39"
+        },
+        {
+          "name": "kem-23-mito-2-e-128",
+          "status": "passed",
+          "report": "test-results/optimized-arm-interop.json",
+          "ref_object_sha256": "3f0b35eec9016f7e4518e01ace5a6d802510b382bc8c4eae65a2956d06897a80",
+          "optimized-aarch64_object_sha256": "c106f01450f4d5f2f9c5b22d43e46b7a2a01612dd9c93dc3cfe0d9764abc6fcf"
+        },
+        {
+          "name": "kem-23-mito-2-e-256",
+          "status": "passed",
+          "report": "test-results/optimized-arm-interop.json",
+          "ref_object_sha256": "55df85a6cdc45c8f10414078917cbbde304ae7518b3c60e022a46bb71f45e830",
+          "optimized-aarch64_object_sha256": "5dce6bafd964c5693d8a579ce3e1e5f04d066b63ac27fb5dd3b6902a6354fce8"
+        },
+        {
+          "name": "kem-26-hqc-128",
+          "status": "passed",
+          "report": "test-results/optimized-arm-interop.json",
+          "ref_object_sha256": "dde07faef39d700e453910796ccbaeb76c66b0778282a11c806d4fa59f8c8485",
+          "optimized-aarch64_object_sha256": "5e184ced8639b7d22bd03c40293b00e9cd0c158d852b35d8fbaf633f8f2af00e"
+        },
+        {
+          "name": "kem-26-hqc-256",
+          "status": "passed",
+          "report": "test-results/optimized-arm-interop.json",
+          "ref_object_sha256": "5b4aa80935bd583e8423190e9c3bb9e06cfbbd9b76a04a20e2dc70864deaa103",
+          "optimized-aarch64_object_sha256": "92b3db65ad646748ed53e45f58392606ac1abbac7b608f9834b7337b7067fb39"
+        },
+        {
+          "name": "kem-29-polarkem-128",
+          "status": "passed",
+          "report": "test-results/optimized-arm-interop.json",
+          "ref_object_sha256": "50f8c03692911c01d5aa3cde4a39051eb0d1e094943696f5d42e8cf53abc7ed7",
+          "optimized-aarch64_object_sha256": "d3fbda8b789e3a10cac40057701fc8ca867a7c0b1bebce5f8dad3bdda75badbc"
+        },
+        {
+          "name": "kem-29-polarkem-256",
+          "status": "passed",
+          "report": "test-results/optimized-arm-interop.json",
+          "ref_object_sha256": "ce8049a4caae0d7446f372ac92eb49d469a34af81fe6c42b513c6a2e858c5805",
+          "optimized-aarch64_object_sha256": "1414ba94fa27568ee577bc74ea933e4be7ba76918c8473d7ea395ddecccbf67e"
+        },
+        {
+          "name": "kem-35-scloudplus-128-aes-packed10",
+          "status": "passed",
+          "report": "test-results/optimized-arm-more-interop.json",
+          "ref_object_sha256": "4658d860c188a96b8271ad622ff87923aa9a53701bda1ce14b8045e1a014e58f",
+          "optimized-aarch64_object_sha256": "1d9078d4c9ed836db50b166de917e4eb170a6608036973d145f9774653f1a093"
+        },
+        {
+          "name": "kem-35-scloudplus-128-sm3-packed10",
+          "status": "passed",
+          "report": "test-results/optimized-arm-more-interop.json",
+          "ref_object_sha256": "c6f61a90cc0c91e66575510daf4835fa7a7fdd2e8175d086c0151dedb738e55c",
+          "optimized-aarch64_object_sha256": "2ce36f911aa2b03190009339fddc7fa11f9976804f48ab6fa6ef120779f68b90"
+        },
+        {
+          "name": "kem-35-scloudplus-192-aes-packed10",
+          "status": "passed",
+          "report": "test-results/optimized-arm-more-interop.json",
+          "ref_object_sha256": "365f9a5dcf913ff19e67004324572207bd90739eeb4d269320e4a887fbd9e638",
+          "optimized-aarch64_object_sha256": "5a65d2b837a88e41606b5afe0f6852eb74e05adb6452a1ce592597b38be323d6"
+        },
+        {
+          "name": "kem-35-scloudplus-192-sm3-packed10",
+          "status": "passed",
+          "report": "test-results/optimized-arm-more-interop.json",
+          "ref_object_sha256": "c510552a6c0ad05f89e31136a052612c640f7387de34c6dba769a08cc2dc2104",
+          "optimized-aarch64_object_sha256": "9d88627d2843e95c94e0e9662deebabeef8f86864b6d27436fa102c4969b2e9d"
+        },
+        {
+          "name": "kem-35-scloudplus-256-aes-packed10",
+          "status": "passed",
+          "report": "test-results/optimized-arm-more-interop.json",
+          "ref_object_sha256": "48f5ee6d699449877179014c8a43dd03231b2610f7a09e14fac2004618162100",
+          "optimized-aarch64_object_sha256": "ebf90b9dc7c54c7575084490fa75e9e33feaab051ceb3d80f267dae5e0ff5154"
+        },
+        {
+          "name": "kem-35-scloudplus-256-sm3-packed10",
+          "status": "passed",
+          "report": "test-results/optimized-arm-more-interop.json",
+          "ref_object_sha256": "aec3690318e4f526c9901c589254b17dd3b0bc2cefd029e5fe0b3a37bb3ead8e",
+          "optimized-aarch64_object_sha256": "08fc208fa8f9fbd6d2e773703dc9855e3f844f1c3a08b56748066ec0dbd4049c"
+        },
+        {
+          "name": "kem-38-uvw-kem-128",
+          "status": "passed",
+          "report": "test-results/optimized-arm-interop.json",
+          "ref_object_sha256": "dce7b370c7bf71cc0e654528ea78d2be7698241268409548a50589fb8b43ff71",
+          "optimized-aarch64_object_sha256": "c2ef925cbd1ce7de6366867b34c86ea930f702f08ff65a4af38313779141761b"
+        },
+        {
+          "name": "kem-38-uvw-kem-256",
+          "status": "passed",
+          "report": "test-results/optimized-arm-interop.json",
+          "ref_object_sha256": "21307b16fe0bf5b43c8e0e44a148f415e71b6103fd9a3cf2410edc9876c46e0c",
+          "optimized-aarch64_object_sha256": "afb6744658f6c3ac4897282fbf1337fb805088471d9e1fc3414de92b5bf08fe3"
+        },
+        {
+          "name": "kem-40-yuanyang-512",
+          "status": "passed",
+          "report": "test-results/optimized-arm-interop.json",
+          "ref_object_sha256": "dd1f662d448be87405391401f590c71baef17644afd0d82a2cee971f0baf2c73",
+          "optimized-aarch64_object_sha256": "47009b0df7fa05c45a826cf63ed86f1c98a9b2d50b90f4aa80b8e609a9b24e89"
+        },
+        {
+          "name": "kem-40-yuanyang-1024",
+          "status": "passed",
+          "report": "test-results/optimized-arm-interop.json",
+          "ref_object_sha256": "175147db366204600d730fd9822852ee3d5dc15c51e8ae62c80033a24889c622",
+          "optimized-aarch64_object_sha256": "5034b99cc66e42f9ba501d8e478954f663047720444583548e07bc3c0e1bfaa9"
+        },
+        {
+          "name": "sig-01-aigis-sig1",
+          "status": "passed",
+          "report": "test-results/optimized-arm-interop.json",
+          "ref_object_sha256": "3e8ffd80ffa8e16ebf98350330a86b2e19ddb9ae05f44ae0b04919be7506df7d",
+          "optimized-aarch64_object_sha256": "405b31f89b5e9589fc7862c1ae2275a54bfdee2abc0fbb81e37a9142cb3a5053"
+        },
+        {
+          "name": "sig-01-aigis-sig2",
+          "status": "passed",
+          "report": "test-results/optimized-arm-interop.json",
+          "ref_object_sha256": "b6a5554819c014d2f2d6c1c0d56daaf566188a5a33d9bcec38c45187c9165246",
+          "optimized-aarch64_object_sha256": "74feff99dcdf81a86916fda7a7d1ccd5c3c1ad7548838926c0faf62053a07c4d"
+        },
+        {
+          "name": "sig-04-cedrusalpha-160f",
+          "status": "passed",
+          "report": "test-results/optimized-arm-interop.json",
+          "ref_object_sha256": "e075a0b4fd3ca6185c4b533fb74169b8ae75944ba89b2393fa9633c41c566872",
+          "optimized-aarch64_object_sha256": "e108bd244eadbdc1b40c3c068495acb62ed9f6f9279b4c5d21b20597515477ef"
+        },
+        {
+          "name": "sig-04-cedrusalpha-160s",
+          "status": "passed",
+          "report": "test-results/optimized-arm-interop.json",
+          "ref_object_sha256": "21da1da553d7d4a58346071e3f15a061f1f40f59f276dc5dabf2cc0a0da2dc38",
+          "optimized-aarch64_object_sha256": "72390d69e4f32fb5ed96c912a5b3952f5b798610fbbaba6fdcb4c40f27443b3b"
+        },
+        {
+          "name": "sig-04-cedrusalpha-256f",
+          "status": "passed",
+          "report": "test-results/optimized-arm-interop.json",
+          "ref_object_sha256": "608804bba054173d38695b94c0627590dd04373a8100e1cb911f5414331f8316",
+          "optimized-aarch64_object_sha256": "98321bc9cbe249163cfe3ee69747667973e969964204337a6c7c8ed515257514"
+        },
+        {
+          "name": "sig-04-cedrusalpha-256s",
+          "status": "passed",
+          "report": "test-results/optimized-arm-interop.json",
+          "ref_object_sha256": "bd2f63614a89b084f6a2bd37230655cc754428ed878a2024e80613f5261c931f",
+          "optimized-aarch64_object_sha256": "70b82c945914b8a48e3317fb8d6cca4be66594c6ad56f6cea9361a4d3db4a334"
+        },
+        {
+          "name": "sig-06-compass-sig-128",
+          "status": "passed",
+          "report": "test-results/optimized-arm-interop.json",
+          "ref_object_sha256": "39a4919e5e7e8a35ef60a61442a5ac0b7dfdf42e2e5dd079754bc9a336c2c19c",
+          "optimized-aarch64_object_sha256": "7b76f0bc882b636761736515ec2832f3597e8e7fb2749a6e0beea4ac6f650c4c"
+        },
+        {
+          "name": "sig-06-compass-sig-256",
+          "status": "passed",
+          "report": "test-results/optimized-arm-interop.json",
+          "ref_object_sha256": "6c3da2fcd344e63141575ef271a3528959d75345ba3d28a40697e42c26aece1c",
+          "optimized-aarch64_object_sha256": "80c5ac471f918cc5f0e232090f436070b71983c9db2b35b6ac2ca5ff3df33f59"
+        },
+        {
+          "name": "sig-07-cs-128",
+          "status": "passed",
+          "report": "test-results/optimized-arm-more-interop.json",
+          "ref_object_sha256": "a979251c440508cfc77aa6a630ab0af04d10c00923034eceb58a113b319459c4",
+          "optimized-aarch64_object_sha256": "cc3ed6f963f2c21d28bc910d06789352ff2a9e202f2ab9edeca85e4b3619ad31"
+        },
+        {
+          "name": "sig-07-cs-256",
+          "status": "passed",
+          "report": "test-results/optimized-arm-more-interop.json",
+          "ref_object_sha256": "d5a214068123de5ec74c5e1607c8ade0a506492113f82e465b95ded025d3e949",
+          "optimized-aarch64_object_sha256": "404f17803b14aa9e1c2d52fa42f9545caaef3de74e7d87937c87b1516332fee4"
+        },
+        {
+          "name": "sig-08-darts128",
+          "status": "passed",
+          "report": "test-results/optimized-arm-interop.json",
+          "ref_object_sha256": "c96731c6b9cff1c733cee2209dcd0efcc808becc52cb8d7f6199320507b124b2",
+          "optimized-aarch64_object_sha256": "f7b85b284800b0de3f5636f94d057b2d6d50fa4fbed04e9b094cb06058cf5c58"
+        },
+        {
+          "name": "sig-08-darts256",
+          "status": "passed",
+          "report": "test-results/optimized-arm-interop.json",
+          "ref_object_sha256": "eb483cac306c85c8484d495e5c91ef00242e2f7a3a089a2efe3acada421d76b7",
+          "optimized-aarch64_object_sha256": "56e9f37d31886f934279afc5ea59077e5fd1b19453a5355170f89dae2e3c2b72"
+        },
+        {
+          "name": "sig-10-facto-dsa-128",
+          "status": "passed",
+          "report": "test-results/optimized-arm-interop.json",
+          "ref_object_sha256": "93871dcbbb823f6094f3c07ba3e1c220056f629879991fdd769f390e15cc5aba",
+          "optimized-aarch64_object_sha256": "150a4765bcd5364da0073dc5485cb8b6ce8a46d7ae7a7f0c08a5b2474f7c0027"
+        },
+        {
+          "name": "sig-10-facto-dsa-256",
+          "status": "passed",
+          "report": "test-results/optimized-arm-interop.json",
+          "ref_object_sha256": "c2e4ed9af25d609e2ae55b6ff96daf0152870328833ffade76e1963ed321ddc2",
+          "optimized-aarch64_object_sha256": "6a92c9747250347851385071bfb634cc3c14c45d8241f333d7fd34833901c0dd"
+        },
+        {
+          "name": "sig-24-sigurd-128",
+          "status": "passed",
+          "report": "test-results/optimized-arm-interop.json",
+          "ref_object_sha256": "3f4d47d654d43357331fbf02688b0b244a2d50f5bb0134bc3d66f61fa76fc0ea",
+          "optimized-aarch64_object_sha256": "9a39dee2a6a66a8214a9023102970fa1d0827512b250647a8f65925ee50a44b1"
+        },
+        {
+          "name": "sig-24-sigurd-256",
+          "status": "passed",
+          "report": "test-results/optimized-arm-interop.json",
+          "ref_object_sha256": "954f89d8dbb239dc4d64212355e99b59ff91fd247294364b703f573faecf85ab",
+          "optimized-aarch64_object_sha256": "e77eb266fa73e1de055c9584a28be6d84e8f8606560177ace4e9061475db738c"
+        },
+        {
+          "name": "sig-30-trine-128-balanced",
+          "status": "passed",
+          "report": "test-results/optimized-arm-interop.json",
+          "ref_object_sha256": "09d2a14e3d3a96f4950e50d4a073b39a0b19c419458c0cff707ba4ec89cc5d66",
+          "optimized-aarch64_object_sha256": "1bdaa9b6816a7e5e41093765c2b6bcbfe2c8aef43a5fab8f40b1f3d2b5b7a89d"
+        },
+        {
+          "name": "sig-30-trine-256-balanced",
+          "status": "passed",
+          "report": "test-results/optimized-arm-interop.json",
+          "ref_object_sha256": "b27297fd10c25206ecb8a7942077d0a52a24aed9e3af1e2f6256748e89902050",
+          "optimized-aarch64_object_sha256": "7075dfe55e2994dfc83f48262e8a502166685e3bda39d535f26b53a501c97f6b"
+        },
+        {
+          "name": "sig-30-trine-128-shortsig",
+          "status": "passed",
+          "report": "test-results/optimized-arm-interop.json",
+          "ref_object_sha256": "75472e376988ec4b993397f8b1e659f412a4241f9f52a106b52c0bf05940a4ed",
+          "optimized-aarch64_object_sha256": "1dc65e1cd24af7cbee382a7b7bbb85e33d0251d80484198380e236505a998d09"
+        },
+        {
+          "name": "sig-30-trine-256-shortsig",
+          "status": "passed",
+          "report": "test-results/optimized-arm-interop.json",
+          "ref_object_sha256": "7681ae514618a1f4a6ea3ded85b35b97c916d1468575bb108788010f1159a50e",
+          "optimized-aarch64_object_sha256": "bc2eb2bbaad891705663ed114b6b1eaf6c609c1b30301b9848c023cb24d29793"
+        }
+      ]
+    },
+    "darwin64-x86_64-cc": {
+      "passed": 125,
+      "results": [
+        {
+          "name": "kem-01-aigis-enc1",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "f6a36ce89192ad41f553e41eec88c505c72eba94dac396847b6aeed7d3bdbc6b",
+          "optimized-x86_64_object_sha256": "4ecdb9456e26fa491e8f7bcee7621f1c481c54e0e2afc5c8c3859f03cd7cefe6"
+        },
+        {
+          "name": "kem-01-aigis-enc2",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "3aa6a20e89290c8d9ed3cbbb84748aff534725491782b615861175985bcda649",
+          "optimized-x86_64_object_sha256": "1fee577e0ff15a1460781f3366dc1fd475f23a3a1229d084e73138be2ee4e12e"
+        },
+        {
+          "name": "kem-02-amoeba128",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "9d4a79b825268d621cae3f410d2bbd268006da5b44e672917f646524d7347a49",
+          "optimized-x86_64_object_sha256": "9cb51863c4977ae9703056a8a8b46b6c07528150a7f54ccc2845d405ac150302"
+        },
+        {
+          "name": "kem-02-amoeba192",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "f515630bca16d26ee736ccf82970247f103bb357308782403ea9c6a752970e90",
+          "optimized-x86_64_object_sha256": "3fd311777aad303095e1e481873c8bf68df54d0db689fda082137def3491d4e0"
+        },
+        {
+          "name": "kem-02-amoeba256",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "045fb35c5f8c1932b02534096c10461ac28f4db116cf8e99c2fd79d4e911a447",
+          "optimized-x86_64_object_sha256": "2c5a1b844325693dcecfa69520fb5dba5f9a2aa2886a9b85f230fc5dc5eea92f"
+        },
+        {
+          "name": "kem-04-bag-piglet-128",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "befcd9a2564d9ef317674a90cbd968c8c5e9944251c0497c510300bfc8583c9a",
+          "optimized-x86_64_object_sha256": "88e95dfa6ff43f083c2c0a7b216fa3fc3836f42c32e2efab7b81a2e41a8b533f"
+        },
+        {
+          "name": "kem-04-bag-piglet-256",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "07858883d556914fd7c8f8e7d37e1425a85cc30e309de9af5328e76d3ef0879b",
+          "optimized-x86_64_object_sha256": "ad223b5e5c239267c2f35329124169ed0bd359dbb336c215afa3b42ee4381e1f"
+        },
+        {
+          "name": "kem-06-bra-128",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "f35e1974541ee528686e9b4db28d422ab21f3eac9a72f1056d7b8a1b2f3edc19",
+          "optimized-x86_64_object_sha256": "24e34d7804b07f59d70ec85646b865db174f678f2cccafad66159c6e49af0355"
+        },
+        {
+          "name": "kem-06-bra-256",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "2801f2197b4518089e302894f356c0d70c4422a4be0603e136ce68d1514da51d",
+          "optimized-x86_64_object_sha256": "a38ccacaced03fcba2b855b0d9f05be8fbd80d773fbc3abafffc5e939adad4fc"
+        },
+        {
+          "name": "kem-07-brqc-128",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "ecc881f376d6ed48c9ef2e9b1997f0fc7e76c3365013e0847e3e399a3703cd0e",
+          "optimized-x86_64_object_sha256": "3e89098f4a9adf88f32b6a0aac3bd89d08750b4ea6d6b71090b96830026b979f"
+        },
+        {
+          "name": "kem-07-brqc-256",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "32d1913614c41371af53627b5f276c56e8458e5b129581948f3d36039063199b",
+          "optimized-x86_64_object_sha256": "3e20c63dec8a4fb32c8c53abe0800d21c39994e494e89ad64c4d150c920cd1bb"
+        },
+        {
+          "name": "kem-09-cheetah128",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "d1f0b48004741b9f1f8500e27b43ff5747be225f99e108370cb173afbbe1e399",
+          "optimized-x86_64_object_sha256": "cc48a87f8e7ac79ccf1d12170835b873f25ad389f0a844c03a8e658759208c73"
+        },
+        {
+          "name": "kem-09-cheetah256",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "b6301bb21ff0c3992fecb2617cde6e055028641e39ae5a8d343a0cc0de191df6",
+          "optimized-x86_64_object_sha256": "37c7e9d720ffdbdbb9deb66f62b9f8a52a8dc38db229237cdc1e085463b5162e"
+        },
+        {
+          "name": "kem-10-cmultiurag-128",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "c60f5f529dcfc84f7dc3f3e4be315c7edf2946049c932dac369a19310038aa9c",
+          "optimized-x86_64_object_sha256": "281103c5999cbe2e82998d3c2113716b7892d39861adcdceb75d9c27a854c9e4"
+        },
+        {
+          "name": "kem-10-cmultiurag-256",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "a6d98b25178ecefeaa19e674680476e41fe403faff71bd2aedd400041aabaa3b",
+          "optimized-x86_64_object_sha256": "5ead8939fe554bc9bee0faf331aeff0b9b130071543beb8203d4aaef3d27b89b"
+        },
+        {
+          "name": "kem-13-dkem-128",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "2f057f888cbaf3b287ef890843bcfa8c3d3dae0c365179f4eaa273337bb6acec",
+          "optimized-x86_64_object_sha256": "72f0278ec0e0afb4abee54396d68e3b104ba20da47a58c3c5e3c6d2d0ba688b2"
+        },
+        {
+          "name": "kem-13-dkem-256",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "6b05e6657ba72c0aad7a180a366c949d8f6a3a0359e44fa1dc47dd362631e4d0",
+          "optimized-x86_64_object_sha256": "a62d030c8152172e0759f53590ec613fb5955b6fbb307d5fb51ded0b17c8cc06"
+        },
+        {
+          "name": "kem-14-dtru-648",
+          "status": "passed",
+          "report": "test-results/optimized-x86-more-interop.json",
+          "ref_object_sha256": "bb2bd733037bf63abfb7f04d161ef6bcb53c5fb41069d2acd20f961c10e4b8a8",
+          "optimized-x86_64_object_sha256": "d13abb5b1a7831ab297590bd8b2c3466d11c8f03115e04a8d8a768c2d0d8993b"
+        },
+        {
+          "name": "kem-14-dtru-light",
+          "status": "passed",
+          "report": "test-results/optimized-x86-more-interop.json",
+          "ref_object_sha256": "ffeecde3b77dd112ae92fbfe0e7530b49315b850cbb6275b02a60897da15947d",
+          "optimized-x86_64_object_sha256": "66ee8f1f3e6280097f17a6eb5bd11e25bd048d0ad5100f7a840fc55d6d103bb7"
+        },
+        {
+          "name": "kem-14-dtru-prime",
+          "status": "passed",
+          "report": "test-results/optimized-x86-more-interop.json",
+          "ref_object_sha256": "cdd4ab57ff0a329f97d82f655e00aa82c2cf7d7327b5eeef8d9c7b625f750e94",
+          "optimized-x86_64_object_sha256": "5b7ec666ac50443db7f23f2f62c96a65a6dfd5bdbe2f37a35062904f02314273"
+        },
+        {
+          "name": "kem-14-dtru-648-pack-pk",
+          "status": "passed",
+          "report": "test-results/optimized-x86-more-interop.json",
+          "ref_object_sha256": "a81d113feec8ae0806461edd6badc3bb8e9cc25f8f848b01cd651d904b48dcee",
+          "optimized-x86_64_object_sha256": "df32d1040de1e97189564fe15436bc716bba07906fafc15365da6fc11f3c37dd"
+        },
+        {
+          "name": "kem-16-hare-128-kr",
+          "status": "passed",
+          "report": "test-results/optimized-x86-more-interop.json",
+          "ref_object_sha256": "116010fa5b941742063a2192d02b6be4c9c68134447c7e7ff35709110161cc85",
+          "optimized-x86_64_object_sha256": "34821b526a59add5a373c335654a6ac6ccb86afbbddc734d72e88228c3ec4c9e"
+        },
+        {
+          "name": "kem-16-hare-256-kr",
+          "status": "passed",
+          "report": "test-results/optimized-x86-more-interop.json",
+          "ref_object_sha256": "9982bfa08c8368bb3c48305f0cbefdf9e2b5794be2702c1c87993a3b4a9d81ad",
+          "optimized-x86_64_object_sha256": "d63b0b003680ea90bc57b66c12995bd001546c9a5c7a3f6167e8131c6ea9c8b9"
+        },
+        {
+          "name": "kem-17-hep-qc-1",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "1b159a995d545df966fa6658319263ad696ba4163247f69d361f79a01daedc08",
+          "optimized-x86_64_object_sha256": "82208b4de0a7c7357178cf67576a57f5ce65235a71acc26eb7a5141672a75815"
+        },
+        {
+          "name": "kem-17-hep-qc-3",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "12e7272db235d232b2bcd305e30e8d4d15a14cef6af99f969bf3a468c8b4c575",
+          "optimized-x86_64_object_sha256": "67aeabe18594a1155fda269bfd99ed930d9e7905cb1ead96621707c5c479c3eb"
+        },
+        {
+          "name": "kem-17-hep-qc-5",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "53a8155beebb58ff14833f6510085e3e49ea95fc5f9bff2d6d12a791e2dc1b18",
+          "optimized-x86_64_object_sha256": "9f441dbe3d7e838e982f94c7b2ed9af796a0c0afb47be17a6d419e31b9a277fa"
+        },
+        {
+          "name": "kem-18-loong128",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "406247e1bad6a68d0effece3ef8b06baf4b81abe82a85f499ff9b914b2d3998b",
+          "optimized-x86_64_object_sha256": "cf55396fef65e261c6f7ffd40aa7b55bbce868c2a8e219eddd29681ac5d126e2"
+        },
+        {
+          "name": "kem-18-loong256",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "c885304126cd0ad9f230f3c8391acdb9db44bf98a3a6c9e855ebfd6df47657a7",
+          "optimized-x86_64_object_sha256": "816faa33f88d8deae26695b685b8b0947d86a4823b1c07ff56629e035cba1014"
+        },
+        {
+          "name": "kem-20-mamba-frost-128",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "7e21d7d7cf609a7520e8112f173d9ffd5e6ac46d54063624a8df28060dca6f86",
+          "optimized-x86_64_object_sha256": "305f7fee7ae2df658c3e31fe8b43fc9b80bb3a9a123f412db79d68155dc4781a"
+        },
+        {
+          "name": "kem-20-mamba-frost-192",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "f4073ab45fa88d6e193db151e4700da93381829ce9d7898b40080ece7743565b",
+          "optimized-x86_64_object_sha256": "99097c66bad1c69fcd43ee727d399a37ee4ab6203fc089a24714e05dc1c78665"
+        },
+        {
+          "name": "kem-20-mamba-frost-256",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "82a9ae49f80a35223e5e72f0c304191931b66f1191d7ef09422d9e8e91eb8159",
+          "optimized-x86_64_object_sha256": "93ef71b752936dba059e1b34f4cb764e4a30ff40a2213bd69c1bedcc8d368d0a"
+        },
+        {
+          "name": "kem-20-mamba-frost-cc-128",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "ff603842f09f57dc0abd5b424ff624e6d679bbed03cc71c5f680eb4aa24c2af9",
+          "optimized-x86_64_object_sha256": "9d4873e014078ddf93ea5b03739b90e54c9d73b156393888876dfaee2c9f7f4c"
+        },
+        {
+          "name": "kem-20-mamba-frost-cc-192",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "7c72dce7650ff5eb61f811bf736dcdbfab36712cedad90aad758a6050a00b342",
+          "optimized-x86_64_object_sha256": "c6be65570ea1cbd90581c97cbcdb55e1b2ae62947dcde440508fab249c40121d"
+        },
+        {
+          "name": "kem-20-mamba-frost-cc-256",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "20a1e915af22a8e726bb7b41211fd5ceb99cff91218bb68a01caf136284d2476",
+          "optimized-x86_64_object_sha256": "e2c47b6560e3a73d72c474b0db163ba43db09ce12b4004ef0df7d380300586db"
+        },
+        {
+          "name": "kem-21-mamba-viper-128",
+          "status": "passed",
+          "report": "test-results/optimized-x86-more-interop.json",
+          "ref_object_sha256": "e72739c6675a52fc67fb766f8bf754f8d7e2f8064ce6f1078d9f8ee674e23d99",
+          "optimized-x86_64_object_sha256": "db6f30f9202e0c57596d9d7a70522ed16ae8ea6d85163b0e3cb04a970d5634fd"
+        },
+        {
+          "name": "kem-21-mamba-viper-192",
+          "status": "passed",
+          "report": "test-results/optimized-x86-more-interop.json",
+          "ref_object_sha256": "2414d137b8484eeaf754c3e0007a491b6ee33799789c34b0178426e4ce6ec4c1",
+          "optimized-x86_64_object_sha256": "c7a8ea3f75d9e6602476b85944ef3be2f7b699a167c70aa6121a80f2e2376189"
+        },
+        {
+          "name": "kem-21-mamba-viper-256",
+          "status": "passed",
+          "report": "test-results/optimized-x86-more-interop.json",
+          "ref_object_sha256": "9e63fd636baf5a71a01bc156ed943d83bec5390cb1a9bd29da711c4a428ac359",
+          "optimized-x86_64_object_sha256": "6147b3deffa1bde43682fbbc917eb4f8734bb5cc3bcfee2fe09ee350c2e5b951"
+        },
+        {
+          "name": "kem-23-mito-1-128",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "a933846e8d296eda49573987f46eab46fafb32ec9cf2c0255f4a72d77b98036e",
+          "optimized-x86_64_object_sha256": "e3d90276dbb9e1b46de805a3b19ecc99c538c0cb4283df853e332188d79293e6"
+        },
+        {
+          "name": "kem-23-mito-1-256",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "f591533f314d7d7a275701793e8b397a841a9298cdcb3c7f8220eb83fdb5fa17",
+          "optimized-x86_64_object_sha256": "ab9636e7cebebf2bb32c8e1a514b57ea58470ba472aef21b3a6e91ce3a2bc2f5"
+        },
+        {
+          "name": "kem-23-mito-1-e-128",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "40a3099a067620720eeb7802c51d6c8baa9772a15a38e55924aa793de8fa71b6",
+          "optimized-x86_64_object_sha256": "cf40defe22891e91749f5bdbcc400487c15a9d85bec6fc5e2efac5d5b52c1960"
+        },
+        {
+          "name": "kem-23-mito-1-e-256",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "84c8b9376ab36d6d5125842b5c3993672b8e004446aec3125eb74736c7dedf06",
+          "optimized-x86_64_object_sha256": "3a2796ed28297be0761ca2bde10bee7e09eeeecbf441369ea3bd6b678e23887d"
+        },
+        {
+          "name": "kem-23-mito-2-e-128",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "4811269418883cbc960e697d6175bc5c5a87c287430b8528df61f8318af9dd48",
+          "optimized-x86_64_object_sha256": "65b3dfb49167d9eb420bd4a6ac2c52cf2f3fc1259d9f56d01b4ab3ea5a006721"
+        },
+        {
+          "name": "kem-23-mito-2-e-256",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "a9004e85a8136c867d1d7f57e3c892f27145914414be7e02bbfb56ba532938a6",
+          "optimized-x86_64_object_sha256": "e5dfa455c3df31e5234450879f4da93275c55ea5c9535b5c55f06286db708eaa"
+        },
+        {
+          "name": "kem-25-nev-128",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "a2108ea3efa1fb63494453b3fdf9b72af4446dcab073a80048b27f20e1e382ca",
+          "optimized-x86_64_object_sha256": "3e73aa479106cc008c6ca9494c0ff413cb246fa47f42f3ec6141c146857743ef"
+        },
+        {
+          "name": "kem-25-nev-256",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "3980281e38602842601a29048d8a3b1caad164a873f8d9057ad1e268236f2711",
+          "optimized-x86_64_object_sha256": "075d6b3ac2b44f73413e7464c6dc45e6c280888d6c60069da9da4ee58762ad0a"
+        },
+        {
+          "name": "kem-25-nev-512-1409-iccs",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "d574d852459dae41178d1359c3d395d2d3ee1ce252c87323b875a4f5f2354aa5",
+          "optimized-x86_64_object_sha256": "4c334511a71130ac7b692aac941bfb1d0db354cb2e2eee16e2bbeb392d6ef8b2"
+        },
+        {
+          "name": "kem-25-nev-1024-1409-iccs",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "eae6ff4a8093340fb81af38eaf81524305255a62a626b09e8d041376d2e1b579",
+          "optimized-x86_64_object_sha256": "aeca32956305a9bcdb51135fa50424728e28dcc7852b611ebcb3c97c81979fd9"
+        },
+        {
+          "name": "kem-25-nev-512-3329-iccs",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "85888518e7750b02c751188dce553db1e5a4d5c0de8deff2754edaf7a559ef5d",
+          "optimized-x86_64_object_sha256": "6e2c25db5ae4bde7e4604d9dc4eb9c9232ee596636e3b8b0ea423eb5b2fb5825"
+        },
+        {
+          "name": "kem-25-nev-1024-3329-iccs",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "331afceebc21ab802a2df8d59e4ebcc3f28bc554862902293103886cc4635aa8",
+          "optimized-x86_64_object_sha256": "6aeaffcc73c27d04ab8b5f82c431e60ca7e5d2371b5e31a89188a48f8bbbda2c"
+        },
+        {
+          "name": "kem-25-nev-512-769-iccs",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "debf63ab36e8d6fc22f338638fa6ef1d932eaf8d91c70eb0892b808a5912e4f9",
+          "optimized-x86_64_object_sha256": "631430261600d947aac781c588b1725e2aa88d1389763e041f091350f5910741"
+        },
+        {
+          "name": "kem-25-nev-1024-769-iccs",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "fee1e5c492b80de033505ccd9ede5e5a76704eee567824cbcb9230cd0730dad6",
+          "optimized-x86_64_object_sha256": "a8f201e8282dcb6483b9117413f0e1e9e1db8b008da61859714b205671f98cf9"
+        },
+        {
+          "name": "kem-26-hqc-128",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "43956a6a44fd9084a007a6ef3a482c6aa424b76beffa5c36e6c7cf8fdb982921",
+          "optimized-x86_64_object_sha256": "181ab3a374e2636b3950bffee395f473c6e4a168bd6d4bdc82f66f9add5776d4"
+        },
+        {
+          "name": "kem-26-hqc-256",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "5d7576b26c14ac848427788eadc17fc5b2b0fc98546035f786743970a2d7c1c1",
+          "optimized-x86_64_object_sha256": "aeb930c115317247c1fcd1048d4c6ce62dc54320eb0bf463dec78b51a010eba4"
+        },
+        {
+          "name": "kem-29-polarkem-128",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "d3988ddd53a726af9e363c96c5083d7000a030fbe2f02f9a85f60bea1847a67f",
+          "optimized-x86_64_object_sha256": "e51155fdf06ce8df508dff67282a1874eacaaf906ef1714b73a7f5779a0ff213"
+        },
+        {
+          "name": "kem-29-polarkem-256",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "0ffae082a07b6820fffebbd5d81c86eec37074b2549fa3e7375e66d199398f7a",
+          "optimized-x86_64_object_sha256": "c9cde50cabfead6da9b3df35728cbc5e62c70785023e35773327b97c03434df5"
+        },
+        {
+          "name": "kem-32-qctm128",
+          "status": "passed",
+          "report": "test-results/optimized-x86-cxx-interop.json",
+          "ref_object_sha256": "d5f26da0f0153a628b90bcf33dcc4ca7f8061c3dcca53084c0eb6b45689044ee",
+          "optimized-x86_64_object_sha256": "4b2931808c9cbc8dafc33f32e91fc7d7a2912c2c39af3ebff04a4d87aa370307"
+        },
+        {
+          "name": "kem-32-qctm256",
+          "status": "passed",
+          "report": "test-results/optimized-x86-cxx-interop.json",
+          "ref_object_sha256": "64549ef1e3eef577011a47db94c89e432805dca4951505f0cc3d89915b7b09b6",
+          "optimized-x86_64_object_sha256": "0e54850335d81b433b1a538cc908e33f97606780fb518ae2b34c69c2cc2d512c"
+        },
+        {
+          "name": "kem-35-scloudplus-128-aes-packed10",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "0b594a8ecbbd3dd76449943a397baac17c7f6c94a04d70232351808375ef32c9",
+          "optimized-x86_64_object_sha256": "829119e47af53a78110fbb8d7adf0ab97963e4c91f23769e872bb3887b286749"
+        },
+        {
+          "name": "kem-35-scloudplus-128-sm3-packed10",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "da2c01ed10c5170c6ec1718bf62a7730520a78304ae1a1ab67902a3778fa0819",
+          "optimized-x86_64_object_sha256": "9932c0cae539b7fbb1d46ef670fcb03ccf18f63c3d8fe87c911a65fbdaad0ff9"
+        },
+        {
+          "name": "kem-35-scloudplus-192-aes-packed10",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "4fed579811ae08c1891a8766574f2d2b2664ebabcded8dd1991fd33ef451c419",
+          "optimized-x86_64_object_sha256": "b29494b156f6559547222ad03bee5dcdcbf8e0e4b13e7c214ec26696e126a0e9"
+        },
+        {
+          "name": "kem-35-scloudplus-192-sm3-packed10",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "29ff8a33abe2d45c6d2aaaa0cd06862ec7cfc512b7fd2dbfe959cb7a32b661ac",
+          "optimized-x86_64_object_sha256": "c566829da475442efe38698cbd16e15a73bbde592bb7cbdae8660533f0fbaa03"
+        },
+        {
+          "name": "kem-35-scloudplus-256-aes-packed10",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "877b4f85ec47711550f1a5ef78a621443af448da4ba37f6957abdb70b89d2247",
+          "optimized-x86_64_object_sha256": "3c2d77b98d83dfe94e77dfe600057484d8e76519aa066aaf446a9222e05033d1"
+        },
+        {
+          "name": "kem-35-scloudplus-256-sm3-packed10",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "28a9ffb24c68ea38df33715dbc7429c1618e8db381e5b5a6260fbde34963e6a7",
+          "optimized-x86_64_object_sha256": "aed6e5b1aad43e0cc9ffed5a19472150210640db5e42e2bcbc1398c95127889b"
+        },
+        {
+          "name": "kem-37-triq-kem-128",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "8a92c6b772c1025f55dce2b476bec1b0feb936b8d560f7cc9c952e0ef45556a0",
+          "optimized-x86_64_object_sha256": "0d455ddaba7a957b4180945a98dffd370f70f3eeacaaf95d4e1ee8a77bce424b"
+        },
+        {
+          "name": "kem-37-triq-kem-256",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "54b9eb8a2ef6865c66207614ecaae625c28ce5426f2725f14e09527722d9467f",
+          "optimized-x86_64_object_sha256": "7d1db2417b62ceb2d473d8a332462886c3131dd58ecf5f4d639b8dda647e2c36"
+        },
+        {
+          "name": "kem-38-uvw-kem-128",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "e2d06f43728ef67623cf40d1d961fb1d87c920526132c488cc5b4695b250f686",
+          "optimized-x86_64_object_sha256": "15029cef44a345d92567328be0f07a64e70a7bee819343e33a947a2727ac7165"
+        },
+        {
+          "name": "kem-38-uvw-kem-256",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "3c47ca1291936f07de052abbfd0c71c747142efff02a0244d93c16149a5ce358",
+          "optimized-x86_64_object_sha256": "da8826af4dd16bc8e5a079729959d5b0cb7d238d76ba567bc1d7c76482161ac2"
+        },
+        {
+          "name": "kem-39-weaverkem-128",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "45cc25012b80abb6f4157c0d2ec53baf773f5958af6a04d5171cdde0b6ba3176",
+          "optimized-x86_64_object_sha256": "812da50328d3786b86a2b0c89d4ade77c61fb6b87407924f4b5a607ec44e4a5e"
+        },
+        {
+          "name": "kem-39-weaverkem-256",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "308a7a4516c8018ed1caafc25cedaf8c9c90fb50387f8e26e8647c119145f8bd",
+          "optimized-x86_64_object_sha256": "930c112d43e62a41848655fa29e93cf649519e7e6781098de6127a6b211f48ae"
+        },
+        {
+          "name": "kem-40-yuanyang-512",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "c9d02cdb6668d35d4c6fff091e4647d1dc870ef7b15b79dd27187d750299d854",
+          "optimized-x86_64_object_sha256": "b72cd3abc4db34460e53d92910560779d13249eed9afbeb6e1559c168a8d8d55"
+        },
+        {
+          "name": "kem-40-yuanyang-1024",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "0400c7dbc6a1b8f1f108c0e860ff00e0a57bb22dff3c50bda690780efa1a6e9b",
+          "optimized-x86_64_object_sha256": "e31fa6004355784ce9c8e8d6f907f907860c5b24dfecb81d15cf625fb326f8c2"
+        },
+        {
+          "name": "sig-01-aigis-sig1",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "e07729c8e6eb8febbb9bd70643b5c1d73811bf3efa09e6a53789231615502aee",
+          "optimized-x86_64_object_sha256": "f2cd4719b6716bb93fb4e0d07aab551adaf302db0211b32cbe18086107d052ec"
+        },
+        {
+          "name": "sig-01-aigis-sig2",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "e094520e0bdc3635693b3fa34299bc3df9298177591c0876ae4158182970f1cf",
+          "optimized-x86_64_object_sha256": "cbe5865f83d4e6b34ae7cceed2b8cc5021277fe026b9aa41db848d511de60c75"
+        },
+        {
+          "name": "sig-03-cedrusc-160f",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "2d88be7510db9b0e7d9c6c34aa2dd941fd315419ad6eb22b059fea143084de2e",
+          "optimized-x86_64_object_sha256": "2b74b097023b7ec4b0f760560f477f023cebc647ccabb91c50a0d6aca43cd412"
+        },
+        {
+          "name": "sig-03-cedrusc-160s",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "e0ac0d44474f28ea5b2f5e392b4dd1c2a9907b603bcd0fd1d3d30e380440a765",
+          "optimized-x86_64_object_sha256": "4f6797e25c977ee8c0531cc73daa40395969c3c90ccfda33d1324db359a498f0"
+        },
+        {
+          "name": "sig-03-cedrusc-256f",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "f0cd11445e9d19b7d1a54a6e01c488fe137ece7f3b2fd3d14354263d1d97ba64",
+          "optimized-x86_64_object_sha256": "be410b7a961dd89cfee9c18d21afdd639f32c0a53bb85abb5b8267a3f4a0289e"
+        },
+        {
+          "name": "sig-03-cedrusc-256s",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "62b6984742eb13dfa4f26afbb672911a915fa1dd46002f9e524bb1bfc1aea542",
+          "optimized-x86_64_object_sha256": "3285a10a7bae6376c60bdb19769c69e33b92577a50c7eb8e0711d8f68fbc1945"
+        },
+        {
+          "name": "sig-04-cedrusalpha-160f",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "ca0e800183fd55a838ceb7bdf2b911a650850dd5a8f0cb9d2bb13d073c46b644",
+          "optimized-x86_64_object_sha256": "dcb2899fcc278676c5dd6636f6fce1960d6448c36c176066b3de2e3b7bbb8e3f"
+        },
+        {
+          "name": "sig-04-cedrusalpha-160s",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "5c1cbf6036896a63024886ebd882e5829ea962ceb6ff01349b298a53390bcecd",
+          "optimized-x86_64_object_sha256": "f5c57d2a611b9bcefaded13edeef236a48efe583386961039cdec619a39b94f6"
+        },
+        {
+          "name": "sig-04-cedrusalpha-256f",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "721025cc0827ff033aad7035fb84406493bb7ab6d44c7881cdc4368c3e9ad61f",
+          "optimized-x86_64_object_sha256": "b4ac0db2e9e0d24154ffca0f63841325a6ce88baf5000f887a9486f993014ecb"
+        },
+        {
+          "name": "sig-04-cedrusalpha-256s",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "4095b2eedfb66236363a41d52dcd18a529ad4be4cb27e87aedfaa979f303d33a",
+          "optimized-x86_64_object_sha256": "60d4a169cfac8d0ac7251a1d28c64a6a5081fe4dd6f15e8eef13d604c67f6ab7"
+        },
+        {
+          "name": "sig-05-sm4th-d3-128f-loose",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "617a9aa4e98a10f6e9a0b6253e65e62c227bf64784c93be87cca81e4d84183c4",
+          "optimized-x86_64_object_sha256": "9dd1bc485eba0c311a3844a695773c0533c56d9192345ef96c9a6c75855a925e"
+        },
+        {
+          "name": "sig-05-sm4th-d3-128s-loose",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "ab193ac0d02f9dc0d9d7e66d84f82e1c9c445f431c6bd0736c52c96d456e579c",
+          "optimized-x86_64_object_sha256": "4d7fb744375b10c89c6cdb1c2d35152f706cf155745c38acfcdf11d9d9f5c0ac"
+        },
+        {
+          "name": "sig-05-sm4th-d3-128f-tight",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "5bb4fd41db1183f10cace9905f4bdd4b0c67272d03ab711e6385b30170133a22",
+          "optimized-x86_64_object_sha256": "8d42161ff8ff2ef2a27d2bb76eb732346b4240e09d224b3bca0d57319ed1fd2a"
+        },
+        {
+          "name": "sig-05-sm4th-d3-128s-tight",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "f3b67f67fb4f74b3353c2b7b1f78a647f6d6170117489a000d22d8c573b825ab",
+          "optimized-x86_64_object_sha256": "cf19d749e43278645d8bce178aa65bb669bc67c7e1f27b0f1e1f858364eb8380"
+        },
+        {
+          "name": "sig-05-sm4th-em-d2-128f-loose",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "a86d35f649eaaecf7451b5ce20c362e0f731769f71cd7d86cf335f2255c3c52a",
+          "optimized-x86_64_object_sha256": "8a7116316bed8a80166686adab3c88889cd9981f5cebb9aae721a55e8d16175d"
+        },
+        {
+          "name": "sig-05-sm4th-em-d2-128s-loose",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "c3abb9252f06f1325d40ad72d4aa87f6091a31603e32051c682b0d7fea0945e6",
+          "optimized-x86_64_object_sha256": "8fa60c8c9413ace3f89daa14f0586a15b7373f2b2c768df4ce6f617f880f982b"
+        },
+        {
+          "name": "sig-05-sm4th-em-d2-128f-tight",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "2d087d163e4acdbc36028f774463926687ef7f321edba9860f1184012f2bcc18",
+          "optimized-x86_64_object_sha256": "d930741ddb97db28a9d5af373bc8d1bbc4e009d2393a0a8b8890fb2979ceb2a8"
+        },
+        {
+          "name": "sig-05-sm4th-em-d2-128s-tight",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "ccb1256a999ff71dd290c31729c320f384667cc183696a4dedb676d10f297e59",
+          "optimized-x86_64_object_sha256": "cccd36762bf5fe82e2f9083fc8f89c6c84bf1acff9ffb4c2f4c163ad520c284b"
+        },
+        {
+          "name": "sig-05-ublockith-d3-256f",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "dd9189a99a0828a9c3b32cce38475bd4027bd96b976e26d7ef533991c71ec870",
+          "optimized-x86_64_object_sha256": "04c7905bc00c09f7a552e8e5b49327dbb6b725812ea951612c74b4108a1f4179"
+        },
+        {
+          "name": "sig-05-ublockith-d3-256s",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "2c2790757d1be9d90f3c3b027b186d6658e2e604158b083c1de6b9354d9d3248",
+          "optimized-x86_64_object_sha256": "0e971cfc02a167cb31d107dbc15a721b815ffc5b9c8710523fa12d17ec9bb6cd"
+        },
+        {
+          "name": "sig-05-ublockith-em-d3-256f",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "e053e9f628e03e9d1c776004ffb3e36a711274e6cec7c0a3058836bee58a80a7",
+          "optimized-x86_64_object_sha256": "10bdd33fbe8b1e20dec57a41df629e31947403eb4d30584bc8eb27057f41484b"
+        },
+        {
+          "name": "sig-05-ublockith-em-d3-256s",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "65e157cb2e060b5aa8bcd68ae4f118ea8abe2d87ca51521249ac84a7a035dcc4",
+          "optimized-x86_64_object_sha256": "54ad188899c164eab5eb063b68b95a18212f8bef763b120b95b97176c39f8af5"
+        },
+        {
+          "name": "sig-06-compass-sig-128",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "9087202e2bc694e36163705fb31422b7d01a7cd97af3f252dba591447814a5b8",
+          "optimized-x86_64_object_sha256": "596e6b29a92da55652b2b6b8f547b13858b434c29e6c3344a1929565eb9521a3"
+        },
+        {
+          "name": "sig-06-compass-sig-256",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "0746b6ccd017334ac5af86378bc91a81b15c8132debfe6d9d36d48cb29aded74",
+          "optimized-x86_64_object_sha256": "4f03aeb928ef88996a645ed54a5e554f14ea3aa1553037aaa835c37350a2525b"
+        },
+        {
+          "name": "sig-07-cs-128",
+          "status": "passed",
+          "report": "test-results/optimized-x86-more-interop.json",
+          "ref_object_sha256": "e043701b7a5f1a86888747bd009c867fb15c2048848ea13e87731f566145ab03",
+          "optimized-x86_64_object_sha256": "afe66ac1b8219e12ebce409de4310ebba734df1dbf3781603acfc0ed9133cfa6"
+        },
+        {
+          "name": "sig-07-cs-256",
+          "status": "passed",
+          "report": "test-results/optimized-x86-more-interop.json",
+          "ref_object_sha256": "525618fd3cdb675d1c901772e25055a516c6683ce39cfab13c64250ad3ef6d30",
+          "optimized-x86_64_object_sha256": "7314b4a0736ca533c3bf8e20964596a812f3d5cd05b7273a0a5b425ff69f829e"
+        },
+        {
+          "name": "sig-10-facto-dsa-128",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "4821e87aacc0fde6ce17b14d032cd80d3b51750fe1aab1ac6ede39c0a6918866",
+          "optimized-x86_64_object_sha256": "6f642b8aa4c49224fb3fc7c08873f909f7633428398b271dec745598651eacb5"
+        },
+        {
+          "name": "sig-10-facto-dsa-256",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "7c18a4d80df33b711b0e7b67e1142418dc2825c0f4d3fe7802837f052635a494",
+          "optimized-x86_64_object_sha256": "c48f81fa2c2b4224d837b25be6f39d50fbee62602119db8ce01ce1a780780135"
+        },
+        {
+          "name": "sig-11-flextree-160s",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "28ce0933d5109a2183efbda1c270c5a13183f42f39f87ba85ee74e0a87b12dc6",
+          "optimized-x86_64_object_sha256": "660ba08e02443551c3b3bfa91bd0c2d83a97940fdb6f23ec769a666eec7805d7"
+        },
+        {
+          "name": "sig-11-flextree-160f",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "2ff56f25942fd6d221306e768a6cdf8ea1b8f62e3ff18300ec1dc8e9ec0b819b",
+          "optimized-x86_64_object_sha256": "af3f5fbc1d084c866bdffa2505abc7d6335aa2b2e71bc2977002d69ae8d7afb8"
+        },
+        {
+          "name": "sig-11-flextree-256s",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "aa5d26014ebcbe2ca3ed3787b3be3ffcd3195191a77d164eeafa14d6493a17d8",
+          "optimized-x86_64_object_sha256": "4db30c32f02d2060e1b49e16e34c4ad83c5b37f1263865c9fe63179f5120ef92"
+        },
+        {
+          "name": "sig-11-flextree-256f",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "bb8199c03e6969d0ba69bc3c8bd5980836854a164d46864a8a68cd6b88e405bc",
+          "optimized-x86_64_object_sha256": "49968734e148bcf8557fc921f079d9c6f99a6af0c54e831bca7e476bfd8bce46"
+        },
+        {
+          "name": "sig-12-galas-160s",
+          "status": "passed",
+          "report": "test-results/optimized-x86-cxx-interop.json",
+          "ref_object_sha256": "16ca8ec0c1a79b82d3eadd49b7b36d6f5aabc56b6c3eb7d4db090985b4802a35",
+          "optimized-x86_64_object_sha256": "5a927f3cc325233608d50fcc3c4a9d4fd40b90c2bb7c40e25d16c9d71ca0c0da"
+        },
+        {
+          "name": "sig-12-galas-160f",
+          "status": "passed",
+          "report": "test-results/optimized-x86-cxx-interop.json",
+          "ref_object_sha256": "94368d92c2e3969a3e2a13166a931c567e50389d188109da8bd9cb2a240890d0",
+          "optimized-x86_64_object_sha256": "675fbcf2a3198fb8a7f360f779728c50d790844b4b406c0ca88757327c092a68"
+        },
+        {
+          "name": "sig-12-galas-256s",
+          "status": "passed",
+          "report": "test-results/optimized-x86-cxx-interop.json",
+          "ref_object_sha256": "9ad7320c867d75b6f1b0eb3f2408f63b6d9bf2ea67a0725a1ef11e322b7339b4",
+          "optimized-x86_64_object_sha256": "3612cf5f25e6151a42e22d16cb3f4ac4150a71d575e321f28e20949286f78a4d"
+        },
+        {
+          "name": "sig-12-galas-256f",
+          "status": "passed",
+          "report": "test-results/optimized-x86-cxx-interop.json",
+          "ref_object_sha256": "fa93ad98e032f125e81cd7c7db818f1b197c8e8b7093a8facf2e5f48396ac9a3",
+          "optimized-x86_64_object_sha256": "150383d99a25cfe86c1aeee6dc7b85592d4ccb3b014955520e027a08545e7651"
+        },
+        {
+          "name": "sig-22-rhyme-sm3-128",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "bd356036d769b6e31eb2b95a0068942fd59deb668f39f7dc54e7e02816edfd17",
+          "optimized-x86_64_object_sha256": "5bb5287d712730557774dc60743d5620a50acc10668f9fb9d583ef9bb2959392"
+        },
+        {
+          "name": "sig-22-rhyme-sm3-256",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "c74551c224fe6c2c727a7c26c5f7c61e8e88508f195b4fdcb168b3533feda88d",
+          "optimized-x86_64_object_sha256": "dfc5cd0caab38638cc203286e8a542179eb0a4d218b94bf82ef01db888630eab"
+        },
+        {
+          "name": "sig-24-sigurd-128",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "6601f8228721dd12995225e4ac5435bf6950de97c7612f13365caed10e902bf3",
+          "optimized-x86_64_object_sha256": "354259fea4cc094c76d5fa96f6e624fdb5ddbb5f44696e8a8569c4ba95758612"
+        },
+        {
+          "name": "sig-24-sigurd-256",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "0f9aece3ec371c88dc2f46a0407189116b33ccd1d9414d78d05622e1011097c4",
+          "optimized-x86_64_object_sha256": "2eb4fc12914fa865c7c0123a389b28f3fe1dddd47324a80e2a61e54e1c76d7d4"
+        },
+        {
+          "name": "sig-28-sydo-160f",
+          "status": "passed",
+          "report": "test-results/optimized-x86-cxx-interop.json",
+          "ref_object_sha256": "851a44c7206434bcebd91fbd35e19e0de4762eec66f2fece7c3c1c9173dde7f0",
+          "optimized-x86_64_object_sha256": "e230cf51d92216c592854f37a7e3d961b60d838e3fa8cf557c16adc930d3c709"
+        },
+        {
+          "name": "sig-28-sydo-160s",
+          "status": "passed",
+          "report": "test-results/optimized-x86-cxx-interop.json",
+          "ref_object_sha256": "59380fe640846fa658663181fc97ed8974c1761e9decda3c1c43d484907fa589",
+          "optimized-x86_64_object_sha256": "8be15a159f65c689d14ed0cecaa40e8e6ed4a057dbaff7448650a4c55ed9dff7"
+        },
+        {
+          "name": "sig-28-sydo-256f",
+          "status": "passed",
+          "report": "test-results/optimized-x86-cxx-interop.json",
+          "ref_object_sha256": "b598c56576748ab6b1b6c64e674d7826a3e9952c74ecc5b228a1b81c03531d44",
+          "optimized-x86_64_object_sha256": "fd19b76b9c079340b16fe568d88fb1d10cd69b68a48f564d1ab42da62ec9d8e0"
+        },
+        {
+          "name": "sig-28-sydo-256s",
+          "status": "passed",
+          "report": "test-results/optimized-x86-cxx-interop.json",
+          "ref_object_sha256": "8d31639c920f12b772f2f2285d99a28c8daed20c08cff778de353de5ba1e6509",
+          "optimized-x86_64_object_sha256": "f59a523a7b6e38f9cbd43b508ccc50ef4888e7713e175bccb949acec9648e1fb"
+        },
+        {
+          "name": "sig-30-trine-128-balanced",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "3a9e6982afd0b184726fc53e73d64338b5bdb8087f7bca1de81cfb343652a8d9",
+          "optimized-x86_64_object_sha256": "77e457f71721f5a39c2435304be947093cefb4e564a28e8b23ad2c5446e65d70"
+        },
+        {
+          "name": "sig-30-trine-256-balanced",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "8472e181f470fe9cf755c1bf25ce58eba67e91ab9add2267496930bebfa1c979",
+          "optimized-x86_64_object_sha256": "0be4d3c5ed7e42efd87d990881a5c3ea936569eec6882b8be405896d9e12e03a"
+        },
+        {
+          "name": "sig-30-trine-128-shortsig",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "732cdbf2df5d4bc4775a12f143f1867868cee011530cd4b055c89005a5201a8d",
+          "optimized-x86_64_object_sha256": "adbe65efe40fefe15d1e9089c143438d5d1c6308060d5732b63ef6132fe81cad"
+        },
+        {
+          "name": "sig-30-trine-256-shortsig",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "ef230a08ee92f434bbedef4ac8ca4fe6b114be5d8771855d2dc7f7a75a78fee9",
+          "optimized-x86_64_object_sha256": "f764146e0004b9985c733bce89d54716f3ab57e257b77ac001b7d0f268e31195"
+        },
+        {
+          "name": "sig-31-tsuov-128",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "7a1628157ee9a93c52dfcc006825fd533e79384fc834026e029f3b91d5c264e3",
+          "optimized-x86_64_object_sha256": "39e117b969227051384a92723c4279855c868d5ce53200deaccc7d0e3c453e93"
+        },
+        {
+          "name": "sig-31-tsuov-256",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "b0545d7a814910fca188a4adcd83fbd7f47a1e20a908ddb6c7481c120d961e03",
+          "optimized-x86_64_object_sha256": "5a83d8b30bcdd7e925de08e724aafb6e9fbf8fad211e212166a0a8b1f0197764"
+        },
+        {
+          "name": "sig-33-vdoo-128",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "350038d77cedb880caaa8f4f5fe226ea1c0cbfe30dfe2c6c5a8c69c7d6975b78",
+          "optimized-x86_64_object_sha256": "10cfd0dc1fa5531a18a86056ab206d0911df3d3962e88de1de4d65e42a969c40"
+        },
+        {
+          "name": "sig-33-vdoo-256",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "512156f293dc5fbfa485201f850b3d166abd1923224626128c62f578769b0634",
+          "optimized-x86_64_object_sha256": "b6d1977dfcc0ca69cb4cbdaa6b401daa2775c32b746e89fbcb7e028aa275c118"
+        },
+        {
+          "name": "sig-34-yuanyang-512",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "3a4f07bf9fac219221effce9396440e01a02fe8db3be79448f20d475327851c8",
+          "optimized-x86_64_object_sha256": "19019ebc20f7794afb45b519d7cb8aa4b1f655eb3f26cf80dfea87eea1985e33"
+        },
+        {
+          "name": "sig-34-yuanyang-1024",
+          "status": "passed",
+          "report": "test-results/optimized-x86-first-interop.json",
+          "ref_object_sha256": "4f1d2d21005ae8fd3d2baeb76703615ae26dda71379d9506c2f681bb11800987",
+          "optimized-x86_64_object_sha256": "7e3cb509677bffed88ba54f54d24418c0e148cb16a5e5bf1d082689eabf1de47"
+        }
+      ]
+    }
+  },
+  "runtime_not_verified": [
+    "Linux x86-64 backends",
+    "Linux AArch64 backends",
+    "TRIKE-1 and TRIKE-5 AVX-512 backends on macOS x86-64"
+  ],
+  "notes": [
+    "All imported author files match their pinned archive members.",
+    "No cryptographic kernels were authored or patched.",
+    "The full 51-parameter EVP run preceded the COMMON-symbol isolation fix. The final module was tested with 9 focused EVP cases, concurrency/lifecycle tests and the source/export audit.",
+    "Earlier failing x86 interop cases remain reference fallbacks; the old TRIKE-5 result predates enabling its AVX-512 path and is excluded."
+  ],
+  "linux_compilation": [
+    {
+      "target": "linux-x86_64",
+      "parameters": 189,
+      "status": "compiled-and-symbols-isolated",
+      "runtime_tested": false,
+      "objects": [
+        {
+          "name": "kem-01-aigis-enc1",
+          "object_sha256": "cd6285b26be269669eb3a9e0301314b4a5e3b3de75a0790beda6cbc538bfb067",
+          "getter": "ngcc_ref_kem_01_Aigis_enc1",
+          "private_common_symbols": [
+            "ngcc_ref_kem_01_Aigis_enc1_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-01-aigis-enc2",
+          "object_sha256": "eaa5e77bd6fa46997bbf16b459ec039de009a929cf132303747e6c0203603eab",
+          "getter": "ngcc_ref_kem_01_Aigis_enc2",
+          "private_common_symbols": [
+            "ngcc_ref_kem_01_Aigis_enc2_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-02-amoeba128",
+          "object_sha256": "694ba8e86de786439a09481f96fca8acdecadfd0e6dd0d54c46691cd7bcc2665",
+          "getter": "ngcc_ref_kem_02_Amoeba128",
+          "private_common_symbols": [
+            "ngcc_ref_kem_02_Amoeba128_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-02-amoeba192",
+          "object_sha256": "77a0c73550c7375150247a50c94026cd723668c0c5194f37dccf66dafd750482",
+          "getter": "ngcc_ref_kem_02_Amoeba192",
+          "private_common_symbols": [
+            "ngcc_ref_kem_02_Amoeba192_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-02-amoeba256",
+          "object_sha256": "3d3add97e295a52bd3ebc200f6492a959757562f5420cbebf2f0c8870041d1e5",
+          "getter": "ngcc_ref_kem_02_Amoeba256",
+          "private_common_symbols": [
+            "ngcc_ref_kem_02_Amoeba256_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-04-bag-piglet-128",
+          "object_sha256": "efcfd7500ba1c7bbcf389af1e74cb7f741fffa3b4c9a52bba6e2608018cb44b9",
+          "getter": "ngcc_ref_kem_04_bag_piglet_128",
+          "private_common_symbols": [
+            "ngcc_ref_kem_04_bag_piglet_128_common_drng_algorithm",
+            "ngcc_ref_kem_04_bag_piglet_128_common_ideal_modulo"
+          ]
+        },
+        {
+          "name": "kem-04-bag-piglet-256",
+          "object_sha256": "ab3b68c6d19f035e9d3b060376a9a6999b2e408be3b3da7b3bcc666629316f51",
+          "getter": "ngcc_ref_kem_04_bag_piglet_256",
+          "private_common_symbols": [
+            "ngcc_ref_kem_04_bag_piglet_256_common_drng_algorithm",
+            "ngcc_ref_kem_04_bag_piglet_256_common_ideal_modulo"
+          ]
+        },
+        {
+          "name": "kem-06-bra-128",
+          "object_sha256": "0bf767a55b384bf5076718f798c2ff601833064aaf868b83f275039086c46087",
+          "getter": "ngcc_ref_kem_06_BRA_128",
+          "private_common_symbols": [
+            "ngcc_ref_kem_06_BRA_128_common_RBC_67_SQR_LOOKUP_TABLE",
+            "ngcc_ref_kem_06_BRA_128_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-06-bra-256",
+          "object_sha256": "464975deb0a6016bfac8bb4e0f01c272615883e49092a049366d1f70f6227999",
+          "getter": "ngcc_ref_kem_06_BRA_256",
+          "private_common_symbols": [
+            "ngcc_ref_kem_06_BRA_256_common_RBC_83_SQR_LOOKUP_TABLE",
+            "ngcc_ref_kem_06_BRA_256_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-07-brqc-128",
+          "object_sha256": "2b3e786efc593aa2dbb3c3e10ff21fb397b871ee830cbd43b8fe4e8f294bda33",
+          "getter": "ngcc_ref_kem_07_BRQC_128",
+          "private_common_symbols": [
+            "ngcc_ref_kem_07_BRQC_128_common_RBC_127_SQR_LOOKUP_TABLE",
+            "ngcc_ref_kem_07_BRQC_128_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-07-brqc-256",
+          "object_sha256": "d2c56d0685bfd5703405755c09755820f7a38d9938b4f92a88e94f159575da12",
+          "getter": "ngcc_ref_kem_07_BRQC_256",
+          "private_common_symbols": [
+            "ngcc_ref_kem_07_BRQC_256_common_RBC_163_SQR_LOOKUP_TABLE",
+            "ngcc_ref_kem_07_BRQC_256_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-08-bw-kem-128",
+          "object_sha256": "321d378e33bcfeca9ae01b96e751066369bcd12af8c74a4e7e69d104d7828a10",
+          "getter": "ngcc_ref_kem_08_BW_KEM_C128",
+          "private_common_symbols": [
+            "ngcc_ref_kem_08_BW_KEM_C128_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-08-bw-kem-256",
+          "object_sha256": "fda174e35cfeee4f0b87409a7bb15d7b232d6dfd7a828debcaeb37923d804df8",
+          "getter": "ngcc_ref_kem_08_BW_KEM_C256",
+          "private_common_symbols": [
+            "ngcc_ref_kem_08_BW_KEM_C256_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-09-cheetah128",
+          "object_sha256": "6b7ec533f1e7ab33fdb029a8210604e5bea765b6f11cfdabeb45f9ec1d843e74",
+          "getter": "ngcc_ref_kem_09_Cheetah128",
+          "private_common_symbols": [
+            "ngcc_ref_kem_09_Cheetah128_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-09-cheetah256",
+          "object_sha256": "21bc56a6b9c82847e425c68505cb6ea6722d703158853ead1ec72978a52f44f2",
+          "getter": "ngcc_ref_kem_09_Cheetah256",
+          "private_common_symbols": [
+            "ngcc_ref_kem_09_Cheetah256_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-10-cmultiurag-128",
+          "object_sha256": "51de5ffdb80b56739ba523a215e14c403ddd0fcb5a49b60eb2a4f53a9111c280",
+          "getter": "ngcc_ref_kem_10_CMultiURAG_128",
+          "private_common_symbols": [
+            "ngcc_ref_kem_10_CMultiURAG_128_common_RBC_79_SQR_LOOKUP_TABLE",
+            "ngcc_ref_kem_10_CMultiURAG_128_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-10-cmultiurag-256",
+          "object_sha256": "1552f017be465eaef1b1ea8779dfbe44e268ec7a83bd60d4e29770b348669230",
+          "getter": "ngcc_ref_kem_10_CMultiURAG_256",
+          "private_common_symbols": [
+            "ngcc_ref_kem_10_CMultiURAG_256_common_RBC_127_SQR_LOOKUP_TABLE",
+            "ngcc_ref_kem_10_CMultiURAG_256_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-11-compass-kem-128",
+          "object_sha256": "2dd640c65226b16501aaf3558d2048a56c7be4dc8dfce98ac63bd763677a6310",
+          "getter": "ngcc_ref_kem_11_COMPASS_KEM_128",
+          "private_common_symbols": [
+            "ngcc_ref_kem_11_COMPASS_KEM_128_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-11-compass-kem-256",
+          "object_sha256": "0e3faf54260094af944accf786f860637f16f54ebff672d2a0d858e624a997ab",
+          "getter": "ngcc_ref_kem_11_COMPASS_KEM_256",
+          "private_common_symbols": [
+            "ngcc_ref_kem_11_COMPASS_KEM_256_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-13-dkem-128",
+          "object_sha256": "33e8f32ec2cc68aade841fadf46ed451712c7b4065dc78ef662d056d58f58ea5",
+          "getter": "ngcc_ref_kem_13_DKEM_128",
+          "private_common_symbols": [
+            "ngcc_ref_kem_13_DKEM_128_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-13-dkem-256",
+          "object_sha256": "36713364a7185aaad18fc8ae306473659396bb0b87aadece1110c317f87a2108",
+          "getter": "ngcc_ref_kem_13_DKEM_256",
+          "private_common_symbols": [
+            "ngcc_ref_kem_13_DKEM_256_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-14-dtru-648",
+          "object_sha256": "2713c9ad4489ffa129ba82736870e31cf4caeff7d5378285cf507403ddf01349",
+          "getter": "ngcc_ref_kem_14_DTRU_648",
+          "private_common_symbols": [
+            "ngcc_ref_kem_14_DTRU_648_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-14-dtru-768",
+          "object_sha256": "fbc0ef36575377be2f5e22d3710ebe9dc66342300f0473925cd1fdbf1112f220",
+          "getter": "ngcc_ref_kem_14_DTRU_768",
+          "private_common_symbols": [
+            "ngcc_ref_kem_14_DTRU_768_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-14-dtru-1024",
+          "object_sha256": "90097fb6f09b97852551a8aa968f59e23c00feb85eae99a29725519060909c91",
+          "getter": "ngcc_ref_kem_14_DTRU_1024",
+          "private_common_symbols": [
+            "ngcc_ref_kem_14_DTRU_1024_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-14-dtru-light",
+          "object_sha256": "4849bac044bdb3d674ce2e5a39278dc309beb59f654289c2348ef95fdadc1076",
+          "getter": "ngcc_ref_kem_14_DTRU_Light",
+          "private_common_symbols": [
+            "ngcc_ref_kem_14_DTRU_Light_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-14-dtru-prime",
+          "object_sha256": "beff6cbc68dfcf86d52629f09add1889fc0bf650a01803fc4411b2377fbb29dc",
+          "getter": "ngcc_ref_kem_14_DTRU_Prime",
+          "private_common_symbols": [
+            "ngcc_ref_kem_14_DTRU_Prime_common_drng_algorithm",
+            "ngcc_ref_kem_14_DTRU_Prime_common_qinvzeta_vec",
+            "ngcc_ref_kem_14_DTRU_Prime_common_zetas_vec"
+          ]
+        },
+        {
+          "name": "kem-14-dtru-648-pack-pk",
+          "object_sha256": "7bed9e5a8f18547e522cd63e4eba22adef1f30e5146950a772f0f282e395aac6",
+          "getter": "ngcc_ref_kem_14_DTRU_648_PACK_PK",
+          "private_common_symbols": [
+            "ngcc_ref_kem_14_DTRU_648_PACK_PK_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-14-dtru-768-pack-pk",
+          "object_sha256": "60ec8e71de787bc753110d6da569117d281bbcd0d9003b17f0e1ead4582e7a0a",
+          "getter": "ngcc_ref_kem_14_DTRU_768_PACK_PK",
+          "private_common_symbols": [
+            "ngcc_ref_kem_14_DTRU_768_PACK_PK_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-14-dtru-1024-pack-pk",
+          "object_sha256": "dd2b63c58c0aedc5e5e315aaeb9eb672ff3cb18989a9e511bb836a9f1cae012b",
+          "getter": "ngcc_ref_kem_14_DTRU_1024_PACK_PK",
+          "private_common_symbols": [
+            "ngcc_ref_kem_14_DTRU_1024_PACK_PK_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-15-flit128-ref",
+          "object_sha256": "1f11a55ff1777e90d36708f3e27057d59d4bac5610db2463a800a317fb1069ff",
+          "getter": "ngcc_ref_kem_15_FLIT128_REF",
+          "private_common_symbols": [
+            "ngcc_ref_kem_15_FLIT128_REF_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-15-flit256-ref",
+          "object_sha256": "22bb5052d398dba6312ee393dea79965ae160d8c43fef846ac36c4e423408255",
+          "getter": "ngcc_ref_kem_15_FLIT256_REF",
+          "private_common_symbols": [
+            "ngcc_ref_kem_15_FLIT256_REF_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-16-hare-128-kr",
+          "object_sha256": "2f02040851c0452b33853f0df07e801d59a21b98c5ae07d1eb80fe8fdf33ed29",
+          "getter": "ngcc_ref_kem_16_HARE_128_kr",
+          "private_common_symbols": [
+            "ngcc_ref_kem_16_HARE_128_kr_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-16-hare-256-kr",
+          "object_sha256": "93c8cfa9e8c033ab6124956f72a1240c9dc7ebfc0b9a25268fc769df349306bd",
+          "getter": "ngcc_ref_kem_16_HARE_256_kr",
+          "private_common_symbols": [
+            "ngcc_ref_kem_16_HARE_256_kr_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-17-hep-qc-1",
+          "object_sha256": "39b18965d7b9e87b146a6b71d6d68c1cc032f9f0aa22bbe0eb72f14181a79a29",
+          "getter": "ngcc_ref_kem_17_hep_qc_1",
+          "private_common_symbols": [
+            "ngcc_ref_kem_17_hep_qc_1_common_drng_algorithm",
+            "ngcc_ref_kem_17_hep_qc_1_common_shake256_prng_ctx"
+          ]
+        },
+        {
+          "name": "kem-17-hep-qc-3",
+          "object_sha256": "f321249574b9f16fdebc7a497ac69e1a29ee9852787f446948ba4dfc423022c1",
+          "getter": "ngcc_ref_kem_17_hep_qc_3",
+          "private_common_symbols": [
+            "ngcc_ref_kem_17_hep_qc_3_common_drng_algorithm",
+            "ngcc_ref_kem_17_hep_qc_3_common_shake256_prng_ctx"
+          ]
+        },
+        {
+          "name": "kem-17-hep-qc-5",
+          "object_sha256": "fe661616fad51f331f1dc362da486f0064284252fb7cf5d1f21207c60a20c04d",
+          "getter": "ngcc_ref_kem_17_hep_qc_5",
+          "private_common_symbols": [
+            "ngcc_ref_kem_17_hep_qc_5_common_drng_algorithm",
+            "ngcc_ref_kem_17_hep_qc_5_common_shake256_prng_ctx"
+          ]
+        },
+        {
+          "name": "kem-18-loong128",
+          "object_sha256": "1ee4aea0bbd1713bf11e7fd57962f98d9886f1573082965547191ba5ce01a415",
+          "getter": "ngcc_ref_kem_18_Loong128",
+          "private_common_symbols": [
+            "ngcc_ref_kem_18_Loong128_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-18-loong256",
+          "object_sha256": "8b1edf184a46a7f146fc2581464e5fe3dabbd055604a954cbf9aa08e90bc90bc",
+          "getter": "ngcc_ref_kem_18_Loong256",
+          "private_common_symbols": [
+            "ngcc_ref_kem_18_Loong256_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-20-mamba-frost-128",
+          "object_sha256": "cfad4d015e21d71107229a095f5e1968dbf27ae4944d924e60c9a514a319e216",
+          "getter": "ngcc_ref_kem_20_MAMBA_Frost_128",
+          "private_common_symbols": [
+            "ngcc_ref_kem_20_MAMBA_Frost_128_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-20-mamba-frost-192",
+          "object_sha256": "95039abe38feefaf39dfe1a5e14dd33d464095a61c40c5e1bc195b93a472417f",
+          "getter": "ngcc_ref_kem_20_MAMBA_Frost_192",
+          "private_common_symbols": [
+            "ngcc_ref_kem_20_MAMBA_Frost_192_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-20-mamba-frost-256",
+          "object_sha256": "7de19afcfa190a72e9ab8181c0ddcffa7a5e3a9795a0f8391dc70f5e726aaaea",
+          "getter": "ngcc_ref_kem_20_MAMBA_Frost_256",
+          "private_common_symbols": [
+            "ngcc_ref_kem_20_MAMBA_Frost_256_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-20-mamba-frost-cc-128",
+          "object_sha256": "fcb80ae05f1800154404c84318fe2dd9061ea4e2fe0091262c3617c32f85ca61",
+          "getter": "ngcc_ref_kem_20_MAMBA_Frost_CC_128",
+          "private_common_symbols": [
+            "ngcc_ref_kem_20_MAMBA_Frost_CC_128_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-20-mamba-frost-cc-192",
+          "object_sha256": "7942532ff1aecb030fa56dd6ec0fdf1837dd74590db49f83b442cabfcf11e14b",
+          "getter": "ngcc_ref_kem_20_MAMBA_Frost_CC_192",
+          "private_common_symbols": [
+            "ngcc_ref_kem_20_MAMBA_Frost_CC_192_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-20-mamba-frost-cc-256",
+          "object_sha256": "b6405263f32da28c930053850a716cae24162397e59098a68bfed5f83791b33a",
+          "getter": "ngcc_ref_kem_20_MAMBA_Frost_CC_256",
+          "private_common_symbols": [
+            "ngcc_ref_kem_20_MAMBA_Frost_CC_256_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-21-mamba-viper-128",
+          "object_sha256": "9f140fc896c103c386ca214390d33f48cc95e1b659c89548aa28d66ddc39a9ec",
+          "getter": "ngcc_ref_kem_21_MAMBA_Viper_128",
+          "private_common_symbols": [
+            "ngcc_ref_kem_21_MAMBA_Viper_128_common_drng_algorithm",
+            "ngcc_ref_kem_21_MAMBA_Viper_128_common_int0_avx",
+            "ngcc_ref_kem_21_MAMBA_Viper_128_common_int30_avx",
+            "ngcc_ref_kem_21_MAMBA_Viper_128_common_int45_avx",
+            "ngcc_ref_kem_21_MAMBA_Viper_128_common_inv15_avx",
+            "ngcc_ref_kem_21_MAMBA_Viper_128_common_inv3_avx",
+            "ngcc_ref_kem_21_MAMBA_Viper_128_common_inv9_avx",
+            "ngcc_ref_kem_21_MAMBA_Viper_128_common_mask"
+          ]
+        },
+        {
+          "name": "kem-21-mamba-viper-192",
+          "object_sha256": "ec6e49a92d51c5c8418f18114be34253fc5188964e3c3ec88165db3e7fafc857",
+          "getter": "ngcc_ref_kem_21_MAMBA_Viper_192",
+          "private_common_symbols": [
+            "ngcc_ref_kem_21_MAMBA_Viper_192_common_drng_algorithm",
+            "ngcc_ref_kem_21_MAMBA_Viper_192_common_int0_avx",
+            "ngcc_ref_kem_21_MAMBA_Viper_192_common_int30_avx",
+            "ngcc_ref_kem_21_MAMBA_Viper_192_common_int45_avx",
+            "ngcc_ref_kem_21_MAMBA_Viper_192_common_inv15_avx",
+            "ngcc_ref_kem_21_MAMBA_Viper_192_common_inv3_avx",
+            "ngcc_ref_kem_21_MAMBA_Viper_192_common_inv9_avx",
+            "ngcc_ref_kem_21_MAMBA_Viper_192_common_mask"
+          ]
+        },
+        {
+          "name": "kem-21-mamba-viper-256",
+          "object_sha256": "39d586ce24dad16f2b8f4376e70ca98d5e930436265d9d771e9d880289205739",
+          "getter": "ngcc_ref_kem_21_MAMBA_Viper_256",
+          "private_common_symbols": [
+            "ngcc_ref_kem_21_MAMBA_Viper_256_common_drng_algorithm",
+            "ngcc_ref_kem_21_MAMBA_Viper_256_common_int0_avx",
+            "ngcc_ref_kem_21_MAMBA_Viper_256_common_int30_avx",
+            "ngcc_ref_kem_21_MAMBA_Viper_256_common_int45_avx",
+            "ngcc_ref_kem_21_MAMBA_Viper_256_common_inv15_avx",
+            "ngcc_ref_kem_21_MAMBA_Viper_256_common_inv3_avx",
+            "ngcc_ref_kem_21_MAMBA_Viper_256_common_inv9_avx",
+            "ngcc_ref_kem_21_MAMBA_Viper_256_common_mask"
+          ]
+        },
+        {
+          "name": "kem-22-mithril-128",
+          "object_sha256": "034d10e6cb1c0058acbae9fef64ba8d4db30b7f70d3af23948c7bf928b94d025",
+          "getter": "ngcc_ref_kem_22_Mithril_128",
+          "private_common_symbols": [
+            "ngcc_ref_kem_22_Mithril_128_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-22-mithril-256",
+          "object_sha256": "a0a9c3e826dfad1ccd9fd71ecc7337a174e727b802937ab8cde91c54ef75c66b",
+          "getter": "ngcc_ref_kem_22_Mithril_256",
+          "private_common_symbols": [
+            "ngcc_ref_kem_22_Mithril_256_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-23-mito-1-128",
+          "object_sha256": "71c2891ff06d2d10718b71f1531b111f4f24a691358e0dc5f8d542d23755c935",
+          "getter": "ngcc_ref_kem_23_Mito_1_128",
+          "private_common_symbols": [
+            "ngcc_ref_kem_23_Mito_1_128_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-23-mito-1-256",
+          "object_sha256": "26df41af694d4a697bd682df1b1ea03a0152e55549a94e1d6235c652693d9fb0",
+          "getter": "ngcc_ref_kem_23_Mito_1_256",
+          "private_common_symbols": [
+            "ngcc_ref_kem_23_Mito_1_256_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-23-mito-1-e-128",
+          "object_sha256": "683ab6f34a3de15f0a1379f33f001c628679115bdd6f994e8e563797d5f65141",
+          "getter": "ngcc_ref_kem_23_Mito_1_E_128",
+          "private_common_symbols": [
+            "ngcc_ref_kem_23_Mito_1_E_128_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-23-mito-1-e-256",
+          "object_sha256": "136584004de80764474457b716d3e4ca1b1a23af35e9dbe8d8f49c18bf83425c",
+          "getter": "ngcc_ref_kem_23_Mito_1_E_256",
+          "private_common_symbols": [
+            "ngcc_ref_kem_23_Mito_1_E_256_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-23-mito-2-e-128",
+          "object_sha256": "2b85ab49b8071f9aadf613c2469043699c641e476da1fa4e4c61e0d10df1e670",
+          "getter": "ngcc_ref_kem_23_Mito_2_E_128",
+          "private_common_symbols": [
+            "ngcc_ref_kem_23_Mito_2_E_128_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-23-mito-2-e-256",
+          "object_sha256": "f243e1418dd697c8dbe59a22b89212842e9533649549b39322ef08ed883b7cfa",
+          "getter": "ngcc_ref_kem_23_Mito_2_E_256",
+          "private_common_symbols": [
+            "ngcc_ref_kem_23_Mito_2_E_256_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-24-scabbard128",
+          "object_sha256": "3d9c2bce2e63d1c056f16a3485d35e8e4f548948353aa86f1ba68ba829958ae5",
+          "getter": "ngcc_ref_kem_24_scabbard128",
+          "private_common_symbols": [
+            "ngcc_ref_kem_24_scabbard128_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-24-scabbard256",
+          "object_sha256": "50b3e84ff0119c545bb6560f25fa1619774354461386fc8fad540ba4e9423c94",
+          "getter": "ngcc_ref_kem_24_scabbard256",
+          "private_common_symbols": [
+            "ngcc_ref_kem_24_scabbard256_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-25-nev-128",
+          "object_sha256": "1c0661d10458b3c083fb2c56f8b6598738c027e991269d49e975ecfc85b25fc5",
+          "getter": "ngcc_ref_kem_25_NEV_512_769_C_ICCS",
+          "private_common_symbols": [
+            "ngcc_ref_kem_25_NEV_512_769_C_ICCS_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-25-nev-256",
+          "object_sha256": "952920a36bc7546b902c3e0008f9c291dd0624eda9cfe693a473b09aebdaa5d1",
+          "getter": "ngcc_ref_kem_25_NEV_1024_769_C_ICCS",
+          "private_common_symbols": [
+            "ngcc_ref_kem_25_NEV_1024_769_C_ICCS_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-25-nev-512-1409-iccs",
+          "object_sha256": "228850d59fb647a70218e47f73ad9579cd04532a59f524378e54a24af72edb9f",
+          "getter": "ngcc_ref_kem_25_NEV_512_1409_ICCS",
+          "private_common_symbols": [
+            "ngcc_ref_kem_25_NEV_512_1409_ICCS_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-25-nev-1024-1409-iccs",
+          "object_sha256": "0d3d955d518d65ea71aec9232b412a4a4f9cc54c5babf03a4256ce2960f16311",
+          "getter": "ngcc_ref_kem_25_NEV_1024_1409_ICCS",
+          "private_common_symbols": [
+            "ngcc_ref_kem_25_NEV_1024_1409_ICCS_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-25-nev-512-3329-iccs",
+          "object_sha256": "8c12910837af0d29f71e42ea6d981dbe826a8bcba988302e09c817f8042b398c",
+          "getter": "ngcc_ref_kem_25_NEV_512_3329_ICCS",
+          "private_common_symbols": [
+            "ngcc_ref_kem_25_NEV_512_3329_ICCS_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-25-nev-1024-3329-iccs",
+          "object_sha256": "3ac90f77b29def9bbd4ab591f6c5b861e81f0ad8aa9bc3c85fb9e122c1137a9e",
+          "getter": "ngcc_ref_kem_25_NEV_1024_3329_ICCS",
+          "private_common_symbols": [
+            "ngcc_ref_kem_25_NEV_1024_3329_ICCS_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-25-nev-512-769-iccs",
+          "object_sha256": "9ab63ee77e1e83843bd38e7cecbea0f9291dc151679b38c56f514237bc33552e",
+          "getter": "ngcc_ref_kem_25_NEV_512_769_ICCS",
+          "private_common_symbols": [
+            "ngcc_ref_kem_25_NEV_512_769_ICCS_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-25-nev-1024-769-iccs",
+          "object_sha256": "cf97ca3d4919adec9aad6e84fcdee16f81d883399fbeb0476199b91a542d0aaf",
+          "getter": "ngcc_ref_kem_25_NEV_1024_769_ICCS",
+          "private_common_symbols": [
+            "ngcc_ref_kem_25_NEV_1024_769_ICCS_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-26-hqc-128",
+          "object_sha256": "b9107d5f0ca6b39a7e1c8241fd1ea802911638d89f8119de07cf89be26b520e3",
+          "getter": "ngcc_ref_kem_26_HQC_128",
+          "private_common_symbols": [
+            "ngcc_ref_kem_26_HQC_128_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-26-hqc-256",
+          "object_sha256": "6fad82ffcc016b8eff40112a989f4efb401c475503e8254b7c8f9db5ebe05cf7",
+          "getter": "ngcc_ref_kem_26_HQC_256",
+          "private_common_symbols": [
+            "ngcc_ref_kem_26_HQC_256_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-27-ntre-128",
+          "object_sha256": "78ac5582646791c9b13bea122a2a5189340aabc43034957f819af25ff5c48ec2",
+          "getter": "ngcc_ref_kem_27_NTRE_128",
+          "private_common_symbols": [
+            "ngcc_ref_kem_27_NTRE_128_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-27-ntre-256",
+          "object_sha256": "6e9260eefe45c806aa6c742dd3d0a4491ec831fe3341630d8e36fa4e9161c874",
+          "getter": "ngcc_ref_kem_27_NTRE_256",
+          "private_common_symbols": [
+            "ngcc_ref_kem_27_NTRE_256_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-28-oaep-ntru-648",
+          "object_sha256": "7d7fa45bca28e1231c37f1b72f0e363cb59531b0f19096ce0331d456dd2b149a",
+          "getter": "ngcc_ref_kem_28_OAEP_NTRU_648",
+          "private_common_symbols": [
+            "ngcc_ref_kem_28_OAEP_NTRU_648_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-28-oaep-ntru-1296",
+          "object_sha256": "333530659735aa40eda98ada919497e3cb87df803594db9ae79ed38259d2fc2a",
+          "getter": "ngcc_ref_kem_28_OAEP_NTRU_1296",
+          "private_common_symbols": [
+            "ngcc_ref_kem_28_OAEP_NTRU_1296_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-29-polarkem-128",
+          "object_sha256": "b3dd450d2118d0732c3e753e2f697d3b65893832330b9273efceb129fee2e94d",
+          "getter": "ngcc_ref_kem_29_PolarKEM_128",
+          "private_common_symbols": [
+            "ngcc_ref_kem_29_PolarKEM_128_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-29-polarkem-256",
+          "object_sha256": "9584d8bc739951dc1dabb860fd1cc6c175d95b935b055ed6f4a9a49d2eb9200b",
+          "getter": "ngcc_ref_kem_29_PolarKEM_256",
+          "private_common_symbols": [
+            "ngcc_ref_kem_29_PolarKEM_256_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-31-ngcc-1",
+          "object_sha256": "7fdba30e88b413d0f7330a1da1eb2f3a12544b9ff5a065a9058d58215b55500e",
+          "getter": "ngcc_ref_kem_31_NGCC_1",
+          "private_common_symbols": [
+            "ngcc_ref_kem_31_NGCC_1_common_K",
+            "ngcc_ref_kem_31_NGCC_1_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-31-ngcc-2",
+          "object_sha256": "599ba3860459c2d79e66449440d189876493ad4d4cadb30abb310f28ec46565f",
+          "getter": "ngcc_ref_kem_31_NGCC_2",
+          "private_common_symbols": [
+            "ngcc_ref_kem_31_NGCC_2_common_K",
+            "ngcc_ref_kem_31_NGCC_2_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-32-qctm128",
+          "object_sha256": "b7493b68a0896212db1607fa30941efe40a5f89648598018bb93b62aebfcb12f",
+          "getter": "ngcc_ref_kem_32_QCTM128",
+          "private_common_symbols": [
+            "ngcc_ref_kem_32_QCTM128_common_DRBG_ctx",
+            "ngcc_ref_kem_32_QCTM128_common_F",
+            "ngcc_ref_kem_32_QCTM128_common_R2",
+            "ngcc_ref_kem_32_QCTM128_common_R3",
+            "ngcc_ref_kem_32_QCTM128_common_aux1",
+            "ngcc_ref_kem_32_QCTM128_common_aux2",
+            "ngcc_ref_kem_32_QCTM128_common_aux3",
+            "ngcc_ref_kem_32_QCTM128_common_drng_algorithm",
+            "ngcc_ref_kem_32_QCTM128_common_gf_cardinality",
+            "ngcc_ref_kem_32_QCTM128_common_gf_exp",
+            "ngcc_ref_kem_32_QCTM128_common_gf_extension_degree",
+            "ngcc_ref_kem_32_QCTM128_common_gf_log",
+            "ngcc_ref_kem_32_QCTM128_common_gf_multiplicative_order",
+            "ngcc_ref_kem_32_QCTM128_common_level_flag",
+            "ngcc_ref_kem_32_QCTM128_common_sq_aux",
+            "ngcc_ref_kem_32_QCTM128_common_tr",
+            "ngcc_ref_kem_32_QCTM128_common_tr_aux"
+          ]
+        },
+        {
+          "name": "kem-32-qctm256",
+          "object_sha256": "419ec56e7445813b23839aff981125e7b09250a24a52f186fe939e6f35081be0",
+          "getter": "ngcc_ref_kem_32_QCTM256",
+          "private_common_symbols": [
+            "ngcc_ref_kem_32_QCTM256_common_DRBG_ctx",
+            "ngcc_ref_kem_32_QCTM256_common_F",
+            "ngcc_ref_kem_32_QCTM256_common_R2",
+            "ngcc_ref_kem_32_QCTM256_common_R3",
+            "ngcc_ref_kem_32_QCTM256_common_aux1",
+            "ngcc_ref_kem_32_QCTM256_common_aux2",
+            "ngcc_ref_kem_32_QCTM256_common_aux3",
+            "ngcc_ref_kem_32_QCTM256_common_drng_algorithm",
+            "ngcc_ref_kem_32_QCTM256_common_gf_cardinality",
+            "ngcc_ref_kem_32_QCTM256_common_gf_exp",
+            "ngcc_ref_kem_32_QCTM256_common_gf_extension_degree",
+            "ngcc_ref_kem_32_QCTM256_common_gf_log",
+            "ngcc_ref_kem_32_QCTM256_common_gf_multiplicative_order",
+            "ngcc_ref_kem_32_QCTM256_common_level_flag",
+            "ngcc_ref_kem_32_QCTM256_common_sq_aux",
+            "ngcc_ref_kem_32_QCTM256_common_tr",
+            "ngcc_ref_kem_32_QCTM256_common_tr_aux"
+          ]
+        },
+        {
+          "name": "kem-34-rudraksh2-128",
+          "object_sha256": "06e83f591957a3923a5dafff93e2eb74f93948583ff12f278471789f46dbe01b",
+          "getter": "ngcc_ref_kem_34_lwekem128",
+          "private_common_symbols": [
+            "ngcc_ref_kem_34_lwekem128_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-35-scloudplus-128-aes-packed10",
+          "object_sha256": "0ecb62dbaea192715ad659ac2a2d57972067c965de35f4bf7a6a32b10b766040",
+          "getter": "ngcc_ref_kem_35_Scloudplus_128_AES_packed10",
+          "private_common_symbols": [
+            "ngcc_ref_kem_35_Scloudplus_128_AES_packed10_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-35-scloudplus-128-sm3-packed10",
+          "object_sha256": "91b7242786d724cbd821031ee858f789bd51ccb5a257b7bf6c27cfdaa1a04a2a",
+          "getter": "ngcc_ref_kem_35_Scloudplus_128_SM3_packed10",
+          "private_common_symbols": [
+            "ngcc_ref_kem_35_Scloudplus_128_SM3_packed10_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-35-scloudplus-192-aes-packed10",
+          "object_sha256": "3b5ee1fe65a32ac47108891b27b0531bb3b935f5cdf5beddfb19cd5ec51dada0",
+          "getter": "ngcc_ref_kem_35_Scloudplus_192_AES_packed10",
+          "private_common_symbols": [
+            "ngcc_ref_kem_35_Scloudplus_192_AES_packed10_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-35-scloudplus-192-sm3-packed10",
+          "object_sha256": "5aceb2f954ea2c9d6b86973ad696a37edf4294bfdf3b3a8692429b49799cd300",
+          "getter": "ngcc_ref_kem_35_Scloudplus_192_SM3_packed10",
+          "private_common_symbols": [
+            "ngcc_ref_kem_35_Scloudplus_192_SM3_packed10_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-35-scloudplus-256-aes-packed10",
+          "object_sha256": "460a8857e8b26c08bc4eb8ac6589b7caf3eeba3e47d2a90c715b0aa74c1b5f55",
+          "getter": "ngcc_ref_kem_35_Scloudplus_256_AES_packed10",
+          "private_common_symbols": [
+            "ngcc_ref_kem_35_Scloudplus_256_AES_packed10_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-35-scloudplus-256-sm3-packed10",
+          "object_sha256": "7c268e8e0043c36fb123383aee1daedd78b8b0fb695a7d922f59c8350da7d240",
+          "getter": "ngcc_ref_kem_35_Scloudplus_256_SM3_packed10",
+          "private_common_symbols": [
+            "ngcc_ref_kem_35_Scloudplus_256_SM3_packed10_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-36-trike-1",
+          "object_sha256": "a15366de15f519aa594365ec4ed641b3250c23baf4e1b26ca142c205c740c8fb",
+          "getter": "ngcc_ref_kem_36_TRIKE_1",
+          "private_common_symbols": [
+            "ngcc_ref_kem_36_TRIKE_1_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-36-trike-5",
+          "object_sha256": "de75a5b2a3bea70d9361e20483ee39f736583c1489e290dd820b2db801bbf44c",
+          "getter": "ngcc_ref_kem_36_TRIKE_5",
+          "private_common_symbols": [
+            "ngcc_ref_kem_36_TRIKE_5_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-37-triq-kem-128",
+          "object_sha256": "e1800523b649034061887e83ce5cb92cc9d35bce88b803a9d2fab66bb6890e90",
+          "getter": "ngcc_ref_kem_37_TriQ_KEM_128",
+          "private_common_symbols": [
+            "ngcc_ref_kem_37_TriQ_KEM_128_common_a1_times_a2",
+            "ngcc_ref_kem_37_TriQ_KEM_128_common_bit64",
+            "ngcc_ref_kem_37_TriQ_KEM_128_common_bloc64",
+            "ngcc_ref_kem_37_TriQ_KEM_128_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-37-triq-kem-256",
+          "object_sha256": "793060d268f397d6f2258074475d5a1b0bb91e81ce7db7f9cd389cceb0e48584",
+          "getter": "ngcc_ref_kem_37_TriQ_KEM_256",
+          "private_common_symbols": [
+            "ngcc_ref_kem_37_TriQ_KEM_256_common_base_a1_times_a2",
+            "ngcc_ref_kem_37_TriQ_KEM_256_common_bit64",
+            "ngcc_ref_kem_37_TriQ_KEM_256_common_bloc64",
+            "ngcc_ref_kem_37_TriQ_KEM_256_common_drng_algorithm",
+            "ngcc_ref_kem_37_TriQ_KEM_256_common_o256"
+          ]
+        },
+        {
+          "name": "kem-38-uvw-kem-128",
+          "object_sha256": "16157f6ac1fb678c76be28c9c73bf34afd64697dbf42019eeac49d741d49d1c3",
+          "getter": "ngcc_ref_kem_38_UVW_KEM_128",
+          "private_common_symbols": [
+            "ngcc_ref_kem_38_UVW_KEM_128_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-38-uvw-kem-256",
+          "object_sha256": "f5efe518e082b46c6f80bd8b275955a3834004b9654202a69ad3e6d0a760a4eb",
+          "getter": "ngcc_ref_kem_38_UVW_KEM_256",
+          "private_common_symbols": [
+            "ngcc_ref_kem_38_UVW_KEM_256_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-39-weaverkem-128",
+          "object_sha256": "3a0ba09165a72578c540ff20a84262a85b75f9f116aad5b3a4b052bb6f24c899",
+          "getter": "ngcc_ref_kem_39_WeaverKEM_128",
+          "private_common_symbols": [
+            "ngcc_ref_kem_39_WeaverKEM_128_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-39-weaverkem-256",
+          "object_sha256": "cb9f47c15f1631828584acb1f88a8a51e38d1e767608d83bb74c7ef2d1c3b703",
+          "getter": "ngcc_ref_kem_39_WeaverKEM_256",
+          "private_common_symbols": [
+            "ngcc_ref_kem_39_WeaverKEM_256_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-40-yuanyang-512",
+          "object_sha256": "58e5df6674ba3370d0119642fca2bbbcaf4bfbb259be3292450fea91640615d4",
+          "getter": "ngcc_ref_kem_40_yuanyang_512",
+          "private_common_symbols": [
+            "ngcc_ref_kem_40_yuanyang_512_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-40-yuanyang-1024",
+          "object_sha256": "a262db889f9689a94341c94c3c0db3cb112ca1288ff5262a9b10aeac9d69277a",
+          "getter": "ngcc_ref_kem_40_yuanyang_1024",
+          "private_common_symbols": [
+            "ngcc_ref_kem_40_yuanyang_1024_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-41-zen-128",
+          "object_sha256": "03424e23e9e92baa8617cd2f1cfb4ac5a6d989a90e1bf78c2d55e58a7e5948cd",
+          "getter": "ngcc_ref_kem_41_ZEN_128",
+          "private_common_symbols": [
+            "ngcc_ref_kem_41_ZEN_128_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-41-zen-256",
+          "object_sha256": "a1d7629f1f7ece2805138c635f73843a126119084cd869a59bd01f1e2277bcdb",
+          "getter": "ngcc_ref_kem_41_ZEN_256",
+          "private_common_symbols": [
+            "ngcc_ref_kem_41_ZEN_256_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-01-aigis-sig1",
+          "object_sha256": "702745def52306972374a819511f35c3fbb4ddccd0e9460cc01dfed3d6c4716c",
+          "getter": "ngcc_ref_sig_01_Aigis_sig1",
+          "private_common_symbols": [
+            "ngcc_ref_sig_01_Aigis_sig1_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-01-aigis-sig2",
+          "object_sha256": "277ad71336fa87c563fdf8732133d7a4673990cea953da8f5768d61a7569da06",
+          "getter": "ngcc_ref_sig_01_Aigis_sig2",
+          "private_common_symbols": [
+            "ngcc_ref_sig_01_Aigis_sig2_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-02-bit-128",
+          "object_sha256": "3e873a0fd9fdc01825934624a39b08e915e8168a5a7ee6907f7a645323cc26ed",
+          "getter": "ngcc_ref_sig_02_BiT_128",
+          "private_common_symbols": [
+            "ngcc_ref_sig_02_BiT_128_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-02-bit-256",
+          "object_sha256": "864a30d096b5cbfc8d43486ee9f94664133ebd19ff036f85de5c22ec6056ff71",
+          "getter": "ngcc_ref_sig_02_BiT_256",
+          "private_common_symbols": [
+            "ngcc_ref_sig_02_BiT_256_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-03-cedrusc-160f",
+          "object_sha256": "8c660c9aedbbc58abc114746b92a3b4a08802ba0e6870f0d7995ddc23e474121",
+          "getter": "ngcc_ref_sig_03_CEDRUSC_160f",
+          "private_common_symbols": [
+            "ngcc_ref_sig_03_CEDRUSC_160f_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-03-cedrusc-160s",
+          "object_sha256": "d5383284ba8d3c515e386c496d2c1988c6734ca1e7c3e3215f8da7132732471a",
+          "getter": "ngcc_ref_sig_03_CEDRUSC_160s",
+          "private_common_symbols": [
+            "ngcc_ref_sig_03_CEDRUSC_160s_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-03-cedrusc-256f",
+          "object_sha256": "d2bc34f8e2fd34aaf8db0aa0f9ea253f10f287adeed810766b30428c1be1fee5",
+          "getter": "ngcc_ref_sig_03_CEDRUSC_256f",
+          "private_common_symbols": [
+            "ngcc_ref_sig_03_CEDRUSC_256f_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-03-cedrusc-256s",
+          "object_sha256": "42632e3517f44a41d2275e94f3c3aecb532b65e9c459816b3c0229c3db3893b0",
+          "getter": "ngcc_ref_sig_03_CEDRUSC_256s",
+          "private_common_symbols": [
+            "ngcc_ref_sig_03_CEDRUSC_256s_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-04-cedrusalpha-160f",
+          "object_sha256": "12912b81379c4ae340bcdcd9c33e136d90bd85ae86fd9a24854ccf18d2c6a32b",
+          "getter": "ngcc_ref_sig_04_CEDRUSALPHA_160f",
+          "private_common_symbols": [
+            "ngcc_ref_sig_04_CEDRUSALPHA_160f_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-04-cedrusalpha-160s",
+          "object_sha256": "c82f8f4820ac7595e494fe859f8a85363109574b03f7ca6cc3179e6398320283",
+          "getter": "ngcc_ref_sig_04_CEDRUSALPHA_160s",
+          "private_common_symbols": [
+            "ngcc_ref_sig_04_CEDRUSALPHA_160s_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-04-cedrusalpha-256f",
+          "object_sha256": "d12cf9edf1284122a0b1f400536b8db17b1e1f51a5ef9ca807ae2a9ee07f6e10",
+          "getter": "ngcc_ref_sig_04_CEDRUSALPHA_256f",
+          "private_common_symbols": [
+            "ngcc_ref_sig_04_CEDRUSALPHA_256f_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-04-cedrusalpha-256s",
+          "object_sha256": "7771a70193cf4c8d183b8b5cb657cb96cb2d58b92ad3c09f96fa6d7c8909b352",
+          "getter": "ngcc_ref_sig_04_CEDRUSALPHA_256s",
+          "private_common_symbols": [
+            "ngcc_ref_sig_04_CEDRUSALPHA_256s_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-05-sm4th-d3-128f-loose",
+          "object_sha256": "e9784ff967e3ef5e380c43ef8faa0d6ddeac4fe62c867f98e2c8d906346e5f23",
+          "getter": "ngcc_ref_sig_05_sm4th_d3_128f_loose",
+          "private_common_symbols": [
+            "ngcc_ref_sig_05_sm4th_d3_128f_loose_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-05-sm4th-d3-128s-loose",
+          "object_sha256": "b1bbb8c1f21cc9a37eb66aa190ed93aad849a9927b09fb7a431541c772280e80",
+          "getter": "ngcc_ref_sig_05_sm4th_d3_128s_loose",
+          "private_common_symbols": [
+            "ngcc_ref_sig_05_sm4th_d3_128s_loose_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-05-sm4th-d3-128f-tight",
+          "object_sha256": "fba75f6292f2e1dd9cb4e99777f2ef7b3ac6514ed1e584c475adb1555b9d4111",
+          "getter": "ngcc_ref_sig_05_sm4th_d3_128f_tight",
+          "private_common_symbols": [
+            "ngcc_ref_sig_05_sm4th_d3_128f_tight_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-05-sm4th-d3-128s-tight",
+          "object_sha256": "f27460be39cc84ac202031e94ddfcddeb8b845175906bb4700225d05e81959ae",
+          "getter": "ngcc_ref_sig_05_sm4th_d3_128s_tight",
+          "private_common_symbols": [
+            "ngcc_ref_sig_05_sm4th_d3_128s_tight_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-05-sm4th-em-d2-128f-loose",
+          "object_sha256": "8c2ac810bd0c3db3af7e9904804905fe66f384dc30241eae6fe718a0c41f20d3",
+          "getter": "ngcc_ref_sig_05_sm4th_em_d2_128f_loose",
+          "private_common_symbols": [
+            "ngcc_ref_sig_05_sm4th_em_d2_128f_loose_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-05-sm4th-em-d2-128s-loose",
+          "object_sha256": "b30fea67ba7a27f384c3353e320bab8f1bec9b6eb6ddf1d2faed6f1408909f69",
+          "getter": "ngcc_ref_sig_05_sm4th_em_d2_128s_loose",
+          "private_common_symbols": [
+            "ngcc_ref_sig_05_sm4th_em_d2_128s_loose_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-05-sm4th-em-d2-128f-tight",
+          "object_sha256": "31be11072533d0e7dc1f2f8fc6a452cbc7e29e5da2e0f571cba6e18156597ce2",
+          "getter": "ngcc_ref_sig_05_sm4th_em_d2_128f_tight",
+          "private_common_symbols": [
+            "ngcc_ref_sig_05_sm4th_em_d2_128f_tight_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-05-sm4th-em-d2-128s-tight",
+          "object_sha256": "922d57a655d8a9c6edea18c75d56e4c28805e62cc35b526735484a0286e27b35",
+          "getter": "ngcc_ref_sig_05_sm4th_em_d2_128s_tight",
+          "private_common_symbols": [
+            "ngcc_ref_sig_05_sm4th_em_d2_128s_tight_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-05-ublockith-d3-256f",
+          "object_sha256": "e26b12f343a9e454533e39331344e21bae5951f1e9cafab6bc755acde9a1ee58",
+          "getter": "ngcc_ref_sig_05_ublockith_d3_256f",
+          "private_common_symbols": [
+            "ngcc_ref_sig_05_ublockith_d3_256f_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-05-ublockith-d3-256s",
+          "object_sha256": "88c21d34ed9ccebf1f0399c08cbfcebd84f494287c45a72d62ee75444bbe4f83",
+          "getter": "ngcc_ref_sig_05_ublockith_d3_256s",
+          "private_common_symbols": [
+            "ngcc_ref_sig_05_ublockith_d3_256s_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-05-ublockith-em-d3-256f",
+          "object_sha256": "833a6629f815727aaaaa2e521208b8ae8ada20c0985673b900de6e010d5ba29d",
+          "getter": "ngcc_ref_sig_05_ublockith_em_d3_256f",
+          "private_common_symbols": [
+            "ngcc_ref_sig_05_ublockith_em_d3_256f_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-05-ublockith-em-d3-256s",
+          "object_sha256": "053c4d7b96a793ce14f6490e348df86d3c325dbe153018f00d8df3f519013cc8",
+          "getter": "ngcc_ref_sig_05_ublockith_em_d3_256s",
+          "private_common_symbols": [
+            "ngcc_ref_sig_05_ublockith_em_d3_256s_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-06-compass-sig-128",
+          "object_sha256": "d2adbceceefcfd26031c24e1fd5208a24054c99f8f1626885fced09eff58bc23",
+          "getter": "ngcc_ref_sig_06_COMPASS_SIG_128",
+          "private_common_symbols": [
+            "ngcc_ref_sig_06_COMPASS_SIG_128_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-06-compass-sig-256",
+          "object_sha256": "cc75b7f7b1b9c1bb5a5679c8f6c8817c6dd40d0919e742db25036afae34f594d",
+          "getter": "ngcc_ref_sig_06_COMPASS_SIG_256",
+          "private_common_symbols": [
+            "ngcc_ref_sig_06_COMPASS_SIG_256_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-07-cs-128",
+          "object_sha256": "28816c433a18e7556cc1b881bba4755a3d9eee3b338e023714790835c05c8f78",
+          "getter": "ngcc_ref_sig_07_CS_128",
+          "private_common_symbols": [
+            "ngcc_ref_sig_07_CS_128_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-07-cs-256",
+          "object_sha256": "4e0d879c9dab7adb5382d381363c41ebbb9ff648dabca804c8dff0d2765f23a5",
+          "getter": "ngcc_ref_sig_07_CS_256",
+          "private_common_symbols": [
+            "ngcc_ref_sig_07_CS_256_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-10-facto-dsa-128",
+          "object_sha256": "fb9443058ad7fcdd3ce5c689bd8a58a05ad450ce2d8b28744815dcec23a6bb25",
+          "getter": "ngcc_ref_sig_10_Facto_DSA_128",
+          "private_common_symbols": [
+            "ngcc_ref_sig_10_Facto_DSA_128_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-10-facto-dsa-256",
+          "object_sha256": "98f181c12d645012688dfcd33252d2057427274c135d3201dade69f33696a0bb",
+          "getter": "ngcc_ref_sig_10_Facto_DSA_256",
+          "private_common_symbols": [
+            "ngcc_ref_sig_10_Facto_DSA_256_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-11-flextree-160s",
+          "object_sha256": "83a1388fa7c08af345da509b7323db36e1b8f7a3995dad0f879ee33592267a9a",
+          "getter": "ngcc_ref_sig_11_Flextree_160s",
+          "private_common_symbols": [
+            "ngcc_ref_sig_11_Flextree_160s_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-11-flextree-160f",
+          "object_sha256": "12c9a65988f721ff520b67a5c86fed30c78ba6a133cac0e8433892bcaf139672",
+          "getter": "ngcc_ref_sig_11_Flextree_160f",
+          "private_common_symbols": [
+            "ngcc_ref_sig_11_Flextree_160f_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-11-flextree-256s",
+          "object_sha256": "1d0edc0bba55a40a550f9e2dea05480d48d9c66fd9b98091bdd33e15ff9e94d8",
+          "getter": "ngcc_ref_sig_11_Flextree_256s",
+          "private_common_symbols": [
+            "ngcc_ref_sig_11_Flextree_256s_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-11-flextree-256f",
+          "object_sha256": "60c3e91b9c1e0c96cff44b56625c0598beff79ac152fd9edebb65e400d600a9b",
+          "getter": "ngcc_ref_sig_11_Flextree_256f",
+          "private_common_symbols": [
+            "ngcc_ref_sig_11_Flextree_256f_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-12-galas-160s",
+          "object_sha256": "be1499748ff3b4afb0e1a71ab3a971d04142e1f84438d02174720192df6d424f",
+          "getter": "ngcc_ref_sig_12_Galas_160S",
+          "private_common_symbols": [
+            "ngcc_ref_sig_12_Galas_160S_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-12-galas-160f",
+          "object_sha256": "a77d75541dbb182dfbbb68e1d093f1e086663f01e43835546289c9b588ebb8e4",
+          "getter": "ngcc_ref_sig_12_Galas_160F",
+          "private_common_symbols": [
+            "ngcc_ref_sig_12_Galas_160F_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-12-galas-256s",
+          "object_sha256": "ac0a90440c8f8ce4cbee1140ee90d7c29ff3b46698bd3224ecdaf7e3e933615d",
+          "getter": "ngcc_ref_sig_12_Galas_256S",
+          "private_common_symbols": [
+            "ngcc_ref_sig_12_Galas_256S_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-12-galas-256f",
+          "object_sha256": "cd318a793d9e547898f7ac3dc3994e25c99ebb55c611726b299ecb16130b62b7",
+          "getter": "ngcc_ref_sig_12_Galas_256F",
+          "private_common_symbols": [
+            "ngcc_ref_sig_12_Galas_256F_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-13-greatwall128f",
+          "object_sha256": "9e43d64483bba69c85c97538598474d2dce6313a0dc7503e261fbcc97c75ddfd",
+          "getter": "ngcc_ref_sig_13_GreatWall128f",
+          "private_common_symbols": [
+            "ngcc_ref_sig_13_GreatWall128f_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-13-greatwall128s",
+          "object_sha256": "e59c1e3940d9d5fe7f3f582fc1f8c3ba30b3911f86c124422d8023b45a88ec3b",
+          "getter": "ngcc_ref_sig_13_GreatWall128s",
+          "private_common_symbols": [
+            "ngcc_ref_sig_13_GreatWall128s_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-13-greatwall160f",
+          "object_sha256": "e12ed89c29da697135aa858003e65dbee7e4bbe7abd0b0eee1446b1667c1d793",
+          "getter": "ngcc_ref_sig_13_GreatWall160f",
+          "private_common_symbols": [
+            "ngcc_ref_sig_13_GreatWall160f_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-13-greatwall160s",
+          "object_sha256": "cc31edb979196ac90ccbbfcffbe2119209d30e1a9e955f05df93d080ec5e5d32",
+          "getter": "ngcc_ref_sig_13_GreatWall160s",
+          "private_common_symbols": [
+            "ngcc_ref_sig_13_GreatWall160s_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-13-greatwall192f",
+          "object_sha256": "3ae5971e78dbd85bcc657c8cedcf7664d71b1c6adb688d7fead70732addfa427",
+          "getter": "ngcc_ref_sig_13_GreatWall192f",
+          "private_common_symbols": [
+            "ngcc_ref_sig_13_GreatWall192f_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-13-greatwall192s",
+          "object_sha256": "e4dbeb0424d6e9fd1e2cb361d218fff0f8e1de42b815ef0c0150f357fe27d898",
+          "getter": "ngcc_ref_sig_13_GreatWall192s",
+          "private_common_symbols": [
+            "ngcc_ref_sig_13_GreatWall192s_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-13-greatwall256f",
+          "object_sha256": "932ad5c6a3f800183c32684fdc99ed1c4e4bccc5395ad8653791287f97385e91",
+          "getter": "ngcc_ref_sig_13_GreatWall256f",
+          "private_common_symbols": [
+            "ngcc_ref_sig_13_GreatWall256f_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-13-greatwall256s",
+          "object_sha256": "3e4eeceacd527c5318ea0e9fcee0d2fe6bd13e3bae57f62b7429ea5bd618c978",
+          "getter": "ngcc_ref_sig_13_GreatWall256s",
+          "private_common_symbols": [
+            "ngcc_ref_sig_13_GreatWall256s_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-14-lynxer-160f",
+          "object_sha256": "8b1cca90cfa96f7075b8d8a6409b380044e4376963910eee49994b90a31f4af2",
+          "getter": "ngcc_ref_sig_14_Lynxer_160f",
+          "private_common_symbols": [
+            "ngcc_ref_sig_14_Lynxer_160f_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-14-lynxer-160s",
+          "object_sha256": "53ac51be8137728fb9a6670f0e86708ff6f215782880fe9c8c7d67bae94d0aab",
+          "getter": "ngcc_ref_sig_14_Lynxer_160s",
+          "private_common_symbols": [
+            "ngcc_ref_sig_14_Lynxer_160s_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-14-lynxer-256f",
+          "object_sha256": "aaa1c3f142c57a4efcdb647c78dde16aeb3ad51f7f9788d6ce4fdabe2ed6ea3b",
+          "getter": "ngcc_ref_sig_14_Lynxer_256f",
+          "private_common_symbols": [
+            "ngcc_ref_sig_14_Lynxer_256f_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-14-lynxer-256s",
+          "object_sha256": "1adaa82fdd4342724b276a111f364e07e293e2cf502a273a8150c1f8fa8aecf0",
+          "getter": "ngcc_ref_sig_14_Lynxer_256s",
+          "private_common_symbols": [
+            "ngcc_ref_sig_14_Lynxer_256s_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-16-octarine-128",
+          "object_sha256": "74ffc3f1a8cd0e97ba623d9e3ec73740341da859f7eb6336c118a9baee4c7a8a",
+          "getter": "ngcc_ref_sig_16_Octarine_128",
+          "private_common_symbols": [
+            "ngcc_ref_sig_16_Octarine_128_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-16-octarine-256",
+          "object_sha256": "1c677c7a3e58e9cf1fa51d15a40411022798850caa23edc35363201101347e14",
+          "getter": "ngcc_ref_sig_16_Octarine_256",
+          "private_common_symbols": [
+            "ngcc_ref_sig_16_Octarine_256_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-17-opssig-128",
+          "object_sha256": "0b07b3a84ab289816017b4059d01512cfc6ef2280365f66c501b59f94d2b27ea",
+          "getter": "ngcc_ref_sig_17_OPSsig_128",
+          "private_common_symbols": [
+            "ngcc_ref_sig_17_OPSsig_128_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-17-opssig-256",
+          "object_sha256": "50bf9519675ac1d2c657389f0a7656ba3fae081b5dc02015865361bcbf2f9a07",
+          "getter": "ngcc_ref_sig_17_OPSsig_256",
+          "private_common_symbols": [
+            "ngcc_ref_sig_17_OPSsig_256_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-21-resolved-alpha-160f",
+          "object_sha256": "ca2d3dd95e7f726534f991ac40b6da6926c74aaaf9be50a6fd9a81f4023528d7",
+          "getter": "ngcc_ref_sig_21_ReSolveD_alpha_160f",
+          "private_common_symbols": [
+            "ngcc_ref_sig_21_ReSolveD_alpha_160f_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-21-resolved-alpha-160s",
+          "object_sha256": "cd421be932ebdafdf8292272fbfb71a2bf7a864089e3b4832547308db6b02ace",
+          "getter": "ngcc_ref_sig_21_ReSolveD_alpha_160s",
+          "private_common_symbols": [
+            "ngcc_ref_sig_21_ReSolveD_alpha_160s_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-21-resolved-alpha-256f",
+          "object_sha256": "67be48162d5da6718fa2159b5d7657572084efef827744d57f128aefa6300ff0",
+          "getter": "ngcc_ref_sig_21_ReSolveD_alpha_256f",
+          "private_common_symbols": [
+            "ngcc_ref_sig_21_ReSolveD_alpha_256f_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-21-resolved-alpha-256s",
+          "object_sha256": "295f3ee01e6cfb0dc796a9bc96db0e1453ce47a100c450de76b63e53e8133286",
+          "getter": "ngcc_ref_sig_21_ReSolveD_alpha_256s",
+          "private_common_symbols": [
+            "ngcc_ref_sig_21_ReSolveD_alpha_256s_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-22-rhyme-sm3-128",
+          "object_sha256": "d758a141d245c17b1919c1fb5e2d8ecd90c672e0b2b7bb5aa9d3973c697ed58d",
+          "getter": "ngcc_ref_sig_22_Rhyme_SM3_128",
+          "private_common_symbols": [
+            "ngcc_ref_sig_22_Rhyme_SM3_128_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-22-rhyme-sm3-256",
+          "object_sha256": "11eb2511df7675e0190dfb43ed9df1c59140115649341fb326b481b0b3bdd204",
+          "getter": "ngcc_ref_sig_22_Rhyme_SM3_256",
+          "private_common_symbols": [
+            "ngcc_ref_sig_22_Rhyme_SM3_256_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-23-shuttle-128",
+          "object_sha256": "8d4f35b5980d30b5d1fbb5508b1b6ca8233812474ac8960b39106d80b2928d06",
+          "getter": "ngcc_ref_sig_23_SHUTTLE_128",
+          "private_common_symbols": [
+            "ngcc_ref_sig_23_SHUTTLE_128_common_drng_algorithm",
+            "ngcc_ref_sig_23_SHUTTLE_128_common_s256_ntt_ref_R2"
+          ]
+        },
+        {
+          "name": "sig-23-shuttle-256",
+          "object_sha256": "8c0486a2459fd93c6514888f0ac8d98ea60722a1bb84a3a4e28d86123fe693db",
+          "getter": "ngcc_ref_sig_23_SHUTTLE_256",
+          "private_common_symbols": [
+            "ngcc_ref_sig_23_SHUTTLE_256_common_drng_algorithm",
+            "ngcc_ref_sig_23_SHUTTLE_256_common_s512_ntt_ref_R2"
+          ]
+        },
+        {
+          "name": "sig-24-sigurd-128",
+          "object_sha256": "0470bec729f61089ac3b83bf77b8a19bbc40daf8ed3811f8676a880cb273011f",
+          "getter": "ngcc_ref_sig_24_Sigurd_128",
+          "private_common_symbols": [
+            "ngcc_ref_sig_24_Sigurd_128_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-24-sigurd-256",
+          "object_sha256": "88144f394505f518d8f104d0f752f5a9f0616ea0ab756535743ded1c96e8714b",
+          "getter": "ngcc_ref_sig_24_Sigurd_256",
+          "private_common_symbols": [
+            "ngcc_ref_sig_24_Sigurd_256_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-25-sqisign2dsq-l1-eff-uncompressed",
+          "object_sha256": "75d159358e17aa1970febe43bc4d06463eb4e03bcb8009be55354db2c827636d",
+          "getter": "ngcc_ref_sig_25_SQISign2Dsquare_Level1_eff_uncompressed",
+          "private_common_symbols": [
+            "ngcc_ref_sig_25_SQISign2Dsquare_Level1_eff_uncompressed_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-25-sqisign2dsq-l1-eff-compressed",
+          "object_sha256": "6c972a9bf60e6f0e111350b8d5c3fa882bc1732a7bfe29241f9a59263c54e6ff",
+          "getter": "ngcc_ref_sig_25_SQISign2Dsquare_Level1_eff_compressed",
+          "private_common_symbols": [
+            "ngcc_ref_sig_25_SQISign2Dsquare_Level1_eff_compressed_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-25-sqisign2dsq-l1-sec-uncompressed",
+          "object_sha256": "6c0998f3f0e921ee57d7abdec2e0ffc75b97742391d4b1f3c22d8f6b17291612",
+          "getter": "ngcc_ref_sig_25_SQISign2Dsquare_Level1_sec_uncompressed",
+          "private_common_symbols": [
+            "ngcc_ref_sig_25_SQISign2Dsquare_Level1_sec_uncompressed_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-25-sqisign2dsq-l1-sec-compressed",
+          "object_sha256": "d470b661b8a285ebe9fae4b95aff0e25b077c8590ae5ff277c7a8a0cf06055ba",
+          "getter": "ngcc_ref_sig_25_SQISign2Dsquare_Level1_sec_compressed",
+          "private_common_symbols": [
+            "ngcc_ref_sig_25_SQISign2Dsquare_Level1_sec_compressed_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-25-sqisign2dsq-l2-eff-uncompressed",
+          "object_sha256": "b4678f329f244f642d4664aadf39aaa8fffac0a5222b8278de27ec93936ce7b5",
+          "getter": "ngcc_ref_sig_25_SQISign2Dsquare_Level2_eff_uncompressed",
+          "private_common_symbols": [
+            "ngcc_ref_sig_25_SQISign2Dsquare_Level2_eff_uncompressed_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-25-sqisign2dsq-l2-eff-compressed",
+          "object_sha256": "5e73ec07220c7dd578471bff1fe432dc6664b7ff2705dd64c0fc576c39572a5c",
+          "getter": "ngcc_ref_sig_25_SQISign2Dsquare_Level2_eff_compressed",
+          "private_common_symbols": [
+            "ngcc_ref_sig_25_SQISign2Dsquare_Level2_eff_compressed_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-25-sqisign2dsq-l2-sec-uncompressed",
+          "object_sha256": "cd6a769a17419416608a4a69f9654ceabdd7d221b1b680d859f1dcdc9d3f7a4c",
+          "getter": "ngcc_ref_sig_25_SQISign2Dsquare_Level2_sec_uncompressed",
+          "private_common_symbols": [
+            "ngcc_ref_sig_25_SQISign2Dsquare_Level2_sec_uncompressed_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-25-sqisign2dsq-l2-sec-compressed",
+          "object_sha256": "3dcd8e367710326a07f689bdb4eddfd2275f09659b267bf1d888fb9029821977",
+          "getter": "ngcc_ref_sig_25_SQISign2Dsquare_Level2_sec_compressed",
+          "private_common_symbols": [
+            "ngcc_ref_sig_25_SQISign2Dsquare_Level2_sec_compressed_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-25-sqisign2dsq-l3-eff-uncompressed",
+          "object_sha256": "5e42d1cc29c43492a7d9c7a21ca59754d2631edbad560f62b45546272914e334",
+          "getter": "ngcc_ref_sig_25_SQISign2Dsquare_Level3_eff_uncompressed",
+          "private_common_symbols": [
+            "ngcc_ref_sig_25_SQISign2Dsquare_Level3_eff_uncompressed_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-25-sqisign2dsq-l3-eff-compressed",
+          "object_sha256": "d41010eaa9ba8ebe0ec0a1e3809e28fa02a761965a7e113c4b46a00e65724146",
+          "getter": "ngcc_ref_sig_25_SQISign2Dsquare_Level3_eff_compressed",
+          "private_common_symbols": [
+            "ngcc_ref_sig_25_SQISign2Dsquare_Level3_eff_compressed_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-25-sqisign2dsq-l3-sec-uncompressed",
+          "object_sha256": "39750bf84a87cf644b6fbbc6734a945ee1976e8334f2cfb2f4617dfd5d638660",
+          "getter": "ngcc_ref_sig_25_SQISign2Dsquare_Level3_sec_uncompressed",
+          "private_common_symbols": [
+            "ngcc_ref_sig_25_SQISign2Dsquare_Level3_sec_uncompressed_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-25-sqisign2dsq-l3-sec-compressed",
+          "object_sha256": "ef6e165fdb66f114de2280b2185f656e3e006da297a0db0230b3cb31f87c847d",
+          "getter": "ngcc_ref_sig_25_SQISign2Dsquare_Level3_sec_compressed",
+          "private_common_symbols": [
+            "ngcc_ref_sig_25_SQISign2Dsquare_Level3_sec_compressed_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-27-sqisigntriangle-lvl1",
+          "object_sha256": "a7042e88e98105629f1b423d6bdc01c75812e6f9e1242dc52aed2d9df5ff3d05",
+          "getter": "ngcc_ref_sig_27_SQIsignTriangle_lvl1",
+          "private_common_symbols": [
+            "ngcc_ref_sig_27_SQIsignTriangle_lvl1_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-27-sqisigntriangle-lvl2",
+          "object_sha256": "aa301bf79973a9309d62d32661efbd516e71dd7ccd51db69f51890c8ece44993",
+          "getter": "ngcc_ref_sig_27_SQIsignTriangle_lvl2",
+          "private_common_symbols": [
+            "ngcc_ref_sig_27_SQIsignTriangle_lvl2_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-27-sqisigntriangle-lvl5",
+          "object_sha256": "6a11f161131e18db7d77a7b06a2fbdc0c5bea34e33286a0a6027e531ebcbaf33",
+          "getter": "ngcc_ref_sig_27_SQIsignTriangle_lvl5",
+          "private_common_symbols": [
+            "ngcc_ref_sig_27_SQIsignTriangle_lvl5_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-28-sydo-160f",
+          "object_sha256": "6a3d8bdd15381d667df163da6b369a2e341150cd3eaab50a08ad00b3f40ca3e8",
+          "getter": "ngcc_ref_sig_28_sydo_160f",
+          "private_common_symbols": [
+            "ngcc_ref_sig_28_sydo_160f_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-28-sydo-160s",
+          "object_sha256": "779cd8e4ecd06b5029fd0f93196cb0599899d2df19e406cd77192766662d5ab1",
+          "getter": "ngcc_ref_sig_28_sydo_160s",
+          "private_common_symbols": [
+            "ngcc_ref_sig_28_sydo_160s_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-28-sydo-256f",
+          "object_sha256": "87716c5b226d77acf89e9ba72f4afcdd7f4784e67f4b1fdce2646007a4a134c8",
+          "getter": "ngcc_ref_sig_28_sydo_256f",
+          "private_common_symbols": [
+            "ngcc_ref_sig_28_sydo_256f_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-28-sydo-256s",
+          "object_sha256": "81c172adb82e31b020a779ee38236f08cddfa54066a444c1dfbb7545f5df01f6",
+          "getter": "ngcc_ref_sig_28_sydo_256s",
+          "private_common_symbols": [
+            "ngcc_ref_sig_28_sydo_256s_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-30-trine-128-balanced",
+          "object_sha256": "3feb157784ce49e103383edcc216d24de67b0aa6760b21ec2165ab555bed770f",
+          "getter": "ngcc_ref_sig_30_TRINE_128_Balanced",
+          "private_common_symbols": [
+            "ngcc_ref_sig_30_TRINE_128_Balanced_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-30-trine-256-balanced",
+          "object_sha256": "cac9d0fda0f38ad9356af27dd8c8ae2bd2d11f3c2b1997ca3de42f876d1df49b",
+          "getter": "ngcc_ref_sig_30_TRINE_256_Balanced",
+          "private_common_symbols": [
+            "ngcc_ref_sig_30_TRINE_256_Balanced_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-30-trine-128-shortsig",
+          "object_sha256": "1510a3a4f161e6857541aec59ffa401b64ecfb944220d07edd8e565c8f32abee",
+          "getter": "ngcc_ref_sig_30_TRINE_128_ShortSig",
+          "private_common_symbols": [
+            "ngcc_ref_sig_30_TRINE_128_ShortSig_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-30-trine-256-shortsig",
+          "object_sha256": "122f864634703777bc159f9734caceaa9893851ef794b6e9a30181d7fe4b3674",
+          "getter": "ngcc_ref_sig_30_TRINE_256_ShortSig",
+          "private_common_symbols": [
+            "ngcc_ref_sig_30_TRINE_256_ShortSig_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-31-tsuov-128",
+          "object_sha256": "b38755abdb3de04cba20b6de38ad12605fadd20a6a40cd76af3f6d3cf9cd3229",
+          "getter": "ngcc_ref_sig_31_TSUOV_128",
+          "private_common_symbols": [
+            "ngcc_ref_sig_31_TSUOV_128_common_c0_table",
+            "ngcc_ref_sig_31_TSUOV_128_common_c1_table",
+            "ngcc_ref_sig_31_TSUOV_128_common_c2_table",
+            "ngcc_ref_sig_31_TSUOV_128_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-31-tsuov-256",
+          "object_sha256": "d5d316d371b4f078c5b8a6e907b445a6db39ba5c8f352ddef7c14d6b5d808f07",
+          "getter": "ngcc_ref_sig_31_TSUOV_256",
+          "private_common_symbols": [
+            "ngcc_ref_sig_31_TSUOV_256_common_c0_table",
+            "ngcc_ref_sig_31_TSUOV_256_common_c1_table",
+            "ngcc_ref_sig_31_TSUOV_256_common_c2_table",
+            "ngcc_ref_sig_31_TSUOV_256_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-33-vdoo-128",
+          "object_sha256": "94bad8f3c6f8e065c4f905b4d8b69071085054a95e5474a1a8fe6390e2f4fcad",
+          "getter": "ngcc_ref_sig_33_vdoo_128",
+          "private_common_symbols": [
+            "ngcc_ref_sig_33_vdoo_128_common_drng",
+            "ngcc_ref_sig_33_vdoo_128_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-33-vdoo-256",
+          "object_sha256": "bf7bcf8aea4e9f9577b0d7401157c4c1d2c25f691fb3450949687c941b1ce51c",
+          "getter": "ngcc_ref_sig_33_vdoo_256",
+          "private_common_symbols": [
+            "ngcc_ref_sig_33_vdoo_256_common_drng",
+            "ngcc_ref_sig_33_vdoo_256_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-34-yuanyang-512",
+          "object_sha256": "9e75e136a992974289bf8bf2d6733217257700ef75aef2bc143b08d9d51e439a",
+          "getter": "ngcc_ref_sig_34_yuanyang_512",
+          "private_common_symbols": [
+            "ngcc_ref_sig_34_yuanyang_512_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-34-yuanyang-1024",
+          "object_sha256": "4821989ca27755f561f7f5360c1e481dfbc2e417e1c985e3349d793d45dd152a",
+          "getter": "ngcc_ref_sig_34_yuanyang_1024",
+          "private_common_symbols": [
+            "ngcc_ref_sig_34_yuanyang_1024_common_drng_algorithm"
+          ]
+        }
+      ],
+      "aggregate_relocatable_link_sha256": "5b8297a67197c3a171458eb46fd1416c388cddd90a0e5eb9c16b9b9696ca3d66"
+    },
+    {
+      "target": "linux-aarch64",
+      "parameters": 58,
+      "status": "compiled-and-symbols-isolated",
+      "runtime_tested": false,
+      "objects": [
+        {
+          "name": "kem-01-aigis-enc1",
+          "object_sha256": "516baa6275e0b1f56a0142b2f2178f354d3b20781e9fe81e8f019712b22bfe2d",
+          "getter": "ngcc_ref_kem_01_Aigis_enc1",
+          "private_common_symbols": [
+            "ngcc_ref_kem_01_Aigis_enc1_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-01-aigis-enc2",
+          "object_sha256": "fc8a6b35cd4e725ae36ab26b1a71adb770262d84dca4bf5fca01774b0512622c",
+          "getter": "ngcc_ref_kem_01_Aigis_enc2",
+          "private_common_symbols": [
+            "ngcc_ref_kem_01_Aigis_enc2_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-02-amoeba128",
+          "object_sha256": "8238f58aa9a902cfd2ad3057a5ad3b77a7d8dca27655ff517cc8c09905510178",
+          "getter": "ngcc_ref_kem_02_Amoeba128",
+          "private_common_symbols": [
+            "ngcc_ref_kem_02_Amoeba128_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-02-amoeba192",
+          "object_sha256": "375a612038def72c843135473383738167b94f0d62dc0eb2fcbbfae66adb8acc",
+          "getter": "ngcc_ref_kem_02_Amoeba192",
+          "private_common_symbols": [
+            "ngcc_ref_kem_02_Amoeba192_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-02-amoeba256",
+          "object_sha256": "389323908ea3750e0f5c570a4295e46778fcab3372d6356c1e3fe03a5e21b84e",
+          "getter": "ngcc_ref_kem_02_Amoeba256",
+          "private_common_symbols": [
+            "ngcc_ref_kem_02_Amoeba256_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-09-cheetah128",
+          "object_sha256": "06cd89abf0c83801107254275db6344c4d1ad3706410673003dddd77e762a7ac",
+          "getter": "ngcc_ref_kem_09_Cheetah128",
+          "private_common_symbols": [
+            "ngcc_ref_kem_09_Cheetah128_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-09-cheetah256",
+          "object_sha256": "98c262f6db0c6f2ca135a396a1d3575304de3f6d36217a290954636a93381f14",
+          "getter": "ngcc_ref_kem_09_Cheetah256",
+          "private_common_symbols": [
+            "ngcc_ref_kem_09_Cheetah256_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-13-dkem-128",
+          "object_sha256": "25c68357a9a4a3661e32411215e0ba10cdcbcebc8930eb62dd1d36069f8e233e",
+          "getter": "ngcc_ref_kem_13_DKEM_128",
+          "private_common_symbols": [
+            "ngcc_ref_kem_13_DKEM_128_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-13-dkem-256",
+          "object_sha256": "6ce534674e934f0c7706f2c6f09deffea08ec8f27b07516088312317f80aaf27",
+          "getter": "ngcc_ref_kem_13_DKEM_256",
+          "private_common_symbols": [
+            "ngcc_ref_kem_13_DKEM_256_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-16-hare-128-kr",
+          "object_sha256": "b0c0d449b871720d8cb846e68eba1d4d3ca02bd6868de03118e375ff0729c885",
+          "getter": "ngcc_ref_kem_16_HARE_128_kr",
+          "private_common_symbols": [
+            "ngcc_ref_kem_16_HARE_128_kr_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-16-hare-256-kr",
+          "object_sha256": "51f60d7692d1af4a8e96887d399e347759bc97ddf7697ce0506ada0751c21d1c",
+          "getter": "ngcc_ref_kem_16_HARE_256_kr",
+          "private_common_symbols": [
+            "ngcc_ref_kem_16_HARE_256_kr_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-18-loong128",
+          "object_sha256": "bbfaeba81924ef798501301a0031baa1a9d82d2b68071f457a2fcc1b3d45a9d3",
+          "getter": "ngcc_ref_kem_18_Loong128",
+          "private_common_symbols": [
+            "ngcc_ref_kem_18_Loong128_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-18-loong256",
+          "object_sha256": "478063ade69a837cfdfc1ce15dbf46ed690a5228f064310688f3d6e635bc8f5a",
+          "getter": "ngcc_ref_kem_18_Loong256",
+          "private_common_symbols": [
+            "ngcc_ref_kem_18_Loong256_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-23-mito-1-128",
+          "object_sha256": "8e90a7fd6ab614b3f17bf2af5c6f59784618c1a33a667004e1133e723cdc47f0",
+          "getter": "ngcc_ref_kem_23_Mito_1_128",
+          "private_common_symbols": [
+            "ngcc_ref_kem_23_Mito_1_128_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-23-mito-1-256",
+          "object_sha256": "81a977cb4c7059a4da7f87678106d40ee6f5ba0b7dd37dd7a00e3dfa320c3ad7",
+          "getter": "ngcc_ref_kem_23_Mito_1_256",
+          "private_common_symbols": [
+            "ngcc_ref_kem_23_Mito_1_256_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-23-mito-1-e-128",
+          "object_sha256": "36e63a444b3fb1de52e0238e5d711017c1f7ec884e42a9cbabd2e0d31c7482f0",
+          "getter": "ngcc_ref_kem_23_Mito_1_E_128",
+          "private_common_symbols": [
+            "ngcc_ref_kem_23_Mito_1_E_128_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-23-mito-1-e-256",
+          "object_sha256": "7ce857d5e5e26f7879aee327ad4a0ed117da9894c427def5f718130b3930c145",
+          "getter": "ngcc_ref_kem_23_Mito_1_E_256",
+          "private_common_symbols": [
+            "ngcc_ref_kem_23_Mito_1_E_256_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-23-mito-2-e-128",
+          "object_sha256": "0eead571885d2aa8cf35c12b27a54b578501a465f235b4af7853dd796f33cc15",
+          "getter": "ngcc_ref_kem_23_Mito_2_E_128",
+          "private_common_symbols": [
+            "ngcc_ref_kem_23_Mito_2_E_128_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-23-mito-2-e-256",
+          "object_sha256": "2894347390bb632ddfe00b7c1b331978cd9627d879ea8ba5178a5732cbef5268",
+          "getter": "ngcc_ref_kem_23_Mito_2_E_256",
+          "private_common_symbols": [
+            "ngcc_ref_kem_23_Mito_2_E_256_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-26-hqc-128",
+          "object_sha256": "e0719eb6c9d6e45e7986da5581bdb33605ace9ce92f5f080c6bf29bd4da36c31",
+          "getter": "ngcc_ref_kem_26_HQC_128",
+          "private_common_symbols": [
+            "ngcc_ref_kem_26_HQC_128_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-26-hqc-256",
+          "object_sha256": "fa4df8ae894928677ce6016cbaca2c2b5bd912ca02e71df2e3c7bcd851be15dc",
+          "getter": "ngcc_ref_kem_26_HQC_256",
+          "private_common_symbols": [
+            "ngcc_ref_kem_26_HQC_256_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-29-polarkem-128",
+          "object_sha256": "633a302e9e87669b965315040cfb7c53a5c1bf06ea70c853703e3db950e565a6",
+          "getter": "ngcc_ref_kem_29_PolarKEM_128",
+          "private_common_symbols": [
+            "ngcc_ref_kem_29_PolarKEM_128_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-29-polarkem-256",
+          "object_sha256": "84fc0bf189c26bd6ce30ef1fc412c4c00606548e2b78ffb3995e9038d5682a4f",
+          "getter": "ngcc_ref_kem_29_PolarKEM_256",
+          "private_common_symbols": [
+            "ngcc_ref_kem_29_PolarKEM_256_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-30-polarlac-128",
+          "object_sha256": "a0d0d958f8712c49f077a006c5fd913c8eed4918c754f771e9db3451163c8a92",
+          "getter": "ngcc_ref_kem_30_POLARLAC_128",
+          "private_common_symbols": [
+            "ngcc_ref_kem_30_POLARLAC_128_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-30-polarlac-256",
+          "object_sha256": "3b4286a022ad74194e500806f2f5e71efa32daf01896368698289f0812d6e7f7",
+          "getter": "ngcc_ref_kem_30_POLARLAC_256",
+          "private_common_symbols": [
+            "ngcc_ref_kem_30_POLARLAC_256_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-30-polarlac-light",
+          "object_sha256": "c57530760146d870e4254374639f5c2dcab65fc9162d6e6a15f955404b75f54a",
+          "getter": "ngcc_ref_kem_30_POLARLAC_Light",
+          "private_common_symbols": [
+            "ngcc_ref_kem_30_POLARLAC_Light_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-35-scloudplus-128-aes-packed10",
+          "object_sha256": "2cd577e58954b6b1677f3b4e942da395f1d505ae34eb798c1e15ff9c8b4dc6a7",
+          "getter": "ngcc_ref_kem_35_Scloudplus_128_AES_packed10",
+          "private_common_symbols": [
+            "ngcc_ref_kem_35_Scloudplus_128_AES_packed10_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-35-scloudplus-128-sm3-packed10",
+          "object_sha256": "7affe6f8a144ca04f772697de651d2bab4813c4f9abe795b6b57f1c33c7870c8",
+          "getter": "ngcc_ref_kem_35_Scloudplus_128_SM3_packed10",
+          "private_common_symbols": [
+            "ngcc_ref_kem_35_Scloudplus_128_SM3_packed10_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-35-scloudplus-192-aes-packed10",
+          "object_sha256": "35670c0eef7e0b7f4cd819730178387395c9f818e14c160bb0223ef0304dc0be",
+          "getter": "ngcc_ref_kem_35_Scloudplus_192_AES_packed10",
+          "private_common_symbols": [
+            "ngcc_ref_kem_35_Scloudplus_192_AES_packed10_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-35-scloudplus-192-sm3-packed10",
+          "object_sha256": "7aa24e5dedcc1591d816bf3a11440b9ae226399841e0a32b2a1eb4f52df89507",
+          "getter": "ngcc_ref_kem_35_Scloudplus_192_SM3_packed10",
+          "private_common_symbols": [
+            "ngcc_ref_kem_35_Scloudplus_192_SM3_packed10_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-35-scloudplus-256-aes-packed10",
+          "object_sha256": "2ee672b88789b5ca7c08394e059bc6440fba579e0bf3b8f073e8de4e0b2aaf44",
+          "getter": "ngcc_ref_kem_35_Scloudplus_256_AES_packed10",
+          "private_common_symbols": [
+            "ngcc_ref_kem_35_Scloudplus_256_AES_packed10_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-35-scloudplus-256-sm3-packed10",
+          "object_sha256": "3e7339634ed0bbed7aab604d995742d4a87789f2afe2a925f68abaf7d26a6786",
+          "getter": "ngcc_ref_kem_35_Scloudplus_256_SM3_packed10",
+          "private_common_symbols": [
+            "ngcc_ref_kem_35_Scloudplus_256_SM3_packed10_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-38-uvw-kem-128",
+          "object_sha256": "20465c136c47a5e39ebd1e4b14598ebefb3b03882a676048cfcdc72917de570f",
+          "getter": "ngcc_ref_kem_38_UVW_KEM_128",
+          "private_common_symbols": [
+            "ngcc_ref_kem_38_UVW_KEM_128_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-38-uvw-kem-256",
+          "object_sha256": "6593fe4b0ad606e30f58a4fb7541ab461f9fcf0798753bca0a9559a3ba5601a9",
+          "getter": "ngcc_ref_kem_38_UVW_KEM_256",
+          "private_common_symbols": [
+            "ngcc_ref_kem_38_UVW_KEM_256_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-40-yuanyang-512",
+          "object_sha256": "b6c838f63172eda775b4fd9f3da73c84bf7b07b9eb19cd690539ab3d640d60a2",
+          "getter": "ngcc_ref_kem_40_yuanyang_512",
+          "private_common_symbols": [
+            "ngcc_ref_kem_40_yuanyang_512_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-40-yuanyang-1024",
+          "object_sha256": "f3b69fe076f91c00558de0e91465709a1ebede73ffc4e906a6f471d06dbfa530",
+          "getter": "ngcc_ref_kem_40_yuanyang_1024",
+          "private_common_symbols": [
+            "ngcc_ref_kem_40_yuanyang_1024_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-41-zen-128",
+          "object_sha256": "1bc8717f6bf28357100ade6951d3d523df79288b5f02f6c69f224eb181936fd9",
+          "getter": "ngcc_ref_kem_41_ZEN_128",
+          "private_common_symbols": [
+            "ngcc_ref_kem_41_ZEN_128_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "kem-41-zen-256",
+          "object_sha256": "38e211aaeac1e84a04409cbb0222db57b1cb7215c6d68a4d233d4457082f8897",
+          "getter": "ngcc_ref_kem_41_ZEN_256",
+          "private_common_symbols": [
+            "ngcc_ref_kem_41_ZEN_256_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-01-aigis-sig1",
+          "object_sha256": "4a04c0b121d38b657f21781744a26e1b2e350aeb3de90fa59d104b80cd97246d",
+          "getter": "ngcc_ref_sig_01_Aigis_sig1",
+          "private_common_symbols": [
+            "ngcc_ref_sig_01_Aigis_sig1_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-01-aigis-sig2",
+          "object_sha256": "5c04a8eab8afe7fb933d5dde47c096ef4e0512fae2b5c43f5d88511e282f1eba",
+          "getter": "ngcc_ref_sig_01_Aigis_sig2",
+          "private_common_symbols": [
+            "ngcc_ref_sig_01_Aigis_sig2_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-04-cedrusalpha-160f",
+          "object_sha256": "fc176c4fb29d9cfa40bd87868fb028febc31448236cecc8f9dde1d947d6a7617",
+          "getter": "ngcc_ref_sig_04_CEDRUSALPHA_160f",
+          "private_common_symbols": [
+            "ngcc_ref_sig_04_CEDRUSALPHA_160f_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-04-cedrusalpha-160s",
+          "object_sha256": "2de63f0534c3d622812fff9eeae2cd9f87e656e727c293865cef7f50f470cb91",
+          "getter": "ngcc_ref_sig_04_CEDRUSALPHA_160s",
+          "private_common_symbols": [
+            "ngcc_ref_sig_04_CEDRUSALPHA_160s_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-04-cedrusalpha-256f",
+          "object_sha256": "041382a8788c1d26cdd071245f1d9aabfadcc796ed842c30d188caf877e4a079",
+          "getter": "ngcc_ref_sig_04_CEDRUSALPHA_256f",
+          "private_common_symbols": [
+            "ngcc_ref_sig_04_CEDRUSALPHA_256f_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-04-cedrusalpha-256s",
+          "object_sha256": "4d2004f3e72253ef617fe1bcf334d6147b878429d72da06af98bb6fa3c3c8b75",
+          "getter": "ngcc_ref_sig_04_CEDRUSALPHA_256s",
+          "private_common_symbols": [
+            "ngcc_ref_sig_04_CEDRUSALPHA_256s_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-06-compass-sig-128",
+          "object_sha256": "5c55621d56152a1f2f8e5cac8f0d002c1b18dd87c3ba0e4735681a37ceb2df2c",
+          "getter": "ngcc_ref_sig_06_COMPASS_SIG_128",
+          "private_common_symbols": [
+            "ngcc_ref_sig_06_COMPASS_SIG_128_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-06-compass-sig-256",
+          "object_sha256": "b35fcc3481c448e604be6b01da706ebfbba210e5fc82bb19b1c1380b94d23343",
+          "getter": "ngcc_ref_sig_06_COMPASS_SIG_256",
+          "private_common_symbols": [
+            "ngcc_ref_sig_06_COMPASS_SIG_256_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-07-cs-128",
+          "object_sha256": "c48782e381556c83b8accedca56e129177d10b49863c4c3a205926d657744b6e",
+          "getter": "ngcc_ref_sig_07_CS_128",
+          "private_common_symbols": [
+            "ngcc_ref_sig_07_CS_128_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-07-cs-256",
+          "object_sha256": "14c381d15dc2fec1141c3012e6a38d2460740846407260b51bd9ada7f511e55a",
+          "getter": "ngcc_ref_sig_07_CS_256",
+          "private_common_symbols": [
+            "ngcc_ref_sig_07_CS_256_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-08-darts128",
+          "object_sha256": "fd1fd31ee0d45b5461d8fe37dc4242b0f930032aaedc929adfb213a1004c1053",
+          "getter": "ngcc_ref_sig_08_DARTS128",
+          "private_common_symbols": [
+            "ngcc_ref_sig_08_DARTS128_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-08-darts256",
+          "object_sha256": "3b1b48a95a36e76aa0993d7d98d93a8c3ab784e2e29f823fed9ba4ff51912c69",
+          "getter": "ngcc_ref_sig_08_DARTS256",
+          "private_common_symbols": [
+            "ngcc_ref_sig_08_DARTS256_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-10-facto-dsa-128",
+          "object_sha256": "6449a133cf6b3f6841f98ec23eb42936b97e5af54338766eb83321a862188918",
+          "getter": "ngcc_ref_sig_10_Facto_DSA_128",
+          "private_common_symbols": [
+            "ngcc_ref_sig_10_Facto_DSA_128_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-10-facto-dsa-256",
+          "object_sha256": "e9449bfbdd6418d6f57729083fb13035a8d23f9691303112bd24bc57277c0dbf",
+          "getter": "ngcc_ref_sig_10_Facto_DSA_256",
+          "private_common_symbols": [
+            "ngcc_ref_sig_10_Facto_DSA_256_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-24-sigurd-128",
+          "object_sha256": "c8610aefae24a23d251c9b5f9bd948a3ea34e89bed4c06252f45143d7662297c",
+          "getter": "ngcc_ref_sig_24_Sigurd_128",
+          "private_common_symbols": [
+            "ngcc_ref_sig_24_Sigurd_128_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-24-sigurd-256",
+          "object_sha256": "ccf263a22a7f46162554108a1628585d6f53748db68d8ef8c25618a731bf0618",
+          "getter": "ngcc_ref_sig_24_Sigurd_256",
+          "private_common_symbols": [
+            "ngcc_ref_sig_24_Sigurd_256_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-30-trine-128-balanced",
+          "object_sha256": "53920f6f44bb3b2048d0faaef3e7d503602decbe215d73fdcdba2ec6c1f24d0a",
+          "getter": "ngcc_ref_sig_30_TRINE_128_Balanced",
+          "private_common_symbols": [
+            "ngcc_ref_sig_30_TRINE_128_Balanced_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-30-trine-256-balanced",
+          "object_sha256": "245b5748c81817d199d7472175a33a57b9b418559723ba6e3ae9d55e87d941c2",
+          "getter": "ngcc_ref_sig_30_TRINE_256_Balanced",
+          "private_common_symbols": [
+            "ngcc_ref_sig_30_TRINE_256_Balanced_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-30-trine-128-shortsig",
+          "object_sha256": "585b8a99d732ce83053b2479dc7e61074c2d2b5095ba20ce94aca9cd9659bdb7",
+          "getter": "ngcc_ref_sig_30_TRINE_128_ShortSig",
+          "private_common_symbols": [
+            "ngcc_ref_sig_30_TRINE_128_ShortSig_common_drng_algorithm"
+          ]
+        },
+        {
+          "name": "sig-30-trine-256-shortsig",
+          "object_sha256": "92d647504983067c767339a3b2f492a11ab04c5433cc0a9d9d9ad7948426ca34",
+          "getter": "ngcc_ref_sig_30_TRINE_256_ShortSig",
+          "private_common_symbols": [
+            "ngcc_ref_sig_30_TRINE_256_ShortSig_common_drng_algorithm"
+          ]
+        }
+      ],
+      "aggregate_relocatable_link_sha256": "50327f8e2ad05cf6d16a182b0bfdadfb260d5c567574b59c811e86816072ad6a"
+    }
+  ],
+  "all_optimized_evp": {
+    "passed": 51,
+    "module_sha256": "3b1628ec12255a4b1e74bd1f5418cdf0a05997bc64e5adf5a8bb6e91a78b5fa6",
+    "report": "test-results/optimized-final-native-evp.json",
+    "parameters": [
+      "kem-01-aigis-enc1",
+      "kem-01-aigis-enc2",
+      "kem-02-amoeba128",
+      "kem-02-amoeba192",
+      "kem-02-amoeba256",
+      "kem-09-cheetah128",
+      "kem-09-cheetah256",
+      "kem-13-dkem-128",
+      "kem-13-dkem-256",
+      "kem-18-loong128",
+      "kem-18-loong256",
+      "kem-23-mito-1-128",
+      "kem-23-mito-1-256",
+      "kem-23-mito-1-e-128",
+      "kem-23-mito-1-e-256",
+      "kem-23-mito-2-e-128",
+      "kem-23-mito-2-e-256",
+      "kem-26-hqc-128",
+      "kem-26-hqc-256",
+      "kem-29-polarkem-128",
+      "kem-29-polarkem-256",
+      "kem-35-scloudplus-128-aes-packed10",
+      "kem-35-scloudplus-128-sm3-packed10",
+      "kem-35-scloudplus-192-aes-packed10",
+      "kem-35-scloudplus-192-sm3-packed10",
+      "kem-35-scloudplus-256-aes-packed10",
+      "kem-35-scloudplus-256-sm3-packed10",
+      "kem-38-uvw-kem-128",
+      "kem-38-uvw-kem-256",
+      "kem-40-yuanyang-1024",
+      "kem-40-yuanyang-512",
+      "sig-01-aigis-sig1",
+      "sig-01-aigis-sig2",
+      "sig-04-cedrusalpha-160f",
+      "sig-04-cedrusalpha-160s",
+      "sig-04-cedrusalpha-256f",
+      "sig-04-cedrusalpha-256s",
+      "sig-06-compass-sig-128",
+      "sig-06-compass-sig-256",
+      "sig-07-cs-128",
+      "sig-07-cs-256",
+      "sig-08-darts128",
+      "sig-08-darts256",
+      "sig-10-facto-dsa-128",
+      "sig-10-facto-dsa-256",
+      "sig-24-sigurd-128",
+      "sig-24-sigurd-256",
+      "sig-30-trine-128-balanced",
+      "sig-30-trine-128-shortsig",
+      "sig-30-trine-256-balanced",
+      "sig-30-trine-256-shortsig"
+    ]
+  },
+  "final_module_evp": {
+    "passed": 9,
+    "module_sha256": "42ec32cb31502968e1be4e60dc6475ff76ef111403caec39b391d37041c9d1d7",
+    "report": "test-results/optimized-final-isolated-evp.json",
+    "parameters": [
+      "kem-01-aigis-enc1",
+      "kem-01-aigis-enc2",
+      "kem-02-amoeba128",
+      "kem-02-amoeba192",
+      "kem-02-amoeba256",
+      "kem-13-dkem-128",
+      "kem-13-dkem-256",
+      "sig-01-aigis-sig1",
+      "sig-01-aigis-sig2"
+    ]
+  },
+  "final_module": {
+    "module_sha256": "42ec32cb31502968e1be4e60dc6475ff76ef111403caec39b391d37041c9d1d7",
+    "target": "darwin64-arm64-cc",
+    "instances": 210,
+    "compiled_author_sources": 3061,
+    "implementations": {
+      "optimized-aarch64": 51,
+      "ref": 159
+    },
+    "exports": [
+      "OSSL_provider_init"
+    ],
+    "dependencies": [
+      "/usr/lib/libSystem.B.dylib"
+    ]
+  },
+  "final_module_concurrency_and_lifecycle": {
+    "passed": true,
+    "report": "test-results/threads.json"
+  },
+  "configuration_checks_passed": 111
+}

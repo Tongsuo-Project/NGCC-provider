@@ -47,23 +47,43 @@ def main():
         checksum, path = line.split('  ',1)
         checksums[path] = checksum
     assert checksums=={name:item['sha256'] for name,item in attested.items()}
+    optimized_checksums={}
+    for line in (ROOT/'make/optimized-sources.sha256').read_text().splitlines():
+        checksum,path=line.split('  ',1)
+        optimized_checksums[path]=checksum
     make_instances=subprocess.check_output(['make','-s','print-instances'],cwd=ROOT,text=True).splitlines()
     assert len(make_instances)==len(rows)
     assert set(make_instances)=={r['id']+'/'+r['label'] for r in rows}
     compiled_sources=set()
+    glue_sources=set()
+    uses_cxx=False
+    implementation_counts=collections.Counter()
     for r in rows:
         assert r['security_bits'] in (128,160,192,256) and r['id']!='sign-29'
         assert 'SHAKE' not in r['label'].upper()
         assert not re.search(r'-m(?:avx|sse)|-march=native',r['CFLAGS']+' '+r['CXXFLAGS'])
         folder=ROOT/'ngcc/candidates'/r['id']
-        for name in shlex.split(r['SRCS']):
-            p=(folder/'src'/r['label']/name).resolve()
+        implementation=configuration['implementations'][r['provider_name']]
+        optimized=implementation['variant']!='ref'
+        implementation_counts[implementation['variant']]+=1
+        recipe=implementation if optimized else r
+        assert '-march=native' not in recipe.get('INSTANCE_CFLAGS',r['CFLAGS'])
+        for name in shlex.split(recipe['SRCS']):
+            p=(folder/recipe['SRCDIR']/name).resolve()
             rel=str(p.relative_to(ROOT/'ngcc/candidates'))
-            assert rel in attested,rel+' is not attested author source'
-            assert not re.search(r'(?i)(optimized_implementation|additional_implementation|/avx\d*/)',rel),rel
+            assert rel in checksums or (optimized and rel in optimized_checksums),rel+' is not attested author source'
+            if not optimized:
+                assert not re.search(r'(?i)(optimized_implementation|additional_implementation|/avx\d*/)',rel),rel
             compiled_sources.add(rel)
+            uses_cxx |= p.suffix in ('.cpp','.cc')
+        for name in shlex.split(recipe.get('GLUE_SRCS','')):
+            p=(ROOT/name).resolve()
+            assert p.is_relative_to(ROOT/'make/compat') and p.is_file()
+            glue_sources.add(p)
+            uses_cxx |= p.suffix in ('.cpp','.cc')
     make_sources=subprocess.check_output(['make','-s','print-ref-sources'],cwd=ROOT,text=True).splitlines()
-    assert {str((ROOT/p).resolve().relative_to(ROOT/'ngcc/candidates')) for p in make_sources}==compiled_sources
+    assert {(ROOT/p).resolve() for p in make_sources}=={
+        ROOT/'ngcc/candidates'/p for p in compiled_sources}|glue_sources
     groups=json.loads((meta/'tls-groups.json').read_text())['groups']
     sigs=json.loads((meta/'sig-oids.json').read_text())['sigs']
     total_sigs=len(sigs)
@@ -95,7 +115,7 @@ def main():
     assert all(g['tls_enabled']==(g['sig_capacity']<=65535 and g['public_key_bytes']<=16777215) for g in sigs)
     assert not (ROOT/'src/ngcc_ngcc_provider.c').exists()
     assert not (ROOT/'src/ngcc_algorithms.inc').exists()
-    assert not list((ROOT/'build/ngcc').glob('*/*/bridge.c'))
+    assert not list((ROOT/'build/ngcc').rglob('bridge.c'))
     source_files=[p for p in (ROOT/'src').iterdir() if p.suffix in ('.c','.h')]
     assert all(p.name.startswith('ngcc_') for p in (ROOT/'src').iterdir() if p.is_file())
     assert not list((ROOT/'src').glob('*signature*'))
@@ -114,13 +134,16 @@ def main():
         assert symbols==['_OSSL_provider_init'],symbols
         dependency_output=subprocess.check_output(['otool','-L',str(module)],text=True)
         dependencies=[x.strip().split(' (')[0] for x in dependency_output.splitlines()[1:]]
-        assert dependencies==['/usr/lib/libSystem.B.dylib'],dependencies
+        wanted_dependencies={'/usr/lib/libSystem.B.dylib'}
+        if uses_cxx:wanted_dependencies.add('/usr/lib/libc++.1.dylib')
+        assert set(dependencies)==wanted_dependencies,dependencies
     else:
         exports=subprocess.check_output(['nm','-D','--defined-only',str(module)],text=True)
         assert [x.split()[-1] for x in exports.splitlines() if x.split()]==['OSSL_provider_init']
         dependency_output=subprocess.check_output(['readelf','-d',str(module)],text=True)
         dependencies=re.findall(r'NEEDED.*\[(.*?)\]',dependency_output)
-        assert all(re.match(r'lib(crypto|c|m|gcc_s|pthread)\.',x) for x in dependencies),dependencies
+        allowed=r'lib(crypto|c|m|gcc_s|pthread'+(r'|stdc\+\+|c\+\+' if uses_cxx else '')+r')\.'
+        assert all(re.match(allowed,x) for x in dependencies),dependencies
     versions={}
     for host,prefix in test_hosts().items():
         binary=host_binary(prefix)
@@ -144,6 +167,8 @@ def main():
         'dependencies':dependencies,'host_versions':versions,'instances':len(rows),
         'families':len({r['id'] for r in rows}),'by_type':dict(collections.Counter(r['type'] for r in rows)),
         'compiled_author_sources':len(compiled_sources),'tests_required':args.require_tests,
+        'implementations':dict(implementation_counts),
+        'adapter_sources':sorted(str(p.relative_to(ROOT)) for p in glue_sources),
         'tls_groups':sum(g['enabled'] for g in groups),
         'sig_oids':len(sigs),'sig_oid_format':'2.25.<UUIDv4 unsigned integer>',
         'tls_sigs':sum(g['tls_enabled'] for g in sigs)}
