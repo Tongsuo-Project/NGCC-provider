@@ -849,9 +849,9 @@
   {
     "id": "sign-05",
     "name": "Chinith",
-    "source_checked_date": "2026-10-20",
-    "source_url": "https://www.niccs.org.cn/niccs/Proposal/Public-Key%20Cryptographic%20Algorithms/Round%201%20candidates/Chinith.zip",
-    "source_kind": "official-round-1-package",
+    "source_checked_date": "2026-11-02",
+    "source_url": "https://github.com/AntCPLab/Chinith/commit/a07ae2984e4f8b051afe3a40563c639d0d03d0b4",
+    "source_kind": "latest-author-revision",
     "withdrawn": false,
     "parameters": [
       "sm4th_d3_128f_loose",
@@ -869,10 +869,11 @@
     ],
     "archives": [
       {
-        "path": "aux_note_20260919/iccs_pkgs/Chinith.zip",
-        "sha256": "4d31ba3fe8718f59901b7efdf01b4179912ef8e04f58b4b6dbba84186f002283"
+        "path": "ngcc_provider/ngcc/metadata/sign-05-revision.zip",
+        "sha256": "36937240efd8a21e68eac84b987ba21fc0a6ccb0e4fec39a846cb0a727d348cb"
       }
-    ]
+    ],
+    "commit": "a07ae2984e4f8b051afe3a40563c639d0d03d0b4"
   },
   {
     "id": "sign-06",
