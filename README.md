@@ -77,8 +77,31 @@ Selection depends on the configured target, not runtime CPU detection. The CPU
 must support the selected author's instruction set, including AVX-512 or SVE
 where specified. `configdata.json` records each selected source directory and its
 requirements, or the reason for using the reference implementation. Use
-`--implementation=ref` to return to references. Some x86 signature backends require
-a C++23 compiler, which can be supplied with `CXX=...` and `CXXFLAGS=...`.
+`--implementation=ref` to return to references.
+
+#### C++ backends
+
+Four signature schemes ship their optimized backends as a C++ template codebase
+derived from FAEST: Galas (`sign-12`), Lynxer (`sign-14`), ReSolveD-alpha
+(`sign-21`) and SYDO (`sign-28`) — 16 parameter sets on `linux-x86_64`. These
+encode the parameter set as a template argument, including a `std::pair` used as
+a non-type template parameter, so the compiler must support C++20 structural
+types. GCC 12 or later and Clang 14 or later work; GCC 11, the default on
+Ubuntu 22.04, does not. Pass a suitable C++ compiler with `CXX`:
+
+```sh
+CXX=clang++-19 ./config --implementation=optimized OPENSSL_PREFIX=$HOME/opt/tongsuo
+make -j6
+```
+
+No extra `CXXFLAGS` are required. Clang generates faster code for these four
+schemes: on a Xeon Platinum 8575C, signing was 1.4x to 2.3x faster with Clang 19
+than with GCC 14 at identical flags.
+
+`make/implementations.json` records the source list for every optimized entry;
+entries whose `SRCS` contains a C++ source file are the ones listed above.
+`config` does not yet probe the compiler, so an inadequate compiler surfaces as a
+compilation error during `make` rather than as a configure-time fallback.
 
 After building, `make test-implementations` builds separate reference instances
 and tests all eight reference/optimized key-generation, operation, and
