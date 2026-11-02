@@ -754,9 +754,9 @@
   {
     "id": "kem-41",
     "name": "ZEN",
-    "source_checked_date": "2026-10-20",
-    "source_url": "https://www.niccs.org.cn/niccs/Proposal/Public-Key%20Cryptographic%20Algorithms/Round%201%20candidates/ZEN.zip",
-    "source_kind": "official-round-1-package",
+    "source_checked_date": "2026-10-31",
+    "source_url": "https://light-lattice.org/zen/implementations/20261030/ZEN-20261030.zip",
+    "source_kind": "latest-author-revision",
     "withdrawn": false,
     "parameters": [
       "ZEN_128",
@@ -764,8 +764,8 @@
     ],
     "archives": [
       {
-        "path": "aux_note_20260919/iccs_pkgs/ZEN.zip",
-        "sha256": "69eba070320fc6cb365fb6d43d2b74460487732aeb7e607fac2d6c1b3a64a80e"
+        "path": "ngcc_provider/ngcc/candidates/ngcc_provider/ngcc/metadata/kem-41-revision.zip",
+        "sha256": "fb0933c53698d3b49668c2266161b8a02d38d4cc956644bbd823b7b108c1cc44"
       }
     ]
   },
@@ -913,9 +913,9 @@
   {
     "id": "sign-08",
     "name": "DARTS",
-    "source_checked_date": "2026-10-20",
-    "source_url": "https://www.niccs.org.cn/niccs/Proposal/Public-Key%20Cryptographic%20Algorithms/Round%201%20candidates/DARTS.zip",
-    "source_kind": "official-round-1-package",
+    "source_checked_date": "2026-10-31",
+    "source_url": "https://github.com/MathEternal/DARTS-NGCC/commit/98687cf6910c1409d188464c9ceff69cbf409cc4",
+    "source_kind": "latest-author-revision",
     "withdrawn": false,
     "parameters": [
       "DARTS128",
@@ -923,10 +923,11 @@
     ],
     "archives": [
       {
-        "path": "aux_note_20260919/iccs_pkgs/DARTS.zip",
-        "sha256": "1846cfe63f0cef83e2e0ca21f5dcadce3c4b16da33713957be6d156e2a9e6e95"
+        "path": "ngcc_provider/ngcc/candidates/ngcc_provider/ngcc/metadata/sign-08-revision.zip",
+        "sha256": "6974090d6b1c709391376b0a651291c51ccf3618fa280a1859ed5e55c1515198"
       }
-    ]
+    ],
+    "commit": "98687cf6910c1409d188464c9ceff69cbf409cc4"
   },
   {
     "id": "sign-09",

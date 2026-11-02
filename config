@@ -5,6 +5,7 @@ use warnings;
 use FindBin;
 use JSON::PP;
 use Cwd qw(abs_path);
+use Encode qw(encode);
 
 chdir $FindBin::Bin or die "Cannot enter source directory: $!\n";
 
@@ -17,6 +18,7 @@ sub read_file {
 
 sub write_file {
     my ($path, $text) = @_;
+    $text = encode("UTF-8", $text) if utf8::is_utf8($text);
     return if -f $path && read_file($path) eq $text;
     open my $file, '>', "$path.tmp" or die "$path.tmp: $!\n";
     print {$file} $text or die "$path.tmp: $!\n";
@@ -53,7 +55,9 @@ for my $row (@$groups, @$sigs) {
 
 my (%enable, %disable, %values);
 my $target;
-my @variables = qw(CC LD NM OBJCOPY NMEDIT AR RANLIB CFLAGS CPPFLAGS LDFLAGS
+my $implementation = 'ref';
+my $optimized_archives = "$FindBin::Bin/..";
+my @variables = qw(CC CXX CXXFLAGS LD NM OBJCOPY NMEDIT AR RANLIB CFLAGS CPPFLAGS LDFLAGS
                    OPENSSL_PREFIX GMP_ROOT GMP_STATIC GMP_SOURCE GMP_HOST);
 my %variables = map { $_ => 1 } @variables;
 for my $arg (@ARGV) {
@@ -68,6 +72,12 @@ With enable-NAME options, build only the union of the enabled instances.
 Names are existing EVP/TLS names and aliases (case insensitive).
 Enabling and disabling the same instance is an error, including via aliases.
 
+  --implementation=ref|optimized
+                     Select author reference or target-specific optimized sources
+                     (default: ref; unavailable optimized instances stay reference)
+  --with-optimized-archives=DIR
+                     Import missing author optimized sources from pinned ZIPs
+                     below DIR (default: parent of this repository; no Python)
   --list             List supported targets
   --list-algorithms  List EVP names and accepted aliases
   --with-gmp-source=DIR
@@ -77,7 +87,7 @@ Enabling and disabling the same instance is an error, including via aliases.
 The target defaults to the current OS/architecture. For cross compilation,
 supply a matching CC/LD/NM/OBJCOPY and target OpenSSL/GMP paths explicitly.
 Tool and path variables may also be passed through the environment:
-  CC LD NM OBJCOPY NMEDIT AR RANLIB CFLAGS CPPFLAGS LDFLAGS
+  CC CXX CXXFLAGS LD NM OBJCOPY NMEDIT AR RANLIB CFLAGS CPPFLAGS LDFLAGS
   OPENSSL_PREFIX GMP_ROOT GMP_STATIC GMP_SOURCE GMP_HOST
 
 OPENSSL_PREFIX is the installation prefix of OpenSSL or Tongsuo.
@@ -109,8 +119,15 @@ HELP
             print $name, (@aliases ? ' (aliases: '.join(', ', @aliases).')' : ''), "\n";
         }
         exit 0;
+    } elsif ($arg =~ /^--implementation=(.*)$/) {
+        $implementation = $1;
+        die "Implementation must be ref or optimized\n"
+            unless $implementation =~ /^(ref|optimized)$/;
     } elsif ($arg =~ /^--with-gmp-source=(.*)$/) {
         $values{GMP_SOURCE} = $1;
+    } elsif ($arg =~ /^--with-optimized-archives=(.*)$/) {
+        $optimized_archives = $1;
+        die "Optimized archive directory must not be empty\n" if $optimized_archives eq '';
     } elsif ($arg =~ /^(enable|no)-(.+)$/) {
         my ($action, $alias) = ($1, lc $2);
         my $name = $names{$alias} // die "Unknown algorithm '$2'; use --list-algorithms\n";
@@ -144,7 +161,7 @@ for my $var (@variables) {
     $values{$var} //= $ENV{$var} if exists $ENV{$var};
     next unless exists $values{$var};
     die "Unsupported character in $var\n" if $values{$var} =~ /[\r\n\0\$#`;&|<>]/;
-    die "Empty value for $var\n" if $values{$var} eq '' && $var !~ /^(CFLAGS|CPPFLAGS|LDFLAGS)$/;
+    die "Empty value for $var\n" if $values{$var} eq '' && $var !~ /^(CFLAGS|CXXFLAGS|CPPFLAGS|LDFLAGS)$/;
     die "Whitespace in $var paths is not supported by the source recipes\n"
         if $var =~ /(?:_ROOT|_PREFIX|GMP_STATIC|GMP_SOURCE)$/ && $values{$var} =~ /\s/;
 }
@@ -192,6 +209,30 @@ if ($target ne 'linux-x86_64') {
 }
 die "No algorithms selected\n" unless @enabled;
 
+my $catalog = decode_json(read_file('make/implementations.json'));
+my %implementations;
+my $implementation_settings = "IMPLEMENTATION := $implementation\n";
+for my $name (@enabled) {
+    my $entry = $catalog->{$name}{$target};
+    if ($implementation eq 'optimized' && defined $entry && !exists $entry->{unavailable}) {
+        $implementations{$name} = $entry;
+        for my $field (qw(SRCDIR SRCS INC DEFS INSTANCE_CFLAGS SHIMDEFS NOAUX)) {
+            die "Missing $field for $name/$target\n" unless exists $entry->{$field};
+            $implementation_settings .= "OPT_${field}_$name := $entry->{$field}\n";
+        }
+        $implementation_settings .= "OPT_VARIANT_$name := $entry->{variant}\n";
+        $implementation_settings .= "OPT_GLUE_SRCS_$name := " . ($entry->{GLUE_SRCS} // '') . "\n";
+        for my $source (sort keys %{$entry->{SOURCE_CFLAGS} // {}}) {
+            (my $object = $source) =~ s{/}{_}g;
+            $implementation_settings .= "OPT_SOURCE_CFLAGS_${name}_$object := $entry->{SOURCE_CFLAGS}{$source}\n";
+        }
+    } else {
+        $implementations{$name} = { variant => 'ref', SRCDIR => $canonical{$name}{SRCDIR},
+            reason => $implementation eq 'ref' ? 'Reference explicitly selected'
+                    : ($entry->{unavailable} // 'No matching author optimization in the pinned source tree') };
+    }
+}
+
 my %enabled = map { $_ => 1 } @enabled;
 my $header = "/* Generated by config. Do not edit. */\n"
            . "#ifndef NGCC_CONFIG_H\n# define NGCC_CONFIG_H\n\n";
@@ -210,16 +251,24 @@ my $settings = "TARGET := $target\nPLATFORM := $platform\nARCH := $arch\n"
 for my $var (@variables) {
     $settings .= "$var := $values{$var}\n" if exists $values{$var};
 }
+$settings .= $implementation_settings;
 $settings .= 'ENABLED_ALGORITHMS := '.join(" \\\n    ", @enabled)."\n";
 my $makefile = read_file('Makefile.in');
 $makefile =~ s/^\@CONFIGURATION\@\n/$settings/m or die "Missing Makefile.in configuration marker\n";
 my $configuration = {
     target => $target, platform => $platform, arch => $arch,
     target_flags => $target_flags, variables => \%values, enabled => \@enabled,
-    options => [@ARGV],
+    options => [@ARGV], implementation => $implementation, implementations => \%implementations,
 };
+if (grep { $_->{variant} ne 'ref' } values %implementations) {
+    require './make/optimized-sources.pl';
+    NGCC::OptimizedSources::prepare($optimized_archives);
+}
 write_file('src/ngcc_config.h', $header);
 write_file('configdata.json', JSON::PP->new->canonical->pretty->encode($configuration));
 write_file('Makefile', $makefile);
 printf "Configured NGCC-provider for %s: %d/%d instances\n", $target, scalar @enabled, scalar @$rows;
+printf "Author optimized implementations: %d; reference implementations: %d\n",
+    scalar(grep { $_->{variant} ne 'ref' } values %implementations),
+    scalar(grep { $_->{variant} eq 'ref' } values %implementations);
 print "Created Makefile, src/ngcc_config.h and configdata.json. Run make.\n";

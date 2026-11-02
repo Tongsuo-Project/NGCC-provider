@@ -4,7 +4,7 @@ NGCC (Next-Generation Cryptography Competition) is a global call for next-genera
 
 The public-key portion (KEM + signature) comprises 74 schemes and 306 parameter sets. This provider integrates 71 schemes and 220 parameter sets (excluding the inefficient 384/512-bit security categories). See the list in [NGCC_PROPOSALS_SUMMARY.md](NGCC_PROPOSALS_SUMMARY.md).
 
-NGCC-provider adapts NGCC proposal reference implementations to the Tongsuo provider interface, providing KEM, signature, signature-key encoding/decoding, and TLS 1.3 capabilities. Proposal algorithm sources are compiled into a single `ngcc.so`; the provider load name is `ngcc`.
+NGCC-provider adapts NGCC proposal reference and author-supplied optimized implementations to the Tongsuo provider interface, providing KEM, signature, signature-key encoding/decoding, and TLS 1.3 capabilities. Proposal algorithm sources are compiled into a single `ngcc.so`; the provider load name is `ngcc`.
 
 Author reference implementations live in the [NGCC-candidates](https://github.com/Tongsuo-Project/NGCC-candidates) repository. This repository mounts that tree as a git submodule at `ngcc/candidates` and does not modify any author algorithm source.
 
@@ -20,6 +20,7 @@ Many submissions still use a placeholder for the underlying hash algorithm, to b
 
 - [Proposal summary](NGCC_PROPOSALS_SUMMARY.md): integrated and unintegrated parameter sets, EVP/TLS call names, source provenance, test results, and limitations.
 - [Usage](USAGE.md): C API and command-line examples, including KEM, sign/verify, certificate issuance, and TLS 1.3.
+- [Author optimized implementations](make/IMPLEMENTATIONS.md): source import, architecture selection, CPU requirements, compatibility fallbacks, and validation.
 
 ## Build
 
@@ -49,6 +50,46 @@ make -j6
 `./config --list` lists targets; `./config --list-algorithms` lists names. Configuration accepts `CC=...`, `LD=...`, `CFLAGS=...`, `CPPFLAGS=...`, `LDFLAGS=...`, `GMP_STATIC=...`, and similar parameters. The current system is detected by default; cross compilation requires an explicit target plus a matching toolchain and dependency libraries.
 
 The output is `ngcc.so`.
+
+### Author optimized implementations
+
+Reference implementations remain the default. To select the proposal teams' own
+x86-64 or AArch64 backends, configure and build directly:
+
+```sh
+./config --implementation=optimized OPENSSL_PREFIX=$HOME/opt/tongsuo
+make -j6
+make print-implementations
+```
+
+`./config` verifies the optimized source checksums and automatically imports any
+missing files from the pinned submission ZIPs, using Perl core modules. No Python
+or separate import command is needed. When all files are present, the archives
+are unnecessary. To use an archive location other than the repository's parent,
+pass `--with-optimized-archives=/path/to/archive-root` to the same configure
+command. Archive paths are recorded in `make/optimized-origins.json`.
+
+Configuration verifies archive and member SHA-256 values before installing
+missing files and refuses to overwrite changed sources. A failed import leaves
+the existing generated configuration unchanged. No network downloads are performed.
+
+Selection depends on the configured target, not runtime CPU detection. The CPU
+must support the selected author's instruction set, including AVX-512 or SVE
+where specified. `configdata.json` records each selected source directory and its
+requirements, or the reason for using the reference implementation. Use
+`--implementation=ref` to return to references. Some x86 signature backends require
+a C++23 compiler, which can be supplied with `CXX=...` and `CXXFLAGS=...`.
+
+After building, `make test-implementations` builds separate reference instances
+and tests all eight reference/optimized key-generation, operation, and
+verification combinations. It also checks signature rejection after altering the
+message. See [implementation notes](make/IMPLEMENTATIONS.md) for known exclusions
+and the distinction between compilation and runtime validation. Python is required
+only for the optional test/report tools.
+
+ZEN and DARTS use the author's v2.0 revisions. DARTS's AVX2 and NEON backends
+pass the updated reference/optimized interoperability checks. ZEN v2.0 supplies
+only x86 AVX2 optimization; ARM targets use its new reference implementation.
 
 ### GMP
 

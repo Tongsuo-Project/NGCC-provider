@@ -7,6 +7,7 @@ import platform
 import shutil
 import subprocess
 import tempfile
+import zipfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -62,6 +63,7 @@ def main():
                                                        if r['provider_name'] in expected}
             checks.append({'options': options, 'environment': environment or {},
                            'expected_failure': fail, 'passed': True})
+            return run
 
         x86_default = x86_linux_names - gmp_names
         native_linux_x86 = (platform.system() == 'Linux'
@@ -154,7 +156,7 @@ def main():
         (gmp_source/'gmp-h.in').touch()
         (gmp_source/'configure').write_text('#!/bin/sh\nexit 0\n')
         (gmp_source/'configure').chmod(0o755)
-        configure(['--with-gmp-source=gmp-source'], all_names)
+        configure(['--with-gmp-source=gmp-source'], native_all)
         configure(['--with-gmp-source=gmp-source', 'enable-'+kem], {kem})
         data = json.loads((root/'configdata.json').read_text())
         assert data['variables']['GMP_SOURCE'] == str(gmp_source.resolve())
@@ -176,7 +178,111 @@ def main():
         (root/'build').mkdir(exist_ok=True)
         shutil.copytree(gmp_source, root/'build/gmp-source')
         configure(['--with-gmp-source=build/gmp-source'], fail=True)
-        configure([], default_names)
+        configure([], native_default)
+
+        # A tiny pinned ZIP exercises the same importer without copying proposals.
+        candidates=root/'ngcc/candidates'
+        (candidates/'provenance').mkdir(parents=True)
+        (candidates/'.gitignore').write_text('*\n!*/\n')
+        archive=root/'author sources.zip'
+        fixtures={'kem-01/fixture source.c': ('submission/优化/source.c', b'original\r\n\x00bytes\n'),
+                  'kem-01/header.h': ('submission/header.h', b'#define AUTHOR 1\n')}
+        fixtures['kem-01/alias.c']=fixtures['kem-01/fixture source.c']
+        with zipfile.ZipFile(archive,'w',compression=zipfile.ZIP_DEFLATED) as z:
+            z.writestr('unselected.txt',b'not part of the import')
+            for member,data in dict.fromkeys(fixtures.values()):z.writestr(member,data)
+        archive_bytes=archive.read_bytes()
+        archive_sha=hashlib.sha256(archive_bytes).hexdigest()
+        origins={'archives':{archive_sha:{'path':root.name+'/'+archive.name,
+            'files':[[name,member] for name,(member,_) in fixtures.items()]}}}
+        manifest=''.join(hashlib.sha256(data).hexdigest()+'  '+name+'\n'
+                         for name,(_,data) in fixtures.items())
+        (root/'make/optimized-origins.json').write_text(json.dumps(origins))
+        (root/'make/optimized-sources.sha256').write_text(manifest)
+
+        # The same EVP names select different author trees, with explicit fallback.
+        for target in ('darwin64-arm64-cc', 'darwin64-x86_64-cc', 'linux-aarch64', 'linux-x86_64'):
+            # Use the catalog's canonical BAG-Loong name rather than a spelling alias.
+            names = {'kem-01-aigis-enc1', next(r['provider_name'] for r in rows if r['id'] == 'kem-03')}
+            configure([target, '--implementation=optimized', *['enable-'+n for n in sorted(names)]], names)
+            data = json.loads((root/'configdata.json').read_text())
+            assert data['implementation'] == 'optimized'
+            variant = 'optimized-aarch64' if 'arm64' in target or 'aarch64' in target else 'optimized-x86_64'
+            assert data['implementations']['kem-01-aigis-enc1']['variant'] == variant
+            fallback = data['implementations'][next(n for n in names if n.startswith('kem-03-'))]
+            assert fallback['variant'] == 'ref' and fallback['reason']
+            listing = subprocess.check_output(['make', '-s', 'REFERENCE_TEST=1', 'print-implementations'], cwd=root, text=True)
+            assert all(line.endswith(':ref') for line in listing.splitlines())
+            configure([target, '--implementation=ref', 'enable-kem-01-aigis-enc1'], {'kem-01-aigis-enc1'})
+            data = json.loads((root/'configdata.json').read_text())
+            assert data['implementations']['kem-01-aigis-enc1']['variant'] == 'ref'
+        # ZEN v2 has no ARM backend; DARTS v2 is eligible on both architectures.
+        revised = {'kem-41-zen-128', 'kem-41-zen-256', 'sig-08-darts128', 'sig-08-darts256'}
+        for target in ('linux-x86_64', 'linux-aarch64', 'darwin64-x86_64-cc', 'darwin64-arm64-cc'):
+            configure([target, '--implementation=optimized', *['enable-'+n for n in sorted(revised)]], revised)
+            data = json.loads((root/'configdata.json').read_text())['implementations']
+            for bits in (128, 256):
+                zen = data['kem-41-zen-'+str(bits)]
+                assert zen['variant'] == ('optimized-x86_64' if target == 'linux-x86_64' else 'ref')
+                if target == 'linux-aarch64':
+                    assert 'v2.0' in zen['reason'] and 'no AArch64 backend' in zen['reason']
+                assert data['sig-08-darts'+str(bits)]['variant'] == (
+                    'optimized-x86_64' if 'x86_64' in target else 'optimized-aarch64')
+        for name,(_,data) in fixtures.items():assert (candidates/name).read_bytes()==data
+
+        # Cold import works with only Perl on PATH: no Python or external unzip.
+        perl_bin=root/'perl-only-bin';perl_bin.mkdir()
+        (perl_bin/'perl').symlink_to(shutil.which('perl'))
+        optimized=['darwin64-arm64-cc','--implementation=optimized','enable-kem-01-aigis-enc1']
+        for name in fixtures:(candidates/name).unlink()
+        run=configure(optimized,environment={'PATH':str(perl_bin)})
+        assert 'imported 3 from 1 pinned archives' in run.stdout
+        for name,(_,data) in fixtures.items():assert (candidates/name).read_bytes()==data
+
+        # Once imported, the archives are unnecessary; unchanged config is stable.
+        archive.unlink()
+        before=[(root/p).stat().st_mtime_ns for p in ('Makefile','configdata.json','src/ngcc_config.h')]
+        configure(optimized,environment={'PATH':str(perl_bin)})
+        assert before==[(root/p).stat().st_mtime_ns for p in ('Makefile','configdata.json','src/ngcc_config.h')]
+        for name in fixtures:(candidates/name).unlink()
+        run=configure(optimized,fail=True)
+        assert 'Missing optimized source archive' in run.stderr
+        # Reference-only or all-fallback selections do not import archives.
+        configure(['--implementation=ref','enable-kem-01-aigis-enc1'])
+        fallback_name=next(r['provider_name'] for r in rows if r['id']=='kem-03')
+        configure(['--implementation=optimized','enable-'+fallback_name])
+        archive.write_bytes(archive_bytes+b'changed')
+        assert 'Archive checksum mismatch' in configure(optimized,fail=True).stderr
+        archive.write_bytes(archive_bytes)
+        # All members must validate before any missing source is installed.
+        (root/'make/optimized-sources.sha256').write_text(manifest.replace(
+            hashlib.sha256(fixtures['kem-01/header.h'][1]).hexdigest(),'0'*64))
+        assert 'Author member checksum mismatch' in configure(optimized,fail=True).stderr
+        assert not any((candidates/name).exists() for name in fixtures)
+        (root/'make/optimized-sources.sha256').write_text(manifest)
+        configure(optimized)
+        source=candidates/'kem-01/fixture source.c'
+        source.write_bytes(b'local edit')
+        assert 'refusing to overwrite' in configure(optimized,fail=True).stderr
+        assert source.read_bytes()==b'local edit'
+        source.unlink()
+        outside=root/'outside.c';outside.write_bytes(b'untouched')
+        source.symlink_to(outside)
+        assert 'symlink' in configure(optimized,fail=True).stderr
+        assert outside.read_bytes()==b'untouched'
+        source.unlink()
+        source.symlink_to(root/'nonexistent.c')
+        assert 'symlink' in configure(optimized,fail=True).stderr
+        assert not (root/'nonexistent.c').exists()
+        source.unlink()
+        # Explicit archive root supports paths containing spaces.
+        moved=root/'separate archives';moved.mkdir()
+        (moved/root.name).mkdir()
+        archive.rename(moved/root.name/archive.name)
+        configure([*optimized,'--with-optimized-archives='+str(moved)])
+        assert source.read_bytes()==fixtures['kem-01/fixture source.c'][1]
+        configure(['--with-optimized-archives='],fail=True)
+        configure(['--implementation=unknown'], fail=True)
     result = {'checks': checks, 'algorithm_execution': False,
               'configure_sha256': hashlib.sha256((ROOT/'config').read_bytes()).hexdigest()}
     (ROOT/'test-results/configure-options.json').write_text(json.dumps(result, indent=2)+'\n')

@@ -6,6 +6,7 @@ import json
 import os
 import platform
 import re
+import shlex
 import subprocess
 import time
 from pathlib import Path
@@ -23,15 +24,22 @@ def main():
     row=next(r for r in json.loads((ROOT/'ngcc/metadata/selected.json').read_text())
              if r['id']==args.id and r['label']==args.label and r['type']=='sig')
     symbol='ngcc_ref_'+re.sub(r'[^A-Za-z0-9_]', '_', 'sig-'+row['id'].split('-')[1]+'_'+row['label'])
-    obj=ROOT/'build/ngcc'/row['id']/row['label']/'instance.o'
+    config=json.loads((ROOT/'configdata.json').read_text())
+    implementation=config['implementations'][row['provider_name']]
+    variant=implementation['variant']
+    obj=ROOT/'build/ngcc'/config['target']/row['id']/row['label']/variant/'instance.o'
     prefix=openssl_prefix()
     gmp=Path(os.environ.get('GMP_ROOT','/opt/homebrew/opt/gmp' if platform.system()=='Darwin' else '/usr'))
     stem='native-replay--'+args.id+'--'+args.label+'--'+str(args.first)
     exe=ROOT/'build'/stem
-    subprocess.run([os.environ.get('CC','cc'),'-O2','-I'+str(ROOT/'src'),'-I'+str(prefix/'include'),
+    cxx_libs=[]
+    if any(Path(s).suffix in ('.cpp','.cc') for s in implementation.get('SRCS','').split()):
+        cxx_libs=['-lc++' if config['platform']=='Darwin' else '-lstdc++']
+    cc=shlex.split(config['variables'].get('CC',os.environ.get('CC','cc')))
+    subprocess.run([*cc,*shlex.split(config['target_flags']),'-O2','-I'+str(ROOT/'src'),'-I'+str(prefix/'include'),
         '-DNGCC_GETTER='+symbol,str(ROOT/'cc_test/ngcc_native_sig.c'),str(obj),
         str(ROOT/'build/ngcc_compat.o'),*['-L'+str(p) for p in library_dirs(prefix)],
-        '-lcrypto','-L'+str(gmp/'lib'),'-lgmp','-o',str(exe)],check=True)
+        '-lcrypto','-L'+str(gmp/'lib'),'-lgmp',*cxx_libs,'-o',str(exe)],check=True)
     env=host_environment(prefix)
     log=ROOT/'test-results'/(stem+'.log');start=time.monotonic();code=None
     with log.open('w') as f:
