@@ -85,9 +85,10 @@ else
 	@# objcopy cannot localize COMMON symbols; give each instance its own names.
 	@$$(NM) -g --defined-only $$@.tmp > $$(@D)/symbols.txt
 	@awk '$$$$2 == "C" { print $$$$3 " $(6)_common_" $$$$3 }' $$(@D)/symbols.txt > $$(@D)/common-symbols.txt
-	$$(OBJCOPY) --redefine-syms=$$(@D)/common-symbols.txt --keep-global-symbol=$(6) $$@.tmp
+	@awk '$$$$2 ~ /^[TDBRGS]$$$$/ && $$$$3 != "$(6)" { print $$$$3 }' $$(@D)/symbols.txt > $$(@D)/localize-symbols.txt
+	$$(OBJCOPY) --redefine-syms=$$(@D)/common-symbols.txt --localize-symbols=$$(@D)/localize-symbols.txt $$@.tmp
 	@$$(NM) -g --defined-only $$@.tmp > $$(@D)/symbols.txt
-	@awk '$$$$3 == "$(6)" { next } $$$$2 == "C" && index($$$$3, "$(6)_common_") == 1 { next } { print "Unexpected instance symbol: " $$$$0; bad = 1 } END { exit bad }' $$(@D)/symbols.txt
+	@awk '$$$$3 == "$(6)" { next } $$$$2 == "C" && index($$$$3, "$(6)_common_") == 1 { next } $$$$2 ~ /^[WwVvu]$$$$/ { next } { print "Unexpected instance symbol: " $$$$0; bad = 1 } END { exit bad }' $$(@D)/symbols.txt
 endif
 	mv -f $$@.tmp $$@
 endef
