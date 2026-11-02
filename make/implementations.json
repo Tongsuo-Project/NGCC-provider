@@ -4764,21 +4764,7 @@
       ]
     },
     "linux-aarch64": {
-      "SRCDIR": "Implementations/Optimized_Implementation/ARMv8/ZEN_128",
-      "SRCS": "auxfunc.c drng.c sample.S ntt.S poly.c fastinversion.S symmetric.c pke.S KEM_AlgorithmInstance.c",
-      "INC": "",
-      "DEFS": "",
-      "SHIMDEFS": "",
-      "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -march=armv8.2-a+crypto+sha3+dotprod+sve",
-      "variant": "optimized-aarch64",
-      "requirements": [
-        "AArch64 Advanced SIMD (NEON)",
-        "Arm crypto extensions",
-        "SVE",
-        "SHA3",
-        "DOTPROD"
-      ]
+      "unavailable": "The pinned ZEN v2.0 author revision supplies no AArch64 backend; the superseded ARM/SVE implementation is not mixed with the new reference."
     },
     "darwin64-x86_64-cc": {
       "unavailable": "No matching author optimized backend for this target in the pinned proposal archive"
@@ -4802,21 +4788,7 @@
       ]
     },
     "linux-aarch64": {
-      "SRCDIR": "Implementations/Optimized_Implementation/ARMv8/ZEN_256",
-      "SRCS": "auxfunc.c drng.c sample.S ntt.S poly.c fastinversion.S symmetric.c pke.S KEM_AlgorithmInstance.c",
-      "INC": "",
-      "DEFS": "",
-      "SHIMDEFS": "",
-      "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -march=armv8.2-a+crypto+sha3+dotprod+sve",
-      "variant": "optimized-aarch64",
-      "requirements": [
-        "AArch64 Advanced SIMD (NEON)",
-        "Arm crypto extensions",
-        "SVE",
-        "SHA3",
-        "DOTPROD"
-      ]
+      "unavailable": "The pinned ZEN v2.0 author revision supplies no AArch64 backend; the superseded ARM/SVE implementation is not mixed with the new reference."
     },
     "darwin64-x86_64-cc": {
       "unavailable": "No matching author optimized backend for this target in the pinned proposal archive"
@@ -6069,7 +6041,6 @@
       "NOAUX": "",
       "INSTANCE_CFLAGS": "-O3 -mavx2 -include immintrin.h",
       "variant": "optimized-x86_64",
-      "unavailable": "Reference/optimized interoperability failed: optimized implementation rejects reference-generated ciphertext or signature",
       "requirements": [
         "AVX2"
       ]
@@ -6083,7 +6054,6 @@
       "NOAUX": "",
       "INSTANCE_CFLAGS": "-O3 -mavx2 -include immintrin.h",
       "variant": "optimized-x86_64",
-      "unavailable": "Reference/optimized interoperability failed: optimized implementation rejects reference-generated ciphertext or signature",
       "requirements": [
         "AVX2"
       ]
@@ -6125,7 +6095,6 @@
       "NOAUX": "",
       "INSTANCE_CFLAGS": "-O3 -mavx2 -include immintrin.h",
       "variant": "optimized-x86_64",
-      "unavailable": "Reference/optimized interoperability failed: optimized implementation rejects reference-generated ciphertext or signature",
       "requirements": [
         "AVX2"
       ]
@@ -6139,7 +6108,6 @@
       "NOAUX": "",
       "INSTANCE_CFLAGS": "-O3 -mavx2 -include immintrin.h",
       "variant": "optimized-x86_64",
-      "unavailable": "Reference/optimized interoperability failed: optimized implementation rejects reference-generated ciphertext or signature",
       "requirements": [
         "AVX2"
       ]

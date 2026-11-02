@@ -216,6 +216,18 @@ def main():
             configure([target, '--implementation=ref', 'enable-kem-01-aigis-enc1'], {'kem-01-aigis-enc1'})
             data = json.loads((root/'configdata.json').read_text())
             assert data['implementations']['kem-01-aigis-enc1']['variant'] == 'ref'
+        # ZEN v2 has no ARM backend; DARTS v2 is eligible on both architectures.
+        revised = {'kem-41-zen-128', 'kem-41-zen-256', 'sig-08-darts128', 'sig-08-darts256'}
+        for target in ('linux-x86_64', 'linux-aarch64', 'darwin64-x86_64-cc', 'darwin64-arm64-cc'):
+            configure([target, '--implementation=optimized', *['enable-'+n for n in sorted(revised)]], revised)
+            data = json.loads((root/'configdata.json').read_text())['implementations']
+            for bits in (128, 256):
+                zen = data['kem-41-zen-'+str(bits)]
+                assert zen['variant'] == ('optimized-x86_64' if target == 'linux-x86_64' else 'ref')
+                if target == 'linux-aarch64':
+                    assert 'v2.0' in zen['reason'] and 'no AArch64 backend' in zen['reason']
+                assert data['sig-08-darts'+str(bits)]['variant'] == (
+                    'optimized-x86_64' if 'x86_64' in target else 'optimized-aarch64')
         for name,(_,data) in fixtures.items():assert (candidates/name).read_bytes()==data
 
         # Cold import works with only Perl on PATH: no Python or external unzip.

@@ -16834,401 +16834,297 @@
         ]
       ]
     },
-    "69eba070320fc6cb365fb6d43d2b74460487732aeb7e607fac2d6c1b3a64a80e": {
-      "path": "aux_note_20260919/iccs_pkgs/ZEN.zip",
-      "source_url": "https://www.niccs.org.cn/niccs/Proposal/Public-Key%20Cryptographic%20Algorithms/Round%201%20candidates/ZEN.zip",
+    "fb0933c53698d3b49668c2266161b8a02d38d4cc956644bbd823b7b108c1cc44": {
+      "path": "ngcc_provider/ngcc/candidates/ngcc_provider/ngcc/metadata/kem-41-revision.zip",
+      "source_url": "https://light-lattice.org/zen/implementations/20261030/ZEN-20261030.zip",
       "files": [
         [
-          "kem-41/Implementations/Optimized_Implementation/ARMv8/ZEN_128/KAT_KEM.c",
-          "Implementations/Optimized_Implementation/ARMv8/ZEN_128/KAT_KEM.c"
-        ],
-        [
-          "kem-41/Implementations/Optimized_Implementation/ARMv8/ZEN_128/KEM_AlgorithmInstance.c",
-          "Implementations/Optimized_Implementation/ARMv8/ZEN_128/KEM_AlgorithmInstance.c"
-        ],
-        [
-          "kem-41/Implementations/Optimized_Implementation/ARMv8/ZEN_128/KEM_AlgorithmInstance.h",
-          "Implementations/Optimized_Implementation/ARMv8/ZEN_128/KEM_AlgorithmInstance.h"
-        ],
-        [
-          "kem-41/Implementations/Optimized_Implementation/ARMv8/ZEN_128/Makefile",
-          "Implementations/Optimized_Implementation/ARMv8/ZEN_128/Makefile"
-        ],
-        [
-          "kem-41/Implementations/Optimized_Implementation/ARMv8/ZEN_128/PERFORMANCE.md",
-          "Implementations/Optimized_Implementation/ARMv8/ZEN_128/PERFORMANCE.md"
-        ],
-        [
-          "kem-41/Implementations/Optimized_Implementation/ARMv8/ZEN_128/README.txt",
-          "Implementations/Optimized_Implementation/ARMv8/ZEN_128/README.txt"
-        ],
-        [
-          "kem-41/Implementations/Optimized_Implementation/ARMv8/ZEN_128/SPEED_KEM.c",
-          "Implementations/Optimized_Implementation/ARMv8/ZEN_128/SPEED_KEM.c"
-        ],
-        [
-          "kem-41/Implementations/Optimized_Implementation/ARMv8/ZEN_128/auxfunc.c",
-          "Implementations/Optimized_Implementation/ARMv8/ZEN_128/auxfunc.c"
-        ],
-        [
-          "kem-41/Implementations/Optimized_Implementation/ARMv8/ZEN_128/auxfunc.h",
-          "Implementations/Optimized_Implementation/ARMv8/ZEN_128/auxfunc.h"
-        ],
-        [
-          "kem-41/Implementations/Optimized_Implementation/ARMv8/ZEN_128/benchmark.c",
-          "Implementations/Optimized_Implementation/ARMv8/ZEN_128/benchmark.c"
-        ],
-        [
-          "kem-41/Implementations/Optimized_Implementation/ARMv8/ZEN_128/cpucycles.c",
-          "Implementations/Optimized_Implementation/ARMv8/ZEN_128/cpucycles.c"
-        ],
-        [
-          "kem-41/Implementations/Optimized_Implementation/ARMv8/ZEN_128/cpucycles.h",
-          "Implementations/Optimized_Implementation/ARMv8/ZEN_128/cpucycles.h"
-        ],
-        [
-          "kem-41/Implementations/Optimized_Implementation/ARMv8/ZEN_128/drng.c",
-          "Implementations/Optimized_Implementation/ARMv8/ZEN_128/drng.c"
-        ],
-        [
-          "kem-41/Implementations/Optimized_Implementation/ARMv8/ZEN_128/drng.h",
-          "Implementations/Optimized_Implementation/ARMv8/ZEN_128/drng.h"
-        ],
-        [
-          "kem-41/Implementations/Optimized_Implementation/ARMv8/ZEN_128/fastinversion.S",
-          "Implementations/Optimized_Implementation/ARMv8/ZEN_128/fastinversion.S"
-        ],
-        [
-          "kem-41/Implementations/Optimized_Implementation/ARMv8/ZEN_128/ntt.S",
-          "Implementations/Optimized_Implementation/ARMv8/ZEN_128/ntt.S"
-        ],
-        [
-          "kem-41/Implementations/Optimized_Implementation/ARMv8/ZEN_128/ntt.h",
-          "Implementations/Optimized_Implementation/ARMv8/ZEN_128/ntt.h"
-        ],
-        [
-          "kem-41/Implementations/Optimized_Implementation/ARMv8/ZEN_128/params.h",
-          "Implementations/Optimized_Implementation/ARMv8/ZEN_128/params.h"
-        ],
-        [
-          "kem-41/Implementations/Optimized_Implementation/ARMv8/ZEN_128/pke.S",
-          "Implementations/Optimized_Implementation/ARMv8/ZEN_128/pke.S"
-        ],
-        [
-          "kem-41/Implementations/Optimized_Implementation/ARMv8/ZEN_128/pke.h",
-          "Implementations/Optimized_Implementation/ARMv8/ZEN_128/pke.h"
-        ],
-        [
-          "kem-41/Implementations/Optimized_Implementation/ARMv8/ZEN_128/poly.c",
-          "Implementations/Optimized_Implementation/ARMv8/ZEN_128/poly.c"
-        ],
-        [
-          "kem-41/Implementations/Optimized_Implementation/ARMv8/ZEN_128/poly.h",
-          "Implementations/Optimized_Implementation/ARMv8/ZEN_128/poly.h"
-        ],
-        [
-          "kem-41/Implementations/Optimized_Implementation/ARMv8/ZEN_128/sample.S",
-          "Implementations/Optimized_Implementation/ARMv8/ZEN_128/sample.S"
-        ],
-        [
-          "kem-41/Implementations/Optimized_Implementation/ARMv8/ZEN_128/sample.h",
-          "Implementations/Optimized_Implementation/ARMv8/ZEN_128/sample.h"
-        ],
-        [
-          "kem-41/Implementations/Optimized_Implementation/ARMv8/ZEN_128/symmetric.c",
-          "Implementations/Optimized_Implementation/ARMv8/ZEN_128/symmetric.c"
-        ],
-        [
-          "kem-41/Implementations/Optimized_Implementation/ARMv8/ZEN_128/symmetric.h",
-          "Implementations/Optimized_Implementation/ARMv8/ZEN_128/symmetric.h"
-        ],
-        [
-          "kem-41/Implementations/Optimized_Implementation/ARMv8/ZEN_256/KAT_KEM.c",
-          "Implementations/Optimized_Implementation/ARMv8/ZEN_256/KAT_KEM.c"
-        ],
-        [
-          "kem-41/Implementations/Optimized_Implementation/ARMv8/ZEN_256/KEM_AlgorithmInstance.c",
-          "Implementations/Optimized_Implementation/ARMv8/ZEN_256/KEM_AlgorithmInstance.c"
-        ],
-        [
-          "kem-41/Implementations/Optimized_Implementation/ARMv8/ZEN_256/KEM_AlgorithmInstance.h",
-          "Implementations/Optimized_Implementation/ARMv8/ZEN_256/KEM_AlgorithmInstance.h"
-        ],
-        [
-          "kem-41/Implementations/Optimized_Implementation/ARMv8/ZEN_256/Makefile",
-          "Implementations/Optimized_Implementation/ARMv8/ZEN_256/Makefile"
-        ],
-        [
-          "kem-41/Implementations/Optimized_Implementation/ARMv8/ZEN_256/PERFORMANCE.md",
-          "Implementations/Optimized_Implementation/ARMv8/ZEN_256/PERFORMANCE.md"
-        ],
-        [
-          "kem-41/Implementations/Optimized_Implementation/ARMv8/ZEN_256/README.txt",
-          "Implementations/Optimized_Implementation/ARMv8/ZEN_256/README.txt"
-        ],
-        [
-          "kem-41/Implementations/Optimized_Implementation/ARMv8/ZEN_256/SPEED_KEM.c",
-          "Implementations/Optimized_Implementation/ARMv8/ZEN_256/SPEED_KEM.c"
-        ],
-        [
-          "kem-41/Implementations/Optimized_Implementation/ARMv8/ZEN_256/auxfunc.c",
-          "Implementations/Optimized_Implementation/ARMv8/ZEN_256/auxfunc.c"
-        ],
-        [
-          "kem-41/Implementations/Optimized_Implementation/ARMv8/ZEN_256/auxfunc.h",
-          "Implementations/Optimized_Implementation/ARMv8/ZEN_256/auxfunc.h"
-        ],
-        [
-          "kem-41/Implementations/Optimized_Implementation/ARMv8/ZEN_256/benchmark.c",
-          "Implementations/Optimized_Implementation/ARMv8/ZEN_256/benchmark.c"
-        ],
-        [
-          "kem-41/Implementations/Optimized_Implementation/ARMv8/ZEN_256/cpucycles.c",
-          "Implementations/Optimized_Implementation/ARMv8/ZEN_256/cpucycles.c"
-        ],
-        [
-          "kem-41/Implementations/Optimized_Implementation/ARMv8/ZEN_256/cpucycles.h",
-          "Implementations/Optimized_Implementation/ARMv8/ZEN_256/cpucycles.h"
-        ],
-        [
-          "kem-41/Implementations/Optimized_Implementation/ARMv8/ZEN_256/drng.c",
-          "Implementations/Optimized_Implementation/ARMv8/ZEN_256/drng.c"
-        ],
-        [
-          "kem-41/Implementations/Optimized_Implementation/ARMv8/ZEN_256/drng.h",
-          "Implementations/Optimized_Implementation/ARMv8/ZEN_256/drng.h"
-        ],
-        [
-          "kem-41/Implementations/Optimized_Implementation/ARMv8/ZEN_256/fastinversion.S",
-          "Implementations/Optimized_Implementation/ARMv8/ZEN_256/fastinversion.S"
-        ],
-        [
-          "kem-41/Implementations/Optimized_Implementation/ARMv8/ZEN_256/ntt.S",
-          "Implementations/Optimized_Implementation/ARMv8/ZEN_256/ntt.S"
-        ],
-        [
-          "kem-41/Implementations/Optimized_Implementation/ARMv8/ZEN_256/ntt.h",
-          "Implementations/Optimized_Implementation/ARMv8/ZEN_256/ntt.h"
-        ],
-        [
-          "kem-41/Implementations/Optimized_Implementation/ARMv8/ZEN_256/params.h",
-          "Implementations/Optimized_Implementation/ARMv8/ZEN_256/params.h"
-        ],
-        [
-          "kem-41/Implementations/Optimized_Implementation/ARMv8/ZEN_256/pke.S",
-          "Implementations/Optimized_Implementation/ARMv8/ZEN_256/pke.S"
-        ],
-        [
-          "kem-41/Implementations/Optimized_Implementation/ARMv8/ZEN_256/pke.h",
-          "Implementations/Optimized_Implementation/ARMv8/ZEN_256/pke.h"
-        ],
-        [
-          "kem-41/Implementations/Optimized_Implementation/ARMv8/ZEN_256/poly.c",
-          "Implementations/Optimized_Implementation/ARMv8/ZEN_256/poly.c"
-        ],
-        [
-          "kem-41/Implementations/Optimized_Implementation/ARMv8/ZEN_256/poly.h",
-          "Implementations/Optimized_Implementation/ARMv8/ZEN_256/poly.h"
-        ],
-        [
-          "kem-41/Implementations/Optimized_Implementation/ARMv8/ZEN_256/sample.S",
-          "Implementations/Optimized_Implementation/ARMv8/ZEN_256/sample.S"
-        ],
-        [
-          "kem-41/Implementations/Optimized_Implementation/ARMv8/ZEN_256/sample.h",
-          "Implementations/Optimized_Implementation/ARMv8/ZEN_256/sample.h"
-        ],
-        [
-          "kem-41/Implementations/Optimized_Implementation/ARMv8/ZEN_256/symmetric.c",
-          "Implementations/Optimized_Implementation/ARMv8/ZEN_256/symmetric.c"
-        ],
-        [
-          "kem-41/Implementations/Optimized_Implementation/ARMv8/ZEN_256/symmetric.h",
-          "Implementations/Optimized_Implementation/ARMv8/ZEN_256/symmetric.h"
-        ],
-        [
           "kem-41/Implementations/Optimized_Implementation/x86AVX2/ZEN_128/KAT_KEM.c",
-          "Implementations/Optimized_Implementation/x86AVX2/ZEN_128/KAT_KEM.c"
+          "ZEN v2/ZEN SM3/x86AVX2/ZEN_128/KAT_KEM.c"
         ],
         [
           "kem-41/Implementations/Optimized_Implementation/x86AVX2/ZEN_128/KEM_AlgorithmInstance.c",
-          "Implementations/Optimized_Implementation/x86AVX2/ZEN_128/KEM_AlgorithmInstance.c"
+          "ZEN v2/ZEN SM3/x86AVX2/ZEN_128/KEM_AlgorithmInstance.c"
         ],
         [
           "kem-41/Implementations/Optimized_Implementation/x86AVX2/ZEN_128/KEM_AlgorithmInstance.h",
-          "Implementations/Optimized_Implementation/x86AVX2/ZEN_128/KEM_AlgorithmInstance.h"
+          "ZEN v2/ZEN SM3/x86AVX2/ZEN_128/KEM_AlgorithmInstance.h"
         ],
         [
           "kem-41/Implementations/Optimized_Implementation/x86AVX2/ZEN_128/Makefile",
-          "Implementations/Optimized_Implementation/x86AVX2/ZEN_128/Makefile"
+          "ZEN v2/ZEN SM3/x86AVX2/ZEN_128/Makefile"
         ],
         [
           "kem-41/Implementations/Optimized_Implementation/x86AVX2/ZEN_128/README.txt",
-          "Implementations/Optimized_Implementation/x86AVX2/ZEN_128/README.txt"
+          "ZEN v2/ZEN SM3/x86AVX2/ZEN_128/README.txt"
         ],
         [
           "kem-41/Implementations/Optimized_Implementation/x86AVX2/ZEN_128/SPEED_KEM.c",
-          "Implementations/Optimized_Implementation/x86AVX2/ZEN_128/SPEED_KEM.c"
+          "ZEN v2/ZEN SM3/x86AVX2/ZEN_128/SPEED_KEM.c"
         ],
         [
           "kem-41/Implementations/Optimized_Implementation/x86AVX2/ZEN_128/auxfunc.c",
-          "Implementations/Optimized_Implementation/x86AVX2/ZEN_128/auxfunc.c"
+          "ZEN v2/ZEN SM3/x86AVX2/ZEN_128/auxfunc.c"
         ],
         [
           "kem-41/Implementations/Optimized_Implementation/x86AVX2/ZEN_128/auxfunc.h",
-          "Implementations/Optimized_Implementation/x86AVX2/ZEN_128/auxfunc.h"
+          "ZEN v2/ZEN SM3/x86AVX2/ZEN_128/auxfunc.h"
         ],
         [
           "kem-41/Implementations/Optimized_Implementation/x86AVX2/ZEN_128/cpucycles.c",
-          "Implementations/Optimized_Implementation/x86AVX2/ZEN_128/cpucycles.c"
+          "ZEN v2/ZEN SM3/x86AVX2/ZEN_128/cpucycles.c"
         ],
         [
           "kem-41/Implementations/Optimized_Implementation/x86AVX2/ZEN_128/cpucycles.h",
-          "Implementations/Optimized_Implementation/x86AVX2/ZEN_128/cpucycles.h"
+          "ZEN v2/ZEN SM3/x86AVX2/ZEN_128/cpucycles.h"
         ],
         [
           "kem-41/Implementations/Optimized_Implementation/x86AVX2/ZEN_128/drng.c",
-          "Implementations/Optimized_Implementation/x86AVX2/ZEN_128/drng.c"
+          "ZEN v2/ZEN SM3/x86AVX2/ZEN_128/drng.c"
         ],
         [
           "kem-41/Implementations/Optimized_Implementation/x86AVX2/ZEN_128/drng.h",
-          "Implementations/Optimized_Implementation/x86AVX2/ZEN_128/drng.h"
+          "ZEN v2/ZEN SM3/x86AVX2/ZEN_128/drng.h"
         ],
         [
           "kem-41/Implementations/Optimized_Implementation/x86AVX2/ZEN_128/ntt.S",
-          "Implementations/Optimized_Implementation/x86AVX2/ZEN_128/ntt.S"
+          "ZEN v2/ZEN SM3/x86AVX2/ZEN_128/ntt.S"
         ],
         [
           "kem-41/Implementations/Optimized_Implementation/x86AVX2/ZEN_128/ntt.h",
-          "Implementations/Optimized_Implementation/x86AVX2/ZEN_128/ntt.h"
+          "ZEN v2/ZEN SM3/x86AVX2/ZEN_128/ntt.h"
+        ],
+        [
+          "kem-41/Implementations/Optimized_Implementation/x86AVX2/ZEN_128/output/KAT_KEM_ZEN_128.txt",
+          "ZEN v2/ZEN SM3/x86AVX2/ZEN_128/output/KAT_KEM_ZEN_128.txt"
         ],
         [
           "kem-41/Implementations/Optimized_Implementation/x86AVX2/ZEN_128/params.h",
-          "Implementations/Optimized_Implementation/x86AVX2/ZEN_128/params.h"
+          "ZEN v2/ZEN SM3/x86AVX2/ZEN_128/params.h"
         ],
         [
           "kem-41/Implementations/Optimized_Implementation/x86AVX2/ZEN_128/pke.c",
-          "Implementations/Optimized_Implementation/x86AVX2/ZEN_128/pke.c"
+          "ZEN v2/ZEN SM3/x86AVX2/ZEN_128/pke.c"
         ],
         [
           "kem-41/Implementations/Optimized_Implementation/x86AVX2/ZEN_128/pke.h",
-          "Implementations/Optimized_Implementation/x86AVX2/ZEN_128/pke.h"
+          "ZEN v2/ZEN SM3/x86AVX2/ZEN_128/pke.h"
         ],
         [
           "kem-41/Implementations/Optimized_Implementation/x86AVX2/ZEN_128/poly.c",
-          "Implementations/Optimized_Implementation/x86AVX2/ZEN_128/poly.c"
+          "ZEN v2/ZEN SM3/x86AVX2/ZEN_128/poly.c"
         ],
         [
           "kem-41/Implementations/Optimized_Implementation/x86AVX2/ZEN_128/poly.h",
-          "Implementations/Optimized_Implementation/x86AVX2/ZEN_128/poly.h"
+          "ZEN v2/ZEN SM3/x86AVX2/ZEN_128/poly.h"
         ],
         [
           "kem-41/Implementations/Optimized_Implementation/x86AVX2/ZEN_128/sample.c",
-          "Implementations/Optimized_Implementation/x86AVX2/ZEN_128/sample.c"
+          "ZEN v2/ZEN SM3/x86AVX2/ZEN_128/sample.c"
         ],
         [
           "kem-41/Implementations/Optimized_Implementation/x86AVX2/ZEN_128/sample.h",
-          "Implementations/Optimized_Implementation/x86AVX2/ZEN_128/sample.h"
+          "ZEN v2/ZEN SM3/x86AVX2/ZEN_128/sample.h"
         ],
         [
           "kem-41/Implementations/Optimized_Implementation/x86AVX2/ZEN_128/symmetric.c",
-          "Implementations/Optimized_Implementation/x86AVX2/ZEN_128/symmetric.c"
+          "ZEN v2/ZEN SM3/x86AVX2/ZEN_128/symmetric.c"
         ],
         [
           "kem-41/Implementations/Optimized_Implementation/x86AVX2/ZEN_128/symmetric.h",
-          "Implementations/Optimized_Implementation/x86AVX2/ZEN_128/symmetric.h"
+          "ZEN v2/ZEN SM3/x86AVX2/ZEN_128/symmetric.h"
         ],
         [
           "kem-41/Implementations/Optimized_Implementation/x86AVX2/ZEN_256/KAT_KEM.c",
-          "Implementations/Optimized_Implementation/x86AVX2/ZEN_256/KAT_KEM.c"
+          "ZEN v2/ZEN SM3/x86AVX2/ZEN_256/KAT_KEM.c"
         ],
         [
           "kem-41/Implementations/Optimized_Implementation/x86AVX2/ZEN_256/KEM_AlgorithmInstance.c",
-          "Implementations/Optimized_Implementation/x86AVX2/ZEN_256/KEM_AlgorithmInstance.c"
+          "ZEN v2/ZEN SM3/x86AVX2/ZEN_256/KEM_AlgorithmInstance.c"
         ],
         [
           "kem-41/Implementations/Optimized_Implementation/x86AVX2/ZEN_256/KEM_AlgorithmInstance.h",
-          "Implementations/Optimized_Implementation/x86AVX2/ZEN_256/KEM_AlgorithmInstance.h"
+          "ZEN v2/ZEN SM3/x86AVX2/ZEN_256/KEM_AlgorithmInstance.h"
         ],
         [
           "kem-41/Implementations/Optimized_Implementation/x86AVX2/ZEN_256/Makefile",
-          "Implementations/Optimized_Implementation/x86AVX2/ZEN_256/Makefile"
+          "ZEN v2/ZEN SM3/x86AVX2/ZEN_256/Makefile"
         ],
         [
           "kem-41/Implementations/Optimized_Implementation/x86AVX2/ZEN_256/README.txt",
-          "Implementations/Optimized_Implementation/x86AVX2/ZEN_256/README.txt"
+          "ZEN v2/ZEN SM3/x86AVX2/ZEN_256/README.txt"
         ],
         [
           "kem-41/Implementations/Optimized_Implementation/x86AVX2/ZEN_256/SPEED_KEM.c",
-          "Implementations/Optimized_Implementation/x86AVX2/ZEN_256/SPEED_KEM.c"
+          "ZEN v2/ZEN SM3/x86AVX2/ZEN_256/SPEED_KEM.c"
         ],
         [
           "kem-41/Implementations/Optimized_Implementation/x86AVX2/ZEN_256/auxfunc.c",
-          "Implementations/Optimized_Implementation/x86AVX2/ZEN_256/auxfunc.c"
+          "ZEN v2/ZEN SM3/x86AVX2/ZEN_256/auxfunc.c"
         ],
         [
           "kem-41/Implementations/Optimized_Implementation/x86AVX2/ZEN_256/auxfunc.h",
-          "Implementations/Optimized_Implementation/x86AVX2/ZEN_256/auxfunc.h"
+          "ZEN v2/ZEN SM3/x86AVX2/ZEN_256/auxfunc.h"
         ],
         [
           "kem-41/Implementations/Optimized_Implementation/x86AVX2/ZEN_256/cpucycles.c",
-          "Implementations/Optimized_Implementation/x86AVX2/ZEN_256/cpucycles.c"
+          "ZEN v2/ZEN SM3/x86AVX2/ZEN_256/cpucycles.c"
         ],
         [
           "kem-41/Implementations/Optimized_Implementation/x86AVX2/ZEN_256/cpucycles.h",
-          "Implementations/Optimized_Implementation/x86AVX2/ZEN_256/cpucycles.h"
+          "ZEN v2/ZEN SM3/x86AVX2/ZEN_256/cpucycles.h"
         ],
         [
           "kem-41/Implementations/Optimized_Implementation/x86AVX2/ZEN_256/drng.c",
-          "Implementations/Optimized_Implementation/x86AVX2/ZEN_256/drng.c"
+          "ZEN v2/ZEN SM3/x86AVX2/ZEN_256/drng.c"
         ],
         [
           "kem-41/Implementations/Optimized_Implementation/x86AVX2/ZEN_256/drng.h",
-          "Implementations/Optimized_Implementation/x86AVX2/ZEN_256/drng.h"
+          "ZEN v2/ZEN SM3/x86AVX2/ZEN_256/drng.h"
         ],
         [
           "kem-41/Implementations/Optimized_Implementation/x86AVX2/ZEN_256/ntt.S",
-          "Implementations/Optimized_Implementation/x86AVX2/ZEN_256/ntt.S"
+          "ZEN v2/ZEN SM3/x86AVX2/ZEN_256/ntt.S"
         ],
         [
           "kem-41/Implementations/Optimized_Implementation/x86AVX2/ZEN_256/ntt.h",
-          "Implementations/Optimized_Implementation/x86AVX2/ZEN_256/ntt.h"
+          "ZEN v2/ZEN SM3/x86AVX2/ZEN_256/ntt.h"
+        ],
+        [
+          "kem-41/Implementations/Optimized_Implementation/x86AVX2/ZEN_256/output/KAT_KEM_ZEN_256.txt",
+          "ZEN v2/ZEN SM3/x86AVX2/ZEN_256/output/KAT_KEM_ZEN_256.txt"
         ],
         [
           "kem-41/Implementations/Optimized_Implementation/x86AVX2/ZEN_256/params.h",
-          "Implementations/Optimized_Implementation/x86AVX2/ZEN_256/params.h"
+          "ZEN v2/ZEN SM3/x86AVX2/ZEN_256/params.h"
         ],
         [
           "kem-41/Implementations/Optimized_Implementation/x86AVX2/ZEN_256/pke.c",
-          "Implementations/Optimized_Implementation/x86AVX2/ZEN_256/pke.c"
+          "ZEN v2/ZEN SM3/x86AVX2/ZEN_256/pke.c"
         ],
         [
           "kem-41/Implementations/Optimized_Implementation/x86AVX2/ZEN_256/pke.h",
-          "Implementations/Optimized_Implementation/x86AVX2/ZEN_256/pke.h"
+          "ZEN v2/ZEN SM3/x86AVX2/ZEN_256/pke.h"
         ],
         [
           "kem-41/Implementations/Optimized_Implementation/x86AVX2/ZEN_256/poly.c",
-          "Implementations/Optimized_Implementation/x86AVX2/ZEN_256/poly.c"
+          "ZEN v2/ZEN SM3/x86AVX2/ZEN_256/poly.c"
         ],
         [
           "kem-41/Implementations/Optimized_Implementation/x86AVX2/ZEN_256/poly.h",
-          "Implementations/Optimized_Implementation/x86AVX2/ZEN_256/poly.h"
+          "ZEN v2/ZEN SM3/x86AVX2/ZEN_256/poly.h"
         ],
         [
           "kem-41/Implementations/Optimized_Implementation/x86AVX2/ZEN_256/sample.c",
-          "Implementations/Optimized_Implementation/x86AVX2/ZEN_256/sample.c"
+          "ZEN v2/ZEN SM3/x86AVX2/ZEN_256/sample.c"
         ],
         [
           "kem-41/Implementations/Optimized_Implementation/x86AVX2/ZEN_256/sample.h",
-          "Implementations/Optimized_Implementation/x86AVX2/ZEN_256/sample.h"
+          "ZEN v2/ZEN SM3/x86AVX2/ZEN_256/sample.h"
         ],
         [
           "kem-41/Implementations/Optimized_Implementation/x86AVX2/ZEN_256/symmetric.c",
-          "Implementations/Optimized_Implementation/x86AVX2/ZEN_256/symmetric.c"
+          "ZEN v2/ZEN SM3/x86AVX2/ZEN_256/symmetric.c"
         ],
         [
           "kem-41/Implementations/Optimized_Implementation/x86AVX2/ZEN_256/symmetric.h",
-          "Implementations/Optimized_Implementation/x86AVX2/ZEN_256/symmetric.h"
+          "ZEN v2/ZEN SM3/x86AVX2/ZEN_256/symmetric.h"
+        ],
+        [
+          "kem-41/Implementations/Optimized_Implementation/x86AVX2/ZEN_512/KAT_KEM.c",
+          "ZEN v2/ZEN SM3/x86AVX2/ZEN_512/KAT_KEM.c"
+        ],
+        [
+          "kem-41/Implementations/Optimized_Implementation/x86AVX2/ZEN_512/KEM_AlgorithmInstance.c",
+          "ZEN v2/ZEN SM3/x86AVX2/ZEN_512/KEM_AlgorithmInstance.c"
+        ],
+        [
+          "kem-41/Implementations/Optimized_Implementation/x86AVX2/ZEN_512/KEM_AlgorithmInstance.h",
+          "ZEN v2/ZEN SM3/x86AVX2/ZEN_512/KEM_AlgorithmInstance.h"
+        ],
+        [
+          "kem-41/Implementations/Optimized_Implementation/x86AVX2/ZEN_512/Makefile",
+          "ZEN v2/ZEN SM3/x86AVX2/ZEN_512/Makefile"
+        ],
+        [
+          "kem-41/Implementations/Optimized_Implementation/x86AVX2/ZEN_512/README.txt",
+          "ZEN v2/ZEN SM3/x86AVX2/ZEN_512/README.txt"
+        ],
+        [
+          "kem-41/Implementations/Optimized_Implementation/x86AVX2/ZEN_512/SPEED_KEM.c",
+          "ZEN v2/ZEN SM3/x86AVX2/ZEN_512/SPEED_KEM.c"
+        ],
+        [
+          "kem-41/Implementations/Optimized_Implementation/x86AVX2/ZEN_512/auxfunc.c",
+          "ZEN v2/ZEN SM3/x86AVX2/ZEN_512/auxfunc.c"
+        ],
+        [
+          "kem-41/Implementations/Optimized_Implementation/x86AVX2/ZEN_512/auxfunc.h",
+          "ZEN v2/ZEN SM3/x86AVX2/ZEN_512/auxfunc.h"
+        ],
+        [
+          "kem-41/Implementations/Optimized_Implementation/x86AVX2/ZEN_512/cpucycles.c",
+          "ZEN v2/ZEN SM3/x86AVX2/ZEN_512/cpucycles.c"
+        ],
+        [
+          "kem-41/Implementations/Optimized_Implementation/x86AVX2/ZEN_512/cpucycles.h",
+          "ZEN v2/ZEN SM3/x86AVX2/ZEN_512/cpucycles.h"
+        ],
+        [
+          "kem-41/Implementations/Optimized_Implementation/x86AVX2/ZEN_512/drng.c",
+          "ZEN v2/ZEN SM3/x86AVX2/ZEN_512/drng.c"
+        ],
+        [
+          "kem-41/Implementations/Optimized_Implementation/x86AVX2/ZEN_512/drng.h",
+          "ZEN v2/ZEN SM3/x86AVX2/ZEN_512/drng.h"
+        ],
+        [
+          "kem-41/Implementations/Optimized_Implementation/x86AVX2/ZEN_512/ntt.S",
+          "ZEN v2/ZEN SM3/x86AVX2/ZEN_512/ntt.S"
+        ],
+        [
+          "kem-41/Implementations/Optimized_Implementation/x86AVX2/ZEN_512/ntt.h",
+          "ZEN v2/ZEN SM3/x86AVX2/ZEN_512/ntt.h"
+        ],
+        [
+          "kem-41/Implementations/Optimized_Implementation/x86AVX2/ZEN_512/output/KAT_KEM_ZEN_512.txt",
+          "ZEN v2/ZEN SM3/x86AVX2/ZEN_512/output/KAT_KEM_ZEN_512.txt"
+        ],
+        [
+          "kem-41/Implementations/Optimized_Implementation/x86AVX2/ZEN_512/params.h",
+          "ZEN v2/ZEN SM3/x86AVX2/ZEN_512/params.h"
+        ],
+        [
+          "kem-41/Implementations/Optimized_Implementation/x86AVX2/ZEN_512/pke.c",
+          "ZEN v2/ZEN SM3/x86AVX2/ZEN_512/pke.c"
+        ],
+        [
+          "kem-41/Implementations/Optimized_Implementation/x86AVX2/ZEN_512/pke.h",
+          "ZEN v2/ZEN SM3/x86AVX2/ZEN_512/pke.h"
+        ],
+        [
+          "kem-41/Implementations/Optimized_Implementation/x86AVX2/ZEN_512/poly.c",
+          "ZEN v2/ZEN SM3/x86AVX2/ZEN_512/poly.c"
+        ],
+        [
+          "kem-41/Implementations/Optimized_Implementation/x86AVX2/ZEN_512/poly.h",
+          "ZEN v2/ZEN SM3/x86AVX2/ZEN_512/poly.h"
+        ],
+        [
+          "kem-41/Implementations/Optimized_Implementation/x86AVX2/ZEN_512/sample.c",
+          "ZEN v2/ZEN SM3/x86AVX2/ZEN_512/sample.c"
+        ],
+        [
+          "kem-41/Implementations/Optimized_Implementation/x86AVX2/ZEN_512/sample.h",
+          "ZEN v2/ZEN SM3/x86AVX2/ZEN_512/sample.h"
+        ],
+        [
+          "kem-41/Implementations/Optimized_Implementation/x86AVX2/ZEN_512/symmetric.c",
+          "ZEN v2/ZEN SM3/x86AVX2/ZEN_512/symmetric.c"
+        ],
+        [
+          "kem-41/Implementations/Optimized_Implementation/x86AVX2/ZEN_512/symmetric.h",
+          "ZEN v2/ZEN SM3/x86AVX2/ZEN_512/symmetric.h"
         ]
       ]
     },
@@ -23214,865 +23110,1317 @@
         ]
       ]
     },
-    "1846cfe63f0cef83e2e0ca21f5dcadce3c4b16da33713957be6d156e2a9e6e95": {
-      "path": "aux_note_20260919/iccs_pkgs/DARTS.zip",
-      "source_url": "https://www.niccs.org.cn/niccs/Proposal/Public-Key%20Cryptographic%20Algorithms/Round%201%20candidates/DARTS.zip",
+    "6974090d6b1c709391376b0a651291c51ccf3618fa280a1859ed5e55c1515198": {
+      "path": "ngcc_provider/ngcc/candidates/ngcc_provider/ngcc/metadata/sign-08-revision.zip",
+      "source_url": "https://github.com/MathEternal/DARTS-NGCC/commit/98687cf6910c1409d188464c9ceff69cbf409cc4",
       "files": [
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/KAT_SIG.c",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/KAT_SIG.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/KAT_SIG.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/Makefile",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/Makefile"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/Makefile"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/README.txt",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/README.txt"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/README.txt"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/SIG_AlgorithmInstance.c",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/SIG_AlgorithmInstance.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/SIG_AlgorithmInstance.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/SIG_AlgorithmInstance.h",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/SIG_AlgorithmInstance.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/SIG_AlgorithmInstance.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/align.h",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/align.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/align.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/auxfunc.c",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/auxfunc.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/auxfunc.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/auxfunc.h",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/auxfunc.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/auxfunc.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/config.h",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/config.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/config.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/consts.c",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/consts.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/consts.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/consts.h",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/consts.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/consts.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/drng.c",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/drng.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/drng.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/drng.h",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/drng.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/drng.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/encoding.c",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/encoding.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/encoding.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/encoding.h",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/encoding.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/encoding.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/f1600x4.S",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/f1600x4.S"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/f1600x4.S"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/fft.c",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/fft.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/fft.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/fft.h",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/fft.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/fft.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/fixpoint.c",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/fixpoint.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/fixpoint.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/fixpoint.h",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/fixpoint.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/fixpoint.h"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/gauss_q80_constants.h",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/gauss_q80_constants.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/ntt.c",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/ntt.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/ntt.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/ntt.h",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/ntt.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/ntt.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/packing.c",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/packing.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/packing.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/packing.h",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/packing.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/packing.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/params.h",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/params.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/params.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/poly.c",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/poly.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/poly.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/poly.h",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/poly.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/poly.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/polyfix.c",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/polyfix.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/polyfix.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/polyfix.h",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/polyfix.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/polyfix.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/polymat.c",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/polymat.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/polymat.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/polymat.h",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/polymat.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/polymat.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/polyvec.c",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/polyvec.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/polyvec.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/polyvec.h",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/polyvec.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/polyvec.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/precomputations_rANS/prec_encoding.c",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/precomputations_rANS/prec_encoding.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/precomputations_rANS/prec_encoding.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/precomputations_rANS/rANS_128.txt",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/precomputations_rANS/rANS_128.txt"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/precomputations_rANS/rANS_128.txt"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/precomputations_rANS/rANS_256.txt",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/precomputations_rANS/rANS_256.txt"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/precomputations_rANS/rANS_256.txt"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/precomputations_rANS/rANS_512.txt",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/precomputations_rANS/rANS_512.txt"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/precomputations_rANS/rANS_512.txt"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/randombytes.c",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/randombytes.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/randombytes.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/randombytes.h",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/randombytes.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/randombytes.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/rans_byte.h",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/rans_byte.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/rans_byte.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/reduce_avx.h",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/reduce_avx.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/reduce_avx.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/sampler.c",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/sampler.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/sampler.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/sampler.h",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/sampler.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/sampler.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/samplerx4.c",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/samplerx4.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/samplerx4.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/sign.c",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/sign.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/sign.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/sign.h",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/sign.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/sign.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/symmetric.c",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/symmetric.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/symmetric.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/symmetric.h",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/symmetric.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/symmetric.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/test/cpucycles.c",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/test/cpucycles.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/test/cpucycles.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/test/cpucycles.h",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/test/cpucycles.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/test/cpucycles.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/test/speed_print.c",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/test/speed_print.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/test/speed_print.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/test/speed_print.h",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/test/speed_print.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/test/speed_print.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/test/test_DARTS.c",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/test/test_DARTS.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/test/test_DARTS.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/test/test_mul.c",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/test/test_mul.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/test/test_mul.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/test/test_speed.c",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/test/test_speed.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS128/test/test_speed.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/KAT_SIG.c",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/KAT_SIG.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/KAT_SIG.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/Makefile",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/Makefile"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/Makefile"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/README.txt",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/README.txt"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/README.txt"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/SIG_AlgorithmInstance.c",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/SIG_AlgorithmInstance.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/SIG_AlgorithmInstance.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/SIG_AlgorithmInstance.h",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/SIG_AlgorithmInstance.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/SIG_AlgorithmInstance.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/align.h",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/align.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/align.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/auxfunc.c",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/auxfunc.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/auxfunc.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/auxfunc.h",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/auxfunc.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/auxfunc.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/config.h",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/config.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/config.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/consts.c",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/consts.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/consts.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/consts.h",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/consts.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/consts.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/drng.c",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/drng.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/drng.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/drng.h",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/drng.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/drng.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/encoding.c",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/encoding.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/encoding.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/encoding.h",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/encoding.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/encoding.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/f1600x4.S",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/f1600x4.S"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/f1600x4.S"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/fft.c",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/fft.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/fft.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/fft.h",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/fft.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/fft.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/fixpoint.c",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/fixpoint.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/fixpoint.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/fixpoint.h",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/fixpoint.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/fixpoint.h"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/gauss_q80_constants.h",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/gauss_q80_constants.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/ntt.c",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/ntt.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/ntt.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/ntt.h",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/ntt.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/ntt.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/packing.c",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/packing.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/packing.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/packing.h",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/packing.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/packing.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/params.h",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/params.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/params.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/poly.c",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/poly.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/poly.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/poly.h",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/poly.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/poly.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/polyfix.c",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/polyfix.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/polyfix.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/polyfix.h",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/polyfix.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/polyfix.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/polymat.c",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/polymat.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/polymat.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/polymat.h",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/polymat.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/polymat.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/polyvec.c",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/polyvec.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/polyvec.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/polyvec.h",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/polyvec.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/polyvec.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/precomputations_rANS/prec_encoding.c",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/precomputations_rANS/prec_encoding.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/precomputations_rANS/prec_encoding.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/precomputations_rANS/rANS_128.txt",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/precomputations_rANS/rANS_128.txt"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/precomputations_rANS/rANS_128.txt"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/precomputations_rANS/rANS_256.txt",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/precomputations_rANS/rANS_256.txt"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/precomputations_rANS/rANS_256.txt"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/precomputations_rANS/rANS_512.txt",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/precomputations_rANS/rANS_512.txt"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/precomputations_rANS/rANS_512.txt"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/randombytes.c",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/randombytes.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/randombytes.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/randombytes.h",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/randombytes.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/randombytes.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/rans_byte.h",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/rans_byte.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/rans_byte.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/reduce_avx.h",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/reduce_avx.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/reduce_avx.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/sampler.c",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/sampler.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/sampler.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/sampler.h",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/sampler.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/sampler.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/samplerx4.c",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/samplerx4.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/samplerx4.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/sign.c",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/sign.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/sign.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/sign.h",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/sign.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/sign.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/symmetric.c",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/symmetric.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/symmetric.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/symmetric.h",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/symmetric.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/symmetric.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/test/cpucycles.c",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/test/cpucycles.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/test/cpucycles.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/test/cpucycles.h",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/test/cpucycles.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/test/cpucycles.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/test/speed_print.c",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/test/speed_print.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/test/speed_print.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/test/speed_print.h",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/test/speed_print.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/test/speed_print.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/test/test_DARTS.c",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/test/test_DARTS.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/test/test_DARTS.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/test/test_mul.c",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/test/test_mul.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/test/test_mul.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/test/test_speed.c",
-          "Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/test/test_speed.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS256/test/test_speed.c"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/KAT_SIG.c",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/KAT_SIG.c"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/Makefile",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/Makefile"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/README.txt",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/README.txt"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/SIG_AlgorithmInstance.c",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/SIG_AlgorithmInstance.c"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/SIG_AlgorithmInstance.h",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/SIG_AlgorithmInstance.h"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/align.h",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/align.h"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/auxfunc.c",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/auxfunc.c"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/auxfunc.h",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/auxfunc.h"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/config.h",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/config.h"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/consts.c",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/consts.c"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/consts.h",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/consts.h"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/drng.c",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/drng.c"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/drng.h",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/drng.h"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/encoding.c",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/encoding.c"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/encoding.h",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/encoding.h"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/f1600x4.S",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/f1600x4.S"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/fft.c",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/fft.c"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/fft.h",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/fft.h"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/fixpoint.c",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/fixpoint.c"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/fixpoint.h",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/fixpoint.h"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/gauss_q80_constants.h",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/gauss_q80_constants.h"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/ntt.c",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/ntt.c"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/ntt.h",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/ntt.h"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/packing.c",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/packing.c"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/packing.h",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/packing.h"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/params.h",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/params.h"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/poly.c",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/poly.c"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/poly.h",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/poly.h"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/polyfix.c",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/polyfix.c"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/polyfix.h",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/polyfix.h"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/polymat.c",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/polymat.c"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/polymat.h",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/polymat.h"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/polyvec.c",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/polyvec.c"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/polyvec.h",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/polyvec.h"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/precomputations_rANS/prec_encoding.c",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/precomputations_rANS/prec_encoding.c"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/precomputations_rANS/rANS_128.txt",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/precomputations_rANS/rANS_128.txt"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/precomputations_rANS/rANS_256.txt",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/precomputations_rANS/rANS_256.txt"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/precomputations_rANS/rANS_512.txt",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/precomputations_rANS/rANS_512.txt"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/randombytes.c",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/randombytes.c"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/randombytes.h",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/randombytes.h"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/rans_byte.h",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/rans_byte.h"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/reduce_avx.h",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/reduce_avx.h"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/sampler.c",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/sampler.c"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/sampler.h",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/sampler.h"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/samplerx4.c",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/samplerx4.c"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/sign.c",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/sign.c"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/sign.h",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/sign.h"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/symmetric.c",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/symmetric.c"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/symmetric.h",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/symmetric.h"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/test/cpucycles.c",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/test/cpucycles.c"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/test/cpucycles.h",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/test/cpucycles.h"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/test/speed_print.c",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/test/speed_print.c"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/test/speed_print.h",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/test/speed_print.h"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/test/test_DARTS.c",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/test/test_DARTS.c"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/test/test_mul.c",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/test/test_mul.c"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/test/test_speed.c",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_AVX2/DARTS512/test/test_speed.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/KAT_SIG.c",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS128/KAT_SIG.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/KAT_SIG.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/Makefile",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS128/Makefile"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/Makefile"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/README.txt",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS128/README.txt"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/README.txt"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/SIG_AlgorithmInstance.c",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS128/SIG_AlgorithmInstance.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/SIG_AlgorithmInstance.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/SIG_AlgorithmInstance.h",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS128/SIG_AlgorithmInstance.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/SIG_AlgorithmInstance.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/align_neon.h",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS128/align_neon.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/align_neon.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/auxfunc.c",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS128/auxfunc.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/auxfunc.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/auxfunc.h",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS128/auxfunc.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/auxfunc.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/config.h",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS128/config.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/config.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/consts.c",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS128/consts.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/consts.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/consts.h",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS128/consts.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/consts.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/drng.c",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS128/drng.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/drng.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/drng.h",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS128/drng.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/drng.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/encoding.c",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS128/encoding.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/encoding.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/encoding.h",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS128/encoding.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/encoding.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/fft.c",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS128/fft.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/fft.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/fft.h",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS128/fft.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/fft.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/fixpoint.c",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS128/fixpoint.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/fixpoint.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/fixpoint.h",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS128/fixpoint.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/fixpoint.h"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/gauss_q80_constants.h",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/gauss_q80_constants.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/ntt.c",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS128/ntt.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/ntt.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/ntt.h",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS128/ntt.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/ntt.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/packing.c",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS128/packing.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/packing.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/packing.h",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS128/packing.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/packing.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/params.h",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS128/params.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/params.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/poly.c",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS128/poly.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/poly.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/poly.h",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS128/poly.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/poly.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/polyfix.c",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS128/polyfix.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/polyfix.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/polyfix.h",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS128/polyfix.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/polyfix.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/polymat.c",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS128/polymat.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/polymat.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/polymat.h",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS128/polymat.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/polymat.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/polyvec.c",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS128/polyvec.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/polyvec.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/polyvec.h",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS128/polyvec.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/polyvec.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/precomputations_rANS/prec_encoding.c",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS128/precomputations_rANS/prec_encoding.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/precomputations_rANS/prec_encoding.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/precomputations_rANS/rANS_128.txt",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS128/precomputations_rANS/rANS_128.txt"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/precomputations_rANS/rANS_128.txt"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/precomputations_rANS/rANS_256.txt",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS128/precomputations_rANS/rANS_256.txt"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/precomputations_rANS/rANS_256.txt"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/precomputations_rANS/rANS_512.txt",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS128/precomputations_rANS/rANS_512.txt"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/precomputations_rANS/rANS_512.txt"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/rans_byte.h",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS128/rans_byte.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/rans_byte.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/reduce_neon.h",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS128/reduce_neon.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/reduce_neon.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/sampler.c",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS128/sampler.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/sampler.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/sampler.h",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS128/sampler.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/sampler.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/sign.c",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS128/sign.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/sign.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/sign.h",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS128/sign.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/sign.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/symmetric.c",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS128/symmetric.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/symmetric.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/symmetric.h",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS128/symmetric.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/symmetric.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/test/cpucycles.c",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS128/test/cpucycles.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/test/cpucycles.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/test/cpucycles.h",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS128/test/cpucycles.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/test/cpucycles.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/test/speed_print.c",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS128/test/speed_print.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/test/speed_print.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/test/speed_print.h",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS128/test/speed_print.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/test/speed_print.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/test/test_DARTS.c",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS128/test/test_DARTS.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/test/test_DARTS.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/test/test_mul.c",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS128/test/test_mul.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/test/test_mul.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/test/test_neon_reduce.c",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS128/test/test_neon_reduce.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/test/test_neon_reduce.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/test/test_speed.c",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS128/test/test_speed.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS128/test/test_speed.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/KAT_SIG.c",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS256/KAT_SIG.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/KAT_SIG.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/Makefile",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS256/Makefile"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/Makefile"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/README.txt",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS256/README.txt"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/README.txt"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/SIG_AlgorithmInstance.c",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS256/SIG_AlgorithmInstance.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/SIG_AlgorithmInstance.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/SIG_AlgorithmInstance.h",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS256/SIG_AlgorithmInstance.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/SIG_AlgorithmInstance.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/align_neon.h",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS256/align_neon.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/align_neon.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/auxfunc.c",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS256/auxfunc.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/auxfunc.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/auxfunc.h",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS256/auxfunc.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/auxfunc.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/config.h",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS256/config.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/config.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/consts.c",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS256/consts.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/consts.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/consts.h",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS256/consts.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/consts.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/drng.c",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS256/drng.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/drng.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/drng.h",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS256/drng.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/drng.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/encoding.c",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS256/encoding.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/encoding.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/encoding.h",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS256/encoding.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/encoding.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/fft.c",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS256/fft.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/fft.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/fft.h",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS256/fft.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/fft.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/fixpoint.c",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS256/fixpoint.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/fixpoint.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/fixpoint.h",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS256/fixpoint.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/fixpoint.h"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/gauss_q80_constants.h",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/gauss_q80_constants.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/ntt.c",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS256/ntt.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/ntt.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/ntt.h",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS256/ntt.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/ntt.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/packing.c",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS256/packing.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/packing.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/packing.h",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS256/packing.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/packing.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/params.h",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS256/params.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/params.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/poly.c",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS256/poly.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/poly.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/poly.h",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS256/poly.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/poly.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/polyfix.c",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS256/polyfix.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/polyfix.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/polyfix.h",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS256/polyfix.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/polyfix.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/polymat.c",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS256/polymat.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/polymat.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/polymat.h",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS256/polymat.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/polymat.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/polyvec.c",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS256/polyvec.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/polyvec.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/polyvec.h",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS256/polyvec.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/polyvec.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/precomputations_rANS/prec_encoding.c",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS256/precomputations_rANS/prec_encoding.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/precomputations_rANS/prec_encoding.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/precomputations_rANS/rANS_128.txt",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS256/precomputations_rANS/rANS_128.txt"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/precomputations_rANS/rANS_128.txt"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/precomputations_rANS/rANS_256.txt",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS256/precomputations_rANS/rANS_256.txt"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/precomputations_rANS/rANS_256.txt"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/precomputations_rANS/rANS_512.txt",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS256/precomputations_rANS/rANS_512.txt"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/precomputations_rANS/rANS_512.txt"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/rans_byte.h",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS256/rans_byte.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/rans_byte.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/reduce_neon.h",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS256/reduce_neon.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/reduce_neon.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/sampler.c",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS256/sampler.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/sampler.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/sampler.h",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS256/sampler.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/sampler.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/sign.c",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS256/sign.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/sign.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/sign.h",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS256/sign.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/sign.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/symmetric.c",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS256/symmetric.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/symmetric.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/symmetric.h",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS256/symmetric.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/symmetric.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/test/cpucycles.c",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS256/test/cpucycles.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/test/cpucycles.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/test/cpucycles.h",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS256/test/cpucycles.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/test/cpucycles.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/test/speed_print.c",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS256/test/speed_print.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/test/speed_print.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/test/speed_print.h",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS256/test/speed_print.h"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/test/speed_print.h"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/test/test_DARTS.c",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS256/test/test_DARTS.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/test/test_DARTS.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/test/test_mul.c",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS256/test/test_mul.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/test/test_mul.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/test/test_neon_reduce.c",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS256/test/test_neon_reduce.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/test/test_neon_reduce.c"
         ],
         [
           "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/test/test_speed.c",
-          "Implementations/Optimized_Implementation/DARTS_neon/DARTS256/test/test_speed.c"
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS256/test/test_speed.c"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/KAT_SIG.c",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/KAT_SIG.c"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/Makefile",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/Makefile"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/README.txt",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/README.txt"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/SIG_AlgorithmInstance.c",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/SIG_AlgorithmInstance.c"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/SIG_AlgorithmInstance.h",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/SIG_AlgorithmInstance.h"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/align_neon.h",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/align_neon.h"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/auxfunc.c",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/auxfunc.c"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/auxfunc.h",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/auxfunc.h"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/config.h",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/config.h"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/consts.c",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/consts.c"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/consts.h",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/consts.h"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/drng.c",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/drng.c"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/drng.h",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/drng.h"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/encoding.c",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/encoding.c"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/encoding.h",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/encoding.h"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/fft.c",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/fft.c"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/fft.h",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/fft.h"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/fixpoint.c",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/fixpoint.c"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/fixpoint.h",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/fixpoint.h"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/gauss_q80_constants.h",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/gauss_q80_constants.h"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/ntt.c",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/ntt.c"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/ntt.h",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/ntt.h"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/packing.c",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/packing.c"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/packing.h",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/packing.h"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/params.h",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/params.h"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/poly.c",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/poly.c"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/poly.h",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/poly.h"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/polyfix.c",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/polyfix.c"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/polyfix.h",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/polyfix.h"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/polymat.c",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/polymat.c"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/polymat.h",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/polymat.h"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/polyvec.c",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/polyvec.c"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/polyvec.h",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/polyvec.h"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/precomputations_rANS/prec_encoding.c",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/precomputations_rANS/prec_encoding.c"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/precomputations_rANS/rANS_128.txt",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/precomputations_rANS/rANS_128.txt"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/precomputations_rANS/rANS_256.txt",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/precomputations_rANS/rANS_256.txt"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/precomputations_rANS/rANS_512.txt",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/precomputations_rANS/rANS_512.txt"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/rans_byte.h",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/rans_byte.h"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/reduce_neon.h",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/reduce_neon.h"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/sampler.c",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/sampler.c"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/sampler.h",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/sampler.h"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/sign.c",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/sign.c"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/sign.h",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/sign.h"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/symmetric.c",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/symmetric.c"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/symmetric.h",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/symmetric.h"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/test/cpucycles.c",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/test/cpucycles.c"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/test/cpucycles.h",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/test/cpucycles.h"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/test/speed_print.c",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/test/speed_print.c"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/test/speed_print.h",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/test/speed_print.h"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/test/test_DARTS.c",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/test/test_DARTS.c"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/test/test_mul.c",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/test/test_mul.c"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/test/test_neon_reduce.c",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/test/test_neon_reduce.c"
+        ],
+        [
+          "sign-08/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/test/test_speed.c",
+          "DARTS-NGCC-98687cf6910c1409d188464c9ceff69cbf409cc4/Implementations/Optimized_Implementation/DARTS_neon/DARTS512/test/test_speed.c"
         ]
       ]
     },

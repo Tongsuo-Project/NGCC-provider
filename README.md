@@ -87,6 +87,10 @@ message. See [implementation notes](make/IMPLEMENTATIONS.md) for known exclusion
 and the distinction between compilation and runtime validation. Python is required
 only for the optional test/report tools.
 
+ZEN and DARTS use the author's v2.0 revisions. DARTS's AVX2 and NEON backends
+pass the updated reference/optimized interoperability checks. ZEN v2.0 supplies
+only x86 AVX2 optimization; ARM targets use its new reference implementation.
+
 ### GMP
 
 The following schemes depend on GMP and are disabled by default. To include them in the build, you must specify a GMP path:

@@ -2,16 +2,26 @@
 
 `implementations.json` selects only implementations shipped in the pinned NGCC
 submission archives. The provider does not implement new cryptographic kernels.
-The registered EVP names, parameter sets, OIDs and encodings remain unchanged.
+The registered EVP names, parameter sets and OIDs remain unchanged. ZEN and DARTS
+use the author's v2.0 revisions; validation of the earlier revisions does not
+establish compatibility or correctness of these new versions.
 
 ## Sources and reproducibility
 
 The existing `ngcc/metadata/sources.sha256` protects the reference sources.
-`optimized-sources.sha256` adds 11,761 unchanged files from 66 pinned archives.
+`optimized-sources.sha256` covers 11,848 unchanged files from 66 pinned archives.
 `optimized-origins.json` maps every imported path to its ZIP member, archive
 SHA-256, archive location and source URL. Some proposals share common sources;
 these are imported together with their optimized directories. Imported files also
 include implementations that cannot currently be selected, for the reasons below.
+
+ZEN and DARTS exactly match the candidate repository's `main` revision
+`c09784c0f4655bf5a57e124b74e5325581fd0599`: ZEN's 2026-10-30 v2.0 archive and
+DARTS author commit `98687cf6910c1409d188464c9ceff69cbf409cc4`. Their 630 tracked
+implementation files were compared byte-for-byte with those author archives.
+The archives are bundled in the candidate repository, and their locations are
+recorded in `optimized-origins.json`. No files from the superseded ZEN ARM/SVE
+backend are mixed into the new revision.
 
 Initialize the `ngcc/candidates` submodule, then select optimized implementations
 through the ordinary configuration entry point:
@@ -45,9 +55,9 @@ explicitly. A reference-only build does not require the extra imports.
 selects the matching author backend for each enabled parameter set. The four
 targets have these catalog capacities, including GMP-dependent parameters:
 
-- `linux-x86_64`: 189 parameter sets from 60 proposals.
-- `linux-aarch64`: 58 parameter sets from 22 proposals.
-- `darwin64-x86_64-cc`: 127 parameter sets from 41 proposals.
+- `linux-x86_64`: 191 parameter sets from 61 proposals.
+- `linux-aarch64`: 56 parameter sets from 21 proposals.
+- `darwin64-x86_64-cc`: 129 parameter sets from 42 proposals.
 - `darwin64-arm64-cc`: 51 parameter sets from 19 proposals.
 
 These counts include optimized C, intrinsics and assembly; they are not assembly
@@ -92,9 +102,13 @@ algorithm. The catalog retains a reference implementation when necessary:
 
 - BIKE-MLThre and QUBE: the optimized key/shared-secret sizes differ from the
   registered reference ABI.
-- PolarLAC, DARTS and Phoenix on x86: cross-implementation tests reject reference
-  ciphertexts or signatures. DARTS's AArch64 backend passes the corresponding
-  tests and is enabled there.
+- PolarLAC and Phoenix on x86: cross-implementation tests reject reference
+  ciphertexts or signatures. DARTS v2.0 passes the reference/optimized tests on
+  both macOS AArch64 and x86-64 (Rosetta), so both author backends are enabled.
+- ZEN v2.0 supplies only x86 AVX2 optimization. AArch64 falls back to the new
+  reference implementation; the former ARM/SVE backend belonged to the old
+  submission and is removed. The supplied x86 assembly uses ELF, so macOS also
+  uses the reference implementation.
 - Rudraksh2-256: the supplied assembly passes five arguments to a four-argument
   macro; Clang rejects that unmodified source.
 - UVW: the supplied signature wrapper accepts an altered message. Both the
@@ -109,17 +123,18 @@ authors' cryptographic code. No result here establishes cryptographic security.
 
 ## AArch64 assembly in the pinned submissions
 
-Four of the 75 archived submissions contain independent AArch64 assembly source:
-DKEM, ZEN, Lynxer and ReSolveD-alpha. The latter two bundle a Keccak/NEON component;
+Three of the 75 currently pinned submissions contain independent AArch64 assembly
+source: DKEM, Lynxer and ReSolveD-alpha. The latter two bundle a Keccak/NEON component;
 that is not an entire AArch64 signature backend. Counting the inline assembly in
-SQIsignTriangle's ARM AES random-generator component gives five submissions.
+SQIsignTriangle's ARM AES random-generator component gives four submissions.
 Cortex-M assembly and C intrinsics are excluded from this count.
+The earlier count of four independent-assembly proposals included the superseded
+ZEN submission; the ZEN v2.0 archive has no AArch64 implementation.
 
 DKEM supplies Apple symbol handling. Its `DKE_USE_AARCH64_NATIVE` path is enabled
 on both ARM targets, with the actual NTT/multiplication assembly in the object
 list. Both DKEM-128 and DKEM-256 passed all eight reference/optimized combinations
-and EVP tests on the local Apple Silicon machine. ZEN's ELF/SVE assembly was
-cross-compiled for Linux; it cannot execute natively on this Mac. The bundled
+and EVP tests on the local Apple Silicon machine. The bundled
 Lynxer/ReSolveD-alpha Keccak assembly cannot be directly linked as supplied on
 Mach-O and is not selected for the existing SM3 signature registrations.
 
@@ -142,7 +157,27 @@ message rejection check. Reports include object hashes and per-instance logs in
 
 Runtime tests on macOS ARM and macOS x86 (Rosetta) are distinct from the Linux
 cross-compilation checks. Linux object construction and symbol isolation do not
-establish Linux runtime interoperability. AVX-512 and SVE paths require testing
+establish Linux runtime interoperability. AVX-512 paths require testing
 on suitable hardware. See `implementation-validation.json` for the validation
 snapshot and its limits. Existing reference-only TLS benchmark results must not
 be presented as optimized-backend measurements.
+
+The v2.0 revision validation passed 128 configuration checks and imported all 399
+ZEN/DARTS optimized files from their two real archives with only Perl on PATH.
+DARTS-128/256 passed all eight reference/optimized combinations on both macOS
+ARM64 and x86-64 (Rosetta). The final 210-instance ARM64 module passed 53 EVP
+cases (all 51 selected optimizations plus both ZEN references), six focused
+ZEN/DARTS TLS/certificate cases, concurrency/lifecycle tests and the export audit.
+
+Linux checks freshly compiled both reference and selected implementations for
+the four revised parameters on both architectures. Aggregate links cover all
+191 x86-64 and 56 AArch64 selected optimizations; unchanged objects are reused
+only after their hashes and recipes match the earlier validation snapshot.
+These are compilation and link checks, not Linux execution. The earlier snapshot
+is retained in `implementation-validation-before-v2.json` with its original
+source and module hashes.
+
+The candidate repository's broad legacy `provenance/sources.sha256` also lists
+two missing, untracked Octarine-512 test executables inherited from `main`.
+They are outside the provider manifests and remain unchanged; all 9,702 provider
+reference files and 11,848 optimized-manifest files pass checksum verification.
