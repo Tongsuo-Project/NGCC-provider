@@ -7,7 +7,7 @@ SRCS := sign.c packing.c polyvec.c poly.c ntt.c reduce.c sampler.c encoding.c po
     fft.c fixpoint.c symmetric.c drng.c auxfunc.c SIG_AlgorithmInstance.c
 INC := 
 DEFS := 
-INSTANCE_CFLAGS := 
+INSTANCE_CFLAGS := -O3 -march=native -mtune=native -std=gnu99
 SHIMDEFS := -DNGCC_NO_DRNG
 NOAUX := 
 $(eval $(call ngcc_instance,sign-08,DARTS128,sig,128,sig-08-darts128,ngcc_ref_sig_08_DARTS128))
@@ -19,7 +19,7 @@ SRCS := sign.c packing.c polyvec.c poly.c ntt.c reduce.c sampler.c encoding.c po
     fft.c fixpoint.c symmetric.c drng.c auxfunc.c SIG_AlgorithmInstance.c
 INC := 
 DEFS := 
-INSTANCE_CFLAGS := 
+INSTANCE_CFLAGS := -O3 -march=native -mtune=native -std=gnu99
 SHIMDEFS := -DNGCC_NO_DRNG
 NOAUX := 
 $(eval $(call ngcc_instance,sign-08,DARTS256,sig,256,sig-08-darts256,ngcc_ref_sig_08_DARTS256))

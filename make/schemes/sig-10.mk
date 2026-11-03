@@ -6,7 +6,7 @@ SRCDIR := Implementations and Test_Vectors/Implementations/Reference_Implementat
 SRCS := SIG_AlgorithmInstance.c auxfunc.c drng.c
 INC := 
 DEFS := 
-INSTANCE_CFLAGS := 
+INSTANCE_CFLAGS := -std=c99 -O2
 SHIMDEFS := 
 NOAUX := 
 $(eval $(call ngcc_instance,sign-10,Facto-DSA-128,sig,128,sig-10-facto-dsa-128,ngcc_ref_sig_10_Facto_DSA_128))
@@ -17,7 +17,7 @@ SRCDIR := Implementations and Test_Vectors/Implementations/Reference_Implementat
 SRCS := SIG_AlgorithmInstance.c auxfunc.c drng.c
 INC := 
 DEFS := 
-INSTANCE_CFLAGS := 
+INSTANCE_CFLAGS := -std=c99 -O2
 SHIMDEFS := 
 NOAUX := 
 $(eval $(call ngcc_instance,sign-10,Facto-DSA-256,sig,256,sig-10-facto-dsa-256,ngcc_ref_sig_10_Facto_DSA_256))

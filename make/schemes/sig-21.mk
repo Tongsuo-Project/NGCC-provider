@@ -7,7 +7,7 @@ SRCS := bavc.c drng.c enc.c prg.c fields.c instances.c quicksilver.c rsd.c rando
     universal_hashing.c utils.c voleith_impl.c vole.c auxfunc.c SIG_AlgorithmInstance.c
 INC := 
 DEFS := -DXOF_PSEUDO
-INSTANCE_CFLAGS := -std=c99
+INSTANCE_CFLAGS := -O3 -march=native -std=c99 -Wall -Wextra -Wpedantic
 SHIMDEFS := 
 NOAUX := 
 $(eval $(call ngcc_instance,sign-21,ReSolveD-alpha-160f,sig,160,sig-21-resolved-alpha-160f,ngcc_ref_sig_21_ReSolveD_alpha_160f))
@@ -19,7 +19,7 @@ SRCS := bavc.c drng.c enc.c prg.c fields.c instances.c quicksilver.c rsd.c rando
     universal_hashing.c utils.c voleith_impl.c vole.c auxfunc.c SIG_AlgorithmInstance.c
 INC := 
 DEFS := -DXOF_PSEUDO
-INSTANCE_CFLAGS := -std=c99
+INSTANCE_CFLAGS := -O3 -march=native -std=c99 -Wall -Wextra -Wpedantic
 SHIMDEFS := 
 NOAUX := 
 $(eval $(call ngcc_instance,sign-21,ReSolveD-alpha-160s,sig,160,sig-21-resolved-alpha-160s,ngcc_ref_sig_21_ReSolveD_alpha_160s))
@@ -31,7 +31,7 @@ SRCS := bavc.c drng.c enc.c prg.c fields.c instances.c quicksilver.c rsd.c rando
     universal_hashing.c utils.c voleith_impl.c vole.c auxfunc.c SIG_AlgorithmInstance.c
 INC := 
 DEFS := -DXOF_PSEUDO
-INSTANCE_CFLAGS := -std=c99
+INSTANCE_CFLAGS := -O3 -march=native -std=c99 -Wall -Wextra -Wpedantic
 SHIMDEFS := 
 NOAUX := 
 $(eval $(call ngcc_instance,sign-21,ReSolveD-alpha-256f,sig,256,sig-21-resolved-alpha-256f,ngcc_ref_sig_21_ReSolveD_alpha_256f))
@@ -43,7 +43,7 @@ SRCS := bavc.c drng.c enc.c prg.c fields.c instances.c quicksilver.c rsd.c rando
     universal_hashing.c utils.c voleith_impl.c vole.c auxfunc.c SIG_AlgorithmInstance.c
 INC := 
 DEFS := -DXOF_PSEUDO
-INSTANCE_CFLAGS := -std=c99
+INSTANCE_CFLAGS := -O3 -march=native -std=c99 -Wall -Wextra -Wpedantic
 SHIMDEFS := 
 NOAUX := 
 $(eval $(call ngcc_instance,sign-21,ReSolveD-alpha-256s,sig,256,sig-21-resolved-alpha-256s,ngcc_ref_sig_21_ReSolveD_alpha_256s))

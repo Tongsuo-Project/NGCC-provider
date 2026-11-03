@@ -16,7 +16,7 @@ INC := -Isrc/Scloudplus-128-AES-packed10/../../../_shared/api_pkc               
     -Isrc/Scloudplus-128-AES-packed10/../../../_shared/scloudplus_core/include                    \
     -Isrc/Scloudplus-128-AES-packed10/../../../_shared/scloudplus_core/common
 DEFS := -DSCLOUDPLUS_FAMILY_AES -DSCLOUDPLUS_TIER_REFERENCE -DSCLOUDPLUS_REF_FAMILY_AES
-INSTANCE_CFLAGS := 
+INSTANCE_CFLAGS := -std=c99 -O2
 SHIMDEFS := 
 NOAUX := 1
 $(eval $(call ngcc_instance,kem-35,Scloudplus-128-AES-packed10,kem,128,kem-35-scloudplus-128-aes-packed10,ngcc_ref_kem_35_Scloudplus_128_AES_packed10))
@@ -37,7 +37,7 @@ INC := -Isrc/Scloudplus-128-SM3-packed10/../../../_shared/api_pkc               
     -Isrc/Scloudplus-128-SM3-packed10/../../../_shared/scloudplus_core/include                    \
     -Isrc/Scloudplus-128-SM3-packed10/../../../_shared/scloudplus_core/common
 DEFS := -DSCLOUDPLUS_FAMILY_SM3 -DSCLOUDPLUS_TIER_REFERENCE -DSCLOUDPLUS_REF_FAMILY_SM3
-INSTANCE_CFLAGS := 
+INSTANCE_CFLAGS := -std=c99 -O2
 SHIMDEFS := 
 NOAUX := 1
 $(eval $(call ngcc_instance,kem-35,Scloudplus-128-SM3-packed10,kem,128,kem-35-scloudplus-128-sm3-packed10,ngcc_ref_kem_35_Scloudplus_128_SM3_packed10))
@@ -58,7 +58,7 @@ INC := -Isrc/Scloudplus-192-AES-packed10/../../../_shared/api_pkc               
     -Isrc/Scloudplus-192-AES-packed10/../../../_shared/scloudplus_core/include                    \
     -Isrc/Scloudplus-192-AES-packed10/../../../_shared/scloudplus_core/common
 DEFS := -DSCLOUDPLUS_FAMILY_AES -DSCLOUDPLUS_TIER_REFERENCE -DSCLOUDPLUS_REF_FAMILY_AES
-INSTANCE_CFLAGS := 
+INSTANCE_CFLAGS := -std=c99 -O2
 SHIMDEFS := 
 NOAUX := 1
 $(eval $(call ngcc_instance,kem-35,Scloudplus-192-AES-packed10,kem,192,kem-35-scloudplus-192-aes-packed10,ngcc_ref_kem_35_Scloudplus_192_AES_packed10))
@@ -79,7 +79,7 @@ INC := -Isrc/Scloudplus-192-SM3-packed10/../../../_shared/api_pkc               
     -Isrc/Scloudplus-192-SM3-packed10/../../../_shared/scloudplus_core/include                    \
     -Isrc/Scloudplus-192-SM3-packed10/../../../_shared/scloudplus_core/common
 DEFS := -DSCLOUDPLUS_FAMILY_SM3 -DSCLOUDPLUS_TIER_REFERENCE -DSCLOUDPLUS_REF_FAMILY_SM3
-INSTANCE_CFLAGS := 
+INSTANCE_CFLAGS := -std=c99 -O2
 SHIMDEFS := 
 NOAUX := 1
 $(eval $(call ngcc_instance,kem-35,Scloudplus-192-SM3-packed10,kem,192,kem-35-scloudplus-192-sm3-packed10,ngcc_ref_kem_35_Scloudplus_192_SM3_packed10))
@@ -100,7 +100,7 @@ INC := -Isrc/Scloudplus-256-AES-packed10/../../../_shared/api_pkc               
     -Isrc/Scloudplus-256-AES-packed10/../../../_shared/scloudplus_core/include                    \
     -Isrc/Scloudplus-256-AES-packed10/../../../_shared/scloudplus_core/common
 DEFS := -DSCLOUDPLUS_FAMILY_AES -DSCLOUDPLUS_TIER_REFERENCE -DSCLOUDPLUS_REF_FAMILY_AES
-INSTANCE_CFLAGS := 
+INSTANCE_CFLAGS := -std=c99 -O2
 SHIMDEFS := 
 NOAUX := 1
 $(eval $(call ngcc_instance,kem-35,Scloudplus-256-AES-packed10,kem,256,kem-35-scloudplus-256-aes-packed10,ngcc_ref_kem_35_Scloudplus_256_AES_packed10))
@@ -121,7 +121,7 @@ INC := -Isrc/Scloudplus-256-SM3-packed10/../../../_shared/api_pkc               
     -Isrc/Scloudplus-256-SM3-packed10/../../../_shared/scloudplus_core/include                    \
     -Isrc/Scloudplus-256-SM3-packed10/../../../_shared/scloudplus_core/common
 DEFS := -DSCLOUDPLUS_FAMILY_SM3 -DSCLOUDPLUS_TIER_REFERENCE -DSCLOUDPLUS_REF_FAMILY_SM3
-INSTANCE_CFLAGS := 
+INSTANCE_CFLAGS := -std=c99 -O2
 SHIMDEFS := 
 NOAUX := 1
 $(eval $(call ngcc_instance,kem-35,Scloudplus-256-SM3-packed10,kem,256,kem-35-scloudplus-256-sm3-packed10,ngcc_ref_kem_35_Scloudplus_256_SM3_packed10))

@@ -13,7 +13,7 @@ INC := -Isrc/CMultiURAG-128/src -Isrc/CMultiURAG-128/src/rbc-79                 
     -Isrc/CMultiURAG-128/lib/random_source -Isrc/CMultiURAG-128/lib/XKCP                          \
     -Isrc/CMultiURAG-128/lib/XKCP/opt64 -Isrc/CMultiURAG-128/lib/wrapper
 DEFS := 
-INSTANCE_CFLAGS := -std=c99
+INSTANCE_CFLAGS := -std=c99 -O2
 SHIMDEFS := -DNGCC_INSTANCE_HEADER='"KEM_CMultiURAG-128.h"'
 NOAUX := 
 $(eval $(call ngcc_instance,kem-10,CMultiURAG-128,kem,128,kem-10-cmultiurag-128,ngcc_ref_kem_10_CMultiURAG_128))
@@ -31,7 +31,7 @@ INC := -Isrc/CMultiURAG-256/src -Isrc/CMultiURAG-256/src/rbc-127                
     -Isrc/CMultiURAG-256/lib/random_source -Isrc/CMultiURAG-256/lib/XKCP                          \
     -Isrc/CMultiURAG-256/lib/XKCP/opt64 -Isrc/CMultiURAG-256/lib/wrapper
 DEFS := 
-INSTANCE_CFLAGS := -std=c99
+INSTANCE_CFLAGS := -std=c99 -O2
 SHIMDEFS := -DNGCC_INSTANCE_HEADER='"KEM_CMultiURAG-256.h"'
 NOAUX := 
 $(eval $(call ngcc_instance,kem-10,CMultiURAG-256,kem,256,kem-10-cmultiurag-256,ngcc_ref_kem_10_CMultiURAG_256))

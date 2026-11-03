@@ -9,7 +9,7 @@ SRCS := src/KEM_AlgorithmInstance.c src/augabidulin.c src/ct_util.c src/gabiduli
     lib/rbc-47/rbc_elt.c lib/rbc-47/rbc_vec.c
 INC := -Isrc/BAG-Loong-128/src -Isrc/BAG-Loong-128/lib/api_pkc -Isrc/BAG-Loong-128/lib/rbc-47
 DEFS := 
-INSTANCE_CFLAGS := -std=c99
+INSTANCE_CFLAGS := -std=c99 -O2
 SHIMDEFS := -DNGCC_INSTANCE_HEADER='"src/KEM_AlgorithmInstance.h"'
 NOAUX := 
 $(eval $(call ngcc_instance,kem-03,BAG-Loong-128,kem,128,kem-03-bag-loong-128,ngcc_ref_kem_03_BAG_Loong_128))
@@ -23,7 +23,7 @@ SRCS := src/KEM_AlgorithmInstance.c src/augabidulin.c src/ct_util.c src/gabiduli
     lib/rbc-67/rbc_elt.c lib/rbc-67/rbc_vec.c
 INC := -Isrc/BAG-Loong-256/src -Isrc/BAG-Loong-256/lib/api_pkc -Isrc/BAG-Loong-256/lib/rbc-67
 DEFS := 
-INSTANCE_CFLAGS := -std=c99
+INSTANCE_CFLAGS := -std=c99 -O2
 SHIMDEFS := -DNGCC_INSTANCE_HEADER='"src/KEM_AlgorithmInstance.h"'
 NOAUX := 
 $(eval $(call ngcc_instance,kem-03,BAG-Loong-256,kem,256,kem-03-bag-loong-256,ngcc_ref_kem_03_BAG_Loong_256))

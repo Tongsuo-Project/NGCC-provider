@@ -10,7 +10,7 @@ SRCS := common.c prng.c fpr.c fft.c auxfunc.c drng.c ntt.c codec.c poly_inv_ntt.
     keygen/ntrugen/src/complex.c keygen/ntrugen/src/fft.c keygen/ntrugen/src/twiddles10.c
 INC := -Isrc/yuanyang-1024/keygen/ntrugen/src
 DEFS := -DNGCC_KATS
-INSTANCE_CFLAGS := -std=c99
+INSTANCE_CFLAGS := -std=c99 -O2
 SHIMDEFS := 
 NOAUX := 
 $(eval $(call ngcc_instance,sign-34,yuanyang-1024,sig,256,sig-34-yuanyang-1024,ngcc_ref_sig_34_yuanyang_1024))
@@ -25,7 +25,7 @@ SRCS := common.c prng.c fpr.c fft.c auxfunc.c drng.c ntt.c codec.c poly_inv_ntt.
     keygen/ntrugen/src/complex.c keygen/ntrugen/src/fft.c keygen/ntrugen/src/twiddles9.c
 INC := -Isrc/yuanyang-512/keygen/ntrugen/src
 DEFS := -DNGCC_KATS
-INSTANCE_CFLAGS := -std=c99
+INSTANCE_CFLAGS := -std=c99 -O2
 SHIMDEFS := 
 NOAUX := 
 $(eval $(call ngcc_instance,sign-34,yuanyang-512,sig,128,sig-34-yuanyang-512,ngcc_ref_sig_34_yuanyang_512))

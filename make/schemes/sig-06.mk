@@ -7,7 +7,7 @@ SRCS := sign.c packing.c polyvec.c poly.c ntt.c reduce.c rounding.c symmetric-sh
     auxfunc.c SIG_AlgorithmInstance.c
 INC := 
 DEFS := -DCOMPASS_SIG_MODE=128
-INSTANCE_CFLAGS := 
+INSTANCE_CFLAGS := -O3 -fomit-frame-pointer
 SHIMDEFS := 
 NOAUX := 
 $(eval $(call ngcc_instance,sign-06,COMPASS-SIG-128,sig,128,sig-06-compass-sig-128,ngcc_ref_sig_06_COMPASS_SIG_128))
@@ -19,7 +19,7 @@ SRCS := sign.c packing.c polyvec.c poly.c ntt.c reduce.c rounding.c symmetric-sh
     auxfunc.c SIG_AlgorithmInstance.c
 INC := 
 DEFS := -DCOMPASS_SIG_MODE=256
-INSTANCE_CFLAGS := 
+INSTANCE_CFLAGS := -O3 -fomit-frame-pointer
 SHIMDEFS := 
 NOAUX := 
 $(eval $(call ngcc_instance,sign-06,COMPASS-SIG-256,sig,256,sig-06-compass-sig-256,ngcc_ref_sig_06_COMPASS_SIG_256))

@@ -6,7 +6,7 @@ SRCDIR := Implementations/Digital_Signature-DOVE-x86-reference_implementation/AP
 SRCS := gf256.c matrix.c uov/blas_matrix_ref.c auxfunc.c drng.c SIG_AlgorithmInstance.c
 INC := -Isrc/dove_classic_128/uov
 DEFS := -DDOVE_PARAM_SET=DOVE128
-INSTANCE_CFLAGS := 
+INSTANCE_CFLAGS := -O2
 SHIMDEFS := -DNGCC_INSTANCE='"dove_classic_128"'
 NOAUX := 
 $(eval $(call ngcc_instance,sign-09,dove_classic_128,sig,128,sig-09-dove-classic-128,ngcc_ref_sig_09_dove_classic_128))
@@ -17,7 +17,7 @@ SRCDIR := Implementations/Digital_Signature-DOVE-x86-reference_implementation/AP
 SRCS := gf256.c matrix.c uov/blas_matrix_ref.c auxfunc.c drng.c SIG_AlgorithmInstance.c
 INC := -Isrc/dove_classic_256/uov
 DEFS := -DDOVE_PARAM_SET=DOVE256
-INSTANCE_CFLAGS := 
+INSTANCE_CFLAGS := -O2
 SHIMDEFS := -DNGCC_INSTANCE='"dove_classic_256"'
 NOAUX := 
 $(eval $(call ngcc_instance,sign-09,dove_classic_256,sig,256,sig-09-dove-classic-256,ngcc_ref_sig_09_dove_classic_256))
@@ -28,7 +28,7 @@ SRCDIR := Implementations/Digital_Signature-DOVE-x86-reference_implementation/AP
 SRCS := gf256.c matrix.c uov/blas_matrix_ref.c auxfunc.c drng.c SIG_AlgorithmInstance.c
 INC := -Isrc/dove_pkc_skc_128/uov
 DEFS := -DDOVE_PARAM_SET=DOVE128
-INSTANCE_CFLAGS := 
+INSTANCE_CFLAGS := -O2
 SHIMDEFS := -DNGCC_INSTANCE='"dove_pkc_skc_128"'
 NOAUX := 
 $(eval $(call ngcc_instance,sign-09,dove_pkc_skc_128,sig,128,sig-09-dove-pkc-skc-128,ngcc_ref_sig_09_dove_pkc_skc_128))
@@ -39,7 +39,7 @@ SRCDIR := Implementations/Digital_Signature-DOVE-x86-reference_implementation/AP
 SRCS := gf256.c matrix.c uov/blas_matrix_ref.c auxfunc.c drng.c SIG_AlgorithmInstance.c
 INC := -Isrc/dove_pkc_skc_256/uov
 DEFS := -DDOVE_PARAM_SET=DOVE256
-INSTANCE_CFLAGS := 
+INSTANCE_CFLAGS := -O2
 SHIMDEFS := -DNGCC_INSTANCE='"dove_pkc_skc_256"'
 NOAUX := 
 $(eval $(call ngcc_instance,sign-09,dove_pkc_skc_256,sig,256,sig-09-dove-pkc-skc-256,ngcc_ref_sig_09_dove_pkc_skc_256))

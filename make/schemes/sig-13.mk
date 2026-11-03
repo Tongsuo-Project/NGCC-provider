@@ -10,7 +10,7 @@ SRCS := SIG_AlgorithmInstance.c drng.c api.c aes.c aes_impl.c block.c block_impl
     auxfunc.c greatwall-128-matrix.c
 INC := 
 DEFS := -DGREATWALL_HASH_BACKEND_SM3
-INSTANCE_CFLAGS := 
+INSTANCE_CFLAGS := -O2 -std=c99 -Wpedantic -Wall -Wextra -Wno-missing-braces
 SHIMDEFS := 
 NOAUX := 
 $(eval $(call ngcc_instance,sign-13,GreatWall128f,sig,128,sig-13-greatwall128f,ngcc_ref_sig_13_GreatWall128f))
@@ -25,7 +25,7 @@ SRCS := SIG_AlgorithmInstance.c drng.c api.c aes.c aes_impl.c block.c block_impl
     auxfunc.c greatwall-128-matrix.c
 INC := 
 DEFS := -DGREATWALL_HASH_BACKEND_SM3
-INSTANCE_CFLAGS := 
+INSTANCE_CFLAGS := -O2 -std=c99 -Wpedantic -Wall -Wextra -Wno-missing-braces
 SHIMDEFS := 
 NOAUX := 
 $(eval $(call ngcc_instance,sign-13,GreatWall128s,sig,128,sig-13-greatwall128s,ngcc_ref_sig_13_GreatWall128s))
@@ -39,7 +39,7 @@ SRCS := aes.c aes_impl.c api.c faest.c gf163_proof.c hash.c KeccakHash.c KeccakP
     auxfunc.c greatwall-160-matrix.c
 INC := 
 DEFS := -DGREATWALL_HASH_BACKEND_SM3
-INSTANCE_CFLAGS := 
+INSTANCE_CFLAGS := -O2 -std=c99 -Wpedantic -Wall -Wextra -Wno-missing-braces
 SHIMDEFS := 
 NOAUX := 
 $(eval $(call ngcc_instance,sign-13,GreatWall160f,sig,160,sig-13-greatwall160f,ngcc_ref_sig_13_GreatWall160f))
@@ -53,7 +53,7 @@ SRCS := aes.c aes_impl.c api.c faest.c gf163_proof.c hash.c KeccakHash.c KeccakP
     auxfunc.c greatwall-160-matrix.c
 INC := 
 DEFS := -DGREATWALL_HASH_BACKEND_SM3
-INSTANCE_CFLAGS := 
+INSTANCE_CFLAGS := -O2 -std=c99 -Wpedantic -Wall -Wextra -Wno-missing-braces
 SHIMDEFS := 
 NOAUX := 
 $(eval $(call ngcc_instance,sign-13,GreatWall160s,sig,160,sig-13-greatwall160s,ngcc_ref_sig_13_GreatWall160s))
@@ -68,7 +68,7 @@ SRCS := SIG_AlgorithmInstance.c drng.c api.c aes.c aes_impl.c block.c block_impl
     auxfunc.c greatwall-192-matrix.c
 INC := 
 DEFS := -DGREATWALL_HASH_BACKEND_SM3
-INSTANCE_CFLAGS := 
+INSTANCE_CFLAGS := -O2 -std=c99 -Wpedantic -Wall -Wextra -Wno-missing-braces
 SHIMDEFS := 
 NOAUX := 
 $(eval $(call ngcc_instance,sign-13,GreatWall192f,sig,192,sig-13-greatwall192f,ngcc_ref_sig_13_GreatWall192f))
@@ -83,7 +83,7 @@ SRCS := SIG_AlgorithmInstance.c drng.c api.c aes.c aes_impl.c block.c block_impl
     auxfunc.c greatwall-192-matrix.c
 INC := 
 DEFS := -DGREATWALL_HASH_BACKEND_SM3
-INSTANCE_CFLAGS := 
+INSTANCE_CFLAGS := -O2 -std=c99 -Wpedantic -Wall -Wextra -Wno-missing-braces
 SHIMDEFS := 
 NOAUX := 
 $(eval $(call ngcc_instance,sign-13,GreatWall192s,sig,192,sig-13-greatwall192s,ngcc_ref_sig_13_GreatWall192s))
@@ -98,7 +98,7 @@ SRCS := SIG_AlgorithmInstance.c drng.c api.c aes.c aes_impl.c block.c block_impl
     auxfunc.c greatwall-256-matrix.c
 INC := 
 DEFS := -DGREATWALL_HASH_BACKEND_SM3
-INSTANCE_CFLAGS := 
+INSTANCE_CFLAGS := -O2 -std=c99 -Wpedantic -Wall -Wextra -Wno-missing-braces
 SHIMDEFS := 
 NOAUX := 
 $(eval $(call ngcc_instance,sign-13,GreatWall256f,sig,256,sig-13-greatwall256f,ngcc_ref_sig_13_GreatWall256f))
@@ -113,7 +113,7 @@ SRCS := SIG_AlgorithmInstance.c drng.c api.c aes.c aes_impl.c block.c block_impl
     auxfunc.c greatwall-256-matrix.c
 INC := 
 DEFS := -DGREATWALL_HASH_BACKEND_SM3
-INSTANCE_CFLAGS := 
+INSTANCE_CFLAGS := -O2 -std=c99 -Wpedantic -Wall -Wextra -Wno-missing-braces
 SHIMDEFS := 
 NOAUX := 
 $(eval $(call ngcc_instance,sign-13,GreatWall256s,sig,256,sig-13-greatwall256s,ngcc_ref_sig_13_GreatWall256s))

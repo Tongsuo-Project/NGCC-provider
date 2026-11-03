@@ -26,7 +26,7 @@ INC := -Isrc/NGCC-1/src/ngcc/common -Isrc/NGCC-1/include -Isrc/NGCC-1/src/common
     -Isrc/NGCC-1/src/hd/ref/include -Isrc/NGCC-1/src/id2iso/ref/include                           \
     -Isrc/NGCC-1/src/pike/ref/include -Isrc/NGCC-1/src/pike/ref/pikex_compressed/include
 DEFS := -DALGORITHM_INSTANCE='"NGCC-1"' -DNGCC_PIKE_LEVEL=1 -DOUTPUT_BLANK_TEST_VECTORS=0 -DPIKE_XOF_BACKEND=2 -DTARGET_AMD64 -DRADIX_64 -DTARGET_OS_UNIX
-INSTANCE_CFLAGS := 
+INSTANCE_CFLAGS := -O3 -mavx2 -mbmi2 -mpopcnt -madx
 SHIMDEFS := 
 NOAUX := 
 $(eval $(call ngcc_instance,kem-31,NGCC-1,kem,128,kem-31-ngcc-1,ngcc_ref_kem_31_NGCC_1))
@@ -57,7 +57,7 @@ INC := -Isrc/NGCC-2/src/ngcc/common -Isrc/NGCC-2/include -Isrc/NGCC-2/src/common
     -Isrc/NGCC-2/src/hd/ref/include -Isrc/NGCC-2/src/id2iso/ref/include                           \
     -Isrc/NGCC-2/src/pike/ref/include -Isrc/NGCC-2/src/pike/ref/pikex_compressed/include
 DEFS := -DALGORITHM_INSTANCE='"NGCC-2"' -DNGCC_PIKE_LEVEL=2 -DOUTPUT_BLANK_TEST_VECTORS=0 -DPIKE_XOF_BACKEND=2 -DTARGET_AMD64 -DRADIX_64 -DTARGET_OS_UNIX
-INSTANCE_CFLAGS := 
+INSTANCE_CFLAGS := -O3 -mavx2 -mbmi2 -mpopcnt -madx
 SHIMDEFS := 
 NOAUX := 
 $(eval $(call ngcc_instance,kem-31,NGCC-2,kem,256,kem-31-ngcc-2,ngcc_ref_kem_31_NGCC_2))

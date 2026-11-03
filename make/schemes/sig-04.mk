@@ -7,7 +7,7 @@ SRCS := SIG_AlgorithmInstance.c address.c auxfunc.c drng.c fors.c hash_sm3.c mer
     randombytes.c sign.c thash_sm3_simple.c utils.c utilsx1.c wots.c wotsx1.c
 INC := 
 DEFS := 
-INSTANCE_CFLAGS := 
+INSTANCE_CFLAGS := -O3 -fomit-frame-pointer -funroll-loops
 SHIMDEFS := 
 NOAUX := 
 $(eval $(call ngcc_instance,sign-04,CEDRUSALPHA-160f,sig,160,sig-04-cedrusalpha-160f,ngcc_ref_sig_04_CEDRUSALPHA_160f))
@@ -19,7 +19,7 @@ SRCS := SIG_AlgorithmInstance.c address.c auxfunc.c drng.c fors.c hash_sm3.c mer
     randombytes.c sign.c thash_sm3_simple.c utils.c utilsx1.c wots.c wotsx1.c
 INC := 
 DEFS := 
-INSTANCE_CFLAGS := 
+INSTANCE_CFLAGS := -O3 -fomit-frame-pointer -funroll-loops
 SHIMDEFS := 
 NOAUX := 
 $(eval $(call ngcc_instance,sign-04,CEDRUSALPHA-160s,sig,160,sig-04-cedrusalpha-160s,ngcc_ref_sig_04_CEDRUSALPHA_160s))
@@ -31,7 +31,7 @@ SRCS := SIG_AlgorithmInstance.c address.c auxfunc.c drng.c fors.c hash_sm3.c mer
     randombytes.c sign.c thash_sm3_simple.c utils.c utilsx1.c wots.c wotsx1.c
 INC := 
 DEFS := 
-INSTANCE_CFLAGS := 
+INSTANCE_CFLAGS := -O3 -fomit-frame-pointer -funroll-loops
 SHIMDEFS := 
 NOAUX := 
 $(eval $(call ngcc_instance,sign-04,CEDRUSALPHA-256f,sig,256,sig-04-cedrusalpha-256f,ngcc_ref_sig_04_CEDRUSALPHA_256f))
@@ -43,7 +43,7 @@ SRCS := SIG_AlgorithmInstance.c address.c auxfunc.c drng.c fors.c hash_sm3.c mer
     randombytes.c sign.c thash_sm3_simple.c utils.c utilsx1.c wots.c wotsx1.c
 INC := 
 DEFS := 
-INSTANCE_CFLAGS := 
+INSTANCE_CFLAGS := -O3 -fomit-frame-pointer -funroll-loops
 SHIMDEFS := 
 NOAUX := 
 $(eval $(call ngcc_instance,sign-04,CEDRUSALPHA-256s,sig,256,sig-04-cedrusalpha-256s,ngcc_ref_sig_04_CEDRUSALPHA_256s))

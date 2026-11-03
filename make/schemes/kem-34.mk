@@ -7,7 +7,7 @@ SRCS := KEM_lwekem128.c indcpa.c poly.c polyvec.c cbd.c minal.c reduce.c ntt.c v
     drng.c
 INC := 
 DEFS := 
-INSTANCE_CFLAGS := 
+INSTANCE_CFLAGS := -O3 -mavx2 -mbmi2 -mpopcnt
 SHIMDEFS := -DNGCC_INSTANCE_HEADER='"KEM_lwekem128.h"'
 NOAUX := 
 $(eval $(call ngcc_instance,kem-34,lwekem128,kem,128,kem-34-rudraksh2-128,ngcc_ref_kem_34_lwekem128))
@@ -19,7 +19,7 @@ SRCS := KEM_lwekem256.c indcpa.c poly.c polyvec.c cbd.c minal.c reduce.c ntt.c v
     drng.c
 INC := 
 DEFS := 
-INSTANCE_CFLAGS := 
+INSTANCE_CFLAGS := -O2
 SHIMDEFS := -DNGCC_INSTANCE_HEADER='"KEM_lwekem256.h"'
 NOAUX := 
 $(eval $(call ngcc_instance,kem-34,lwekem256,kem,256,kem-34-rudraksh2-256,ngcc_ref_kem_34_lwekem256))

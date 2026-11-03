@@ -6,7 +6,7 @@ SRCDIR := Implementations and Test_Vectors/Implementations/Reference_Implementat
 SRCS := ICCS/auxfunc.c ICCS/drng.c src/KEM_AlgorithmInstance.c src/decoder.c src/gf2x.c src/sample.c
 INC := -Isrc/TRIKE-1/ICCS -Isrc/TRIKE-1/src
 DEFS := 
-INSTANCE_CFLAGS := 
+INSTANCE_CFLAGS := -O3 -mvpclmulqdq -mavx512f -mavx512bw -mavx512dq -mavx512vl -mavx512vpopcntdq
 SHIMDEFS := -DNGCC_INSTANCE_HEADER='"src/KEM_AlgorithmInstance.h"'
 NOAUX := 
 $(eval $(call ngcc_instance,kem-36,TRIKE-1,kem,128,kem-36-trike-1,ngcc_ref_kem_36_TRIKE_1))
@@ -17,7 +17,7 @@ SRCDIR := Implementations and Test_Vectors/Implementations/Reference_Implementat
 SRCS := ICCS/auxfunc.c ICCS/drng.c src/KEM_AlgorithmInstance.c src/decoder.c src/gf2x.c src/sample.c
 INC := -Isrc/TRIKE-5/ICCS -Isrc/TRIKE-5/src
 DEFS := 
-INSTANCE_CFLAGS := 
+INSTANCE_CFLAGS := -O3 -mvpclmulqdq -mavx512f -mavx512bw -mavx512dq -mavx512vl -mavx512vpopcntdq
 SHIMDEFS := -DNGCC_INSTANCE_HEADER='"src/KEM_AlgorithmInstance.h"'
 NOAUX := 
 $(eval $(call ngcc_instance,kem-36,TRIKE-5,kem,256,kem-36-trike-5,ngcc_ref_kem_36_TRIKE_5))

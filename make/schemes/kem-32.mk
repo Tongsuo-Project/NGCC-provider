@@ -7,7 +7,7 @@ SRCS := keccak.c kem.c m2e.c permutation.c gf.c poly.c goppa.c seeded_keygen.c q
     decode.c roots.c rng.c KEM_AlgorithmInstance.c .api-pkc-kat/drng.c
 INC := -Isrc/QCTM128/.api-pkc-kat
 DEFS := -DAPI_PKC_KAT_DRNG_BRIDGE
-INSTANCE_CFLAGS := -fcommon
+INSTANCE_CFLAGS := -O3 -fcommon
 SHIMDEFS := 
 NOAUX := 1
 $(eval $(call ngcc_instance,kem-32,QCTM128,kem,128,kem-32-qctm128,ngcc_ref_kem_32_QCTM128))
@@ -19,7 +19,7 @@ SRCS := keccak.c kem.c m2e.c permutation.c gf.c poly.c goppa.c seeded_keygen.c q
     decode.c roots.c rng.c KEM_AlgorithmInstance.c .api-pkc-kat/drng.c
 INC := -Isrc/QCTM256/.api-pkc-kat
 DEFS := -DAPI_PKC_KAT_DRNG_BRIDGE
-INSTANCE_CFLAGS := -fcommon
+INSTANCE_CFLAGS := -O3 -fcommon
 SHIMDEFS := 
 NOAUX := 1
 $(eval $(call ngcc_instance,kem-32,QCTM256,kem,256,kem-32-qctm256,ngcc_ref_kem_32_QCTM256))

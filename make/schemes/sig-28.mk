@@ -9,7 +9,7 @@ SRCS := SIG_AlgorithmInstance.c src/aes.c src/bavc.c src/compat.c src/fields.c s
     lib/blake2/ref/blake2b-ref.c
 INC := -Isrc/sydo_160f/src -Isrc/sydo_160f/lib -Isrc/sydo_160f/lib/blake2/ref
 DEFS := -DNDEBUG -DHAVE_SYS_RANDOM_H -DHAVE_GETRANDOM -DSYDO_REF_NGCC
-INSTANCE_CFLAGS := 
+INSTANCE_CFLAGS := -O3 -std=c11 -Wall -Wextra -Werror=implicit-function-declaration
 SHIMDEFS := 
 NOAUX := 
 $(eval $(call ngcc_instance,sign-28,sydo_160f,sig,160,sig-28-sydo-160f,ngcc_ref_sig_28_sydo_160f))
@@ -23,7 +23,7 @@ SRCS := SIG_AlgorithmInstance.c src/aes.c src/bavc.c src/compat.c src/fields.c s
     lib/blake2/ref/blake2b-ref.c
 INC := -Isrc/sydo_160s/src -Isrc/sydo_160s/lib -Isrc/sydo_160s/lib/blake2/ref
 DEFS := -DNDEBUG -DHAVE_SYS_RANDOM_H -DHAVE_GETRANDOM -DSYDO_REF_NGCC
-INSTANCE_CFLAGS := 
+INSTANCE_CFLAGS := -O3 -std=c11 -Wall -Wextra -Werror=implicit-function-declaration
 SHIMDEFS := 
 NOAUX := 
 $(eval $(call ngcc_instance,sign-28,sydo_160s,sig,160,sig-28-sydo-160s,ngcc_ref_sig_28_sydo_160s))
@@ -37,7 +37,7 @@ SRCS := SIG_AlgorithmInstance.c src/aes.c src/bavc.c src/compat.c src/fields.c s
     lib/blake2/ref/blake2b-ref.c
 INC := -Isrc/sydo_256f/src -Isrc/sydo_256f/lib -Isrc/sydo_256f/lib/blake2/ref
 DEFS := -DNDEBUG -DHAVE_SYS_RANDOM_H -DHAVE_GETRANDOM -DSYDO_REF_NGCC
-INSTANCE_CFLAGS := 
+INSTANCE_CFLAGS := -O3 -std=c11 -Wall -Wextra -Werror=implicit-function-declaration
 SHIMDEFS := 
 NOAUX := 
 $(eval $(call ngcc_instance,sign-28,sydo_256f,sig,256,sig-28-sydo-256f,ngcc_ref_sig_28_sydo_256f))
@@ -51,7 +51,7 @@ SRCS := SIG_AlgorithmInstance.c src/aes.c src/bavc.c src/compat.c src/fields.c s
     lib/blake2/ref/blake2b-ref.c
 INC := -Isrc/sydo_256s/src -Isrc/sydo_256s/lib -Isrc/sydo_256s/lib/blake2/ref
 DEFS := -DNDEBUG -DHAVE_SYS_RANDOM_H -DHAVE_GETRANDOM -DSYDO_REF_NGCC
-INSTANCE_CFLAGS := 
+INSTANCE_CFLAGS := -O3 -std=c11 -Wall -Wextra -Werror=implicit-function-declaration
 SHIMDEFS := 
 NOAUX := 
 $(eval $(call ngcc_instance,sign-28,sydo_256s,sig,256,sig-28-sydo-256s,ngcc_ref_sig_28_sydo_256s))

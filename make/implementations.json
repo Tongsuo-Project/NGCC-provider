@@ -7,7 +7,7 @@
       "DEFS": "-DPARAMS=1 -DUSE_NICCS_API",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -maes -mavx2 -mbmi2 -mpopcnt",
+      "INSTANCE_CFLAGS": "-mavx2 -mbmi2 -mpopcnt -maes -march=native -mtune=native -O3 -fomit-frame-pointer -std=c99",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2",
@@ -67,7 +67,7 @@
       "DEFS": "-DPARAMS=2 -DUSE_NICCS_API",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -maes -mavx2 -mbmi2 -mpopcnt",
+      "INSTANCE_CFLAGS": "-mavx2 -mbmi2 -mpopcnt -maes -march=native -mtune=native -O3 -fomit-frame-pointer -std=c99",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2",
@@ -127,7 +127,7 @@
       "DEFS": "-DSECURITY_LEVEL=128",
       "SHIMDEFS": "-DNGCC_INSTANCE_HEADER='\"api/KEM_AlgorithmInstance.h\"' -DNGCC_NO_DRNG",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -O3",
+      "INSTANCE_CFLAGS": "-O3 -march=native",
       "variant": "optimized-x86_64",
       "SOURCE_CFLAGS": {
         "backend/ntt_2s3t.c": "-fgnu89-inline"
@@ -189,7 +189,7 @@
       "DEFS": "-DSECURITY_LEVEL=192",
       "SHIMDEFS": "-DNGCC_INSTANCE_HEADER='\"api/KEM_AlgorithmInstance.h\"' -DNGCC_NO_DRNG",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -O3",
+      "INSTANCE_CFLAGS": "-O3 -march=native",
       "variant": "optimized-x86_64",
       "SOURCE_CFLAGS": {
         "backend/ntt_2s3t.c": "-fgnu89-inline"
@@ -251,7 +251,7 @@
       "DEFS": "-DSECURITY_LEVEL=256",
       "SHIMDEFS": "-DNGCC_INSTANCE_HEADER='\"api/KEM_AlgorithmInstance.h\"' -DNGCC_NO_DRNG",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -O3",
+      "INSTANCE_CFLAGS": "-O3 -march=native",
       "variant": "optimized-x86_64",
       "SOURCE_CFLAGS": {
         "backend/ntt_2s3t.c": "-fgnu89-inline"
@@ -341,7 +341,7 @@
       "DEFS": "-DBAG_PIGLET_KAT=1",
       "SHIMDEFS": "-DNGCC_INSTANCE_HEADER='\"src/kat/KEM_AlgorithmInstance.h\"'",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -maes -mavx2 -mpclmul -msse4.2",
+      "INSTANCE_CFLAGS": "-mpclmul -O3 -maes -mavx2 -msse4.2",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2",
@@ -381,7 +381,7 @@
       "DEFS": "-DBAG_PIGLET_KAT=1",
       "SHIMDEFS": "-DNGCC_INSTANCE_HEADER='\"src/kat/KEM_AlgorithmInstance.h\"'",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -maes -mavx2 -mpclmul -msse4.2",
+      "INSTANCE_CFLAGS": "-mpclmul -O3 -maes -mavx2 -msse4.2",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2",
@@ -581,7 +581,7 @@
       "DEFS": "",
       "SHIMDEFS": "-DNGCC_INSTANCE_HEADER='\"KEM_BRA-128.h\"'",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-std=c99 -O3 -maes -mavx2 -mpclmul -msse4.2",
+      "INSTANCE_CFLAGS": "-O3 -march=x86-64 -mavx2 -mtune=native -fomit-frame-pointer -mpclmul -msse4 -maes -std=c99 -msse4.2",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2",
@@ -621,7 +621,7 @@
       "DEFS": "",
       "SHIMDEFS": "-DNGCC_INSTANCE_HEADER='\"KEM_BRA-256.h\"'",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-std=c99 -O3 -maes -mavx2 -mpclmul -msse4.2",
+      "INSTANCE_CFLAGS": "-O3 -march=x86-64 -mavx2 -mtune=native -fomit-frame-pointer -mpclmul -msse4 -maes -std=c99 -msse4.2",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2",
@@ -661,7 +661,7 @@
       "DEFS": "",
       "SHIMDEFS": "-DNGCC_INSTANCE_HEADER='\"KEM_BRQC-128.h\"'",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-std=c99 -O3 -maes -mavx2 -mpclmul -msse4.2",
+      "INSTANCE_CFLAGS": "-O3 -march=x86-64 -mavx2 -mtune=native -fomit-frame-pointer -mpclmul -msse4 -maes -std=c99 -msse4.2",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2",
@@ -701,7 +701,7 @@
       "DEFS": "",
       "SHIMDEFS": "-DNGCC_INSTANCE_HEADER='\"KEM_BRQC-256.h\"'",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-std=c99 -O3 -maes -mavx2 -mpclmul -msse4.2",
+      "INSTANCE_CFLAGS": "-O3 -march=x86-64 -mavx2 -mtune=native -fomit-frame-pointer -mpclmul -msse4 -maes -std=c99 -msse4.2",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2",
@@ -741,7 +741,7 @@
       "DEFS": "-DBWKEM128_INTERNAL_COMPAT -DBWKEM128_USE_ICCS_AUXFUNC",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-std=c99 -O3 -mavx2",
+      "INSTANCE_CFLAGS": "-O3 -march=x86-64 -mavx2 -mtune=native -fomit-frame-pointer -std=c99",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2"
@@ -765,7 +765,7 @@
       "DEFS": "-DBWKEM_C256_USE_ICCS_AUXFUNC",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-std=c99 -O3 -mavx2",
+      "INSTANCE_CFLAGS": "-O3 -march=x86-64 -mavx2 -mtune=native -fomit-frame-pointer -std=c99",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2"
@@ -789,7 +789,7 @@
       "DEFS": "",
       "SHIMDEFS": "-DNGCC_INSTANCE_HEADER='\"KEM_Cheetah.h\"'",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3",
+      "INSTANCE_CFLAGS": "-O3 -march=native -fomit-frame-pointer",
       "variant": "optimized-x86_64",
       "requirements": []
     },
@@ -839,7 +839,7 @@
       "DEFS": "",
       "SHIMDEFS": "-DNGCC_INSTANCE_HEADER='\"KEM_Cheetah.h\"'",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3",
+      "INSTANCE_CFLAGS": "-O3 -march=native -fomit-frame-pointer",
       "variant": "optimized-x86_64",
       "requirements": []
     },
@@ -889,7 +889,7 @@
       "DEFS": "",
       "SHIMDEFS": "-DNGCC_INSTANCE_HEADER='\"KEM_CMultiURAG-128.h\"'",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-std=c99 -O3 -maes -mavx2 -mpclmul -msse4.2",
+      "INSTANCE_CFLAGS": "-O3 -march=x86-64 -mavx2 -mtune=native -fomit-frame-pointer -mpclmul -msse4 -maes -std=c99 -msse4.2",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2",
@@ -929,7 +929,7 @@
       "DEFS": "",
       "SHIMDEFS": "-DNGCC_INSTANCE_HEADER='\"KEM_CMultiURAG-256.h\"'",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-std=c99 -O3 -maes -mavx2 -mpclmul -msse4.2",
+      "INSTANCE_CFLAGS": "-O3 -march=x86-64 -mavx2 -mtune=native -fomit-frame-pointer -mpclmul -msse4 -maes -std=c99 -msse4.2",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2",
@@ -969,7 +969,7 @@
       "DEFS": "-DSECURITY_LEVEL=128",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2 -mbmi2 -mpopcnt",
+      "INSTANCE_CFLAGS": "-mavx2 -mbmi2 -mpopcnt -march=native -mtune=native -O3 -fomit-frame-pointer",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2",
@@ -995,7 +995,7 @@
       "DEFS": "-DSECURITY_LEVEL=256",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2 -mbmi2 -mpopcnt",
+      "INSTANCE_CFLAGS": "-mavx2 -mbmi2 -mpopcnt -march=native -mtune=native -O3 -fomit-frame-pointer",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2",
@@ -1021,7 +1021,7 @@
       "DEFS": "-DDKE_MODE=128 -DDKE_HASH=0 -DDKE_RANDOM=0 -DDKE_USE_AVX2 -DDKE_AVX2_NTT_INTRINSIC -DDKE_USE_OPT_C",
       "SHIMDEFS": "-DNGCC_NO_DRNG",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-std=c99 -O3 -mavx2 -mpopcnt",
+      "INSTANCE_CFLAGS": "-std=c99 -O3 -mavx2 -fomit-frame-pointer -march=x86-64 -mtune=native -mpopcnt",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2",
@@ -1131,7 +1131,7 @@
       "DEFS": "-DDKE_MODE=256 -DDKE_HASH=0 -DDKE_RANDOM=0 -DDKE_USE_AVX2 -DDKE_AVX2_NTT_INTRINSIC -DDKE_USE_OPT_C",
       "SHIMDEFS": "-DNGCC_NO_DRNG",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-std=c99 -O3 -mavx2 -mpopcnt",
+      "INSTANCE_CFLAGS": "-std=c99 -O3 -mavx2 -fomit-frame-pointer -march=x86-64 -mtune=native -mpopcnt",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2",
@@ -1241,7 +1241,7 @@
       "DEFS": "",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2 -mbmi2 -mpopcnt",
+      "INSTANCE_CFLAGS": "-O3 -march=x86-64 -mavx2 -mtune=native -fomit-frame-pointer -std=c99 -mbmi2 -mpopcnt",
       "variant": "optimized-x86_64",
       "imports": [],
       "requirements": [
@@ -1281,7 +1281,7 @@
       "DEFS": "",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2 -mbmi2 -mpopcnt",
+      "INSTANCE_CFLAGS": "-O3 -march=x86-64 -mavx2 -mtune=native -fomit-frame-pointer -std=c99 -mbmi2 -mpopcnt",
       "variant": "optimized-x86_64",
       "imports": [],
       "requirements": [
@@ -1322,7 +1322,7 @@
       "DEFS": "",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2 -mbmi2 -mpopcnt",
+      "INSTANCE_CFLAGS": "-O3 -march=x86-64 -mavx2 -mtune=native -fomit-frame-pointer -std=c99 -mbmi2 -mpopcnt",
       "variant": "optimized-x86_64",
       "imports": [],
       "requirements": [
@@ -1363,7 +1363,7 @@
       "DEFS": "",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2 -mbmi2 -mpopcnt",
+      "INSTANCE_CFLAGS": "-O3 -march=x86-64 -mavx2 -mtune=native -fomit-frame-pointer -std=c99 -mbmi2 -mpopcnt",
       "variant": "optimized-x86_64",
       "imports": [],
       "requirements": [
@@ -1403,7 +1403,7 @@
       "DEFS": "",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2 -mbmi2 -mpopcnt",
+      "INSTANCE_CFLAGS": "-O3 -march=x86-64 -mavx2 -mtune=native -fomit-frame-pointer -std=c99 -mbmi2 -mpopcnt",
       "variant": "optimized-x86_64",
       "imports": [],
       "requirements": [
@@ -1443,7 +1443,7 @@
       "DEFS": "-DPK_PACK_OPT=1",
       "SHIMDEFS": "-DNGCC_INSTANCE='\"DTRU-648-PACK_PK\"'",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2 -mbmi2 -mpopcnt",
+      "INSTANCE_CFLAGS": "-O3 -march=x86-64 -mavx2 -mtune=native -fomit-frame-pointer -std=c99 -mbmi2 -mpopcnt",
       "variant": "optimized-x86_64",
       "imports": [],
       "requirements": [
@@ -1483,7 +1483,7 @@
       "DEFS": "-DPK_PACK_OPT=1",
       "SHIMDEFS": "-DNGCC_INSTANCE='\"DTRU-768-PACK_PK\"'",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2 -mbmi2 -mpopcnt",
+      "INSTANCE_CFLAGS": "-O3 -march=x86-64 -mavx2 -mtune=native -fomit-frame-pointer -std=c99 -mbmi2 -mpopcnt",
       "variant": "optimized-x86_64",
       "imports": [],
       "requirements": [
@@ -1524,7 +1524,7 @@
       "DEFS": "-DPK_PACK_OPT=1",
       "SHIMDEFS": "-DNGCC_INSTANCE='\"DTRU-1024-PACK_PK\"'",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2 -mbmi2 -mpopcnt",
+      "INSTANCE_CFLAGS": "-O3 -march=x86-64 -mavx2 -mtune=native -fomit-frame-pointer -std=c99 -mbmi2 -mpopcnt",
       "variant": "optimized-x86_64",
       "imports": [],
       "requirements": [
@@ -1565,7 +1565,7 @@
       "DEFS": "",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2 -mbmi2 -mpclmul -mpopcnt",
+      "INSTANCE_CFLAGS": "-mavx2 -mbmi2 -mpopcnt -mpclmul -march=native -mtune=native -O2",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2",
@@ -1592,7 +1592,7 @@
       "DEFS": "",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2 -mbmi2 -mpclmul -mpopcnt",
+      "INSTANCE_CFLAGS": "-mavx2 -mbmi2 -mpopcnt -mpclmul -march=native -mtune=native -O2",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2",
@@ -1619,7 +1619,7 @@
       "DEFS": "-DHARE_SYMMETRIC_MODE_B -DHARE_BACKEND_KR=1 -DHARE_X86_OPTIMIZED=1 -DHARE_X86_AVX2_VECTOR=1 -DHARE_X86_PCLMUL_GF=1 -DHARE_X86_PCLMUL_GF2X=1 -DHARE_X86_SELECTED_GF2X=1 -DHARE_X86_AVX2_RM=1 -DHARE_X86_RS_ERASURE=1",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2 -mbmi2 -mpopcnt -mpclmul",
+      "INSTANCE_CFLAGS": "-mavx2 -mbmi2 -mpopcnt -mpclmul -O2",
       "variant": "optimized-x86_64",
       "imports": [
         "Implementations and Test_Vectors/Implementations/_shared"
@@ -1680,7 +1680,7 @@
       "DEFS": "-DHARE_SYMMETRIC_MODE_B -DHARE_BACKEND_KR=1 -DHARE_X86_OPTIMIZED=1 -DHARE_X86_AVX2_VECTOR=1 -DHARE_X86_PCLMUL_GF=1 -DHARE_X86_PCLMUL_GF2X=1 -DHARE_X86_SELECTED_GF2X=1 -DHARE_X86_AVX2_RM=1 -DHARE_X86_RS_ERASURE=1",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2 -mbmi2 -mpopcnt -mpclmul",
+      "INSTANCE_CFLAGS": "-mavx2 -mbmi2 -mpopcnt -mpclmul -O2",
       "variant": "optimized-x86_64",
       "imports": [
         "Implementations and Test_Vectors/Implementations/_shared"
@@ -1741,7 +1741,7 @@
       "DEFS": "-DHEP_QC_ARCH_X86_64=1",
       "SHIMDEFS": "-DNGCC_INSTANCE_HEADER='\"KEM_HEP_QC.h\"' -DNGCC_INSTANCE='\"hep-qc-1\"'",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-std=c99 -O3 -mavx2 -mbmi2 -mpopcnt -mpclmul -mbmi",
+      "INSTANCE_CFLAGS": "-mavx2 -mbmi2 -mpopcnt -mpclmul -mbmi -O2",
       "variant": "optimized-x86_64",
       "imports": [
         "Implementations/Implementations/x86_64",
@@ -1791,7 +1791,7 @@
       "DEFS": "-DHEP_QC_ARCH_X86_64=1",
       "SHIMDEFS": "-DNGCC_INSTANCE_HEADER='\"KEM_HEP_QC.h\"' -DNGCC_INSTANCE='\"hep-qc-3\"'",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-std=c99 -O3 -mavx2 -mbmi2 -mpopcnt -mpclmul -mbmi",
+      "INSTANCE_CFLAGS": "-mavx2 -mbmi2 -mpopcnt -mpclmul -mbmi -O2",
       "variant": "optimized-x86_64",
       "imports": [
         "Implementations/Implementations/x86_64",
@@ -1841,7 +1841,7 @@
       "DEFS": "-DHEP_QC_ARCH_X86_64=1",
       "SHIMDEFS": "-DNGCC_INSTANCE_HEADER='\"KEM_HEP_QC.h\"' -DNGCC_INSTANCE='\"hep-qc-5\"'",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-std=c99 -O3 -mavx2 -mbmi2 -mpopcnt -mpclmul -mbmi",
+      "INSTANCE_CFLAGS": "-mavx2 -mbmi2 -mpopcnt -mpclmul -mbmi -O2",
       "variant": "optimized-x86_64",
       "imports": [
         "Implementations/Implementations/x86_64",
@@ -1891,7 +1891,7 @@
       "DEFS": "",
       "SHIMDEFS": "-DNGCC_INSTANCE_HEADER='\"KEM_Loong.h\"'",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3",
+      "INSTANCE_CFLAGS": "-O3 -march=native -fomit-frame-pointer",
       "variant": "optimized-x86_64",
       "requirements": []
     },
@@ -1941,7 +1941,7 @@
       "DEFS": "",
       "SHIMDEFS": "-DNGCC_INSTANCE_HEADER='\"KEM_Loong.h\"'",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3",
+      "INSTANCE_CFLAGS": "-O3 -march=native -fomit-frame-pointer",
       "variant": "optimized-x86_64",
       "requirements": []
     },
@@ -2019,7 +2019,7 @@
       "DEFS": "-DNIX -D_AMD64_ -D_AMD64_ -D_FAST_ -D_AES128_FOR_A_ -DFROST_USE_E8_CODE",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2 -maes",
+      "INSTANCE_CFLAGS": "-mavx2 -maes -O2",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2",
@@ -2055,7 +2055,7 @@
       "DEFS": "-DNIX -D_AMD64_ -D_AMD64_ -D_FAST_ -D_AES128_FOR_A_ -DFROST_USE_E8_CODE",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2 -maes",
+      "INSTANCE_CFLAGS": "-mavx2 -maes -O2",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2",
@@ -2091,7 +2091,7 @@
       "DEFS": "-DNIX -D_AMD64_ -D_AMD64_ -D_FAST_ -D_AES128_FOR_A_ -DFROST_USE_E8_CODE",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2 -maes",
+      "INSTANCE_CFLAGS": "-mavx2 -maes -O2",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2",
@@ -2127,7 +2127,7 @@
       "DEFS": "-DNIX -D_AMD64_ -D_AMD64_ -D_FAST_ -D_AES128_FOR_A_ -DFROST_USE_E8_CODE",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2 -maes",
+      "INSTANCE_CFLAGS": "-mavx2 -maes -O2",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2",
@@ -2163,7 +2163,7 @@
       "DEFS": "-DNIX -D_AMD64_ -D_AMD64_ -D_FAST_ -D_AES128_FOR_A_ -DFROST_USE_E8_CODE",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2 -maes",
+      "INSTANCE_CFLAGS": "-mavx2 -maes -O2",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2",
@@ -2199,7 +2199,7 @@
       "DEFS": "-DNIX -D_AMD64_ -D_AMD64_ -D_FAST_ -D_AES128_FOR_A_ -DFROST_USE_E8_CODE",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2 -maes",
+      "INSTANCE_CFLAGS": "-mavx2 -maes -O2",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2",
@@ -2235,7 +2235,7 @@
       "DEFS": "-DVIPER_LEVEL=128 -DVIPER_USE_E8_CODEC=1 -DVIPER_ARITH_AVX",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2",
+      "INSTANCE_CFLAGS": "-O3 -march=x86-64 -mavx2 -mtune=native -fomit-frame-pointer -std=c99",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2"
@@ -2269,7 +2269,7 @@
       "DEFS": "-DVIPER_LEVEL=192 -DVIPER_USE_E8_CODEC=1 -DVIPER_ARITH_AVX",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2",
+      "INSTANCE_CFLAGS": "-O3 -march=x86-64 -mavx2 -mtune=native -fomit-frame-pointer -std=c99",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2"
@@ -2303,7 +2303,7 @@
       "DEFS": "-DVIPER_LEVEL=256 -DVIPER_USE_E8_CODEC=1 -DVIPER_ARITH_AVX",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2",
+      "INSTANCE_CFLAGS": "-O3 -march=x86-64 -mavx2 -mtune=native -fomit-frame-pointer -std=c99",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2"
@@ -2389,7 +2389,7 @@
       "DEFS": "",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3",
+      "INSTANCE_CFLAGS": "-O2",
       "variant": "optimized-x86_64",
       "requirements": []
     },
@@ -2439,7 +2439,7 @@
       "DEFS": "",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3",
+      "INSTANCE_CFLAGS": "-O2",
       "variant": "optimized-x86_64",
       "requirements": []
     },
@@ -2489,7 +2489,7 @@
       "DEFS": "",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3",
+      "INSTANCE_CFLAGS": "-O2",
       "variant": "optimized-x86_64",
       "requirements": []
     },
@@ -2539,7 +2539,7 @@
       "DEFS": "",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3",
+      "INSTANCE_CFLAGS": "-O2",
       "variant": "optimized-x86_64",
       "requirements": []
     },
@@ -2589,7 +2589,7 @@
       "DEFS": "",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3",
+      "INSTANCE_CFLAGS": "-O2",
       "variant": "optimized-x86_64",
       "requirements": []
     },
@@ -2639,7 +2639,7 @@
       "DEFS": "",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3",
+      "INSTANCE_CFLAGS": "-O2",
       "variant": "optimized-x86_64",
       "requirements": []
     },
@@ -2689,7 +2689,7 @@
       "DEFS": "",
       "SHIMDEFS": "-DNGCC_INSTANCE_HEADER='\"KEM_scabbard128.h\"'",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2",
+      "INSTANCE_CFLAGS": "-std=c99 -O2 -mavx2",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2"
@@ -2713,7 +2713,7 @@
       "DEFS": "",
       "SHIMDEFS": "-DNGCC_INSTANCE_HEADER='\"KEM_scabbard256.h\"'",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2",
+      "INSTANCE_CFLAGS": "-O3 -march=native -fomit-frame-pointer -mavx2",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2"
@@ -2737,7 +2737,7 @@
       "DEFS": "-DPARAMS=1 -DUSE_ICCS",
       "SHIMDEFS": "-DNGCC_INSTANCE_HEADER='\"kat_test/KEM_AlgorithmInstance.h\"'",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2 -mbmi2 -mpopcnt -msse2",
+      "INSTANCE_CFLAGS": "-mavx2 -mpopcnt -mbmi2 -msse2 -march=native -mtune=native -O3 -fomit-frame-pointer -std=c99",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2",
@@ -2775,7 +2775,7 @@
       "DEFS": "-DPARAMS=2 -DUSE_ICCS",
       "SHIMDEFS": "-DNGCC_INSTANCE_HEADER='\"kat_test/KEM_AlgorithmInstance.h\"'",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2 -mbmi2 -mpopcnt -msse2",
+      "INSTANCE_CFLAGS": "-mavx2 -mpopcnt -mbmi2 -msse2 -march=native -mtune=native -O3 -fomit-frame-pointer -std=c99",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2",
@@ -2813,7 +2813,7 @@
       "DEFS": "-DPARAMS=4 -DUSE_ICCS",
       "SHIMDEFS": "-DNGCC_INSTANCE_HEADER='\"kat_test/KEM_AlgorithmInstance.h\"'",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2 -mbmi2 -mpopcnt -msse2",
+      "INSTANCE_CFLAGS": "-mavx2 -mpopcnt -mbmi2 -msse2 -march=native -mtune=native -O3 -fomit-frame-pointer -std=c99",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2",
@@ -2851,7 +2851,7 @@
       "DEFS": "-DPARAMS=5 -DUSE_ICCS",
       "SHIMDEFS": "-DNGCC_INSTANCE_HEADER='\"kat_test/KEM_AlgorithmInstance.h\"'",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2 -mbmi2 -mpopcnt -msse2",
+      "INSTANCE_CFLAGS": "-mavx2 -mpopcnt -mbmi2 -msse2 -march=native -mtune=native -O3 -fomit-frame-pointer -std=c99",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2",
@@ -2889,7 +2889,7 @@
       "DEFS": "-DPARAMS=7 -DUSE_ICCS",
       "SHIMDEFS": "-DNGCC_INSTANCE_HEADER='\"kat_test/KEM_AlgorithmInstance.h\"'",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2 -mbmi2 -mpopcnt -msse2",
+      "INSTANCE_CFLAGS": "-mavx2 -mpopcnt -mbmi2 -msse2 -march=native -mtune=native -O3 -fomit-frame-pointer -std=c99",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2",
@@ -2927,7 +2927,7 @@
       "DEFS": "-DPARAMS=8 -DUSE_ICCS",
       "SHIMDEFS": "-DNGCC_INSTANCE_HEADER='\"kat_test/KEM_AlgorithmInstance.h\"'",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2 -mbmi2 -mpopcnt -msse2",
+      "INSTANCE_CFLAGS": "-mavx2 -mpopcnt -mbmi2 -msse2 -march=native -mtune=native -O3 -fomit-frame-pointer -std=c99",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2",
@@ -2965,7 +2965,7 @@
       "DEFS": "-DPARAMS=10 -DUSE_ICCS",
       "SHIMDEFS": "-DNGCC_INSTANCE_HEADER='\"kat_test/KEM_AlgorithmInstance.h\"'",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2 -mbmi2 -mpopcnt -msse2",
+      "INSTANCE_CFLAGS": "-mavx2 -mpopcnt -mbmi2 -msse2 -march=native -mtune=native -O3 -fomit-frame-pointer -std=c99",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2",
@@ -3003,7 +3003,7 @@
       "DEFS": "-DPARAMS=11 -DUSE_ICCS",
       "SHIMDEFS": "-DNGCC_INSTANCE_HEADER='\"kat_test/KEM_AlgorithmInstance.h\"'",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2 -mbmi2 -mpopcnt -msse2",
+      "INSTANCE_CFLAGS": "-mavx2 -mpopcnt -mbmi2 -msse2 -march=native -mtune=native -O3 -fomit-frame-pointer -std=c99",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2",
@@ -3041,7 +3041,7 @@
       "DEFS": "",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3",
+      "INSTANCE_CFLAGS": "-std=c99 -O2",
       "variant": "optimized-x86_64",
       "requirements": []
     },
@@ -3091,7 +3091,7 @@
       "DEFS": "",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3",
+      "INSTANCE_CFLAGS": "-std=c99 -O2",
       "variant": "optimized-x86_64",
       "requirements": []
     },
@@ -3141,7 +3141,7 @@
       "DEFS": "",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2",
+      "INSTANCE_CFLAGS": "-O3 -march=x86-64 -mavx2 -mtune=native",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2"
@@ -3165,7 +3165,7 @@
       "DEFS": "",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2",
+      "INSTANCE_CFLAGS": "-O3 -march=x86-64 -mavx2 -mtune=native",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2"
@@ -3189,7 +3189,7 @@
       "DEFS": "",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2",
+      "INSTANCE_CFLAGS": "-O3 -fomit-frame-pointer -mavx2 -march=native -mtune=native -funroll-loops",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2"
@@ -3213,7 +3213,7 @@
       "DEFS": "",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2",
+      "INSTANCE_CFLAGS": "-O3 -fomit-frame-pointer -mavx2 -march=native -mtune=native -funroll-loops",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2"
@@ -3237,7 +3237,7 @@
       "DEFS": "",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3",
+      "INSTANCE_CFLAGS": "-O2",
       "variant": "optimized-x86_64",
       "requirements": []
     },
@@ -3287,7 +3287,7 @@
       "DEFS": "",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3",
+      "INSTANCE_CFLAGS": "-O2",
       "variant": "optimized-x86_64",
       "requirements": []
     },
@@ -3538,7 +3538,7 @@
       "DEFS": "-DALGORITHM_INSTANCE='\"NGCC-1\"' -DNGCC_PIKE_LEVEL=1 -DOUTPUT_BLANK_TEST_VECTORS=0 -DPIKE_XOF_BACKEND=2 -DTARGET_AMD64 -DRADIX_64 -DTARGET_OS_UNIX -DPIKE_NGCC1_OPTIMIZED_FIELD=1 -DPIKE_NGCC2_OPTIMIZED_FIELD=1 -DPIKE_NGCC3_OPTIMIZED_FIELD=1",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2 -mbmi2 -mpopcnt -madx",
+      "INSTANCE_CFLAGS": "-mavx2 -mbmi2 -mpopcnt -madx -O2",
       "variant": "optimized-x86_64",
       "imports": [],
       "requirements": [
@@ -3566,7 +3566,7 @@
       "DEFS": "-DALGORITHM_INSTANCE='\"NGCC-2\"' -DNGCC_PIKE_LEVEL=2 -DOUTPUT_BLANK_TEST_VECTORS=0 -DPIKE_XOF_BACKEND=2 -DTARGET_AMD64 -DRADIX_64 -DTARGET_OS_UNIX -DPIKE_NGCC1_OPTIMIZED_FIELD=1 -DPIKE_NGCC2_OPTIMIZED_FIELD=1 -DPIKE_NGCC3_OPTIMIZED_FIELD=1",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2 -mbmi2 -mpopcnt -madx",
+      "INSTANCE_CFLAGS": "-mavx2 -mbmi2 -mpopcnt -madx -O2",
       "variant": "optimized-x86_64",
       "imports": [],
       "requirements": [
@@ -3594,7 +3594,7 @@
       "DEFS": "-DAPI_PKC_KAT_DRNG_BRIDGE",
       "SHIMDEFS": "",
       "NOAUX": "1",
-      "INSTANCE_CFLAGS": "-fcommon -O3 -mavx2 -mbmi2 -mpopcnt",
+      "INSTANCE_CFLAGS": "-mavx2 -mbmi2 -mpopcnt -fcommon -O2",
       "variant": "optimized-x86_64",
       "imports": [
         "Implementations/Optimized_Implementation"
@@ -3638,7 +3638,7 @@
       "DEFS": "-DAPI_PKC_KAT_DRNG_BRIDGE",
       "SHIMDEFS": "",
       "NOAUX": "1",
-      "INSTANCE_CFLAGS": "-fcommon -O3 -mavx2 -mbmi2 -mpopcnt",
+      "INSTANCE_CFLAGS": "-mavx2 -mbmi2 -mpopcnt -fcommon -O2",
       "variant": "optimized-x86_64",
       "imports": [
         "Implementations/Optimized_Implementation"
@@ -3820,7 +3820,7 @@
       "DEFS": "",
       "SHIMDEFS": "-DNGCC_INSTANCE_HEADER='\"KEM_lwekem128.h\"'",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2 -mbmi2 -mpopcnt",
+      "INSTANCE_CFLAGS": "-mavx2 -mbmi2 -mpopcnt -O2",
       "variant": "optimized-x86_64",
       "imports": [],
       "requirements": [
@@ -3875,7 +3875,7 @@
       "DEFS": "-DSCLOUDPLUS_FAMILY_AES -DSCLOUDPLUS_TIER_OPTIMIZED -DSCLOUDPLUS_BACKEND_AVX2 -DSCLOUDPLUS_AVX2_FAMILY_AES",
       "SHIMDEFS": "",
       "NOAUX": "1",
-      "INSTANCE_CFLAGS": "-O3 -mavx2 -mbmi2 -mpopcnt -maes",
+      "INSTANCE_CFLAGS": "-O3 -mavx2 -mbmi2 -mpopcnt -maes -funroll-loops -std=c99",
       "variant": "optimized-x86_64",
       "imports": [
         "Implementations and Test_Vectors/Implementations/_shared"
@@ -3949,7 +3949,7 @@
       "DEFS": "-DSCLOUDPLUS_FAMILY_SM3 -DSCLOUDPLUS_TIER_OPTIMIZED -DSCLOUDPLUS_BACKEND_AVX2 -DSCLOUDPLUS_AVX2_FAMILY_SM3",
       "SHIMDEFS": "",
       "NOAUX": "1",
-      "INSTANCE_CFLAGS": "-O3 -mavx2 -mbmi2 -mpopcnt -maes",
+      "INSTANCE_CFLAGS": "-O3 -mavx2 -mbmi2 -mpopcnt -maes -funroll-loops -std=c99",
       "variant": "optimized-x86_64",
       "imports": [
         "Implementations and Test_Vectors/Implementations/_shared"
@@ -4021,7 +4021,7 @@
       "DEFS": "-DSCLOUDPLUS_FAMILY_AES -DSCLOUDPLUS_TIER_OPTIMIZED -DSCLOUDPLUS_BACKEND_AVX2 -DSCLOUDPLUS_AVX2_FAMILY_AES",
       "SHIMDEFS": "",
       "NOAUX": "1",
-      "INSTANCE_CFLAGS": "-O3 -mavx2 -mbmi2 -mpopcnt -maes",
+      "INSTANCE_CFLAGS": "-O3 -mavx2 -mbmi2 -mpopcnt -maes -funroll-loops -std=c99",
       "variant": "optimized-x86_64",
       "imports": [
         "Implementations and Test_Vectors/Implementations/_shared"
@@ -4095,7 +4095,7 @@
       "DEFS": "-DSCLOUDPLUS_FAMILY_SM3 -DSCLOUDPLUS_TIER_OPTIMIZED -DSCLOUDPLUS_BACKEND_AVX2 -DSCLOUDPLUS_AVX2_FAMILY_SM3",
       "SHIMDEFS": "",
       "NOAUX": "1",
-      "INSTANCE_CFLAGS": "-O3 -mavx2 -mbmi2 -mpopcnt -maes",
+      "INSTANCE_CFLAGS": "-O3 -mavx2 -mbmi2 -mpopcnt -maes -funroll-loops -std=c99",
       "variant": "optimized-x86_64",
       "imports": [
         "Implementations and Test_Vectors/Implementations/_shared"
@@ -4167,7 +4167,7 @@
       "DEFS": "-DSCLOUDPLUS_FAMILY_AES -DSCLOUDPLUS_TIER_OPTIMIZED -DSCLOUDPLUS_BACKEND_AVX2 -DSCLOUDPLUS_AVX2_FAMILY_AES",
       "SHIMDEFS": "",
       "NOAUX": "1",
-      "INSTANCE_CFLAGS": "-O3 -mavx2 -mbmi2 -mpopcnt -maes",
+      "INSTANCE_CFLAGS": "-O3 -mavx2 -mbmi2 -mpopcnt -maes -funroll-loops -std=c99",
       "variant": "optimized-x86_64",
       "imports": [
         "Implementations and Test_Vectors/Implementations/_shared"
@@ -4241,7 +4241,7 @@
       "DEFS": "-DSCLOUDPLUS_FAMILY_SM3 -DSCLOUDPLUS_TIER_OPTIMIZED -DSCLOUDPLUS_BACKEND_AVX2 -DSCLOUDPLUS_AVX2_FAMILY_SM3",
       "SHIMDEFS": "",
       "NOAUX": "1",
-      "INSTANCE_CFLAGS": "-O3 -mavx2 -mbmi2 -mpopcnt -maes",
+      "INSTANCE_CFLAGS": "-O3 -mavx2 -mbmi2 -mpopcnt -maes -funroll-loops -std=c99",
       "variant": "optimized-x86_64",
       "imports": [
         "Implementations and Test_Vectors/Implementations/_shared"
@@ -4313,7 +4313,7 @@
       "SRCS": "ICCS/auxfunc.c ICCS/drng.c src/decoder.c src/gf2x.c src/KEM_AlgorithmInstance.c src/sample.c",
       "INC": "-Isrc/TRIKE-1/src -Isrc/TRIKE-1/ICCS",
       "DEFS": "-DOPTIMIZED_IMPLEMENTATION",
-      "INSTANCE_CFLAGS": "-O3 -mvpclmulqdq -mavx512f -mavx512bw -mavx512dq -mavx512vl -mavx512vpopcntdq",
+      "INSTANCE_CFLAGS": "-mvpclmulqdq -mavx512f -mavx512bw -mavx512dq -mavx512vl -mavx512vpopcntdq -O2",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX512F",
@@ -4357,7 +4357,7 @@
       "SRCS": "ICCS/auxfunc.c ICCS/drng.c src/decoder.c src/gf2x.c src/KEM_AlgorithmInstance.c src/sample.c",
       "INC": "-Isrc/TRIKE-5/src -Isrc/TRIKE-5/ICCS",
       "DEFS": "-DOPTIMIZED_IMPLEMENTATION",
-      "INSTANCE_CFLAGS": "-O3 -mvpclmulqdq -mavx512f -mavx512bw -mavx512dq -mavx512vl -mavx512vpopcntdq",
+      "INSTANCE_CFLAGS": "-mvpclmulqdq -mavx512f -mavx512bw -mavx512dq -mavx512vl -mavx512vpopcntdq -O2",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX512F",
@@ -4401,7 +4401,7 @@
       "DEFS": "",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2 -mbmi -mpclmul",
+      "INSTANCE_CFLAGS": "-std=c99 -O3 -mavx -mavx2 -mbmi -mpclmul",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2",
@@ -4439,7 +4439,7 @@
       "DEFS": "",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2 -mbmi -mpclmul",
+      "INSTANCE_CFLAGS": "-std=c99 -O3 -mavx -mavx2 -mbmi -mpclmul",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2",
@@ -4477,7 +4477,7 @@
       "DEFS": "",
       "SHIMDEFS": "-DNGCC_INSTANCE_HEADER='\"include/KEM_AlgorithmInstance.h\"'",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3",
+      "INSTANCE_CFLAGS": "-O3 -march=native",
       "variant": "optimized-x86_64",
       "requirements": []
     },
@@ -4527,7 +4527,7 @@
       "DEFS": "",
       "SHIMDEFS": "-DNGCC_INSTANCE_HEADER='\"include/KEM_AlgorithmInstance.h\"'",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3",
+      "INSTANCE_CFLAGS": "-O3 -march=native",
       "variant": "optimized-x86_64",
       "requirements": []
     },
@@ -4577,7 +4577,7 @@
       "DEFS": "-DWEAVER_MODE=1",
       "SHIMDEFS": "-DNGCC_INSTANCE_HEADER='\"KEM_WeaverKEM-128.h\"'",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2 -mbmi2 -mpopcnt",
+      "INSTANCE_CFLAGS": "-mavx2 -mbmi2 -mpopcnt -O2",
       "variant": "optimized-x86_64",
       "imports": [],
       "requirements": [
@@ -4617,7 +4617,7 @@
       "DEFS": "-DWEAVER_MODE=3",
       "SHIMDEFS": "-DNGCC_INSTANCE_HEADER='\"KEM_WeaverKEM-256.h\"'",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2 -mbmi2 -mpopcnt",
+      "INSTANCE_CFLAGS": "-mavx2 -mbmi2 -mpopcnt -O2",
       "variant": "optimized-x86_64",
       "imports": [],
       "requirements": [
@@ -4657,7 +4657,7 @@
       "DEFS": "",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3",
+      "INSTANCE_CFLAGS": "-std=c99 -Ofast",
       "variant": "optimized-x86_64",
       "requirements": []
     },
@@ -4707,7 +4707,7 @@
       "DEFS": "",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3",
+      "INSTANCE_CFLAGS": "-std=c99 -Ofast",
       "variant": "optimized-x86_64",
       "requirements": []
     },
@@ -4757,7 +4757,7 @@
       "DEFS": "",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2",
+      "INSTANCE_CFLAGS": "-O3 -march=x86-64 -mavx2 -mtune=native -fomit-frame-pointer -std=c99",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2"
@@ -4781,7 +4781,7 @@
       "DEFS": "",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2",
+      "INSTANCE_CFLAGS": "-O3 -march=x86-64 -mavx2 -mtune=native -fomit-frame-pointer -std=c99",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2"
@@ -4805,7 +4805,7 @@
       "DEFS": "-DPARAMS=1 -DUSE_ICCS",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2 -mpopcnt",
+      "INSTANCE_CFLAGS": "-march=native -mtune=native -O3 -fomit-frame-pointer -mpopcnt -mavx2",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2",
@@ -4861,7 +4861,7 @@
       "DEFS": "-DPARAMS=2 -DUSE_ICCS",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2 -mpopcnt",
+      "INSTANCE_CFLAGS": "-march=native -mtune=native -O3 -fomit-frame-pointer -mpopcnt -mavx2",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2",
@@ -4917,7 +4917,7 @@
       "SRCDIR": "author/avx/BiT-128",
       "SRCS": "SIG_AlgorithmInstance.c auxfunc.c consts.c drng.c f1600x4.S fips202.c fips202x4.c ntt.S packing.c parabola.c parabola_avx.c pointwise.S poly.c polyvec.c sample.c samplerx4.c shuffle.S sign.c spectral.c symmetric.c ../common/keccakx4_lanes.c",
       "DEFS": "-DBIT_USE_SHAKE=0",
-      "INSTANCE_CFLAGS": "-O3 -mavx2",
+      "INSTANCE_CFLAGS": "-mavx2 -O2",
       "variant": "optimized-x86_64",
       "imports": [
         "author/avx/common",
@@ -4950,7 +4950,7 @@
       "SRCDIR": "author/avx/BiT-256",
       "SRCS": "SIG_AlgorithmInstance.c auxfunc.c consts.c drng.c f1600x4.S fips202.c fips202x4.c ntt.S packing.c parabola.c parabola_avx.c pointwise.S poly.c polyvec.c sample.c samplerx4.c shuffle.S sign.c spectral.c symmetric.c ../common/keccakx4_lanes.c",
       "DEFS": "-DBIT_USE_SHAKE=0",
-      "INSTANCE_CFLAGS": "-O3 -mavx2",
+      "INSTANCE_CFLAGS": "-mavx2 -O2",
       "variant": "optimized-x86_64",
       "imports": [
         "author/avx/common",
@@ -4983,7 +4983,7 @@
       "DEFS": "-DSPX_ENABLE_X8_WOTS",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2",
+      "INSTANCE_CFLAGS": "-O3 -march=native -mavx2 -fomit-frame-pointer -funroll-loops",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2"
@@ -5017,7 +5017,7 @@
       "DEFS": "-DSPX_ENABLE_X8_WOTS",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2",
+      "INSTANCE_CFLAGS": "-O3 -march=native -mavx2 -fomit-frame-pointer -funroll-loops",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2"
@@ -5051,7 +5051,7 @@
       "DEFS": "-DSPX_ENABLE_X8_WOTS",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2",
+      "INSTANCE_CFLAGS": "-O3 -march=native -mavx2 -fomit-frame-pointer -funroll-loops",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2"
@@ -5085,7 +5085,7 @@
       "DEFS": "-DSPX_ENABLE_X8_WOTS",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2",
+      "INSTANCE_CFLAGS": "-O3 -march=native -mavx2 -fomit-frame-pointer -funroll-loops",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2"
@@ -5119,7 +5119,7 @@
       "DEFS": "",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2",
+      "INSTANCE_CFLAGS": "-O3 -march=native -mavx2 -fomit-frame-pointer -funroll-loops",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2"
@@ -5173,7 +5173,7 @@
       "DEFS": "",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2",
+      "INSTANCE_CFLAGS": "-O3 -march=native -mavx2 -fomit-frame-pointer -funroll-loops",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2"
@@ -5227,7 +5227,7 @@
       "DEFS": "",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2",
+      "INSTANCE_CFLAGS": "-O3 -march=native -mavx2 -fomit-frame-pointer -funroll-loops",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2"
@@ -5281,7 +5281,7 @@
       "DEFS": "",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2",
+      "INSTANCE_CFLAGS": "-O3 -march=native -mavx2 -fomit-frame-pointer -funroll-loops",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2"
@@ -5332,10 +5332,10 @@
       "SRCDIR": "Implementations/Optimized_Implementation/sm4th_d3_128f_loose",
       "SRCS": "auxfunc.c bavc.c compat.c drng.c fields.c params.c prg.c random_oracle.c sig_impl.c universal_hashing.c utils.c vole.c owf.c sm4_witness.c sm4th_sm4_128.c utils_sm4/sm4_affine.c utils_sm4/sm4_core.c utils_sm4/sm4_ecb.c utils_sm4/sm4_sbox.c sig_timing.c sm4th_d3_128f_loose.c sm4th_d3_128f_loose_AlgorithmInstance.c",
       "INC": "-Isrc/sm4th_d3_128f_loose/utils_sm4",
-      "DEFS": "-DNDEBUG -DPRG_ACCE=1 -DSM4TH_ENABLE_SM4_ACCE=1 -DSM4TH_ENABLE_INTEL_SM4=1 -DSM4TH_ENABLE_HYGON_CIS=0 -DSM4TH_FIELD_PCLMUL -DREF_USE_LOOKUP_TABLES=0",
+      "DEFS": "-DNDEBUG -DSM4TH_FIELD_PCLMUL -DPRG_ACCE=1 -DSM4TH_ENABLE_SM4_ACCE=1 -DSM4TH_ENABLE_INTEL_SM4=1 -DSM4TH_ENABLE_HYGON_CIS=0 -DREF_USE_LOOKUP_TABLES=0",
       "SHIMDEFS": "-DNGCC_INSTANCE_HEADER='\"sm4th_d3_128f_loose_AlgorithmInstance.h\"'",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -maes -mavx2 -mpclmul -msse4.2",
+      "INSTANCE_CFLAGS": "-O3 -std=c11 -pedantic -Wall -Wextra -include fallbacks.h -mtune=native",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2",
@@ -5372,10 +5372,10 @@
       "SRCDIR": "Implementations/Optimized_Implementation/sm4th_d3_128s_loose",
       "SRCS": "auxfunc.c bavc.c compat.c drng.c fields.c params.c prg.c random_oracle.c sig_impl.c universal_hashing.c utils.c vole.c owf.c sm4_witness.c sm4th_sm4_128.c utils_sm4/sm4_affine.c utils_sm4/sm4_core.c utils_sm4/sm4_ecb.c utils_sm4/sm4_sbox.c sig_timing.c sm4th_d3_128s_loose.c sm4th_d3_128s_loose_AlgorithmInstance.c",
       "INC": "-Isrc/sm4th_d3_128s_loose/utils_sm4",
-      "DEFS": "-DNDEBUG -DPRG_ACCE=1 -DSM4TH_ENABLE_SM4_ACCE=1 -DSM4TH_ENABLE_INTEL_SM4=1 -DSM4TH_ENABLE_HYGON_CIS=0 -DSM4TH_FIELD_PCLMUL -DREF_USE_LOOKUP_TABLES=0",
+      "DEFS": "-DNDEBUG -DSM4TH_FIELD_PCLMUL -DPRG_ACCE=1 -DSM4TH_ENABLE_SM4_ACCE=1 -DSM4TH_ENABLE_INTEL_SM4=1 -DSM4TH_ENABLE_HYGON_CIS=0 -DREF_USE_LOOKUP_TABLES=0",
       "SHIMDEFS": "-DNGCC_INSTANCE_HEADER='\"sm4th_d3_128s_loose_AlgorithmInstance.h\"'",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -maes -mavx2 -mpclmul -msse2 -msse4.2",
+      "INSTANCE_CFLAGS": "-O3 -std=c11 -pedantic -Wall -Wextra -include fallbacks.h -mtune=native",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2",
@@ -5412,10 +5412,10 @@
       "SRCDIR": "Implementations/Optimized_Implementation/sm4th_d3_128f_tight",
       "SRCS": "auxfunc.c bavc.c compat.c drng.c fields.c params.c prg.c random_oracle.c sig_impl.c universal_hashing.c utils.c vole.c owf.c sm4_witness.c sm4th_sm4_128.c utils_sm4/sm4_affine.c utils_sm4/sm4_core.c utils_sm4/sm4_ecb.c utils_sm4/sm4_sbox.c sig_timing.c utils_ballet/Ballet256256_coreE.c sm4th_d3_128f_tight.c sm4th_d3_128f_tight_AlgorithmInstance.c",
       "INC": "-Isrc/sm4th_d3_128f_tight/utils_sm4 -Isrc/sm4th_d3_128f_tight/utils_ballet",
-      "DEFS": "-DNDEBUG -DPRG_ACCE=1 -DSM4TH_ENABLE_SM4_ACCE=1 -DSM4TH_ENABLE_INTEL_SM4=1 -DSM4TH_ENABLE_HYGON_CIS=0 -DSM4TH_FIELD_PCLMUL -DREF_USE_LOOKUP_TABLES=0 -DUSE_BALLET=1 -DHAVE_BALLET_CORE=1",
+      "DEFS": "-DNDEBUG -DSM4TH_FIELD_PCLMUL -DPRG_ACCE=1 -DUSE_BALLET=1 -DHAVE_BALLET_CORE=1 -DSM4TH_ENABLE_SM4_ACCE=1 -DSM4TH_ENABLE_INTEL_SM4=1 -DREF_USE_LOOKUP_TABLES=0",
       "SHIMDEFS": "-DNGCC_INSTANCE_HEADER='\"sm4th_d3_128f_tight_AlgorithmInstance.h\"'",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -maes -mavx2 -mpclmul -msse4.2",
+      "INSTANCE_CFLAGS": "-O3 -std=c11 -pedantic -Wall -Wextra -include fallbacks.h",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2",
@@ -5452,10 +5452,10 @@
       "SRCDIR": "Implementations/Optimized_Implementation/sm4th_d3_128s_tight",
       "SRCS": "auxfunc.c bavc.c compat.c drng.c fields.c params.c prg.c random_oracle.c sig_impl.c universal_hashing.c utils.c vole.c owf.c sm4_witness.c sm4th_sm4_128.c utils_sm4/sm4_affine.c utils_sm4/sm4_core.c utils_sm4/sm4_ecb.c utils_sm4/sm4_sbox.c sig_timing.c utils_ballet/Ballet256256_coreE.c sm4th_d3_128s_tight.c sm4th_d3_128s_tight_AlgorithmInstance.c",
       "INC": "-Isrc/sm4th_d3_128s_tight/utils_sm4 -Isrc/sm4th_d3_128s_tight/utils_ballet",
-      "DEFS": "-DNDEBUG -DPRG_ACCE=1 -DSM4TH_ENABLE_SM4_ACCE=1 -DSM4TH_ENABLE_INTEL_SM4=1 -DSM4TH_ENABLE_HYGON_CIS=0 -DSM4TH_FIELD_PCLMUL -DREF_USE_LOOKUP_TABLES=0 -DUSE_BALLET=1 -DHAVE_BALLET_CORE=1",
+      "DEFS": "-DNDEBUG -DSM4TH_FIELD_PCLMUL -DPRG_ACCE=1 -DUSE_BALLET=1 -DHAVE_BALLET_CORE=1 -DSM4TH_ENABLE_SM4_ACCE=1 -DSM4TH_ENABLE_INTEL_SM4=1 -DREF_USE_LOOKUP_TABLES=0",
       "SHIMDEFS": "-DNGCC_INSTANCE_HEADER='\"sm4th_d3_128s_tight_AlgorithmInstance.h\"'",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -maes -mavx2 -mpclmul -msse4.2",
+      "INSTANCE_CFLAGS": "-O3 -std=c11 -pedantic -Wall -Wextra -include fallbacks.h",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2",
@@ -5492,10 +5492,10 @@
       "SRCDIR": "Implementations/Optimized_Implementation/sm4th_em_d2_128f_loose",
       "SRCS": "auxfunc.c bavc.c compat.c drng.c fields.c params.c prg.c random_oracle.c sig_impl.c universal_hashing.c utils.c vole.c owf.c sm4_witness.c sm4th_sm4_128.c utils_sm4/sm4_affine.c utils_sm4/sm4_core.c utils_sm4/sm4_ecb.c utils_sm4/sm4_sbox.c sm4th_em_d2_128f_loose.c sm4th_em_d2_128f_loose_AlgorithmInstance.c",
       "INC": "-Isrc/sm4th_em_d2_128f_loose/utils_sm4",
-      "DEFS": "-DNDEBUG -DPRG_ACCE=1 -DSM4TH_ENABLE_SM4_ACCE=1 -DSM4TH_ENABLE_INTEL_SM4=1 -DSM4TH_ENABLE_HYGON_CIS=0 -DSM4TH_FIELD_PCLMUL -DREF_USE_LOOKUP_TABLES=0",
+      "DEFS": "-DNDEBUG -DSM4TH_FIELD_PCLMUL -DPRG_ACCE=1 -DSM4TH_ENABLE_SM4_ACCE=1 -DSM4TH_ENABLE_INTEL_SM4=1 -DSM4TH_ENABLE_HYGON_CIS=0 -DREF_USE_LOOKUP_TABLES=0",
       "SHIMDEFS": "-DNGCC_INSTANCE_HEADER='\"sm4th_em_d2_128f_loose_AlgorithmInstance.h\"'",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -maes -mavx2 -mpclmul -msse4.2",
+      "INSTANCE_CFLAGS": "-O3 -std=c11 -pedantic -Wall -Wextra -include fallbacks.h -mtune=native",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2",
@@ -5532,10 +5532,10 @@
       "SRCDIR": "Implementations/Optimized_Implementation/sm4th_em_d2_128s_loose",
       "SRCS": "auxfunc.c bavc.c compat.c drng.c fields.c params.c prg.c random_oracle.c sig_impl.c universal_hashing.c utils.c vole.c owf.c sm4_witness.c sm4th_sm4_128.c utils_sm4/sm4_affine.c utils_sm4/sm4_core.c utils_sm4/sm4_ecb.c utils_sm4/sm4_sbox.c sm4th_em_d2_128s_loose.c sm4th_em_d2_128s_loose_AlgorithmInstance.c",
       "INC": "-Isrc/sm4th_em_d2_128s_loose/utils_sm4",
-      "DEFS": "-DNDEBUG -DPRG_ACCE=1 -DSM4TH_ENABLE_SM4_ACCE=1 -DSM4TH_ENABLE_INTEL_SM4=1 -DSM4TH_ENABLE_HYGON_CIS=0 -DSM4TH_FIELD_PCLMUL -DREF_USE_LOOKUP_TABLES=0",
+      "DEFS": "-DNDEBUG -DSM4TH_FIELD_PCLMUL -DPRG_ACCE=1 -DSM4TH_ENABLE_SM4_ACCE=1 -DSM4TH_ENABLE_INTEL_SM4=1 -DSM4TH_ENABLE_HYGON_CIS=0 -DREF_USE_LOOKUP_TABLES=0",
       "SHIMDEFS": "-DNGCC_INSTANCE_HEADER='\"sm4th_em_d2_128s_loose_AlgorithmInstance.h\"'",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -maes -mavx2 -mpclmul -msse4.2",
+      "INSTANCE_CFLAGS": "-O3 -std=c11 -pedantic -Wall -Wextra -include fallbacks.h -mtune=native",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2",
@@ -5572,10 +5572,10 @@
       "SRCDIR": "Implementations/Optimized_Implementation/sm4th_em_d2_128f_tight",
       "SRCS": "auxfunc.c bavc.c compat.c drng.c fields.c params.c prg.c random_oracle.c sig_impl.c universal_hashing.c utils.c vole.c owf.c sm4_witness.c sm4th_sm4_128.c utils_sm4/sm4_affine.c utils_sm4/sm4_core.c utils_sm4/sm4_ecb.c utils_sm4/sm4_sbox.c utils_ballet/Ballet256256_coreE.c sm4th_em_d2_128f_tight.c sm4th_em_d2_128f_tight_AlgorithmInstance.c",
       "INC": "-Isrc/sm4th_em_d2_128f_tight/utils_sm4 -Isrc/sm4th_em_d2_128f_tight/utils_ballet",
-      "DEFS": "-DNDEBUG -DPRG_ACCE=1 -DSM4TH_ENABLE_SM4_ACCE=1 -DSM4TH_ENABLE_INTEL_SM4=1 -DSM4TH_ENABLE_HYGON_CIS=0 -DSM4TH_FIELD_PCLMUL -DREF_USE_LOOKUP_TABLES=0 -DUSE_BALLET=1 -DHAVE_BALLET_CORE=1",
+      "DEFS": "-DNDEBUG -DSM4TH_FIELD_PCLMUL -DPRG_ACCE=1 -DUSE_BALLET=1 -DHAVE_BALLET_CORE=1 -DSM4TH_ENABLE_SM4_ACCE=1 -DSM4TH_ENABLE_INTEL_SM4=1 -DREF_USE_LOOKUP_TABLES=0",
       "SHIMDEFS": "-DNGCC_INSTANCE_HEADER='\"sm4th_em_d2_128f_tight_AlgorithmInstance.h\"'",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -maes -mavx2 -mpclmul -msse4.2",
+      "INSTANCE_CFLAGS": "-O3 -std=c11 -pedantic -Wall -Wextra -include fallbacks.h",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2",
@@ -5612,10 +5612,10 @@
       "SRCDIR": "Implementations/Optimized_Implementation/sm4th_em_d2_128s_tight",
       "SRCS": "auxfunc.c bavc.c compat.c drng.c fields.c params.c prg.c random_oracle.c sig_impl.c universal_hashing.c utils.c vole.c owf.c sm4_witness.c sm4th_sm4_128.c utils_sm4/sm4_affine.c utils_sm4/sm4_core.c utils_sm4/sm4_ecb.c utils_sm4/sm4_sbox.c utils_ballet/Ballet256256_coreE.c sm4th_em_d2_128s_tight.c sm4th_em_d2_128s_tight_AlgorithmInstance.c",
       "INC": "-Isrc/sm4th_em_d2_128s_tight/utils_sm4 -Isrc/sm4th_em_d2_128s_tight/utils_ballet",
-      "DEFS": "-DNDEBUG -DPRG_ACCE=1 -DSM4TH_ENABLE_SM4_ACCE=1 -DSM4TH_ENABLE_INTEL_SM4=1 -DSM4TH_ENABLE_HYGON_CIS=0 -DSM4TH_FIELD_PCLMUL -DREF_USE_LOOKUP_TABLES=0 -DUSE_BALLET=1 -DHAVE_BALLET_CORE=1",
+      "DEFS": "-DNDEBUG -DSM4TH_FIELD_PCLMUL -DPRG_ACCE=1 -DUSE_BALLET=1 -DHAVE_BALLET_CORE=1 -DSM4TH_ENABLE_SM4_ACCE=1 -DSM4TH_ENABLE_INTEL_SM4=1 -DREF_USE_LOOKUP_TABLES=0",
       "SHIMDEFS": "-DNGCC_INSTANCE_HEADER='\"sm4th_em_d2_128s_tight_AlgorithmInstance.h\"'",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -maes -mavx2 -mpclmul -msse4.2",
+      "INSTANCE_CFLAGS": "-O3 -std=c11 -pedantic -Wall -Wextra -include fallbacks.h",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2",
@@ -5652,10 +5652,10 @@
       "SRCDIR": "Implementations/Optimized_Implementation/ublockith_d3_256f",
       "SRCS": "auxfunc.c bavc.c compat.c drng.c fields.c params.c prg.c random_oracle.c sig_impl.c universal_hashing.c utils.c vole.c owf.c utils_ublock/sig_impl_ublock.c utils_ublock/ublock_affine.c utils_ublock/ublock_constraints.c utils_ublock/ublock_core.c utils_ublock/ublock_ecb.c utils_ublock/ublock_witness.c utils_ublock/ublockith_ublock_256.c utils_ballet/Ballet256256_coreE.c ublockith_d3_256f.c ublockith_d3_256f_AlgorithmInstance.c",
       "INC": "-Isrc/ublockith_d3_256f/utils_ublock -Isrc/ublockith_d3_256f/utils_ballet",
-      "DEFS": "-DNDEBUG -DPRG_ACCE=1 -DUSE_BALLET=1 -DHAVE_BALLET_CORE=1 -DUBLOCKITH_ENABLE_SM4_ACCE=0 -DUBLOCKITH_FIELD_PCLMUL -DREF_USE_LOOKUP_TABLES=0",
+      "DEFS": "-DNDEBUG -DUBLOCKITH_FIELD_PCLMUL -DPRG_ACCE=1 -DUSE_BALLET=1 -DHAVE_BALLET_CORE=1 -DUBLOCKITH_ENABLE_SM4_ACCE=0 -DREF_USE_LOOKUP_TABLES=0",
       "SHIMDEFS": "-DNGCC_INSTANCE_HEADER='\"ublockith_d3_256f_AlgorithmInstance.h\"'",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -maes -mavx2 -mpclmul -msse4.2",
+      "INSTANCE_CFLAGS": "-O3 -std=c11 -pedantic -Wall -Wextra -include fallbacks.h -march=native -mpclmul -mavx2",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2",
@@ -5692,10 +5692,10 @@
       "SRCDIR": "Implementations/Optimized_Implementation/ublockith_d3_256s",
       "SRCS": "auxfunc.c bavc.c compat.c drng.c fields.c params.c prg.c random_oracle.c sig_impl.c universal_hashing.c utils.c vole.c owf.c utils_ublock/sig_impl_ublock.c utils_ublock/ublock_affine.c utils_ublock/ublock_constraints.c utils_ublock/ublock_core.c utils_ublock/ublock_ecb.c utils_ublock/ublock_witness.c utils_ublock/ublockith_ublock_256.c utils_ballet/Ballet256256_coreE.c ublockith_d3_256s.c ublockith_d3_256s_AlgorithmInstance.c",
       "INC": "-Isrc/ublockith_d3_256s/utils_ublock -Isrc/ublockith_d3_256s/utils_ballet",
-      "DEFS": "-DNDEBUG -DPRG_ACCE=1 -DUSE_BALLET=1 -DHAVE_BALLET_CORE=1 -DUBLOCKITH_ENABLE_SM4_ACCE=0 -DUBLOCKITH_FIELD_PCLMUL -DREF_USE_LOOKUP_TABLES=0",
+      "DEFS": "-DNDEBUG -DUBLOCKITH_FIELD_PCLMUL -DPRG_ACCE=1 -DUSE_BALLET=1 -DHAVE_BALLET_CORE=1 -DUBLOCKITH_ENABLE_SM4_ACCE=0 -DREF_USE_LOOKUP_TABLES=0",
       "SHIMDEFS": "-DNGCC_INSTANCE_HEADER='\"ublockith_d3_256s_AlgorithmInstance.h\"'",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -maes -mavx2 -mpclmul -msse4.2",
+      "INSTANCE_CFLAGS": "-O3 -std=c11 -pedantic -Wall -Wextra -include fallbacks.h -march=native -mpclmul -mavx2",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2",
@@ -5732,10 +5732,10 @@
       "SRCDIR": "Implementations/Optimized_Implementation/ublockith_em_d3_256f",
       "SRCS": "auxfunc.c bavc.c compat.c drng.c fields.c params.c prg.c random_oracle.c sig_impl.c universal_hashing.c utils.c vole.c owf.c utils_ublock/sig_impl_ublock.c utils_ublock/ublock_affine.c utils_ublock/ublock_constraints.c utils_ublock/ublock_core.c utils_ublock/ublock_ecb.c utils_ublock/ublock_witness.c utils_ublock/ublockith_ublock_256.c utils_ballet/Ballet256256_coreE.c ublockith_em_d3_256f.c ublockith_em_d3_256f_AlgorithmInstance.c",
       "INC": "-Isrc/ublockith_em_d3_256f/utils_ublock -Isrc/ublockith_em_d3_256f/utils_ballet",
-      "DEFS": "-DNDEBUG -DPRG_ACCE=1 -DUSE_BALLET=1 -DHAVE_BALLET_CORE=1 -DUBLOCKITH_ENABLE_SM4_ACCE=0 -DUBLOCKITH_FIELD_PCLMUL -DREF_USE_LOOKUP_TABLES=0",
+      "DEFS": "-DNDEBUG -DUBLOCKITH_FIELD_PCLMUL -DPRG_ACCE=1 -DUSE_BALLET=1 -DHAVE_BALLET_CORE=1 -DUBLOCKITH_ENABLE_SM4_ACCE=0 -DREF_USE_LOOKUP_TABLES=0",
       "SHIMDEFS": "-DNGCC_INSTANCE_HEADER='\"ublockith_em_d3_256f_AlgorithmInstance.h\"'",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -maes -mavx2 -mpclmul -msse4.2",
+      "INSTANCE_CFLAGS": "-O3 -std=c11 -pedantic -Wall -Wextra -include fallbacks.h -march=native -mpclmul -mavx2",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2",
@@ -5772,10 +5772,10 @@
       "SRCDIR": "Implementations/Optimized_Implementation/ublockith_em_d3_256s",
       "SRCS": "auxfunc.c bavc.c compat.c drng.c fields.c params.c prg.c random_oracle.c sig_impl.c universal_hashing.c utils.c vole.c owf.c utils_ublock/sig_impl_ublock.c utils_ublock/ublock_affine.c utils_ublock/ublock_constraints.c utils_ublock/ublock_core.c utils_ublock/ublock_ecb.c utils_ublock/ublock_witness.c utils_ublock/ublockith_ublock_256.c utils_ballet/Ballet256256_coreE.c ublockith_em_d3_256s.c ublockith_em_d3_256s_AlgorithmInstance.c",
       "INC": "-Isrc/ublockith_em_d3_256s/utils_ublock -Isrc/ublockith_em_d3_256s/utils_ballet",
-      "DEFS": "-DNDEBUG -DPRG_ACCE=1 -DUSE_BALLET=1 -DHAVE_BALLET_CORE=1 -DUBLOCKITH_ENABLE_SM4_ACCE=0 -DUBLOCKITH_FIELD_PCLMUL -DREF_USE_LOOKUP_TABLES=0",
+      "DEFS": "-DNDEBUG -DUBLOCKITH_FIELD_PCLMUL -DPRG_ACCE=1 -DUSE_BALLET=1 -DHAVE_BALLET_CORE=1 -DUBLOCKITH_ENABLE_SM4_ACCE=0 -DREF_USE_LOOKUP_TABLES=0",
       "SHIMDEFS": "-DNGCC_INSTANCE_HEADER='\"ublockith_em_d3_256s_AlgorithmInstance.h\"'",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -maes -mavx2 -mpclmul -msse4.2",
+      "INSTANCE_CFLAGS": "-O3 -std=c11 -pedantic -Wall -Wextra -include fallbacks.h -march=native -mpclmul -mavx2",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2",
@@ -5815,7 +5815,7 @@
       "DEFS": "-DCOMPASS_SIG_MODE=128",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3",
+      "INSTANCE_CFLAGS": "-O3 -fomit-frame-pointer",
       "variant": "optimized-x86_64",
       "requirements": []
     },
@@ -5865,7 +5865,7 @@
       "DEFS": "-DCOMPASS_SIG_MODE=256",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3",
+      "INSTANCE_CFLAGS": "-O3 -fomit-frame-pointer",
       "variant": "optimized-x86_64",
       "requirements": []
     },
@@ -5912,7 +5912,7 @@
       "SRCS": "../../Reference_Implementation/CS-128/SIG_AlgorithmInstance.c auxfunc.c bits-hints.c conversion.c cs.c drng.c encodings.c ntt.c sampling.c",
       "INC": "",
       "DEFS": "",
-      "INSTANCE_CFLAGS": "-O2 -fcommon -w -Imake/compat/sign-07",
+      "INSTANCE_CFLAGS": "-fcommon -w -Imake/compat/sign-07 -O2",
       "SHIMDEFS": "-DNGCC_INSTANCE_HEADER_NONE -DNGCC_INSTANCE='\"CS_128\"' -DNGCC_NO_DRNG",
       "NOAUX": "",
       "variant": "optimized-x86_64",
@@ -5974,7 +5974,7 @@
       "SRCS": "../../Reference_Implementation/CS-256/SIG_AlgorithmInstance.c auxfunc.c bits-hints.c conversion.c cs.c drng.c encodings.c ntt.c sampling.c",
       "INC": "",
       "DEFS": "",
-      "INSTANCE_CFLAGS": "-O2 -fcommon -w -Imake/compat/sign-07",
+      "INSTANCE_CFLAGS": "-fcommon -w -Imake/compat/sign-07 -O2",
       "SHIMDEFS": "-DNGCC_INSTANCE_HEADER_NONE -DNGCC_INSTANCE='\"CS_256\"' -DNGCC_NO_DRNG",
       "NOAUX": "",
       "variant": "optimized-x86_64",
@@ -6039,7 +6039,7 @@
       "DEFS": "-DDARTS_MODE=128",
       "SHIMDEFS": "-DNGCC_NO_DRNG",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2 -include immintrin.h",
+      "INSTANCE_CFLAGS": "-O3 -march=native -mtune=native -std=gnu99 -mavx2 -include immintrin.h",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2"
@@ -6093,7 +6093,7 @@
       "DEFS": "-DDARTS_MODE=256",
       "SHIMDEFS": "-DNGCC_NO_DRNG",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2 -include immintrin.h",
+      "INSTANCE_CFLAGS": "-O3 -march=native -mtune=native -std=gnu99 -mavx2 -include immintrin.h",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2"
@@ -6203,7 +6203,7 @@
       "DEFS": "",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2",
+      "INSTANCE_CFLAGS": "-march=x86-64 -mavx2 -mtune=native -O2",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2"
@@ -6257,7 +6257,7 @@
       "DEFS": "",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2",
+      "INSTANCE_CFLAGS": "-march=x86-64 -mavx2 -mtune=native -O2",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2"
@@ -6311,7 +6311,7 @@
       "DEFS": "-DSPX_ENABLE_X8_WOTS -DSPX_ENABLE_X8_PORS",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-std=c99 -O3 -mavx2",
+      "INSTANCE_CFLAGS": "-O3 -march=native -mavx2 -fomit-frame-pointer -funroll-loops",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2"
@@ -6345,7 +6345,7 @@
       "DEFS": "-DSPX_ENABLE_X8_WOTS -DSPX_ENABLE_X8_PORS",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-std=c99 -O3 -mavx2",
+      "INSTANCE_CFLAGS": "-O3 -march=native -mavx2 -fomit-frame-pointer -funroll-loops",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2"
@@ -6379,7 +6379,7 @@
       "DEFS": "-DSPX_ENABLE_X8_WOTS -DSPX_ENABLE_X8_PORS",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-std=c99 -O3 -mavx2",
+      "INSTANCE_CFLAGS": "-O3 -march=native -mavx2 -fomit-frame-pointer -funroll-loops",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2"
@@ -6413,7 +6413,7 @@
       "DEFS": "-DSPX_ENABLE_X8_WOTS -DSPX_ENABLE_X8_PORS",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-std=c99 -O3 -mavx2",
+      "INSTANCE_CFLAGS": "-O3 -march=native -mavx2 -fomit-frame-pointer -funroll-loops",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2"
@@ -6443,9 +6443,9 @@
     "linux-x86_64": {
       "SRCDIR": "Implementations/Optimized_Implementation/Galas-160S",
       "SRCS": "faest.cpp owf_proof.cpp polynomials_constants.cpp small_vole.cpp vector_com.cpp vole_commit.cpp avx2/aes_impl.cpp auxfunc.c drng.c",
-      "INC": "-Isrc/Galas-160S/avx2",
+      "INC": "",
       "DEFS": "-DNGCC_GALAS_PARAMS=galas_ngcc_160s",
-      "INSTANCE_CFLAGS": "-O3 -mavx2 -mpclmul -maes -mbmi2 -mpopcnt",
+      "INSTANCE_CFLAGS": "-O3 -std=c99 -march=x86-64 -mavx2 -maes -mpclmul -mtune=native -fomit-frame-pointer",
       "SHIMDEFS": "-DNGCC_INSTANCE_HEADER_NONE -DNGCC_INSTANCE='\"Galas-160S\"'",
       "NOAUX": "",
       "GLUE_SRCS": "make/compat/sign-12/optimized.cpp",
@@ -6487,9 +6487,9 @@
     "linux-x86_64": {
       "SRCDIR": "Implementations/Optimized_Implementation/Galas-160F",
       "SRCS": "faest.cpp owf_proof.cpp polynomials_constants.cpp small_vole.cpp vector_com.cpp vole_commit.cpp avx2/aes_impl.cpp auxfunc.c drng.c",
-      "INC": "-Isrc/Galas-160F/avx2",
+      "INC": "",
       "DEFS": "-DNGCC_GALAS_PARAMS=galas_ngcc_160f",
-      "INSTANCE_CFLAGS": "-O3 -mavx2 -mpclmul -maes -mbmi2 -mpopcnt",
+      "INSTANCE_CFLAGS": "-O3 -std=c99 -march=x86-64 -mavx2 -maes -mpclmul -mtune=native -fomit-frame-pointer",
       "SHIMDEFS": "-DNGCC_INSTANCE_HEADER_NONE -DNGCC_INSTANCE='\"Galas-160F\"'",
       "NOAUX": "",
       "GLUE_SRCS": "make/compat/sign-12/optimized.cpp",
@@ -6531,9 +6531,9 @@
     "linux-x86_64": {
       "SRCDIR": "Implementations/Optimized_Implementation/Galas-256S",
       "SRCS": "faest.cpp owf_proof.cpp polynomials_constants.cpp small_vole.cpp vector_com.cpp vole_commit.cpp avx2/aes_impl.cpp auxfunc.c drng.c",
-      "INC": "-Isrc/Galas-256S/avx2",
+      "INC": "",
       "DEFS": "-DNGCC_GALAS_PARAMS=galas_ngcc_256s",
-      "INSTANCE_CFLAGS": "-O3 -mavx2 -mpclmul -maes -mbmi2 -mpopcnt",
+      "INSTANCE_CFLAGS": "-O3 -std=c99 -march=x86-64 -mavx2 -maes -mpclmul -mtune=native -fomit-frame-pointer",
       "SHIMDEFS": "-DNGCC_INSTANCE_HEADER_NONE -DNGCC_INSTANCE='\"Galas-256S\"'",
       "NOAUX": "",
       "GLUE_SRCS": "make/compat/sign-12/optimized.cpp",
@@ -6575,9 +6575,9 @@
     "linux-x86_64": {
       "SRCDIR": "Implementations/Optimized_Implementation/Galas-256F",
       "SRCS": "faest.cpp owf_proof.cpp polynomials_constants.cpp small_vole.cpp vector_com.cpp vole_commit.cpp avx2/aes_impl.cpp auxfunc.c drng.c",
-      "INC": "-Isrc/Galas-256F/avx2",
+      "INC": "",
       "DEFS": "-DNGCC_GALAS_PARAMS=galas_ngcc_256f",
-      "INSTANCE_CFLAGS": "-O3 -mavx2 -mpclmul -maes -mbmi2 -mpopcnt",
+      "INSTANCE_CFLAGS": "-O3 -std=c99 -march=x86-64 -mavx2 -maes -mpclmul -mtune=native -fomit-frame-pointer",
       "SHIMDEFS": "-DNGCC_INSTANCE_HEADER_NONE -DNGCC_INSTANCE='\"Galas-256F\"'",
       "NOAUX": "",
       "GLUE_SRCS": "make/compat/sign-12/optimized.cpp",
@@ -6620,10 +6620,10 @@
       "SRCDIR": "Implementations/Optimized_Implementation/GreatWall128f",
       "SRCS": "SIG_AlgorithmInstance.c drng.c api.c aes.c aes_impl.c block.c block_impl.c faest.c keygen_gf137.c gf137_proof.c greatwall-128-matrix.c hash.c KeccakHash.c KeccakHashtimes4.c KeccakP-1600-times2-SIMD128.c KeccakP-1600-times4-SIMD256.c KeccakP-1600-times8-on4.c KeccakSponge.c KeccakSpongetimes4.c owf_proof.c polynomials.c polynomials_impl.c prgs.c quicksilver.c randomness_kat_fixed.c small_vole.c transpose.c universal_hash.c util.c vector_com.c vole_check.c vole_commit.c KeccakP-1600-AVX2.s greatwall.c greatwall_impl.c",
       "INC": "",
-      "DEFS": "-DGREATWALL_HASH_BACKEND_SM3 -DGREATWALL_GF137_POW_SQUARE=1 -DGREATWALL_KEYGEN_GF137_ISOLATED=1 -D_bswap64=__builtin_bswap64",
+      "DEFS": "-DENC_CONSTRAINTS_ENABLE_TIMING=0 -DGREATWALL_GF137_POW_SQUARE=1 -DGREATWALL_KEYGEN_GF137_ISOLATED=1 -DGREATWALL_HASH_BACKEND_SM3",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -maes -mavx2 -mpclmul -msse4.2 -mpopcnt",
+      "INSTANCE_CFLAGS": "-O3 -march=x86-64 -mavx2 -maes -mpclmul -mtune=native -fomit-frame-pointer -std=c99 -Wpedantic -Wall -Wextra",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2",
@@ -6648,10 +6648,10 @@
       "SRCDIR": "Implementations/Optimized_Implementation/GreatWall128s",
       "SRCS": "SIG_AlgorithmInstance.c drng.c api.c aes.c aes_impl.c block.c block_impl.c faest.c keygen_gf137.c gf137_proof.c greatwall-128-matrix.c hash.c KeccakHash.c KeccakHashtimes4.c KeccakP-1600-times2-SIMD128.c KeccakP-1600-times4-SIMD256.c KeccakP-1600-times8-on4.c KeccakSponge.c KeccakSpongetimes4.c owf_proof.c polynomials.c polynomials_impl.c prgs.c quicksilver.c randomness_kat_fixed.c small_vole.c transpose.c universal_hash.c util.c vector_com.c vole_check.c vole_commit.c KeccakP-1600-AVX2.s greatwall.c greatwall_impl.c",
       "INC": "",
-      "DEFS": "-DGREATWALL_HASH_BACKEND_SM3 -DGREATWALL_GF137_POW_SQUARE=1 -DGREATWALL_KEYGEN_GF137_ISOLATED=1 -D_bswap64=__builtin_bswap64",
+      "DEFS": "-DFAEST_ENABLE_TIMING=0 -DENC_CONSTRAINTS_ENABLE_TIMING=0 -DGREATWALL_GF137_POW_SQUARE=1 -DGREATWALL_KEYGEN_GF137_ISOLATED=1 -DGREATWALL_HASH_BACKEND_SM3",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -maes -mavx2 -mpclmul -msse4.2 -mpopcnt",
+      "INSTANCE_CFLAGS": "-O3 -march=x86-64 -mavx2 -maes -mpclmul -mtune=native -fomit-frame-pointer -std=c99 -Wpedantic -Wall -Wextra",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2",
@@ -6678,8 +6678,8 @@
       "NOAUX": "",
       "SRCDIR": "Implementations/Optimized_Implementation/GreatWall160f",
       "SRCS": "aes.c aes_impl.c api.c block.c block_impl.c faest.c keygen_gf163.c gf163_proof.c greatwall-160-matrix.c hash.c KeccakHash.c KeccakHashtimes4.c KeccakP-1600-times2-SIMD128.c KeccakP-1600-times4-SIMD256.c KeccakP-1600-times8-on4.c KeccakSponge.c KeccakSpongetimes4.c owf_proof.c polynomials.c polynomials_impl.c prgs.c quicksilver.c small_vole.c transpose.c universal_hash.c util.c vector_com.c vole_check.c vole_commit.c drng.c KeccakP-1600-AVX2.s auxfunc.c SIG_AlgorithmInstance.c randomness_kat_fixed.c",
-      "DEFS": "-DGREATWALL_HASH_BACKEND_SM3 -DGREATWALL_GF163_POW_SQUARE=1 -DGREATWALL_KEYGEN_GF163_ISOLATED=1 -D_bswap64=__builtin_bswap64",
-      "INSTANCE_CFLAGS": "-O3 -mavx2 -maes -mpclmul -mpopcnt",
+      "DEFS": "-DFAEST_ENABLE_TIMING=0 -DENC_CONSTRAINTS_ENABLE_TIMING=0 -DTIMING_AVG_RUNS=1 -DGREATWALL_HASH_BACKEND_SM3",
+      "INSTANCE_CFLAGS": "-O3 -march=x86-64 -mavx2 -maes -mpclmul -mtune=native -fomit-frame-pointer -std=c99 -Wpedantic -Wall -Wextra",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2",
@@ -6705,8 +6705,8 @@
       "NOAUX": "",
       "SRCDIR": "Implementations/Optimized_Implementation/GreatWall160s",
       "SRCS": "aes.c aes_impl.c api.c block.c block_impl.c faest.c keygen_gf163.c gf163_proof.c greatwall-160-matrix.c hash.c KeccakHash.c KeccakHashtimes4.c KeccakP-1600-times2-SIMD128.c KeccakP-1600-times4-SIMD256.c KeccakP-1600-times8-on4.c KeccakSponge.c KeccakSpongetimes4.c owf_proof.c polynomials.c polynomials_impl.c prgs.c quicksilver.c small_vole.c transpose.c universal_hash.c util.c vector_com.c vole_check.c vole_commit.c drng.c KeccakP-1600-AVX2.s auxfunc.c SIG_AlgorithmInstance.c randomness_kat_fixed.c",
-      "DEFS": "-DGREATWALL_HASH_BACKEND_SM3 -DGREATWALL_GF163_POW_SQUARE=1 -DGREATWALL_KEYGEN_GF163_ISOLATED=1 -D_bswap64=__builtin_bswap64",
-      "INSTANCE_CFLAGS": "-O3 -mavx2 -maes -mpclmul -mpopcnt",
+      "DEFS": "-DFAEST_ENABLE_TIMING=0 -DENC_CONSTRAINTS_ENABLE_TIMING=0 -DTIMING_AVG_RUNS=1 -DGREATWALL_HASH_BACKEND_SM3",
+      "INSTANCE_CFLAGS": "-O3 -march=x86-64 -mavx2 -maes -mpclmul -mtune=native -fomit-frame-pointer -std=c99 -Wpedantic -Wall -Wextra",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2",
@@ -6730,10 +6730,10 @@
       "SRCDIR": "Implementations/Optimized_Implementation/GreatWall192f",
       "SRCS": "SIG_AlgorithmInstance.c drng.c api.c aes.c aes_impl.c block.c block_impl.c faest.c keygen_gf197.c gf197_proof.c greatwall-192-matrix.c hash.c KeccakHash.c KeccakHashtimes4.c KeccakP-1600-times2-SIMD128.c KeccakP-1600-times4-SIMD256.c KeccakP-1600-times8-on4.c KeccakSponge.c KeccakSpongetimes4.c owf_proof.c polynomials.c polynomials_impl.c prgs.c quicksilver.c randomness_kat_fixed.c small_vole.c transpose.c universal_hash.c util.c vector_com.c vole_check.c vole_commit.c KeccakP-1600-AVX2.s greatwall.c greatwall_impl.c",
       "INC": "",
-      "DEFS": "-DGREATWALL_HASH_BACKEND_SM3 -DGREATWALL_GF197_POW_SQUARE=1 -DGREATWALL_KEYGEN_GF197_ISOLATED=1 -D_bswap64=__builtin_bswap64",
+      "DEFS": "-DFAEST_ENABLE_TIMING=0 -DENC_CONSTRAINTS_ENABLE_TIMING=0 -DGREATWALL_GF197_POW_SQUARE=1 -DGREATWALL_KEYGEN_GF197_ISOLATED=1 -DGREATWALL_HASH_BACKEND_SM3",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -maes -mavx2 -mpclmul -msse4.2 -mpopcnt",
+      "INSTANCE_CFLAGS": "-O3 -march=x86-64 -mavx2 -maes -mpclmul -mtune=native -fomit-frame-pointer -std=c99 -Wpedantic -Wall -Wextra",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2",
@@ -6758,10 +6758,10 @@
       "SRCDIR": "Implementations/Optimized_Implementation/GreatWall192s",
       "SRCS": "SIG_AlgorithmInstance.c drng.c api.c aes.c aes_impl.c block.c block_impl.c faest.c keygen_gf197.c gf197_proof.c greatwall-192-matrix.c hash.c KeccakHash.c KeccakHashtimes4.c KeccakP-1600-times2-SIMD128.c KeccakP-1600-times4-SIMD256.c KeccakP-1600-times8-on4.c KeccakSponge.c KeccakSpongetimes4.c owf_proof.c polynomials.c polynomials_impl.c prgs.c quicksilver.c randomness_kat_fixed.c small_vole.c transpose.c universal_hash.c util.c vector_com.c vole_check.c vole_commit.c KeccakP-1600-AVX2.s greatwall.c greatwall_impl.c",
       "INC": "",
-      "DEFS": "-DGREATWALL_HASH_BACKEND_SM3 -DGREATWALL_GF197_POW_SQUARE=1 -DGREATWALL_KEYGEN_GF197_ISOLATED=1 -D_bswap64=__builtin_bswap64",
+      "DEFS": "-DFAEST_ENABLE_TIMING=0 -DENC_CONSTRAINTS_ENABLE_TIMING=0 -DGREATWALL_GF197_POW_SQUARE=1 -DGREATWALL_KEYGEN_GF197_ISOLATED=1 -DGREATWALL_HASH_BACKEND_SM3",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -maes -mavx2 -mpclmul -msse4.2 -mpopcnt",
+      "INSTANCE_CFLAGS": "-O3 -march=x86-64 -mavx2 -maes -mpclmul -mtune=native -fomit-frame-pointer -std=c99 -Wpedantic -Wall -Wextra",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2",
@@ -6786,10 +6786,10 @@
       "SRCDIR": "Implementations/Optimized_Implementation/GreatWall256f",
       "SRCS": "SIG_AlgorithmInstance.c drng.c api.c aes.c aes_impl.c block.c block_impl.c faest.c keygen_gf263.c gf263_proof.c greatwall-256-matrix.c hash.c KeccakHash.c KeccakHashtimes4.c KeccakP-1600-times2-SIMD128.c KeccakP-1600-times4-SIMD256.c KeccakP-1600-times8-on4.c KeccakSponge.c KeccakSpongetimes4.c owf_proof.c polynomials.c polynomials_impl.c prgs.c quicksilver.c randomness_kat_fixed.c small_vole.c transpose.c universal_hash.c util.c vector_com.c vole_check.c vole_commit.c KeccakP-1600-AVX2.s greatwall.c greatwall_impl.c",
       "INC": "",
-      "DEFS": "-DGREATWALL_HASH_BACKEND_SM3 -DGREATWALL_GF263_POW_SQUARE=1 -DGREATWALL_KEYGEN_GF263_ISOLATED=1 -D_bswap64=__builtin_bswap64",
+      "DEFS": "-DFAEST_ENABLE_TIMING=0 -DTIMING_AVG_RUNS=1 -DENC_CONSTRAINTS_ENABLE_TIMING=0 -DGREATWALL_GF263_POW_SQUARE=1 -DGREATWALL_KEYGEN_GF263_ISOLATED=1 -DGREATWALL_HASH_BACKEND_SM3",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -maes -mavx2 -mpclmul -msse4.2 -mpopcnt",
+      "INSTANCE_CFLAGS": "-O3 -march=x86-64 -mavx2 -maes -mpclmul -mtune=native -fomit-frame-pointer -std=c99 -Wpedantic -Wall -Wextra",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2",
@@ -6814,10 +6814,10 @@
       "SRCDIR": "Implementations/Optimized_Implementation/GreatWall256s",
       "SRCS": "SIG_AlgorithmInstance.c drng.c api.c aes.c aes_impl.c block.c block_impl.c faest.c keygen_gf263.c gf263_proof.c greatwall-256-matrix.c hash.c KeccakHash.c KeccakHashtimes4.c KeccakP-1600-times2-SIMD128.c KeccakP-1600-times4-SIMD256.c KeccakP-1600-times8-on4.c KeccakSponge.c KeccakSpongetimes4.c owf_proof.c polynomials.c polynomials_impl.c prgs.c quicksilver.c randomness_kat_fixed.c small_vole.c transpose.c universal_hash.c util.c vector_com.c vole_check.c vole_commit.c KeccakP-1600-AVX2.s greatwall.c greatwall_impl.c",
       "INC": "",
-      "DEFS": "-DGREATWALL_HASH_BACKEND_SM3 -DGREATWALL_GF263_POW_SQUARE=1 -DGREATWALL_KEYGEN_GF263_ISOLATED=1 -D_bswap64=__builtin_bswap64",
+      "DEFS": "-DFAEST_ENABLE_TIMING=0 -DTIMING_AVG_RUNS=1 -DENC_CONSTRAINTS_ENABLE_TIMING=0 -DGREATWALL_GF263_POW_SQUARE=1 -DGREATWALL_KEYGEN_GF263_ISOLATED=1 -DGREATWALL_HASH_BACKEND_SM3",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -maes -mavx2 -mpclmul -msse4.2 -mpopcnt",
+      "INSTANCE_CFLAGS": "-O3 -march=x86-64 -mavx2 -maes -mpclmul -mtune=native -fomit-frame-pointer -std=c99 -Wpedantic -Wall -Wextra",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2",
@@ -6845,7 +6845,7 @@
       "DEFS": "-DXOF_PSEUDO",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2 -mbmi2 -mpopcnt -maes -mpclmul",
+      "INSTANCE_CFLAGS": "-O3 -std=c2x -march=native -mtune=native -Wall -Wextra",
       "variant": "optimized-x86_64",
       "imports": [],
       "cxx_standard": "c++20",
@@ -6875,7 +6875,7 @@
       "DEFS": "-DXOF_PSEUDO",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2 -mbmi2 -mpopcnt -maes -mpclmul",
+      "INSTANCE_CFLAGS": "-O3 -std=c2x -march=native -mtune=native -Wall -Wextra",
       "variant": "optimized-x86_64",
       "imports": [],
       "cxx_standard": "c++20",
@@ -6905,7 +6905,7 @@
       "DEFS": "-DXOF_PSEUDO",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2 -mbmi2 -mpopcnt -maes -mpclmul",
+      "INSTANCE_CFLAGS": "-O3 -std=c2x -march=native -mtune=native -Wall -Wextra",
       "variant": "optimized-x86_64",
       "imports": [],
       "cxx_standard": "c++20",
@@ -6935,7 +6935,7 @@
       "DEFS": "-DXOF_PSEUDO",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2 -mbmi2 -mpopcnt -maes -mpclmul",
+      "INSTANCE_CFLAGS": "-O3 -std=c2x -march=native -mtune=native -Wall -Wextra",
       "variant": "optimized-x86_64",
       "imports": [],
       "cxx_standard": "c++20",
@@ -6965,7 +6965,7 @@
       "DEFS": "-DRRLWR_SECURITY_LEVEL=128",
       "SHIMDEFS": "-DNGCC_INSTANCE_HEADER='\"sign.h\"' -DNGCC_INSTANCE='\"Octarine-128\"'",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2 -mbmi2",
+      "INSTANCE_CFLAGS": "-O3 -mavx2 -mbmi2 -fno-semantic-interposition -funroll-loops",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2",
@@ -6990,7 +6990,7 @@
       "DEFS": "-DRRLWR_SECURITY_LEVEL=256",
       "SHIMDEFS": "-DNGCC_INSTANCE_HEADER='\"sign.h\"' -DNGCC_INSTANCE='\"Octarine-256\"'",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2 -mbmi2",
+      "INSTANCE_CFLAGS": "-O3 -mavx2 -mbmi2 -fno-semantic-interposition -funroll-loops",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2",
@@ -7015,7 +7015,7 @@
       "DEFS": "",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2 -mpopcnt",
+      "INSTANCE_CFLAGS": "-O3 -march=x86-64 -mavx2 -mtune=native -fomit-frame-pointer -std=c99 -mpopcnt",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2",
@@ -7040,7 +7040,7 @@
       "DEFS": "",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2 -mpopcnt",
+      "INSTANCE_CFLAGS": "-O3 -march=x86-64 -mavx2 -mtune=native -fomit-frame-pointer -std=c99 -mpopcnt",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2",
@@ -7309,7 +7309,7 @@
       "DEFS": "-DXOF_PSEUDO",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-std=c99 -O3 -mavx2 -mbmi2 -mpopcnt -maes -mpclmul",
+      "INSTANCE_CFLAGS": "-O3 -std=c2x -march=native -mtune=native -Wall -Wextra",
       "variant": "optimized-x86_64",
       "imports": [],
       "cxx_standard": "c++20",
@@ -7339,7 +7339,7 @@
       "DEFS": "-DXOF_PSEUDO",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-std=c99 -O3 -mavx2 -mbmi2 -mpopcnt -maes -mpclmul",
+      "INSTANCE_CFLAGS": "-O3 -std=c2x -march=native -mtune=native -Wall -Wextra",
       "variant": "optimized-x86_64",
       "imports": [],
       "cxx_standard": "c++20",
@@ -7369,7 +7369,7 @@
       "DEFS": "-DXOF_PSEUDO",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-std=c99 -O3 -mavx2 -mbmi2 -mpopcnt -maes -mpclmul",
+      "INSTANCE_CFLAGS": "-O3 -std=c2x -march=native -mtune=native -Wall -Wextra",
       "variant": "optimized-x86_64",
       "imports": [],
       "cxx_standard": "c++20",
@@ -7399,7 +7399,7 @@
       "DEFS": "-DXOF_PSEUDO",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-std=c99 -O3 -mavx2 -mbmi2 -mpopcnt -maes -mpclmul",
+      "INSTANCE_CFLAGS": "-O3 -std=c2x -march=native -mtune=native -Wall -Wextra",
       "variant": "optimized-x86_64",
       "imports": [],
       "cxx_standard": "c++20",
@@ -7429,7 +7429,7 @@
       "DEFS": "-DRHYME_NO_AES -DRHYME_MODE=128 -DOUTPUT_BLANK_TEST_VECTORS=0 -DALGORITHM_INSTANCE='\"Rhyme-SM3-128\"' -DUSE_AVX2_SM3",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-std=c99 -O3 -mavx2",
+      "INSTANCE_CFLAGS": "-O3 -march=native -mavx2 -std=c99",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2"
@@ -7463,7 +7463,7 @@
       "DEFS": "-DRHYME_NO_AES -DRHYME_MODE=256 -DOUTPUT_BLANK_TEST_VECTORS=0 -DALGORITHM_INSTANCE='\"Rhyme-SM3-256\"' -DUSE_AVX2_SM3",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-std=c99 -O3 -mavx2",
+      "INSTANCE_CFLAGS": "-O3 -march=native -mavx2 -std=c99",
       "variant": "optimized-x86_64",
       "requirements": [
         "AVX2"
@@ -7507,7 +7507,7 @@
         "author/ref": "ref",
         "author/tools": "tools"
       },
-      "INSTANCE_CFLAGS": "-O3 -mavx2 -mbmi2 -mpopcnt -mno-avx512f",
+      "INSTANCE_CFLAGS": "-O3 -march=x86-64 -mavx2 -mtune=native -fomit-frame-pointer -mbmi2 -mpopcnt -mno-avx512f",
       "requirements": [
         "AVX2",
         "BMI2",
@@ -7542,7 +7542,7 @@
         "author/ref": "ref",
         "author/tools": "tools"
       },
-      "INSTANCE_CFLAGS": "-O3 -mavx2 -mbmi2 -mpopcnt -mno-avx512f",
+      "INSTANCE_CFLAGS": "-O3 -march=x86-64 -mavx2 -mtune=native -fomit-frame-pointer -mbmi2 -mpopcnt -mno-avx512f",
       "requirements": [
         "AVX2",
         "BMI2",
@@ -7667,7 +7667,7 @@
       "DEFS": "-DNDEBUG -DCOMPRESSED=0 -DSQISIGN_FP2_ASM_P255",
       "SHIMDEFS": "-DNGCC_INSTANCE_HEADER='\"sqisign/SIG_AlgorithmInstance.h\"' -DNGCC_INSTANCE='\"SQISign2Dsquare-Level1-eff_uncompressed\"'",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2 -mbmi2 -mpopcnt -madx",
+      "INSTANCE_CFLAGS": "-mavx2 -mbmi2 -mpopcnt -madx -O2",
       "variant": "optimized-x86_64",
       "imports": [],
       "requirements": [
@@ -7695,7 +7695,7 @@
       "DEFS": "-DNDEBUG -DCOMPRESSED=1 -DSQISIGN_FP2_ASM_P255",
       "SHIMDEFS": "-DNGCC_INSTANCE_HEADER='\"sqisign/SIG_AlgorithmInstance.h\"' -DNGCC_INSTANCE='\"SQISign2Dsquare-Level1-eff_compressed\"'",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2 -mbmi2 -mpopcnt -madx",
+      "INSTANCE_CFLAGS": "-mavx2 -mbmi2 -mpopcnt -madx -O2",
       "variant": "optimized-x86_64",
       "imports": [],
       "requirements": [
@@ -7723,7 +7723,7 @@
       "DEFS": "-DNDEBUG -DCOMPRESSED=0 -DSQISIGN_FP2_ASM_P271",
       "SHIMDEFS": "-DNGCC_INSTANCE_HEADER='\"sqisign/SIG_AlgorithmInstance.h\"' -DNGCC_INSTANCE='\"SQISign2Dsquare-Level1-sec_uncompressed\"'",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2 -mbmi2 -mpopcnt -madx",
+      "INSTANCE_CFLAGS": "-mavx2 -mbmi2 -mpopcnt -madx -O2",
       "variant": "optimized-x86_64",
       "imports": [],
       "requirements": [
@@ -7751,7 +7751,7 @@
       "DEFS": "-DNDEBUG -DCOMPRESSED=1 -DSQISIGN_FP2_ASM_P271",
       "SHIMDEFS": "-DNGCC_INSTANCE_HEADER='\"sqisign/SIG_AlgorithmInstance.h\"' -DNGCC_INSTANCE='\"SQISign2Dsquare-Level1-sec_compressed\"'",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2 -mbmi2 -mpopcnt -madx",
+      "INSTANCE_CFLAGS": "-mavx2 -mbmi2 -mpopcnt -madx -O2",
       "variant": "optimized-x86_64",
       "imports": [],
       "requirements": [
@@ -7779,7 +7779,7 @@
       "DEFS": "-DNDEBUG -DCOMPRESSED=0 -DSQISIGN_FP2_ASM_P320",
       "SHIMDEFS": "-DNGCC_INSTANCE_HEADER='\"sqisign/SIG_AlgorithmInstance.h\"' -DNGCC_INSTANCE='\"SQISign2Dsquare-Level2-eff_uncompressed\"'",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2 -mbmi2 -mpopcnt -madx",
+      "INSTANCE_CFLAGS": "-mavx2 -mbmi2 -mpopcnt -madx -O2",
       "variant": "optimized-x86_64",
       "imports": [],
       "requirements": [
@@ -7807,7 +7807,7 @@
       "DEFS": "-DNDEBUG -DCOMPRESSED=1 -DSQISIGN_FP2_ASM_P320",
       "SHIMDEFS": "-DNGCC_INSTANCE_HEADER='\"sqisign/SIG_AlgorithmInstance.h\"' -DNGCC_INSTANCE='\"SQISign2Dsquare-Level2-eff_compressed\"'",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2 -mbmi2 -mpopcnt -madx",
+      "INSTANCE_CFLAGS": "-mavx2 -mbmi2 -mpopcnt -madx -O2",
       "variant": "optimized-x86_64",
       "imports": [],
       "requirements": [
@@ -7835,7 +7835,7 @@
       "DEFS": "-DNDEBUG -DCOMPRESSED=0 -DSQISIGN_FP2_ASM_P332",
       "SHIMDEFS": "-DNGCC_INSTANCE_HEADER='\"sqisign/SIG_AlgorithmInstance.h\"' -DNGCC_INSTANCE='\"SQISign2Dsquare-Level2-sec_uncompressed\"'",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2 -mbmi2 -mpopcnt -madx",
+      "INSTANCE_CFLAGS": "-mavx2 -mbmi2 -mpopcnt -madx -O2",
       "variant": "optimized-x86_64",
       "imports": [],
       "requirements": [
@@ -7863,7 +7863,7 @@
       "DEFS": "-DNDEBUG -DCOMPRESSED=1 -DSQISIGN_FP2_ASM_P332",
       "SHIMDEFS": "-DNGCC_INSTANCE_HEADER='\"sqisign/SIG_AlgorithmInstance.h\"' -DNGCC_INSTANCE='\"SQISign2Dsquare-Level2-sec_compressed\"'",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2 -mbmi2 -mpopcnt -madx",
+      "INSTANCE_CFLAGS": "-mavx2 -mbmi2 -mpopcnt -madx -O2",
       "variant": "optimized-x86_64",
       "imports": [],
       "requirements": [
@@ -7891,7 +7891,7 @@
       "DEFS": "-DNDEBUG -DCOMPRESSED=0 -DSQISIGN_FP2_ASM_P511",
       "SHIMDEFS": "-DNGCC_INSTANCE_HEADER='\"sqisign/SIG_AlgorithmInstance.h\"' -DNGCC_INSTANCE='\"SQISign2Dsquare-Level3-eff_uncompressed\"'",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2 -mbmi2 -mpopcnt -madx",
+      "INSTANCE_CFLAGS": "-mavx2 -mbmi2 -mpopcnt -madx -O2",
       "variant": "optimized-x86_64",
       "imports": [],
       "requirements": [
@@ -7919,7 +7919,7 @@
       "DEFS": "-DNDEBUG -DCOMPRESSED=1 -DSQISIGN_FP2_ASM_P511",
       "SHIMDEFS": "-DNGCC_INSTANCE_HEADER='\"sqisign/SIG_AlgorithmInstance.h\"' -DNGCC_INSTANCE='\"SQISign2Dsquare-Level3-eff_compressed\"'",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2 -mbmi2 -mpopcnt -madx",
+      "INSTANCE_CFLAGS": "-mavx2 -mbmi2 -mpopcnt -madx -O2",
       "variant": "optimized-x86_64",
       "imports": [],
       "requirements": [
@@ -7947,7 +7947,7 @@
       "DEFS": "-DNDEBUG -DCOMPRESSED=0 -DSQISIGN_FP2_ASM_P523",
       "SHIMDEFS": "-DNGCC_INSTANCE_HEADER='\"sqisign/SIG_AlgorithmInstance.h\"' -DNGCC_INSTANCE='\"SQISign2Dsquare-Level3-sec_uncompressed\"'",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2 -mbmi2 -mpopcnt -madx",
+      "INSTANCE_CFLAGS": "-mavx2 -mbmi2 -mpopcnt -madx -O2",
       "variant": "optimized-x86_64",
       "imports": [],
       "requirements": [
@@ -7975,7 +7975,7 @@
       "DEFS": "-DNDEBUG -DCOMPRESSED=1 -DSQISIGN_FP2_ASM_P523",
       "SHIMDEFS": "-DNGCC_INSTANCE_HEADER='\"sqisign/SIG_AlgorithmInstance.h\"' -DNGCC_INSTANCE='\"SQISign2Dsquare-Level3-sec_compressed\"'",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2 -mbmi2 -mpopcnt -madx",
+      "INSTANCE_CFLAGS": "-mavx2 -mbmi2 -mpopcnt -madx -O2",
       "variant": "optimized-x86_64",
       "imports": [],
       "requirements": [
@@ -8028,7 +8028,7 @@
       "SRCS": "SIG_AlgorithmInstance.c drng.c auxfunc.c sqisigntriangle/src/sqisign.c sqisigntriangle/src/common/generic/fips202.c sqisigntriangle/src/common/generic/mem.c sqisigntriangle/src/common/generic/tools.c sqisigntriangle/src/quaternion/ref/generic/intbig.c sqisigntriangle/src/quaternion/ref/generic/algebra.c sqisigntriangle/src/quaternion/ref/generic/ideal.c sqisigntriangle/src/quaternion/ref/generic/dim4.c sqisigntriangle/src/quaternion/ref/generic/dim2.c sqisigntriangle/src/quaternion/ref/generic/integers.c sqisigntriangle/src/quaternion/ref/generic/lattice.c sqisigntriangle/src/quaternion/ref/generic/lat_ball.c sqisigntriangle/src/quaternion/ref/generic/finit.c sqisigntriangle/src/quaternion/ref/generic/printer.c sqisigntriangle/src/quaternion/ref/generic/lll/l2.c sqisigntriangle/src/quaternion/ref/generic/lll/lll_verification.c sqisigntriangle/src/quaternion/ref/generic/lll/lll_applications.c sqisigntriangle/src/quaternion/ref/generic/rationals.c sqisigntriangle/src/quaternion/ref/generic/normeq.c sqisigntriangle/src/quaternion/ref/generic/qlapoti.c sqisigntriangle/src/quaternion/ref/generic/hnf/ibz_division.c sqisigntriangle/src/quaternion/ref/generic/hnf/hnf_internal.c sqisigntriangle/src/quaternion/ref/generic/hnf/hnf.c sqisigntriangle/src/quaternion/ref/generic/test/random_input_generation.c sqisigntriangle/src/mp/ref/generic/mp.c sqisigntriangle/src/ec/ref/lvlx/ec.c sqisigntriangle/src/ec/ref/lvlx/ec_jac.c sqisigntriangle/src/ec/ref/lvlx/xisog.c sqisigntriangle/src/ec/ref/lvlx/xeval.c sqisigntriangle/src/ec/ref/lvlx/isog_chains.c sqisigntriangle/src/ec/ref/lvlx/basis.c sqisigntriangle/src/ec/ref/lvlx/biextension.c sqisigntriangle/src/hd/ref/lvlx/hd.c sqisigntriangle/src/hd/ref/lvlx/theta_structure.c sqisigntriangle/src/hd/ref/lvlx/theta_isogenies.c sqisigntriangle/src/verification/ref/lvlx/common.c sqisigntriangle/src/verification/ref/lvlx/encode_verification.c sqisigntriangle/src/verification/ref/lvlx/verify.c sqisigntriangle/src/id2iso/ref/lvlx/id2iso.c sqisigntriangle/src/id2iso/ref/lvlx/dim2id2iso.c sqisigntriangle/src/signature/ref/lvlx/encode_signature.c sqisigntriangle/src/signature/ref/lvlx/keygen.c sqisigntriangle/src/signature/ref/lvlx/sign.c sqisigntriangle/src/nistapi/lvl1/api.c sqisigntriangle/src/precomp/ref/lvl1/ec_params.c sqisigntriangle/src/precomp/ref/lvl1/e0_basis.c sqisigntriangle/src/precomp/ref/lvl1/hd_splitting_transforms.c sqisigntriangle/src/precomp/ref/lvl1/torsion_constants.c sqisigntriangle/src/precomp/ref/lvl1/quaternion_data.c sqisigntriangle/src/precomp/ref/lvl1/endomorphism_action.c sqisigntriangle/src/gf/broadwell/lvl1/fp.c sqisigntriangle/src/gf/broadwell/lvl1/fp_asm.S sqisigntriangle/src/gf/broadwell/lvl1/gf5248.c sqisigntriangle/src/gf/broadwell/lvlx/fp2.c",
       "INC": "-Isrc/SQIsignTriangle_lvl1/sqisigntriangle/include -Isrc/SQIsignTriangle_lvl1/sqisigntriangle/src/nistapi/lvl1 -Isrc/SQIsignTriangle_lvl1/sqisigntriangle/src/common/generic/include -Isrc/SQIsignTriangle_lvl1/sqisigntriangle/src/common/generic -Isrc/SQIsignTriangle_lvl1/sqisigntriangle/src/quaternion/ref/generic/include -Isrc/SQIsignTriangle_lvl1/sqisigntriangle/src/quaternion/ref/generic/internal_quaternion_headers -Isrc/SQIsignTriangle_lvl1/sqisigntriangle/src/quaternion/ref/generic -Isrc/SQIsignTriangle_lvl1/sqisigntriangle/src/mp/ref/generic/include -Isrc/SQIsignTriangle_lvl1/sqisigntriangle/src/gf/broadwell/lvl1/include -Isrc/SQIsignTriangle_lvl1/sqisigntriangle/src/precomp/ref/lvl1/include -Isrc/SQIsignTriangle_lvl1/sqisigntriangle/src/ec/ref/include -Isrc/SQIsignTriangle_lvl1/sqisigntriangle/src/hd/ref/include -Isrc/SQIsignTriangle_lvl1/sqisigntriangle/src/hd/ref/lvlx -Isrc/SQIsignTriangle_lvl1/sqisigntriangle/src/id2iso/ref/include -Isrc/SQIsignTriangle_lvl1/sqisigntriangle/src/verification/ref/include -Isrc/SQIsignTriangle_lvl1/sqisigntriangle/src/signature/ref/include -Isrc/SQIsignTriangle_lvl1/sqisigntriangle/src/gf/broadwell/include",
       "DEFS": "-DSQISIGN_BUILD_TYPE_BROADWELL -DSQISIGN_GF_IMPL_BROADWELL -DENABLE_SIGN -DTARGET_AMD64 -DRADIX_64 -DHAVE_UINT128 -DTARGET_OS_UNIX -DSQISIGN_TEST_REPS=10 -DSQISIGN_VARIANT=lvl1",
-      "INSTANCE_CFLAGS": "-O3 -mbmi2 -madx -mpopcnt -mlzcnt",
+      "INSTANCE_CFLAGS": "-mbmi2 -madx -mpopcnt -mlzcnt -O2",
       "SHIMDEFS": "",
       "NOAUX": "",
       "variant": "optimized-x86_64",
@@ -8055,7 +8055,7 @@
       "SRCS": "SIG_AlgorithmInstance.c drng.c auxfunc.c sqisigntriangle/src/sqisign.c sqisigntriangle/src/common/generic/fips202.c sqisigntriangle/src/common/generic/mem.c sqisigntriangle/src/common/generic/tools.c sqisigntriangle/src/quaternion/ref/generic/intbig.c sqisigntriangle/src/quaternion/ref/generic/algebra.c sqisigntriangle/src/quaternion/ref/generic/ideal.c sqisigntriangle/src/quaternion/ref/generic/dim4.c sqisigntriangle/src/quaternion/ref/generic/dim2.c sqisigntriangle/src/quaternion/ref/generic/integers.c sqisigntriangle/src/quaternion/ref/generic/lattice.c sqisigntriangle/src/quaternion/ref/generic/lat_ball.c sqisigntriangle/src/quaternion/ref/generic/finit.c sqisigntriangle/src/quaternion/ref/generic/printer.c sqisigntriangle/src/quaternion/ref/generic/lll/l2.c sqisigntriangle/src/quaternion/ref/generic/lll/lll_verification.c sqisigntriangle/src/quaternion/ref/generic/lll/lll_applications.c sqisigntriangle/src/quaternion/ref/generic/rationals.c sqisigntriangle/src/quaternion/ref/generic/normeq.c sqisigntriangle/src/quaternion/ref/generic/qlapoti.c sqisigntriangle/src/quaternion/ref/generic/hnf/ibz_division.c sqisigntriangle/src/quaternion/ref/generic/hnf/hnf_internal.c sqisigntriangle/src/quaternion/ref/generic/hnf/hnf.c sqisigntriangle/src/quaternion/ref/generic/test/random_input_generation.c sqisigntriangle/src/mp/ref/generic/mp.c sqisigntriangle/src/ec/ref/lvlx/ec.c sqisigntriangle/src/ec/ref/lvlx/ec_jac.c sqisigntriangle/src/ec/ref/lvlx/xisog.c sqisigntriangle/src/ec/ref/lvlx/xeval.c sqisigntriangle/src/ec/ref/lvlx/isog_chains.c sqisigntriangle/src/ec/ref/lvlx/basis.c sqisigntriangle/src/ec/ref/lvlx/biextension.c sqisigntriangle/src/hd/ref/lvlx/hd.c sqisigntriangle/src/hd/ref/lvlx/theta_structure.c sqisigntriangle/src/hd/ref/lvlx/theta_isogenies.c sqisigntriangle/src/verification/ref/lvlx/common.c sqisigntriangle/src/verification/ref/lvlx/encode_verification.c sqisigntriangle/src/verification/ref/lvlx/verify.c sqisigntriangle/src/id2iso/ref/lvlx/id2iso.c sqisigntriangle/src/id2iso/ref/lvlx/dim2id2iso.c sqisigntriangle/src/signature/ref/lvlx/encode_signature.c sqisigntriangle/src/signature/ref/lvlx/keygen.c sqisigntriangle/src/signature/ref/lvlx/sign.c sqisigntriangle/src/nistapi/lvl2/api.c sqisigntriangle/src/precomp/ref/lvl2/ec_params.c sqisigntriangle/src/precomp/ref/lvl2/e0_basis.c sqisigntriangle/src/precomp/ref/lvl2/hd_splitting_transforms.c sqisigntriangle/src/precomp/ref/lvl2/torsion_constants.c sqisigntriangle/src/precomp/ref/lvl2/quaternion_data.c sqisigntriangle/src/precomp/ref/lvl2/endomorphism_action.c sqisigntriangle/src/gf/broadwell/lvl2/fp.c sqisigntriangle/src/gf/broadwell/lvl2/fp_asm.S sqisigntriangle/src/gf/broadwell/lvl2/gf9309.c sqisigntriangle/src/gf/broadwell/lvlx/fp2.c",
       "INC": "-Isrc/SQIsignTriangle_lvl2/sqisigntriangle/include -Isrc/SQIsignTriangle_lvl2/sqisigntriangle/src/nistapi/lvl2 -Isrc/SQIsignTriangle_lvl2/sqisigntriangle/src/common/generic/include -Isrc/SQIsignTriangle_lvl2/sqisigntriangle/src/common/generic -Isrc/SQIsignTriangle_lvl2/sqisigntriangle/src/quaternion/ref/generic/include -Isrc/SQIsignTriangle_lvl2/sqisigntriangle/src/quaternion/ref/generic/internal_quaternion_headers -Isrc/SQIsignTriangle_lvl2/sqisigntriangle/src/quaternion/ref/generic -Isrc/SQIsignTriangle_lvl2/sqisigntriangle/src/mp/ref/generic/include -Isrc/SQIsignTriangle_lvl2/sqisigntriangle/src/gf/broadwell/lvl2/include -Isrc/SQIsignTriangle_lvl2/sqisigntriangle/src/precomp/ref/lvl2/include -Isrc/SQIsignTriangle_lvl2/sqisigntriangle/src/ec/ref/include -Isrc/SQIsignTriangle_lvl2/sqisigntriangle/src/hd/ref/include -Isrc/SQIsignTriangle_lvl2/sqisigntriangle/src/hd/ref/lvlx -Isrc/SQIsignTriangle_lvl2/sqisigntriangle/src/id2iso/ref/include -Isrc/SQIsignTriangle_lvl2/sqisigntriangle/src/verification/ref/include -Isrc/SQIsignTriangle_lvl2/sqisigntriangle/src/signature/ref/include -Isrc/SQIsignTriangle_lvl2/sqisigntriangle/src/gf/broadwell/include",
       "DEFS": "-DSQISIGN_BUILD_TYPE_BROADWELL -DSQISIGN_GF_IMPL_BROADWELL -DENABLE_SIGN -DTARGET_AMD64 -DRADIX_64 -DHAVE_UINT128 -DTARGET_OS_UNIX -DSQISIGN_TEST_REPS=10 -DSQISIGN_VARIANT=lvl2",
-      "INSTANCE_CFLAGS": "-O3 -mbmi2 -madx -mpopcnt -mlzcnt",
+      "INSTANCE_CFLAGS": "-mbmi2 -madx -mpopcnt -mlzcnt -O2",
       "SHIMDEFS": "",
       "NOAUX": "",
       "variant": "optimized-x86_64",
@@ -8082,7 +8082,7 @@
       "SRCS": "SIG_AlgorithmInstance.c drng.c auxfunc.c sqisigntriangle/src/sqisign.c sqisigntriangle/src/common/generic/fips202.c sqisigntriangle/src/common/generic/mem.c sqisigntriangle/src/common/generic/tools.c sqisigntriangle/src/quaternion/ref/generic/intbig.c sqisigntriangle/src/quaternion/ref/generic/algebra.c sqisigntriangle/src/quaternion/ref/generic/ideal.c sqisigntriangle/src/quaternion/ref/generic/dim4.c sqisigntriangle/src/quaternion/ref/generic/dim2.c sqisigntriangle/src/quaternion/ref/generic/integers.c sqisigntriangle/src/quaternion/ref/generic/lattice.c sqisigntriangle/src/quaternion/ref/generic/lat_ball.c sqisigntriangle/src/quaternion/ref/generic/finit.c sqisigntriangle/src/quaternion/ref/generic/printer.c sqisigntriangle/src/quaternion/ref/generic/lll/l2.c sqisigntriangle/src/quaternion/ref/generic/lll/lll_verification.c sqisigntriangle/src/quaternion/ref/generic/lll/lll_applications.c sqisigntriangle/src/quaternion/ref/generic/rationals.c sqisigntriangle/src/quaternion/ref/generic/normeq.c sqisigntriangle/src/quaternion/ref/generic/qlapoti.c sqisigntriangle/src/quaternion/ref/generic/hnf/ibz_division.c sqisigntriangle/src/quaternion/ref/generic/hnf/hnf_internal.c sqisigntriangle/src/quaternion/ref/generic/hnf/hnf.c sqisigntriangle/src/quaternion/ref/generic/test/random_input_generation.c sqisigntriangle/src/mp/ref/generic/mp.c sqisigntriangle/src/ec/ref/lvlx/ec.c sqisigntriangle/src/ec/ref/lvlx/ec_jac.c sqisigntriangle/src/ec/ref/lvlx/xisog.c sqisigntriangle/src/ec/ref/lvlx/xeval.c sqisigntriangle/src/ec/ref/lvlx/isog_chains.c sqisigntriangle/src/ec/ref/lvlx/basis.c sqisigntriangle/src/ec/ref/lvlx/biextension.c sqisigntriangle/src/hd/ref/lvlx/hd.c sqisigntriangle/src/hd/ref/lvlx/theta_structure.c sqisigntriangle/src/hd/ref/lvlx/theta_isogenies.c sqisigntriangle/src/verification/ref/lvlx/common.c sqisigntriangle/src/verification/ref/lvlx/encode_verification.c sqisigntriangle/src/verification/ref/lvlx/verify.c sqisigntriangle/src/id2iso/ref/lvlx/id2iso.c sqisigntriangle/src/id2iso/ref/lvlx/dim2id2iso.c sqisigntriangle/src/signature/ref/lvlx/encode_signature.c sqisigntriangle/src/signature/ref/lvlx/keygen.c sqisigntriangle/src/signature/ref/lvlx/sign.c sqisigntriangle/src/nistapi/lvl5/api.c sqisigntriangle/src/precomp/ref/lvl5/ec_params.c sqisigntriangle/src/precomp/ref/lvl5/e0_basis.c sqisigntriangle/src/precomp/ref/lvl5/hd_splitting_transforms.c sqisigntriangle/src/precomp/ref/lvl5/torsion_constants.c sqisigntriangle/src/precomp/ref/lvl5/quaternion_data.c sqisigntriangle/src/precomp/ref/lvl5/endomorphism_action.c sqisigntriangle/src/gf/broadwell/lvl5/fp.c sqisigntriangle/src/gf/broadwell/lvl5/fp_asm.S sqisigntriangle/src/gf/broadwell/lvl5/gf27500.c sqisigntriangle/src/gf/broadwell/lvlx/fp2.c",
       "INC": "-Isrc/SQIsignTriangle_lvl5/sqisigntriangle/include -Isrc/SQIsignTriangle_lvl5/sqisigntriangle/src/nistapi/lvl5 -Isrc/SQIsignTriangle_lvl5/sqisigntriangle/src/common/generic/include -Isrc/SQIsignTriangle_lvl5/sqisigntriangle/src/common/generic -Isrc/SQIsignTriangle_lvl5/sqisigntriangle/src/quaternion/ref/generic/include -Isrc/SQIsignTriangle_lvl5/sqisigntriangle/src/quaternion/ref/generic/internal_quaternion_headers -Isrc/SQIsignTriangle_lvl5/sqisigntriangle/src/quaternion/ref/generic -Isrc/SQIsignTriangle_lvl5/sqisigntriangle/src/mp/ref/generic/include -Isrc/SQIsignTriangle_lvl5/sqisigntriangle/src/gf/broadwell/lvl5/include -Isrc/SQIsignTriangle_lvl5/sqisigntriangle/src/precomp/ref/lvl5/include -Isrc/SQIsignTriangle_lvl5/sqisigntriangle/src/ec/ref/include -Isrc/SQIsignTriangle_lvl5/sqisigntriangle/src/hd/ref/include -Isrc/SQIsignTriangle_lvl5/sqisigntriangle/src/hd/ref/lvlx -Isrc/SQIsignTriangle_lvl5/sqisigntriangle/src/id2iso/ref/include -Isrc/SQIsignTriangle_lvl5/sqisigntriangle/src/verification/ref/include -Isrc/SQIsignTriangle_lvl5/sqisigntriangle/src/signature/ref/include -Isrc/SQIsignTriangle_lvl5/sqisigntriangle/src/gf/broadwell/include",
       "DEFS": "-DSQISIGN_BUILD_TYPE_BROADWELL -DSQISIGN_GF_IMPL_BROADWELL -DENABLE_SIGN -DTARGET_AMD64 -DRADIX_64 -DHAVE_UINT128 -DTARGET_OS_UNIX -DSQISIGN_TEST_REPS=10 -DSQISIGN_VARIANT=lvl5",
-      "INSTANCE_CFLAGS": "-O3 -mbmi2 -madx -mpopcnt -mlzcnt",
+      "INSTANCE_CFLAGS": "-mbmi2 -madx -mpopcnt -mlzcnt -O2",
       "SHIMDEFS": "",
       "NOAUX": "",
       "variant": "optimized-x86_64",
@@ -8112,7 +8112,7 @@
       "DEFS": "-DNDEBUG -DSYDO_API_PARAM_TYPE=sydo_160_f",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2 -mbmi2 -mpopcnt -maes -mpclmul -include sys/types.h",
+      "INSTANCE_CFLAGS": "-O3 -std=c2x -march=native -mtune=native",
       "variant": "optimized-x86_64",
       "imports": [],
       "cxx_standard": "c++23",
@@ -8158,7 +8158,7 @@
       "DEFS": "-DNDEBUG -DSYDO_API_PARAM_TYPE=sydo_160_s",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2 -mbmi2 -mpopcnt -maes -mpclmul -include sys/types.h",
+      "INSTANCE_CFLAGS": "-O3 -std=c2x -march=native -mtune=native",
       "variant": "optimized-x86_64",
       "imports": [],
       "cxx_standard": "c++23",
@@ -8204,7 +8204,7 @@
       "DEFS": "-DNDEBUG -DSYDO_API_PARAM_TYPE=sydo_256_f",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2 -mbmi2 -mpopcnt -maes -mpclmul -include sys/types.h",
+      "INSTANCE_CFLAGS": "-O3 -std=c2x -march=native -mtune=native",
       "variant": "optimized-x86_64",
       "imports": [],
       "cxx_standard": "c++23",
@@ -8250,7 +8250,7 @@
       "DEFS": "-DNDEBUG -DSYDO_API_PARAM_TYPE=sydo_256_s",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2 -mbmi2 -mpopcnt -maes -mpclmul -include sys/types.h",
+      "INSTANCE_CFLAGS": "-O3 -std=c2x -march=native -mtune=native",
       "variant": "optimized-x86_64",
       "imports": [],
       "cxx_standard": "c++23",
@@ -8496,7 +8496,7 @@
       "DEFS": "-DTSUOV_VARIANT=128",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2 -mbmi2 -mpopcnt",
+      "INSTANCE_CFLAGS": "-mavx2 -mbmi2 -mpopcnt -O2",
       "variant": "optimized-x86_64",
       "imports": [],
       "requirements": [
@@ -8536,7 +8536,7 @@
       "DEFS": "-DTSUOV_VARIANT=256",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2 -mbmi2 -mpopcnt",
+      "INSTANCE_CFLAGS": "-mavx2 -mbmi2 -mpopcnt -O2",
       "variant": "optimized-x86_64",
       "imports": [],
       "requirements": [
@@ -8648,7 +8648,7 @@
       "DEFS": "-DVDOO_128",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2 -mbmi2 -mpopcnt",
+      "INSTANCE_CFLAGS": "-O3 -march=x86-64 -mavx2 -mtune=native -fomit-frame-pointer -std=c99 -mbmi2 -mpopcnt",
       "variant": "optimized-x86_64",
       "imports": [],
       "requirements": [
@@ -8688,7 +8688,7 @@
       "DEFS": "-DVDOO_256",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-O3 -mavx2 -mbmi2 -mpopcnt",
+      "INSTANCE_CFLAGS": "-O3 -march=x86-64 -mavx2 -mtune=native -fomit-frame-pointer -std=c99 -mbmi2 -mpopcnt",
       "variant": "optimized-x86_64",
       "imports": [],
       "requirements": [
@@ -8728,7 +8728,7 @@
       "DEFS": "-DNGCC_KATS -DYUANYANG_HAVE_AVX2_IMPL=1 -DYUANYANG_FORCE_SOFTWARE_RANDOMNESS",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-std=c99 -O3 -mavx2 -mbmi2 -mpopcnt",
+      "INSTANCE_CFLAGS": "-std=c99 -Ofast -mavx2 -mbmi2 -mpopcnt",
       "variant": "optimized-x86_64",
       "imports": [
         "Implementations/Optimized_Implementation/SIG-YuanYang_DSA-x86-Performance Optimization Version"
@@ -8772,7 +8772,7 @@
       "DEFS": "-DNGCC_KATS -DYUANYANG_HAVE_AVX2_IMPL=1 -DYUANYANG_FORCE_SOFTWARE_RANDOMNESS",
       "SHIMDEFS": "",
       "NOAUX": "",
-      "INSTANCE_CFLAGS": "-std=c99 -O3 -mavx2 -mbmi2 -mpopcnt",
+      "INSTANCE_CFLAGS": "-std=c99 -Ofast -mavx2 -mbmi2 -mpopcnt",
       "variant": "optimized-x86_64",
       "imports": [
         "Implementations/Optimized_Implementation/SIG-YuanYang_DSA-x86-Performance Optimization Version"

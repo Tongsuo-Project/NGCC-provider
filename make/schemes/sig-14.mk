@@ -8,7 +8,7 @@ SRCS := bavc.c drng.c enc.c prg.c fields.c instances.c lynx_matrices.c quicksilv
     SIG_AlgorithmInstance.c
 INC := 
 DEFS := -DXOF_PSEUDO
-INSTANCE_CFLAGS := 
+INSTANCE_CFLAGS := -O3 -march=native -std=c99 -Wall -Wextra -Wpedantic
 SHIMDEFS := 
 NOAUX := 
 $(eval $(call ngcc_instance,sign-14,Lynxer-160f,sig,160,sig-14-lynxer-160f,ngcc_ref_sig_14_Lynxer_160f))
@@ -21,7 +21,7 @@ SRCS := bavc.c drng.c enc.c prg.c fields.c instances.c lynx_matrices.c quicksilv
     SIG_AlgorithmInstance.c
 INC := 
 DEFS := -DXOF_PSEUDO
-INSTANCE_CFLAGS := 
+INSTANCE_CFLAGS := -O3 -march=native -std=c99 -Wall -Wextra -Wpedantic
 SHIMDEFS := 
 NOAUX := 
 $(eval $(call ngcc_instance,sign-14,Lynxer-160s,sig,160,sig-14-lynxer-160s,ngcc_ref_sig_14_Lynxer_160s))
@@ -34,7 +34,7 @@ SRCS := bavc.c drng.c enc.c prg.c fields.c instances.c lynx_matrices.c quicksilv
     SIG_AlgorithmInstance.c
 INC := 
 DEFS := -DXOF_PSEUDO
-INSTANCE_CFLAGS := 
+INSTANCE_CFLAGS := -O3 -march=native -std=c99 -Wall -Wextra -Wpedantic
 SHIMDEFS := 
 NOAUX := 
 $(eval $(call ngcc_instance,sign-14,Lynxer-256f,sig,256,sig-14-lynxer-256f,ngcc_ref_sig_14_Lynxer_256f))
@@ -47,7 +47,7 @@ SRCS := bavc.c drng.c enc.c prg.c fields.c instances.c lynx_matrices.c quicksilv
     SIG_AlgorithmInstance.c
 INC := 
 DEFS := -DXOF_PSEUDO
-INSTANCE_CFLAGS := 
+INSTANCE_CFLAGS := -O3 -march=native -std=c99 -Wall -Wextra -Wpedantic
 SHIMDEFS := 
 NOAUX := 
 $(eval $(call ngcc_instance,sign-14,Lynxer-256s,sig,256,sig-14-lynxer-256s,ngcc_ref_sig_14_Lynxer_256s))

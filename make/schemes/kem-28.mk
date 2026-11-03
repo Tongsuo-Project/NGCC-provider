@@ -6,7 +6,7 @@ SRCDIR := Implementations/Reference_Implementation/OAEP-NTRU-1296
 SRCS := KEM_AlgorithmInstance.c auxfunc.c drng.c ntt.c poly.c symmetric.c
 INC := 
 DEFS := 
-INSTANCE_CFLAGS := 
+INSTANCE_CFLAGS := -O3 -fomit-frame-pointer -funroll-loops
 SHIMDEFS := 
 NOAUX := 
 $(eval $(call ngcc_instance,kem-28,OAEP-NTRU-1296,kem,256,kem-28-oaep-ntru-1296,ngcc_ref_kem_28_OAEP_NTRU_1296))
@@ -17,7 +17,7 @@ SRCDIR := Implementations/Reference_Implementation/OAEP-NTRU-648
 SRCS := KEM_AlgorithmInstance.c auxfunc.c drng.c ntt.c poly.c symmetric.c
 INC := 
 DEFS := 
-INSTANCE_CFLAGS := 
+INSTANCE_CFLAGS := -O3 -fomit-frame-pointer -funroll-loops
 SHIMDEFS := 
 NOAUX := 
 $(eval $(call ngcc_instance,kem-28,OAEP-NTRU-648,kem,128,kem-28-oaep-ntru-648,ngcc_ref_kem_28_OAEP_NTRU_648))

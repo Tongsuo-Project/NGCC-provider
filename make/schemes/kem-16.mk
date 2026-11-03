@@ -17,7 +17,7 @@ INC := -Isrc/HARE-128-kr/../../../_shared/hare_core/common                      
     -Isrc/HARE-128-kr/../../../_shared/hare_core/x86_64/avx256                                    \
     -Isrc/HARE-128-kr/../../../_shared/api_pkc
 DEFS := -DHARE_SYMMETRIC_MODE_B -DHARE_BACKEND_KR=1
-INSTANCE_CFLAGS := 
+INSTANCE_CFLAGS := -O3 -mavx2 -mbmi2 -mpopcnt -mpclmul
 SHIMDEFS := 
 NOAUX := 
 $(eval $(call ngcc_instance,kem-16,HARE-128-kr,kem,128,kem-16-hare-128-kr,ngcc_ref_kem_16_HARE_128_kr))
@@ -39,7 +39,7 @@ INC := -Isrc/HARE-256-kr/../../../_shared/hare_core/common                      
     -Isrc/HARE-256-kr/../../../_shared/hare_core/x86_64/avx256                                    \
     -Isrc/HARE-256-kr/../../../_shared/api_pkc
 DEFS := -DHARE_SYMMETRIC_MODE_B -DHARE_BACKEND_KR=1
-INSTANCE_CFLAGS := 
+INSTANCE_CFLAGS := -O3 -mavx2 -mbmi2 -mpopcnt -mpclmul
 SHIMDEFS := 
 NOAUX := 
 $(eval $(call ngcc_instance,kem-16,HARE-256-kr,kem,256,kem-16-hare-256-kr,ngcc_ref_kem_16_HARE_256_kr))

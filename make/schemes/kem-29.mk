@@ -7,7 +7,7 @@ SRCS := KEM_AlgorithmInstance.c auxfunc.c drng.c polarkem_core.c polarkem_ct.c p
     polarkem_polar.c
 INC := 
 DEFS := 
-INSTANCE_CFLAGS := 
+INSTANCE_CFLAGS := -O2
 SHIMDEFS := 
 NOAUX := 
 $(eval $(call ngcc_instance,kem-29,PolarKEM-128,kem,128,kem-29-polarkem-128,ngcc_ref_kem_29_PolarKEM_128))
@@ -19,7 +19,7 @@ SRCS := KEM_AlgorithmInstance.c auxfunc.c drng.c polarkem_core.c polarkem_ct.c p
     polarkem_polar.c
 INC := 
 DEFS := 
-INSTANCE_CFLAGS := 
+INSTANCE_CFLAGS := -O2
 SHIMDEFS := 
 NOAUX := 
 $(eval $(call ngcc_instance,kem-29,PolarKEM-256,kem,256,kem-29-polarkem-256,ngcc_ref_kem_29_PolarKEM_256))

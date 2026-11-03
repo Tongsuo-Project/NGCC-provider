@@ -8,7 +8,7 @@ SRCS := auxfunc.c conversions.c decode_ml.c hash_wrapper.c kem.c mlthre_model.c 
     FromNIST/rng.c kat/KEM_AlgorithmInstance.c kat/drng.c
 INC := -Isrc/BIKE_v2_128/kat
 DEFS := -DNIST_RAND=1 -DBIKE_SECURITY_128 -DBIKE_MLTHRE_ENABLED=1
-INSTANCE_CFLAGS := 
+INSTANCE_CFLAGS := -O3 -std=c99
 SHIMDEFS := 
 NOAUX := 
 $(eval $(call ngcc_instance,kem-05,BIKE_v2_128,kem,128,kem-05-bike-v2-128,ngcc_ref_kem_05_BIKE_v2_128))
@@ -21,7 +21,7 @@ SRCS := auxfunc.c conversions.c decode_ml.c hash_wrapper.c kem.c mlthre_model.c 
     FromNIST/rng.c kat/KEM_AlgorithmInstance.c kat/drng.c
 INC := -Isrc/BIKE_v2_256/kat
 DEFS := -DNIST_RAND=1 -DBIKE_SECURITY_256 -DBIKE_MLTHRE_ENABLED=1
-INSTANCE_CFLAGS := 
+INSTANCE_CFLAGS := -O3 -std=c99
 SHIMDEFS := 
 NOAUX := 
 $(eval $(call ngcc_instance,kem-05,BIKE_v2_256,kem,256,kem-05-bike-v2-256,ngcc_ref_kem_05_BIKE_v2_256))

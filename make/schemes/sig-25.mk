@@ -12,7 +12,7 @@ SRCS := algebra.c auxfunc.c basis.c biextension.c dim2.c dim2id2iso.c dim4.c drn
 INC := -Isrc/SQISign2Dsquare-Level1-eff_compressed/sqisign                                        \
     -Isrc/SQISign2Dsquare-Level1-eff_compressed/ec_arithmetic/include
 DEFS := -DNDEBUG -DCOMPRESSED=1
-INSTANCE_CFLAGS := 
+INSTANCE_CFLAGS := -O3 -mavx2 -mbmi2 -mpopcnt -madx
 SHIMDEFS := -DNGCC_INSTANCE_HEADER='"sqisign/SIG_AlgorithmInstance.h"' -DNGCC_INSTANCE='"SQISign2Dsquare-Level1-eff_compressed"'
 NOAUX := 
 $(eval $(call ngcc_instance,sign-25,SQISign2Dsquare-Level1-eff_compressed,sig,128,sig-25-sqisign2dsq-l1-eff-compressed,ngcc_ref_sig_25_SQISign2Dsquare_Level1_eff_compressed))
@@ -29,7 +29,7 @@ SRCS := algebra.c auxfunc.c basis.c biextension.c dim2.c dim2id2iso.c dim4.c drn
 INC := -Isrc/SQISign2Dsquare-Level1-eff_uncompressed/sqisign                                      \
     -Isrc/SQISign2Dsquare-Level1-eff_uncompressed/ec_arithmetic/include
 DEFS := -DNDEBUG -DCOMPRESSED=0
-INSTANCE_CFLAGS := 
+INSTANCE_CFLAGS := -O3 -mavx2 -mbmi2 -mpopcnt -madx
 SHIMDEFS := -DNGCC_INSTANCE_HEADER='"sqisign/SIG_AlgorithmInstance.h"' -DNGCC_INSTANCE='"SQISign2Dsquare-Level1-eff_uncompressed"'
 NOAUX := 
 $(eval $(call ngcc_instance,sign-25,SQISign2Dsquare-Level1-eff_uncompressed,sig,128,sig-25-sqisign2dsq-l1-eff-uncompressed,ngcc_ref_sig_25_SQISign2Dsquare_Level1_eff_uncompressed))
@@ -46,7 +46,7 @@ SRCS := algebra.c auxfunc.c basis.c biextension.c dim2.c dim2id2iso.c dim4.c drn
 INC := -Isrc/SQISign2Dsquare-Level1-sec_compressed/sqisign                                        \
     -Isrc/SQISign2Dsquare-Level1-sec_compressed/ec_arithmetic/include
 DEFS := -DNDEBUG -DCOMPRESSED=1
-INSTANCE_CFLAGS := 
+INSTANCE_CFLAGS := -O3 -mavx2 -mbmi2 -mpopcnt -madx
 SHIMDEFS := -DNGCC_INSTANCE_HEADER='"sqisign/SIG_AlgorithmInstance.h"' -DNGCC_INSTANCE='"SQISign2Dsquare-Level1-sec_compressed"'
 NOAUX := 
 $(eval $(call ngcc_instance,sign-25,SQISign2Dsquare-Level1-sec_compressed,sig,128,sig-25-sqisign2dsq-l1-sec-compressed,ngcc_ref_sig_25_SQISign2Dsquare_Level1_sec_compressed))
@@ -63,7 +63,7 @@ SRCS := algebra.c auxfunc.c basis.c biextension.c dim2.c dim2id2iso.c dim4.c drn
 INC := -Isrc/SQISign2Dsquare-Level1-sec_uncompressed/sqisign                                      \
     -Isrc/SQISign2Dsquare-Level1-sec_uncompressed/ec_arithmetic/include
 DEFS := -DNDEBUG -DCOMPRESSED=0
-INSTANCE_CFLAGS := 
+INSTANCE_CFLAGS := -O3 -mavx2 -mbmi2 -mpopcnt -madx
 SHIMDEFS := -DNGCC_INSTANCE_HEADER='"sqisign/SIG_AlgorithmInstance.h"' -DNGCC_INSTANCE='"SQISign2Dsquare-Level1-sec_uncompressed"'
 NOAUX := 
 $(eval $(call ngcc_instance,sign-25,SQISign2Dsquare-Level1-sec_uncompressed,sig,128,sig-25-sqisign2dsq-l1-sec-uncompressed,ngcc_ref_sig_25_SQISign2Dsquare_Level1_sec_uncompressed))
@@ -80,7 +80,7 @@ SRCS := algebra.c auxfunc.c basis.c biextension.c dim2.c dim2id2iso.c dim4.c drn
 INC := -Isrc/SQISign2Dsquare-Level2-eff_compressed/sqisign                                        \
     -Isrc/SQISign2Dsquare-Level2-eff_compressed/ec_arithmetic/include
 DEFS := -DNDEBUG -DCOMPRESSED=1
-INSTANCE_CFLAGS := 
+INSTANCE_CFLAGS := -O3 -mavx2 -mbmi2 -mpopcnt -madx
 SHIMDEFS := -DNGCC_INSTANCE_HEADER='"sqisign/SIG_AlgorithmInstance.h"' -DNGCC_INSTANCE='"SQISign2Dsquare-Level2-eff_compressed"'
 NOAUX := 
 $(eval $(call ngcc_instance,sign-25,SQISign2Dsquare-Level2-eff_compressed,sig,160,sig-25-sqisign2dsq-l2-eff-compressed,ngcc_ref_sig_25_SQISign2Dsquare_Level2_eff_compressed))
@@ -97,7 +97,7 @@ SRCS := algebra.c auxfunc.c basis.c biextension.c dim2.c dim2id2iso.c dim4.c drn
 INC := -Isrc/SQISign2Dsquare-Level2-eff_uncompressed/sqisign                                      \
     -Isrc/SQISign2Dsquare-Level2-eff_uncompressed/ec_arithmetic/include
 DEFS := -DNDEBUG -DCOMPRESSED=0
-INSTANCE_CFLAGS := 
+INSTANCE_CFLAGS := -O3 -mavx2 -mbmi2 -mpopcnt -madx
 SHIMDEFS := -DNGCC_INSTANCE_HEADER='"sqisign/SIG_AlgorithmInstance.h"' -DNGCC_INSTANCE='"SQISign2Dsquare-Level2-eff_uncompressed"'
 NOAUX := 
 $(eval $(call ngcc_instance,sign-25,SQISign2Dsquare-Level2-eff_uncompressed,sig,160,sig-25-sqisign2dsq-l2-eff-uncompressed,ngcc_ref_sig_25_SQISign2Dsquare_Level2_eff_uncompressed))
@@ -114,7 +114,7 @@ SRCS := algebra.c auxfunc.c basis.c biextension.c dim2.c dim2id2iso.c dim4.c drn
 INC := -Isrc/SQISign2Dsquare-Level2-sec_compressed/sqisign                                        \
     -Isrc/SQISign2Dsquare-Level2-sec_compressed/ec_arithmetic/include
 DEFS := -DNDEBUG -DCOMPRESSED=1
-INSTANCE_CFLAGS := 
+INSTANCE_CFLAGS := -O3 -mavx2 -mbmi2 -mpopcnt -madx
 SHIMDEFS := -DNGCC_INSTANCE_HEADER='"sqisign/SIG_AlgorithmInstance.h"' -DNGCC_INSTANCE='"SQISign2Dsquare-Level2-sec_compressed"'
 NOAUX := 
 $(eval $(call ngcc_instance,sign-25,SQISign2Dsquare-Level2-sec_compressed,sig,160,sig-25-sqisign2dsq-l2-sec-compressed,ngcc_ref_sig_25_SQISign2Dsquare_Level2_sec_compressed))
@@ -131,7 +131,7 @@ SRCS := algebra.c auxfunc.c basis.c biextension.c dim2.c dim2id2iso.c dim4.c drn
 INC := -Isrc/SQISign2Dsquare-Level2-sec_uncompressed/sqisign                                      \
     -Isrc/SQISign2Dsquare-Level2-sec_uncompressed/ec_arithmetic/include
 DEFS := -DNDEBUG -DCOMPRESSED=0
-INSTANCE_CFLAGS := 
+INSTANCE_CFLAGS := -O3 -mavx2 -mbmi2 -mpopcnt -madx
 SHIMDEFS := -DNGCC_INSTANCE_HEADER='"sqisign/SIG_AlgorithmInstance.h"' -DNGCC_INSTANCE='"SQISign2Dsquare-Level2-sec_uncompressed"'
 NOAUX := 
 $(eval $(call ngcc_instance,sign-25,SQISign2Dsquare-Level2-sec_uncompressed,sig,160,sig-25-sqisign2dsq-l2-sec-uncompressed,ngcc_ref_sig_25_SQISign2Dsquare_Level2_sec_uncompressed))
@@ -148,7 +148,7 @@ SRCS := algebra.c auxfunc.c basis.c biextension.c dim2.c dim2id2iso.c dim4.c drn
 INC := -Isrc/SQISign2Dsquare-Level3-eff_compressed/sqisign                                        \
     -Isrc/SQISign2Dsquare-Level3-eff_compressed/ec_arithmetic/include
 DEFS := -DNDEBUG -DCOMPRESSED=1
-INSTANCE_CFLAGS := 
+INSTANCE_CFLAGS := -O3 -mavx2 -mbmi2 -mpopcnt -madx
 SHIMDEFS := -DNGCC_INSTANCE_HEADER='"sqisign/SIG_AlgorithmInstance.h"' -DNGCC_INSTANCE='"SQISign2Dsquare-Level3-eff_compressed"'
 NOAUX := 
 $(eval $(call ngcc_instance,sign-25,SQISign2Dsquare-Level3-eff_compressed,sig,256,sig-25-sqisign2dsq-l3-eff-compressed,ngcc_ref_sig_25_SQISign2Dsquare_Level3_eff_compressed))
@@ -165,7 +165,7 @@ SRCS := algebra.c auxfunc.c basis.c biextension.c dim2.c dim2id2iso.c dim4.c drn
 INC := -Isrc/SQISign2Dsquare-Level3-eff_uncompressed/sqisign                                      \
     -Isrc/SQISign2Dsquare-Level3-eff_uncompressed/ec_arithmetic/include
 DEFS := -DNDEBUG -DCOMPRESSED=0
-INSTANCE_CFLAGS := 
+INSTANCE_CFLAGS := -O3 -mavx2 -mbmi2 -mpopcnt -madx
 SHIMDEFS := -DNGCC_INSTANCE_HEADER='"sqisign/SIG_AlgorithmInstance.h"' -DNGCC_INSTANCE='"SQISign2Dsquare-Level3-eff_uncompressed"'
 NOAUX := 
 $(eval $(call ngcc_instance,sign-25,SQISign2Dsquare-Level3-eff_uncompressed,sig,256,sig-25-sqisign2dsq-l3-eff-uncompressed,ngcc_ref_sig_25_SQISign2Dsquare_Level3_eff_uncompressed))
@@ -182,7 +182,7 @@ SRCS := algebra.c auxfunc.c basis.c biextension.c dim2.c dim2id2iso.c dim4.c drn
 INC := -Isrc/SQISign2Dsquare-Level3-sec_compressed/sqisign                                        \
     -Isrc/SQISign2Dsquare-Level3-sec_compressed/ec_arithmetic/include
 DEFS := -DNDEBUG -DCOMPRESSED=1
-INSTANCE_CFLAGS := 
+INSTANCE_CFLAGS := -O3 -mavx2 -mbmi2 -mpopcnt -madx
 SHIMDEFS := -DNGCC_INSTANCE_HEADER='"sqisign/SIG_AlgorithmInstance.h"' -DNGCC_INSTANCE='"SQISign2Dsquare-Level3-sec_compressed"'
 NOAUX := 
 $(eval $(call ngcc_instance,sign-25,SQISign2Dsquare-Level3-sec_compressed,sig,256,sig-25-sqisign2dsq-l3-sec-compressed,ngcc_ref_sig_25_SQISign2Dsquare_Level3_sec_compressed))
@@ -199,7 +199,7 @@ SRCS := algebra.c auxfunc.c basis.c biextension.c dim2.c dim2id2iso.c dim4.c drn
 INC := -Isrc/SQISign2Dsquare-Level3-sec_uncompressed/sqisign                                      \
     -Isrc/SQISign2Dsquare-Level3-sec_uncompressed/ec_arithmetic/include
 DEFS := -DNDEBUG -DCOMPRESSED=0
-INSTANCE_CFLAGS := 
+INSTANCE_CFLAGS := -O3 -mavx2 -mbmi2 -mpopcnt -madx
 SHIMDEFS := -DNGCC_INSTANCE_HEADER='"sqisign/SIG_AlgorithmInstance.h"' -DNGCC_INSTANCE='"SQISign2Dsquare-Level3-sec_uncompressed"'
 NOAUX := 
 $(eval $(call ngcc_instance,sign-25,SQISign2Dsquare-Level3-sec_uncompressed,sig,256,sig-25-sqisign2dsq-l3-sec-uncompressed,ngcc_ref_sig_25_SQISign2Dsquare_Level3_sec_uncompressed))

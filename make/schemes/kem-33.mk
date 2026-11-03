@@ -9,7 +9,7 @@ SRCS := src/common/code.c src/common/crypto_memset.c src/common/fft.c src/common
     lib/api_pkc/auxfunc.c lib/api_pkc/drng.c
 INC := -Isrc/qube-128/src/common -Isrc/qube-128/src/ref -Isrc/qube-128/lib/api_pkc
 DEFS := 
-INSTANCE_CFLAGS := 
+INSTANCE_CFLAGS := -O2
 SHIMDEFS := -DNGCC_INSTANCE_HEADER='"kem_qube.h"' -DNGCC_INSTANCE='"qube_128"'
 NOAUX := 
 $(eval $(call ngcc_instance,kem-33,qube-128,kem,128,kem-33-qube-128,ngcc_ref_kem_33_qube_128))
@@ -23,7 +23,7 @@ SRCS := src/common/code.c src/common/crypto_memset.c src/common/fft.c src/common
     lib/api_pkc/auxfunc.c lib/api_pkc/drng.c
 INC := -Isrc/qube-192/src/common -Isrc/qube-192/src/ref -Isrc/qube-192/lib/api_pkc
 DEFS := 
-INSTANCE_CFLAGS := 
+INSTANCE_CFLAGS := -O2
 SHIMDEFS := -DNGCC_INSTANCE_HEADER='"kem_qube.h"' -DNGCC_INSTANCE='"qube_192"'
 NOAUX := 
 $(eval $(call ngcc_instance,kem-33,qube-192,kem,192,kem-33-qube-192,ngcc_ref_kem_33_qube_192))
@@ -37,7 +37,7 @@ SRCS := src/common/code.c src/common/crypto_memset.c src/common/fft.c src/common
     lib/api_pkc/auxfunc.c lib/api_pkc/drng.c
 INC := -Isrc/qube-256/src/common -Isrc/qube-256/src/ref -Isrc/qube-256/lib/api_pkc
 DEFS := 
-INSTANCE_CFLAGS := 
+INSTANCE_CFLAGS := -O2
 SHIMDEFS := -DNGCC_INSTANCE_HEADER='"kem_qube.h"' -DNGCC_INSTANCE='"qube_256"'
 NOAUX := 
 $(eval $(call ngcc_instance,kem-33,qube-256,kem,256,kem-33-qube-256,ngcc_ref_kem_33_qube_256))

@@ -10,7 +10,7 @@ SRCS := KEM_AlgorithmInstance.c drng.c auxfunc.c src/common/code.c src/common/cr
 INC := -Isrc/TriQ-KEM-128/src/common -Isrc/TriQ-KEM-128/src/common/triq-128                       \
     -Isrc/TriQ-KEM-128/src/ref -Isrc/TriQ-KEM-128/src/ref/triq-128
 DEFS := 
-INSTANCE_CFLAGS := 
+INSTANCE_CFLAGS := -std=c99 -O3
 SHIMDEFS := 
 NOAUX := 
 $(eval $(call ngcc_instance,kem-37,TriQ-KEM-128,kem,128,kem-37-triq-kem-128,ngcc_ref_kem_37_TriQ_KEM_128))
@@ -25,7 +25,7 @@ SRCS := KEM_AlgorithmInstance.c drng.c auxfunc.c src/common/code.c src/common/cr
 INC := -Isrc/TriQ-KEM-256/src/common -Isrc/TriQ-KEM-256/src/common/triq-256                       \
     -Isrc/TriQ-KEM-256/src/ref -Isrc/TriQ-KEM-256/src/ref/triq-256
 DEFS := 
-INSTANCE_CFLAGS := 
+INSTANCE_CFLAGS := -std=c99 -O3
 SHIMDEFS := 
 NOAUX := 
 $(eval $(call ngcc_instance,kem-37,TriQ-KEM-256,kem,256,kem-37-triq-kem-256,ngcc_ref_kem_37_TriQ_KEM_256))

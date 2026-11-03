@@ -7,7 +7,7 @@ SRCS := src/KEM_AlgorithmInstance.c src/drng.c src/auxfunc.c src/gf_math.c src/l
     src/uvw_constants.c
 INC := -Isrc/UVW-KEM-128/include
 DEFS := 
-INSTANCE_CFLAGS := 
+INSTANCE_CFLAGS := -O3
 SHIMDEFS := -DNGCC_INSTANCE_HEADER='"include/KEM_AlgorithmInstance.h"'
 NOAUX := 
 $(eval $(call ngcc_instance,kem-38,UVW-KEM-128,kem,128,kem-38-uvw-kem-128,ngcc_ref_kem_38_UVW_KEM_128))
@@ -19,7 +19,7 @@ SRCS := src/KEM_AlgorithmInstance.c src/drng.c src/auxfunc.c src/gf_math.c src/l
     src/uvw_constants.c
 INC := -Isrc/UVW-KEM-256/include
 DEFS := 
-INSTANCE_CFLAGS := 
+INSTANCE_CFLAGS := -O3
 SHIMDEFS := -DNGCC_INSTANCE_HEADER='"include/KEM_AlgorithmInstance.h"'
 NOAUX := 
 $(eval $(call ngcc_instance,kem-38,UVW-KEM-256,kem,256,kem-38-uvw-kem-256,ngcc_ref_kem_38_UVW_KEM_256))
