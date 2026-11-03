@@ -6,7 +6,7 @@ SRCDIR := Implementations/Reference_Implementation/Loong128
 SRCS := KEM_Loong.c auxfunc.c drng.c poly.c
 INC := 
 DEFS := 
-INSTANCE_CFLAGS := -O3 -march=native -fomit-frame-pointer
+INSTANCE_CFLAGS := -O2
 SHIMDEFS := -DNGCC_INSTANCE_HEADER='"KEM_Loong.h"'
 NOAUX := 
 $(eval $(call ngcc_instance,kem-18,Loong128,kem,128,kem-18-loong128,ngcc_ref_kem_18_Loong128))
@@ -17,7 +17,7 @@ SRCDIR := Implementations/Reference_Implementation/Loong256
 SRCS := KEM_Loong.c auxfunc.c drng.c poly.c
 INC := 
 DEFS := 
-INSTANCE_CFLAGS := -O3 -march=native -fomit-frame-pointer
+INSTANCE_CFLAGS := -O2
 SHIMDEFS := -DNGCC_INSTANCE_HEADER='"KEM_Loong.h"'
 NOAUX := 
 $(eval $(call ngcc_instance,kem-18,Loong256,kem,256,kem-18-loong256,ngcc_ref_kem_18_Loong256))

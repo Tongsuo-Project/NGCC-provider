@@ -6,7 +6,7 @@ SRCDIR := Implementations/Digital_Signature-TSUOV-x86-Reference_Implementation/A
 SRCS := Fql.c SIG_AlgorithmInstance.c auxfunc.c drng.c mgf.c tsuov_core.c
 INC := 
 DEFS := -DTSUOV_VARIANT=128
-INSTANCE_CFLAGS := -std=c99 -O2
+INSTANCE_CFLAGS := -std=c99 -Wpedantic -Wall -Wextra -O2
 SHIMDEFS := 
 NOAUX := 
 $(eval $(call ngcc_instance,sign-31,TSUOV_128,sig,128,sig-31-tsuov-128,ngcc_ref_sig_31_TSUOV_128))
@@ -17,7 +17,7 @@ SRCDIR := Implementations/Digital_Signature-TSUOV-x86-Reference_Implementation/A
 SRCS := Fql.c SIG_AlgorithmInstance.c auxfunc.c drng.c mgf.c tsuov_core.c
 INC := 
 DEFS := -DTSUOV_VARIANT=256
-INSTANCE_CFLAGS := -std=c99 -O2
+INSTANCE_CFLAGS := -std=c99 -Wpedantic -Wall -Wextra -O2
 SHIMDEFS := 
 NOAUX := 
 $(eval $(call ngcc_instance,sign-31,TSUOV_256,sig,256,sig-31-tsuov-256,ngcc_ref_sig_31_TSUOV_256))

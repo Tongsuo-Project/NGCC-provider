@@ -8,7 +8,7 @@ SRCS := SIG_AlgorithmInstance.c sign.c polyvec.c sampler.c sampler_u.c irs.c rou
     ntt/q15361n256/ntt_ref.c
 INC := -Isrc/SHUTTLE-128/ntt/q15361n256 -Iauthor-tools
 DEFS := -DSHUTTLE_MODE=128
-INSTANCE_CFLAGS := -std=c99 -O2
+INSTANCE_CFLAGS := -std=c99 -Wpedantic -Wall -Wextra -O2
 SHIMDEFS := 
 NOAUX := 
 $(eval $(call ngcc_instance,sign-23,SHUTTLE-128,sig,128,sig-23-shuttle-128,ngcc_ref_sig_23_SHUTTLE_128))
@@ -21,7 +21,7 @@ SRCS := SIG_AlgorithmInstance.c sign.c polyvec.c sampler.c sampler_u.c irs.c rou
     ntt/q61441n512/ntt_ref.c
 INC := -Isrc/SHUTTLE-256/ntt/q61441n512 -Iauthor-tools
 DEFS := -DSHUTTLE_MODE=256
-INSTANCE_CFLAGS := -std=c99 -O2
+INSTANCE_CFLAGS := -std=c99 -Wpedantic -Wall -Wextra -O2
 SHIMDEFS := 
 NOAUX := 
 $(eval $(call ngcc_instance,sign-23,SHUTTLE-256,sig,256,sig-23-shuttle-256,ngcc_ref_sig_23_SHUTTLE_256))

@@ -8,7 +8,7 @@ SRCS := src/fq_arith.c src/rsdp.c src/restr.c src/mpc.c src/keygen.c src/sign.c 
     api_pkc/hash_adapter.c
 INC := -Isrc/QingLuan-128/api_pkc -Isrc/QingLuan-128/include
 DEFS := -DQINGLUAN_128
-INSTANCE_CFLAGS := -std=c11 -O2
+INSTANCE_CFLAGS := -std=c11
 SHIMDEFS := 
 NOAUX := 
 $(eval $(call ngcc_instance,sign-20,QingLuan-128,sig,128,sig-20-qingluan-128,ngcc_ref_sig_20_QingLuan_128))
@@ -21,7 +21,7 @@ SRCS := src/fq_arith.c src/rsdp.c src/restr.c src/mpc.c src/keygen.c src/sign.c 
     api_pkc/hash_adapter.c
 INC := -Isrc/QingLuan-256/api_pkc -Isrc/QingLuan-256/include
 DEFS := -DQINGLUAN_256
-INSTANCE_CFLAGS := -std=c11 -O2
+INSTANCE_CFLAGS := -std=c11
 SHIMDEFS := 
 NOAUX := 
 $(eval $(call ngcc_instance,sign-20,QingLuan-256,sig,256,sig-20-qingluan-256,ngcc_ref_sig_20_QingLuan_256))

@@ -7,7 +7,7 @@ SRCS := kem.c indcpa.c polyvec.c poly.c ntt.c cbd.c reduce.c verify.c drng.c aux
     symmetric-shake.c KEM_AlgorithmInstance.c
 INC := 
 DEFS := -DSECURITY_LEVEL=128
-INSTANCE_CFLAGS := -O3 -fomit-frame-pointer
+INSTANCE_CFLAGS := -O2
 SHIMDEFS := 
 NOAUX := 
 $(eval $(call ngcc_instance,kem-11,COMPASS-KEM-128,kem,128,kem-11-compass-kem-128,ngcc_ref_kem_11_COMPASS_KEM_128))
@@ -19,7 +19,7 @@ SRCS := kem.c indcpa.c polyvec.c poly.c ntt.c cbd.c reduce.c verify.c drng.c aux
     symmetric-shake.c KEM_AlgorithmInstance.c
 INC := 
 DEFS := -DSECURITY_LEVEL=256
-INSTANCE_CFLAGS := -O3 -fomit-frame-pointer
+INSTANCE_CFLAGS := -O2
 SHIMDEFS := 
 NOAUX := 
 $(eval $(call ngcc_instance,kem-11,COMPASS-KEM-256,kem,256,kem-11-compass-kem-256,ngcc_ref_kem_11_COMPASS_KEM_256))

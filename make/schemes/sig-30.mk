@@ -8,7 +8,7 @@ SRCS := trine.c util.c field.c matrixmod.c matrixelim.c triform.c canonical.c co
     iccs/SIG_AlgorithmInstance.c iccs/drng.c iccs/auxfunc.c
 INC := -Isrc/TRINE-128-Balanced/iccs
 DEFS := -DPARAMS=1 -DUSE_ICCS -DTRINE_ALGORITHM_INSTANCE='"TRINE-128-Balanced"'
-INSTANCE_CFLAGS := -O3
+INSTANCE_CFLAGS := -O2
 SHIMDEFS := 
 NOAUX := 
 $(eval $(call ngcc_instance,sign-30,TRINE-128-Balanced,sig,128,sig-30-trine-128-balanced,ngcc_ref_sig_30_TRINE_128_Balanced))
@@ -21,7 +21,7 @@ SRCS := trine.c util.c field.c matrixmod.c matrixelim.c triform.c canonical.c co
     iccs/SIG_AlgorithmInstance.c iccs/drng.c iccs/auxfunc.c
 INC := -Isrc/TRINE-128-ShortSig/iccs
 DEFS := -DPARAMS=4 -DUSE_ICCS -DTRINE_ALGORITHM_INSTANCE='"TRINE-128-ShortSig"'
-INSTANCE_CFLAGS := -O3
+INSTANCE_CFLAGS := -O2
 SHIMDEFS := 
 NOAUX := 
 $(eval $(call ngcc_instance,sign-30,TRINE-128-ShortSig,sig,128,sig-30-trine-128-shortsig,ngcc_ref_sig_30_TRINE_128_ShortSig))
@@ -34,7 +34,7 @@ SRCS := trine.c util.c field.c matrixmod.c matrixelim.c triform.c canonical.c co
     iccs/SIG_AlgorithmInstance.c iccs/drng.c iccs/auxfunc.c
 INC := -Isrc/TRINE-256-Balanced/iccs
 DEFS := -DPARAMS=2 -DUSE_ICCS -DTRINE_ALGORITHM_INSTANCE='"TRINE-256-Balanced"'
-INSTANCE_CFLAGS := -O3
+INSTANCE_CFLAGS := -O2
 SHIMDEFS := 
 NOAUX := 
 $(eval $(call ngcc_instance,sign-30,TRINE-256-Balanced,sig,256,sig-30-trine-256-balanced,ngcc_ref_sig_30_TRINE_256_Balanced))
@@ -47,7 +47,7 @@ SRCS := trine.c util.c field.c matrixmod.c matrixelim.c triform.c canonical.c co
     iccs/SIG_AlgorithmInstance.c iccs/drng.c iccs/auxfunc.c
 INC := -Isrc/TRINE-256-ShortSig/iccs
 DEFS := -DPARAMS=5 -DUSE_ICCS -DTRINE_ALGORITHM_INSTANCE='"TRINE-256-ShortSig"'
-INSTANCE_CFLAGS := -O3
+INSTANCE_CFLAGS := -O2
 SHIMDEFS := 
 NOAUX := 
 $(eval $(call ngcc_instance,sign-30,TRINE-256-ShortSig,sig,256,sig-30-trine-256-shortsig,ngcc_ref_sig_30_TRINE_256_ShortSig))

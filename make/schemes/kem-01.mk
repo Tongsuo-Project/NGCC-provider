@@ -8,7 +8,7 @@ SRCS := cbd.c fips202.c poly.c reduce.c precomp.c ntt.c polyvec.c owcpa.c kem.c 
     kat_test/rng.c
 INC := -Isrc/Aigis-enc1/kat_test
 DEFS := -DPARAMS=1 -DUSE_NICCS_API
-INSTANCE_CFLAGS := -O3 -fomit-frame-pointer -march=native -std=c99
+INSTANCE_CFLAGS := -O2
 SHIMDEFS := -DNGCC_INSTANCE_HEADER='"kat_test/KEM_AlgorithmInstance.h"'
 NOAUX := 
 $(eval $(call ngcc_instance,kem-01,Aigis-enc1,kem,128,kem-01-aigis-enc1,ngcc_ref_kem_01_Aigis_enc1))
@@ -21,7 +21,7 @@ SRCS := cbd.c fips202.c poly.c reduce.c precomp.c ntt.c polyvec.c owcpa.c kem.c 
     kat_test/rng.c
 INC := -Isrc/Aigis-enc2/kat_test
 DEFS := -DPARAMS=2 -DUSE_NICCS_API
-INSTANCE_CFLAGS := -O3 -fomit-frame-pointer -march=native -std=c99
+INSTANCE_CFLAGS := -O2
 SHIMDEFS := -DNGCC_INSTANCE_HEADER='"kat_test/KEM_AlgorithmInstance.h"'
 NOAUX := 
 $(eval $(call ngcc_instance,kem-01,Aigis-enc2,kem,256,kem-01-aigis-enc2,ngcc_ref_kem_01_Aigis_enc2))

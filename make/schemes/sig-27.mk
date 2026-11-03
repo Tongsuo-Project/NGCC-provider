@@ -63,7 +63,7 @@ INC := -Isrc/SQIsignTriangle_lvl1/sqisigntriangle/include                       
     -Isrc/SQIsignTriangle_lvl1/sqisigntriangle/src/verification/ref/include                       \
     -Isrc/SQIsignTriangle_lvl1/sqisigntriangle/src/signature/ref/include
 DEFS := -DSQISIGN_BUILD_TYPE_REF -DSQISIGN_GF_IMPL_REF -DENABLE_SIGN -DTARGET_AMD64 -DRADIX_64 -DHAVE_UINT128 -DTARGET_OS_UNIX -DSQISIGN_TEST_REPS=10 -DSQISIGN_VARIANT=lvl1
-INSTANCE_CFLAGS := -O3 -mbmi2 -madx -mpopcnt -mlzcnt
+INSTANCE_CFLAGS := -funroll-loops
 SHIMDEFS := 
 NOAUX := 
 $(eval $(call ngcc_instance,sign-27,SQIsignTriangle_lvl1,sig,128,sig-27-sqisigntriangle-lvl1,ngcc_ref_sig_27_SQIsignTriangle_lvl1))
@@ -131,7 +131,7 @@ INC := -Isrc/SQIsignTriangle_lvl2/sqisigntriangle/include                       
     -Isrc/SQIsignTriangle_lvl2/sqisigntriangle/src/verification/ref/include                       \
     -Isrc/SQIsignTriangle_lvl2/sqisigntriangle/src/signature/ref/include
 DEFS := -DSQISIGN_BUILD_TYPE_REF -DSQISIGN_GF_IMPL_REF -DENABLE_SIGN -DTARGET_AMD64 -DRADIX_64 -DHAVE_UINT128 -DTARGET_OS_UNIX -DSQISIGN_TEST_REPS=10 -DSQISIGN_VARIANT=lvl2
-INSTANCE_CFLAGS := -O3 -mbmi2 -madx -mpopcnt -mlzcnt
+INSTANCE_CFLAGS := -funroll-loops
 SHIMDEFS := 
 NOAUX := 
 $(eval $(call ngcc_instance,sign-27,SQIsignTriangle_lvl2,sig,160,sig-27-sqisigntriangle-lvl2,ngcc_ref_sig_27_SQIsignTriangle_lvl2))
@@ -199,7 +199,7 @@ INC := -Isrc/SQIsignTriangle_lvl5/sqisigntriangle/include                       
     -Isrc/SQIsignTriangle_lvl5/sqisigntriangle/src/verification/ref/include                       \
     -Isrc/SQIsignTriangle_lvl5/sqisigntriangle/src/signature/ref/include
 DEFS := -DSQISIGN_BUILD_TYPE_REF -DSQISIGN_GF_IMPL_REF -DENABLE_SIGN -DTARGET_AMD64 -DRADIX_64 -DHAVE_UINT128 -DTARGET_OS_UNIX -DSQISIGN_TEST_REPS=10 -DSQISIGN_VARIANT=lvl5
-INSTANCE_CFLAGS := -O3 -mbmi2 -madx -mpopcnt -mlzcnt
+INSTANCE_CFLAGS := -funroll-loops
 SHIMDEFS := 
 NOAUX := 
 $(eval $(call ngcc_instance,sign-27,SQIsignTriangle_lvl5,sig,256,sig-27-sqisigntriangle-lvl5,ngcc_ref_sig_27_SQIsignTriangle_lvl5))

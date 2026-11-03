@@ -31,7 +31,7 @@ INC := -Isrc/SQIsign2D-lvl1/src/iccs -Isrc/SQIsign2D-lvl1/include               
     -Isrc/SQIsign2D-lvl1/src/dim2id2iso/ref/include                                               \
     -Isrc/SQIsign2D-lvl1/src/sqisigndim2/ref/include
 DEFS := -DNDEBUG -DTARGET_AMD64 -DRADIX_64 -DTARGET_OS_UNIX -DSQISIGN_VARIANT=lvl1 -DOUTPUT_BLANK_TEST_VECTORS=0 -DALGORITHM_INSTANCE='"SQIsign2D-lvl1"'
-INSTANCE_CFLAGS := -O2
+INSTANCE_CFLAGS := -funroll-loops
 SHIMDEFS := 
 NOAUX := 
 $(eval $(call ngcc_instance,sign-26,SQIsign2D-lvl1,sig,128,sig-26-sqisign2d-lvl1,ngcc_ref_sig_26_SQIsign2D_lvl1))
@@ -67,7 +67,7 @@ INC := -Isrc/SQIsign2D-lvl3/src/iccs -Isrc/SQIsign2D-lvl3/include               
     -Isrc/SQIsign2D-lvl3/src/dim2id2iso/ref/include                                               \
     -Isrc/SQIsign2D-lvl3/src/sqisigndim2/ref/include
 DEFS := -DNDEBUG -DTARGET_AMD64 -DRADIX_64 -DTARGET_OS_UNIX -DSQISIGN_VARIANT=lvl3 -DOUTPUT_BLANK_TEST_VECTORS=0 -DALGORITHM_INSTANCE='"SQIsign2D-lvl3"'
-INSTANCE_CFLAGS := -O2
+INSTANCE_CFLAGS := -funroll-loops
 SHIMDEFS := 
 NOAUX := 
 $(eval $(call ngcc_instance,sign-26,SQIsign2D-lvl3,sig,256,sig-26-sqisign2d-lvl3,ngcc_ref_sig_26_SQIsign2D_lvl3))

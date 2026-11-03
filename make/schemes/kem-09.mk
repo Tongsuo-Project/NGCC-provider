@@ -6,7 +6,7 @@ SRCDIR := Implementations/Reference_Implementation/Cheetah128
 SRCS := KEM_Cheetah.c auxfunc.c drng.c mod.c ntt.c poly.c
 INC := 
 DEFS := 
-INSTANCE_CFLAGS := -O3 -march=native -fomit-frame-pointer
+INSTANCE_CFLAGS := -O2
 SHIMDEFS := -DNGCC_INSTANCE_HEADER='"KEM_Cheetah.h"'
 NOAUX := 
 $(eval $(call ngcc_instance,kem-09,Cheetah128,kem,128,kem-09-cheetah128,ngcc_ref_kem_09_Cheetah128))
@@ -17,7 +17,7 @@ SRCDIR := Implementations/Reference_Implementation/Cheetah256
 SRCS := KEM_Cheetah.c auxfunc.c drng.c mod.c ntt.c poly.c
 INC := 
 DEFS := 
-INSTANCE_CFLAGS := -O3 -march=native -fomit-frame-pointer
+INSTANCE_CFLAGS := -O2
 SHIMDEFS := -DNGCC_INSTANCE_HEADER='"KEM_Cheetah.h"'
 NOAUX := 
 $(eval $(call ngcc_instance,kem-09,Cheetah256,kem,256,kem-09-cheetah256,ngcc_ref_kem_09_Cheetah256))

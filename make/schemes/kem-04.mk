@@ -13,7 +13,7 @@ INC := -Isrc/bag_piglet_128/src/common -Isrc/bag_piglet_128/src/scheme          
     -Isrc/bag_piglet_128/src/ffi -Isrc/bag_piglet_128/src/rbc -Isrc/bag_piglet_128/src/kat        \
     -Isrc/bag_piglet_128/lib/api_pkc -Isrc/bag_piglet_128/lib/randombytes
 DEFS := -DBAG_PIGLET_KAT=1
-INSTANCE_CFLAGS := -mpclmul -O3
+INSTANCE_CFLAGS := -O2
 SHIMDEFS := -DNGCC_INSTANCE_HEADER='"src/kat/KEM_AlgorithmInstance.h"'
 NOAUX := 
 $(eval $(call ngcc_instance,kem-04,bag_piglet_128,kem,128,kem-04-bag-piglet-128,ngcc_ref_kem_04_bag_piglet_128))
@@ -31,7 +31,7 @@ INC := -Isrc/bag_piglet_256/src/common -Isrc/bag_piglet_256/src/scheme          
     -Isrc/bag_piglet_256/src/ffi -Isrc/bag_piglet_256/src/rbc -Isrc/bag_piglet_256/src/kat        \
     -Isrc/bag_piglet_256/lib/api_pkc -Isrc/bag_piglet_256/lib/randombytes
 DEFS := -DBAG_PIGLET_KAT=1
-INSTANCE_CFLAGS := -mpclmul -O3
+INSTANCE_CFLAGS := -O2
 SHIMDEFS := -DNGCC_INSTANCE_HEADER='"src/kat/KEM_AlgorithmInstance.h"'
 NOAUX := 
 $(eval $(call ngcc_instance,kem-04,bag_piglet_256,kem,256,kem-04-bag-piglet-256,ngcc_ref_kem_04_bag_piglet_256))

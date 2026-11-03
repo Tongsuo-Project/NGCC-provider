@@ -7,7 +7,7 @@ SRCS := kem.c ntt.c poly.c decode.c packing.c reduce.c verify.c indcpa.c auxfunc
     KEM_AlgorithmInstance.c
 INC := 
 DEFS := 
-INSTANCE_CFLAGS := -O3 -march=native -fomit-frame-pointer -std=c11
+INSTANCE_CFLAGS := -O3 -march=native -fomit-frame-pointer -std=c11 -Wall -Wextra
 SHIMDEFS := 
 NOAUX := 
 $(eval $(call ngcc_instance,kem-15,FLIT128_REF,kem,128,kem-15-flit128-ref,ngcc_ref_kem_15_FLIT128_REF))
@@ -19,7 +19,7 @@ SRCS := kem.c ntt.c poly.c decode.c packing.c reduce.c verify.c indcpa.c auxfunc
     KEM_AlgorithmInstance.c
 INC := 
 DEFS := 
-INSTANCE_CFLAGS := -O3 -march=native -fomit-frame-pointer -std=c11
+INSTANCE_CFLAGS := -O3 -march=native -fomit-frame-pointer -std=c11 -Wall -Wextra
 SHIMDEFS := 
 NOAUX := 
 $(eval $(call ngcc_instance,kem-15,FLIT256_REF,kem,256,kem-15-flit256-ref,ngcc_ref_kem_15_FLIT256_REF))

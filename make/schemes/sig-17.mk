@@ -7,7 +7,7 @@ SRCS := sign.c mult.c packing.c polyvec.c poly.c ntt.c reduce.c rounding.c auxfu
     SIG_AlgorithmInstance.c
 INC := 
 DEFS := 
-INSTANCE_CFLAGS := -O2 -std=c99
+INSTANCE_CFLAGS := -O2 -std=c99 -Wall -Wextra
 SHIMDEFS := 
 NOAUX := 
 $(eval $(call ngcc_instance,sign-17,OPSsig-128,sig,128,sig-17-opssig-128,ngcc_ref_sig_17_OPSsig_128))
@@ -19,7 +19,7 @@ SRCS := sign.c mult.c packing.c polyvec.c poly.c ntt.c reduce.c rounding.c auxfu
     SIG_AlgorithmInstance.c
 INC := 
 DEFS := 
-INSTANCE_CFLAGS := -O2 -std=c99
+INSTANCE_CFLAGS := -O2 -std=c99 -Wall -Wextra
 SHIMDEFS := 
 NOAUX := 
 $(eval $(call ngcc_instance,sign-17,OPSsig-256,sig,256,sig-17-opssig-256,ngcc_ref_sig_17_OPSsig_256))

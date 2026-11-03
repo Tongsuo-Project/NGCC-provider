@@ -7,7 +7,7 @@ SRCS := KEM_AlgorithmInstance.c auxfunc.c code.c drng.c fft.c gf.c gf2x.c mito_k
     parsing.c reed_muller.c reed_solomon.c symmetric.c vector.c
 INC := 
 DEFS := 
-INSTANCE_CFLAGS := -O3
+INSTANCE_CFLAGS := -O2
 SHIMDEFS := 
 NOAUX := 
 $(eval $(call ngcc_instance,kem-23,Mito-1-128,kem,128,kem-23-mito-1-128,ngcc_ref_kem_23_Mito_1_128))
@@ -19,7 +19,7 @@ SRCS := KEM_AlgorithmInstance.c auxfunc.c code.c drng.c fft.c gf.c gf2x.c mito_k
     parsing.c reed_muller.c reed_solomon.c symmetric.c vector.c
 INC := 
 DEFS := 
-INSTANCE_CFLAGS := -O3
+INSTANCE_CFLAGS := -O2
 SHIMDEFS := 
 NOAUX := 
 $(eval $(call ngcc_instance,kem-23,Mito-1-256,kem,256,kem-23-mito-1-256,ngcc_ref_kem_23_Mito_1_256))
@@ -31,7 +31,7 @@ SRCS := KEM_AlgorithmInstance.c auxfunc.c code.c drng.c fft.c gf.c gf2x.c mito_k
     parsing.c reed_muller.c reed_solomon.c symmetric.c vector.c
 INC := 
 DEFS := 
-INSTANCE_CFLAGS := -O3
+INSTANCE_CFLAGS := -O2
 SHIMDEFS := 
 NOAUX := 
 $(eval $(call ngcc_instance,kem-23,Mito-1-E-128,kem,128,kem-23-mito-1-e-128,ngcc_ref_kem_23_Mito_1_E_128))
@@ -43,7 +43,7 @@ SRCS := KEM_AlgorithmInstance.c auxfunc.c code.c drng.c fft.c gf.c gf2x.c mito_k
     parsing.c reed_muller.c reed_solomon.c symmetric.c vector.c
 INC := 
 DEFS := 
-INSTANCE_CFLAGS := -O3
+INSTANCE_CFLAGS := -O2
 SHIMDEFS := 
 NOAUX := 
 $(eval $(call ngcc_instance,kem-23,Mito-1-E-256,kem,256,kem-23-mito-1-e-256,ngcc_ref_kem_23_Mito_1_E_256))
@@ -55,7 +55,7 @@ SRCS := KEM_AlgorithmInstance.c auxfunc.c code.c drng.c fft.c gf.c gf2x.c mito_k
     parsing.c reed_muller.c reed_solomon.c symmetric.c vector.c
 INC := 
 DEFS := 
-INSTANCE_CFLAGS := -O3
+INSTANCE_CFLAGS := -O2
 SHIMDEFS := 
 NOAUX := 
 $(eval $(call ngcc_instance,kem-23,Mito-2-E-128,kem,128,kem-23-mito-2-e-128,ngcc_ref_kem_23_Mito_2_E_128))
@@ -67,7 +67,7 @@ SRCS := KEM_AlgorithmInstance.c auxfunc.c code.c drng.c fft.c gf.c gf2x.c mito_k
     parsing.c reed_muller.c reed_solomon.c symmetric.c vector.c
 INC := 
 DEFS := 
-INSTANCE_CFLAGS := -O3
+INSTANCE_CFLAGS := -O2
 SHIMDEFS := 
 NOAUX := 
 $(eval $(call ngcc_instance,kem-23,Mito-2-E-256,kem,256,kem-23-mito-2-e-256,ngcc_ref_kem_23_Mito_2_E_256))
