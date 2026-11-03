@@ -1,6 +1,10 @@
 # Common rules for the pinned author reference and optimized implementations.
 comma := ,
-REF_CFLAGS := -fPIC -fcommon -fno-strict-aliasing -fwrapv -D_GNU_SOURCE \
+# Only options the provider genuinely needs to emit a shared object are added
+# here.  Optimisation, tuning, instruction-set and language flags come from the
+# author recipe of each instance (INSTANCE_CFLAGS in make/schemes/*.mk for the
+# reference build, make/implementations.json for the optimized build).
+REF_CFLAGS := -fPIC -fcommon -D_GNU_SOURCE \
               -Wno-error=implicit-function-declaration \
               -Wno-error=incompatible-pointer-types -Wno-error=int-conversion \
               -Wno-error=implicit-int -Wno-unused-function -Wno-unused-variable \
@@ -13,7 +17,7 @@ endif
 define ref_source
 $(1): $(2) make/ref.mk $(_recipe) Makefile build/config
 	@mkdir -p $$(@D)
-	$(if $(filter %.cpp %.cc,$(2)),$$(CXX),$$(CC)) $$(CPPFLAGS) $$(CFLAGS) $$(TARGET_FLAGS) \
+	$(if $(filter %.cpp %.cc,$(2)),$$(CXX),$$(CC)) $$(CPPFLAGS) $$(TARGET_FLAGS) \
 	    $(if $(filter %.cpp %.cc,$(2)),$$(filter-out -std=%,$$(REF_CFLAGS) $$(INSTANCE_FLAGS)) -std=c++2b -Imake/compat/cxx -include algorithm -include make/compat/cxx/alloc.h $$(CXXFLAGS),$$(REF_CFLAGS) $$(INSTANCE_FLAGS)) $(if $(filter %.S %.s,$(2)),-Wa$$(comma)-I$(_source)) \
 	    $$(INSTANCE_INCLUDES) $$(SOURCE_FLAGS) -MMD -MP -c $$< -o $$@
 endef
